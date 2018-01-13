@@ -6,13 +6,21 @@ use PHPUnit\Framework\TestCase;
 
 final class GrabSepaTest extends TestCase
 {
-    public function testVariable()
+    public function testDoGrab()
     {
         $grabSepa = new GrabSepa();
-        $grabSepa->set_variable('hello');
+        $grabSepa->doGrab();
         $this->assertEquals(
-            'hello',
-            $grabSepa->getVariable()
+            'data/SEPA_River_Levels_Web.csv',
+            $grabSepa->sepaFile
         );
+        unlink($grabSepa->sepaFile);
+        $grabSepa2 = new GrabSepa();
+        $grabSepa2->doGrab();
+        $this->assertEquals(
+            'data/SEPA_River_Levels_Web.csv',
+            $grabSepa->sepaFile
+        );
+        
     }
 }
