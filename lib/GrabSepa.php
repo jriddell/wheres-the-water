@@ -50,11 +50,11 @@ class GrabSepa {
             if (sizeof($csvSplit) < 10) {
                 continue;
             }
-            $id = $csvSplit[2];
-            $this->sepaData[$id] = array();
-            $this->sepaData[$id]['current_level'] = $csvSplit[6]; //GAUGE_DATUM
-            $this->sepaData[$id]['reading_timestamp'] = strtotime($csvSplit[9]); // END_DATE
-            $this->sepaData[$id]['gauge_name'] = $csvSplit[1]; // STATION_NAME
+            $gauge_id = (int)$csvSplit[2];
+            $this->sepaData[$gauge_id] = array();
+            $this->sepaData[$gauge_id]['current_level'] = $csvSplit[6]; //GAUGE_DATUM
+            $this->sepaData[$gauge_id]['reading_timestamp'] = strtotime($csvSplit[9]); // END_DATE
+            $this->sepaData[$gauge_id]['gauge_name'] = $csvSplit[1]; // STATION_NAME
         }
     }
     
