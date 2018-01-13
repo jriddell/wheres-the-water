@@ -87,11 +87,15 @@ if(document.getElementById && document.createTextNode) {
 			
 	<?php  
 	// Retrieve all resorts for this region from the db
+	print("helloPHP");
+	?>
+	<?php
+	/*
 	$result = db_query( "SELECT * FROM {node_revisions} join {content_type_river_section} ON {node_revisions}.vid = {content_type_river_section}.vid");
 	
 	// Display the rollover icon for each resort
 	while ( $row = $result->fetch() )   
-	{ 
+	{ */
 	?>
 		var point<?php print $row->vid ?> = new GLatLng(<?php print $row->field_latitude_value ?>,<?php print $row->field_longitude_value ?>);
         markerOptions = { icon:<?php print $row->field_current_level_value ?>Icon };
@@ -104,7 +108,7 @@ if(document.getElementById && document.createTextNode) {
 	
 
         map.addOverlay(marker<?php print $row->vid ?>);
-	<?php  }?>
+	<?php  //}?>
 
       }    }
 </script>
