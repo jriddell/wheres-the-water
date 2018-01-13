@@ -6,6 +6,17 @@ use PHPUnit\Framework\TestCase;
 
 final class GrabSepaTest extends TestCase
 {
+
+    public function testVerifyCsvData() {
+        $grabSepa = new GrabSepa();
+        $grabSepa->sepaCsvData = file_get_contents("data/SEPA_River_Levels_Web-good.csv");
+        $this->assertEquals(true, $grabSepa->verifyCsvData());
+        $grabSepa->sepaCsvData = file_get_contents("data/SEPA_River_Levels_Web-bad2.csv");
+        $this->assertEquals(false, $grabSepa->verifyCsvData());
+        $grabSepa->sepaCsvData = file_get_contents("data/SEPA_River_Levels_Web-bad.csv");
+        $this->assertEquals(false, $grabSepa->verifyCsvData());
+    }
+
     public function testDoGrab()
     {
         $grabSepa = new GrabSepa();

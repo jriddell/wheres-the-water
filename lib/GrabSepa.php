@@ -17,30 +17,37 @@ class GrabSepa {
     const SEPA_URL = 'http://apps.sepa.org.uk/database/riverlevels/SEPA_River_Levels_Web.csv';
 
     public $sepaFile = self::DATADIR . '/' . self::SEPA_CSV;
-    private $sepaCsvData;
+    public $sepaCsvData;
 
     /* if file does not exist or is too old download it and write, else just read locally */
-    function doGrab() {        
+    function doGrab() {
         if (!file_exists($this->sepaFile) || time()-filemtime($this->sepaFile) > self::SEPA_DOWNLOAD_PERIOD) {
             $this->sepaCsvData = file_get_contents(self::SEPA_URL);
-            $this->verifyCsvData();
+            $this->verifyCsvData() || die('CSV data did not verify');
             $newSepaFile = fopen($this->sepaFile, "w") or die("Unable to open file!");
             fwrite($newSepaFile, $this->sepaCsvData);
         } else {
             $this->sepaCsvData = file_get_contents($this->sepaFile);
-            $this->verifyCsvData();
+            $this->verifyCsvData() || die('CSV data did not verify');
         }
     }
  
-    public function verifyCsvData() {
-        print "VERIFYING";
+    function verifyCsvData() {
+        $csvData = explode("\n", $this->sepaCsvData);
+        if (sizeof($csvData) < 20) {
+            return false;
+        }
+        if (substr($csvData[0], 0, 40) != "SEPA_HYDROLOGY_OFFICE,STATION_NAME,LOCAT") {
+            return false;
+        }
+        return true;
     }
 
-    public function __toString(): string {
+    function __toString(): string {
         return $this->variable;
     }
 
-    public function getVariable(): string {
+    function getVariable(): string {
         return $this->variable;
     }
 }
