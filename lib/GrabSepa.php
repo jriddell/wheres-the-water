@@ -16,8 +16,9 @@ class GrabSepa {
     const SEPA_DOWNLOAD_PERIOD = 60 * 10;
     const SEPA_URL = 'http://apps.sepa.org.uk/database/riverlevels/SEPA_River_Levels_Web.csv';
 
-    public $sepaFile = self::DATADIR . '/' . self::SEPA_CSV;
-    public $sepaCsvData;
+    public $sepaFile = self::DATADIR . '/' . self::SEPA_CSV; // filename
+    public $sepaCsvData; // csv data as string
+    public $sepaData; // the data in associative array form
 
     /* if file does not exist or is too old download it and write, else just read locally */
     function doGrab() {
@@ -31,7 +32,8 @@ class GrabSepa {
             $this->verifyCsvData() || die('CSV data did not verify');
         }
     }
- 
+
+    /* basic CSV file verification */
     function verifyCsvData() {
         $csvData = explode("\n", $this->sepaCsvData);
         if (sizeof($csvData) < 20) {
@@ -43,6 +45,24 @@ class GrabSepa {
         return true;
     }
 
+    function convertCsvToArray() {
+        $csvData = explode("\n", $this->sepaCsvData);
+        $this->sepaData = array();
+        foreach($csvData as $csvLine) {
+            if (substr($csvLine, 0, 40) == "SEPA_HYDROLOGY_OFFICE,STATION_NAME,LOCAT") {
+                continue;
+            }
+            $csvSplit = explode(',', $csvLine);
+            if (sizeof($csvSplit) < 10) {
+                continue;
+            }
+            $id = $csvSplit[2];
+            $this->sepaData[$id] = array();
+            $this->sepaData[$id]['current_level'] = $csvSplit[6]; //GAUGE_DATUM
+            $this->sepaData[$id]['reading_datetime'] = '213456'; // END_DATE
+        }
+    }
+    
     function __toString(): string {
         return $this->variable;
     }
