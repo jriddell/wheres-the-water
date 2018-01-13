@@ -6,9 +6,6 @@ if so downloads SEPA CSV and writes
 reads CSV and converts to json
 writes json
 */
-define("SEPA_CSV", "SEPA_River_Levels_Web.csv");
-define("DATADIR", "data");
-define("SEPA_DOWNLOAD_PERIOD", 60 * 10); // how often to download SEPA file in seconds
 
 class Scratch {
     const SEPA_CSV = 'SEPA_River_Levels_Web.csv';

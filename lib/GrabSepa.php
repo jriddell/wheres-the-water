@@ -53,7 +53,8 @@ class GrabSepa {
             $id = $csvSplit[2];
             $this->sepaData[$id] = array();
             $this->sepaData[$id]['current_level'] = $csvSplit[6]; //GAUGE_DATUM
-            $this->sepaData[$id]['reading_datetime'] = '213456'; // END_DATE
+            $this->sepaData[$id]['reading_timestamp'] = strtotime($csvSplit[9]); // END_DATE
+            $this->sepaData[$id]['gauge_name'] = $csvSplit[1]; // STATION_NAME
         }
     }
     

@@ -39,7 +39,7 @@ final class GrabSepaTest extends TestCase
         $grabSepa = new GrabSepa();
         $grabSepa->sepaCsvData = file_get_contents("data/SEPA_River_Levels_Web-good.csv");
         $grabSepa->convertCsvToArray();
-        $this->assertEquals(['current_level'=> '2.08', 'reading_datetime'=> '213456'], $grabSepa->sepaData[10048]);
+        $this->assertEquals(['current_level'=> '2.08', 'reading_timestamp'=> 1515845700, 'gauge_name' => 'Perth'], $grabSepa->sepaData[10048]);
     }
     
     public function testSepaData() {
