@@ -1,15 +1,8 @@
 <?php
 
 /*
-PHP which checks if .json is older than 1 min
-if so downloads SEPA CSV and writes
-reads CSV and converts to json
-writes json
+Methods to download SEPA data and convert it to an associative array
 */
-define("SEPA_CSV", "SEPA_River_Levels_Web.csv");
-define("datadir", "data");
-define("sepa_download_period", 60 * 10); // how often to download SEPA file in seconds
-
 class GrabSepa {
     const SEPA_CSV = 'SEPA_River_Levels_Web.csv';
     const DATADIR = 'data';
@@ -45,6 +38,7 @@ class GrabSepa {
         return true;
     }
 
+    /* create the data array */
     function convertCsvToArray() {
         $csvData = explode("\n", $this->sepaCsvData);
         $this->sepaData = array();
@@ -63,23 +57,10 @@ class GrabSepa {
         }
     }
     
-    function __toString(): string {
-        return $this->variable;
-    }
-
-    function getVariable(): string {
-        return $this->variable;
+    /* return the data array */
+    function sepaData() {
+        $this->doGrab();
+        $this->convertCsvToArray();
+        return $this->sepaData;
     }
 }
-
-/*
-if (time()-filemtime($grabSepa::DATADIR . '/' . $grabSepa::SEPA_CSV) > sepa_download_period) {
-  // file older than 2 hours
-  //grab file
-  //check it's valid
-  //parse to variable
-  //write
-} else {
-  // read value
-}
-*/

@@ -42,4 +42,10 @@ final class GrabSepaTest extends TestCase
         $this->assertEquals(['current_level'=> '2.08', 'reading_datetime'=> '213456'], $grabSepa->sepaData[10048]);
     }
     
+    public function testSepaData() {
+        $grabSepa = new GrabSepa();
+        $sepaData = $grabSepa->sepaData();
+        $this->assertGreaterThan(20, sizeof($sepaData));
+        $this->assertInternalType('array', $sepaData);
+    }
 }
