@@ -10,6 +10,28 @@ define("SEPA_CSV", "SEPA_River_Levels_Web.csv");
 define("datadir", "data");
 define("sepa_download_period", 60 * 10); // how often to download SEPA file in seconds
 
+class GrabSepa {
+    private $variable;
+
+    function set_variable($value) {
+        $this->variable = $value;
+    }
+ 
+    public function __toString(): string {
+        return $this->variable;
+    }
+
+    public function getVariable(): string {
+        return $this->variable;
+    }
+}
+/*
+$grabSepa = new GrabSepa;
+$grabSepa->set_variable('hello');
+print "<p>" . $grabSepa->getVariable();
+*/
+
+/*
 if (time()-filemtime(datadir + SEPA_CSV) > sepa_download_period) {
   // file older than 2 hours
   //grab file
@@ -19,3 +41,4 @@ if (time()-filemtime(datadir + SEPA_CSV) > sepa_download_period) {
 } else {
   // read value
 }
+*/
