@@ -86,15 +86,17 @@ final class RiverSectionsTest extends TestCase
 
     public function testEditRiverForm() {
         $riverSections = new RiverSections;
+        $riverSections->filename = 'data/river-sections-good.json';
         $riverSections->readFromJson();
         $form = $riverSections->editRiverForm();
-        $this->assertEquals('<input type="foo"', substr($form, 0, 30));
+        $this->assertEquals('<legend>Tay</legend><label for', substr($form, 0, 30));
     }
     
-    public function testEditRiverFormLine() {    
+    public function testEditRiverFormLine() {
         $riverSections = new RiverSections;
+        $riverSections->filename = 'data/river-sections-good.json';
         $riverSections->readFromJson();
-        $formLine = $riverSections->editRiverFormLine();
-        $this->assertEquals('<input type="foo"', substr($formLine, 0, 30));
+        $formLine = $riverSections->editRiverFormLine(0, $riverSections->riverSectionsData[0]);
+        $this->assertEquals('<legend>Tay</legend><label for', substr($formLine, 0, 30));
     }
 }

@@ -64,25 +64,32 @@ class RiverSections {
     /* TODO HTML editable form */
     public function editRiverForm() {
         $reply = "";
-        foreach($this->riverSectionsData as $id => $riverSection) {
-            $reply .= $this->editRiverFormLine($id, $riverSection);
+        foreach($this->riverSectionsData as $jsonid => $riverSection) {
+            $reply .= $this->editRiverFormLine($jsonid, $riverSection);
         }
         return $reply;
     }
 
     /* TODO HTML editable form */
-    public function editRiverFormLine($id, $riverSection) {
+    public function editRiverFormLine($jsonid, $riverSection) {
         $reply = "";
         $reply .= "<legend>" . $riverSection->name . "</legend>";
-        $reply .= $this->editRiverFormInputItem("name", $id, $riverSection->name);
-        $reply .= $this->editRiverFormInputItem("gauge_location_code", $id, $riverSection->gauge_location_code, "right");
+        $reply .= $this->editRiverFormInputItem("name", $jsonid, $riverSection->name);
+        $reply .= $this->editRiverFormInputItem("gauge_location_code", $jsonid, $riverSection->gauge_location_code, "right");
+        $reply .= $this->editRiverFormInputItem("longitude", $jsonid, $riverSection->longitude);
+        $reply .= $this->editRiverFormInputItem("latitude", $jsonid, $riverSection->latitude, "right");
+        $reply .= $this->editRiverFormInputItem("scrape_value", $jsonid, $riverSection->scrape_value);
+        $reply .= $this->editRiverFormInputItem("medium_value", $jsonid, $riverSection->medium_value, "right");
+        $reply .= $this->editRiverFormInputItem("high_value", $jsonid, $riverSection->high_value);
+        $reply .= $this->editRiverFormInputItem("very_high_value", $jsonid, $riverSection->very_high_value, "right");
+        $reply .= $this->editRiverFormInputItem("huge_value", $jsonid, $riverSection->huge_value);
         return $reply;
     }
 
-    public function editRiverFormInputItem($name, $id, $value, $column="left") {
+    public function editRiverFormInputItem($name, $jsonid, $value, $column="left") {
         $reply = "";
-        $reply .= "<label for='{$id}_{$name}' class='{$column}'>{$name}:</label>\n";
-        $reply .= "<input type='text' id='{$id}_{$name}' value='{$value}' class='{$column}' /> \n";
+        $reply .= "<label for='{$jsonid}_{$name}' class='{$column}'>{$name}:</label>\n";
+        $reply .= "<input type='text' id='{$jsonid}_{$name}' value='{$value}' class='{$column}' /> \n";
         return $reply;
     }
 
