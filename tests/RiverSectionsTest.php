@@ -6,9 +6,33 @@ use PHPUnit\Framework\TestCase;
 
 final class RiverSectionsTest extends TestCase
 {
+    /* some test data */
+    function initScratchData($riverSections) {
+        $riverSections->riverSectionsData[0] = ['name'=> 'Tay',
+                                 'gauge_location_code' => 10048,
+                                 'longitude' => 58.1234,
+                                 'latitude' => 0.123,
+                                 'scrape_value' => 1.0,
+                                 'medium_value' => 2.0,
+                                 'high_value' => 3.0,
+                                 'very_high_value' => 4.0,
+                                 'huge_value' => 5.0
+                                 ];
+        $riverSections->riverSectionsData[1] = ['name'=> 'Ericht',
+                                 'gauge_location_code' => 12345,
+                                 'longitude' => 58.1234,
+                                 'latitude' => 0.133,
+                                 'scrape_value' => 1.5,
+                                 'medium_value' => 2.5,
+                                 'high_value' => 3.5,
+                                 'very_high_value' => 4.5,
+                                 'huge_value' => 5.5
+                                 ];
+    }
+
     public function testWriteToJson() {
         $riverSections = new RiverSections;
-        $riverSections->initScratchData();
+        $this->initScratchData($riverSections);
         $riverSections->writeToJson();
         $this->assertFileExists($riverSections::DATADIR.'/'.$riverSections::RIVER_SECTIONS_JSON);
         unlink($riverSections::DATADIR.'/'.$riverSections::RIVER_SECTIONS_JSON);
