@@ -6,9 +6,10 @@ Class to deal with river sections data
 class RiverSections {
     const RIVER_SECTIONS_JSON = 'river-sections.json';
     const DATADIR = 'data';
+    const ROOT = '/var/www/canoescotland.org/wheres-the-water';
 
     public $riverSectionsData = array();
-    public $filename = self::DATADIR . '/' . self::RIVER_SECTIONS_JSON;
+    public $filename = self::ROOT . '/' . self::DATADIR . '/' . self::RIVER_SECTIONS_JSON;
 
     /* write data to file */
     function writeToJson() {
@@ -23,7 +24,10 @@ class RiverSections {
         $this->riverSectionsData = json_decode($json);
     }
 
-    /* TODO read from database, to be called once ever */
+    /* read from database and convert to our format, 
+       to be called once ever in testReadFromDatabaseWriteJsonForReal() 
+       to overwrite the .json file 
+    */
     public function readFromDatabase() {  
         require('../config/database.php'); // sets $servername, $username, $password, $dbname
         // Create connection

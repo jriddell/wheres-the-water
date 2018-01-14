@@ -32,6 +32,7 @@ final class RiverSectionsTest extends TestCase
 
     public function testWriteToJson() {
         $riverSections = new RiverSections;
+        $riverSections->filename = $riverSections::DATADIR.'/'.$riverSections::RIVER_SECTIONS_JSON;
         $this->initScratchData($riverSections);
         $riverSections->writeToJson();
         $this->assertFileExists($riverSections::DATADIR.'/'.$riverSections::RIVER_SECTIONS_JSON);
@@ -64,6 +65,7 @@ final class RiverSectionsTest extends TestCase
     
     public function testReadFromDatabaseWriteJson() {
         $riverSections = new RiverSections;
+        $riverSections->filename = $riverSections::DATADIR.'/'.$riverSections::RIVER_SECTIONS_JSON;
         $riverSections->readFromDatabase();
         $this->assertEquals(59, sizeof($riverSections->riverSectionsData));
         $riverSections->writeToJson();
