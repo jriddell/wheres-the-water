@@ -73,6 +73,7 @@ class RiverSections {
             $reply .= '<input type="hidden" name="riverUpdates" value="$jsonid" />';
             $reply .= $this->editRiverFormLine($jsonid, $riverSection);
             $reply .= '<input type="submit" value="Save" />';
+            $reply .= '<input type="submit" value="&#10060; " class="right" />';
             $reply .= '</form>';
         }
         return $reply;

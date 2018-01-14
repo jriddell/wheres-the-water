@@ -92,7 +92,7 @@ final class RiverSectionsTest extends TestCase
         $riverSections->filename = 'data/river-sections-good.json';
         $riverSections->readFromJson();
         $form = $riverSections->editRiverForm();
-        $this->assertEquals('<legend>Tay</legend><label for', substr($form, 0, 30));
+        $this->assertEquals('<form action="river-section.ph', substr($form, 0, 30));
     }
     
     public function testEditRiverFormLine() {
