@@ -46,7 +46,7 @@ class RiverSections {
         $json = file_get_contents($this->filename);
         $this->riverSectionsData = json_decode($json);
     }
-    
+
     /* TODO read from database, to be called once ever */
     public function readFromDatabase() {        
         return $this->variable;
