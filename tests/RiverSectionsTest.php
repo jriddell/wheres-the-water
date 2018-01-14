@@ -78,9 +78,23 @@ final class RiverSectionsTest extends TestCase
         $riverSections = new RiverSections;
         $riverSections->readFromDatabase();
         $this->assertEquals(59, sizeof($riverSections->riverSectionsData));
-        $riverSections->filename = '../' . $riverSections::DATADIR.'/'.$riverSections::RIVER_SECTIONS_JSON;
+        $riverSections->filename = $riverSections::ROOT . '/' . $riverSections::DATADIR.'/'.$riverSections::RIVER_SECTIONS_JSON;
         $riverSections->writeToJson();
-        $this->assertFileExists('../' . $riverSections::DATADIR.'/'.$riverSections::RIVER_SECTIONS_JSON);
+        $this->assertFileExists($riverSections::ROOT . '/' . $riverSections::DATADIR.'/'.$riverSections::RIVER_SECTIONS_JSON);
     }
     */
+
+    public function testEditRiverForm() {
+        $riverSections = new RiverSections;
+        $riverSections->readFromJson();
+        $form = $riverSections->editRiverForm();
+        assertEquals('<input type="foo"', substr($form, 0, 30));
+    }
+    
+    public function testEditRiverFormLine() {    
+        $riverSections = new RiverSections;
+        $riverSections->readFromJson();
+        $formLine = $riverSections->editRiverFormLine();
+        assertEquals('<input type="foo"', substr($formLine, 0, 30));
+    }
 }

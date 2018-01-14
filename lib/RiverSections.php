@@ -43,7 +43,7 @@ class RiverSections {
         if ($result->num_rows > 0) {
             // output data of each row
             while($row = $result->fetch_assoc()) {
-                $riverEntry = ['name'=> $row["title"],
+                $riverSection = ['name'=> $row["title"],
                                  'gauge_location_code' => $row["field_guageid_0_value"],
                                  'longitude' => $row["field_longitude_value"],
                                  'latitude' => $row["field_latitude_value"],
@@ -53,7 +53,7 @@ class RiverSections {
                                  'very_high_value' => $row["field_very_high_value"],
                                  'huge_value' => $row["field_huge_value"]
                                  ];
-                $this->riverSectionsData[] = $riverEntry;
+                $this->riverSectionsData[] = $riverSection;
             }
         } else {
             echo "0 results";
@@ -62,8 +62,19 @@ class RiverSections {
     }
 
     /* TODO HTML editable form */
-    public function showForm() {
-        return $this->variable;
+    public function editRiverForm() {
+        $reply = "";
+        foreach($this->riverSectionsData as $riverSection) {
+            $reply .= $this->editRiverFormLine($riverSection);
+        }
+        return $reply;
+    }
+
+    /* TODO HTML editable form */
+    public function editRiverFormLine($riverSection) {
+        $reply = "";
+        $reply .= "<p>Name:" . $riverSection->name;
+        return $reply;
     }
 
     /* TODO read HTML form */
