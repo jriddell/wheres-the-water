@@ -83,30 +83,39 @@ class RiverSections {
     public function editRiverFormLine($riverSection) {
         $reply = "";
         $reply .= "<legend>" . $riverSection->name . "</legend>";
-        $reply .= $this->editRiverFormInputItem("name", $riverSection->name);
-        $reply .= $this->editRiverFormInputItem("SEPA gauge code", $riverSection->gauge_location_code, "right");
-        $reply .= $this->editRiverFormInputItem("longitude", $riverSection->longitude);
-        $reply .= $this->editRiverFormInputItem("latitude", $riverSection->latitude, "right");
-        $reply .= $this->editRiverFormInputItem("scrape_value", $riverSection->scrape_value);
-        $reply .= $this->editRiverFormInputItem("medium_value", $riverSection->medium_value, "right");
-        $reply .= $this->editRiverFormInputItem("high_value", $riverSection->high_value);
-        $reply .= $this->editRiverFormInputItem("very_high_value", $riverSection->very_high_value, "right");
-        $reply .= $this->editRiverFormInputItem("huge_value", $riverSection->huge_value);
+        $reply .= $this->editRiverFormInputItem("name", "name", $riverSection->name);
+        $reply .= $this->editRiverFormInputItem("SEPA Gauge Code", "gauge_location_code", $riverSection->gauge_location_code, "right");
+        $reply .= $this->editRiverFormInputItem("longitude", "longitude", $riverSection->longitude);
+        $reply .= $this->editRiverFormInputItem("latitude", "latitude", $riverSection->latitude, "right");
+        $reply .= $this->editRiverFormInputItem("scrape_value", "scrape_value", $riverSection->scrape_value);
+        $reply .= $this->editRiverFormInputItem("medium_value", "medium_value", $riverSection->medium_value, "right");
+        $reply .= $this->editRiverFormInputItem("high_value", "high_value", $riverSection->high_value);
+        $reply .= $this->editRiverFormInputItem("very_high_value", "very_high_value", $riverSection->very_high_value, "right");
+        $reply .= $this->editRiverFormInputItem("huge_value", "huge_value", $riverSection->huge_value);
         return $reply;
     }
-
-    public function editRiverFormInputItem($name, $value, $column="left") {
+    
+    public function editRiverFormInputItem($text, $name, $value, $column="left") {
         $reply = "";
-        $reply .= "<label for='{$name}' class='{$column}'>{$name}:</label>\n";
+        $reply .= "<label for='{$name}' class='{$column}'>{$text}:</label>\n";
         $reply .= "<input type='text' name='{$name}' value='{$value}' class='{$column}' /> \n";
         return $reply;
     }
 
     /* TODO read HTML form to update rivers */
     public function updateRiverSection($postData) {
-        print_r($postData);
         $jsonid = $postData['riverUpdates'];
-//        $this->riverSectionsData
+        $riverSection = $this->riverSectionsData[$jsonid];
+        $riverSection->name = $postData['name'];
+        $riverSection->gauge_location_code = $postData['gauge_location_code'];
+        $riverSection->longitude = $postData['longitude'];
+        $riverSection->latitude = $postData['latitude'];
+        $riverSection->scrape_value = $postData['scrape_value'];
+        $riverSection->medium_value = $postData['medium_value'];
+        $riverSection->high_value = $postData['high_value'];
+        $riverSection->very_high_value = $postData['very_high_value'];
+        $riverSection->huge_value = $postData['huge_value'];
+        $this->writeToJson();
     }
 
     /* TODO add new river */
