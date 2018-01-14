@@ -64,16 +64,24 @@ class RiverSections {
     /* TODO HTML editable form */
     public function editRiverForm() {
         $reply = "";
-        foreach($this->riverSectionsData as $riverSection) {
-            $reply .= $this->editRiverFormLine($riverSection);
+        foreach($this->riverSectionsData as $id => $riverSection) {
+            $reply .= $this->editRiverFormLine($id, $riverSection);
         }
         return $reply;
     }
 
     /* TODO HTML editable form */
-    public function editRiverFormLine($riverSection) {
+    public function editRiverFormLine($id, $riverSection) {
         $reply = "";
-        $reply .= "<p>Name:" . $riverSection->name;
+        $reply .= "<legend>" . $riverSection->name . "</legend>";
+        $reply .= $this->editRiverFormInputItem("name", $id, $riverSection->name);
+        $reply .= $this->editRiverFormInputItem("gauge_location_code", $id, $riverSection->gauge_location_code);
+        return $reply;
+    }
+
+    public function editRiverFormInputItem($name, $id, $value) {
+        $reply = "";
+        $reply .= "<label for='{$id}_{$name}'>{$name}:</label><input type='text' id='{$id}_{$name}' value='{$value}'. /> \n";
         return $reply;
     }
 
