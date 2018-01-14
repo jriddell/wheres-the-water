@@ -37,7 +37,7 @@ class RiverSections {
     /* write data to file */
     function writeToJson() {
         $fp = fopen($this->filename, 'w');
-        fwrite($fp, json_encode($this->riverSectionsData));
+        fwrite($fp, json_encode($this->riverSectionsData, JSON_PRETTY_PRINT));
         fclose($fp);
     }
 
@@ -48,8 +48,37 @@ class RiverSections {
     }
 
     /* TODO read from database, to be called once ever */
-    public function readFromDatabase() {        
-        return $this->variable;
+    public function readFromDatabase() {  
+        require('../config/database.php'); // sets $servername, $username, $password, $dbname
+        // Create connection
+        $conn = new mysqli($servername, $username, $password, $dbname);
+
+        // Check connection
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+        $sql = "SELECT * FROM node_revisions join content_type_river_section ON node_revisions.vid = content_type_river_section.vid";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            // output data of each row
+            while($row = $result->fetch_assoc()) {
+                $riverEntry = ['name'=> $row["title"],
+                                 'gauge_location_code' => $row["field_guageid_0_value"],
+                                 'longitude' => $row["field_longitude_value"],
+                                 'latitude' => $row["field_latitude_value"],
+                                 'scrape_value' => $row["field_scrape_value"],
+                                 'medium_value' => $row["field_medium_value"],
+                                 'high_value' => $row["field_high_value"],
+                                 'very_high_value' => $row["field_very_high_value"],
+                                 'huge_value' => $row["field_huge_value"]
+                                 ];
+                $this->riverSectionsData[] = $riverEntry;
+            }
+        } else {
+            echo "0 results";
+        }
+        $conn->close();
     }
 
     /* TODO HTML editable form */
