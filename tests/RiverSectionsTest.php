@@ -53,7 +53,7 @@ final class RiverSectionsTest extends TestCase
         $riverSections->filename = 'data/river-sections-testReadFromWriteToJson.json';
         $riverSections->writeToJson();
         $this->assertFileExists('data/river-sections-testReadFromWriteToJson.json');
-        $this->assertFileExists('data/river-sections-good.json', 'data/river-sections-testReadFromWriteToJson.json');
+        $this->assertFileEquals('data/river-sections-good.json', 'data/river-sections-testReadFromWriteToJson.json');
         unlink('data/river-sections-testReadFromWriteToJson.json');
     }
     

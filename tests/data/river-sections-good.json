@@ -1,1 +1,24 @@
-[{"name":"Tay","gauge_location_code":10048,"longitude":58.1234,"latitude":0.123,"scrape_value":1,"medium_value":2,"high_value":3,"very_high_value":4,"huge_value":5},{"name":"Ericht","gauge_location_code":12345,"longitude":58.1234,"latitude":0.133,"scrape_value":1.5,"medium_value":2.5,"high_value":3.5,"very_high_value":4.5,"huge_value":5.5}]
+[
+    {
+        "name": "Tay",
+        "gauge_location_code": 10048,
+        "longitude": 58.1234,
+        "latitude": 0.123,
+        "scrape_value": 1,
+        "medium_value": 2,
+        "high_value": 3,
+        "very_high_value": 4,
+        "huge_value": 5
+    },
+    {
+        "name": "Ericht",
+        "gauge_location_code": 12345,
+        "longitude": 58.1234,
+        "latitude": 0.133,
+        "scrape_value": 1.5,
+        "medium_value": 2.5,
+        "high_value": 3.5,
+        "very_high_value": 4.5,
+        "huge_value": 5.5
+    }
+]
