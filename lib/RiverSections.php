@@ -1,4 +1,7 @@
 <?php
+/* Copyright 2017 Jonathan Riddell <jr@jriddell.org>
+   May be copied under the GNU GPL version 3 only
+*/
 
 /*
 Class to deal with river sections data
@@ -64,8 +67,13 @@ class RiverSections {
     /* TODO HTML editable form */
     public function editRiverForm() {
         $reply = "";
+
         foreach($this->riverSectionsData as $jsonid => $riverSection) {
+            $reply .= '<form action="river-section.php" method="post">';
+            $reply .= '<input type="hidden" name="riverUpdates" value="$jsonid" />';
             $reply .= $this->editRiverFormLine($jsonid, $riverSection);
+            $reply .= '<input type="submit" value="Save" />';
+            $reply .= '</form>';
         }
         return $reply;
     }
@@ -75,7 +83,7 @@ class RiverSections {
         $reply = "";
         $reply .= "<legend>" . $riverSection->name . "</legend>";
         $reply .= $this->editRiverFormInputItem("name", $jsonid, $riverSection->name);
-        $reply .= $this->editRiverFormInputItem("gauge_location_code", $jsonid, $riverSection->gauge_location_code, "right");
+        $reply .= $this->editRiverFormInputItem("SEPA gauge code", $jsonid, $riverSection->gauge_location_code, "right");
         $reply .= $this->editRiverFormInputItem("longitude", $jsonid, $riverSection->longitude);
         $reply .= $this->editRiverFormInputItem("latitude", $jsonid, $riverSection->latitude, "right");
         $reply .= $this->editRiverFormInputItem("scrape_value", $jsonid, $riverSection->scrape_value);
@@ -93,11 +101,21 @@ class RiverSections {
         return $reply;
     }
 
-    /* TODO read HTML form */
-    public function formSubmit() {
+    /* TODO read HTML form to update rivers */
+    public function updateRiverSections($postData) {
         return $this->variable;
     }
 
+    /* TODO add new river */
+    public function newRiverSection() {
+        return $this->variable;
+    }
+
+    /* TODO delete a river */
+    public function deleteRiverSection() {
+        return $this->variable;
+    }
+    
     /* TODO javascript for website */
     public function outputJavascript() {
         return $this->variable;
