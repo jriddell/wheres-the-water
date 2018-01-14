@@ -18,7 +18,17 @@ final class RiverSectionsTest extends TestCase
         $riverSections = new RiverSections;
         $riverSections->filename = 'data/river-sections-good.json';
         $riverSections->readFromJson();
-        print_r($riverSections->riverSectionsData);
         $this->assertEquals('Tay', $riverSections->riverSectionsData[0]->name);
+    }
+
+    public function testReadFromWriteToJson() {
+        $riverSections = new RiverSections;
+        $riverSections->filename = 'data/river-sections-good.json';
+        $riverSections->readFromJson();
+        $riverSections->filename = 'data/river-sections-testReadFromWriteToJson.json';
+        $riverSections->writeToJson();
+        $this->assertFileExists('data/river-sections-testReadFromWriteToJson.json');
+        $this->assertFileExists('data/river-sections-good.json', 'data/river-sections-testReadFromWriteToJson.json');
+        unlink('data/river-sections-testReadFromWriteToJson.json');
     }
 }

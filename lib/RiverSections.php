@@ -1,12 +1,8 @@
 <?php
 
 /*
-PHP which checks if .json is older than 1 min
-if so downloads SEPA CSV and writes
-reads CSV and converts to json
-writes json
+Class to deal with river sections data
 */
-
 class RiverSections {
     const RIVER_SECTIONS_JSON = 'river-sections.json';
     const DATADIR = 'data';
@@ -14,6 +10,7 @@ class RiverSections {
     public $riverSectionsData = array();
     public $filename = self::DATADIR . '/' . self::RIVER_SECTIONS_JSON;
 
+    /* some test data */
     function initScratchData() {
         $this->riverSectionsData[0] = ['name'=> 'Tay',
                                  'gauge_location_code' => 10048,
@@ -37,22 +34,36 @@ class RiverSections {
                                  ];
     }
 
+    /* write data to file */
     function writeToJson() {
         $fp = fopen($this->filename, 'w');
         fwrite($fp, json_encode($this->riverSectionsData));
         fclose($fp);
     }
 
+    /* read river data from file */
     function readFromJson() {
         $json = file_get_contents($this->filename);
         $this->riverSectionsData = json_decode($json);
     }
     
-    public function __toString(): string {
+    /* TODO read from database, to be called once ever */
+    public function readFromDatabase() {        
         return $this->variable;
     }
 
-    public function getVariable(): string {
+    /* TODO HTML editable form */
+    public function showForm() {
+        return $this->variable;
+    }
+
+    /* TODO read HTML form */
+    public function formSubmit() {
+        return $this->variable;
+    }
+
+    /* TODO javascript for website */
+    public function outputJavascript() {
         return $this->variable;
     }
 }
