@@ -88,7 +88,7 @@ if(document.getElementById && document.createTextNode) {
 	<?php  
 	// Retrieve all resorts for this region from the db
 	$result = db_query( "SELECT * FROM {node_revisions} join {content_type_river_section} ON {node_revisions}.vid = {content_type_river_section}.vid");
-	
+
 	// Display the rollover icon for each resort
 	while ( $row = $result->fetch() )   
 	{ 

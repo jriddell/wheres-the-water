@@ -75,13 +75,14 @@ class RiverSections {
         $reply = "";
         $reply .= "<legend>" . $riverSection->name . "</legend>";
         $reply .= $this->editRiverFormInputItem("name", $id, $riverSection->name);
-        $reply .= $this->editRiverFormInputItem("gauge_location_code", $id, $riverSection->gauge_location_code);
+        $reply .= $this->editRiverFormInputItem("gauge_location_code", $id, $riverSection->gauge_location_code, "right");
         return $reply;
     }
 
-    public function editRiverFormInputItem($name, $id, $value) {
+    public function editRiverFormInputItem($name, $id, $value, $column="left") {
         $reply = "";
-        $reply .= "<label for='{$id}_{$name}'>{$name}:</label><input type='text' id='{$id}_{$name}' value='{$value}'. /> \n";
+        $reply .= "<label for='{$id}_{$name}' class='{$column}'>{$name}:</label>\n";
+        $reply .= "<input type='text' id='{$id}_{$name}' value='{$value}' class='{$column}' /> \n";
         return $reply;
     }
 

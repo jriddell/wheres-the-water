@@ -88,13 +88,13 @@ final class RiverSectionsTest extends TestCase
         $riverSections = new RiverSections;
         $riverSections->readFromJson();
         $form = $riverSections->editRiverForm();
-        assertEquals('<input type="foo"', substr($form, 0, 30));
+        $this->assertEquals('<input type="foo"', substr($form, 0, 30));
     }
     
     public function testEditRiverFormLine() {    
         $riverSections = new RiverSections;
         $riverSections->readFromJson();
         $formLine = $riverSections->editRiverFormLine();
-        assertEquals('<input type="foo"', substr($formLine, 0, 30));
+        $this->assertEquals('<input type="foo"', substr($formLine, 0, 30));
     }
 }
