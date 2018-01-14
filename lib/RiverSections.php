@@ -51,6 +51,7 @@ class RiverSections {
                                  'longitude' => $row["field_longitude_value"],
                                  'latitude' => $row["field_latitude_value"],
                                  'scrape_value' => $row["field_scrape_value"],
+                                 'low_value' => $row["field_low_value"],
                                  'medium_value' => $row["field_medium_value"],
                                  'high_value' => $row["field_high_value"],
                                  'very_high_value' => $row["field_very_high_value"],
