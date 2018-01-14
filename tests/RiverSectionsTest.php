@@ -77,6 +77,8 @@ final class RiverSectionsTest extends TestCase
     }
 
     /* uncomment this to do a one time database import, it'll overwrite the existing data used
+    */
+    /*
     public function testReadFromDatabaseWriteJsonForReal() {
         $riverSections = new RiverSections;
         $riverSections->readFromDatabase();
@@ -92,14 +94,14 @@ final class RiverSectionsTest extends TestCase
         $riverSections->filename = 'data/river-sections-good.json';
         $riverSections->readFromJson();
         $form = $riverSections->editRiverForm();
-        $this->assertEquals('<form action="river-section.ph', substr($form, 0, 30));
+        $this->assertEquals("<form action='river-section.ph", substr($form, 0, 30));
     }
     
     public function testEditRiverFormLine() {
         $riverSections = new RiverSections;
         $riverSections->filename = 'data/river-sections-good.json';
         $riverSections->readFromJson();
-        $formLine = $riverSections->editRiverFormLine(0, $riverSections->riverSectionsData[0]);
+        $formLine = $riverSections->editRiverFormLine($riverSections->riverSectionsData[0]);
         $this->assertEquals('<legend>Tay</legend><label for', substr($formLine, 0, 30));
     }
 }
