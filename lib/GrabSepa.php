@@ -6,7 +6,7 @@ Methods to download SEPA data and convert it to an associative array
 class GrabSepa {
     const SEPA_CSV = 'SEPA_River_Levels_Web.csv';
     const DATADIR = 'data';
-    const SEPA_DOWNLOAD_PERIOD = 60 * 10;
+    const SEPA_DOWNLOAD_PERIOD = 60 * 10; // make sure current download is no older than 10 minutes
     const SEPA_URL = 'http://apps.sepa.org.uk/database/riverlevels/SEPA_River_Levels_Web.csv';
 
     public $sepaFile = self::DATADIR . '/' . self::SEPA_CSV; // filename
@@ -58,7 +58,7 @@ class GrabSepa {
         }
     }
     
-    /* return the data array */
+    /* get the data and return the data array, this is the main public API */
     function sepaData() {
         $this->doGrab();
         $this->convertCsvToArray();

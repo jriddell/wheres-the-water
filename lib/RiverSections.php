@@ -4,7 +4,7 @@
 */
 
 /*
-Class to deal with river sections data
+Class to deal with the river sections data
 */
 class RiverSections {
     const RIVER_SECTIONS_JSON = 'river-sections.json';

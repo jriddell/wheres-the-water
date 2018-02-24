@@ -15,4 +15,21 @@ The original code used data from a database.  This came from Java code which con
 tests:
 ./phpunit GrabSepaTest.php
 ./phpunit ScratchTest.php
-./phpunit RiverSectionsTest.php
+./phpunit RiverSectionsTest.php   (note this needs a database connection)
+
+database connection:
+only used for data import from old drupal/java system which stored the river data in Drupal's mysql database
+ config/database.php:
+ <?php
+ $servername = "localhost";
+ $username = "scauser";
+ $password = "xxx";
+ $dbname = "scadb";
+
+code:
+lib/GrabSepa  class to download sepa data and return it as array, sepaData() is the main method to use
+lib/Scratch.php  class to play around and test with
+lib/RiverSections.php Class to deal with the river sections data
+
+admin/river-section.php  admin UI to set, add and delete river sections
+
