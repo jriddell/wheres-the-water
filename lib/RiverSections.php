@@ -177,9 +177,50 @@ class RiverSections {
         }
     }
 
-    /* TODO add new river */
-    public function newRiverSection() {
-        return $this->variable;
+    /* HTML editable form for adding a new section */
+    public function addRiverForm() {
+        $riverSection = (object)array();
+        $riverSection->name = "";
+        $riverSection->gauge_location_code = "";
+        $riverSection->longitude = "";
+        $riverSection->latitude = "";
+        $riverSection->scrape_value = "";
+        $riverSection->low_value = "";
+        $riverSection->medium_value = "";
+        $riverSection->high_value = "";
+        $riverSection->very_high_value = "";
+        $riverSection->huge_value = "";
+
+        $reply = "<legend>Add New River Section</legend>";
+        $reply .= "<form action='river-section.php' method='post'>\n";
+        $reply .= $this->editRiverFormLine($riverSection);
+        $reply .= "<input type='submit' name='add' value='Add New River' />\n";
+        $reply .= "</form>\n";
+        return $reply;
+    }
+
+    /* process add new river submit */
+    public function addNewRiverSection($postData) {
+        try {
+            $this->validateRiverSectionUpdateData($postData);
+        } catch (Exception $e) {
+            $name = $postData['name'];
+            return "<b>&#9888;Not added $name</b><br />Validation error: " . $e->getMessage() . "<br />Click Back to retry";
+        }
+        $riverSection = (object)array();
+        $riverSection->name = $postData['name'];
+        $riverSection->gauge_location_code = $postData['gauge_location_code'];
+        $riverSection->longitude = $postData['longitude'];
+        $riverSection->latitude = $postData['latitude'];
+        $riverSection->scrape_value = $postData['scrape_value'];
+        $riverSection->low_value = $postData['low_value'];
+        $riverSection->medium_value = $postData['medium_value'];
+        $riverSection->high_value = $postData['high_value'];
+        $riverSection->very_high_value = $postData['very_high_value'];
+        $riverSection->huge_value = $postData['huge_value'];
+        $this->riverSectionsData[] = $riverSection;
+        $this->writeToJson();
+        return "Added new river " . $riverSection->name;
     }
 
     /* deal with submitted request to delete a river */

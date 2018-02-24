@@ -11,6 +11,9 @@ if (isset($_POST['riverUpdates']) && isset($_POST['save'])) {
 if (isset($_POST['riverUpdates']) && isset($_POST['delete'])) {
   $message = $riverSections->deleteRiverSection($_POST);
 }
+if (isset($_POST['add'])) {
+  $message = $riverSections->addNewRiverSection($_POST);
+}
   
 ?>
 <!html>
@@ -73,6 +76,7 @@ if (isset($message)) {
 }
 
 print $riverSections->editRiverForm();
+print $riverSections->addRiverForm();
 ?>
 </body>
 </html>
