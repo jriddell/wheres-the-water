@@ -113,6 +113,7 @@ class RiverSections {
         $riverSection->longitude = $postData['longitude'];
         $riverSection->latitude = $postData['latitude'];
         $riverSection->scrape_value = $postData['scrape_value'];
+        $riverSection->low_value = $postData['low_value'];
         $riverSection->medium_value = $postData['medium_value'];
         $riverSection->high_value = $postData['high_value'];
         $riverSection->very_high_value = $postData['very_high_value'];
