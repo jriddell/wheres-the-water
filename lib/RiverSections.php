@@ -65,7 +65,7 @@ class RiverSections {
         $conn->close();
     }
 
-    /* TODO HTML editable form */
+    /* HTML editable form */
     public function editRiverForm() {
         $reply = "";
 
@@ -80,19 +80,20 @@ class RiverSections {
         return $reply;
     }
 
-    /* TODO HTML editable form */
+    /* HTML editable form for a river section */
     public function editRiverFormLine($riverSection) {
         $reply = "";
         $reply .= "<legend>" . $riverSection->name . "</legend>";
-        $reply .= $this->editRiverFormInputItem("name", "name", $riverSection->name);
+        $reply .= $this->editRiverFormInputItem("River/Section Name", "name", $riverSection->name);
         $reply .= $this->editRiverFormInputItem("SEPA Gauge Code", "gauge_location_code", $riverSection->gauge_location_code, "right");
-        $reply .= $this->editRiverFormInputItem("longitude", "longitude", $riverSection->longitude);
-        $reply .= $this->editRiverFormInputItem("latitude", "latitude", $riverSection->latitude, "right");
-        $reply .= $this->editRiverFormInputItem("scrape_value", "scrape_value", $riverSection->scrape_value);
-        $reply .= $this->editRiverFormInputItem("medium_value", "medium_value", $riverSection->medium_value, "right");
-        $reply .= $this->editRiverFormInputItem("high_value", "high_value", $riverSection->high_value);
-        $reply .= $this->editRiverFormInputItem("very_high_value", "very_high_value", $riverSection->very_high_value, "right");
-        $reply .= $this->editRiverFormInputItem("huge_value", "huge_value", $riverSection->huge_value);
+        $reply .= $this->editRiverFormInputItem("Longitude", "longitude", $riverSection->longitude);
+        $reply .= $this->editRiverFormInputItem("Latitude", "latitude", $riverSection->latitude, "right");
+        $reply .= $this->editRiverFormInputItem("Scrape", "scrape_value", $riverSection->scrape_value);
+        $reply .= $this->editRiverFormInputItem("Low", "low_value", $riverSection->low_value, "right");
+        $reply .= $this->editRiverFormInputItem("Medium", "medium_value", $riverSection->medium_value);
+        $reply .= $this->editRiverFormInputItem("High", "high_value", $riverSection->high_value, "right");
+        $reply .= $this->editRiverFormInputItem("Very High", "very_high_value", $riverSection->very_high_value);
+        $reply .= $this->editRiverFormInputItem("Huge", "huge_value", $riverSection->huge_value, "right");
         return $reply;
     }
     
