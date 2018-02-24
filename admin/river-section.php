@@ -5,9 +5,13 @@
 require_once('../lib/RiverSections.php');
 $riverSections = new RiverSections;
 $riverSections->readFromJson();
-if (isset($_POST['riverUpdates'])) {
+if (isset($_POST['riverUpdates']) && isset($_POST['save'])) {
   print "river updates!";
   $riverSections->updateRiverSection($_POST);
+}
+if (isset($_POST['riverUpdates']) && isset($_POST['delete'])) {
+  print "delete a river!";
+  $riverSections->deleteRiverSection($_POST);
 }
   
 ?>

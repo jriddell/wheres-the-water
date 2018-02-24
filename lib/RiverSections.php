@@ -73,8 +73,8 @@ class RiverSections {
             $reply .= "<form action='river-section.php' method='post'>\n";
             $reply .= "<input type='hidden' name='riverUpdates' value='{$jsonid}' />\n";
             $reply .= $this->editRiverFormLine($riverSection);
-            $reply .= "<input type='submit' value='Save' />\n";
-            $reply .= "<input type='submit' value='&#10060;' class='right' />\n";
+            $reply .= "<input type='submit' name='save' value='Save' />\n";
+            $reply .= "<input type='submit' name='delete' value='&#10060;' class='right' />\n";
             $reply .= "</form>\n";
         }
         return $reply;
