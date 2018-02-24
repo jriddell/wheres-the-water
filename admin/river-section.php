@@ -6,12 +6,10 @@ require_once('../lib/RiverSections.php');
 $riverSections = new RiverSections;
 $riverSections->readFromJson();
 if (isset($_POST['riverUpdates']) && isset($_POST['save'])) {
-  print "river updates!";
-  $riverSections->updateRiverSection($_POST);
+  $message = $riverSections->updateRiverSection($_POST);
 }
 if (isset($_POST['riverUpdates']) && isset($_POST['delete'])) {
-  print "delete a river!";
-  $riverSections->deleteRiverSection($_POST);
+  $message = $riverSections->deleteRiverSection($_POST);
 }
   
 ?>
@@ -58,12 +56,20 @@ input.right[type=submit] { grid-column: 2/3;
                         width: 2em;
                      border: 2px solid black;
                    }
+
+p.message { border: 1px solid black;
+            color: #339;
+          }
 </style>
 </head>
 <body>
 <h1>Where's the Water River Section Editing</h1>
 
 <?php
+if (isset($message)) {
+  print "<p class='message'>$message</p>";
+}
+
 print $riverSections->editRiverForm();
 ?>
 </body>

@@ -97,6 +97,7 @@ class RiverSections {
         return $reply;
     }
     
+    /* one text field in the river form */
     public function editRiverFormInputItem($text, $name, $value, $column="left") {
         $reply = "";
         $reply .= "<label for='{$name}' class='{$column}'>{$text}:</label>\n";
@@ -104,7 +105,7 @@ class RiverSections {
         return $reply;
     }
 
-    /* TODO read HTML form to update rivers */
+    /* read submitted HTML form to update rivers */
     public function updateRiverSection($postData) {
         $jsonid = $postData['riverUpdates'];
         $riverSection = $this->riverSectionsData[$jsonid];
@@ -119,6 +120,7 @@ class RiverSections {
         $riverSection->very_high_value = $postData['very_high_value'];
         $riverSection->huge_value = $postData['huge_value'];
         $this->writeToJson();
+        return "Updated data for " . $riverSection->name;
     }
 
     /* TODO add new river */
@@ -126,9 +128,13 @@ class RiverSections {
         return $this->variable;
     }
 
-    /* TODO delete a river */
-    public function deleteRiverSection() {
-        return $this->variable;
+    /* deal with submitted request to delete a river */
+    public function deleteRiverSection($postData) {
+        $jsonid = $postData['riverUpdates'];
+        unset($this->riverSectionsData[$jsonid]); // turns it into a hash.
+        $this->riverSectionsData = array_values($this->riverSectionsData); // returns it to array.  Go PHP.
+        $this->writeToJson();
+        return "Deleted section " . $postData['name'];
     }
     
     /* TODO javascript for website */
