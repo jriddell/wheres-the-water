@@ -59,7 +59,9 @@ input.right[type=submit] { grid-column: 2/3;
 
 p.message { border: 1px solid black;
             color: #339;
+            padding: 1ex;
           }
+p.message b { font-size: larger; }
 </style>
 </head>
 <body>

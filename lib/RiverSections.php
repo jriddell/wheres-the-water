@@ -96,7 +96,7 @@ class RiverSections {
         $reply .= $this->editRiverFormInputItem("Huge", "huge_value", $riverSection->huge_value, "right");
         return $reply;
     }
-    
+
     /* one text field in the river form */
     public function editRiverFormInputItem($text, $name, $value, $column="left") {
         $reply = "";
@@ -109,6 +109,12 @@ class RiverSections {
     public function updateRiverSection($postData) {
         $jsonid = $postData['riverUpdates'];
         $riverSection = $this->riverSectionsData[$jsonid];
+        try {
+            $this->validateRiverSectionUpdateData($postData);
+        } catch (Exception $e) {
+            $name = $riverSection->name;
+            return "<b>&#9888;Not updated $name</b><br />Validation error: " . $e->getMessage();
+        }
         $riverSection->name = $postData['name'];
         $riverSection->gauge_location_code = $postData['gauge_location_code'];
         $riverSection->longitude = $postData['longitude'];
@@ -121,6 +127,54 @@ class RiverSections {
         $riverSection->huge_value = $postData['huge_value'];
         $this->writeToJson();
         return "Updated data for " . $riverSection->name;
+    }
+
+    /* do validation on river section values
+       throw exception if a problem
+    */
+    private function validateRiverSectionUpdateData($postData) {
+        $this->validateFloat("Longitude", $postData['longitude']);
+        $this->validateFloat("Latitude", $postData['latitude']);
+        $this->validateFloat("Scrape Value", $postData['scrape_value']);
+        $this->validateFloat("Low Value", $postData['low_value']);
+        $this->validateFloat("Medium Value", $postData['medium_value']);
+        $this->validateFloat("High Value", $postData['high_value']);
+        $this->validateFloat("Very High Value", $postData['very_high_value']);
+        $this->validateFloat("Huge Value", $postData['huge_value']);
+        if (!filter_var($postData['gauge_location_code'], FILTER_VALIDATE_INT)) {
+            throw new Exception("SEPA gauge code not an int");
+        }
+        $this->validateNotNegative("Latitude", $postData['latitude']);
+        $this->validateNotNegative("Scrape Value", $postData['scrape_value']);
+        $this->validateNotNegative("Low Value", $postData['low_value']);
+        $this->validateNotNegative("Medium Value", $postData['medium_value']);
+        $this->validateNotNegative("High Value", $postData['high_value']);
+        $this->validateNotNegative("Very High Value", $postData['very_high_value']);
+        $this->validateNotNegative("Huge Value", $postData['huge_value']);
+        if ($postData['scrape_value'] > $postData['low_value'] ||
+            $postData['low_value'] > $postData['medium_value'] ||
+            $postData['medium_value'] > $postData['high_value'] ||
+            $postData['high_value'] > $postData['very_high_value'] ||
+            $postData['very_high_value'] > $postData['huge_value']) {
+            throw new Exception("River level values not in sequential order");
+        }
+        if (!filter_var($postData['name'], FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>"/^[a-zA-Z \(\)]+$/")))) {
+            throw new Exception("Name not text");
+        }
+    }
+
+    /* throw exception if it's not a float */
+    private function validateFloat($name, $data) {
+        if (!filter_var($data, FILTER_VALIDATE_FLOAT)) {
+            throw new Exception("$name is not a float");
+        }
+    }
+    
+    /* throw exception if it's negatuve */
+    private function validateNotNegative($name, $data) {
+        if ($data < 0) {
+            throw new Exception("$name is negative");
+        }
     }
 
     /* TODO add new river */
