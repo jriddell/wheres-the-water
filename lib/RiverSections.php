@@ -169,7 +169,7 @@ class RiverSections {
             throw new Exception("$name is not a float");
         }
     }
-    
+
     /* throw exception if it's negatuve */
     private function validateNotNegative($name, $data) {
         if ($data < 0) {
