@@ -3,8 +3,25 @@
    May be copied under the GNU GPL version 3 only
 */
 
+require_once 'GrabSepa.php';
+
 /*
 Class to deal with the river sections data
+call readFromJson() then $obj->riverSectionsData is an array of rivers with their data
+[
+    {
+        "name": "Garry",
+        "gauge_location_code": "234189",
+        "longitude": "-4.84497",
+        "latitude": "57.0759",
+        "scrape_value": "0.4",
+        "low_value": "0.6",
+        "medium_value": "0.8",
+        "high_value": "1",
+        "very_high_value": "1.4",
+        "huge_value": "1.8"
+    }
+]
 */
 class RiverSections {
     const RIVER_SECTIONS_JSON = 'river-sections.json';
@@ -234,7 +251,29 @@ class RiverSections {
     
     /* TODO javascript for website */
     public function outputJavascript() {
-        return $this->variable;
+        $grabSepa = new GrabSepa;
+        $sepaData = $grabSepa->sepaData();
+        print "XXXX";
+        print "sepaData: " . $sepaData['234189']['current_level'];
+        print json_encode($sepaData, JSON_PRETTY_PRINT);
+        print "XXXXXXX";
+        $this->readFromJson();
+        print json_encode($this->riverSectionsData, JSON_PRETTY_PRINT);
+        foreach($this->riverSectionsData as $jsonid => $riverSection) {
+            $this->jsForRiver($jsonid, $riverSection, $sepaData);
+        }
+    }
+    
+    private function jsForRiver($jsonid, $riverSection, $sepaData) {
+        print "var point$jsonid = new GLatLng($riverSection->longitude,$riverSection->latitude);\n";
+        print "markerOptions = { icon:EMPTYIcon };\n";
+        print "var marker$jsonid = new GMarker(point$jsonid, markerOptions);\n";
+        print "GEvent.addListener(marker$jsonid, \"mouseover\", function() {\n";
+        print "    showSectionInfo(\"$riverSection->name\", \"EMPTY\", \"25/02/2018 08:45\", \"0.356\", \"RISING\" );\n"; //TODO
+        print "    showConversionInfo(\"EMPTY\", \"$riverSection->scrape_value\",\"$riverSection->low_value\", \"$riverSection->medium_value\", \"$riverSection->high_value\", \"$riverSection->very_high_value\", \"$riverSection->huge_value\");\n"; //TODO
+        print "});\n";
+        print "GEvent.addListener(marker$jsonid, \"click\", function() {  showPicWin('http://apps.sepa.org.uk/waterlevels/default.aspx?sd=t&lc=$riverSection->gauge_location_code') });\n";
+        print "map.addOverlay(marker$jsonid);\n\n";
     }
 }
 /*

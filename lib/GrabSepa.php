@@ -2,6 +2,15 @@
 
 /*
 Methods to download SEPA data and convert it to an associative array
+Main API is sepaData() which downloads the data and returns a hash of
+gauge_ids with their relevant data
+{
+    "10048": {
+        "current_level": "2.08",
+        "reading_timestamp": 1519543800,
+        "gauge_name": "Perth"
+    }
+}
 */
 class GrabSepa {
     const SEPA_CSV = 'SEPA_River_Levels_Web.csv';

@@ -86,6 +86,10 @@ if(document.getElementById && document.createTextNode) {
 	CONVERSION_UNKNOWNIcon.iconAnchor = new GPoint(5,5);
 			
 	<?php  
+	require_once 'lib/RiverSections.php';
+	$riverSections = new RiverSections;
+	$riverSections->outputJavascript();
+	
 	// Retrieve all resorts for this region from the db
 	$result = db_query( "SELECT * FROM {node_revisions} join {content_type_river_section} ON {node_revisions}.vid = {content_type_river_section}.vid");
 
