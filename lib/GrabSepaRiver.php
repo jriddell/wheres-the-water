@@ -44,11 +44,11 @@ class GrabSepaRiver {
         $pastReading = rtrim($pastReading);
         $pastReadingPair = explode(",", $pastReading); // ['03/03/2018 11:45:00', '0.53']
         if ($this->currentReading > $pastReadingPair[1]) {
-            $this->trend = 'Gang Up';
+            $this->trend = 'RISING';
         } elseif ($this->currentReading == $pastReadingPair[1]) {
-            $this->trend = 'Steady';
+            $this->trend = 'STABLE';
         } else {
-            $this->trend = 'Gang Doon';
+            $this->trend = 'FALLING';
         }
     }
 }

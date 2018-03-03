@@ -4,7 +4,7 @@
 */
 
 /*
-Methods to download SEPA data and convert it to an associative array
+Methods to download SEPA gauges data and convert it to an associative array
 Main API is sepaData() which downloads the data and returns a hash of
 gauge_ids with their relevant data
 {
@@ -18,7 +18,7 @@ gauge_ids with their relevant data
 class GrabSepa {
     const SEPA_CSV = 'SEPA_River_Levels_Web.csv';
     const DATADIR = 'data';
-    const SEPA_DOWNLOAD_PERIOD = 60 * 5; // make sure current download is no older than 5 minutes
+    const SEPA_DOWNLOAD_PERIOD = 60 * 60 * 24; // download gauges once a day
     const SEPA_URL = 'http://apps.sepa.org.uk/database/riverlevels/SEPA_River_Levels_Web.csv';
 
     public $sepaFile = self::DATADIR . '/' . self::SEPA_CSV; // filename
@@ -69,7 +69,7 @@ class GrabSepa {
             $this->sepaData[$gauge_id]['current_level'] = $this->grabSepaRiverData($gauge_id);
         }
     }
-    
+
     private function grabSepaRiverData($gauge_id) {
         $riverFilename = "${gauge_id}-SG.csv";
         $riverFilePath = $sepaFile = self::DATADIR . '/' . $riverFilename;
