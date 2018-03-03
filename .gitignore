@@ -1,3 +1,4 @@
 data/SEPA_River_Levels_Web.csv
 data/river-sections.json
+data/*.csv
 config/database.php

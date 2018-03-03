@@ -4,6 +4,7 @@
 */
 
 require_once 'GrabSepa.php';
+require_once 'GrabSepaRiver.php';
 
 /*
 Class to deal with the river sections data
@@ -271,14 +272,14 @@ class RiverSections {
             print "\n// Error: no SEPA reading for river " . $riverSection->name . "\n";
             return;
         }
-        $currentLevel = $sepaData[$sepaGaugeLocationCode]['current_level'];
-        $waterLevelValue = $this->waterLevelValue($currentLevel, $riverSection);
+        $sepaRiver = new GrabSepaRiver($sepaGaugeLocationCode);
+        $waterLevelValue = $this->waterLevelValue($sepaRiver->currentReading, $riverSection);
 
         print "var point$jsonid = new GLatLng($riverSection->latitude,$riverSection->longitude);\n";
         print "markerOptions = { icon:${waterLevelValue}Icon };\n";
         print "var marker$jsonid = new GMarker(point$jsonid, markerOptions);\n";
         print "GEvent.addListener(marker$jsonid, \"mouseover\", function() {\n";
-        print "    showSectionInfo(\"$riverSection->name\", \"$waterLevelValue\", \"25/02/2018 08:45\", \"$currentLevel\", \"RISING\" );\n"; //TODO
+        print "    showSectionInfo(\"$riverSection->name\", \"$waterLevelValue\", \"$sepaRiver->currentReadingTime\", \"$sepaRiver->currentReading\", \"$sepaRiver->trend\" );\n"; //TODO
         print "    showConversionInfo(\"$waterLevelValue\", \"$riverSection->scrape_value\",\"$riverSection->low_value\", \"$riverSection->medium_value\", \"$riverSection->high_value\", \"$riverSection->very_high_value\", \"$riverSection->huge_value\");\n"; //TODO
         print "});\n";
         print "GEvent.addListener(marker$jsonid, \"click\", function() {  showPicWin('http://apps.sepa.org.uk/waterlevels/default.aspx?sd=t&lc=$riverSection->gauge_location_code') });\n";

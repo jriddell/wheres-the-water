@@ -33,7 +33,8 @@ class GrabSepaRiver {
         }
 
         $riverDataArray = explode("\n", $riverDataFile);
-        print_r($riverDataArray);
+        //print_r($riverDataArray);
+        //Get the last value (uses -2 as -1 final entry is just a new line)
         $mostRecentReading = array_slice($riverDataArray, -2, 1)[0]; // '03/03/2018 12:45:00,0.53'
         $mostRecentReading = rtrim($mostRecentReading);
         $mostRecentReadingPair = explode(",", $mostRecentReading); // ['03/03/2018 12:45:00', '0.53']
