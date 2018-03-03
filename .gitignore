@@ -1,3 +1,4 @@
+data/rivers-readings-written.json
 data/SEPA_River_Levels_Web.csv
 data/river-sections.json
 data/*.csv
@@ -5,4 +6,4 @@ config/database.php
 tests/data/rivers_download_timestamp
 tests/data/10048-SG.csv
 tests/data/9514-SG.csv
-data/rivers-readings-written.json
+tests/data/SEPA_River_Levels_Web.csv

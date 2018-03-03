@@ -15,7 +15,7 @@ gauge_ids with their relevant data
     }
 }
 */
-class GrabSepa {
+class GrabSepaGauges {
     const SEPA_CSV = 'SEPA_River_Levels_Web.csv';
     const DATADIR = 'data';
     const SEPA_DOWNLOAD_PERIOD = 60 * 60 * 24; // download gauges once a day
@@ -66,22 +66,7 @@ class GrabSepa {
             $this->sepaData[$gauge_id] = array();
             $this->sepaData[$gauge_id]['reading_timestamp'] = strtotime($csvSplit[9]); // END_DATE
             $this->sepaData[$gauge_id]['gauge_name'] = $csvSplit[1]; // STATION_NAME
-            $this->sepaData[$gauge_id]['current_level'] = $this->grabSepaRiverData($gauge_id);
         }
-    }
-
-    private function grabSepaRiverData($gauge_id) {
-        $riverFilename = "${gauge_id}-SG.csv";
-        $riverFilePath = $sepaFile = self::DATADIR . '/' . $riverFilename;
-        $riverFileURL = "http://apps.sepa.org.uk/database/riverlevels/" . $riverFilename;
-        if (!file_exists($riverFilePath) || time()-filemtime($riverFilePath) > self::SEPA_DOWNLOAD_PERIOD) {
-            $riverDataFile = file_get_contents($riverFileURL);
-            $newSepaFile = fopen($riverFilePath, "w") or die("Unable to open file!");
-            fwrite($newSepaFile, $riverDataFile);
-        } else {
-            $riverDataFile = file_get_contents($riverFilePath);
-        }
-        return '1.0';
     }
 
     /* get the data and return the data array, this is the main public API */
