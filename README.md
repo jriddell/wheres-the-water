@@ -31,7 +31,8 @@ only used for data import from old drupal/java system which stored the river dat
  $password = "xxx";
  $dbname = "scadb";
 
-code:
+code
+====
 lib/Scratch.php  class to play around and test with
 lib/GrabSepaGauges  class to download SEPA gauge data and return it as array, sepaData() is the main method to use
 lib/RiverSections.php Class to deal with the river sections data, edit the data and export it as Javascript (most of the action happens here)
@@ -39,3 +40,16 @@ lib/GrabSepaRivers  class to provide and save/load json with current river readi
 lib/GrabSepaRiver  class to download current reading data for a river
 
 admin/river-section.php  admin UI to set, add and delete river sections
+
+TODO
+====
+- Download river data as an external process (takes to long to do it in sync with web page load)
+- Deploy
+
+PHP nuttyness
+=============
+We have to use PHP as it integrates with Drupal.
+
+SCA server uses PHP 5, this may cause problems.
+
+json_decode($data, true)  <-- use true here else it'll import hashes as objects not as associative arrays
