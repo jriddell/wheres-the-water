@@ -1,4 +1,7 @@
 <?php
+/* Copyright 2018 Jonathan Riddell <jr@jriddell.org>
+   May be copied under the GNU GPL version 3 (or later) only
+*/
 
 /*
 Methods to download SEPA data and convert it to an associative array
