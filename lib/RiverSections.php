@@ -3,7 +3,7 @@
    May be copied under the GNU GPL version 3 (or later) only
 */
 
-require_once 'GrabSepa.php';
+require_once 'GrabSepaGauges.php';
 require_once 'GrabSepaRiver.php';
 
 /*
@@ -252,28 +252,28 @@ class RiverSections {
     
     /* TODO javascript for website */
     public function outputJavascript() {
-        $grabSepa = new GrabSepa;
-        $sepaData = $grabSepa->sepaData();
+        $grabSepaGauges = new GrabSepaGauges;
+        $sepaGaugesData = $grabSepaGauges->sepaData();
         /*
-        print "sepaData: " . $sepaData['234189']['current_level'] . ";\n";
-        print "json: " . json_encode($sepaData, JSON_PRETTY_PRINT) . ";\n";
+        print "sepaData: " . $sepaGaugesData['234189']['current_level'] . ";\n";
+        print "json: " . json_encode($sepaGaugesData, JSON_PRETTY_PRINT) . ";\n";
         */
         $this->readFromJson();
         //print json_encode($this->riverSectionsData, JSON_PRETTY_PRINT);
-        //print json_encode($sepaData, JSON_PRETTY_PRINT);
+        //print json_encode($sepaGaugesData, JSON_PRETTY_PRINT);
         $grabSepaRivers = new GrabSepaRivers();
         $grabSepaRivers->doGrabSepaRiversReadings($this->riverSectionsData);
         // TODO GrabSepaRivers checks if old and updates externally
         // new data structure
         foreach($this->riverSectionsData as $jsonid => $riverSection) {
             // TODO read river data and pass to jsForRiver
-            $this->jsForRiver($jsonid, $riverSection, $sepaData);
+            $this->jsForRiver($jsonid, $riverSection, $sepaGaugesData);
         }
     }
 
-    private function jsForRiver($jsonid, $riverSection, $sepaData) {
+    private function jsForRiver($jsonid, $riverSection, $sepaGaugesData) {
         $sepaGaugeLocationCode = $riverSection->gauge_location_code;
-        if (!array_key_exists($sepaGaugeLocationCode, $sepaData)) {
+        if (!array_key_exists($sepaGaugeLocationCode, $sepaGaugesData)) {
             print "\n// Error: no SEPA reading for river " . $riverSection->name . "\n";
             return;
         }

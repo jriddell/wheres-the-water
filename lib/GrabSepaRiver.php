@@ -6,6 +6,7 @@
 /* Downloads and makes available the reading levels for a given river defined by the SEPA gauge_id
    Uses level data .csv file e.g.
    http://apps.sepa.org.uk/database/riverlevels/133094-SG.csv
+   This is only for use by GrabSepaRivers when doing the bulk download, too slow and resource intensive to do it more often
 */
 
 class GrabSepaRiver {

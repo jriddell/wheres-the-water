@@ -62,6 +62,8 @@ class GrabSepaRivers {
     /* read river data from file */
     function readFromJson() {
         $json = file_get_contents($this->filename);
-        $this->riversReadingsData = json_decode($json);
+        $this->riversReadingsData = json_decode($json, true);
+        print_r($this->riversReadingsData);
+        print_r(array_values($this->riversReadingsData));
     }
 }

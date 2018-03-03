@@ -11,8 +11,8 @@ final class GrabSepaRiverTest extends TestCase
     public function testVerifyRiver() {
         $grabSepaRiver = new GrabSepaRiver('133094');
         $this->assertEquals('133094', $grabSepaRiver->gauge_id);
-        $this->assertEquals('0.595', $grabSepaRiver->currentReading);
-        $this->assertEquals('03/03/2018 10:00:00', $grabSepaRiver->currentReadingTime);
-        $this->assertEquals('Gang Doon', $grabSepaRiver->trend);
+        $this->assertEquals('0.613', $grabSepaRiver->currentReading);
+        $this->assertEquals('03/03/2018 14:00:00', $grabSepaRiver->currentReadingTime);
+        $this->assertEquals('FALLING', $grabSepaRiver->trend);
     }
 }
