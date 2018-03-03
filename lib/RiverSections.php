@@ -259,21 +259,49 @@ class RiverSections {
         */
         $this->readFromJson();
         //print json_encode($this->riverSectionsData, JSON_PRETTY_PRINT);
+        //print json_encode($sepaData, JSON_PRETTY_PRINT);
         foreach($this->riverSectionsData as $jsonid => $riverSection) {
             $this->jsForRiver($jsonid, $riverSection, $sepaData);
         }
     }
 
     private function jsForRiver($jsonid, $riverSection, $sepaData) {
+        $sepaGaugeLocationCode = $riverSection->gauge_location_code;
+        if (!array_key_exists($sepaGaugeLocationCode, $sepaData)) {
+            print "\n// Error: no SEPA reading for river " . $riverSection->name . "\n";
+            return;
+        }
+        $currentLevel = $sepaData[$sepaGaugeLocationCode]['current_level'];
+        $waterLevelValue = $this->waterLevelValue($currentLevel, $riverSection);
+
         print "var point$jsonid = new GLatLng($riverSection->latitude,$riverSection->longitude);\n";
-        print "markerOptions = { icon:EMPTYIcon };\n";
+        print "markerOptions = { icon:${waterLevelValue}Icon };\n";
         print "var marker$jsonid = new GMarker(point$jsonid, markerOptions);\n";
         print "GEvent.addListener(marker$jsonid, \"mouseover\", function() {\n";
-        print "    showSectionInfo(\"$riverSection->name\", \"LOW\", \"25/02/2018 08:45\", \"1.5\", \"RISING\" );\n"; //TODO
-        print "    showConversionInfo(\"LOW\", \"$riverSection->scrape_value\",\"$riverSection->low_value\", \"$riverSection->medium_value\", \"$riverSection->high_value\", \"$riverSection->very_high_value\", \"$riverSection->huge_value\");\n"; //TODO
+        print "    showSectionInfo(\"$riverSection->name\", \"$waterLevelValue\", \"25/02/2018 08:45\", \"$currentLevel\", \"RISING\" );\n"; //TODO
+        print "    showConversionInfo(\"$waterLevelValue\", \"$riverSection->scrape_value\",\"$riverSection->low_value\", \"$riverSection->medium_value\", \"$riverSection->high_value\", \"$riverSection->very_high_value\", \"$riverSection->huge_value\");\n"; //TODO
         print "});\n";
         print "GEvent.addListener(marker$jsonid, \"click\", function() {  showPicWin('http://apps.sepa.org.uk/waterlevels/default.aspx?sd=t&lc=$riverSection->gauge_location_code') });\n";
         print "map.addOverlay(marker$jsonid);\n\n";
+    }
+
+    // return the human readable water level (low, medium etc)
+    private function waterLevelValue($currentLevel, $riverSection) {
+        if ($currentLevel < $riverSection->scrape_value) {
+            return "EMPTY";
+        } elseif ($currentLevel < $riverSection->low_value) {
+            return "SCRAPE";
+        } elseif ($currentLevel < $riverSection->medium_value) {
+            return "LOW";
+        } elseif ($currentLevel < $riverSection->high_value) {
+            return "MEDIUM";
+        } elseif ($currentLevel < $riverSection->very_high_value) {
+            return "HIGH";
+        } elseif ($currentLevel < $riverSection->huge_value) {
+            return "VERY_HIGH";
+        } else {
+            return "HUGE";
+        }
     }
 }
 /*
