@@ -40,11 +40,26 @@ final class GrabSepaRiversTest extends TestCase
     public function testVerifyRivers() {
         $this->initScratchData();
     
-        $grabSepaRivers = new GrabSepaRivers($this->riverSectionsData);
+        $grabSepaRivers = new GrabSepaRivers();
+        $grabSepaRivers->filename = 'data/rivers-readings.json';
+        $grabSepaRivers->doGrabSepaRiversReadings($this->riverSectionsData);
         $this->assertEquals($this->riverSectionsData, $grabSepaRivers->riverSectionsData);
         print_r($grabSepaRivers->riversReadingsData);
-        $this->assertEquals(array(['gauge_id'=>'10048', 'currentReading'=>'0.485', 'trend'=>'FALLING', 'currentReadingTime'=>'03/03/2018 12:30:00'],
-                                  ['gauge_id'=>'9514', 'currentReading'=>'1.456', 'trend'=>'RISING', 'currentReadingTime'=>'03/03/2018 14:45:00']
+        $this->assertEquals(array('10048'=>['currentReading'=>'0.485', 'trend'=>'FALLING', 'currentReadingTime'=>'03/03/2018 12:30:00'],
+                                  '9514'=>['currentReading'=>'1.456', 'trend'=>'RISING', 'currentReadingTime'=>'03/03/2018 14:45:00']
                                   ), $grabSepaRivers->riversReadingsData);
     }
+
+    public function testReadWriteJson() {
+        $this->initScratchData();
+    
+        $grabSepaRivers = new GrabSepaRivers();
+        $grabSepaRivers->filename = 'data/rivers-readings.json';
+        $grabSepaRivers->doGrabSepaRiversReadings($this->riverSectionsData);
+        $grabSepaRivers->filename = 'data/rivers-readings-written.json';
+        $grabSepaRivers->writeToJson();
+        $this->assertFileExists('data/rivers-readings-written.json');
+        $this->assertFileEquals('data/rivers-readings.json', 'data/rivers-readings-written.json');
+    }
+    
 }

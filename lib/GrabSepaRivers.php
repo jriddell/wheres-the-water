@@ -4,14 +4,14 @@
 */
 
 /* Make available a data structure of rivers and their current gauge readings
-$obj->riversReadingsData = [
+init with doGrabSepaRiversReadings($riverSectionsData) then you have
+$obj->riversReadingsData = {'1243':
                      {
-                         "gauge_id" : '1234',
                          "currentReading": '1.323',
                          "trend": "STEADY",
                          "currentReadingTime": "1/12/18 8:32"
                      }
-                    ]
+                    }
 */
 
 require_once('../lib/GrabSepaRiver.php');
@@ -24,19 +24,18 @@ class GrabSepaRivers {
     const RIVERS_READINGS_JSON = 'rivers-readings.json';
     const ROOT = '/var/www/canoescotland.org/wheres-the-water';
     public $filename = self::ROOT . '/' . self::DATADIR . '/' . self::RIVERS_READINGS_JSON;
-
+    public $timestampFile = self::DATADIR . '/' . self::TIMESTAMP;
     public $riversReadingsData = [];
     
-    public function __construct($riverSectionsData) {
-        $timestampFile = self::DATADIR . '/' . self::TIMESTAMP;
+    public function doGrabSepaRiversReadings($riverSectionsData) {
         $this->riverSectionsData = $riverSectionsData;
-        if (!file_exists($timestampFile) || time()-filemtime($timestampFile) > self::SEPA_DOWNLOAD_PERIOD) {
-            $newTimeStampFile = fopen($timestampFile, "w") or die("Unable to open file!");
+        if (!file_exists($this->timestampFile) || time()-filemtime($this->timestampFile) > self::SEPA_DOWNLOAD_PERIOD) {
+            $newTimeStampFile = fopen($this->timestampFile, "w") or die("Unable to open file!");
             fwrite($newTimeStampFile, "");
             fclose($newTimeStampFile);
             $this->downloadRiversData();
         } else {
-            readFromJson();
+            $this->readFromJson();
         }
     }
     
@@ -44,15 +43,15 @@ class GrabSepaRivers {
         $this->riversReadingsData = [];
         foreach($this->riverSectionsData as $riverSection) {
             $river = new GrabSepaRiver($riverSection['gauge_location_code']);
-            $this->riversReadingsData[] = ["gauge_id"=>$river->gauge_id,
-                                      "currentReading"=>$river->currentReading,
-                                      "trend"=>$river->trend,
-                                      "currentReadingTime"=>$river->currentReadingTime
-                                      ];
+            $this->riversReadingsData[$river->gauge_id] = [
+                                            "currentReading"=>$river->currentReading,
+                                            "trend"=>$river->trend,
+                                            "currentReadingTime"=>$river->currentReadingTime
+                                            ];
         }
         $this->writeToJson();
     }
-    
+
     /* write data to file */
     function writeToJson() {
         $fp = fopen($this->filename, 'w');

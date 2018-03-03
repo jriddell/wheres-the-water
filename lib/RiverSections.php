@@ -261,9 +261,9 @@ class RiverSections {
         $this->readFromJson();
         //print json_encode($this->riverSectionsData, JSON_PRETTY_PRINT);
         //print json_encode($sepaData, JSON_PRETTY_PRINT);
-        // TODO new GrabSepaRivers
-        grabSeapRivers = new GrabSepaRivers($this->riverSectionsData);
-        // GrabSepaRivers checks if old and updates externally
+        $grabSepaRivers = new GrabSepaRivers();
+        $grabSepaRivers->doGrabSepaRiversReadings($this->riverSectionsData);
+        // TODO GrabSepaRivers checks if old and updates externally
         // new data structure
         foreach($this->riverSectionsData as $jsonid => $riverSection) {
             // TODO read river data and pass to jsForRiver
