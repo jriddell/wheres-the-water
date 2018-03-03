@@ -27,6 +27,8 @@ class GrabSepaRivers {
     public $timestampFile = self::DATADIR . '/' . self::TIMESTAMP;
     public $riversReadingsData = [];
     
+    //TODO separate admin page to download river data, else use old data
+    //TODO report correctly on out of date data or no data
     public function doGrabSepaRiversReadings($riverSectionsData) {
         $this->riverSectionsData = $riverSectionsData;
         if (!file_exists($this->timestampFile) || time()-filemtime($this->timestampFile) > self::SEPA_DOWNLOAD_PERIOD) {

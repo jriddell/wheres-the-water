@@ -4,16 +4,21 @@
 * Copyright 2017 Jonathan Riddell
 * May be copied under the GNU GPL version 3 or later only
 
-Drupal website nodes
+wheres-the-water.php is body which can be viewed or used at http://canoescotland.org/where-go/wheres-water
 
-wheres-the-water.php is body of http://canoescotland.org/where-go/wheres-water
+sidebar.php is drupal is body of side block http://canoescotland.org/admin/structure/block/manage/block/18/
+old-html/wheres-water-drupal-content.html is drupal body of old site
 
-sidebar.php is body of side block http://canoescotland.org/admin/structure/block/manage/block/18/
+Old Version
+================
+The old version was written many years ago.  It had a Java backend which ran on cron to download SEPA data from private database connection and put it
+into SCA website Drupal database.  The Java source code has been lost so the site needs to be rewritten.  These days SEPA provides public CSV files which list the gauges and ones for each river with current readings, so we just use these.
 
-The original code used data from a database.  This came from Java code which connected to a SEPA database and put it into our local mysql database.  The Java source code has been lost so the site needs to be rewritten.
-
-tests:
-./phpunit GrabSepaTest.php
+tests
+=====
+./phpunit GrabSepaGaugesTest.php
+./phpunit GrabSepaRiversTest.php
+./phpunit GrabSepaRiverTest.php
 ./phpunit ScratchTest.php
 ./phpunit RiverSectionsTest.php   (note this needs a database connection)
 
@@ -27,9 +32,10 @@ only used for data import from old drupal/java system which stored the river dat
  $dbname = "scadb";
 
 code:
-lib/GrabSepa  class to download sepa data and return it as array, sepaData() is the main method to use
 lib/Scratch.php  class to play around and test with
-lib/RiverSections.php Class to deal with the river sections data
+lib/GrabSepaGauges  class to download SEPA gauge data and return it as array, sepaData() is the main method to use
+lib/RiverSections.php Class to deal with the river sections data, edit the data and export it as Javascript (most of the action happens here)
+lib/GrabSepaRivers  class to provide and save/load json with current river readings, when it needs to update data it uses below class
+lib/GrabSepaRiver  class to download current reading data for a river
 
 admin/river-section.php  admin UI to set, add and delete river sections
-
