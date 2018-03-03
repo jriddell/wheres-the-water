@@ -4,7 +4,7 @@
 */
 
 require_once 'GrabSepaGauges.php';
-require_once 'GrabSepaRiver.php';
+require_once 'GrabSepaRivers.php';
 
 /*
 Class to deal with the river sections data
@@ -267,11 +267,11 @@ class RiverSections {
         // new data structure
         foreach($this->riverSectionsData as $jsonid => $riverSection) {
             // TODO read river data and pass to jsForRiver
-            $this->jsForRiver($jsonid, $riverSection, $sepaGaugesData);
+            $this->jsForRiver($jsonid, $riverSection, $sepaGaugesData, $grabSepaRivers->riversReadingsData[$riverSection->gauge_location_code]);
         }
     }
 
-    private function jsForRiver($jsonid, $riverSection, $sepaGaugesData) {
+    private function jsForRiver($jsonid, $riverSection, $sepaGaugesData, $riverReadingData) {
         $sepaGaugeLocationCode = $riverSection->gauge_location_code;
         if (!array_key_exists($sepaGaugeLocationCode, $sepaGaugesData)) {
             print "\n// Error: no SEPA reading for river " . $riverSection->name . "\n";
@@ -284,7 +284,7 @@ class RiverSections {
         print "markerOptions = { icon:${waterLevelValue}Icon };\n";
         print "var marker$jsonid = new GMarker(point$jsonid, markerOptions);\n";
         print "GEvent.addListener(marker$jsonid, \"mouseover\", function() {\n";
-        print "    showSectionInfo(\"$riverSection->name\", \"$waterLevelValue\", \"$sepaRiver->currentReadingTime\", \"$sepaRiver->currentReading\", \"$sepaRiver->trend\" );\n"; //TODO
+        print "    showSectionInfo(\"$riverSection->name\", \"$waterLevelValue\", \"".$riverReadingData['currentReadingTime']."\", \"".$riverReadingData['currentReading']."\", \"".$riverReadingData['trend']."\" );\n"; //TODO
         print "    showConversionInfo(\"$waterLevelValue\", \"$riverSection->scrape_value\",\"$riverSection->low_value\", \"$riverSection->medium_value\", \"$riverSection->high_value\", \"$riverSection->very_high_value\", \"$riverSection->huge_value\");\n"; //TODO
         print "});\n";
         print "GEvent.addListener(marker$jsonid, \"click\", function() {  showPicWin('http://apps.sepa.org.uk/waterlevels/default.aspx?sd=t&lc=$riverSection->gauge_location_code') });\n";

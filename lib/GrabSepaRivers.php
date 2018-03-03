@@ -14,7 +14,7 @@ $obj->riversReadingsData = {'1243':
                     }
 */
 
-require_once('../lib/GrabSepaRiver.php');
+require_once('GrabSepaRiver.php');
 
 class GrabSepaRivers {
     const DATADIR = 'data';
@@ -42,7 +42,7 @@ class GrabSepaRivers {
     private function downloadRiversData() {
         $this->riversReadingsData = [];
         foreach($this->riverSectionsData as $riverSection) {
-            $river = new GrabSepaRiver($riverSection['gauge_location_code']);
+            $river = new GrabSepaRiver($riverSection->gauge_location_code);
             $this->riversReadingsData[$river->gauge_id] = [
                                             "currentReading"=>$river->currentReading,
                                             "trend"=>$river->trend,
@@ -63,7 +63,7 @@ class GrabSepaRivers {
     function readFromJson() {
         $json = file_get_contents($this->filename);
         $this->riversReadingsData = json_decode($json, true);
-        print_r($this->riversReadingsData);
-        print_r(array_values($this->riversReadingsData));
+        //print_r($this->riversReadingsData);
+        //print_r(array_values($this->riversReadingsData));
     }
 }
