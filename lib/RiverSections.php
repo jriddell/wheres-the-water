@@ -254,6 +254,14 @@ class RiverSections {
         return "Deleted section " . $postData['name'];
     }
 
+    //returns time of last download from SEPA
+    public function downloadTime() {
+        $timestampFile = fopen(ROOT . '/' . self::DATADIR .'/download_reading_timestamp', "r") or die("Unable to open file!");
+        $timestamp = fread($timestampFile, 20);
+        return date('D d M Y H:i', $timestamp);
+    }
+
+    //returns SEPA reading which is most recent
     public function calculateMostRecentReading() {
         $grabSepaGauges = new GrabSepaGauges;
         $sepaGaugesData = $grabSepaGauges->sepaData();

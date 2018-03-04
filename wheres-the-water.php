@@ -15,13 +15,13 @@ $riverSections->readFromJson();
 			  <td class="dataHeaders" colspan="2">Data Last Polled</td>
 			</tr>
 			<tr>
-			  <td class="dataValues" style="width:190px" colspan="2">25th Feb at 10:01</td>
+			  <td class="dataValues" style="width:190px" colspan="2"><?php print $riverSections->downloadTime() ?></td>
 			</tr>
 			<tr>
 			  <td colspan="2" height="4"></td>
           		</tr>
 			<tr>
-			  <td class="dataHeaders" colspan="2">Most Recent Reading</td>
+			  <td class="dataHeaders" colspan="2">Most Recent SEPA Reading</td>
 			  </tr>
 			 <tr>
 			  <td colspan="2" class="dataValues" style="width:190px" ><?php print $riverSections->calculateMostRecentReading() ?></td>

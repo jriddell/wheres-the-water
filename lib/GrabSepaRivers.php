@@ -68,6 +68,8 @@ class GrabSepaRivers {
                                             ];
         }
         $this->writeToJson();
+        $timestampFile = fopen(ROOT . '/' . self::DATADIR .'/download_reading_timestamp', "w") or die("Unable to open file!");
+        fwrite($timestampFile, time());
     }
 
     /* write data to file */

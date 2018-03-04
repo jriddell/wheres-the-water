@@ -27,7 +27,8 @@ tr:nth-child(even) {
 require_once('lib/RiverSections.php');
 $riverSections = new RiverSections();
 $riverSections->readFromJson();
-print "<p>Most recent update: " . $riverSections->calculateMostRecentReading() . "</p>\n";
+print "<p>Readings downloaded from SEPA at " . $riverSections->downloadTime() . "</p>\n";
+print "<p>Most recent SEPA reading: " . $riverSections->calculateMostRecentReading() . "</p>\n";
 ?>
 
 <table id="myTable">
