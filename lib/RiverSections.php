@@ -272,13 +272,12 @@ class RiverSections {
     }
 
     private function trForRiver($jsonid, $riverSection, $sepaGaugesData, $riverReadingData) {
-        print "<tr>\n";
         $sepaGaugeLocationCode = $riverSection['gauge_location_code'];
         if (!array_key_exists($sepaGaugeLocationCode, $sepaGaugesData)) {
             //print "\n// Error: no SEPA reading for river " . $riverSection['name'] . "\n";
-            print "</tr>\n";
             return;
         }
+        print "<tr>\n";
         $waterLevelValue = $this->waterLevelValue($riverReadingData['currentReading'], $riverSection);
         print "<td>".$riverSection['name']."</td>";
         print "<td>".$waterLevelValue."</td>";
