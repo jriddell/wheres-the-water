@@ -5,7 +5,7 @@
 <script type="text/javascript" src="http://canoescotland.org/sites/all/themes/basestation_open/js/riverLevels.js?p347k9"></script>
 </head>
 
-<body>
+<body style="background: white">
 <p><a href="http://www.andyjacksonfund.org.uk"><img src="andy-jackson-fund.png" width="560" height="86" /></a>
 <a href="http://canoescotland.org"><img src="scottish-canoe-association-social.jpg" width="400" height="157" /></a></p>
 
@@ -191,8 +191,7 @@ if(document.getElementById && document.createTextNode) {
     } // function createMap()
 </script>
 
-<p>
-SCA Where's the Water uses <a href="
+<p>SCA Where's the Water uses <a href="
 <a href="http://apps.sepa.org.uk/waterlevels/">water level data from SEPA</a>.</p>
 
 <p>Code written and maintained by <a href="http://www.edinburghlinux.co.uk">Jonathan Riddell</a>, patched and bug reports welcome, <a href="https://github.com/jriddell/wheres-the-water">Where's the Water on GitHub</a>.</p>
