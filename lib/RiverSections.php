@@ -340,12 +340,16 @@ class RiverSections {
 
     private function jsForRiver($jsonid, $riverSection, $sepaGaugesData, $riverReadingData) {
         $sepaGaugeLocationCode = $riverSection['gauge_location_code'];
+        $waterLevelValue = "";
         if (!array_key_exists($sepaGaugeLocationCode, $sepaGaugesData)) {
-            print "\n// Error: no SEPA reading for river " . $riverSection['name'] . "\n";
-            return;
+            print "\n// Warning: no SEPA reading for river " . $riverSection['name'] . "\n";
+            $riverReadingData['currentReading'] = 0;
+            $waterLevelValue = "NO_GUAGE_DATA";
+        } else {
+            $waterLevelValue = $this->waterLevelValue($riverReadingData['currentReading'], $riverSection);
         }
-        $waterLevelValue = $this->waterLevelValue($riverReadingData['currentReading'], $riverSection);
 
+        // FIXME this should be a template or something neater
         print "var point$jsonid = new GLatLng(".$riverSection['latitude'].",".$riverSection['longitude'].");\n";
         print "markerOptions = { icon:${waterLevelValue}Icon };\n";
         print "var marker$jsonid = new GMarker(point$jsonid, markerOptions);\n";
