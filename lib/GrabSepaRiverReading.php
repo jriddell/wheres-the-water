@@ -12,6 +12,7 @@
 
 class GrabSepaRiverReading {
     const DATADIR = 'data';
+    const ROOT = '/var/www/canoescotland.org/wheres-the-water';
     const SEPA_DOWNLOAD_PERIOD = 60 * 5; // make sure current download is no older than 5 minutes
     const SEPA_URL = 'http://apps.sepa.org.uk/database/riverlevels/';
 
@@ -20,22 +21,28 @@ class GrabSepaRiverReading {
     public $trend;
     public $currentReadingTime;
     public $sepaURL = self::SEPA_URL;
+    public $dataDir = self::ROOT . '/' . self::DATADIR;
 
     public function doGrabSepaRiver($gauge_id) {
         $this->gauge_id = $gauge_id;
 
         $riverFilename = "${gauge_id}-SG.csv";
-        $riverFilePath = $sepaFile = self::DATADIR . '/' . $riverFilename;
+        $riverFilePath = $this->dataDir . '/' . $riverFilename;
         $riverFileURL = $this->sepaURL . $riverFilename;
         if (!file_exists($riverFilePath) || time()-filemtime($riverFilePath) > self::SEPA_DOWNLOAD_PERIOD) {
-            $riverDataFile = file_get_contents($riverFileURL);
+            $riverData = @file_get_contents($riverFileURL);
+            if($riverData == false) {
+                print "<p>No SEPA gauge data for " . $gauge_id . "</p>\n";
+                flush();
+                return False;
+            } 
             $newSepaFile = fopen($riverFilePath, "w") or die("Unable to open file!");
-            fwrite($newSepaFile, $riverDataFile);
+            fwrite($newSepaFile, $riverData);
         } else {
-            $riverDataFile = file_get_contents($riverFilePath);
+            $riverData = file_get_contents($riverFilePath);
         }
 
-        $riverDataArray = explode("\n", $riverDataFile);
+        $riverDataArray = explode("\n", $riverData);
         //print_r($riverDataArray);
         //Get the last value (uses -2 as -1 final entry is just a new line)
         $mostRecentReading = array_slice($riverDataArray, -2, 1)[0]; // '03/03/2018 12:45:00,0.53'
@@ -53,5 +60,7 @@ class GrabSepaRiverReading {
         } else {
             $this->trend = 'FALLING';
         }
+        print "<p>Downloaded River Reading for gauge ".$gauge_id."</p>\n";
+        flush();
     }
 }

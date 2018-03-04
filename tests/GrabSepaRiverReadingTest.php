@@ -11,6 +11,7 @@ final class GrabSepaRiverReadingTest extends TestCase
     public function testVerifyRiver() {
         $grabSepaRiver = new GrabSepaRiverReading();
         $grabSepaRiver->sepaURL = "http://embra.edinburghlinux.co.uk/~jr/";
+        $grabSepaRiver->dataDir = 'data';
         @unlink('data/133094-SG.csv'); // funny syntax to supress error if it does not exist
         $grabSepaRiver->doGrabSepaRiver('133094');
         $this->assertEquals('133094', $grabSepaRiver->gauge_id);

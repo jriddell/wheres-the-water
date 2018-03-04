@@ -251,7 +251,7 @@ class RiverSections {
         return "Deleted section " . $postData['name'];
     }
     
-    /* TODO javascript for website */
+    /* javascript for website */
     public function outputJavascript() {
         $grabSepaGauges = new GrabSepaGauges;
         $sepaGaugesData = $grabSepaGauges->sepaData();
@@ -263,7 +263,11 @@ class RiverSections {
         //print json_encode($this->riverSectionsData, JSON_PRETTY_PRINT);
         //print json_encode($sepaGaugesData, JSON_PRETTY_PRINT);
         $grabSepaRivers = new GrabSepaRivers();
-        $grabSepaRivers->doGrabSepaRiversReadings($this->riverSectionsData);
+        if (!$grabSepaRivers->readFromJson()) {
+            print "</script>";
+            print "<h1>Sorry no river reading data available, try again soon</h1>";
+            die();
+        }
         foreach($this->riverSectionsData as $jsonid => $riverSection) {
             //read river data and pass to jsForRiver
             $this->jsForRiver($jsonid, $riverSection, $sepaGaugesData, $grabSepaRivers->riversReadingsData[$riverSection['gauge_location_code']]);

@@ -24,19 +24,27 @@ class GrabSepaRivers {
     const RIVERS_READINGS_JSON = 'rivers-readings.json';
     const ROOT = '/var/www/canoescotland.org/wheres-the-water';
     public $filename = self::ROOT . '/' . self::DATADIR . '/' . self::RIVERS_READINGS_JSON;
-    public $timestampFile = self::DATADIR . '/' . self::TIMESTAMP;
+    public $timestampFile = self::ROOT . '/' . self::DATADIR . '/' . self::TIMESTAMP;
+    public $downloadLockFile = self::ROOT . '/' . self::DATADIR . '/' . "DOWNLOAD-LOCK";
     public $riversReadingsData = [];
-    
+
     //TODO separate admin page to download river data, else use old data
     //TODO report correctly on out of date data or no data
-    public function doGrabSepaRiversReadings($riverSectionsData) {
+    public function doGrabSepaRiversReadings($riverSectionsData, $force = false) {
         $this->riverSectionsData = $riverSectionsData;
-        if (!file_exists($this->timestampFile) || time()-filemtime($this->timestampFile) > self::SEPA_DOWNLOAD_PERIOD) {
+        if ($force || !file_exists($this->timestampFile) || time()-filemtime($this->timestampFile) > self::SEPA_DOWNLOAD_PERIOD) {
             $newTimeStampFile = fopen($this->timestampFile, "w") or die("Unable to open file!");
             fwrite($newTimeStampFile, "");
             fclose($newTimeStampFile);
-            $this->downloadRiversData();
+            if (!file_exists($this->downloadLockFile)) {
+                $newDownloadLockFile = fopen($this->downloadLockFile, "w") or die("Unable to open file download lock!");
+                fwrite($newDownloadLockFile, "");
+                fclose($newDownloadLockFile);
+                $this->downloadRiversData();
+                unlink($this->downloadLockFile);
+            }
         } else {
+            print "<p>Previous river readings download was recently, just reading from local JSON data</p>";
             $this->readFromJson();
         }
     }
@@ -64,9 +72,13 @@ class GrabSepaRivers {
 
     /* read river data from file */
     function readFromJson() {
+        if (!file_exists($this->filename)) {
+            return false;
+        }
         $json = file_get_contents($this->filename);
         $this->riversReadingsData = json_decode($json, true);
         //print_r($this->riversReadingsData);
         //print_r(array_values($this->riversReadingsData));
+        return true;
     }
 }
