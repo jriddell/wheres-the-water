@@ -28,7 +28,6 @@ class GrabSepaRivers {
     public $downloadLockFile = self::ROOT . '/' . self::DATADIR . '/' . "DOWNLOAD-LOCK";
     public $riversReadingsData = [];
 
-    //TODO separate admin page to download river data, else use old data
     //TODO report correctly on out of date data or no data
     public function doGrabSepaRiversReadings($riverSectionsData, $force = false) {
         $this->riverSectionsData = $riverSectionsData;
@@ -42,6 +41,8 @@ class GrabSepaRivers {
                 fclose($newDownloadLockFile);
                 $this->downloadRiversData();
                 unlink($this->downloadLockFile);
+            } else {
+                print "<p>Download already in process (lock file present).</p>";
             }
         } else {
             print "<p>Previous river readings download was recently, just reading from local JSON data</p>";

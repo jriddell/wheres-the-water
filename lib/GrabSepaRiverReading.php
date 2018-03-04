@@ -35,7 +35,12 @@ class GrabSepaRiverReading {
                 print "<p>No SEPA gauge data for " . $gauge_id . "</p>\n";
                 flush();
                 return False;
-            } 
+            }
+            if (!$this->validateRiverData($riverData)) {
+                print "<p>Invalid file downloaded for " . $gauge_id . "</p>\n";
+                flush();
+                return False;
+            }
             $newSepaFile = fopen($riverFilePath, "w") or die("Unable to open file!");
             fwrite($newSepaFile, $riverData);
         } else {
@@ -62,5 +67,13 @@ class GrabSepaRiverReading {
         }
         print "<p>Downloaded River Reading for gauge ".$gauge_id."</p>\n";
         flush();
+    }
+
+    private function validateRiverData($riverData) {
+        $riverDataArray = explode("\n", $riverData);
+        if (count($riverDataArray) <= 7) {
+            return false;
+        }
+        return true;
     }
 }
