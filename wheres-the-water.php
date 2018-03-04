@@ -88,7 +88,7 @@ $riverSections->readFromJson();
 
  </div>
 
-<div id="map" style="height: 500px; "></div>
+<div id="map" style="height: 500px; width: 100%; max-width: 800px; "></div>
 
 <script language="javascript" src="http://maps.google.com/maps?file=api&amp;v=3&amp;sensor=false&amp;key=AIzaSyD-WF6gFouMUCMfdvzw2ajMeOrE-F6RlRY" ></script>
 
