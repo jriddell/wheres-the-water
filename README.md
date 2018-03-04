@@ -11,8 +11,14 @@ old-html/wheres-water-drupal-content.html is drupal body of old site
 
 Old Version
 ================
-The old version was written many years ago.  It had a Java backend which ran on cron to download SEPA data from private database connection and put it
-into SCA website Drupal database.  The Java source code has been lost so the site needs to be rewritten.  These days SEPA provides public CSV files which list the gauges and ones for each river with current readings, so we just use these.
+The old version was written many years ago.  It had a Java backend
+which ran on cron to download SEPA data from private database
+connection and put it into SCA website Drupal database.  Mixing the
+WtW data into multiple tables in the Drupal database is unnecessary
+and complicates things.  The Java source code has been lost so the
+site needs to be rewritten.  These days SEPA provides public CSV files
+which list the gauges and ones for each river with current readings,
+so we just use these.
 
 tests
 =====
@@ -53,3 +59,9 @@ We have to use PHP as it integrates with Drupal.
 SCA server uses PHP 5, this may cause problems.
 
 json_decode($data, true)  <-- use true here else it'll import hashes as objects not as associative arrays
+
+Config
+======
+config.php should have the root file location set:
+ <?php
+ define("ROOT",     "/var/www/canoescotland.org/wheres-the-water");

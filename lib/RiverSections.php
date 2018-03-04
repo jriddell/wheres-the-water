@@ -5,6 +5,7 @@
 
 require_once 'GrabSepaGauges.php';
 require_once 'GrabSepaRivers.php';
+require_once '../config.php';
 
 /*
 Class to deal with the river sections data
@@ -27,14 +28,13 @@ call readFromJson() then $obj->riverSectionsData is an array of rivers with thei
 class RiverSections {
     const RIVER_SECTIONS_JSON = 'river-sections.json';
     const DATADIR = 'data';
-    const ROOT = '/var/www/canoescotland.org/wheres-the-water';
 
     public $riverSectionsData;
     public $filename;
 
     function __construct() {
         $this->riverSectionsData = array();
-        $this->filename = self::ROOT . '/' . self::DATADIR . '/' . self::RIVER_SECTIONS_JSON;
+        $this->filename = ROOT . '/' . self::DATADIR . '/' . self::RIVER_SECTIONS_JSON;
     }
     /* write data to file */
     function writeToJson() {

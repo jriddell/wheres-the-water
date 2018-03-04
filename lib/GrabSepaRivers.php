@@ -15,6 +15,7 @@ $obj->riversReadingsData = {'1243':
 */
 
 require_once('GrabSepaRiverReading.php');
+require_once '../config.php';
 
 class GrabSepaRivers {
     const DATADIR = 'data';
@@ -22,16 +23,15 @@ class GrabSepaRivers {
     const SEPA_DOWNLOAD_PERIOD = 300; // 60 * 5; // make sure current download is no older than 5 minutes
     const SEPA_URL = 'http://apps.sepa.org.uk/database/riverlevels/';
     const RIVERS_READINGS_JSON = 'rivers-readings.json';
-    const ROOT = '/var/www/canoescotland.org/wheres-the-water';
     public $filename;
     public $timestampFile;
     public $downloadLockFile;
     public $riversReadingsData;
 
     function __construct() {
-        $this->filename = self::ROOT . '/' . self::DATADIR . '/' . self::RIVERS_READINGS_JSON;
-        $this->timestampFile = self::ROOT . '/' . self::DATADIR . '/' . self::TIMESTAMP;
-        $this->downloadLockFile = self::ROOT . '/' . self::DATADIR . '/' . "DOWNLOAD-LOCK";
+        $this->filename = ROOT . '/' . self::DATADIR . '/' . self::RIVERS_READINGS_JSON;
+        $this->timestampFile = ROOT . '/' . self::DATADIR . '/' . self::TIMESTAMP;
+        $this->downloadLockFile = ROOT . '/' . self::DATADIR . '/' . "DOWNLOAD-LOCK";
         $this->riversReadingsData = [];
     }
 
