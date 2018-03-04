@@ -44,7 +44,8 @@ class GrabSepaRivers {
     private function downloadRiversData() {
         $this->riversReadingsData = [];
         foreach($this->riverSectionsData as $riverSection) {
-            $river = new GrabSepaRiver($riverSection->gauge_location_code);
+            $river = new GrabSepaRiverReading();
+            $river->doGrabSepaRiver($riverSection->gauge_location_code);
             $this->riversReadingsData[$river->gauge_id] = [
                                             "currentReading"=>$river->currentReading,
                                             "trend"=>$river->trend,

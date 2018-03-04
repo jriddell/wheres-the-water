@@ -264,7 +264,7 @@ class RiverSections {
         $grabSepaRivers = new GrabSepaRivers();
         $grabSepaRivers->doGrabSepaRiversReadings($this->riverSectionsData);
         foreach($this->riverSectionsData as $jsonid => $riverSection) {
-            read river data and pass to jsForRiver
+            //read river data and pass to jsForRiver
             $this->jsForRiver($jsonid, $riverSection, $sepaGaugesData, $grabSepaRivers->riversReadingsData[$riverSection->gauge_location_code]);
         }
     }

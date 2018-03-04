@@ -4,12 +4,13 @@
 */
 
 /* Downloads and makes available the reading levels for a given river defined by the SEPA gauge_id
+   use doGrabSepaRiver($gauge_id) to initialise
    Uses level data .csv file e.g.
    http://apps.sepa.org.uk/database/riverlevels/133094-SG.csv
    This is only for use by GrabSepaRivers when doing the bulk download, too slow and resource intensive to do it more often
 */
 
-class GrabSepaRiver {
+class GrabSepaRiverReading {
     const DATADIR = 'data';
     const SEPA_DOWNLOAD_PERIOD = 60 * 5; // make sure current download is no older than 5 minutes
     const SEPA_URL = 'http://apps.sepa.org.uk/database/riverlevels/';
@@ -18,13 +19,14 @@ class GrabSepaRiver {
     public $currentReading;
     public $trend;
     public $currentReadingTime;
+    public $sepaURL = self::SEPA_URL;
 
-    public function __construct($gauge_id) {
+    public function doGrabSepaRiver($gauge_id) {
         $this->gauge_id = $gauge_id;
 
         $riverFilename = "${gauge_id}-SG.csv";
         $riverFilePath = $sepaFile = self::DATADIR . '/' . $riverFilename;
-        $riverFileURL = "http://apps.sepa.org.uk/database/riverlevels/" . $riverFilename;
+        $riverFileURL = $this->sepaURL . $riverFilename;
         if (!file_exists($riverFilePath) || time()-filemtime($riverFilePath) > self::SEPA_DOWNLOAD_PERIOD) {
             $riverDataFile = file_get_contents($riverFileURL);
             $newSepaFile = fopen($riverFilePath, "w") or die("Unable to open file!");
