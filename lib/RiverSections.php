@@ -5,7 +5,6 @@
 
 require_once 'GrabSepaGauges.php';
 require_once 'GrabSepaRivers.php';
-require_once '../config.php';
 
 /*
 Class to deal with the river sections data

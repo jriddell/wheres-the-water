@@ -170,6 +170,7 @@ if(document.getElementById && document.createTextNode) {
         CONVERSION_UNKNOWNIcon.iconAnchor = new GPoint(5,5);
                 
     <?php  
+    require_once 'config.php';
     require_once 'lib/RiverSections.php';
     $riverSections = new RiverSections;
     $riverSections->outputJavascript();
