@@ -13,15 +13,20 @@
 class GrabSepaRiverReading {
     const DATADIR = 'data';
     const ROOT = '/var/www/canoescotland.org/wheres-the-water';
-    const SEPA_DOWNLOAD_PERIOD = 60 * 5; // make sure current download is no older than 5 minutes
+    const SEPA_DOWNLOAD_PERIOD = 300; // 60 * 5; // make sure current download is no older than 5 minutes
     const SEPA_URL = 'http://apps.sepa.org.uk/database/riverlevels/';
 
     public $gauge_id;
     public $currentReading;
     public $trend;
     public $currentReadingTime;
-    public $sepaURL = self::SEPA_URL;
-    public $dataDir = self::ROOT . '/' . self::DATADIR;
+    public $sepaURL;
+    public $dataDir;
+
+    function __construct() {
+        $this->sepaURL = self::SEPA_URL;
+        $this->dataDir = self::ROOT . '/' . self::DATADIR;
+    }
 
     public function doGrabSepaRiver($gauge_id) {
         $this->gauge_id = $gauge_id;

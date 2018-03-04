@@ -19,14 +19,21 @@ require_once('GrabSepaRiverReading.php');
 class GrabSepaRivers {
     const DATADIR = 'data';
     const TIMESTAMP = 'rivers_download_timestamp';
-    const SEPA_DOWNLOAD_PERIOD = 60 * 5; // make sure current download is no older than 5 minutes
+    const SEPA_DOWNLOAD_PERIOD = 300; // 60 * 5; // make sure current download is no older than 5 minutes
     const SEPA_URL = 'http://apps.sepa.org.uk/database/riverlevels/';
     const RIVERS_READINGS_JSON = 'rivers-readings.json';
     const ROOT = '/var/www/canoescotland.org/wheres-the-water';
-    public $filename = self::ROOT . '/' . self::DATADIR . '/' . self::RIVERS_READINGS_JSON;
-    public $timestampFile = self::ROOT . '/' . self::DATADIR . '/' . self::TIMESTAMP;
-    public $downloadLockFile = self::ROOT . '/' . self::DATADIR . '/' . "DOWNLOAD-LOCK";
-    public $riversReadingsData = [];
+    public $filename;
+    public $timestampFile;
+    public $downloadLockFile;
+    public $riversReadingsData;
+
+    function __construct() {
+        $this->filename = self::ROOT . '/' . self::DATADIR . '/' . self::RIVERS_READINGS_JSON;
+        $this->timestampFile = self::ROOT . '/' . self::DATADIR . '/' . self::TIMESTAMP;
+        $this->downloadLockFile = self::ROOT . '/' . self::DATADIR . '/' . "DOWNLOAD-LOCK";
+        $this->riversReadingsData = [];
+    }
 
     //TODO report correctly on out of date data or no data
     public function doGrabSepaRiversReadings($riverSectionsData, $force = false) {

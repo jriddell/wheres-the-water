@@ -18,13 +18,16 @@ gauge_ids with their relevant data
 class GrabSepaGauges {
     const SEPA_CSV = 'SEPA_River_Levels_Web.csv';
     const DATADIR = 'data';
-    const SEPA_DOWNLOAD_PERIOD = 60 * 60 * 24; // download gauges once a day
+    const SEPA_DOWNLOAD_PERIOD = 86400; // 60 * 60 * 24; // download gauges once a day
     const SEPA_URL = 'http://apps.sepa.org.uk/database/riverlevels/SEPA_River_Levels_Web.csv';
 
-    public $sepaFile = self::DATADIR . '/' . self::SEPA_CSV; // filename
+    public $sepaFile;
     public $sepaCsvData; // csv data as string
     public $sepaData; // the data in associative array form
 
+    function __construct() {
+        $this->sepaFile = self::DATADIR . '/' . self::SEPA_CSV; // filename
+    }
     /* if file does not exist or is too old download it and write, else just read locally */
     function doGrab() {
         if (!file_exists($this->sepaFile) || time()-filemtime($this->sepaFile) > self::SEPA_DOWNLOAD_PERIOD) {

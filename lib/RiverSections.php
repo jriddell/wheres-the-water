@@ -29,9 +29,13 @@ class RiverSections {
     const DATADIR = 'data';
     const ROOT = '/var/www/canoescotland.org/wheres-the-water';
 
-    public $riverSectionsData = array();
-    public $filename = self::ROOT . '/' . self::DATADIR . '/' . self::RIVER_SECTIONS_JSON;
+    public $riverSectionsData;
+    public $filename;
 
+    function __construct() {
+        $this->riverSectionsData = array();
+        $this->filename = self::ROOT . '/' . self::DATADIR . '/' . self::RIVER_SECTIONS_JSON;
+    }
     /* write data to file */
     function writeToJson() {
         $fp = fopen($this->filename, 'w');
