@@ -310,8 +310,9 @@ class RiverSections {
         }
         print "<tr>\n";
         $waterLevelValue = $this->waterLevelValue($riverReadingData['currentReading'], $riverSection);
-        print "<td>".$riverSection['name']."</td>";
-        print "<td>".$waterLevelValue."</td>";
+        print "<td>".$riverSection['name']."</td>\n";
+        print "<td>".$waterLevelValue;
+        print " <img src='http://canoescotland.org/sites/all/themes/basestation_open/img/".$waterLevelValue.".gif' height='10' width='10' /></td>\n";
         print "</tr>\n";
     }
 
