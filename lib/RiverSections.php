@@ -253,7 +253,38 @@ class RiverSections {
         $this->writeToJson();
         return "Deleted section " . $postData['name'];
     }
-    
+
+    // Used by table-view.php to print the table
+    public function printTable() {
+        $this->readFromJson();
+        $grabSepaGauges = new GrabSepaGauges;
+        $sepaGaugesData = $grabSepaGauges->sepaData();
+        $grabSepaRivers = new GrabSepaRivers();
+        if (!$grabSepaRivers->readFromJson()) {
+            print "</script>";
+            print "<h1>Sorry no river reading data available, try again soon</h1>";
+            die();
+        }
+        foreach($this->riverSectionsData as $jsonid => $riverSection) {
+            //read river data and pass to jsForRiver
+            $this->trForRiver($jsonid, $riverSection, $sepaGaugesData, $grabSepaRivers->riversReadingsData[$riverSection['gauge_location_code']]);
+        }
+    }
+
+    private function trForRiver($jsonid, $riverSection, $sepaGaugesData, $riverReadingData) {
+        print "<tr>\n";
+        $sepaGaugeLocationCode = $riverSection['gauge_location_code'];
+        if (!array_key_exists($sepaGaugeLocationCode, $sepaGaugesData)) {
+            //print "\n// Error: no SEPA reading for river " . $riverSection['name'] . "\n";
+            print "</tr>\n";
+            return;
+        }
+        $waterLevelValue = $this->waterLevelValue($riverReadingData['currentReading'], $riverSection);
+        print "<td>".$riverSection['name']."</td>";
+        print "<td>".$waterLevelValue."</td>";
+        print "</tr>\n";
+    }
+
     /* javascript for website */
     public function outputJavascript() {
         $grabSepaGauges = new GrabSepaGauges;

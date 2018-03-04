@@ -6,6 +6,7 @@ function heading() {
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="text/javascript" src="http://canoescotland.org/sites/all/themes/basestation_open/js/riverLevels.js?p347k9"></script>
+<title>SCA Where's the Water</title>
 </head>
 
 <body style="background: white">
