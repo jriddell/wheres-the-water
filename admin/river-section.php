@@ -2,6 +2,7 @@
 /* Copyright 2017 Jonathan Riddell <jr@jriddell.org>
    May be copied under the GNU GPL version 3 only
 */
+require_once('../config.php');
 require_once('../lib/RiverSections.php');
 $riverSections = new RiverSections;
 $riverSections->readFromJson();
