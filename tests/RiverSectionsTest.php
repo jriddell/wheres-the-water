@@ -48,7 +48,7 @@ final class RiverSectionsTest extends TestCase
         $riverSections = new RiverSections;
         $riverSections->filename = 'data/river-sections-good.json';
         $riverSections->readFromJson();
-        $this->assertEquals('Tay', $riverSections->riverSectionsData[0]->name);
+        $this->assertEquals('Tay', $riverSections->riverSectionsData[0]['name']);
     }
 
     public function testReadFromWriteToJson() {

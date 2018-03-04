@@ -44,7 +44,7 @@ final class GrabSepaRiversTest extends TestCase
         $grabSepaRivers->filename = 'data/rivers-readings.json';
         $grabSepaRivers->doGrabSepaRiversReadings($this->riverSectionsData);
         $this->assertEquals($this->riverSectionsData, $grabSepaRivers->riverSectionsData);
-        print_r($grabSepaRivers->riversReadingsData);
+        //print_r($grabSepaRivers->riversReadingsData);
         $this->assertEquals(['10048'=>['currentReading'=>'0.485', 'trend'=>'FALLING', 'currentReadingTime'=>'03/03/2018 12:30:00'],
                              '9514'=>['currentReading'=>'1.456', 'trend'=>'RISING', 'currentReadingTime'=>'03/03/2018 14:45:00']
                              ], $grabSepaRivers->riversReadingsData);

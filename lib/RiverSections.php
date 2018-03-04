@@ -42,7 +42,7 @@ class RiverSections {
     /* read river data from file */
     function readFromJson() {
         $json = file_get_contents($this->filename);
-        $this->riverSectionsData = json_decode($json);
+        $this->riverSectionsData = json_decode($json, true); // truely we do want this to be an array PHP
     }
 
     /* read from database and convert to our format, 
@@ -101,17 +101,17 @@ class RiverSections {
     /* HTML editable form for a river section */
     public function editRiverFormLine($riverSection) {
         $reply = "";
-        $reply .= "<legend>" . $riverSection->name . "</legend>";
-        $reply .= $this->editRiverFormInputItem("River/Section Name", "name", $riverSection->name);
-        $reply .= $this->editRiverFormInputItem("SEPA Gauge Code", "gauge_location_code", $riverSection->gauge_location_code, "right");
-        $reply .= $this->editRiverFormInputItem("Longitude", "longitude", $riverSection->longitude);
-        $reply .= $this->editRiverFormInputItem("Latitude", "latitude", $riverSection->latitude, "right");
-        $reply .= $this->editRiverFormInputItem("Scrape", "scrape_value", $riverSection->scrape_value);
-        $reply .= $this->editRiverFormInputItem("Low", "low_value", $riverSection->low_value, "right");
-        $reply .= $this->editRiverFormInputItem("Medium", "medium_value", $riverSection->medium_value);
-        $reply .= $this->editRiverFormInputItem("High", "high_value", $riverSection->high_value, "right");
-        $reply .= $this->editRiverFormInputItem("Very High", "very_high_value", $riverSection->very_high_value);
-        $reply .= $this->editRiverFormInputItem("Huge", "huge_value", $riverSection->huge_value, "right");
+        $reply .= "<legend>" . $riverSection['name'] . "</legend>";
+        $reply .= $this->editRiverFormInputItem("River/Section Name", "name", $riverSection['name']);
+        $reply .= $this->editRiverFormInputItem("SEPA Gauge Code", "gauge_location_code", $riverSection['gauge_location_code'], "right");
+        $reply .= $this->editRiverFormInputItem("Longitude", "longitude", $riverSection['longitude']);
+        $reply .= $this->editRiverFormInputItem("Latitude", "latitude", $riverSection['latitude'], "right");
+        $reply .= $this->editRiverFormInputItem("Scrape", "scrape_value", $riverSection['scrape_value']);
+        $reply .= $this->editRiverFormInputItem("Low", "low_value", $riverSection['low_value'], "right");
+        $reply .= $this->editRiverFormInputItem("Medium", "medium_value", $riverSection['medium_value']);
+        $reply .= $this->editRiverFormInputItem("High", "high_value", $riverSection['high_value'], "right");
+        $reply .= $this->editRiverFormInputItem("Very High", "very_high_value", $riverSection['very_high_value']);
+        $reply .= $this->editRiverFormInputItem("Huge", "huge_value", $riverSection['huge_value'], "right");
         return $reply;
     }
 
@@ -130,21 +130,21 @@ class RiverSections {
         try {
             $this->validateRiverSectionUpdateData($postData);
         } catch (Exception $e) {
-            $name = $riverSection->name;
+            $name = $riverSection['name'];
             return "<b>&#9888;Not updated $name</b><br />Validation error: " . $e->getMessage();
         }
-        $riverSection->name = $postData['name'];
-        $riverSection->gauge_location_code = $postData['gauge_location_code'];
-        $riverSection->longitude = $postData['longitude'];
-        $riverSection->latitude = $postData['latitude'];
-        $riverSection->scrape_value = $postData['scrape_value'];
-        $riverSection->low_value = $postData['low_value'];
-        $riverSection->medium_value = $postData['medium_value'];
-        $riverSection->high_value = $postData['high_value'];
-        $riverSection->very_high_value = $postData['very_high_value'];
-        $riverSection->huge_value = $postData['huge_value'];
+        $riverSection['name'] = $postData['name'];
+        $riverSection['gauge_location_code'] = $postData['gauge_location_code'];
+        $riverSection['longitude'] = $postData['longitude'];
+        $riverSection['latitude'] = $postData['latitude'];
+        $riverSection['scrape_value'] = $postData['scrape_value'];
+        $riverSection['low_value'] = $postData['low_value'];
+        $riverSection['medium_value'] = $postData['medium_value'];
+        $riverSection['high_value'] = $postData['high_value'];
+        $riverSection['very_high_value'] = $postData['very_high_value'];
+        $riverSection['huge_value'] = $postData['huge_value'];
         $this->writeToJson();
-        return "Updated data for " . $riverSection->name;
+        return "Updated data for " . $riverSection['name'];
     }
 
     /* do validation on river section values
@@ -197,17 +197,17 @@ class RiverSections {
 
     /* HTML editable form for adding a new section */
     public function addRiverForm() {
-        $riverSection = (object)array();
-        $riverSection->name = "";
-        $riverSection->gauge_location_code = "";
-        $riverSection->longitude = "";
-        $riverSection->latitude = "";
-        $riverSection->scrape_value = "";
-        $riverSection->low_value = "";
-        $riverSection->medium_value = "";
-        $riverSection->high_value = "";
-        $riverSection->very_high_value = "";
-        $riverSection->huge_value = "";
+        $riverSection = array();
+        $riverSection['name'] = "";
+        $riverSection['gauge_location_code'] = "";
+        $riverSection['longitude'] = "";
+        $riverSection['latitude'] = "";
+        $riverSection['scrape_value'] = "";
+        $riverSection['low_value'] = "";
+        $riverSection['medium_value'] = "";
+        $riverSection['high_value'] = "";
+        $riverSection['very_high_value'] = "";
+        $riverSection['huge_value'] = "";
 
         $reply = "<legend>Add New River Section</legend>";
         $reply .= "<form action='river-section.php' method='post'>\n";
@@ -225,20 +225,20 @@ class RiverSections {
             $name = $postData['name'];
             return "<b>&#9888;Not added $name</b><br />Validation error: " . $e->getMessage() . "<br />Click Back to retry";
         }
-        $riverSection = (object)array();
-        $riverSection->name = $postData['name'];
-        $riverSection->gauge_location_code = $postData['gauge_location_code'];
-        $riverSection->longitude = $postData['longitude'];
-        $riverSection->latitude = $postData['latitude'];
-        $riverSection->scrape_value = $postData['scrape_value'];
-        $riverSection->low_value = $postData['low_value'];
-        $riverSection->medium_value = $postData['medium_value'];
-        $riverSection->high_value = $postData['high_value'];
-        $riverSection->very_high_value = $postData['very_high_value'];
-        $riverSection->huge_value = $postData['huge_value'];
+        $riverSection = array();
+        $riverSection['name'] = $postData['name'];
+        $riverSection['gauge_location_code'] = $postData['gauge_location_code'];
+        $riverSection['longitude'] = $postData['longitude'];
+        $riverSection['latitude'] = $postData['latitude'];
+        $riverSection['scrape_value'] = $postData['scrape_value'];
+        $riverSection['low_value'] = $postData['low_value'];
+        $riverSection['medium_value'] = $postData['medium_value'];
+        $riverSection['high_value'] = $postData['high_value'];
+        $riverSection['very_high_value'] = $postData['very_high_value'];
+        $riverSection['huge_value'] = $postData['huge_value'];
         $this->riverSectionsData[] = $riverSection;
         $this->writeToJson();
-        return "Added new river " . $riverSection->name;
+        return "Added new river " . $riverSection['name'];
     }
 
     /* deal with submitted request to delete a river */
@@ -270,38 +270,38 @@ class RiverSections {
     }
 
     private function jsForRiver($jsonid, $riverSection, $sepaGaugesData, $riverReadingData) {
-        $sepaGaugeLocationCode = $riverSection->gauge_location_code;
+        $sepaGaugeLocationCode = $riverSection['gauge_location_code'];
         if (!array_key_exists($sepaGaugeLocationCode, $sepaGaugesData)) {
-            print "\n// Error: no SEPA reading for river " . $riverSection->name . "\n";
+            print "\n// Error: no SEPA reading for river " . $riverSection['name'] . "\n";
             return;
         }
         $sepaRiver = new GrabSepaRiver($sepaGaugeLocationCode);
         $waterLevelValue = $this->waterLevelValue($sepaRiver->currentReading, $riverSection);
 
-        print "var point$jsonid = new GLatLng($riverSection->latitude,$riverSection->longitude);\n";
+        print "var point$jsonid = new GLatLng(".$riverSection['latitude'].",".$riverSection['longitude'].");\n";
         print "markerOptions = { icon:${waterLevelValue}Icon };\n";
         print "var marker$jsonid = new GMarker(point$jsonid, markerOptions);\n";
         print "GEvent.addListener(marker$jsonid, \"mouseover\", function() {\n";
-        print "    showSectionInfo(\"$riverSection->name\", \"$waterLevelValue\", \"".$riverReadingData['currentReadingTime']."\", \"".$riverReadingData['currentReading']."\", \"".$riverReadingData['trend']."\" );\n";
-        print "    showConversionInfo(\"$waterLevelValue\", \"$riverSection->scrape_value\",\"$riverSection->low_value\", \"$riverSection->medium_value\", \"$riverSection->high_value\", \"$riverSection->very_high_value\", \"$riverSection->huge_value\");\n";
+        print "    showSectionInfo(\"".$riverSection['name']."\", \"$waterLevelValue\", \"".$riverReadingData['currentReadingTime']."\", \"".$riverReadingData['currentReading']."\", \"".$riverReadingData['trend']."\" );\n";
+        print "    showConversionInfo(\"$waterLevelValue\", \"".$riverSection['scrape_value']."\",\"".$riverSection['low_value']."\", \"".$riverSection['medium_value']."\", \"".$riverSection['high_value']."\", \"".$riverSection['very_high_value']."\", \"".$riverSection['huge_value']."\");\n";
         print "});\n";
-        print "GEvent.addListener(marker$jsonid, \"click\", function() {  showPicWin('http://apps.sepa.org.uk/waterlevels/default.aspx?sd=t&lc=$riverSection->gauge_location_code') });\n";
+        print "GEvent.addListener(marker$jsonid, \"click\", function() {  showPicWin('http://apps.sepa.org.uk/waterlevels/default.aspx?sd=t&lc=".$riverSection['gauge_location_code']."') });\n";
         print "map.addOverlay(marker$jsonid);\n\n";
     }
 
     // return the human readable water level (low, medium etc)
     private function waterLevelValue($currentLevel, $riverSection) {
-        if ($currentLevel < $riverSection->scrape_value) {
+        if ($currentLevel < $riverSection['scrape_value']) {
             return "EMPTY";
-        } elseif ($currentLevel < $riverSection->low_value) {
+        } elseif ($currentLevel < $riverSection['low_value']) {
             return "SCRAPE";
-        } elseif ($currentLevel < $riverSection->medium_value) {
+        } elseif ($currentLevel < $riverSection['medium_value']) {
             return "LOW";
-        } elseif ($currentLevel < $riverSection->high_value) {
+        } elseif ($currentLevel < $riverSection['high_value']) {
             return "MEDIUM";
-        } elseif ($currentLevel < $riverSection->very_high_value) {
+        } elseif ($currentLevel < $riverSection['very_high_value']) {
             return "HIGH";
-        } elseif ($currentLevel < $riverSection->huge_value) {
+        } elseif ($currentLevel < $riverSection['huge_value']) {
             return "VERY_HIGH";
         } else {
             return "HUGE";
