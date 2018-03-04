@@ -41,7 +41,8 @@ class GrabSepaRiverReading {
                 return False;
             }
             if (!$this->validateRiverData($riverData)) {
-                print "<p>Invalid file downloaded for " . $gauge_id . "</p>\n";
+                print "<p>Empty file downloaded for " . $gauge_id . "</p>\n";
+                $this->currentReading = -1;
                 flush();
                 return False;
             }
@@ -75,7 +76,7 @@ class GrabSepaRiverReading {
 
     private function validateRiverData($riverData) {
         $riverDataArray = explode("\n", $riverData);
-        if (count($riverDataArray) <= 7) {
+        if (count($riverDataArray) <= 10) {
             return false;
         }
         return true;

@@ -310,6 +310,8 @@ class RiverSections {
             //return;
             $riverReadingData['currentReading'] = 0;
             $waterLevelValue = "NO_GUAGE_DATA";
+        } elseif ($riverReadingData['currentReading'] == '-1') {
+            $waterLevelValue = "OLD_DATA";
         } else {
             $waterLevelValue = $this->waterLevelValue($riverReadingData['currentReading'], $riverSection);
         };
@@ -348,6 +350,8 @@ class RiverSections {
             print "\n// Warning: no SEPA reading for river " . $riverSection['name'] . "\n";
             $riverReadingData['currentReading'] = 0;
             $waterLevelValue = "NO_GUAGE_DATA";
+        } elseif ($riverReadingData['currentReading'] == '-1') {
+            $waterLevelValue = "OLD_DATA";
         } else {
             $waterLevelValue = $this->waterLevelValue($riverReadingData['currentReading'], $riverSection);
         }
