@@ -12,8 +12,8 @@ function heading() {
 </head>
 
 <body style="background: white">
-<p><a href="http://www.andyjacksonfund.org.uk"><img src="andy-jackson-fund.png" width="560" height="86" /></a>
-<a href="http://canoescotland.org"><img src="scottish-canoe-association-social.jpg" width="400" height="157" /></a></p>
+<p><a href="http://www.andyjacksonfund.org.uk"><img src="andy-jackson-fund.png" width="350" /></a>
+<a href="http://canoescotland.org"><img src="scottish-canoe-association-social.jpg" width="350" /></a></p>
 
 <h1>SCA Where&#039;s The Water?</h1>
 
