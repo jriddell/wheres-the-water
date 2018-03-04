@@ -143,6 +143,7 @@ class RiverSections {
         $riverSection['high_value'] = $postData['high_value'];
         $riverSection['very_high_value'] = $postData['very_high_value'];
         $riverSection['huge_value'] = $postData['huge_value'];
+        $this->riverSectionsData[$jsonid] = $riverSection;
         $this->writeToJson();
         return "Updated data for " . $riverSection['name'];
     }
@@ -265,7 +266,7 @@ class RiverSections {
         $grabSepaRivers->doGrabSepaRiversReadings($this->riverSectionsData);
         foreach($this->riverSectionsData as $jsonid => $riverSection) {
             //read river data and pass to jsForRiver
-            $this->jsForRiver($jsonid, $riverSection, $sepaGaugesData, $grabSepaRivers->riversReadingsData[$riverSection->gauge_location_code]);
+            $this->jsForRiver($jsonid, $riverSection, $sepaGaugesData, $grabSepaRivers->riversReadingsData[$riverSection['gauge_location_code']]);
         }
     }
 
@@ -275,8 +276,7 @@ class RiverSections {
             print "\n// Error: no SEPA reading for river " . $riverSection['name'] . "\n";
             return;
         }
-        $sepaRiver = new GrabSepaRiver($sepaGaugeLocationCode);
-        $waterLevelValue = $this->waterLevelValue($sepaRiver->currentReading, $riverSection);
+        $waterLevelValue = $this->waterLevelValue($riverReadingData['currentReading'], $riverSection);
 
         print "var point$jsonid = new GLatLng(".$riverSection['latitude'].",".$riverSection['longitude'].");\n";
         print "markerOptions = { icon:${waterLevelValue}Icon };\n";
