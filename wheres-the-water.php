@@ -7,7 +7,11 @@
 
 <body>
 <h1>Where&#039;s The Water?</h1>
-<div id="block-block-18" class="clearfix block block-block">     <h2>Scottish River Levels</h2>
+
+<h2>Scottish River Levels</h2>
+
+<div style="float: right">
+
       <div class="content"> <table  cellspacing="0" class="riverlevels">
 			<tr>
 			  <td class="dataHeaders" colspan="2">Data Last Polled</td>
@@ -84,7 +88,9 @@
 </table>
  </div>
 
-<div id="map" style="width: 100%; height: 500px; "></div>
+ </div>
+
+<div id="map" style="height: 500px; "></div>
 
 <script language="javascript" src="http://maps.google.com/maps?file=api&amp;v=3&amp;sensor=false&amp;key=AIzaSyD-WF6gFouMUCMfdvzw2ajMeOrE-F6RlRY" ></script>
 
@@ -181,5 +187,6 @@ if(document.getElementById && document.createTextNode) {
       
     } // function createMap()
 </script>
+
 </body>
 </html>
