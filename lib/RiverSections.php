@@ -304,12 +304,15 @@ class RiverSections {
 
     private function trForRiver($jsonid, $riverSection, $sepaGaugesData, $riverReadingData) {
         $sepaGaugeLocationCode = $riverSection['gauge_location_code'];
+        print "<tr>\n";
         if (!array_key_exists($sepaGaugeLocationCode, $sepaGaugesData)) {
             //print "\n// Error: no SEPA reading for river " . $riverSection['name'] . "\n";
-            return;
-        }
-        print "<tr>\n";
-        $waterLevelValue = $this->waterLevelValue($riverReadingData['currentReading'], $riverSection);
+            //return;
+            $riverReadingData['currentReading'] = 0;
+            $waterLevelValue = "NO_GUAGE_DATA";
+        } else {
+            $waterLevelValue = $this->waterLevelValue($riverReadingData['currentReading'], $riverSection);
+        };
         print "<td>".$riverSection['name']."</td>\n";
         print "<td>".$waterLevelValue;
         print " <img src='http://canoescotland.org/sites/all/themes/basestation_open/img/".$waterLevelValue.".gif' height='10' width='10' /></td>\n";
