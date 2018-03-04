@@ -120,52 +120,52 @@ if(document.getElementById && document.createTextNode) {
         tinyIcon.iconAnchor = new GPoint(6, 20);
 
         var EMPTYIcon = new GIcon();
-        EMPTYIcon.image = "/sites/all/themes/basestation_open/img/EMPTY.gif";
+        EMPTYIcon.image = "http://canoescotland.org/sites/all/themes/basestation_open/img/EMPTY.gif";
         EMPTYIcon.iconSize = new GSize(10,10);
         EMPTYIcon.iconAnchor = new GPoint(5,5);
 
         var SCRAPEIcon = new GIcon();
-        SCRAPEIcon.image = "/sites/all/themes/basestation_open/img/SCRAPE.gif";
+        SCRAPEIcon.image = "http://canoescotland.org/sites/all/themes/basestation_open/img/SCRAPE.gif";
         SCRAPEIcon.iconSize = new GSize(10,10);
         SCRAPEIcon.iconAnchor = new GPoint(5,5);
 
         var LOWIcon = new GIcon();
-        LOWIcon.image = "/sites/all/themes/basestation_open/img/LOW.gif";
+        LOWIcon.image = "http://canoescotland.org/sites/all/themes/basestation_open/img/LOW.gif";
         LOWIcon.iconSize = new GSize(10,10);
         LOWIcon.iconAnchor = new GPoint(5,5);    
 
         var MEDIUMIcon = new GIcon();
-        MEDIUMIcon.image = "/sites/all/themes/basestation_open/img/MEDIUM.gif";
+        MEDIUMIcon.image = "http://canoescotland.org/sites/all/themes/basestation_open/img/MEDIUM.gif";
         MEDIUMIcon.iconSize = new GSize(10,10);
         MEDIUMIcon.iconAnchor = new GPoint(5,5);
         
         var HIGHIcon = new GIcon();
-        HIGHIcon.image = "/sites/all/themes/basestation_open/img/HIGH.gif";
+        HIGHIcon.image = "http://canoescotland.org/sites/all/themes/basestation_open/img/HIGH.gif";
         HIGHIcon.iconSize = new GSize(10,10);
         HIGHIcon.iconAnchor = new GPoint(5,5);
 
         var VERY_HIGHIcon = new GIcon();
-        VERY_HIGHIcon.image = "/sites/all/themes/basestation_open/img/VERY_HIGH.gif";
+        VERY_HIGHIcon.image = "http://canoescotland.org/sites/all/themes/basestation_open/img/VERY_HIGH.gif";
         VERY_HIGHIcon.iconSize = new GSize(10,10);
         VERY_HIGHIcon.iconAnchor = new GPoint(5,5);
         
         var HUGEIcon = new GIcon();
-        HUGEIcon.image = "/sites/all/themes/basestation_open/img/HUGE.gif";
+        HUGEIcon.image = "http://canoescotland.org/sites/all/themes/basestation_open/img/HUGE.gif";
         HUGEIcon.iconSize = new GSize(10,10);
         HUGEIcon.iconAnchor = new GPoint(5,5);
 
         var OLD_DATAIcon = new GIcon();
-        OLD_DATAIcon.image = "/sites/all/themes/basestation_open/img/OLD_DATA.gif";
+        OLD_DATAIcon.image = "http://canoescotland.org/sites/all/themes/basestation_open/img/OLD_DATA.gif";
         OLD_DATAIcon.iconSize = new GSize(10,10);
         OLD_DATAIcon.iconAnchor = new GPoint(5,5);
 
         var NO_GUAGE_DATAIcon = new GIcon();
-        NO_GUAGE_DATAIcon.image = "/sites/all/themes/basestation_open/img/NO_GUAGE_DATA.gif";
+        NO_GUAGE_DATAIcon.image = "http://canoescotland.org/sites/all/themes/basestation_open/img/NO_GUAGE_DATA.gif";
         NO_GUAGE_DATAIcon.iconSize = new GSize(10,10);
         NO_GUAGE_DATAIcon.iconAnchor = new GPoint(5,5);
 
         var CONVERSION_UNKNOWNIcon = new GIcon();
-        CONVERSION_UNKNOWNIcon.image = "/sites/all/themes/basestation_open/img/CONVERSION_UNKNOWN.gif";
+        CONVERSION_UNKNOWNIcon.image = "http://canoescotland.org/sites/all/themes/basestation_open/img/CONVERSION_UNKNOWN.gif";
         CONVERSION_UNKNOWNIcon.iconSize = new GSize(10,10);
         CONVERSION_UNKNOWNIcon.iconAnchor = new GPoint(5,5);
                 
