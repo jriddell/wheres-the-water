@@ -9,7 +9,6 @@ Main API is sepaData() which downloads the data and returns a hash of
 gauge_ids with their relevant data
 {
     "10048": {
-        "current_level": "2.08",
         "reading_timestamp": 1519543800,
         "gauge_name": "Perth"
     }

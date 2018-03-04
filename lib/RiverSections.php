@@ -254,14 +254,37 @@ class RiverSections {
         return "Deleted section " . $postData['name'];
     }
 
-    // Used by table-view.php to print the table
-    public function printTable() {
-        $this->readFromJson();
+    public function calculateMostRecentReading() {
         $grabSepaGauges = new GrabSepaGauges;
         $sepaGaugesData = $grabSepaGauges->sepaData();
         $grabSepaRivers = new GrabSepaRivers();
         if (!$grabSepaRivers->readFromJson()) {
-            print "</script>";
+            print "<h1>Sorry no river reading data available, try again soon</h1>";
+            die();
+        }
+        $mostRecentTimestamp = 0;
+        $mostRecentTime = "";
+        $mostRecentRiver = "";
+        $mostRecentLevel = 0;
+        foreach($this->riverSectionsData as $jsonid => $riverSection) {
+            $time = $grabSepaRivers->riversReadingsData[$riverSection['gauge_location_code']]['currentReadingTime'];
+            $timestamp = strtotime($time);
+            if ($timestamp > $mostRecentTimestamp) {
+                $mostRecentTimestamp = $timestamp;
+                $mostRecentTime = $time;
+                $mostRecentRiver = $riverSection['name'];
+                $mostRecentLevel = $grabSepaRivers->riversReadingsData[$riverSection['gauge_location_code']]['currentReading'];
+            }
+        }
+        return "$mostRecentRiver at $mostRecentTime reading $mostRecentLevel";
+    }
+
+    // Used by table-view.php to print the table
+    public function printTable() {
+        $grabSepaGauges = new GrabSepaGauges;
+        $sepaGaugesData = $grabSepaGauges->sepaData();
+        $grabSepaRivers = new GrabSepaRivers();
+        if (!$grabSepaRivers->readFromJson()) {
             print "<h1>Sorry no river reading data available, try again soon</h1>";
             die();
         }
@@ -292,7 +315,6 @@ class RiverSections {
         print "sepaData: " . $sepaGaugesData['234189']['current_level'] . ";\n";
         print "json: " . json_encode($sepaGaugesData, JSON_PRETTY_PRINT) . ";\n";
         */
-        $this->readFromJson();
         //print json_encode($this->riverSectionsData, JSON_PRETTY_PRINT);
         //print json_encode($sepaGaugesData, JSON_PRETTY_PRINT);
         $grabSepaRivers = new GrabSepaRivers();

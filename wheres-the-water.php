@@ -2,6 +2,10 @@
 require_once 'common.php';
 require_once 'config.php';
 heading();
+require_once 'lib/RiverSections.php';
+$riverSections = new RiverSections;
+$riverSections->readFromJson();
+
 ?>
 
 <div style="float: right">
@@ -20,7 +24,7 @@ heading();
 			  <td class="dataHeaders" colspan="2">Most Recent Reading</td>
 			  </tr>
 			 <tr>
-			  <td colspan="2" class="dataValues" style="width:190px" >North Esk (Upper) at 09:15 on 25th Feb was EMPTY			  </td>
+			  <td colspan="2" class="dataValues" style="width:190px" ><?php print $riverSections->calculateMostRecentReading() ?></td>
 			</tr>
 	</table>
 <div class="riverHeader" id="sectionname">&nbsp;</div>
@@ -170,8 +174,6 @@ if(document.getElementById && document.createTextNode) {
         CONVERSION_UNKNOWNIcon.iconAnchor = new GPoint(5,5);
                 
     <?php  
-    require_once 'lib/RiverSections.php';
-    $riverSections = new RiverSections;
     $riverSections->outputJavascript();
     ?>
 

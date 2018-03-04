@@ -26,6 +26,8 @@ tr:nth-child(even) {
 <?php 
 require_once('lib/RiverSections.php');
 $riverSections = new RiverSections();
+$riverSections->readFromJson();
+print "<p>Most recent update: " . $riverSections->calculateMostRecentReading() . "</p>\n";
 ?>
 
 <table id="myTable">
