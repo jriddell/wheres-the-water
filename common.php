@@ -8,7 +8,8 @@ function heading() {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="mobile-web-app-capable" content="yes">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<script type="text/javascript" src="http://canoescotland.org/sites/all/themes/basestation_open/js/riverLevels.js?p347k9"></script>
+<script type="text/javascript" src="http://canoescotland.org/sites/all/themes/basestation_open/js/riverLevels.js"></script>
+<script type="text/javascript" src="http://canoescotland.org/sites/all/themes/basestation_open/js/utilLib.js?"></script>
 <title>SCA Where's the Water</title>
 <style>
 body {font-family: 'Ubuntu', sans-serif;}
