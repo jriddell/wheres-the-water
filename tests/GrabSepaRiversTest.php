@@ -60,6 +60,7 @@ final class GrabSepaRiversTest extends TestCase
         $grabSepaRivers->writeToJson();
         $this->assertFileExists('data/rivers-readings-written.json');
         $this->assertFileEquals('data/rivers-readings.json', 'data/rivers-readings-written.json');
+        unlink('data/rivers-readings-written.json');
     }
     
 }

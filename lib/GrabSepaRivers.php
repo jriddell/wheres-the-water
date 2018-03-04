@@ -14,7 +14,7 @@ $obj->riversReadingsData = {'1243':
                     }
 */
 
-require_once('GrabSepaRiver.php');
+require_once('GrabSepaRiverReading.php');
 
 class GrabSepaRivers {
     const DATADIR = 'data';
