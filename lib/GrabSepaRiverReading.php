@@ -55,12 +55,16 @@ class GrabSepaRiverReading {
         $riverDataArray = explode("\n", $riverData);
         //print_r($riverDataArray);
         //Get the last value (uses -2 as -1 final entry is just a new line)
-        $mostRecentReading = array_slice($riverDataArray, -2, 1)[0]; // '03/03/2018 12:45:00,0.53'
+        //$mostRecentReading = array_slice($riverDataArray, -2, 1)[0]; // '03/03/2018 12:45:00,0.53'
+        $slice = array_slice($riverDataArray, -2, 1);
+        $mostRecentReading = $slice[0];
         $mostRecentReading = rtrim($mostRecentReading);
         $mostRecentReadingPair = explode(",", $mostRecentReading); // ['03/03/2018 12:45:00', '0.53']
         $this->currentReading = $mostRecentReadingPair[1];
         $this->currentReadingTime = $mostRecentReadingPair[0];
-        $pastReading = array_slice($riverDataArray, -6, 1)[0]; // '03/03/2018 11:45:00,0.53'
+        //$pastReading = array_slice($riverDataArray, -6, 1)[0]; // '03/03/2018 11:45:00,0.53'
+        $slice = array_slice($riverDataArray, -6, 1);
+        $pastReading = $slice[0];
         $pastReading = rtrim($pastReading);
         $pastReadingPair = explode(",", $pastReading); // ['03/03/2018 11:45:00', '0.53']
         if ($this->currentReading > $pastReadingPair[1]) {
