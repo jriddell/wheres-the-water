@@ -31,7 +31,7 @@ class GrabSepaRivers {
         $this->filename = ROOT . '/' . self::DATADIR . '/' . self::RIVERS_READINGS_JSON;
         $this->timestampFile = ROOT . '/' . self::DATADIR . '/' . self::TIMESTAMP;
         $this->downloadLockFile = ROOT . '/' . self::DATADIR . '/' . "DOWNLOAD-LOCK";
-        $this->riversReadingsData = [];
+        $this->riversReadingsData = array();
     }
 
     //TODO report correctly on out of date data or no data
@@ -57,15 +57,15 @@ class GrabSepaRivers {
     }
     
     private function downloadRiversData() {
-        $this->riversReadingsData = [];
+        $this->riversReadingsData = array();
         foreach($this->riverSectionsData as $riverSection) {
             $river = new GrabSepaRiverReading();
             $river->doGrabSepaRiver($riverSection['gauge_location_code']);
-            $this->riversReadingsData[$river->gauge_id] = [
+            $this->riversReadingsData[$river->gauge_id] = array(
                                             "currentReading"=>$river->currentReading,
                                             "trend"=>$river->trend,
                                             "currentReadingTime"=>$river->currentReadingTime
-                                            ];
+                                            );
         }
         $this->writeToJson();
         $timestampFile = fopen(ROOT . '/' . self::DATADIR .'/download_reading_timestamp', "w") or die("Unable to open file!");

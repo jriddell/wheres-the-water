@@ -67,7 +67,7 @@ class RiverSections {
         if ($result->num_rows > 0) {
             // output data of each row
             while($row = $result->fetch_assoc()) {
-                $riverSection = ['name'=> $row["title"],
+                $riverSection = array('name'=> $row["title"],
                                  'gauge_location_code' => $row["field_guageid_0_value"],
                                  'longitude' => $row["field_longitude_value"],
                                  'latitude' => $row["field_latitude_value"],
@@ -77,7 +77,7 @@ class RiverSections {
                                  'high_value' => $row["field_high_value"],
                                  'very_high_value' => $row["field_very_high_value"],
                                  'huge_value' => $row["field_huge_value"]
-                                 ];
+                                 );
                 $this->riverSectionsData[] = $riverSection;
             }
         } else {

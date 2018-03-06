@@ -12,7 +12,7 @@ final class RiverSectionsTest extends TestCase
 {
     /* some test data */
     function initScratchData($riverSections) {
-        $riverSections->riverSectionsData[0] = ['name'=> 'Tay',
+        $riverSections->riverSectionsData[0] = array('name'=> 'Tay',
                                  'gauge_location_code' => 10048,
                                  'longitude' => 58.1234,
                                  'latitude' => 0.123,
@@ -22,8 +22,8 @@ final class RiverSectionsTest extends TestCase
                                  'high_value' => 3.0,
                                  'very_high_value' => 4.0,
                                  'huge_value' => 5.0
-                                 ];
-        $riverSections->riverSectionsData[1] = ['name'=> 'Ericht',
+                                 );
+        $riverSections->riverSectionsData[1] = array('name'=> 'Ericht',
                                  'gauge_location_code' => 12345,
                                  'longitude' => 58.1234,
                                  'latitude' => 0.133,
@@ -33,7 +33,7 @@ final class RiverSectionsTest extends TestCase
                                  'high_value' => 3.5,
                                  'very_high_value' => 4.5,
                                  'huge_value' => 5.5
-                                 ];
+                                 );
     }
 
     public function testWriteToJson() {
