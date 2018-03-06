@@ -1,6 +1,7 @@
 <?php
 
 require_once('../lib/GrabSepaRiverReading.php');
+require_once('../config.php');
 
 use PHPUnit\Framework\TestCase;
 

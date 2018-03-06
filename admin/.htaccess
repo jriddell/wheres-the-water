@@ -1,4 +1,4 @@
 AuthType Basic
 AuthName "Password Protected Area"
-AuthUserFile /home/jr/www/andyjackson.edinburghlinux.co.uk/wheres-the-water/admin/htpasswd
+AuthUserFile /var/www/canoescotland.org/wheres-the-water/admin/htpasswd
 Require valid-user
