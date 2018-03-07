@@ -304,7 +304,7 @@ class RiverSections {
 
     private function trForRiver($jsonid, $riverSection, $sepaGaugesData, $riverReadingData) {
         $sepaGaugeLocationCode = $riverSection['gauge_location_code'];
-        print "<tr>\n";
+        print "<tr class='riverSectionRow'>\n";
         if (!array_key_exists($sepaGaugeLocationCode, $sepaGaugesData)) {
             //print "\n// Error: no SEPA reading for river " . $riverSection['name'] . "\n";
             //return;
@@ -315,9 +315,34 @@ class RiverSections {
         } else {
             $waterLevelValue = $this->waterLevelValue($riverReadingData['currentReading'], $riverSection);
         };
-        print "<td>".$riverSection['name']."</td>\n";
-        print "<td>".$waterLevelValue;
-        print " <img src='http://canoescotland.org/sites/all/themes/basestation_open/img/".$waterLevelValue.".gif' height='10' width='10' /></td>\n";
+        // Create an array of info
+        $infoArray = array('riverSection' => $riverSection['name'],
+            'waterLevelValue' => $waterLevelValue,
+            'latitude' => $riverSection['latitude'],
+            'longitude' => $riverSection['longitude'],
+            'currentReadingTime' => $riverReadingData['currentReadingTime'],
+            'currentReading' => $riverReadingData['currentReading'],
+            'trend' => $riverReadingData['trend'],
+            'scrapeValue' => $riverSection['scrape_value'],
+            'lowValue' => $riverSection['low_value'],
+            'mediumValue' => $riverSection['medium_value'],
+            'highValue' => $riverSection['high_value'],
+            'veryHighValue' => $riverSection['very_high_value'],
+            'hugeValue' => $riverSection['huge_value'],
+            'gaugeLocationCode' => $riverSection['gauge_location_code']
+        );
+        
+        // Populate the table
+        foreach ($infoArray as $class => $val){
+            if ($class == 'riverSection' || $class == 'waterLevelValue'){
+                $visibility = '';
+            }
+            else {
+                $visibility = " style='visibility: hidden' ";
+            }
+            print "<td class='$class'$visibility>$val</td>\n";
+        }
+        
         print "</tr>\n";
     }
 
@@ -357,6 +382,8 @@ class RiverSections {
         }
 
         // FIXME this should be a template or something neater
+        // TODO this should create html objects
+        
         print "var point$jsonid = new GLatLng(".$riverSection['latitude'].",".$riverSection['longitude'].");\n";
         print "markerOptions = { icon:${waterLevelValue}Icon };\n";
         print "var marker$jsonid = new GMarker(point$jsonid, markerOptions);\n";
@@ -369,6 +396,7 @@ class RiverSections {
     }
 
     // return the human readable water level (low, medium etc)
+    //TODO will puting a space in very high break anything? yep, fix
     private function waterLevelValue($currentLevel, $riverSection) {
         if ($currentLevel < $riverSection['scrape_value']) {
             return "EMPTY";

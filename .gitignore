@@ -13,3 +13,7 @@ tests/data/133094-SG.csv
 config.php
 admin/htpasswd
 data/download_reading_timestamp
+.buildpath
+.project
+.settings/org.eclipse.php.core.prefs
+.settings/org.eclipse.wst.common.project.facet.core.xml

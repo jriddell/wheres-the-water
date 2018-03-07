@@ -89,11 +89,114 @@ $riverSections->readFromJson();
  </div>
 
 <div id="map" style="height: 500px; width: 100%; max-width: 800px; "></div>
+<div id="river-table-div" style="visibility: hidden">
+	<table id="river-table">
+		<tr><th>River Section</th><th>Level</th></tr>
+		<?php printTable(); ?>
+	</table>
+</div>
 
-<script language="javascript" src="http://maps.google.com/maps?file=api&amp;v=3&amp;sensor=false&amp;key=AIzaSyD-WF6gFouMUCMfdvzw2ajMeOrE-F6RlRY" ></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAr0GC5SjROQdQKwS78LI-abrgyULq-9g&callback=initMap"></script>
 
 
   <script>
+
+  function initMap() {
+		
+		var map = new google.maps.Map(document.getElementById('map'), {
+			zoom: 7,
+			center: {lat: 57.172, lng:  -4.6582}
+		});
+
+		var iconBase = 'http://canoescotland.org/sites/all/themes/basestation_open/img/';
+		var icons = {
+			EMPTY: {
+				icon: iconBase + 'EMPTY.gif'
+			},
+			LOW: {
+				icon: iconBase + 'LOW.gif'
+			},
+			MEDIUM: {
+				icon: iconBase + 'MEDIUM.gif'
+			},
+			HIGH: {
+				icon: iconBase + 'HIGH.gif'
+			},
+			VERY_HIGH: {
+				icon: iconBase + 'VERY_HIGH.gif'
+			},
+			HUGE: {
+				icon: iconBase + 'HUGE.gif'
+			},
+			OLD_GAUGE_DATA: {
+				icon: iconBase + 'OLD_GAUGE_DATA.gif'
+			},
+			NO_DATA: {
+				icon: iconBase + 'NO_DATA.gif'
+			},
+			CONVERSION_UNKNOWN: {
+				icon: iconBase + 'CONVERSION_UNKNOWN.gif'
+			},
+		};
+		
+		jQuery('.riverSectionRow').each(function() {
+
+			var last = false;
+
+			// River data for map marker creation
+			var riverSection = jQuery(this).find('.riverSection').text();
+			var waterLevelValue = jQuery(this).find('.waterLevelValue').text();
+			var latitude = jQuery(this).find('.latitude').text();
+			var longitude = jQuery(this).find('.longitude').text();
+			var currentReadingTime = jQuery(this).find('.currentReadingTime').text();
+			var currentReading = jQuery(this).find('.currentReading').text();
+			var trend = jQuery(this).find('.trend').text();
+			var scrapeValue = jQuery(this).find('.scrapeValue').text();
+			var lowValue = jQuery(this).find('.lowValue').text();
+			var mediumValue = jQuery(this).find('.mediumValue').text();
+			var highValue = jQuery(this).find('.highValue').text();
+			var veryHighValue = jQuery(this).find('.veryHighValue').text();
+			var hugeValue = jQuery(this).find('.hugeValue').text();
+            var gaugeLocationCode = jQuery(this).find('.gaugeLocationCode').text();
+
+            var contentString = "<div><p>" + riverSection + "</p><p>Level: " + currentReading + " (" + waterLevelValue + 
+            ")</p><p>Trend: " + trend + "</p><p>Last reading: " + currentReadingTime + 
+            "</p><p><a  target='_blank' rel='noopener' href='http://apps.sepa.org.uk/waterlevels/default.aspx?sd=t&lc=" + gaugeLocationCode + "'>Go to the SEPA gauge map</a></p></div>";
+			
+			if (jQuery(this).is('.riverSectionRow:last')){
+				// If this is the last marker we need to know so we can add them to the map
+				last = true;
+			}
+			
+			var infowindow = new google.maps.InfoWindow({
+			        		content: contentString
+			});
+			
+			
+			position = new google.maps.LatLng(latitude, longitude);
+			        	
+			        	
+			var marker = new google.maps.Marker({
+			      position: position,
+			      map: map,
+			      icon: icons[waterLevelValue].icon,
+			      title: riverSection
+			});
+
+			        	
+			marker.addListener('click', function(){
+				infowindow.open(map, marker);
+			});
+
+			marker.addListener('mouseover', function(){
+				showSectionInfo(riverSection, waterLevelValue, currentReadingTime, currentReading, trend);
+				showConversionInfo(waterLevelValue, scrapeValue, lowValue, mediumValue, highValue, veryHighValue, hugeValue);
+			});
+		});
+		
+		
+
+	}
   
 if(document.getElementById && document.createTextNode) {
     window.onload=function(){
@@ -174,7 +277,7 @@ if(document.getElementById && document.createTextNode) {
         CONVERSION_UNKNOWNIcon.iconAnchor = new GPoint(5,5);
                 
     <?php  
-    $riverSections->outputJavascript();
+    //$riverSections->outputJavascript();
     ?>
 
 
