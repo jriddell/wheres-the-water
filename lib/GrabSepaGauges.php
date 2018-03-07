@@ -25,7 +25,7 @@ class GrabSepaGauges {
     public $sepaData; // the data in associative array form
 
     function __construct() {
-        $this->sepaFile = self::DATADIR . '/' . self::SEPA_CSV; // filename
+        $this->sepaFile = ROOT . '/' . self::DATADIR . '/' . self::SEPA_CSV; // filename
     }
     /* if file does not exist or is too old download it and write, else just read locally */
     function doGrab() {
