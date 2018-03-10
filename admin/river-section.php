@@ -71,6 +71,8 @@ p.message b { font-size: larger; }
 <body>
 <h1>Where's the Water River Section Editing</h1>
 
+<p><a href="index.html">&#8592; back to admin index</a></p>
+
 <?php
 if (isset($message)) {
   print "<p class='message'>$message</p>";
