@@ -107,8 +107,8 @@ class RiverSections {
         $reply .= "<legend>" . $riverSection['name'] . "</legend>";
         $reply .= $this->editRiverFormInputItem("River/Section Name", "name", $riverSection['name']);
         $reply .= $this->editRiverFormInputItem("SEPA Gauge Code", "gauge_location_code", $riverSection['gauge_location_code'], "right");
-        $reply .= $this->editRiverFormInputItem("Longitude", "longitude", $riverSection['longitude']);
-        $reply .= $this->editRiverFormInputItem("Latitude", "latitude", $riverSection['latitude'], "right");
+        $reply .= $this->editRiverFormInputItem("Latitude", "latitude", $riverSection['latitude']);
+        $reply .= $this->editRiverFormInputItem("Longitude", "longitude", $riverSection['longitude'], "right");
         $reply .= $this->editRiverFormInputItem("Scrape", "scrape_value", $riverSection['scrape_value']);
         $reply .= $this->editRiverFormInputItem("Low", "low_value", $riverSection['low_value'], "right");
         $reply .= $this->editRiverFormInputItem("Medium", "medium_value", $riverSection['medium_value']);
