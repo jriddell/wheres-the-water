@@ -4,8 +4,13 @@ require_once '../config.php';
 heading();
 ?>
 <style>
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
 table {
-    border-spacing: 0;
+    border-spacing: 0px;
     border: 1px solid #ddd;
 }
 

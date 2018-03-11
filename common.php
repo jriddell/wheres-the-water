@@ -16,9 +16,9 @@ body {font-family: 'Ubuntu', sans-serif;}
 </style>
 </head>
 
-<body style="background: white">
-<p><a href="http://www.andyjacksonfund.org.uk"><img src="andy-jackson-fund.png" width="350" /></a>
-<a href="http://canoescotland.org"><img src="scottish-canoe-association-social.jpg" width="350" /></a></p>
+<body style="background: white" onload="sortTable(0)">
+<p><a href="http://www.andyjacksonfund.org.uk"><img src="/wheres-the-water/andy-jackson-fund.png" width="350" /></a>
+<a href="http://canoescotland.org"><img src="/wheres-the-water/scottish-canoe-association-social.jpg" width="350" /></a></p>
 
 <h1>SCA Where&#039;s The Water?</h1>
 
