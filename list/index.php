@@ -12,6 +12,8 @@ body {
 table {
     border-spacing: 0px;
     border: 1px solid #ddd;
+    width: 100%;
+    max-width: 40em;
 }
 
 th {
