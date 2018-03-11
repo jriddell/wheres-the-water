@@ -35,7 +35,8 @@ function footer() {
 
 <p><a href="http://goo.gl/forms/nnEOgVkw8ebhygW52">Help Us Calibrate: River Level Report Form</a>.</p>
 <p><a href="http://goo.gl/forms/YQ3xZTi30vrtFYpo1">River Gauge Request Form</a></a>.</p>
-
+<p><a href="/wtw">List View</a></p>
+<p><a href="http://canoescotland.org/where-go/wheres-water">Map View</a></p>
 </body>
 </html>
 <?php

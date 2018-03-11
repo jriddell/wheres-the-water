@@ -1,6 +1,6 @@
 <?php
-require_once '../common.php';
-require_once '../config.php';
+require_once '../wheres-the-water/common.php';
+require_once '../wheres-the-water/config.php';
 heading();
 ?>
 <style>
@@ -38,7 +38,7 @@ table a {
 </style>
 
 <?php 
-require_once('../lib/RiverSections.php');
+require_once('../wheres-the-water/lib/RiverSections.php');
 $riverSections = new RiverSections();
 $riverSections->readFromJson();
 print "<p>Readings downloaded from SEPA at " . $riverSections->downloadTime() . "</p>\n";
