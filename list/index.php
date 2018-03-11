@@ -1,6 +1,6 @@
 <?php
-require_once 'common.php';
-require_once 'config.php';
+require_once '../common.php';
+require_once '../config.php';
 heading();
 ?>
 <style>
@@ -24,7 +24,7 @@ tr:nth-child(even) {
 </style>
 
 <?php 
-require_once('lib/RiverSections.php');
+require_once('../lib/RiverSections.php');
 $riverSections = new RiverSections();
 $riverSections->readFromJson();
 print "<p>Readings downloaded from SEPA at " . $riverSections->downloadTime() . "</p>\n";
