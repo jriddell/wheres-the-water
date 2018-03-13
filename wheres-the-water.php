@@ -173,6 +173,11 @@ if(document.getElementById && document.createTextNode) {
         CONVERSION_UNKNOWNIcon.iconSize = new GSize(10,10);
         CONVERSION_UNKNOWNIcon.iconAnchor = new GPoint(5,5);
                 
+        var NEEDS_CALIBRATIONSIcon = new GIcon();
+        NEEDS_CALIBRATIONSIcon.image = "/wheres-the-water/pics/NEEDS_CALIBRATIONS.png";
+        NEEDS_CALIBRATIONSIcon.iconSize = new GSize(10,10);
+        NEEDS_CALIBRATIONSIcon.iconAnchor = new GPoint(5,5);
+
     <?php  
     $riverSections->outputJavascript();
     ?>

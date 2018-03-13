@@ -358,6 +358,9 @@ class RiverSections {
         } else {
             $waterLevelValue = $this->waterLevelValue($riverReadingData['currentReading'], $riverSection);
         }
+        if ($riverSection['scrape_value'] == $riverSection['huge_value']) {
+            $waterLevelValue = "NEEDS_CALIBRATIONS";
+        }
 
         // FIXME this should be a template or something neater
         print "var point$jsonid = new GLatLng(".$riverSection['latitude'].",".$riverSection['longitude'].");\n";
