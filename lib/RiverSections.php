@@ -315,12 +315,16 @@ class RiverSections {
         } else {
             $waterLevelValue = $this->waterLevelValue($riverReadingData['currentReading'], $riverSection);
         };
-        $waterLevelValueArray = array('EMPTY', 'SCRAPE', 'LOW', 'MEDIUM', 'HIGH', 'VERY_HIGH', 'HUGE', 'NO_GUAGE_DATA', 'OLD_DATA');
+        if ($riverSection['scrape_value'] == $riverSection['huge_value']) {
+            $waterLevelValue = "NEEDS_CALIBRATIONS";
+        }
+        $waterLevelValueArray = array('EMPTY', 'SCRAPE', 'LOW', 'MEDIUM', 'HIGH', 'VERY_HIGH', 'HUGE', 'NO_GUAGE_DATA', 'OLD_DATA', 'NEEDS_CALIBRATIONS');
         $waterLevelValueNumber = array_search($waterLevelValue, $waterLevelValueArray);
-        $waterLevelValueReadable = array('EMPTY'=>'Empty', 'SCRAPE'=>'Scrape', 'LOW'=>'Low', 'MEDIUM'=>'Medium', 'HIGH'=>'High', 'VERY_HIGH'=>'Very High', 'HUGE'=>'Huge', 'NO_GUAGE_DATA'=>'No Gauge Data', 'OLD_DATA'=>'Old Data');
+        $waterLevelValueReadable = array('EMPTY'=>'Empty', 'SCRAPE'=>'Scrape', 'LOW'=>'Low', 'MEDIUM'=>'Medium', 'HIGH'=>'High', 'VERY_HIGH'=>'Very High', 'HUGE'=>'Huge', 'NO_GUAGE_DATA'=>'No Gauge Data', 'OLD_DATA'=>'Old Data', 'NEEDS_CALIBRATIONS'=>'Needs Calibrations');
         print "<td><span class='hide'>".$riverSection['name']."</span><a href='http://riverlevels.mobi/SiteDetails/Index/". $riverSection['gauge_location_code'] ."'>".$riverSection['name']."</a></td>\n";
         print "<td><span class='hide'>$waterLevelValueNumber</span> <a href='http://riverlevels.mobi/SiteDetails/Index/". $riverSection['gauge_location_code'] ."'>".$waterLevelValueReadable[$waterLevelValue];
         print " <img src='/wheres-the-water/pics/".$waterLevelValue.".png' height='10' width='10' /></a></td>\n";
+        print "<td><a href='geo:".$riverSection['latitude'].",".$riverSection['longitude']."'><img src='/wheres-the-water/pics/22-apps-marble.png' width='22' height='22' /></a></td>\n";
         print "</a></tr>\n";
     }
 
