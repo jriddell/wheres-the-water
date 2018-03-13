@@ -34,16 +34,25 @@ $riverSections->readFromJson();
     display: table;
     clear: both;
 }
+#river-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#river-table td, #river-table th {
+    padding: 0.5em;
+    border-bottom: 1px solid #595959;
+}
 </style>
 <div class='clearfix' style='width: 100%'>
     
      
     <div>
     	<a class='js-tab-top active' id='map-tab' href=''>Map view</a><a class='js-tab-top' id='table-tab' href=''>Table view</a>
-        <div class='js-tab map-tab'><div id="map" style="height: 500px; width: 100%; max-width: 800px; "></div></div>
+        <div class='js-tab map-tab'><div id="map" style="height: 500px; width: 100%; "></div></div>
         <div id="river-table-div" class='js-tab table-tab' style="display: none">
         	<table id="river-table">
-        		<tr><th>River Section</th><th>Level</th></tr>
+        		<tr><th>River Section</th><th>Level</th><th>Trend</th><th>Link</th></tr>
         		<?php $riverSections->printTable();?>
         	</table>
         </div>
@@ -220,16 +229,15 @@ jQuery(document).ready( function(){
             var gaugeLocationCode = jQuery(this).find('.gaugeLocationCode').text();
             console.log(riverSection);
             var contentString = "<div><p>" + riverSection + "</p><p>Level: " + currentReading + " (" + waterLevelValue + 
-            ")</p><p>Trend: " + trend + "</p><p>Last reading: " + currentReadingTime + 
-            "</p><p><a  target='_blank' rel='noopener' href='http://apps.sepa.org.uk/waterlevels/default.aspx?sd=t&lc=" + gaugeLocationCode + "'>Go to the SEPA gauge map</a></p></div>";
+            ") <img src='" + iconBase + waterLevelValue + ext + "' /></p><p>Trend: " + trend + "</p><p>Last reading: " + currentReadingTime + 
+            "</p><p><a  target='_blank' rel='noopener' href='http://apps.sepa.org.uk/waterlevels/default.aspx?sd=t&lc=" + gaugeLocationCode + 
+            "'>Go to the SEPA gauge graph</a></p><p><a target='_blank' rel='noopener' href='http://riverlevels.mobi/SiteDetails/Index/" + gaugeLocationCode +
+            "'>Mobile friendly SEPA gauge graph</a></p></div>";
 			
 			if (jQuery(this).is('.riverSectionRow:last')){
 				// If this is the last marker we need to know so we can add them to the map
 				last = true;
 			}
-			
-			
-			
 			
 			position = new google.maps.LatLng(latitude, longitude);
 			        	

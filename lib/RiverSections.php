@@ -329,13 +329,51 @@ class RiverSections {
             'highValue' => $riverSection['high_value'],
             'veryHighValue' => $riverSection['very_high_value'],
             'hugeValue' => $riverSection['huge_value'],
-            'gaugeLocationCode' => $riverSection['gauge_location_code']
+            'gaugeLocationCode' => $riverSection['gauge_location_code'],
+            'link' => "<a target='_blank' rel='noopener' href='http://apps.sepa.org.uk/waterlevels/default.aspx?sd=t&lc=".$riverSection['gauge_location_code']."'>SEPA graph</a>"
         );
+        
+        switch ($infoArray['waterLevelValue']){
+            case 'EMPTY':
+                $color = '#CCCCCC';
+                break;
+            case 'SCRAPE':
+                $color = '#CCFFCC';
+                break;
+            case 'LOW':
+                $color = '#00FF00';
+                break;
+            case 'MEDIUM':
+                $color = '#FFFF33';
+                break;
+            case 'HIGH':
+                $color = '#FFC004';
+                break;
+            case 'VERY_HIGH':
+                $color = '#FF6060';
+                break;
+            case 'HUGE':
+                $color = '#FF0000';
+                break;
+            case 'OLD_DATA':
+                $color = '#FFFFFF';
+                break;
+            case 'NO_GUAGE_DATA':
+                $color = '#FFFFFF';
+                break;
+            case 'CONVERSION_UNKNOWN':
+                $color = '#FFFFFF';
+                break;
+            default:
+                $color = '#FFFFFF';
+        }
+        
+        $displayedValues = array('riverSection', 'waterLevelValue', 'trend', 'link');
         
         // Populate the table
         foreach ($infoArray as $class => $val){
-            if ($class == 'riverSection' || $class == 'waterLevelValue'){
-                $visibility = '';
+            if (in_array($class, $displayedValues)){
+                $visibility = " style='background-color: $color' ";
             }
             else {
                 $visibility = " style='display: none' ";
