@@ -338,7 +338,7 @@ class RiverSections {
                 $visibility = '';
             }
             else {
-                $visibility = " style='visibility: hidden' ";
+                $visibility = " style='display: none' ";
             }
             print "<td class='$class'$visibility>$val</td>\n";
         }
