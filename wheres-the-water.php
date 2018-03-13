@@ -160,6 +160,11 @@ jQuery(document).ready( function(){
 	});
 });
 </script>
+<script>
+jQuery(document).ready( function(){
+	//TODO Table ordering
+}
+</script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAr0GC5SjROQdQKwS78LI-abrgyULq-9g&callback=initMap"></script>
 
 
