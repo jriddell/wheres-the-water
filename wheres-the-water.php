@@ -162,8 +162,32 @@ jQuery(document).ready( function(){
 </script>
 <script>
 jQuery(document).ready( function(){
-	//TODO Table ordering
-}
+	// Table ordering
+	// Initial order, alphabetical by river name
+	sortTable("river-table", "riverSectionRow", 0, true);
+});
+
+sortTable = function(tableName, rowClass, columnNumber, ascending) {
+    var row, cell, cellContent;
+    var comparisonRow, comparisonCell, comparisonContent;
+
+    $("#" + tableName + " tr." + rowClass).each(function(i) {
+        row = $("#" + tableName + " tr." + rowClass + ":eq(" + i + ")");
+        cell = $(row).find("td:eq(" + columnNumber + ")");
+        cellContent = $(cell).html();
+
+        $("#" + tableName + " tr." + rowClass).each(function(j) {
+            comparisonRow = $("#" + tableName + " tr." + rowClass + ":eq(" + j + ")");
+            comparisonCell = $(comparisonRow).find("td:eq(" + columnNumber + ")");
+            comparisonContent = $(comparisonCell).html();
+
+            if ( (ascending && cellContent < comparisonContent) || (!ascending && cellContent > comparisonContent) ) {
+                $(row).insertBefore(comparisonRow);
+                return false;
+            }
+        });
+    });
+};
 </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAr0GC5SjROQdQKwS78LI-abrgyULq-9g&callback=initMap"></script>
 
@@ -210,6 +234,9 @@ jQuery(document).ready( function(){
 			CONVERSION_UNKNOWN: {
 				icon: iconBase + 'CONVERSION_UNKNOWN' + ext
 			},
+			NEEDS_CALIBRATIONS: {
+				icon: iconBase + 'NEEDS_CALIBRATIONS' + ext
+			}
 		};
 		var infowindow = new google.maps.InfoWindow();
 		
@@ -232,8 +259,8 @@ jQuery(document).ready( function(){
 			var veryHighValue = jQuery(this).find('.veryHighValue').text();
 			var hugeValue = jQuery(this).find('.hugeValue').text();
             var gaugeLocationCode = jQuery(this).find('.gaugeLocationCode').text();
-            console.log(riverSection);
-            var contentString = "<div><p>" + riverSection + "</p><p>Level: " + currentReading + " (" + waterLevelValue + 
+            
+            var contentString = "<div><p><b>" + riverSection + "</b></p><p>Level: " + currentReading + " (" + waterLevelValue + 
             ") <img src='" + iconBase + waterLevelValue + ext + "' /></p><p>Trend: " + trend + "</p><p>Last reading: " + currentReadingTime + 
             "</p><p><a  target='_blank' rel='noopener' href='http://apps.sepa.org.uk/waterlevels/default.aspx?sd=t&lc=" + gaugeLocationCode + 
             "'>Go to the SEPA gauge graph</a></p><p><a target='_blank' rel='noopener' href='http://riverlevels.mobi/SiteDetails/Index/" + gaugeLocationCode +
