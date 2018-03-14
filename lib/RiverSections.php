@@ -291,7 +291,12 @@ class RiverSections {
         $mostRecentLevel = 0;
         foreach($this->riverSectionsData as $jsonid => $riverSection) {
             $time = $grabSepaRivers->riversReadingsData[$riverSection['gauge_location_code']]['currentReadingTime'];
-            $timestamp = strtotime($time);
+            if (empty($time)) {
+                continue;
+            }
+            $time_explode = explode('/', $time); // need to swap date and month cos PHP likes US date format
+            $ustime = $time_explode[1] . '/' . $time_explode[0] . '/' . $time_explode[2];
+            $timestamp = strtotime($ustime);
             if ($timestamp > $mostRecentTimestamp) {
                 $mostRecentTimestamp = $timestamp;
                 $mostRecentTime = $time;
