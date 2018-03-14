@@ -16,6 +16,9 @@ final class SepaRiverReadingHistoryTest extends TestCase
         $mySepaRiverReadingHistory->newReading('2147483647', '1.24');
         $this->assertFileExists('data/history-1234.json');
         $this->assertJsonFileEqualsJsonFile('data/SepaRiverReadingHistoryTest/testNewReading.json', 'data/history-1234.json');
+        $mySepaRiverReadingHistory->newReading('2147483123', '2.12');
+        $this->assertFileExists('data/history-1234.json');
+        $this->assertJsonFileEqualsJsonFile('data/SepaRiverReadingHistoryTest/testNewReading2.json', 'data/history-1234.json');
         //@unlink('data/history-1234.json'); // funny syntax to supress error if it does not exist
     }
 }
