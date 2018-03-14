@@ -4,6 +4,7 @@ data/river-sections.json
 data/rivers-readings.json
 data/rivers_download_timestamp
 data/*.csv
+data/history*
 config/database.php
 tests/data/rivers_download_timestamp
 tests/data/10048-SG.csv
