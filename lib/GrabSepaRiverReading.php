@@ -10,6 +10,8 @@
    This is only for use by GrabSepaRivers when doing the bulk download, too slow and resource intensive to do it more often
 */
 
+require_once 'SepaRiverReadingHistory.php';
+
 class GrabSepaRiverReading {
     const DATADIR = 'data';
     const SEPA_DOWNLOAD_PERIOD = 300; // 60 * 5; // make sure current download is no older than 5 minutes
