@@ -30,7 +30,7 @@ class SepaRiverReadingHistory {
             $json = file_get_contents($this->filename);
             $riversReadingsHistory = json_decode($json, true);
         } else {
-            $riversReadingsHistory = [];
+            $riversReadingsHistory = array();
         }
         $riversReadingsHistory[$timeStamp] = $waterLevel;
         $fp = fopen($this->filename, 'w');
