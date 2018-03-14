@@ -47,6 +47,12 @@ print "<p>Readings downloaded from SEPA at " . $riverSections->downloadTime() . 
 print "<p>Most recent SEPA reading: " . $riverSections->calculateMostRecentReading() . "</p>\n";
 ?>
 
+
+<p>&nbsp;<img title='SCA WW Guidebook number' src='/wheres-the-water/pics/sca.png' /> SCA WW Guidebook (3rd edition) Entry number<br />
+&nbsp;<img src='/wheres-the-water/pics/ukrgb.ico'/> Online Guidebook Link<br />
+&nbsp;<img src='/wheres-the-water/pics/osm.png' width='22' height='22' /> OpenStreetMap link<br />
+&nbsp;<img title='Access Issue Link' src='/wheres-the-water/pics/warning.png' /> Access Issue Links<br />
+</p>
 <table id="riverTable">
   <tr>
    <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->  

@@ -23,7 +23,8 @@ call readFromJson() then $obj->riverSectionsData is an array of rivers with thei
         "huge_value": "1.8"
         "grade": "2-3",
         "guidebook_link": "http://www.ukriversguidebook.co.uk/foo",
-        "sca_guidebook_no": "123"
+        "sca_guidebook_no": "123",
+        "access_issue": "http://www.canoescotland.org/news/river-clyde"
     }
 ]
 */
@@ -106,6 +107,9 @@ class RiverSections {
 
     /* HTML editable form for a river section */
     public function editRiverFormLine($riverSection) {
+        if (!array_key_exists('access_issue', $riverSection)) {
+            $riverSection['access_issue'] = '';
+        }
         $reply = "";
         $reply .= "<legend>" . $riverSection['name'] . "</legend>";
         $reply .= $this->editRiverFormInputItem("River/Section Name", "name", $riverSection['name']);
@@ -121,6 +125,7 @@ class RiverSections {
         $reply .= $this->editRiverFormInputItem("Grade", "grade", $riverSection['grade']);
         $reply .= $this->editRiverFormInputItem("Guidebook Link", "guidebook_link", $riverSection['guidebook_link'], "right");
         $reply .= $this->editRiverFormInputItem("SCA Guidebook No", "sca_guidebook_no", $riverSection['sca_guidebook_no']);
+        $reply .= $this->editRiverFormInputItem("Acccess Issue Link", "access_issue", $riverSection['access_issue'], "right");
         return $reply;
     }
 
@@ -155,6 +160,7 @@ class RiverSections {
         $riverSection['grade'] = $postData['grade'];
         $riverSection['guidebook_link'] = $postData['guidebook_link'];
         $riverSection['sca_guidebook_no'] = $postData['sca_guidebook_no'];
+        $riverSection['access_issue'] = $postData['access_issue'];
         $this->riverSectionsData[$jsonid] = $riverSection;
         $this->writeToJson();
         return "Updated data for " . $riverSection['name'];
@@ -224,6 +230,7 @@ class RiverSections {
         $riverSection['grade'] = "";
         $riverSection['guidebook_link'] = "";
         $riverSection['sca_guidebook_no'] = "";
+        $riverSection['access_issue'] = "";
 
         $reply = "<legend>Add New River Section</legend>";
         $reply .= "<form action='river-section.php' method='post'>\n";
@@ -255,6 +262,7 @@ class RiverSections {
         $riverSection['grade'] = $postData['grade'];
         $riverSection['guidebook_link'] = $postData['guidebook_link'];
         $riverSection['sca_guidebook_no'] = $postData['sca_guidebook_no'];
+        $riverSection['access_issue'] = $postData['access_issue'];
         $this->riverSectionsData[] = $riverSection;
         $this->writeToJson();
         return "Added new river " . $riverSection['name'];
@@ -352,6 +360,9 @@ class RiverSections {
         }
         if (!empty($riverSection['sca_guidebook_no'])) {
             print "&nbsp; <img title='SCA WW Guidebook number' src='/wheres-the-water/pics/sca.png' />".$riverSection['sca_guidebook_no'];
+        }
+        if (!empty($riverSection['access_issue'])) {
+            print "&nbsp; <a href='".$riverSection['access_issue']."'><img title='Access Issue Link' src='/wheres-the-water/pics/warning.png' /></a>";
         }
         print "</td>\n";
         print "</tr>\n";
