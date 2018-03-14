@@ -76,6 +76,12 @@ class GrabSepaRiverReading {
         }
         print "<p>Downloaded River Reading for gauge ".$gauge_id."</p>\n";
         flush();
+        // save it to history
+        $history = new SepaRiverReadingHistory($gauge_id);
+        $time_explode = explode('/', $this->currentReadingTime); // need to swap date and month cos PHP likes US date format
+        $ustime = $time_explode[1] . '/' . $time_explode[0] . '/' . $time_explode[2];
+        $timestamp = strtotime($ustime);
+        $history->newReading($timestamp, $this->currentReading);
     }
 
     private function validateRiverData($riverData) {
