@@ -12,8 +12,6 @@
  }
 */
 
-require_once '../config.php';
-
 class SepaRiverReadingHistory {
     const DATADIR = 'data';
     public $gauge_id;
