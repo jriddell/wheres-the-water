@@ -52,6 +52,8 @@ print "<p>Most recent SEPA reading: " . $riverSections->calculateMostRecentReadi
    <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->  
     <th onclick="sortTable(0)">Name</th>
     <th onclick="sortTable(1)">Level</th>
+    <th onclick="sortTable(2)">Grade</th>
+    <th>Links</th>
   </tr>
   <?php $riverSections->printTable(); ?>
 </table>

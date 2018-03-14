@@ -21,6 +21,9 @@ call readFromJson() then $obj->riverSectionsData is an array of rivers with thei
         "high_value": "1",
         "very_high_value": "1.4",
         "huge_value": "1.8"
+        "grade": "2-3",
+        "guidebook_link": "http://www.ukriversguidebook.co.uk/foo",
+        "sca_guidebook_no": "123"
     }
 ]
 */
@@ -115,6 +118,9 @@ class RiverSections {
         $reply .= $this->editRiverFormInputItem("High", "high_value", $riverSection['high_value'], "right");
         $reply .= $this->editRiverFormInputItem("Very High", "very_high_value", $riverSection['very_high_value']);
         $reply .= $this->editRiverFormInputItem("Huge", "huge_value", $riverSection['huge_value'], "right");
+        $reply .= $this->editRiverFormInputItem("Grade", "grade", $riverSection['grade']);
+        $reply .= $this->editRiverFormInputItem("Guidebook Link", "guidebook_link", $riverSection['guidebook_link'], "right");
+        $reply .= $this->editRiverFormInputItem("SCA Guidebook No", "sca_guidebook_no", $riverSection['sca_guidebook_no']);
         return $reply;
     }
 
@@ -146,6 +152,9 @@ class RiverSections {
         $riverSection['high_value'] = $postData['high_value'];
         $riverSection['very_high_value'] = $postData['very_high_value'];
         $riverSection['huge_value'] = $postData['huge_value'];
+        $riverSection['grade'] = $postData['grade'];
+        $riverSection['guidebook_link'] = $postData['guidebook_link'];
+        $riverSection['sca_guidebook_no'] = $postData['sca_guidebook_no'];
         $this->riverSectionsData[$jsonid] = $riverSection;
         $this->writeToJson();
         return "Updated data for " . $riverSection['name'];
@@ -212,6 +221,9 @@ class RiverSections {
         $riverSection['high_value'] = "";
         $riverSection['very_high_value'] = "";
         $riverSection['huge_value'] = "";
+        $riverSection['grade'] = "";
+        $riverSection['guidebook_link'] = "";
+        $riverSection['sca_guidebook_no'] = "";
 
         $reply = "<legend>Add New River Section</legend>";
         $reply .= "<form action='river-section.php' method='post'>\n";
@@ -240,6 +252,9 @@ class RiverSections {
         $riverSection['high_value'] = $postData['high_value'];
         $riverSection['very_high_value'] = $postData['very_high_value'];
         $riverSection['huge_value'] = $postData['huge_value'];
+        $riverSection['grade'] = $postData['grade'];
+        $riverSection['guidebook_link'] = $postData['guidebook_link'];
+        $riverSection['sca_guidebook_no'] = $postData['sca_guidebook_no'];
         $this->riverSectionsData[] = $riverSection;
         $this->writeToJson();
         return "Added new river " . $riverSection['name'];
@@ -324,8 +339,16 @@ class RiverSections {
         print "<td><span class='hide'>".$riverSection['name']."</span><a href='http://riverlevels.mobi/SiteDetails/Index/". $riverSection['gauge_location_code'] ."'>".$riverSection['name']."</a></td>\n";
         print "<td><span class='hide'>$waterLevelValueNumber</span> <a href='http://riverlevels.mobi/SiteDetails/Index/". $riverSection['gauge_location_code'] ."'>".$waterLevelValueReadable[$waterLevelValue];
         print " <img src='/wheres-the-water/pics/".$waterLevelValue.".png' height='10' width='10' /></a></td>\n";
-        print "<td><a href='geo:".$riverSection['latitude'].",".$riverSection['longitude']."'><img src='/wheres-the-water/pics/22-apps-marble.png' width='22' height='22' /></a></td>\n";
-        print "</a></tr>\n";
+        print "<td>".$riverSection['grade']."</td>\n";
+        print "<td><a href='geo:".$riverSection['latitude'].",".$riverSection['longitude']."'><img src='/wheres-the-water/pics/22-apps-marble.png' width='22' height='22' /></a>";
+        if (!empty($riverSection['guidebook_link'])) {
+            print "&nbsp; <a href='".$riverSection['guidebook_link']."'><img src='/wheres-the-water/pics/ukrgb.ico'/></a>";
+        }
+        if (!empty($riverSection['sca_guidebook_no'])) {
+            print "&nbsp; <img title='SCA WW Guidebook number' src='/wheres-the-water/pics/sca.png' />".$riverSection['sca_guidebook_no'];
+        }
+        print "</td>\n";
+        print "</tr>\n";
     }
 
     /* javascript for website */
