@@ -346,6 +346,7 @@ class RiverSections {
         print " <img src='/wheres-the-water/pics/".$waterLevelValue.".png' height='10' width='10' /></a></td>\n";
         print "<td>".$riverSection['grade']."</td>\n";
         print "<td><a href='geo:".$riverSection['latitude'].",".$riverSection['longitude']."'><img src='/wheres-the-water/pics/22-apps-marble.png' width='22' height='22' /></a>";
+        print "<a href='https://www.openstreetmap.org/?mlat=".$riverSection['latitude']."&mlon=".$riverSection['longitude']."#map=12/".$riverSection['latitude']."/".$riverSection['longitude']."'><img src='/wheres-the-water/pics/osm.png' width='22' height='22' /></a>";
         if (!empty($riverSection['guidebook_link'])) {
             print "&nbsp; <a href='".$riverSection['guidebook_link']."'><img src='/wheres-the-water/pics/ukrgb.ico'/></a>";
         }
