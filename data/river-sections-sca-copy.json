@@ -389,7 +389,8 @@
         "huge_value": "3",
         "grade": "2(3)",
         "guidebook_link": "https:\/\/www.ukriversguidebook.co.uk\/rivers\/scotland\/central-highlands\/river-tay-sca-access-point-to-grandtully",
-        "sca_guidebook_no": ""
+        "sca_guidebook_no": "",
+        "access_issue": "http:\/\/canoescotland.org\/news\/river-tay-grandtully-rapids"
     },
     {
         "name": "Oykel",
@@ -736,7 +737,8 @@
         "huge_value": "2",
         "grade": "3-5",
         "guidebook_link": "https:\/\/www.ukriversguidebook.co.uk\/rivers\/scotland\/west-highlands\/river-orchy-bridge-of-orchy-to-falls-of-orchy",
-        "sca_guidebook_no": ""
+        "sca_guidebook_no": "",
+        "access_issue": "http:\/\/canoescotland.org\/news\/glen-orchy-bailey-bridge-works-and-tree-felling"
     },
     {
         "name": "Minnoch",
