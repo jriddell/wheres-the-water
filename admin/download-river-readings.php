@@ -1,11 +1,4 @@
 <?php
-function debug_to_console( $data ) {
-    $output = $data;
-    if ( is_array( $output ) )
-        $output = implode( ',', $output);
-        
-        echo "<script>console.log( 'Debug Objects: " . $output . "' );</script>";
-}
 require_once('../lib/RiverSections.php');
 require_once('../lib/GrabSepaRivers.php');
 require_once('../config.php');

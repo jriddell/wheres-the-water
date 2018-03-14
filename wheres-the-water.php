@@ -1,4 +1,5 @@
 <?php
+// Debugging
 function debug_to_console( $data ) {
     $output = $data;
     if ( is_array( $output ) )
@@ -43,6 +44,10 @@ $riverSections->readFromJson();
     padding: 0.5em;
     border-bottom: 1px solid #595959;
 }
+
+#river-readings {
+    display: none;
+}
 </style>
 <div class='clearfix' style='width: 100%'>
     
@@ -81,58 +86,59 @@ $riverSections->readFromJson();
     <div class="riverHeader" id="level">&nbsp;</div>
     
     <div class="riverHeader" id="lastUpdated">&nbsp;</div>
-    
-    <table>
-    	<tbody>
-    		<tr>
-    			<td class="dataHeaders">Current Reading</td>
-    			<td class="dataValues" id="currentReading">&nbsp;</td>
-    		</tr>
-    		<tr>
-    			<td class="dataHeaders">Trend</td>
-    			<td class="dataValues" id="trend">&nbsp;</td>
-    		</tr>
-    		<tr>
-    			<td class="dataHeaders" colspan="2">Callibration used:</td>
-    		</tr>
-    		<tr>
-    			<td align="right" colspan="2" bgcolor="#424242">
-    			<table class="sub-table">
-    				<tbody>
-    					<tr>
-    						<td class="callibHeaders" bgcolor="#FF0000">Huge</td>
-    						<td class="callibVals" id="huge">0</td>
-    					</tr>
-    					<tr>
-    						<td class="callibHeaders" bgcolor="#FF6060">Very High</td>
-    						<td class="callibVals" id="veryHigh">0</td>
-    					</tr>
-    					<tr>
-    						<td class="callibHeaders" bgcolor="#FFC004">High</td>
-    						<td class="callibVals" id="high">0</td>
-    					</tr>
-    					<tr>
-    						<td class="callibHeaders" bgcolor="#FFFF33">Medium</td>
-    						<td class="callibVals" id="medium">0</td>
-    					</tr>
-    					<tr>
-    						<td class="callibHeaders" bgcolor="#00FF00">Low</td>
-    						<td class="callibVals" id="low">0</td>
-    					</tr>
-    					<tr>
-    						<td class="callibHeaders" bgcolor="#CCFFCC">Scrapeable</td>
-    						<td class="callibVals" id="justRunnable">0</td>
-    					</tr>
-    					<tr>
-    						<td class="callibHeaders" bgcolor="#CCCCCC">Empty</td>
-    						<td class="callibVals" id="empty">0</td>
-    					</tr>
-    				</tbody>
-    			</table>
-    			</td>
-    		</tr>
-    	</tbody>
-    </table>
+    <div id='river-readings'>
+        <table>
+        	<tbody>
+        		<tr>
+        			<td class="dataHeaders">Current Reading</td>
+        			<td class="dataValues" id="currentReading">&nbsp;</td>
+        		</tr>
+        		<tr>
+        			<td class="dataHeaders">Trend</td>
+        			<td class="dataValues" id="trend">&nbsp;</td>
+        		</tr>
+        		<tr>
+        			<td class="dataHeaders" colspan="2">Callibration used:</td>
+        		</tr>
+        		<tr>
+        			<td align="right" colspan="2" bgcolor="#424242">
+        			<table class="sub-table">
+        				<tbody>
+        					<tr>
+        						<td class="callibHeaders" bgcolor="#FF0000">Huge</td>
+        						<td class="callibVals" id="huge">0</td>
+        					</tr>
+        					<tr>
+        						<td class="callibHeaders" bgcolor="#FF6060">Very High</td>
+        						<td class="callibVals" id="veryHigh">0</td>
+        					</tr>
+        					<tr>
+        						<td class="callibHeaders" bgcolor="#FFC004">High</td>
+        						<td class="callibVals" id="high">0</td>
+        					</tr>
+        					<tr>
+        						<td class="callibHeaders" bgcolor="#FFFF33">Medium</td>
+        						<td class="callibVals" id="medium">0</td>
+        					</tr>
+        					<tr>
+        						<td class="callibHeaders" bgcolor="#00FF00">Low</td>
+        						<td class="callibVals" id="low">0</td>
+        					</tr>
+        					<tr>
+        						<td class="callibHeaders" bgcolor="#CCFFCC">Scrapeable</td>
+        						<td class="callibVals" id="justRunnable">0</td>
+        					</tr>
+        					<tr>
+        						<td class="callibHeaders" bgcolor="#CCCCCC">Empty</td>
+        						<td class="callibVals" id="empty">0</td>
+        					</tr>
+        				</tbody>
+        			</table>
+        			</td>
+        		</tr>
+        	</tbody>
+        </table>
+     </div>
      </div>
     
      </div>
@@ -259,12 +265,13 @@ sortTable = function(tableName, rowClass, columnNumber, ascending) {
 			var veryHighValue = jQuery(this).find('.veryHighValue').text();
 			var hugeValue = jQuery(this).find('.hugeValue').text();
             var gaugeLocationCode = jQuery(this).find('.gaugeLocationCode').text();
-            
+
+            var riverReadings = jQuery('#river-readings').html();
             var contentString = "<div><p><b>" + riverSection + "</b></p><p>Level: " + currentReading + " (" + waterLevelValue + 
             ") <img src='" + iconBase + waterLevelValue + ext + "' /></p><p>Trend: " + trend + "</p><p>Last reading: " + currentReadingTime + 
             "</p><p><a  target='_blank' rel='noopener' href='http://apps.sepa.org.uk/waterlevels/default.aspx?sd=t&lc=" + gaugeLocationCode + 
             "'>Go to the SEPA gauge graph</a></p><p><a target='_blank' rel='noopener' href='http://riverlevels.mobi/SiteDetails/Index/" + gaugeLocationCode +
-            "'>Mobile friendly SEPA gauge graph</a></p></div>";
+            "'>Mobile friendly SEPA gauge graph</a></p>" + riverReadings + "</div>";
 			
 			if (jQuery(this).is('.riverSectionRow:last')){
 				// If this is the last marker we need to know so we can add them to the map
@@ -283,8 +290,11 @@ sortTable = function(tableName, rowClass, columnNumber, ascending) {
 
 			        	
 			marker.addListener('click', function(){
+				showSectionInfo(riverSection, waterLevelValue, currentReadingTime, currentReading, trend);
+				showConversionInfo(waterLevelValue, scrapeValue, lowValue, mediumValue, highValue, veryHighValue, hugeValue);
 				infowindow.setContent(contentString);
 				infowindow.open(map, marker);
+				
 			});
 
 			marker.addListener('mouseover', function(){
