@@ -48,9 +48,11 @@ print "<p>Most recent SEPA reading: " . $riverSections->calculateMostRecentReadi
 ?>
 
 
-<p>&nbsp;<img title='SCA WW Guidebook number' src='/wheres-the-water/pics/sca.png' /> SCA WW Guidebook (3rd edition) Entry number<br />
-&nbsp;<img src='/wheres-the-water/pics/ukrgb.ico'/> Online Guidebook Link<br />
+<p>
+&nbsp;<img src='/wheres-the-water/pics/22-apps-marble.png' width='22' height='22' /> Map link for mobile phones<br />
 &nbsp;<img src='/wheres-the-water/pics/osm.png' width='22' height='22' /> OpenStreetMap link<br />
+&nbsp;<img title='SCA WW Guidebook number' src='/wheres-the-water/pics/sca.png' /> SCA WW Guidebook (3rd edition) Entry number<br />
+&nbsp;<img src='/wheres-the-water/pics/ukrgb.ico'/> Online Guidebook Link<br />
 &nbsp;<img title='Access Issue Link' src='/wheres-the-water/pics/warning.png' /> Access Issue Links<br />
 </p>
 <table id="riverTable">
