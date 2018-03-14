@@ -3,6 +3,15 @@
    May be copied under the GNU GPL version 3 (or later) only
 */
 
+/*
+ Functions to read and write a river reading history
+ Uses file to data/history-1234.json of format associative array of timestamp: reading
+ {
+    "2147483647": "1.24",
+    "2147483123": "2.12"
+ }
+*/
+
 require_once '../config.php';
 
 class SepaRiverReadingHistory {
