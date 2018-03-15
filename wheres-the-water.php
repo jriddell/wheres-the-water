@@ -278,6 +278,6 @@ sortTable = function(tableName, rowClass, columnNumber, ascending) {
 		
 
 	}
-
+</script>
 <?php
 footer();
