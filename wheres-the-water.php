@@ -38,6 +38,7 @@ $riverSections->readFromJson();
 #river-table {
     border-collapse: collapse;
     width: 100%;
+    background-color: #ffffff;
 }
 
 #river-table td, #river-table th {
@@ -58,9 +59,24 @@ $riverSections->readFromJson();
      
 
     <div>
+        <p>Data Last Polled</p>
+        <p><?php print $riverSections->downloadTime() ?></p>
+        <p>Most Recent SEPA Reading</p>
+        <p><?php print $riverSections->calculateMostRecentReading() ?></p>
+            			
     	<a class='js-tab-top active' id='map-tab' href=''>Map view</a><a class='js-tab-top' id='table-tab' href=''>Table view</a>
+        
         <div class='js-tab map-tab'><div id="map" style="height: 500px; width: 100%; "></div></div>
+        
         <div id="river-table-div" class='js-tab table-tab' style="display: none">
+        	<p>Symbol key:</p>
+        	<p><img src='' /> SEPA gauge graph</p>
+        	<p><img src='' /> SEPA gauge graph (mobile friendly)</p>
+        	<p><img src='/wheres-the-water/pics/osm.png' /> Map link</p>
+        	<p><img src='/wheres-the-water/pics/ukrgb.ico' /> UK Rivers Guide Book link</p>
+        	<p><img src='/wheres-the-water/pics/sca.png' /> SCA guide book reference number</p>
+        	<p><img src='/wheres-the-water/pics/warning.png' /> Access issue link</p>
+        	
         	<table id="river-table">
         		<tr>
         			<th class='clickable' id='js-river-name'>River Section</th>
@@ -73,30 +89,7 @@ $riverSections->readFromJson();
         	</table>
         </div>
     </div>
-    <div style="float: right">
     
-          <div class="content">
-              <table  cellspacing="0" class="riverlevels">
-        			<tr>
-        			  <td class="dataHeaders" colspan="2">Data Last Polled</td>
-        			</tr>
-        			<tr>
-        			  <td class="dataValues" style="width:190px" colspan="2"><?php print $riverSections->downloadTime() ?></td>
-        			</tr>
-        			<tr>
-        			  <td colspan="2" height="4"></td>
-                  		</tr>
-        			<tr>
-        			  <td class="dataHeaders" colspan="2">Most Recent SEPA Reading</td>
-        			  </tr>
-        			 <tr>
-        			  <td colspan="2" class="dataValues" style="width:190px" ><?php print $riverSections->calculateMostRecentReading() ?></td>
-        			</tr>
-        	</table>
-    
-     	</div>
-    
-     </div>
 </div>
 <script>
 jQuery(document).ready( function(){
@@ -245,25 +238,24 @@ sortTable = function(tableName, rowClass, columnNumber, ascending) {
                 case 'HUGE':
                     boxColors[0] = '#ffffff';
                     break;
-                case 'VERY_HIGH:
+                case 'VERY_HIGH':
                 	boxColors[1] = '#ffffff';
                     break;
                 case 'HIGH':
                 	boxColors[2] = '#ffffff';
                     break;
-                case 'MEDIUM:
+                case 'MEDIUM':
                 	boxColors[3] = '#ffffff';
                     break;
                 case 'LOW':
                 	boxColors[4] = '#ffffff';
                     break;
-                case 'SCRAPE:
+                case 'SCRAPE':
                 	boxColors[5] = '#ffffff';
                     break;
                 case 'EMPTY':
                 	boxColors[6] = '#ffffff';
                     break;
-                
             }
 
             var riverReadings = '<table style="background-color: #424242">' +
