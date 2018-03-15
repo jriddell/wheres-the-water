@@ -58,7 +58,7 @@ $riverSections->readFromJson();
         <div class='js-tab map-tab'><div id="map" style="height: 500px; width: 100%; "></div></div>
         <div id="river-table-div" class='js-tab table-tab' style="display: none">
         	<table id="river-table">
-        		<tr><th>River Section</th><th>Level</th><th>Trend</th><th>Link</th></tr>
+        		<tr><th>River Section</th><th>Grade</th><th>Level</th><th>Trend</th><th>Link</th></tr>
         		<?php $riverSections->printTable();?>
         	</table>
         </div>
@@ -116,6 +116,23 @@ jQuery(document).ready( function(){
 	// Table ordering
 	// Initial order, alphabetical by river name
 	sortTable("river-table", "riverSectionRow", 0, true);
+
+	jQuery('#js-river-name').on('click', function(){
+		sortTable("river-table", "riverSectionRow", 0, true);
+	});
+	jQuery('#js-river-grade').on('click', function(){
+		if (jQuery(this).hasClass('sort-asc')){
+			sortTable("river-table", "riverSectionRow", 1, false);
+			jQuery(this).removeClass('sort-asc');
+		}
+		else {
+			sortTable("river-table", "riverSectionRow", 1, true);
+			jQuery(this).addClass('sort-asc')
+		}
+	});
+	jQuery('#js-river-level').on('click', function(){
+		sortTable("river-table", "riverSectionRow", , true);
+	});
 });
 
 sortTable = function(tableName, rowClass, columnNumber, ascending) {
@@ -212,34 +229,34 @@ sortTable = function(tableName, rowClass, columnNumber, ascending) {
 			var hugeValue = jQuery(this).find('.hugeValue').text();
             var gaugeLocationCode = jQuery(this).find('.gaugeLocationCode').text();
 
-            var riverReadings = '<table style="backgroundcolor: #424242">' +
+            var riverReadings = '<table style="background-color: #424242">' +
 				'<tbody>' +
 					'<tr>' +
-						'<td class="callibHeaders" style="backgroundcolor: #FF0000">Huge</td>' +
+						'<td class="callibHeaders" style="background-color: #FF0000">Huge</td>' +
 						'<td class="callibVals" id="huge">> ' + hugeValue + '</td>' +
 					'</tr>' +
 					'<tr>' +
-						'<td class="callibHeaders" style="backgroundcolor: #FF6060">Very High</td>' +
+						'<td class="callibHeaders" style="background-color: #FF6060">Very High</td>' +
 						'<td class="callibVals" id="veryHigh">' + veryHighValue + ' - ' + hugeValue + '</td>' +
 					'</tr>' +
 					'<tr>' +
-						'<td class="callibHeaders" style="backgroundcolor: #FFC004">High</td>' +
+						'<td class="callibHeaders" style="background-color: #FFC004">High</td>' +
 						'<td class="callibVals" id="high">' + highValue + ' - ' + veryHighValue + '</td>' +
 					'</tr>' +
 					'<tr>' +
-						'<td class="callibHeaders" style="backgroundcolor: #FFFF33">Medium</td>' +
+						'<td class="callibHeaders" style="background-color: #FFFF33">Medium</td>' +
 						'<td class="callibVals" id="medium">' + mediumValue + ' - ' + highValue + '</td>' +
 					'</tr>' +
 					'<tr>' +
-						'<td class="callibHeaders" style="backgroundcolor: #00FF00">Low</td>' +
+						'<td class="callibHeaders" style="background-color: #00FF00">Low</td>' +
 						'<td class="callibVals" id="low">' + lowValue + ' - ' + mediumValue + '</td>' +
 					'</tr>' +
 					'<tr>' +
-						'<td class="callibHeaders" style="backgroundcolor: #CCFFCC">Scrapeable</td>' +
+						'<td class="callibHeaders" style="background-color: #CCFFCC">Scrapeable</td>' +
 						'<td class="callibVals" id="justRunnable">' + scrapeValue + ' - ' + lowValue + '</td>' +
 					'</tr>' +
 					'<tr>' +
-						'<td class="callibHeaders" style="backgroundcolor: #CCCCCC">Empty</td>' +
+						'<td class="callibHeaders" style="background-color: #CCCCCC">Empty</td>' +
 						'<td class="callibVals" id="empty">< ' + scrapeValue + '</td>' +
 					'</tr>' +
 				'</tbody>' +
