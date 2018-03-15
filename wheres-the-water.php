@@ -58,7 +58,13 @@ $riverSections->readFromJson();
         <div class='js-tab map-tab'><div id="map" style="height: 500px; width: 100%; "></div></div>
         <div id="river-table-div" class='js-tab table-tab' style="display: none">
         	<table id="river-table">
-        		<tr><th>River Section</th><th>Grade</th><th>Level</th><th>Trend</th><th>Link</th></tr>
+        		<tr>
+        			<th class='clickable' id='js-river-name'>River Section</th>
+        			<th class='clickable' id='js-river-grade'>Grade</th>
+        			<th class='clickable' id='js-river-level'>Level</th>
+        			<th>Trend</th>
+        			<th>Link</th>
+        		</tr>
         		<?php $riverSections->printTable();?>
         	</table>
         </div>
@@ -131,7 +137,7 @@ jQuery(document).ready( function(){
 		}
 	});
 	jQuery('#js-river-level').on('click', function(){
-		sortTable("river-table", "riverSectionRow", , true);
+		sortTable("river-table", "riverSectionRow", 4, false);
 	});
 });
 
