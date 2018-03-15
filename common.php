@@ -19,9 +19,9 @@ body {font-family: 'Ubuntu', sans-serif;}
 </style>
 </head>
 
-<body style="background: white">
-<p><a href="http://www.andyjacksonfund.org.uk"><img src="andy-jackson-fund.png" width="350" /></a>
-<a href="http://canoescotland.org"><img src="scottish-canoe-association-social.jpg" width="350" /></a></p>
+<body style="background: white" onload="sortTable(0)">
+<p><a href="http://www.andyjacksonfund.org.uk"><img src="/wheres-the-water/andy-jackson-fund.png" width="350" /></a>
+<a href="http://canoescotland.org"><img src="/wheres-the-water/scottish-canoe-association-social.jpg" width="350" /></a></p>
 
 <h1>SCA Where&#039;s The Water?</h1>
 
@@ -34,8 +34,12 @@ function footer() {
 <p>SCA Where's the Water uses <a href="
 <a href="http://apps.sepa.org.uk/waterlevels/">water level data from SEPA</a>.</p>
 
-<p>Code written and maintained by <a href="http://www.edinburghlinux.co.uk">Jonathan Riddell</a>. <a href="https://github.com/jriddell/wheres-the-water">Code on GitHub</a>.  Please file <a href="https://github.com/jriddell/wheres-the-water/issues">bug reports and feature requests on GitHub</a>.  TODO: river level report  TODO: river addition/alteration request report</p>
+<p>Code written and maintained by <a href="http://www.edinburghlinux.co.uk">Jonathan Riddell</a>. <a href="https://github.com/jriddell/wheres-the-water">Code on GitHub</a>.  Please file <a href="https://github.com/jriddell/wheres-the-water/issues">bug reports and feature requests on GitHub</a>.</p>
 
+<p><a href="http://goo.gl/forms/nnEOgVkw8ebhygW52">Help Us Calibrate: River Level Report Form</a>.</p>
+<p><a href="http://goo.gl/forms/YQ3xZTi30vrtFYpo1">River Gauge Request Form</a></a>.</p>
+<p><a href="/wtw">List View</a></p>
+<p><a href="http://canoescotland.org/where-go/wheres-water">Map View</a></p>
 </body>
 </html>
 <?php

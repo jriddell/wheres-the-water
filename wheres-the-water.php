@@ -52,6 +52,7 @@ $riverSections->readFromJson();
 <div class='clearfix' style='width: 100%'>
     
      
+
     <div>
     	<a class='js-tab-top active' id='map-tab' href=''>Map view</a><a class='js-tab-top' id='table-tab' href=''>Table view</a>
         <div class='js-tab map-tab'><div id="map" style="height: 500px; width: 100%; "></div></div>
@@ -138,6 +139,7 @@ sortTable = function(tableName, rowClass, columnNumber, ascending) {
         });
     });
 };
+
 </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAr0GC5SjROQdQKwS78LI-abrgyULq-9g&callback=initMap"></script>
 

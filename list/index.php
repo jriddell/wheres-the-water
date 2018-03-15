@@ -1,12 +1,19 @@
 <?php
-require_once 'common.php';
-require_once 'config.php';
+require_once '../wheres-the-water/common.php';
+require_once '../wheres-the-water/config.php';
 heading();
 ?>
 <style>
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
 table {
-    border-spacing: 0;
+    border-spacing: 0px;
     border: 1px solid #ddd;
+    width: 100%;
+    max-width: 40em;
 }
 
 th {
@@ -21,21 +28,40 @@ th, td {
 tr:nth-child(even) {
     background-color: #f2f2f2
 }
+
+table a {
+    text-decoration: none;
+    color: black;
+}
+.hide {
+    display: none;
+}
+
 </style>
 
 <?php 
-require_once('lib/RiverSections.php');
+require_once('../wheres-the-water/lib/RiverSections.php');
 $riverSections = new RiverSections();
 $riverSections->readFromJson();
 print "<p>Readings downloaded from SEPA at " . $riverSections->downloadTime() . "</p>\n";
 print "<p>Most recent SEPA reading: " . $riverSections->calculateMostRecentReading() . "</p>\n";
 ?>
 
-<table id="myTable">
+
+<p>
+&nbsp;<img src='/wheres-the-water/pics/22-apps-marble.png' width='22' height='22' /> Map link for mobile phones<br />
+&nbsp;<img src='/wheres-the-water/pics/osm.png' width='22' height='22' /> OpenStreetMap link<br />
+&nbsp;<img title='SCA WW Guidebook number' src='/wheres-the-water/pics/sca.png' /> SCA WW Guidebook (3rd edition) Entry number<br />
+&nbsp;<img src='/wheres-the-water/pics/ukrgb.ico'/> Online Guidebook Link<br />
+&nbsp;<img title='Access Issue Link' src='/wheres-the-water/pics/warning.png' /> Access Issue Links<br />
+</p>
+<table id="riverTable">
   <tr>
    <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->  
     <th onclick="sortTable(0)">Name</th>
     <th onclick="sortTable(1)">Level</th>
+    <th onclick="sortTable(2)">Grade</th>
+    <th>Links</th>
   </tr>
   <?php $riverSections->printTable(); ?>
 </table>
@@ -43,7 +69,7 @@ print "<p>Most recent SEPA reading: " . $riverSections->calculateMostRecentReadi
 <script>
 function sortTable(n) {
   var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-  table = document.getElementById("myTable");
+  table = document.getElementById("riverTable");
   switching = true;
   //Set the sorting direction to ascending:
   dir = "asc"; 

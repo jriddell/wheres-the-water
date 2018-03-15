@@ -21,6 +21,10 @@ call readFromJson() then $obj->riverSectionsData is an array of rivers with thei
         "high_value": "1",
         "very_high_value": "1.4",
         "huge_value": "1.8"
+        "grade": "2-3",
+        "guidebook_link": "http://www.ukriversguidebook.co.uk/foo",
+        "sca_guidebook_no": "123",
+        "access_issue": "http://www.canoescotland.org/news/river-clyde"
     }
 ]
 */
@@ -103,18 +107,25 @@ class RiverSections {
 
     /* HTML editable form for a river section */
     public function editRiverFormLine($riverSection) {
+        if (!array_key_exists('access_issue', $riverSection)) {
+            $riverSection['access_issue'] = '';
+        }
         $reply = "";
         $reply .= "<legend>" . $riverSection['name'] . "</legend>";
         $reply .= $this->editRiverFormInputItem("River/Section Name", "name", $riverSection['name']);
         $reply .= $this->editRiverFormInputItem("SEPA Gauge Code", "gauge_location_code", $riverSection['gauge_location_code'], "right");
-        $reply .= $this->editRiverFormInputItem("Longitude", "longitude", $riverSection['longitude']);
-        $reply .= $this->editRiverFormInputItem("Latitude", "latitude", $riverSection['latitude'], "right");
+        $reply .= $this->editRiverFormInputItem("Latitude", "latitude", $riverSection['latitude']);
+        $reply .= $this->editRiverFormInputItem("Longitude", "longitude", $riverSection['longitude'], "right");
         $reply .= $this->editRiverFormInputItem("Scrape", "scrape_value", $riverSection['scrape_value']);
         $reply .= $this->editRiverFormInputItem("Low", "low_value", $riverSection['low_value'], "right");
         $reply .= $this->editRiverFormInputItem("Medium", "medium_value", $riverSection['medium_value']);
         $reply .= $this->editRiverFormInputItem("High", "high_value", $riverSection['high_value'], "right");
         $reply .= $this->editRiverFormInputItem("Very High", "very_high_value", $riverSection['very_high_value']);
         $reply .= $this->editRiverFormInputItem("Huge", "huge_value", $riverSection['huge_value'], "right");
+        $reply .= $this->editRiverFormInputItem("Grade", "grade", $riverSection['grade']);
+        $reply .= $this->editRiverFormInputItem("Guidebook Link", "guidebook_link", $riverSection['guidebook_link'], "right");
+        $reply .= $this->editRiverFormInputItem("SCA Guidebook No", "sca_guidebook_no", $riverSection['sca_guidebook_no']);
+        $reply .= $this->editRiverFormInputItem("Acccess Issue Link", "access_issue", $riverSection['access_issue'], "right");
         return $reply;
     }
 
@@ -146,6 +157,10 @@ class RiverSections {
         $riverSection['high_value'] = $postData['high_value'];
         $riverSection['very_high_value'] = $postData['very_high_value'];
         $riverSection['huge_value'] = $postData['huge_value'];
+        $riverSection['grade'] = $postData['grade'];
+        $riverSection['guidebook_link'] = $postData['guidebook_link'];
+        $riverSection['sca_guidebook_no'] = $postData['sca_guidebook_no'];
+        $riverSection['access_issue'] = $postData['access_issue'];
         $this->riverSectionsData[$jsonid] = $riverSection;
         $this->writeToJson();
         return "Updated data for " . $riverSection['name'];
@@ -163,7 +178,7 @@ class RiverSections {
         $this->validateFloat("High Value", $postData['high_value']);
         $this->validateFloat("Very High Value", $postData['very_high_value']);
         $this->validateFloat("Huge Value", $postData['huge_value']);
-        if (!filter_var($postData['gauge_location_code'], FILTER_VALIDATE_INT)) {
+        if (filter_var($postData['gauge_location_code'], FILTER_VALIDATE_INT) === false) {
             throw new Exception("SEPA gauge code not an int");
         }
         $this->validateNotNegative("Latitude", $postData['latitude']);
@@ -187,8 +202,8 @@ class RiverSections {
 
     /* throw exception if it's not a float */
     private function validateFloat($name, $data) {
-        if (!filter_var($data, FILTER_VALIDATE_FLOAT)) {
-            throw new Exception("$name is not a float");
+        if (filter_var($data, FILTER_VALIDATE_FLOAT) === false && filter_var($data, FILTER_VALIDATE_INT) === false) {
+            throw new Exception("$name $data is not a number");
         }
     }
 
@@ -212,6 +227,10 @@ class RiverSections {
         $riverSection['high_value'] = "";
         $riverSection['very_high_value'] = "";
         $riverSection['huge_value'] = "";
+        $riverSection['grade'] = "";
+        $riverSection['guidebook_link'] = "";
+        $riverSection['sca_guidebook_no'] = "";
+        $riverSection['access_issue'] = "";
 
         $reply = "<legend>Add New River Section</legend>";
         $reply .= "<form action='river-section.php' method='post'>\n";
@@ -240,6 +259,10 @@ class RiverSections {
         $riverSection['high_value'] = $postData['high_value'];
         $riverSection['very_high_value'] = $postData['very_high_value'];
         $riverSection['huge_value'] = $postData['huge_value'];
+        $riverSection['grade'] = $postData['grade'];
+        $riverSection['guidebook_link'] = $postData['guidebook_link'];
+        $riverSection['sca_guidebook_no'] = $postData['sca_guidebook_no'];
+        $riverSection['access_issue'] = $postData['access_issue'];
         $this->riverSectionsData[] = $riverSection;
         $this->writeToJson();
         return "Added new river " . $riverSection['name'];
@@ -276,7 +299,12 @@ class RiverSections {
         $mostRecentLevel = 0;
         foreach($this->riverSectionsData as $jsonid => $riverSection) {
             $time = $grabSepaRivers->riversReadingsData[$riverSection['gauge_location_code']]['currentReadingTime'];
-            $timestamp = strtotime($time);
+            if (empty($time)) {
+                continue;
+            }
+            $time_explode = explode('/', $time); // need to swap date and month cos PHP likes US date format
+            $ustime = $time_explode[1] . '/' . $time_explode[0] . '/' . $time_explode[2];
+            $timestamp = strtotime($ustime);
             if ($timestamp > $mostRecentTimestamp) {
                 $mostRecentTimestamp = $timestamp;
                 $mostRecentTime = $time;
@@ -315,9 +343,39 @@ class RiverSections {
         } else {
             $waterLevelValue = $this->waterLevelValue($riverReadingData['currentReading'], $riverSection);
         };
+        
+        if ($riverSection['scrape_value'] == $riverSection['huge_value']) {
+            $waterLevelValue = "NEEDS_CALIBRATIONS";
+        }
+
+        $linkContent = "<a target='_blank' rel='noopener' href='http://apps.sepa.org.uk/waterlevels/default.aspx?sd=t&lc=".$riverSection['gauge_location_code']."'>SEPA graph</a>";
+        $linkContent .= "<a target='_blank' rel='noopener' href='https://www.openstreetmap.org/?mlat=".$riverSection['latitude']."&mlon=".$riverSection['longitude']."#map=12/"
+                        .$riverSection['latitude']."/".$riverSection['longitude']."'><img src='/wheres-the-water/pics/osm.png' width='22' height='22' /></a>";
+        $linkContent .= "<a target='_blank' rel='noopener' href='https://www.openstreetmap.org/?mlat=".$riverSection['latitude']."&mlon=".$riverSection['longitude']."#map=12/"
+                        .$riverSection['latitude']."/".$riverSection['longitude']."'><img src='/wheres-the-water/pics/osm.png' width='22' height='22' /></a>";
+        if (!empty($riverSection['guidebook_link'])) {
+            $linkContent .= "&nbsp; <a target='_blank' rel='noopener' href='".$riverSection['guidebook_link']."'><img src='/wheres-the-water/pics/ukrgb.ico'/></a>";
+        }
+        if (!empty($riverSection['sca_guidebook_no'])) {
+            $linkContent .= "&nbsp; <img title='SCA WW Guidebook number' src='/wheres-the-water/pics/sca.png' />".$riverSection['sca_guidebook_no'];
+        }
+        if (!empty($riverSection['access_issue'])) {
+            $linkContent .= "&nbsp; <a target='_blank' rel='noopener' href='".$riverSection['access_issue']."'><img title='Access Issue Link' src='/wheres-the-water/pics/warning.png' /></a>";
+        }
+        
+        //User friendly water level values
+        $waterLevelValueReadable = array('EMPTY'=>'Empty', 'SCRAPE'=>'Scrape', 'LOW'=>'Low', 'MEDIUM'=>'Medium', 'HIGH'=>'High', 'VERY_HIGH'=>'Very High', 'HUGE'=>'Huge', 'NO_GUAGE_DATA'=>'No Gauge Data', 'OLD_DATA'=>'Old Data', 'NEEDS_CALIBRATIONS'=>'Needs Calibrations');
+        
+        // Making the table orderable by water level
+        $waterLevelValueArray = array('NO_GUAGE_DATA', 'OLD_DATA', 'NEEDS_CALIBRATIONS', 'EMPTY', 'SCRAPE', 'LOW', 'MEDIUM', 'HIGH', 'VERY_HIGH', 'HUGE');
+        $waterLevelValueNumber = array_search($waterLevelValue, $waterLevelValueArray);
+
         // Create an array of info
         $infoArray = array('riverSection' => $riverSection['name'],
+            'riverGrade' => $riverSection['grade'],
             'waterLevelValue' => $waterLevelValue,
+            'waterLevelValueRead' => $waterLevelValueReadable[$waterLevelValue],
+            'waterLevelValueNumber' => $waterLevelValueNumber,
             'latitude' => $riverSection['latitude'],
             'longitude' => $riverSection['longitude'],
             'currentReadingTime' => $riverReadingData['currentReadingTime'],
@@ -330,7 +388,7 @@ class RiverSections {
             'veryHighValue' => $riverSection['very_high_value'],
             'hugeValue' => $riverSection['huge_value'],
             'gaugeLocationCode' => $riverSection['gauge_location_code'],
-            'link' => "<a target='_blank' rel='noopener' href='http://apps.sepa.org.uk/waterlevels/default.aspx?sd=t&lc=".$riverSection['gauge_location_code']."'>SEPA graph</a>"
+            'link' => $linkContent
         );
         
         switch ($infoArray['waterLevelValue']){
@@ -368,7 +426,7 @@ class RiverSections {
                 $color = '#FFFFFF';
         }
         
-        $displayedValues = array('riverSection', 'waterLevelValue', 'trend', 'link');
+        $displayedValues = array('riverSection', 'riverGrade', 'waterLevelValueRead', 'trend', 'link');
         
         // Populate the table
         foreach ($infoArray as $class => $val){
@@ -380,12 +438,11 @@ class RiverSections {
             }
             print "<td class='$class'$visibility>$val</td>\n";
         }
-        
         print "</tr>\n";
     }
 
     /* javascript for website */
-    public function outputJavascript() {
+    /*public function outputJavascript() {
         $grabSepaGauges = new GrabSepaGauges;
         $sepaGaugesData = $grabSepaGauges->sepaData();
         /*
@@ -394,7 +451,7 @@ class RiverSections {
         */
         //print json_encode($this->riverSectionsData, JSON_PRETTY_PRINT);
         //print json_encode($sepaGaugesData, JSON_PRETTY_PRINT);
-        $grabSepaRivers = new GrabSepaRivers();
+        /*$grabSepaRivers = new GrabSepaRivers();
         if (!$grabSepaRivers->readFromJson()) {
             print "</script>";
             print "<h1>Sorry no river reading data available, try again soon</h1>";
@@ -418,9 +475,12 @@ class RiverSections {
         } else {
             $waterLevelValue = $this->waterLevelValue($riverReadingData['currentReading'], $riverSection);
         }
+        if ($riverSection['scrape_value'] == $riverSection['huge_value']) {
+            $waterLevelValue = "NEEDS_CALIBRATIONS";
+        }
 
-        // FIXME this should be a template or something neater
-        // TODO this should create html objects
+     
+       
         
         print "var point$jsonid = new GLatLng(".$riverSection['latitude'].",".$riverSection['longitude'].");\n";
         print "markerOptions = { icon:${waterLevelValue}Icon };\n";
@@ -431,7 +491,7 @@ class RiverSections {
         print "});\n";
         print "GEvent.addListener(marker$jsonid, \"click\", function() {  showPicWin('http://apps.sepa.org.uk/waterlevels/default.aspx?sd=t&lc=".$riverSection['gauge_location_code']."') });\n";
         print "map.addOverlay(marker$jsonid);\n\n";
-    }
+    }*/
 
     // return the human readable water level (low, medium etc)
     //TODO will puting a space in very high break anything? yep, fix
