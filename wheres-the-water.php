@@ -44,6 +44,7 @@ $riverSections->readFromJson();
 #river-table td, #river-table th {
     padding: 0.5em;
     border-bottom: 1px solid #595959;
+    text-align: left;
 }
 
 #river-readings {
@@ -63,19 +64,26 @@ $riverSections->readFromJson();
         <p><?php print $riverSections->downloadTime() ?></p>
         <p>Most Recent SEPA Reading</p>
         <p><?php print $riverSections->calculateMostRecentReading() ?></p>
+        
+        <p>Symbol key:</p>
+        <p><img src='/wheres-the-water/pics/graph-icon.png' /> SEPA gauge graph</p>
+        <p><img src='/wheres-the-water/pics/phone-icon.png' /> SEPA gauge graph (mobile friendly)</p>
+        <p><img src='/wheres-the-water/pics/osm.png' /> Map link</p>
+        <p><img src='/wheres-the-water/pics/ukrgb.ico' /> UK Rivers Guide Book link</p>
+        <p><img src='/wheres-the-water/pics/sca.png' /> SCA guide book reference number</p>
+        <p><img src='/wheres-the-water/pics/warning.png' /> Access issue link</p>
             			
     	<a class='js-tab-top active' id='map-tab' href=''>Map view</a><a class='js-tab-top' id='table-tab' href=''>Table view</a>
+    	
+    	
         
         <div class='js-tab map-tab'><div id="map" style="height: 500px; width: 100%; "></div></div>
         
         <div id="river-table-div" class='js-tab table-tab' style="display: none">
-        	<p>Symbol key:</p>
-        	<p><img src='' /> SEPA gauge graph</p>
-        	<p><img src='' /> SEPA gauge graph (mobile friendly)</p>
-        	<p><img src='/wheres-the-water/pics/osm.png' /> Map link</p>
-        	<p><img src='/wheres-the-water/pics/ukrgb.ico' /> UK Rivers Guide Book link</p>
-        	<p><img src='/wheres-the-water/pics/sca.png' /> SCA guide book reference number</p>
-        	<p><img src='/wheres-the-water/pics/warning.png' /> Access issue link</p>
+        	
+        	
+        	<p>Search by river name: <input type="text" name="table-search" id="table-search"/></p>
+        	
         	
         	<table id="river-table">
         		<tr>
@@ -92,6 +100,7 @@ $riverSections->readFromJson();
     
 </div>
 <script>
+// ---------------------- Tab change -------------------------
 jQuery(document).ready( function(){
 	jQuery('.js-tab-top').on('click', function(e){
 		e.preventDefault();
@@ -115,8 +124,9 @@ jQuery(document).ready( function(){
 });
 </script>
 <script>
+// ----------------- Table sorting -----------------------------
 jQuery(document).ready( function(){
-	// Table ordering
+
 	// Initial order, alphabetical by river name
 	sortTable("river-table", "riverSectionRow", 0, true);
 
@@ -161,11 +171,32 @@ sortTable = function(tableName, rowClass, columnNumber, ascending) {
 };
 
 </script>
+<script>
+// ------------------ Table search ---------------------------------------------
+jQuery(document).ready( function(){
+	jQuery('#table-search').on('keyup', function(){
+		var searchString = jQuery(this).val().toLowerCase();
+		if (searchString != ''){
+			jQuery('.riverSectionRow').each( function(){
+				if (jQuery(this).find('.riverSection').text().toLowerCase().indexOf(searchString) >= 0){
+					jQuery(this).show();
+				}
+				else {
+					jQuery(this).hide();
+				}
+			});
+		}
+		else {
+			jQuery('.riverSectionRow').show();
+		}
+	});
+});
+</script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAr0GC5SjROQdQKwS78LI-abrgyULq-9g&callback=initMap"></script>
 
 
   <script>
-
+// -------------------- Map creation ---------------------------------------
   function initMap() {
 		
 		var map = new google.maps.Map(document.getElementById('map'), {
@@ -231,8 +262,9 @@ sortTable = function(tableName, rowClass, columnNumber, ascending) {
 			var veryHighValue = jQuery(this).find('.veryHighValue').text();
 			var hugeValue = jQuery(this).find('.hugeValue').text();
             var gaugeLocationCode = jQuery(this).find('.gaugeLocationCode').text();
+            var sectionLinks = jQuery(this).find('.link').html();
 
-            var boxColors = ['#f2f2f2', '#f2f2f2', '#f2f2f2', '#f2f2f2', '#f2f2f2', '#f2f2f2', '#f2f2f2'];
+            var boxColors = ['#e6e6e6', '#e6e6e6', '#e6e6e6', '#e6e6e6', '#e6e6e6', '#e6e6e6', '#e6e6e6'];
 
             switch(waterLevelValue) {
                 case 'HUGE':
@@ -292,9 +324,7 @@ sortTable = function(tableName, rowClass, columnNumber, ascending) {
 			'</table>';
             var contentString = "<div><p><b>" + riverSection + "</b></p><p>Level: " + currentReading + " (" + waterLevelValue + 
             ") <img src='" + iconBase + waterLevelValue + ext + "' /></p><p>Trend: " + trend + "</p><p>Last reading: " + currentReadingTime + 
-            "</p><p><a  target='_blank' rel='noopener' href='http://apps.sepa.org.uk/waterlevels/default.aspx?sd=t&lc=" + gaugeLocationCode + 
-            "'>Go to the SEPA gauge graph</a></p><p><a target='_blank' rel='noopener' href='http://riverlevels.mobi/SiteDetails/Index/" + gaugeLocationCode +
-            "'>Mobile friendly SEPA gauge graph</a></p>" + riverReadings + "</div>";
+            "</p><p>" + sectionLinks + "</p>" + riverReadings + "</div>";
 			
 			if (jQuery(this).is('.riverSectionRow:last')){
 				// If this is the last marker we need to know so we can add them to the map
