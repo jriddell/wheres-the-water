@@ -517,9 +517,10 @@
         "very_high_value": "1.1"
     },
     {
+        "access_issue": "",
         "gauge_location_code": "14956",
         "grade": "4",
-        "guidebook_link": "",
+        "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/north-east/river-blackwater",
         "high_value": "1.2",
         "huge_value": "1.7",
         "latitude": "56.6572",
