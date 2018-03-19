@@ -84,7 +84,10 @@ $riverSections->readFromJson();
     	
     	
         
-        <div class='js-tab map-tab'><div id="map" style="height: 500px; width: 100%; "></div></div>
+        <div class='js-tab map-tab'>
+        	<div id="map" style="height: 500px; width: 100%; "></div>
+        	
+        </div>
         
         <div id="river-table-div" class='js-tab table-tab' style="display: none">
         	
@@ -333,32 +336,32 @@ jQuery(document).ready( function(){
             var riverReadings = '<table style="background-color: #424242">' +
 				'<tbody>' +
 					'<tr>' +
-						'<td class="callibHeaders" style="background-color: #FF0000">Huge</td>' +
-						'<td class="callibVals" id="huge" style="background-color: ' + boxColors[0] + '">> ' + hugeValue + '</td>' +
+						'<td style="background-color: #FF0000">Huge</td>' +
+						'<td style="background-color: ' + boxColors[0] + '">> ' + hugeValue + '</td>' +
 					'</tr>' +
 					'<tr>' +
-						'<td class="callibHeaders" style="background-color: #FF6060">Very High</td>' +
-						'<td class="callibVals" id="veryHigh" style="background-color: ' + boxColors[1] + '">' + veryHighValue + ' - ' + hugeValue + '</td>' +
+						'<td style="background-color: #FF6060">Very High</td>' +
+						'<td style="background-color: ' + boxColors[1] + '">' + veryHighValue + ' - ' + hugeValue + '</td>' +
 					'</tr>' +
 					'<tr>' +
-						'<td class="callibHeaders" style="background-color: #FFC004">High</td>' +
-						'<td class="callibVals" id="high" style="background-color: ' + boxColors[2] + '">' + highValue + ' - ' + veryHighValue + '</td>' +
+						'<td style="background-color: #FFC004">High</td>' +
+						'<td style="background-color: ' + boxColors[2] + '">' + highValue + ' - ' + veryHighValue + '</td>' +
 					'</tr>' +
 					'<tr>' +
-						'<td class="callibHeaders" style="background-color: #FFFF33">Medium</td>' +
-						'<td class="callibVals" id="medium" style="background-color: ' + boxColors[3] + '">' + mediumValue + ' - ' + highValue + '</td>' +
+						'<td style="background-color: #FFFF33">Medium</td>' +
+						'<td style="background-color: ' + boxColors[3] + '">' + mediumValue + ' - ' + highValue + '</td>' +
 					'</tr>' +
 					'<tr>' +
-						'<td class="callibHeaders" style="background-color: #00FF00">Low</td>' +
-						'<td class="callibVals" id="low" style="background-color: ' + boxColors[4] + '">' + lowValue + ' - ' + mediumValue + '</td>' +
+						'<td style="background-color: #00FF00">Low</td>' +
+						'<td style="background-color: ' + boxColors[4] + '">' + lowValue + ' - ' + mediumValue + '</td>' +
 					'</tr>' +
 					'<tr>' +
-						'<td class="callibHeaders" style="background-color: #CCFFCC">Scrapeable</td>' +
-						'<td class="callibVals" id="justRunnable" style="background-color: ' + boxColors[5] + '">' + scrapeValue + ' - ' + lowValue + '</td>' +
+						'<td style="background-color: #CCFFCC">Scrapeable</td>' +
+						'<td style="background-color: ' + boxColors[5] + '">' + scrapeValue + ' - ' + lowValue + '</td>' +
 					'</tr>' +
 					'<tr>' +
-						'<td class="callibHeaders" style="background-color: #CCCCCC">Empty</td>' +
-						'<td class="callibVals" id="empty" style="background-color: ' + boxColors[6] + '">< ' + scrapeValue + '</td>' +
+						'<td style="background-color: #CCCCCC">Empty</td>' +
+						'<td style="background-color: ' + boxColors[6] + '">< ' + scrapeValue + '</td>' +
 					'</tr>' +
 				'</tbody>' +
 			'</table>';
@@ -386,6 +389,11 @@ jQuery(document).ready( function(){
 				infowindow.setContent(contentString);
 				infowindow.open(map, marker);
 				
+			});
+
+			marker.addListener('mouseover', function(){
+				showSectionInfo(riverSection, waterLevelValue, currentReadingTime, currentReading, trend);
+				showConversionInfo(waterLevelValue, scrapeValue, lowValue, mediumValue, highValue, veryHighValue, hugeValue);
 			});
 
 			
