@@ -240,7 +240,7 @@ jQuery(document).ready( function(){
 			center: {lat: 57.172, lng:  -4.6582}
 		});
 
-		var iconBase = 'pics/';
+		var iconBase = '/wheres-the-water/pics/';
 		var ext = '.png';
 		var icons = {
 			EMPTY: {
