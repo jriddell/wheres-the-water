@@ -1,4 +1,5 @@
 <?php
+
 require_once 'common.php';
 require_once 'config.php';
 heading();
@@ -7,186 +8,393 @@ $riverSections = new RiverSections;
 $riverSections->readFromJson();
 
 ?>
+<style>
+.js-tab-top {
+    padding: 1em;
+    border-radius: 10px 10px 0 0;
+    display: inline-block;
+    background-color: #e6f2ff;
+}
 
-<div style="float: right">
+.active, .js-tab {
+    background-color: #f2f2f2;
+}
 
-      <div class="content"> <table  cellspacing="0" class="riverlevels">
-			<tr>
-			  <td class="dataHeaders" colspan="2">Data Last Polled</td>
-			</tr>
-			<tr>
-			  <td class="dataValues" style="width:190px" colspan="2"><?php print $riverSections->downloadTime() ?></td>
-			</tr>
-			<tr>
-			  <td colspan="2" height="4"></td>
-          		</tr>
-			<tr>
-			  <td class="dataHeaders" colspan="2">Most Recent SEPA Reading</td>
-			  </tr>
-			 <tr>
-			  <td colspan="2" class="dataValues" style="width:190px" ><?php print $riverSections->calculateMostRecentReading() ?></td>
-			</tr>
-	</table>
-<div class="riverHeader" id="sectionname">&nbsp;</div>
+.js-tab {
+    padding: 1em;
+}
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+#river-table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #ffffff;
+}
 
-<div class="riverHeader" id="level">&nbsp;</div>
+#river-table td, #river-table th {
+    padding: 0.5em;
+    border-bottom: 1px solid #595959;
+    text-align: left;
+}
 
-<div class="riverHeader" id="lastUpdated">&nbsp;</div>
+#river-readings {
+    display: none;
+}
 
-<table>
-	<tbody>
-		<tr>
-			<td class="dataHeaders">Current Reading</td>
-			<td class="dataValues" id="currentReading">&nbsp;</td>
-		</tr>
-		<tr>
-			<td class="dataHeaders">Trend</td>
-			<td class="dataValues" id="trend">&nbsp;</td>
-		</tr>
-		<tr>
-			<td class="dataHeaders" colspan="2">Callibration used:</td>
-		</tr>
-		<tr>
-			<td align="right" colspan="2" bgcolor="#424242">
-			<table class="sub-table">
-				<tbody>
-					<tr>
-						<td class="callibHeaders" bgcolor="#FF0000">Huge</td>
-						<td class="callibVals" id="huge">0</td>
-					</tr>
-					<tr>
-						<td class="callibHeaders" bgcolor="#FF6060">Very High</td>
-						<td class="callibVals" id="veryHigh">0</td>
-					</tr>
-					<tr>
-						<td class="callibHeaders" bgcolor="#FFC004">High</td>
-						<td class="callibVals" id="high">0</td>
-					</tr>
-					<tr>
-						<td class="callibHeaders" bgcolor="#FFFF33">Medium</td>
-						<td class="callibVals" id="medium">0</td>
-					</tr>
-					<tr>
-						<td class="callibHeaders" bgcolor="#00FF00">Low</td>
-						<td class="callibVals" id="low">0</td>
-					</tr>
-					<tr>
-						<td class="callibHeaders" bgcolor="#CCFFCC">Scrapeable</td>
-						<td class="callibVals" id="justRunnable">0</td>
-					</tr>
-					<tr>
-						<td class="callibHeaders" bgcolor="#CCCCCC">Empty</td>
-						<td class="callibVals" id="empty">0</td>
-					</tr>
-				</tbody>
-			</table>
-			</td>
-		</tr>
-	</tbody>
-</table>
- </div>
+.clickable {
+    cursor: pointer;
+}
+</style>
+<div class='clearfix' style='width: 100%'>
+    
+     
 
- </div>
+    <div>
+    	<div class="clearfix">
+            <div style="float: left">
+                <p>Data Last Polled</p>
+                <p><?php print $riverSections->downloadTime() ?></p>
+                <p>Most Recent SEPA Reading</p>
+                <p><?php print $riverSections->calculateMostRecentReading() ?></p>
+                
+            </div>
+            <div style="float: right">
+                <p>Symbol key:</p>
+                <p><img src='/wheres-the-water/pics/graph-icon.png' /> SEPA gauge graph</p>
+                <p><img src='/wheres-the-water/pics/phone-icon.png' /> SEPA gauge graph (mobile friendly)</p>
+                <p><img src='/wheres-the-water/pics/osm.png' /> Map link</p>
+                <p><img src='/wheres-the-water/pics/22-apps-marble.png' /> Map link for mobile phones</p>
+                <p><img src='/wheres-the-water/pics/ukrgb.ico' /> UK Rivers Guide Book link</p>
+                <p><img src='/wheres-the-water/pics/sca.png' /> SCA guide book reference number</p>
+                <p><img src='/wheres-the-water/pics/warning.png' /> Access issue link</p>
+            </div>
+        </div>
+            			
+    	<a class='js-tab-top active' id='map-tab' href=''>Map view</a><a class='js-tab-top' id='table-tab' href=''>Table view</a>
+    	
+    	
+        
+        <div class='js-tab map-tab'>
+        	<div id="map" style="height: 500px; width: 100%; "></div>
+        	
+        </div>
+        
+        <div id="river-table-div" class='js-tab table-tab' style="display: none">
+        	
+        	
+        	<p>Search by river name: <input type="text" name="table-search" id="table-search"/></p>
+        	<p>Click on River Section, Grade or Level to sort the table</p>
+        	
+        	<table id="river-table">
+        		<tr>
+        			<th class='clickable' id='js-river-name'>River Section <span class='order-arrow'>&#x25BC;</span></th>
+        			<th class='clickable' id='js-river-grade'>Grade <span class='order-arrow'></span></th>
+        			<th class='clickable' id='js-river-level'>Level <span class='order-arrow'></span></th>
+        			<th>Trend</th>
+        			<th>Link</th>
+        		</tr>
+        		<?php $riverSections->printTable();?>
+        	</table>
+        </div>
+    </div>
+    
+</div>
+<script>
+// ---------------------- Tab change -------------------------
+jQuery(document).ready( function(){
+	jQuery('.js-tab-top').on('click', function(e){
+		e.preventDefault();
+		
+		//Check if this is the active tab
+		if (!jQuery(this).hasClass('active')){
+			var id = jQuery(this).attr('id');
+		 	var tab = jQuery('.' + id);
+			jQuery('.js-tab').hide();
+			tab.show();
+		
+			jQuery('.js-tab-top').removeClass('active');
+			
+			jQuery(this).addClass('active');
+			
+			
+			
+		}
+		
+	});
+});
+</script>
+<script>
+// ----------------- Table sorting -----------------------------
+jQuery(document).ready( function(){
 
-<div id="map" style="height: 500px; width: 100%; max-width: 800px; "></div>
+	var downArrow = "&#x25BC;";
+	var upArrow = "&#x25B2;";
+	// Initial order, alphabetical by river name
+	sortTable("river-table", "riverSectionRow", 0, true);
 
-<script language="javascript" src="http://maps.google.com/maps?file=api&amp;v=3&amp;sensor=false&amp;key=AIzaSyD-WF6gFouMUCMfdvzw2ajMeOrE-F6RlRY" ></script>
+	jQuery('#js-river-name').on('click', function(){
+		jQuery('.order-arrow').html('');
+		if (jQuery(this).hasClass('sort-asc')){
+			sortTable("river-table", "riverSectionRow", 0, false);
+			jQuery(this).removeClass('sort-asc');
+    		jQuery(this).find('.order-arrow').html(upArrow);
+		}
+		else {
+    		sortTable("river-table", "riverSectionRow", 0, true);
+    		jQuery(this).find('.order-arrow').html(downArrow);
+    		jQuery(this).addClass('sort-asc');
+		}
+	});
+	jQuery('#js-river-grade').on('click', function(){
+		jQuery('.order-arrow').html('');
+		if (jQuery(this).hasClass('sort-asc')){
+			sortTable("river-table", "riverSectionRow", 1, false);
+			jQuery(this).removeClass('sort-asc');
+			jQuery(this).find('.order-arrow').html(upArrow);
+		}
+		else {
+			sortTable("river-table", "riverSectionRow", 1, true);
+			jQuery(this).addClass('sort-asc');
+			jQuery(this).find('.order-arrow').html(downArrow);
+		}
+	});
+	jQuery('#js-river-level').on('click', function(){
+		jQuery('.order-arrow').html('');
+		if (jQuery(this).hasClass('sort-asc')){
+			sortTable("river-table", "riverSectionRow", 4, false);
+			jQuery(this).removeClass('sort-asc');
+			jQuery(this).find('.order-arrow').html(upArrow);
+			
+		}
+		else {
+			sortTable("river-table", "riverSectionRow", 4, true);
+			jQuery(this).addClass('sort-asc');
+			jQuery(this).find('.order-arrow').html(downArrow);
+		}
+	});
+});
+
+sortTable = function(tableName, rowClass, columnNumber, ascending) {
+    var row, cell, cellContent;
+    var comparisonRow, comparisonCell, comparisonContent;
+
+    $("#" + tableName + " tr." + rowClass).each(function(i) {
+        row = $("#" + tableName + " tr." + rowClass + ":eq(" + i + ")");
+        cell = $(row).find("td:eq(" + columnNumber + ")");
+        cellContent = $(cell).html();
+
+        $("#" + tableName + " tr." + rowClass).each(function(j) {
+            comparisonRow = $("#" + tableName + " tr." + rowClass + ":eq(" + j + ")");
+            comparisonCell = $(comparisonRow).find("td:eq(" + columnNumber + ")");
+            comparisonContent = $(comparisonCell).html();
+
+            if ( (ascending && cellContent < comparisonContent) || (!ascending && cellContent > comparisonContent) ) {
+                $(row).insertBefore(comparisonRow);
+                return false;
+            }
+        });
+    });
+};
+
+</script>
+<script>
+// ------------------ Table search ---------------------------------------------
+jQuery(document).ready( function(){
+	jQuery('#table-search').on('keyup', function(){
+		var searchString = jQuery(this).val().toLowerCase();
+		if (searchString != ''){
+			jQuery('.riverSectionRow').each( function(){
+				if (jQuery(this).find('.riverSection').text().toLowerCase().indexOf(searchString) >= 0){
+					jQuery(this).show();
+				}
+				else {
+					jQuery(this).hide();
+				}
+				if (searchString == 'nesk' && jQuery(this).find('.riverSection').text().toLowerCase().indexOf('north esk') >= 0){
+					jQuery(this).show();
+				}
+				if (searchString == 'the best river' && jQuery(this).find('.riverSection').text().toLowerCase().indexOf('tilt') >= 0){
+					jQuery(this).show();
+				}
+			});
+				
+		}
+		else {
+			jQuery('.riverSectionRow').show();
+		}
+	});
+});
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyzZ6XajHorMkz31HaS1dHRZW8Wdhlfm8&callback=initMap"></script>
 
 
   <script>
-  
-if(document.getElementById && document.createTextNode) {
-    window.onload=function(){
-        createMap();
-    }
-}
+// -------------------- Map creation ---------------------------------------
+  function initMap() {
+		
+		var map = new google.maps.Map(document.getElementById('map'), {
+			zoom: 7,
+			center: {lat: 57.172, lng:  -4.6582}
+		});
 
-    function createMap() {
-        if (GBrowserIsCompatible()) {
-            var map = new GMap2(document.getElementById("map"));
-            map.addMapType(G_PHYSICAL_MAP);
-            map.setCenter(new GLatLng(57.172,-4.6582), 7);
-     
-            // map.setMapType(G_HYBRID_MAP);
-            map.setMapType(G_NORMAL_MAP);
+		var iconBase = 'pics/';
+		var ext = '.png';
+		var icons = {
+			EMPTY: {
+				icon: iconBase + 'EMPTY' + ext,
+			},
+			SCRAPE: {
+				icon: iconBase + 'SCRAPE' + ext
+			},
+			LOW: {
+				icon: iconBase + 'LOW' + ext
+			},
+			MEDIUM: {
+				icon: iconBase + 'MEDIUM' + ext
+			},
+			HIGH: {
+				icon: iconBase + 'HIGH' + ext
+			},
+			VERY_HIGH: {
+				icon: iconBase + 'VERY_HIGH' + ext
+			},
+			HUGE: {
+				icon: iconBase + 'HUGE' + ext
+			},
+			OLD_DATA: {
+				icon: iconBase + 'OLD_DATA' + ext
+			},
+			NO_GUAGE_DATA: {
+				icon: iconBase + 'NO_GUAGE_DATA' + ext
+			},
+			CONVERSION_UNKNOWN: {
+				icon: iconBase + 'CONVERSION_UNKNOWN' + ext
+			},
+			NEEDS_CALIBRATIONS: {
+				icon: iconBase + 'NEEDS_CALIBRATIONS' + ext
+			}
+		};
+		var infowindow = new google.maps.InfoWindow();
+		
+		jQuery('.riverSectionRow').each(function() {
+			
+			var last = false;
 
-            var mapControl = new GMapTypeControl();
-            var mapTypesPosition = new GControlPosition(G_ANCHOR_BOTTOM_LEFT, new GSize(10,10));
-            map.addControl(mapControl, mapTypesPosition);
-            map.addControl(new GOverviewMapControl());
-            map.addControl(new GSmallZoomControl());
+			// River data for map marker creation
+			var riverSection = jQuery(this).find('.riverSection').text();
+			var waterLevelValue = jQuery(this).find('.waterLevelValue').text();
+			var latitude = jQuery(this).find('.latitude').text();
+			var longitude = jQuery(this).find('.longitude').text();
+			var currentReadingTime = jQuery(this).find('.currentReadingTime').text();
+			var currentReading = jQuery(this).find('.currentReading').text();
+			var trend = jQuery(this).find('.trend').text();
+			var scrapeValue = jQuery(this).find('.scrapeValue').text();
+			var lowValue = jQuery(this).find('.lowValue').text();
+			var mediumValue = jQuery(this).find('.mediumValue').text();
+			var highValue = jQuery(this).find('.highValue').text();
+			var veryHighValue = jQuery(this).find('.veryHighValue').text();
+			var hugeValue = jQuery(this).find('.hugeValue').text();
+            var gaugeLocationCode = jQuery(this).find('.gaugeLocationCode').text();
+            var sectionLinks = jQuery(this).find('.link').html();
 
-        var tinyIcon = new GIcon();
-        tinyIcon.image = "http://labs.google.com/ridefinder/images/mm_20_yellow.png";
-        tinyIcon.shadow = "http://labs.google.com/ridefinder/images/mm_20_shadow.png";
-        tinyIcon.iconSize = new GSize(12, 20);
-        tinyIcon.shadowSize = new GSize(22, 20);
-        tinyIcon.iconAnchor = new GPoint(6, 20);
+            var boxColors = ['#e6e6e6', '#e6e6e6', '#e6e6e6', '#e6e6e6', '#e6e6e6', '#e6e6e6', '#e6e6e6'];
 
-        var EMPTYIcon = new GIcon();
-        EMPTYIcon.image = "/wheres-the-water/pics/EMPTY.png";
-        EMPTYIcon.iconSize = new GSize(10,10);
-        EMPTYIcon.iconAnchor = new GPoint(5,5);
+            switch(waterLevelValue) {
+                case 'HUGE':
+                    boxColors[0] = '#ffffff';
+                    break;
+                case 'VERY_HIGH':
+                	boxColors[1] = '#ffffff';
+                    break;
+                case 'HIGH':
+                	boxColors[2] = '#ffffff';
+                    break;
+                case 'MEDIUM':
+                	boxColors[3] = '#ffffff';
+                    break;
+                case 'LOW':
+                	boxColors[4] = '#ffffff';
+                    break;
+                case 'SCRAPE':
+                	boxColors[5] = '#ffffff';
+                    break;
+                case 'EMPTY':
+                	boxColors[6] = '#ffffff';
+                    break;
+            }
 
-        var SCRAPEIcon = new GIcon();
-        SCRAPEIcon.image = "/wheres-the-water/pics/SCRAPE.png";
-        SCRAPEIcon.iconSize = new GSize(10,10);
-        SCRAPEIcon.iconAnchor = new GPoint(5,5);
+            var riverReadings = '<table style="background-color: #424242">' +
+				'<tbody>' +
+					'<tr>' +
+						'<td style="background-color: #FF0000">Huge</td>' +
+						'<td style="background-color: ' + boxColors[0] + '">> ' + hugeValue + '</td>' +
+					'</tr>' +
+					'<tr>' +
+						'<td style="background-color: #FF6060">Very High</td>' +
+						'<td style="background-color: ' + boxColors[1] + '">' + veryHighValue + ' - ' + hugeValue + '</td>' +
+					'</tr>' +
+					'<tr>' +
+						'<td style="background-color: #FFC004">High</td>' +
+						'<td style="background-color: ' + boxColors[2] + '">' + highValue + ' - ' + veryHighValue + '</td>' +
+					'</tr>' +
+					'<tr>' +
+						'<td style="background-color: #FFFF33">Medium</td>' +
+						'<td style="background-color: ' + boxColors[3] + '">' + mediumValue + ' - ' + highValue + '</td>' +
+					'</tr>' +
+					'<tr>' +
+						'<td style="background-color: #00FF00">Low</td>' +
+						'<td style="background-color: ' + boxColors[4] + '">' + lowValue + ' - ' + mediumValue + '</td>' +
+					'</tr>' +
+					'<tr>' +
+						'<td style="background-color: #CCFFCC">Scrapeable</td>' +
+						'<td style="background-color: ' + boxColors[5] + '">' + scrapeValue + ' - ' + lowValue + '</td>' +
+					'</tr>' +
+					'<tr>' +
+						'<td style="background-color: #CCCCCC">Empty</td>' +
+						'<td style="background-color: ' + boxColors[6] + '">< ' + scrapeValue + '</td>' +
+					'</tr>' +
+				'</tbody>' +
+			'</table>';
+            var contentString = "<div><p><b>" + riverSection + "</b></p><p>Level: " + currentReading + " (" + waterLevelValue + 
+            ") <img src='" + iconBase + waterLevelValue + ext + "' /></p><p>Trend: " + trend + "</p><p>Last reading: " + currentReadingTime + 
+            "</p><p>" + sectionLinks + "</p>" + riverReadings + "</div>";
+			
+			if (jQuery(this).is('.riverSectionRow:last')){
+				// If this is the last marker we need to know so we can add them to the map
+				last = true;
+			}
+			
+			position = new google.maps.LatLng(latitude, longitude);
+			        	
+			        	
+			var marker = new google.maps.Marker({
+			      position: position,
+			      map: map,
+			      icon: icons[waterLevelValue].icon,
+			      title: riverSection
+			});
 
-        var LOWIcon = new GIcon();
-        LOWIcon.image = "/wheres-the-water/pics/LOW.png";
-        LOWIcon.iconSize = new GSize(10,10);
-        LOWIcon.iconAnchor = new GPoint(5,5);    
+			        	
+			marker.addListener('click', function(){
+				infowindow.setContent(contentString);
+				infowindow.open(map, marker);
+				
+			});
 
-        var MEDIUMIcon = new GIcon();
-        MEDIUMIcon.image = "/wheres-the-water/pics/MEDIUM.png";
-        MEDIUMIcon.iconSize = new GSize(10,10);
-        MEDIUMIcon.iconAnchor = new GPoint(5,5);
-        
-        var HIGHIcon = new GIcon();
-        HIGHIcon.image = "/wheres-the-water/pics/HIGH.png";
-        HIGHIcon.iconSize = new GSize(10,10);
-        HIGHIcon.iconAnchor = new GPoint(5,5);
+			marker.addListener('mouseover', function(){
+				showSectionInfo(riverSection, waterLevelValue, currentReadingTime, currentReading, trend);
+				showConversionInfo(waterLevelValue, scrapeValue, lowValue, mediumValue, highValue, veryHighValue, hugeValue);
+			});
 
-        var VERY_HIGHIcon = new GIcon();
-        VERY_HIGHIcon.image = "/wheres-the-water/pics/VERY_HIGH.png";
-        VERY_HIGHIcon.iconSize = new GSize(10,10);
-        VERY_HIGHIcon.iconAnchor = new GPoint(5,5);
-        
-        var HUGEIcon = new GIcon();
-        HUGEIcon.image = "/wheres-the-water/pics/HUGE.png";
-        HUGEIcon.iconSize = new GSize(10,10);
-        HUGEIcon.iconAnchor = new GPoint(5,5);
+			
+		});
+		
+		
 
-        var OLD_DATAIcon = new GIcon();
-        OLD_DATAIcon.image = "/wheres-the-water/pics/OLD_DATA.png";
-        OLD_DATAIcon.iconSize = new GSize(10,10);
-        OLD_DATAIcon.iconAnchor = new GPoint(5,5);
-
-        var NO_GUAGE_DATAIcon = new GIcon();
-        NO_GUAGE_DATAIcon.image = "/wheres-the-water/pics/NO_GUAGE_DATA.png";
-        NO_GUAGE_DATAIcon.iconSize = new GSize(10,10);
-        NO_GUAGE_DATAIcon.iconAnchor = new GPoint(5,5);
-
-        var CONVERSION_UNKNOWNIcon = new GIcon();
-        CONVERSION_UNKNOWNIcon.image = "http://canoescotland.org/sites/all/themes/basestation_open/img/CONVERSION_UNKNOWN.gif";
-        CONVERSION_UNKNOWNIcon.iconSize = new GSize(10,10);
-        CONVERSION_UNKNOWNIcon.iconAnchor = new GPoint(5,5);
-                
-        var NEEDS_CALIBRATIONSIcon = new GIcon();
-        NEEDS_CALIBRATIONSIcon.image = "/wheres-the-water/pics/NEEDS_CALIBRATIONS.png";
-        NEEDS_CALIBRATIONSIcon.iconSize = new GSize(10,10);
-        NEEDS_CALIBRATIONSIcon.iconAnchor = new GPoint(5,5);
-
-    <?php  
-    $riverSections->outputJavascript();
-    ?>
-
-
-        } // if (GBrowserIsCompatible()) 
-      
-    } // function createMap()
+	}
 </script>
-
 <?php
 footer();

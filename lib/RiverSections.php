@@ -332,7 +332,7 @@ class RiverSections {
 
     private function trForRiver($jsonid, $riverSection, $sepaGaugesData, $riverReadingData) {
         $sepaGaugeLocationCode = $riverSection['gauge_location_code'];
-        print "<tr>\n";
+        print "<tr class='riverSectionRow'>\n";
         if (!array_key_exists($sepaGaugeLocationCode, $sepaGaugesData)) {
             //print "\n// Error: no SEPA reading for river " . $riverSection['name'] . "\n";
             //return;
@@ -343,33 +343,107 @@ class RiverSections {
         } else {
             $waterLevelValue = $this->waterLevelValue($riverReadingData['currentReading'], $riverSection);
         };
+        
         if ($riverSection['scrape_value'] == $riverSection['huge_value']) {
             $waterLevelValue = "NEEDS_CALIBRATIONS";
         }
-        $waterLevelValueArray = array('EMPTY', 'SCRAPE', 'LOW', 'MEDIUM', 'HIGH', 'VERY_HIGH', 'HUGE', 'NO_GUAGE_DATA', 'OLD_DATA', 'NEEDS_CALIBRATIONS');
-        $waterLevelValueNumber = array_search($waterLevelValue, $waterLevelValueArray);
-        $waterLevelValueReadable = array('EMPTY'=>'Empty', 'SCRAPE'=>'Scrape', 'LOW'=>'Low', 'MEDIUM'=>'Medium', 'HIGH'=>'High', 'VERY_HIGH'=>'Very High', 'HUGE'=>'Huge', 'NO_GUAGE_DATA'=>'No Gauge Data', 'OLD_DATA'=>'Old Data', 'NEEDS_CALIBRATIONS'=>'Needs Calibrations');
-        print "<td><span class='hide'>".$riverSection['name']."</span><a href='http://riverlevels.mobi/SiteDetails/Index/". $riverSection['gauge_location_code'] ."'>".$riverSection['name']."</a></td>\n";
-        print "<td><span class='hide'>$waterLevelValueNumber</span> <a href='http://riverlevels.mobi/SiteDetails/Index/". $riverSection['gauge_location_code'] ."'>".$waterLevelValueReadable[$waterLevelValue];
-        print " <img src='/wheres-the-water/pics/".$waterLevelValue.".png' height='10' width='10' /></a></td>\n";
-        print "<td>".$riverSection['grade']."</td>\n";
-        print "<td><a href='geo:".$riverSection['latitude'].",".$riverSection['longitude']."'><img src='/wheres-the-water/pics/22-apps-marble.png' width='22' height='22' /></a>";
-        print "<a href='https://www.openstreetmap.org/?mlat=".$riverSection['latitude']."&mlon=".$riverSection['longitude']."#map=12/".$riverSection['latitude']."/".$riverSection['longitude']."'><img src='/wheres-the-water/pics/osm.png' width='22' height='22' /></a>";
+
+        $linkContent = "<a target='_blank' rel='noopener' href='http://apps.sepa.org.uk/waterlevels/default.aspx?sd=t&lc=".$riverSection['gauge_location_code']."'><img src='/wheres-the-water/pics/graph-icon.png'/></a>";
+        $linkContent .= "&nbsp; <a target='_blank' rel='noopener' href='http://riverlevels.mobi/SiteDetails/Index/".$riverSection['gauge_location_code']."'><img src='/wheres-the-water/pics/phone-icon.png'/></a>";
+        $linkContent .= "&nbsp; <a target='_blank' rel='noopener' href='https://www.openstreetmap.org/?mlat=".$riverSection['latitude']."&mlon=".$riverSection['longitude']."#map=12/"
+                        .$riverSection['latitude']."/".$riverSection['longitude']."'><img src='/wheres-the-water/pics/osm.png' width='22' height='22' /></a>";
+        $linkContent .= "&nbsp; <a href='geo:".$riverSection['latitude'].",".$riverSection['longitude']."'><img src='/wheres-the-water/pics/22-apps-marble.png' width='22' height='22' /></a>";
+        
         if (!empty($riverSection['guidebook_link'])) {
-            print "&nbsp; <a href='".$riverSection['guidebook_link']."'><img src='/wheres-the-water/pics/ukrgb.ico'/></a>";
+            $linkContent .= "&nbsp; <a target='_blank' rel='noopener' href='".$riverSection['guidebook_link']."'><img src='/wheres-the-water/pics/ukrgb.ico'/></a>";
         }
         if (!empty($riverSection['sca_guidebook_no'])) {
-            print "&nbsp; <img title='SCA WW Guidebook number' src='/wheres-the-water/pics/sca.png' />".$riverSection['sca_guidebook_no'];
+            $linkContent .= "&nbsp; <img title='SCA WW Guidebook number' src='/wheres-the-water/pics/sca.png' />".$riverSection['sca_guidebook_no'];
         }
         if (!empty($riverSection['access_issue'])) {
-            print "&nbsp; <a href='".$riverSection['access_issue']."'><img title='Access Issue Link' src='/wheres-the-water/pics/warning.png' /></a>";
+            $linkContent .= "&nbsp; <a target='_blank' rel='noopener' href='".$riverSection['access_issue']."'><img title='Access Issue Link' src='/wheres-the-water/pics/warning.png' /></a>";
         }
-        print "</td>\n";
+        
+        //User friendly water level values
+        $waterLevelValueReadable = array('EMPTY'=>'Empty', 'SCRAPE'=>'Scrape', 'LOW'=>'Low', 'MEDIUM'=>'Medium', 'HIGH'=>'High', 'VERY_HIGH'=>'Very High', 'HUGE'=>'Huge', 'NO_GUAGE_DATA'=>'No Gauge Data', 'OLD_DATA'=>'Old Data', 'NEEDS_CALIBRATIONS'=>'Needs Calibrations');
+        
+        // Making the table orderable by water level
+        $waterLevelValueArray = array('NO_GUAGE_DATA', 'OLD_DATA', 'NEEDS_CALIBRATIONS', 'EMPTY', 'SCRAPE', 'LOW', 'MEDIUM', 'HIGH', 'VERY_HIGH', 'HUGE');
+        $waterLevelValueNumber = array_search($waterLevelValue, $waterLevelValueArray);
+
+        // Create an array of info
+        $infoArray = array('riverSection' => $riverSection['name'],
+            'riverGrade' => $riverSection['grade'],
+            'waterLevelValue' => $waterLevelValue,
+            'waterLevelValueRead' => $waterLevelValueReadable[$waterLevelValue],
+            'waterLevelValueNumber' => $waterLevelValueNumber,
+            'latitude' => $riverSection['latitude'],
+            'longitude' => $riverSection['longitude'],
+            'currentReadingTime' => $riverReadingData['currentReadingTime'],
+            'currentReading' => $riverReadingData['currentReading'],
+            'trend' => $riverReadingData['trend'],
+            'scrapeValue' => $riverSection['scrape_value'],
+            'lowValue' => $riverSection['low_value'],
+            'mediumValue' => $riverSection['medium_value'],
+            'highValue' => $riverSection['high_value'],
+            'veryHighValue' => $riverSection['very_high_value'],
+            'hugeValue' => $riverSection['huge_value'],
+            'gaugeLocationCode' => $riverSection['gauge_location_code'],
+            'link' => $linkContent
+        );
+        
+        switch ($infoArray['waterLevelValue']){
+            case 'EMPTY':
+                $color = '#CCCCCC';
+                break;
+            case 'SCRAPE':
+                $color = '#CCFFCC';
+                break;
+            case 'LOW':
+                $color = '#00FF00';
+                break;
+            case 'MEDIUM':
+                $color = '#FFFF33';
+                break;
+            case 'HIGH':
+                $color = '#FFC004';
+                break;
+            case 'VERY_HIGH':
+                $color = '#FF6060';
+                break;
+            case 'HUGE':
+                $color = '#FF0000';
+                break;
+            case 'OLD_DATA':
+                $color = '#FFFFFF';
+                break;
+            case 'NO_GUAGE_DATA':
+                $color = '#FFFFFF';
+                break;
+            case 'CONVERSION_UNKNOWN':
+                $color = '#FFFFFF';
+                break;
+            default:
+                $color = '#FFFFFF';
+        }
+        
+        $displayedValues = array('riverSection', 'riverGrade', 'waterLevelValueRead', 'trend', 'link');
+        
+        // Populate the table
+        foreach ($infoArray as $class => $val){
+            if (in_array($class, $displayedValues)){
+                $visibility = " style='background-color: $color' ";
+            }
+            else {
+                $visibility = " style='display: none' ";
+            }
+            print "<td class='$class'$visibility>$val</td>\n";
+        }
         print "</tr>\n";
     }
 
     /* javascript for website */
-    public function outputJavascript() {
+    /*public function outputJavascript() {
         $grabSepaGauges = new GrabSepaGauges;
         $sepaGaugesData = $grabSepaGauges->sepaData();
         /*
@@ -378,7 +452,7 @@ class RiverSections {
         */
         //print json_encode($this->riverSectionsData, JSON_PRETTY_PRINT);
         //print json_encode($sepaGaugesData, JSON_PRETTY_PRINT);
-        $grabSepaRivers = new GrabSepaRivers();
+        /*$grabSepaRivers = new GrabSepaRivers();
         if (!$grabSepaRivers->readFromJson()) {
             print "</script>";
             print "<h1>Sorry no river reading data available, try again soon</h1>";
@@ -406,7 +480,9 @@ class RiverSections {
             $waterLevelValue = "NEEDS_CALIBRATIONS";
         }
 
-        // FIXME this should be a template or something neater
+     
+       
+        
         print "var point$jsonid = new GLatLng(".$riverSection['latitude'].",".$riverSection['longitude'].");\n";
         print "markerOptions = { icon:${waterLevelValue}Icon };\n";
         print "var marker$jsonid = new GMarker(point$jsonid, markerOptions);\n";
@@ -416,9 +492,10 @@ class RiverSections {
         print "});\n";
         print "GEvent.addListener(marker$jsonid, \"click\", function() {  showPicWin('http://apps.sepa.org.uk/waterlevels/default.aspx?sd=t&lc=".$riverSection['gauge_location_code']."') });\n";
         print "map.addOverlay(marker$jsonid);\n\n";
-    }
+    }*/
 
     // return the human readable water level (low, medium etc)
+    //TODO will puting a space in very high break anything? yep, fix
     private function waterLevelValue($currentLevel, $riverSection) {
         if ($currentLevel < $riverSection['scrape_value']) {
             return "EMPTY";

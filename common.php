@@ -8,6 +8,9 @@ function heading() {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="mobile-web-app-capable" content="yes">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Water levels on popular kayaking rivers around Scotland" />
+    <meta name="og:description" content="Water levels on popular kayaking rivers around Scotland" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script type="text/javascript" src="http://canoescotland.org/sites/all/themes/basestation_open/js/riverLevels.js"></script>
 <script type="text/javascript" src="http://canoescotland.org/sites/all/themes/basestation_open/js/utilLib.js?"></script>
 <title>SCA Where's the Water</title>
