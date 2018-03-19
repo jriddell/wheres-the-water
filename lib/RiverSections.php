@@ -352,6 +352,7 @@ class RiverSections {
         $linkContent .= "&nbsp; <a target='_blank' rel='noopener' href='http://riverlevels.mobi/SiteDetails/Index/".$riverSection['gauge_location_code']."'><img src='/wheres-the-water/pics/phone-icon.png'/></a>";
         $linkContent .= "&nbsp; <a target='_blank' rel='noopener' href='https://www.openstreetmap.org/?mlat=".$riverSection['latitude']."&mlon=".$riverSection['longitude']."#map=12/"
                         .$riverSection['latitude']."/".$riverSection['longitude']."'><img src='/wheres-the-water/pics/osm.png' width='22' height='22' /></a>";
+        $linkContent .= "&nbsp; <a href='geo:".$riverSection['latitude'].",".$riverSection['longitude']."'><img src='/wheres-the-water/pics/22-apps-marble.png' width='22' height='22' /></a>";
         
         if (!empty($riverSection['guidebook_link'])) {
             $linkContent .= "&nbsp; <a target='_blank' rel='noopener' href='".$riverSection['guidebook_link']."'><img src='/wheres-the-water/pics/ukrgb.ico'/></a>";
