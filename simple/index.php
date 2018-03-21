@@ -47,6 +47,7 @@ print "<p>Readings downloaded from SEPA at " . $riverSections->downloadTime() . 
 print "<p>Most recent SEPA reading: " . $riverSections->calculateMostRecentReading() . "</p>\n";
 ?>
 
+<p><a href="/wtw/map">Simple Map View</a></p>
 
 <p>
 &nbsp;<img src='/wheres-the-water/pics/22-apps-marble.png' width='22' height='22' /> Map link for mobile phones<br />
@@ -65,6 +66,7 @@ print "<p>Most recent SEPA reading: " . $riverSections->calculateMostRecentReadi
         			<th class='clickable' id='js-river-grade'>Grade <span class='order-arrow'></span></th>
         			<th class='clickable' id='js-river-level'>Level <span class='order-arrow'></span></th>
         			<th>Trend</th>
+        			<th>Reading</th>
         			<th>Link</th>
         		</tr>
         		<?php $riverSections->printTable();?>

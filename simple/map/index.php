@@ -50,18 +50,19 @@ $riverSections->readFromJson();
 </style>
 <div class='clearfix' style='width: 100%'>
     
+<p><a href="/wtw">Simple List View</a></p>
      
 
     <div>
     	<div class="clearfix">
             <div style="float: left">
-                <p>Data Last Polled</p>
+                <h4>Data Last Polled</h4>
                 <p><?php print $riverSections->downloadTime() ?></p>
-                <p>Most Recent SEPA Reading</p>
+                <h4>Most Recent SEPA Reading</h4>
                 <p><?php print $riverSections->calculateMostRecentReading() ?></p>
                 
             </div>
-            <div style="float: right">
+            <div style="float: left">
                 <p>Symbol key:</p>
                 <p><img src='/wheres-the-water/pics/graph-icon.png' /> SEPA gauge graph</p>
                 <p><img src='/wheres-the-water/pics/phone-icon.png' /> SEPA gauge graph (mobile friendly)</p>
@@ -94,6 +95,7 @@ $riverSections->readFromJson();
         			<th class='clickable' id='js-river-grade'>Grade <span class='order-arrow'></span></th>
         			<th class='clickable' id='js-river-level'>Level <span class='order-arrow'></span></th>
         			<th>Trend</th>
+        			<th>Reading</th>
         			<th>Link</th>
         		</tr>
         		<?php $riverSections->printTable();?>

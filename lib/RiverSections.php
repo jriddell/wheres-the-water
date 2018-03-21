@@ -379,9 +379,9 @@ class RiverSections {
             'waterLevelValueNumber' => $waterLevelValueNumber,
             'latitude' => $riverSection['latitude'],
             'longitude' => $riverSection['longitude'],
+            'trend' => $riverReadingData['trend'],
             'currentReadingTime' => $riverReadingData['currentReadingTime'],
             'currentReading' => $riverReadingData['currentReading'],
-            'trend' => $riverReadingData['trend'],
             'scrapeValue' => $riverSection['scrape_value'],
             'lowValue' => $riverSection['low_value'],
             'mediumValue' => $riverSection['medium_value'],
@@ -427,7 +427,7 @@ class RiverSections {
                 $color = '#FFFFFF';
         }
         
-        $displayedValues = array('riverSection', 'riverGrade', 'waterLevelValueRead', 'trend', 'link');
+        $displayedValues = array('riverSection', 'riverGrade', 'waterLevelValueRead', 'trend', 'currentReading', 'link');
         
         // Populate the table
         foreach ($infoArray as $class => $val){
