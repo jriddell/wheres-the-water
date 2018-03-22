@@ -87,7 +87,7 @@ $riverSections->readFromJson();
         	
         	<p>Search by river name: <input type="text" name="table-search" id="table-search"/></p>
         	<p>Click on River Section, Grade or Level to sort the table</p>
-        	<p>Click on the Level to see the value in meters</p>
+        	<p>Click on the Level to see the gauge reading</p>
         	
         	<table id="river-table">
         		<tr>
