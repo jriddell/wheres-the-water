@@ -367,6 +367,9 @@ class RiverSections {
         //User friendly water level values
         $waterLevelValueReadable = array('EMPTY'=>'Empty', 'SCRAPE'=>'Scrape', 'LOW'=>'Low', 'MEDIUM'=>'Medium', 'HIGH'=>'High', 'VERY_HIGH'=>'Very High', 'HUGE'=>'Huge', 'NO_GUAGE_DATA'=>'No Gauge Data', 'OLD_DATA'=>'Old Data', 'NEEDS_CALIBRATIONS'=>'Needs Calibrations');
         
+        //Symbols for trends
+        $trends = array('RISING' => '&#x25B2;', 'FALLING' => '&#x25BC;', 'STABLE' => '<b>-</b>', '' => '-');
+        
         // Making the table orderable by water level
         $waterLevelValueArray = array('NO_GUAGE_DATA', 'OLD_DATA', 'NEEDS_CALIBRATIONS', 'EMPTY', 'SCRAPE', 'LOW', 'MEDIUM', 'HIGH', 'VERY_HIGH', 'HUGE');
         $waterLevelValueNumber = array_search($waterLevelValue, $waterLevelValueArray);
@@ -382,6 +385,7 @@ class RiverSections {
             'currentReadingTime' => $riverReadingData['currentReadingTime'],
             'currentReading' => $riverReadingData['currentReading'],
             'trend' => $riverReadingData['trend'],
+            'trendSymbol' => $trends[$riverReadingData['trend']],
             'scrapeValue' => $riverSection['scrape_value'],
             'lowValue' => $riverSection['low_value'],
             'mediumValue' => $riverSection['medium_value'],
@@ -427,12 +431,16 @@ class RiverSections {
                 $color = '#FFFFFF';
         }
         
-        $displayedValues = array('riverSection', 'riverGrade', 'waterLevelValueRead', 'trend', 'link');
+        $displayedValues = array('riverSection', 'riverGrade', 'waterLevelValueRead', 'trendSymbol', 'link');
         
         // Populate the table
         foreach ($infoArray as $class => $val){
             if (in_array($class, $displayedValues)){
                 $visibility = " style='background-color: $color' ";
+            }
+            else if ($class == 'currentReading'){
+                $visibility = " style='display: none; background-color: $color' ";
+                $class .= ' clickable';
             }
             else {
                 $visibility = " style='display: none' ";
