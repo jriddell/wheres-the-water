@@ -1,9 +1,9 @@
 <?php
 
-require_once 'common.php';
-require_once 'config.php';
+require_once '../../wheres-the-water/common.php';
+require_once '../../wheres-the-water/config.php';
 heading();
-require_once 'lib/RiverSections.php';
+require_once '../../wheres-the-water/lib/RiverSections.php';
 $riverSections = new RiverSections;
 $riverSections->readFromJson();
 
@@ -50,14 +50,15 @@ $riverSections->readFromJson();
 </style>
 <div class='clearfix' style='width: 100%'>
     
+<p><a href="/wtw">Simple List View</a></p>
      
 
     <div>
     	<div class="clearfix">
-            <div style="float: left; margin-right: 1em">
-                <p><b>Data Last Polled</b></p>
+            <div style="float: left">
+                <h4>Data Last Polled</h4>
                 <p><?php print $riverSections->downloadTime() ?></p>
-                <p><b>Most Recent SEPA Reading</b></p>
+                <h4>Most Recent SEPA Reading</h4>
                 <p><?php print $riverSections->calculateMostRecentReading() ?></p>
                 
             </div>
@@ -73,7 +74,7 @@ $riverSections->readFromJson();
             </div>
         </div>
             			
-    	<a class='js-tab-top active' id='map-tab' href=''>Map view</a><a class='js-tab-top' id='table-tab' href=''>Table view</a>
+    	<a class='js-tab-top active' id='map-tab' href=''>Map view</a><a class='js-tab-top' id='table-tab' href=''>List view</a>
     	
     	
         
@@ -87,14 +88,14 @@ $riverSections->readFromJson();
         	
         	<p>Search by river name: <input type="text" name="table-search" id="table-search"/></p>
         	<p>Click on River Section, Grade or Level to sort the table</p>
-        	<p>Click on the Level to see the value in meters</p>
         	
         	<table id="river-table">
         		<tr>
-        			<th class='clickable sort-asc' id='js-river-name'>River Section <span class='order-arrow'>&#x25BC;</span></th>
+        			<th class='clickable' id='js-river-name'>River Section <span class='order-arrow'>&#x25BC;</span></th>
         			<th class='clickable' id='js-river-grade'>Grade <span class='order-arrow'></span></th>
         			<th class='clickable' id='js-river-level'>Level <span class='order-arrow'></span></th>
         			<th>Trend</th>
+        			<th>Reading</th>
         			<th>Link</th>
         		</tr>
         		<?php $riverSections->printTable();?>
@@ -127,37 +128,6 @@ jQuery(document).ready( function(){
 	});
 });
 </script>
-<script>
-// ---------------- Shows the level value in m ----------------
-// ---------------- Updates the calibrations table when the row 
-// ---------------- is clicked or mouseovered -----------------
-jQuery(document).ready( function(){
-	jQuery('.waterLevelValueRead').on('click', function(){
-		jQuery(this).hide();
-		jQuery(this).siblings('.currentReading').show();
-	});
-	jQuery('.currentReading').on('click', function(){
-		jQuery(this).hide();
-		jQuery(this).siblings('.waterLevelValueRead').show();
-	});
-	jQuery('.riverSectionRow').on('mouseover click', function(){
-		var riverSection = jQuery(this).find('.riverSection').text();
-		var waterLevelValue = jQuery(this).find('.waterLevelValue').text();
-		var currentReadingTime = jQuery(this).find('.currentReadingTime').text();
-		var currentReading = jQuery(this).find('.currentReading').text();
-		var trend = jQuery(this).find('.trend').text();
-		var scrapeValue = jQuery(this).find('.scrapeValue').text();
-		var lowValue = jQuery(this).find('.lowValue').text();
-		var mediumValue = jQuery(this).find('.mediumValue').text();
-		var highValue = jQuery(this).find('.highValue').text();
-		var veryHighValue = jQuery(this).find('.veryHighValue').text();
-		var hugeValue = jQuery(this).find('.hugeValue').text();
-		showSectionInfo(riverSection, waterLevelValue, currentReadingTime, currentReading, trend);
-		showConversionInfo(waterLevelValue, scrapeValue, lowValue, mediumValue, highValue, veryHighValue, hugeValue);
-	});
-});
-</script>
-
 <script>
 // ----------------- Table sorting -----------------------------
 jQuery(document).ready( function(){
