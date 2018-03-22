@@ -379,9 +379,9 @@ class RiverSections {
             'waterLevelValueNumber' => $waterLevelValueNumber,
             'latitude' => $riverSection['latitude'],
             'longitude' => $riverSection['longitude'],
+            'trend' => $riverReadingData['trend'],
             'currentReadingTime' => $riverReadingData['currentReadingTime'],
             'currentReading' => $riverReadingData['currentReading'],
-            'trend' => $riverReadingData['trend'],
             'scrapeValue' => $riverSection['scrape_value'],
             'lowValue' => $riverSection['low_value'],
             'mediumValue' => $riverSection['medium_value'],
@@ -427,7 +427,7 @@ class RiverSections {
                 $color = '#FFFFFF';
         }
         
-        $displayedValues = array('riverSection', 'riverGrade', 'waterLevelValueRead', 'trend', 'link');
+        $displayedValues = array('riverSection', 'riverGrade', 'waterLevelValueRead', 'trend', 'currentReading', 'link');
         
         // Populate the table
         foreach ($infoArray as $class => $val){
@@ -443,7 +443,7 @@ class RiverSections {
     }
 
     /* javascript for website */
-    /*public function outputJavascript() {
+    public function outputJavascript() {
         $grabSepaGauges = new GrabSepaGauges;
         $sepaGaugesData = $grabSepaGauges->sepaData();
         /*
@@ -452,7 +452,7 @@ class RiverSections {
         */
         //print json_encode($this->riverSectionsData, JSON_PRETTY_PRINT);
         //print json_encode($sepaGaugesData, JSON_PRETTY_PRINT);
-        /*$grabSepaRivers = new GrabSepaRivers();
+        $grabSepaRivers = new GrabSepaRivers();
         if (!$grabSepaRivers->readFromJson()) {
             print "</script>";
             print "<h1>Sorry no river reading data available, try again soon</h1>";
@@ -480,9 +480,6 @@ class RiverSections {
             $waterLevelValue = "NEEDS_CALIBRATIONS";
         }
 
-     
-       
-        
         print "var point$jsonid = new GLatLng(".$riverSection['latitude'].",".$riverSection['longitude'].");\n";
         print "markerOptions = { icon:${waterLevelValue}Icon };\n";
         print "var marker$jsonid = new GMarker(point$jsonid, markerOptions);\n";
@@ -492,7 +489,7 @@ class RiverSections {
         print "});\n";
         print "GEvent.addListener(marker$jsonid, \"click\", function() {  showPicWin('http://apps.sepa.org.uk/waterlevels/default.aspx?sd=t&lc=".$riverSection['gauge_location_code']."') });\n";
         print "map.addOverlay(marker$jsonid);\n\n";
-    }*/
+    }
 
     // return the human readable water level (low, medium etc)
     //TODO will puting a space in very high break anything? yep, fix
