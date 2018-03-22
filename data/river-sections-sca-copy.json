@@ -971,5 +971,21 @@
         "sca_guidebook_no": "",
         "scrape_value": "0.9",
         "very_high_value": "2"
+    },
+    {
+        "access_issue": "",
+        "gauge_location_code": "356328",
+        "grade": "5",
+        "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/far-north/river-cuileig-upper",
+        "high_value": "1.28",
+        "huge_value": "1.32",
+        "latitude": "57.74466",
+        "longitude": "-5.05926",
+        "low_value": "1.25",
+        "medium_value": "1.27",
+        "name": "River Cuileig (Upper)",
+        "sca_guidebook_no": "",
+        "scrape_value": "1.22",
+        "very_high_value": "1.30"
     }
 ]
