@@ -52,8 +52,14 @@ class SepaRiverReadingHistory {
         /* Create and populate the pData object */
         $MyData = new pData();  
         $MyData->addPoints(array_values($this->riversReadingsHistory), "Gauge Reading");
+        $timeLabels = array();
+        foreach (array_keys($this->riversReadingsHistory) as $timestamp) {
+            $timeLabels[] = date('D d M Y H:i', $timestamp);
+        }
+        $MyData->addPoints($timeLabels, "Times");
+        $MyData->setAbscissa("Times");
         
-        $MyData->setSerieTicks("Probe 2",4);
+        //$MyData->setSerieTicks("Probe 2",4);
         $MyData->setAxisName(0,"Gauge Readings");
 
         /* Create the pChart object */
@@ -63,8 +69,8 @@ class SepaRiverReadingHistory {
         $myPicture->Antialias = FALSE;
 
         /* Add a border to the picture */
-        $myPicture->drawGradientArea(0,0,2000,1000,DIRECTION_VERTICAL,array("StartR"=>240,"StartG"=>240,"StartB"=>240,"EndR"=>180,"EndG"=>180,"EndB"=>180,"Alpha"=>100));
-        $myPicture->drawGradientArea(0,0,2000,1000,DIRECTION_HORIZONTAL,array("StartR"=>240,"StartG"=>240,"StartB"=>240,"EndR"=>180,"EndG"=>180,"EndB"=>180,"Alpha"=>20));
+        $myPicture->drawGradientArea(0,0,2000,1000,DIRECTION_VERTICAL,array("StartR"=>180,"StartG"=>180,"StartB"=>220,"EndR"=>180,"EndG"=>180,"EndB"=>180,"Alpha"=>100));
+        $myPicture->drawGradientArea(0,0,2000,1000,DIRECTION_HORIZONTAL,array("StartR"=>180,"StartG"=>180,"StartB"=>220,"EndR"=>180,"EndG"=>180,"EndB"=>180,"Alpha"=>20));
 
         /* Add a border to the picture */
         $myPicture->drawRectangle(0,0,1999,999,array("R"=>0,"G"=>0,"B"=>0));
@@ -77,10 +83,10 @@ class SepaRiverReadingHistory {
         $myPicture->setFontProperties(array("FontName"=>"/usr/share/fonts/truetype/ubuntu-font-family/UbuntuMono-R.ttf","FontSize"=>20));
 
         /* Define the chart area */
-        $myPicture->setGraphArea(60,40,1900,900);
+        $myPicture->setGraphArea(200,40,1990,750);
 
         /* Draw the scale */
-        $scaleSettings = array("XMargin"=>10,"YMargin"=>10,"Floating"=>TRUE,"GridR"=>200,"GridG"=>200,"GridB"=>200,"GridAlpha"=>100,"DrawSubTicks"=>TRUE,"CycleBackground"=>TRUE);
+        $scaleSettings = array("XMargin"=>10,"YMargin"=>10,"Floating"=>TRUE,"GridR"=>200,"GridG"=>200,"GridB"=>200,"GridAlpha"=>100,"DrawSubTicks"=>TRUE,"CycleBackground"=>TRUE, "LabelRotation"=>45, "LabelSkip" => 3);
         $myPicture->drawScale($scaleSettings);
 
         /* Write the chart legend */
@@ -101,9 +107,6 @@ class SepaRiverReadingHistory {
         $Threshold[] = array("Min"=>$river['high_value'],"Max"=>$river['very_high_value'],"R"=>255,"G"=>173,"B"=>0,"Alpha"=>100);
         $Threshold[] = array("Min"=>$river['very_high_value'],"Max"=>$river['huge_value'],"R"=>255,"G"=>157,"B"=>147,"Alpha"=>100);
         $Threshold[] = array("Min"=>$river['huge_value'],"Max"=>100,"R"=>255,"G"=>0,"B"=>10,"Alpha"=>100);
-        /*$Threshold[] = array("Min"=>0,"Max"=>5,"R"=>187,"G"=>220,"B"=>0,"Alpha"=>100);
-        $Threshold[] = array("Min"=>5,"Max"=>10,"R"=>240,"G"=>132,"B"=>20,"Alpha"=>100);
-        $Threshold[] = array("Min"=>10,"Max"=>20,"R"=>240,"G"=>91,"B"=>20,"Alpha"=>100);*/
         $myPicture->setShadow(TRUE,array("X"=>1,"Y"=>1,"R"=>0,"G"=>0,"B"=>0,"Alpha"=>20));
         $myPicture->drawAreaChart(array("Threshold"=>$Threshold));
 
