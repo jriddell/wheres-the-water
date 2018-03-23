@@ -71,7 +71,8 @@ class SepaRiverReadingHistory {
         /* Add a border to the picture */
         $myPicture->drawGradientArea(0,0,2000,1000,DIRECTION_VERTICAL,array("StartR"=>180,"StartG"=>180,"StartB"=>220,"EndR"=>180,"EndG"=>180,"EndB"=>180,"Alpha"=>100));
         $myPicture->drawGradientArea(0,0,2000,1000,DIRECTION_HORIZONTAL,array("StartR"=>180,"StartG"=>180,"StartB"=>220,"EndR"=>180,"EndG"=>180,"EndB"=>180,"Alpha"=>20));
-
+        $myPicture->drawFromPNG(1500,10,"/home/jr/www/andyjackson.edinburghlinux.co.uk/wheres-the-water/pics/scottish-canoe-association.png");
+        
         /* Add a border to the picture */
         $myPicture->drawRectangle(0,0,1999,999,array("R"=>0,"G"=>0,"B"=>0));
 
