@@ -13,9 +13,9 @@
 */
 
 /* pChart library inclusions */
-include("pchart/class/pData.class.php");
-include("pchart/class/pDraw.class.php");
-include("pchart/class/pImage.class.php"); 
+include(ROOT . "/pchart/class/pData.class.php");
+include(ROOT . "/pchart/class/pDraw.class.php");
+include(ROOT . "/pchart/class/pImage.class.php"); 
  
 class SepaRiverReadingHistory {
     const DATADIR = 'data';
