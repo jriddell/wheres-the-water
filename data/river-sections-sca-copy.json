@@ -1,5 +1,6 @@
 [
     {
+        "access_issue": "",
         "gauge_location_code": "234189",
         "grade": "3",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/west-highlands/river-garry",
@@ -9,7 +10,7 @@
         "longitude": "-4.84497",
         "low_value": "0.6",
         "medium_value": "0.8",
-        "name": "Garry",
+        "name": "Garry (Great Glen)",
         "sca_guidebook_no": "",
         "scrape_value": "0.4",
         "very_high_value": "1.4"
