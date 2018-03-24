@@ -63,35 +63,32 @@ class SepaRiverReadingHistory {
         $MyData->setAxisName(0,"Gauge Readings");
 
         /* Create the pChart object */
-        $myPicture = new pImage(2000,1000,$MyData);
+        $myPicture = new pImage(1200,700,$MyData);
 
         /* Turn of Antialiasing */
         $myPicture->Antialias = FALSE;
 
         /* Add a border to the picture */
-        $myPicture->drawGradientArea(0,0,2000,1000,DIRECTION_VERTICAL,array("StartR"=>180,"StartG"=>180,"StartB"=>220,"EndR"=>180,"EndG"=>180,"EndB"=>180,"Alpha"=>100));
-        $myPicture->drawGradientArea(0,0,2000,1000,DIRECTION_HORIZONTAL,array("StartR"=>180,"StartG"=>180,"StartB"=>220,"EndR"=>180,"EndG"=>180,"EndB"=>180,"Alpha"=>20));
-        $myPicture->drawFromPNG(1500,10,"/home/jr/www/andyjackson.edinburghlinux.co.uk/wheres-the-water/pics/scottish-canoe-association.png");
+        $myPicture->drawGradientArea(0,0,1200,700,DIRECTION_VERTICAL,array("StartR"=>180,"StartG"=>180,"StartB"=>220,"EndR"=>180,"EndG"=>180,"EndB"=>180,"Alpha"=>100));
+        $myPicture->drawGradientArea(0,0,1200,700,DIRECTION_HORIZONTAL,array("StartR"=>180,"StartG"=>180,"StartB"=>220,"EndR"=>180,"EndG"=>180,"EndB"=>180,"Alpha"=>20));
+        $myPicture->drawFromPNG(700,10,"/home/jr/www/andyjackson.edinburghlinux.co.uk/wheres-the-water/pics/scottish-canoe-association.png");
         
         /* Add a border to the picture */
-        $myPicture->drawRectangle(0,0,1999,999,array("R"=>0,"G"=>0,"B"=>0));
+        $myPicture->drawRectangle(0,0,1199,699,array("R"=>0,"G"=>0,"B"=>0));
 
         /* Write the chart title */ 
         $myPicture->setFontProperties(array("FontName"=>"/usr/share/fonts/truetype/ubuntu-font-family/UbuntuMono-R.ttf","FontSize"=>20));
         $myPicture->drawText(150,35,$river['name'],array("FontSize"=>20,"Align"=>TEXT_ALIGN_BOTTOMMIDDLE));
 
         /* Set the default font */
-        $myPicture->setFontProperties(array("FontName"=>"/usr/share/fonts/truetype/ubuntu-font-family/UbuntuMono-R.ttf","FontSize"=>20));
+        $myPicture->setFontProperties(array("FontName"=>"/usr/share/fonts/truetype/ubuntu-font-family/UbuntuMono-R.ttf","FontSize"=>15));
 
         /* Define the chart area */
-        $myPicture->setGraphArea(200,40,1990,750);
+        $myPicture->setGraphArea(150,40,1200,520);
 
         /* Draw the scale */
         $scaleSettings = array("XMargin"=>10,"YMargin"=>10,"Floating"=>TRUE,"GridR"=>200,"GridG"=>200,"GridB"=>200,"GridAlpha"=>100,"DrawSubTicks"=>TRUE,"CycleBackground"=>TRUE, "LabelRotation"=>45, "LabelSkip" => 3);
         $myPicture->drawScale($scaleSettings);
-
-        /* Write the chart legend */
-        $myPicture->drawLegend(640,20,array("Style"=>LEGEND_NOBORDER,"Mode"=>LEGEND_HORIZONTAL));
 
         /* Turn on Antialiasing */
         $myPicture->Antialias = TRUE;
@@ -125,7 +122,7 @@ class SepaRiverReadingHistory {
         $myPicture->drawThreshold($river['very_high_value'],array("WriteCaption"=>TRUE,"Caption"=>"Very High","Alpha"=>70,"Ticks"=>2,"R"=>0,"G"=>0,"B"=>255));
         $myPicture->drawThreshold($river['huge_value'],array("WriteCaption"=>TRUE,"Caption"=>"Huge","Alpha"=>70,"Ticks"=>2,"R"=>0,"G"=>0,"B"=>255));
 
-        /* Render the picture (choose the best way) */
+        /* Render the picture */
         $myPicture->render("pictures/".$this->gauge_id."-weekly.png"); 
     }
 }
