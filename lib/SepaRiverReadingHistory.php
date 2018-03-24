@@ -86,11 +86,11 @@ class SepaRiverReadingHistory {
         $myPicture->drawRectangle(0, 0, 1199, 699, array("R"=>0,"G"=>0,"B"=>0));
 
         /* Write the chart title */ 
-        $myPicture->setFontProperties(array("FontName"=>"pchart/UbuntuMono-R.ttf","FontSize"=>20));
+        $myPicture->setFontProperties(array("FontName"=>ROOT . "/pchart/UbuntuMono-R.ttf","FontSize"=>20));
         $myPicture->drawText(150,35,$river['name'] . "($chartName)",array("FontSize"=>20,"Align"=>TEXT_ALIGN_BOTTOMMIDDLE));
 
         /* Set the default font */
-        $myPicture->setFontProperties(array("FontName"=>"pchart/UbuntuMono-R.ttf","FontSize"=>15));
+        $myPicture->setFontProperties(array("FontName"=>ROOT . "/pchart/UbuntuMono-R.ttf","FontSize"=>15));
 
         /* Define the chart area */
         $myPicture->setGraphArea(150,40,1200,520);
