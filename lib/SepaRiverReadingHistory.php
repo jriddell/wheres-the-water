@@ -87,7 +87,7 @@ class SepaRiverReadingHistory {
 
         /* Write the chart title */ 
         $myPicture->setFontProperties(array("FontName"=>ROOT . "/pchart/UbuntuMono-R.ttf","FontSize"=>20));
-        $myPicture->drawText(150,35,$river['name'] . "($chartName)",array("FontSize"=>20,"Align"=>TEXT_ALIGN_BOTTOMMIDDLE));
+        $myPicture->drawText(150,35,$river['name'] . "($chartName)",array("FontSize"=>20,"Align"=>TEXT_ALIGN_TOPLEFT));
 
         /* Set the default font */
         $myPicture->setFontProperties(array("FontName"=>ROOT . "/pchart/UbuntuMono-R.ttf","FontSize"=>15));
