@@ -47,10 +47,11 @@ class SepaRiverReadingHistory {
         fclose($fp);
     }
 
-    public function writeChart($river) {
+    public function writeChart($river, $daysHistory, $chartName) {
         $this->readJson();
         /* Create and populate the pData object */
         $MyData = new pData();  
+        
         $MyData->addPoints(array_values($this->riversReadingsHistory), "Gauge Reading");
         $timeLabels = array();
         foreach (array_keys($this->riversReadingsHistory) as $timestamp) {
@@ -123,6 +124,6 @@ class SepaRiverReadingHistory {
         $myPicture->drawThreshold($river['huge_value'],array("WriteCaption"=>TRUE,"Caption"=>"Huge","Alpha"=>70,"Ticks"=>2,"R"=>0,"G"=>0,"B"=>255));
 
         /* Render the picture */
-        $myPicture->render("pictures/".$this->gauge_id."-weekly.png"); 
+        $myPicture->render("charts/".$this->gauge_id."-".$chartName.".png"); 
     }
 }
