@@ -67,12 +67,14 @@ $riverSections->readFromJson();
                 <p><img src='/wheres-the-water/pics/phone-icon.png' /> SEPA gauge graph (mobile friendly)</p>
                 <p><img src='/wheres-the-water/pics/osm.png' /> Map link</p>
                 <p><img src='/wheres-the-water/pics/22-apps-marble.png' /> Map link for mobile phones</p>
+                <p><img src='/wheres-the-water/pics/ukrgb.ico' /> UK Rivers Guide Book link</p>
             </div>
             <div style="margin-left: 1em; float: left">
-                <p>&nbsp;</p>
-                <p><img src='/wheres-the-water/pics/ukrgb.ico' /> UK Rivers Guide Book link</p>
                 <p><img src='/wheres-the-water/pics/sca.png' /> SCA guide book reference number</p>
                 <p><img src='/wheres-the-water/pics/warning.png' /> Access issue link</p>
+                <p><img title='Weekly Chart' src='/wheres-the-water/pics/chart.png' /> Weekly River Level Chart</p>
+                <p><img title='Monthly Chart' src='/wheres-the-water/pics/chart-monthly.png' /> Monthly River Level Chart</p>
+                <p><img title='Yearly Chart' src='/wheres-the-water/pics/chart-yearly.png' /> Yearly River Level Chart</p>
             </div>
         </div>
             			
@@ -393,9 +395,16 @@ jQuery(document).ready( function(){
 					'</tr>' +
 				'</tbody>' +
 			'</table>';
+			var riverFilename = riverSection.toLowerCase();
+			riverFilename = riverFilename.replace(/ /g, '-');
+			riverFilename = riverFilename.replace(/\(/g, '');
+			riverFilename = riverFilename.replace(/\)/g, '');
             var contentString = "<div><p><b>" + riverSection + "</b></p><p>Level: " + currentReading + " (" + waterLevelValue + 
             ") <img src='" + iconBase + waterLevelValue + ext + "' /></p><p>Trend: " + trend + "</p><p>Last reading: " + currentReadingTime + 
-            "</p><p>" + sectionLinks + "</p>" + riverReadings + "</div>";
+            "</p><p>" + sectionLinks + "</p>" + riverReadings + "<p>" +
+            "<a href='/wheres-the-water/charts/"+riverFilename+"-weekly.png'>"+
+            "<img src='/wheres-the-water/charts/"+riverFilename+"-weekly.png' width='250' /></a></p>" +
+            "</div>";
 			
 			if (jQuery(this).is('.riverSectionRow:last')){
 				// If this is the last marker we need to know so we can add them to the map

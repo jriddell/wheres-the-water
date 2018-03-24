@@ -396,9 +396,16 @@ jQuery(document).ready( function(){
 					'</tr>' +
 				'</tbody>' +
 			'</table>';
+			var riverFilename = riverSection.toLowerCase();
+			riverFilename = riverFilename.replace(/ /g, '-');
+			riverFilename = riverFilename.replace(/\(/g, '');
+			riverFilename = riverFilename.replace(/\)/g, '');
             var contentString = "<div><p><b>" + riverSection + "</b></p><p>Level: " + currentReading + " (" + waterLevelValue + 
             ") <img src='" + iconBase + waterLevelValue + ext + "' /></p><p>Trend: " + trend + "</p><p>Last reading: " + currentReadingTime + 
-            "</p><p>" + sectionLinks + "</p>" + riverReadings + "</div>";
+            "</p><p>" + sectionLinks + "</p>" + riverReadings + "<p>" +
+            "<a href='/wheres-the-water/charts/"+riverFilename+"-weekly.png'>"+
+            "<img src='/wheres-the-water/charts/"+riverFilename+"-weekly.png' width='250' /></a></p>" +
+            "</div>";
 			
 			if (jQuery(this).is('.riverSectionRow:last')){
 				// If this is the last marker we need to know so we can add them to the map
