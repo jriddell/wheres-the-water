@@ -52,11 +52,17 @@ class SepaRiverReadingHistory {
         /* Create and populate the pData object */
         $MyData = new pData();  
         
-        $MyData->addPoints(array_values($this->riversReadingsHistory), "Gauge Reading");
+        $timeHistory = $daysHistory * 24 * 60 * 60; // number of seconds of history we want
+        $readings = array();
         $timeLabels = array();
-        foreach (array_keys($this->riversReadingsHistory) as $timestamp) {
-            $timeLabels[] = date('D d M Y H:i', $timestamp);
-        }
+        foreach ($this->riversReadingsHistory as $timestamp => $reading) {
+            // only save readings from now to $daysHistory period
+            if (time() - $timestamp < $timeHistory) {
+                $readings[] = $reading;
+                $timeLabels[] = date('D d M Y H:i', $timestamp);
+            }
+        }        
+        $MyData->addPoints($readings, "Gauge Reading");
         $MyData->addPoints($timeLabels, "Times");
         $MyData->setAbscissa("Times");
         
@@ -70,16 +76,18 @@ class SepaRiverReadingHistory {
         $myPicture->Antialias = FALSE;
 
         /* Add a border to the picture */
-        $myPicture->drawGradientArea(0,0,1200,700,DIRECTION_VERTICAL,array("StartR"=>180,"StartG"=>180,"StartB"=>220,"EndR"=>180,"EndG"=>180,"EndB"=>180,"Alpha"=>100));
-        $myPicture->drawGradientArea(0,0,1200,700,DIRECTION_HORIZONTAL,array("StartR"=>180,"StartG"=>180,"StartB"=>220,"EndR"=>180,"EndG"=>180,"EndB"=>180,"Alpha"=>20));
-        $myPicture->drawFromPNG(700,10,"/home/jr/www/andyjackson.edinburghlinux.co.uk/wheres-the-water/pics/scottish-canoe-association.png");
+        $myPicture->drawGradientArea(0, 0, 1200, 700, DIRECTION_VERTICAL,
+                    array("StartR"=>180,"StartG"=>180,"StartB"=>220,"EndR"=>180,"EndG"=>180,"EndB"=>180,"Alpha"=>100));
+        $myPicture->drawGradientArea(0, 0, 1200, 700, DIRECTION_HORIZONTAL,
+                    array("StartR"=>180,"StartG"=>180,"StartB"=>220,"EndR"=>180,"EndG"=>180,"EndB"=>180,"Alpha"=>20));
+        $myPicture->drawFromPNG(700, 10, "../pics/scottish-canoe-association.png");
         
         /* Add a border to the picture */
-        $myPicture->drawRectangle(0,0,1199,699,array("R"=>0,"G"=>0,"B"=>0));
+        $myPicture->drawRectangle(0, 0, 1199, 699, array("R"=>0,"G"=>0,"B"=>0));
 
         /* Write the chart title */ 
         $myPicture->setFontProperties(array("FontName"=>"/usr/share/fonts/truetype/ubuntu-font-family/UbuntuMono-R.ttf","FontSize"=>20));
-        $myPicture->drawText(150,35,$river['name'],array("FontSize"=>20,"Align"=>TEXT_ALIGN_BOTTOMMIDDLE));
+        $myPicture->drawText(150,35,$river['name'] . "($chartName)",array("FontSize"=>20,"Align"=>TEXT_ALIGN_BOTTOMMIDDLE));
 
         /* Set the default font */
         $myPicture->setFontProperties(array("FontName"=>"/usr/share/fonts/truetype/ubuntu-font-family/UbuntuMono-R.ttf","FontSize"=>15));
@@ -88,7 +96,7 @@ class SepaRiverReadingHistory {
         $myPicture->setGraphArea(150,40,1200,520);
 
         /* Draw the scale */
-        $scaleSettings = array("XMargin"=>10,"YMargin"=>10,"Floating"=>TRUE,"GridR"=>200,"GridG"=>200,"GridB"=>200,"GridAlpha"=>100,"DrawSubTicks"=>TRUE,"CycleBackground"=>TRUE, "LabelRotation"=>45, "LabelSkip" => 3);
+        $scaleSettings = array("XMargin"=>10,"YMargin"=>10,"Floating"=>TRUE,"GridR"=>200,"GridG"=>200,"GridB"=>200,"GridAlpha"=>100,"DrawSubTicks"=>TRUE,"CycleBackground"=>TRUE, "LabelRotation"=>45, "LabelSkip" => count($timeLabels) / 10); // show 10 labels
         $myPicture->drawScale($scaleSettings);
 
         /* Turn on Antialiasing */
@@ -116,14 +124,18 @@ class SepaRiverReadingHistory {
         $myPicture->drawPlotChart(array("PlotBorder"=>TRUE,"BorderSize"=>1,"Surrounding"=>-255,"BorderAlpha"=>80));
 
         /* Write the thresholds */
-        $myPicture->drawThreshold($river['scrape_value'],array("WriteCaption"=>TRUE,"Caption"=>"Scrape","Alpha"=>70,"Ticks"=>2,"R"=>0,"G"=>0,"B"=>255));
-        $myPicture->drawThreshold($river['low_value'],array("WriteCaption"=>TRUE,"Caption"=>"Low","Alpha"=>70,"Ticks"=>2,"R"=>0,"G"=>0,"B"=>255));
-        $myPicture->drawThreshold($river['medium_value'],array("WriteCaption"=>TRUE,"Caption"=>"Medium","Alpha"=>70,"Ticks"=>2,"R"=>0,"G"=>0,"B"=>255));
-        $myPicture->drawThreshold($river['high_value'],array("WriteCaption"=>TRUE,"Caption"=>"High","Alpha"=>70,"Ticks"=>2,"R"=>0,"G"=>0,"B"=>255));
-        $myPicture->drawThreshold($river['very_high_value'],array("WriteCaption"=>TRUE,"Caption"=>"Very High","Alpha"=>70,"Ticks"=>2,"R"=>0,"G"=>0,"B"=>255));
-        $myPicture->drawThreshold($river['huge_value'],array("WriteCaption"=>TRUE,"Caption"=>"Huge","Alpha"=>70,"Ticks"=>2,"R"=>0,"G"=>0,"B"=>255));
+        $myPicture->drawThreshold($river['scrape_value'],array("WriteCaption"=>TRUE,"Caption"=>"Scrape ^","Alpha"=>70,"Ticks"=>2,"R"=>0,"G"=>0,"B"=>255));
+        $myPicture->drawThreshold($river['low_value'],array("WriteCaption"=>TRUE,"Caption"=>"Low ^","Alpha"=>70,"Ticks"=>2,"R"=>0,"G"=>0,"B"=>255));
+        $myPicture->drawThreshold($river['medium_value'],array("WriteCaption"=>TRUE,"Caption"=>"Medium ^","Alpha"=>70,"Ticks"=>2,"R"=>0,"G"=>0,"B"=>255));
+        $myPicture->drawThreshold($river['high_value'],array("WriteCaption"=>TRUE,"Caption"=>"High ^","Alpha"=>70,"Ticks"=>2,"R"=>0,"G"=>0,"B"=>255));
+        $myPicture->drawThreshold($river['very_high_value'],array("WriteCaption"=>TRUE,"Caption"=>"Very High ^","Alpha"=>70,"Ticks"=>2,"R"=>0,"G"=>0,"B"=>255));
+        $myPicture->drawThreshold($river['huge_value'],array("WriteCaption"=>TRUE,"Caption"=>"Huge ^","Alpha"=>70,"Ticks"=>2,"R"=>0,"G"=>0,"B"=>255));
 
         /* Render the picture */
-        $myPicture->render("charts/".$this->gauge_id."-".$chartName.".png"); 
+        $filename = strtolower($river['name']);
+        $filename = str_replace(" ", "-", $filename);
+        $filename = str_replace("(", "", $filename);
+        $filename = str_replace(")", "", $filename);
+        $myPicture->render("charts/".$filename."-".$chartName.".png"); 
     }
 }
