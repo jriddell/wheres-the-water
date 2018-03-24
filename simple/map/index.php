@@ -68,12 +68,14 @@ $riverSections->readFromJson();
                 <p><img src='/wheres-the-water/pics/phone-icon.png' /> SEPA gauge graph (mobile friendly)</p>
                 <p><img src='/wheres-the-water/pics/osm.png' /> Map link</p>
                 <p><img src='/wheres-the-water/pics/22-apps-marble.png' /> Map link for mobile phones</p>
+                <p><img src='/wheres-the-water/pics/ukrgb.ico' /> UK Rivers Guide Book link</p>
             </div>
             <div style="margin-left: 1em; float: left">
-                <p>&nbsp;</p>
-                <p><img src='/wheres-the-water/pics/ukrgb.ico' /> UK Rivers Guide Book link</p>
                 <p><img src='/wheres-the-water/pics/sca.png' /> SCA guide book reference number</p>
                 <p><img src='/wheres-the-water/pics/warning.png' /> Access issue link</p>
+                <p><img title='Weekly Chart' src='/wheres-the-water/pics/chart.png' /> Weekly River Level Chart</p>
+                <p><img title='Monthly Chart' src='/wheres-the-water/pics/chart-monthly.png' /> Monthly River Level Chart</p>
+                <p><img title='Yearly Chart' src='/wheres-the-water/pics/chart-yearly.png' /> Yearly River Level Chart</p>
             </div>
         </div>
             			

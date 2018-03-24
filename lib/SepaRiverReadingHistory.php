@@ -78,7 +78,7 @@ class SepaRiverReadingHistory {
                     array("StartR"=>180,"StartG"=>180,"StartB"=>220,"EndR"=>180,"EndG"=>180,"EndB"=>180,"Alpha"=>100));
         $myPicture->drawGradientArea(0, 0, 1200, 700, DIRECTION_HORIZONTAL,
                     array("StartR"=>180,"StartG"=>180,"StartB"=>220,"EndR"=>180,"EndG"=>180,"EndB"=>180,"Alpha"=>20));
-        $myPicture->drawFromPNG(700, 10, "../pics/scottish-canoe-association.png");
+        $myPicture->drawFromPNG(700, 10, "pics/scottish-canoe-association.png");
         
         /* Add a border to the picture */
         $myPicture->drawRectangle(0, 0, 1199, 699, array("R"=>0,"G"=>0,"B"=>0));
