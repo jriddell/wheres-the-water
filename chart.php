@@ -2,6 +2,7 @@
 
 include("lib/SepaRiverReadingHistory.php");
 include("lib/RiverSections.php");
+include("config.php");
 
 $riverSections = new RiverSections();
 $riverSections->readFromJson();

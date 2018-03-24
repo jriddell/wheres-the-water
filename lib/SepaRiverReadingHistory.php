@@ -12,8 +12,6 @@
  }
 */
 
-include("config.php");
-
 /* pChart library inclusions */
 include("pchart/class/pData.class.php");
 include("pchart/class/pDraw.class.php");
