@@ -1,5 +1,6 @@
 [
     {
+        "access_issue": "",
         "gauge_location_code": "234189",
         "grade": "3",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/west-highlands/river-garry",
@@ -9,7 +10,7 @@
         "longitude": "-4.84497",
         "low_value": "0.6",
         "medium_value": "0.8",
-        "name": "Garry",
+        "name": "Garry (Great Glen)",
         "sca_guidebook_no": "",
         "scrape_value": "0.4",
         "very_high_value": "1.4"
@@ -911,6 +912,7 @@
         "very_high_value": "1.5"
     },
     {
+        "access_issue": "-2.860145",
         "gauge_location_code": "14979",
         "grade": "1-2",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/southern-uplands/river-tweed-peel-to-fairnilee-farm",
@@ -920,8 +922,8 @@
         "longitude": "-3.1802468",
         "low_value": "10",
         "medium_value": "10",
-        "name": "Tweed (Peebles)",
-        "sca_guidebook_no": "",
+        "name": "Tweed (Fairnilee)",
+        "sca_guidebook_no": "55.583764",
         "scrape_value": "10",
         "very_high_value": "10"
     },
@@ -987,5 +989,21 @@
         "sca_guidebook_no": "",
         "scrape_value": "1.22",
         "very_high_value": "1.30"
+    },
+    {
+        "access_issue": "",
+        "gauge_location_code": "533744",
+        "grade": "2",
+        "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/southern-uplands/river-tweed-st.-boswells-to-kelso",
+        "high_value": "10",
+        "huge_value": "10",
+        "latitude": "55.586030",
+        "longitude": "-2.525340",
+        "low_value": "10",
+        "medium_value": "10",
+        "name": "Tweed (Makerstoun)",
+        "sca_guidebook_no": "",
+        "scrape_value": "10",
+        "very_high_value": "10"
     }
 ]

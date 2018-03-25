@@ -55,22 +55,27 @@ $riverSections->readFromJson();
 
     <div>
     	<div class="clearfix">
-            <div style="float: left">
-                <h4>Data Last Polled</h4>
+            <div style="float: left; margin-right: 1em">
+                <p><b>Data Last Polled</b></p>
                 <p><?php print $riverSections->downloadTime() ?></p>
-                <h4>Most Recent SEPA Reading</h4>
+                <p><b>Most Recent SEPA Reading</b></p>
                 <p><?php print $riverSections->calculateMostRecentReading() ?></p>
                 
             </div>
             <div style="float: left">
-                <p>Symbol key:</p>
+                <p><b>Symbols Key</b></p>
                 <p><img src='/wheres-the-water/pics/graph-icon.png' /> SEPA gauge graph</p>
                 <p><img src='/wheres-the-water/pics/phone-icon.png' /> SEPA gauge graph (mobile friendly)</p>
                 <p><img src='/wheres-the-water/pics/osm.png' /> Map link</p>
                 <p><img src='/wheres-the-water/pics/22-apps-marble.png' /> Map link for mobile phones</p>
                 <p><img src='/wheres-the-water/pics/ukrgb.ico' /> UK Rivers Guide Book link</p>
+            </div>
+            <div style="margin-left: 1em; float: left">
                 <p><img src='/wheres-the-water/pics/sca.png' /> SCA guide book reference number</p>
                 <p><img src='/wheres-the-water/pics/warning.png' /> Access issue link</p>
+                <p><img title='Weekly Chart' src='/wheres-the-water/pics/chart.png' /> Weekly River Level Chart</p>
+                <p><img title='Monthly Chart' src='/wheres-the-water/pics/chart-monthly.png' /> Monthly River Level Chart</p>
+                <p><img title='Yearly Chart' src='/wheres-the-water/pics/chart-yearly.png' /> Yearly River Level Chart</p>
             </div>
         </div>
             			
@@ -79,7 +84,7 @@ $riverSections->readFromJson();
     	
         
         <div class='js-tab map-tab'>
-        	<div id="map" style="height: 500px; width: 100%; "></div>
+        	<div id="map" style="height: 700px; width: 100%; "></div>
         	
         </div>
         
@@ -88,14 +93,14 @@ $riverSections->readFromJson();
         	
         	<p>Search by river name: <input type="text" name="table-search" id="table-search"/></p>
         	<p>Click on River Section, Grade or Level to sort the table</p>
+        	<p>Click on the Level to see the gauge reading</p>
         	
         	<table id="river-table">
         		<tr>
-        			<th class='clickable' id='js-river-name'>River Section <span class='order-arrow'>&#x25BC;</span></th>
+        			<th class='clickable sort-asc' id='js-river-name'>River Section <span class='order-arrow'>&#x25BC;</span></th>
         			<th class='clickable' id='js-river-grade'>Grade <span class='order-arrow'></span></th>
         			<th class='clickable' id='js-river-level'>Level <span class='order-arrow'></span></th>
         			<th>Trend</th>
-        			<th>Reading</th>
         			<th>Link</th>
         		</tr>
         		<?php $riverSections->printTable();?>
@@ -128,6 +133,37 @@ jQuery(document).ready( function(){
 	});
 });
 </script>
+<script>
+// ---------------- Shows the level value in m ----------------
+// ---------------- Updates the calibrations table when the row 
+// ---------------- is clicked or mouseovered -----------------
+jQuery(document).ready( function(){
+	jQuery('.waterLevelValueRead').on('click', function(){
+		jQuery(this).hide();
+		jQuery(this).siblings('.currentReading').show();
+	});
+	jQuery('.currentReading').on('click', function(){
+		jQuery(this).hide();
+		jQuery(this).siblings('.waterLevelValueRead').show();
+	});
+	jQuery('.riverSectionRow').on('mouseover click', function(){
+		var riverSection = jQuery(this).find('.riverSection').text();
+		var waterLevelValue = jQuery(this).find('.waterLevelValue').text();
+		var currentReadingTime = jQuery(this).find('.currentReadingTime').text();
+		var currentReading = jQuery(this).find('.currentReading').text();
+		var trend = jQuery(this).find('.trend').text();
+		var scrapeValue = jQuery(this).find('.scrapeValue').text();
+		var lowValue = jQuery(this).find('.lowValue').text();
+		var mediumValue = jQuery(this).find('.mediumValue').text();
+		var highValue = jQuery(this).find('.highValue').text();
+		var veryHighValue = jQuery(this).find('.veryHighValue').text();
+		var hugeValue = jQuery(this).find('.hugeValue').text();
+		showSectionInfo(riverSection, waterLevelValue, currentReadingTime, currentReading, trend);
+		showConversionInfo(waterLevelValue, scrapeValue, lowValue, mediumValue, highValue, veryHighValue, hugeValue);
+	});
+});
+</script>
+
 <script>
 // ----------------- Table sorting -----------------------------
 jQuery(document).ready( function(){
@@ -360,9 +396,16 @@ jQuery(document).ready( function(){
 					'</tr>' +
 				'</tbody>' +
 			'</table>';
+			var riverFilename = riverSection.toLowerCase();
+			riverFilename = riverFilename.replace(/ /g, '-');
+			riverFilename = riverFilename.replace(/\(/g, '');
+			riverFilename = riverFilename.replace(/\)/g, '');
             var contentString = "<div><p><b>" + riverSection + "</b></p><p>Level: " + currentReading + " (" + waterLevelValue + 
             ") <img src='" + iconBase + waterLevelValue + ext + "' /></p><p>Trend: " + trend + "</p><p>Last reading: " + currentReadingTime + 
-            "</p><p>" + sectionLinks + "</p>" + riverReadings + "</div>";
+            "</p><p>" + sectionLinks + "</p>" + riverReadings + "<p>" +
+            "<a href='/wheres-the-water/charts/"+riverFilename+"-weekly.png'>"+
+            "<img src='/wheres-the-water/charts/"+riverFilename+"-weekly.png' width='250' /></a></p>" +
+            "</div>";
 			
 			if (jQuery(this).is('.riverSectionRow:last')){
 				// If this is the last marker we need to know so we can add them to the map
