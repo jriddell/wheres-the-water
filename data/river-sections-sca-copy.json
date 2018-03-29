@@ -1005,5 +1005,21 @@
         "sca_guidebook_no": "",
         "scrape_value": "10",
         "very_high_value": "10"
+    },
+    {
+        "access_issue": "",
+        "gauge_location_code": "234209",
+        "grade": "4(5)",
+        "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/far-north/river-einig",
+        "high_value": "1",
+        "huge_value": "1.4",
+        "latitude": "57.939857",
+        "longitude": "-4.7957989",
+        "low_value": "0.6",
+        "medium_value": "0.8",
+        "name": "Einig",
+        "sca_guidebook_no": "",
+        "scrape_value": "0.5",
+        "very_high_value": "1.2"
     }
 ]
