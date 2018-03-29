@@ -44,13 +44,18 @@ $riverSections->readFromJson();
     display: none;
 }
 
-.clickable {
+.clickable, .js-link {
     cursor: pointer;
 }
+
+.js-link {
+    text-decoration: underline;
+    color: blue;
+}
+    
 </style>
 <div class='clearfix' style='width: 100%'>
     
-<p><a href="/wtw">Simple List View</a></p>
      
 
     <div>
@@ -64,15 +69,15 @@ $riverSections->readFromJson();
             </div>
             <div style="float: left">
                 <p><b>Symbols Key</b></p>
-                <p><img src='/wheres-the-water/pics/graph-icon.png' /> SEPA gauge graph</p>
-                <p><img src='/wheres-the-water/pics/phone-icon.png' /> SEPA gauge graph (mobile friendly)</p>
-                <p><img src='/wheres-the-water/pics/osm.png' /> Map link</p>
-                <p><img src='/wheres-the-water/pics/22-apps-marble.png' /> Map link for mobile phones</p>
-                <p><img src='/wheres-the-water/pics/ukrgb.ico' /> UK Rivers Guide Book link</p>
+                <p><img title='SEPA gauge link' src='/wheres-the-water/pics/graph-icon.png' /> SEPA gauge graph</p>
+                <p><img title='SEPA gauge link - mobile friendly' src='/wheres-the-water/pics/phone-icon.png' /> SEPA gauge graph (mobile friendly)</p>
+                <p><img title='Open maps link' src='/wheres-the-water/pics/osm.png' /> Map link</p>
+                <p><img title='Geo reference' src='/wheres-the-water/pics/22-apps-marble.png' /> Map link for mobile phones</p>
+                <p><img title='UKRGB link' src='/wheres-the-water/pics/ukrgb.ico' /> UK Rivers Guide Book link</p>
             </div>
             <div style="margin-left: 1em; float: left">
-                <p><img src='/wheres-the-water/pics/sca.png' /> SCA guide book reference number</p>
-                <p><img src='/wheres-the-water/pics/warning.png' /> Access issue link</p>
+                <p><img title='SCA guide book reference number' src='/wheres-the-water/pics/sca.png' /> SCA guide book reference number</p>
+                <p><img title='Access issue link' src='/wheres-the-water/pics/warning.png' /> Access issue link</p>
                 <p><img title='Weekly Chart' src='/wheres-the-water/pics/chart.png' /> Weekly River Level Chart</p>
                 <p><img title='Monthly Chart' src='/wheres-the-water/pics/chart-monthly.png' /> Monthly River Level Chart</p>
                 <p><img title='Yearly Chart' src='/wheres-the-water/pics/chart-yearly.png' /> Yearly River Level Chart</p>
@@ -135,8 +140,7 @@ jQuery(document).ready( function(){
 </script>
 <script>
 // ---------------- Shows the level value in m ----------------
-// ---------------- Updates the calibrations table when the row 
-// ---------------- is clicked or mouseovered -----------------
+
 jQuery(document).ready( function(){
 	jQuery('.waterLevelValueRead').on('click', function(){
 		jQuery(this).hide();
@@ -146,21 +150,7 @@ jQuery(document).ready( function(){
 		jQuery(this).hide();
 		jQuery(this).siblings('.waterLevelValueRead').show();
 	});
-	jQuery('.riverSectionRow').on('mouseover click', function(){
-		var riverSection = jQuery(this).find('.riverSection').text();
-		var waterLevelValue = jQuery(this).find('.waterLevelValue').text();
-		var currentReadingTime = jQuery(this).find('.currentReadingTime').text();
-		var currentReading = jQuery(this).find('.currentReading').text();
-		var trend = jQuery(this).find('.trend').text();
-		var scrapeValue = jQuery(this).find('.scrapeValue').text();
-		var lowValue = jQuery(this).find('.lowValue').text();
-		var mediumValue = jQuery(this).find('.mediumValue').text();
-		var highValue = jQuery(this).find('.highValue').text();
-		var veryHighValue = jQuery(this).find('.veryHighValue').text();
-		var hugeValue = jQuery(this).find('.hugeValue').text();
-		showSectionInfo(riverSection, waterLevelValue, currentReadingTime, currentReading, trend);
-		showConversionInfo(waterLevelValue, scrapeValue, lowValue, mediumValue, highValue, veryHighValue, hugeValue);
-	});
+	
 });
 </script>
 
@@ -364,7 +354,7 @@ jQuery(document).ready( function(){
                     break;
             }
 
-            var riverReadings = '<table style="background-color: #424242">' +
+            var riverReadings = '<table class="js-calib-table-content" style="background-color: #424242">' +
 				'<tbody>' +
 					'<tr>' +
 						'<td style="background-color: #FF0000">Huge</td>' +
@@ -402,9 +392,10 @@ jQuery(document).ready( function(){
 			riverFilename = riverFilename.replace(/\)/g, '');
             var contentString = "<div><p><b>" + riverSection + "</b></p><p>Level: " + currentReading + " (" + waterLevelValue + 
             ") <img src='" + iconBase + waterLevelValue + ext + "' /></p><p>Trend: " + trend + "</p><p>Last reading: " + currentReadingTime + 
-            "</p><p>" + sectionLinks + "</p>" + riverReadings + "<p>" +
+            "</p><p>" + sectionLinks + "</p>" +
+            "<p><span class='js-calib-table'>Calibrations</span> / <span class='js-chart link' style='text-decoration: underline; color: blue; cursor: pointer'>Level chart</span></p>" + riverReadings + "<p class='js-chart-content' style='display: none'>" +
             "<a href='/wheres-the-water/charts/"+riverFilename+"-weekly.png'>"+
-            "<img src='/wheres-the-water/charts/"+riverFilename+"-weekly.png' width='250' /></a></p>" +
+            "<img src='/wheres-the-water/charts/"+riverFilename+"-weekly.png' style='max-width: 250px; width: 100%' /></a></p>" +
             "</div>";
 			
 			if (jQuery(this).is('.riverSectionRow:last')){
@@ -425,13 +416,12 @@ jQuery(document).ready( function(){
 			        	
 			marker.addListener('click', function(){
 				infowindow.setContent(contentString);
+				
 				infowindow.open(map, marker);
 				
 			});
-
-			marker.addListener('mouseover', function(){
-				showSectionInfo(riverSection, waterLevelValue, currentReadingTime, currentReading, trend);
-				showConversionInfo(waterLevelValue, scrapeValue, lowValue, mediumValue, highValue, veryHighValue, hugeValue);
+			google.maps.event.addListener(map, "click", function(event) {
+			    infowindow.close();
 			});
 
 			
@@ -440,6 +430,24 @@ jQuery(document).ready( function(){
 		
 
 	}
+  jQuery(document).ready( function(){
+      jQuery('#map').on('click', '.js-calib-table', function(){
+    		if (!jQuery(this).hasClass('js-link')){
+    			jQuery('.js-chart-content').hide();
+    			jQuery('.js-calib-table-content').show();
+    			jQuery(this).attr('style', '');
+    			jQuery('.js-chart').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
+    		}
+    	});
+    	jQuery('#map').on('click', '.js-chart', function(){
+    		if (!jQuery(this).hasClass('js-link')){
+    			jQuery('.js-calib-table-content').hide();
+    			jQuery('.js-chart-content').show();
+    			jQuery(this).attr('style', '');
+    			jQuery('.js-calib-table').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
+    		}
+    	});
+  });
 </script>
 <?php
 footer();
