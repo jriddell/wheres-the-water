@@ -84,12 +84,12 @@ $riverSections->readFromJson();
             </div>
         </div>
             			
-    	<a class='js-tab-top active' id='map-tab' href=''>Map view</a><a class='js-tab-top' id='table-tab' href=''>Table view</a>
+    	<a class='js-tab-top active' id='map-tab' href=''>Map view</a><a class='js-tab-top' id='table-tab' href=''>List view</a>
     	
     	
         
         <div class='js-tab map-tab'>
-        	<div id="map" style="height: 500px; width: 100%; "></div>
+        	<div id="map" style="height: 700px; width: 100%; "></div>
         	
         </div>
         
