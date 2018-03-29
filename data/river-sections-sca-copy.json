@@ -610,19 +610,20 @@
         "very_high_value": "1"
     },
     {
+        "access_issue": "",
         "gauge_location_code": "234253",
         "grade": "3/4(4+)",
         "guidebook_link": "",
-        "high_value": "1.1",
-        "huge_value": "1.3",
+        "high_value": "1.5",
+        "huge_value": "2.5",
         "latitude": "58.158",
         "longitude": "-3.84727",
-        "low_value": "0.9",
-        "medium_value": "1",
+        "low_value": "1",
+        "medium_value": "1.2",
         "name": "Helmsdale",
         "sca_guidebook_no": "",
-        "scrape_value": "0.8",
-        "very_high_value": "1.2"
+        "scrape_value": "0.9",
+        "very_high_value": "2"
     },
     {
         "gauge_location_code": "234217",
