@@ -393,8 +393,8 @@ jQuery(document).ready( function(){
             var contentString = "<div><p><b>" + riverSection + "</b></p><p>Level: " + currentReading + " (" + waterLevelValue + 
             ") <img src='" + iconBase + waterLevelValue + ext + "' /></p><p>Trend: " + trend + "</p><p>Last reading: " + currentReadingTime + 
             "</p><p>" + sectionLinks + "</p>" +
-            "<p><span class='js-calib-table'>Calibrations</span> / <span class='js-chart link'>Level chart</span></p>" + riverReadings + "<p>" +
-            "<a class='js-chart-content' href='/wheres-the-water/charts/"+riverFilename+"-weekly.png'>"+
+            "<p><span class='js-calib-table'>Calibrations</span> / <span class='js-chart link' style='text-decoration: underline; color: blue; cursor: pointer'>Level chart</span></p>" + riverReadings + "<p class='js-chart-content' style='display: none'>" +
+            "<a href='/wheres-the-water/charts/"+riverFilename+"-weekly.png'>"+
             "<img src='/wheres-the-water/charts/"+riverFilename+"-weekly.png' style='max-width: 250px; width: 100%' /></a></p>" +
             "</div>";
 			
@@ -416,22 +416,7 @@ jQuery(document).ready( function(){
 			        	
 			marker.addListener('click', function(){
 				infowindow.setContent(contentString);
-				jQuery('.js-calib-table').addListener('click', function(){
-					if (!jQuery(this).hasClass('js-link')){
-						jQuery('.js-js-chart-content').hide();
-						jQuery('.js-calib-table-content').show();
-						jQuery(this).removeClass('js-link');
-						jQuery('.js-chart').addClass('js-link');
-					}
-				});
-				jQuery('.js-chart').addListener('click', function(){
-					if (!jQuery(this).hasClass('js-link')){
-						jQuery('.js-calib-table-content').hide();
-						jQuery('.js-js-chart-content').show();
-						jQuery(this).removeClass('js-link');
-						jQuery('.js-calib-table').addClass('js-link');
-					}
-				});
+				
 				infowindow.open(map, marker);
 				
 			});
@@ -442,6 +427,24 @@ jQuery(document).ready( function(){
 		
 
 	}
+  jQuery(document).ready( function(){
+      jQuery('#map').on('click', '.js-calib-table', function(){
+    		if (!jQuery(this).hasClass('js-link')){
+    			jQuery('.js-chart-content').hide();
+    			jQuery('.js-calib-table-content').show();
+    			jQuery(this).attr('style', '');
+    			jQuery('.js-chart').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
+    		}
+    	});
+    	jQuery('#map').on('click', '.js-chart', function(){
+    		if (!jQuery(this).hasClass('js-link')){
+    			jQuery('.js-calib-table-content').hide();
+    			jQuery('.js-chart-content').show();
+    			jQuery(this).attr('style', '');
+    			jQuery('.js-calib-table').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
+    		}
+    	});
+  });
 </script>
 <?php
 footer();
