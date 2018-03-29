@@ -113,13 +113,10 @@ class SepaRiverReadingHistory {
         $Threshold[] = array("Min"=>$river['very_high_value'],"Max"=>$river['huge_value'],"R"=>255,"G"=>157,"B"=>147,"Alpha"=>100);
         $Threshold[] = array("Min"=>$river['huge_value'],"Max"=>100,"R"=>255,"G"=>0,"B"=>10,"Alpha"=>100);
         $myPicture->setShadow(TRUE,array("X"=>1,"Y"=>1,"R"=>0,"G"=>0,"B"=>0,"Alpha"=>20));
-        $myPicture->drawAreaChart(array("Threshold"=>$Threshold));
-
-        /* Draw a line chart over */
-        $myPicture->drawLineChart(array("ForceColor"=>TRUE,"ForceR"=>0,"ForceG"=>0,"ForceB"=>0));
+        $myPicture->drawFilledSplineChart(array("Threshold"=>$Threshold));
 
         /* Draw a plot chart over */
-        $myPicture->drawPlotChart(array("PlotBorder"=>TRUE,"BorderSize"=>1,"Surrounding"=>-255,"BorderAlpha"=>80));
+        //$myPicture->drawPlotChart(array("PlotBorder"=>TRUE,"BorderSize"=>1,"Surrounding"=>-255,"BorderAlpha"=>80));
 
         /* Write the thresholds */
         $myPicture->drawThreshold($river['scrape_value'],array("WriteCaption"=>TRUE,"Caption"=>"Scrape ^","Alpha"=>70,"Ticks"=>2,"R"=>0,"G"=>0,"B"=>255));
