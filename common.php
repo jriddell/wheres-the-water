@@ -31,8 +31,7 @@ body {font-family: 'Ubuntu', sans-serif;}
 
 function footer() {
 ?>
-<p>SCA Where's the Water uses <a href="
-<a href="http://apps.sepa.org.uk/waterlevels/">water level data from SEPA</a>.</p>
+<p>SCA Where's the Water uses <a href="http://apps.sepa.org.uk/waterlevels/">water level data from SEPA</a>.</p>
 
 <p>Code written and maintained by <a href="http://www.edinburghlinux.co.uk">Jonathan Riddell</a>. <a href="https://github.com/jriddell/wheres-the-water">Code on GitHub</a>.  Please file <a href="https://github.com/jriddell/wheres-the-water/issues">bug reports and feature requests on GitHub</a>.</p>
 
