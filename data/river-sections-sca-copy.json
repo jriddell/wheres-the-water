@@ -1041,5 +1041,21 @@
         "sca_guidebook_no": "",
         "scrape_value": "0.7",
         "very_high_value": "1.4"
+    },
+    {
+        "access_issue": "",
+        "gauge_location_code": "133060",
+        "grade": "3 (3+)",
+        "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/southern-uplands/river-doon-ness-glen",
+        "high_value": "1.2",
+        "huge_value": "1.8",
+        "latitude": "55.284329",
+        "longitude": "-4.399698",
+        "low_value": "0.8",
+        "medium_value": "1.0",
+        "name": "Doon",
+        "sca_guidebook_no": "",
+        "scrape_value": "0.7",
+        "very_high_value": "1.5"
     }
 ]
