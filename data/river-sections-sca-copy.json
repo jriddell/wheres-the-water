@@ -537,19 +537,20 @@
         "very_high_value": "1.4"
     },
     {
-        "gauge_location_code": "133171",
+        "access_issue": "",
+        "gauge_location_code": "502896",
         "grade": "4(5)",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/southern-uplands/river-cree",
-        "high_value": "1.7",
-        "huge_value": "3.5",
+        "high_value": "1.0",
+        "huge_value": "1.2",
         "latitude": "55.0717",
         "longitude": "-4.63554",
-        "low_value": "1.35",
-        "medium_value": "1.4",
+        "low_value": "0.8",
+        "medium_value": "0.9",
         "name": "Cree",
         "sca_guidebook_no": "",
-        "scrape_value": "1",
-        "very_high_value": "2.2"
+        "scrape_value": "0.6",
+        "very_high_value": "1.1"
     },
     {
         "gauge_location_code": "116011",
