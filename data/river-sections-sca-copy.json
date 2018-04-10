@@ -65,16 +65,16 @@
         "gauge_location_code": "14985",
         "grade": "2/3",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/southern-uplands/river-yarrow-yarrowford-to-generals-brig",
-        "high_value": "1.6",
-        "huge_value": "3",
+        "high_value": "1.0",
+        "huge_value": "1.3",
         "latitude": "55.5514",
         "longitude": "-2.96803",
-        "low_value": "0.8",
-        "medium_value": "1.2",
+        "low_value": "0.5",
+        "medium_value": "0.8",
         "name": "Yarrow",
         "sca_guidebook_no": "",
         "scrape_value": "0.4",
-        "very_high_value": "2"
+        "very_high_value": "1"
     },
     {
         "gauge_location_code": "133111",
