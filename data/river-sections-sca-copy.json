@@ -1090,5 +1090,21 @@
         "sca_guidebook_no": "",
         "scrape_value": "0.4",
         "very_high_value": "1.2"
+    },
+    {
+        "access_issue": "",
+        "gauge_location_code": "15001",
+        "grade": "2 (3-)",
+        "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/southern-uplands/river-teviot-martins-bridge-to-riverside-caravan-park",
+        "high_value": "1.5",
+        "huge_value": "2.0",
+        "latitude": "55.411079",
+        "longitude": "-2.823299",
+        "low_value": "0.7",
+        "medium_value": "1",
+        "name": "Teviot",
+        "sca_guidebook_no": "",
+        "scrape_value": "0.4",
+        "very_high_value": "1.8"
     }
 ]
