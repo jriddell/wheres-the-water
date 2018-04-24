@@ -3,6 +3,7 @@
 * Copyright 2010 Scottish Canoe Association
 * Copyright 2017 Jonathan Riddell
 * May be copied under the GNU GPL version 3 or later only
+* The contents of data/ may be copied under the CC-BY-SA 4.0 licence https://creativecommons.org/licenses/by-sa/4.0
 
 wheres-the-water.php is body which can be viewed or used at http://canoescotland.org/where-go/wheres-water
 
