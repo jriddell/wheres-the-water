@@ -159,14 +159,17 @@
         });
         
         var riverSections;
-        var riverSectionsFile = $.getJSON("river-sections.json", function(data) {
-            riverSections = data;
+        var riverSectionsFile = $.getJSON("../data/river-sections.json", function(data) {
+                console.log('section' + data[0]['name']);
+                riverSections = data;
             }
         );
         var riverReadings;
-        var riverReadingsFile = $.getJSON("rivers-readings.json", function(data) {
-            riverReadings = data;
-        });
+        var riverReadingsFile = $.getJSON("../data/rivers-readings.json", function(data) {
+                console.log('river reading' + data["234189"]["currentReading"]);
+                riverReadings = data;
+            }
+        );
         var bothFiles = $.when(riverSectionsFile, riverReadingsFile);
 
         bothFiles.done(function () {
@@ -176,10 +179,15 @@
         
         function mergeRiverData() {
             for (i=0; i<riverSections.length; i++) {
-                var gauge_location_code = riverSections[i]['gauge_location_code']
-                riverSections[i]['currentReading'] = riverReadings[gauge_location_code]['currentReading'];
-                riverSections[i]['trend'] = riverReadings[gauge_location_code]['trend'];
-                riverSections[i]['currentReadingTime'] = riverReadings[gauge_location_code]['currentReadingTime'];
+                console.log('merging: ' + riverSections[i]['name']);
+                try {
+                    var gauge_location_code = riverSections[i]['gauge_location_code']
+                    riverSections[i]['currentReading'] = riverReadings[gauge_location_code]['currentReading'];
+                    riverSections[i]['trend'] = riverReadings[gauge_location_code]['trend'];
+                    riverSections[i]['currentReadingTime'] = riverReadings[gauge_location_code]['currentReadingTime'];
+                } catch(error) {
+                    console.log('Error on merging ' + riverSections[i]['name'] + ' ' + error.message);
+                }
             }
         }
         function addRiverMarkers() {
