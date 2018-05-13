@@ -246,10 +246,10 @@
                 var riverReadings = getRiverReadingsTable(riverSections[i], waterLevelValue);
                 var riverFilename = getRiverGraphFilename(riverSections[i]);
                 var icon = getWaterLevelIcon(riverSections[i]);
-                var contentString = "<div><p><b>" + riverSection + "</b></p><p>Level: " + currentReading + " (" +
+                var contentString = "<div><p><h4>" + riverSection + "</h4></p><p><b>Level</b>: " + currentReading + " (" +
                     tidyStatusString(waterLevelValue) + 
-                    ") <img src='" + iconBase + waterLevelValue + ext + "' /></p><p>Trend: " +
-                    tidyStatusString(trend) + "</p><p>Last reading: " + currentReadingTime +
+                    ") <img src='" + iconBase + waterLevelValue + ext + "' /></p><p><b>Trend</b>: " +
+                    tidyStatusString(trend) + "</p><p><b>Last reading</b>: " + currentReadingTime +
                     "</p><p>" + sectionLinks + "</p>" +
                     "<p><span class='js-calib-table'>Calibrations</span> / <span class='js-chart-weekly link' style='text-decoration: underline; color: blue; cursor: pointer'>Weekly Chart</span> / <span class='js-chart-monthly link' style='text-decoration: underline; color: blue; cursor: pointer'>Monthly Chart</span></p>" +
                     riverReadings + 
@@ -380,6 +380,7 @@
         }
 
         $(document).ready( function(){
+            $('#map').attr('style', 'height: ' + $(window).height() + 'px');
             $('#map').on('click', '.js-calib-table', function(){
                     if (!$(this).hasClass('js-link')){
                         $('.js-chart-weekly-content').hide();
