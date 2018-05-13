@@ -171,12 +171,12 @@
         });
         
         var riverSections;
-        var riverSectionsFile = $.getJSON("../data/river-sections.json", function(data) {
+        var riverSectionsFile = $.getJSON("/wheres-the-water/data/river-sections.json", function(data) {
                 riverSections = data;
             }
         );
         var riverReadings;
-        var riverReadingsFile = $.getJSON("../data/rivers-readings.json", function(data) {
+        var riverReadingsFile = $.getJSON("/wheres-the-water/data/rivers-readings.json", function(data) {
                 riverReadings = data;
             }
         );
@@ -199,6 +199,9 @@
                 }
             }
         }
+        function capitaliseFirstLetter(string) {
+            return string.charAt(0).toUpperCase() + string.slice(1);
+        }
         function addRiverMarkers() {
             for (i=0; i<riverSections.length; i++) {
                 var riverSection = riverSections[i]['name'];
@@ -212,8 +215,8 @@
                 var riverReadings = getRiverReadingsTable(riverSections[i], waterLevelValue);
                 var riverFilename = getRiverGraphFilename(riverSections[i]);
                 var icon = getWaterLevelIcon(riverSections[i]);
-                var contentString = "<div><p><b>" + riverSection + "</b></p><p>Level: " + currentReading + " (" + waterLevelValue + 
-                    ") <img src='" + iconBase + waterLevelValue + ext + "' /></p><p>Trend: " + trend + "</p><p>Last reading: " + currentReadingTime +
+                var contentString = "<div><p><b>" + riverSection + "</b></p><p>Level: " + currentReading + " (" + capitaliseFirstLetter(waterLevelValue.toLocaleLowerCase()) + 
+                    ") <img src='" + iconBase + waterLevelValue + ext + "' /></p><p>Trend: " + capitaliseFirstLetter(trend.toLocaleLowerCase()) + "</p><p>Last reading: " + currentReadingTime +
                     "</p><p>" + sectionLinks + "</p>" +
                     "<p><span class='js-calib-table'>Calibrations</span> / <span class='js-chart link' style='text-decoration: underline; color: blue; cursor: pointer'>Level chart</span></p>" + riverReadings + "<p class='js-chart-content' style='display: none'>" +
                     "<a href='/wheres-the-water/charts/"+riverFilename+"-weekly.png'>"+
