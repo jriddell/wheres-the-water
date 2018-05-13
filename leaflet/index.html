@@ -199,8 +199,29 @@
                 }
             }
         }
-        function capitaliseFirstLetter(string) {
-            return string.charAt(0).toUpperCase() + string.slice(1);
+        // make a string lower case starting with capital and replace _
+        function tidyStatusString(string) {
+            string = string.toLocaleLowerCase();
+            string = string.charAt(0).toUpperCase() + string.slice(1);
+            return string.replace('_', ' ');
+        }
+        function linksContent(riverSection) {
+            var linksContent = "<a target='_blank' rel='noopener' href='http://apps.sepa.org.uk/waterlevels/default.aspx?sd=t&lc="+riverSection['gauge_location_code']+"'><img title='SEPA gauge link' src='/wheres-the-water/pics/graph-icon.png'/></a>";
+            linksContent += "&nbsp; <a target='_blank' rel='noopener' href='http://riverlevels.mobi/SiteDetails/Index/"+riverSection['gauge_location_code']+"'><img  title='SEPA gauge link - mobile friendly' src='/wheres-the-water/pics/phone-icon.png'/></a>";
+            linksContent += "&nbsp; <a target='_blank' rel='noopener' href='https://www.openstreetmap.org/?mlat="+riverSection['latitude']+"&mlon="+riverSection['longitude']+"#map=12/"
+                            +riverSection['latitude']+"/"+riverSection['longitude']+"'><img title='Open maps Link' src='/wheres-the-water/pics/osm.png' width='22' height='22' /></a>";
+            linksContent += "&nbsp; <a href='geo:"+riverSection['latitude']+","+riverSection['longitude']+"'><img title='Geo reference' src='/wheres-the-water/pics/22-apps-marble.png' width='22' height='22' /></a>";
+
+            if (!'guidebook_link' in riverSection && !riverSection['guidebook_link'].length == 0) {
+                linksContent += "&nbsp; <a target='_blank' rel='noopener' href='"+riverSection['guidebook_link']+"'><img title='UKRGB Link' src='/wheres-the-water/pics/ukrgb.ico'/></a>";
+            }
+            if (!'sca_guidebook_no' in riverSection && !riverSection['sca_guidebook_no'].length == 0) {
+                linksContent += "&nbsp; <img title='SCA WW Guidebook number' src='/wheres-the-water/pics/sca.png' />"+riverSection['sca_guidebook_no'];
+            }
+            if (!'access_issue' in riverSection && !riverSection['access_issue'].length == 0) {
+                linksContent += "&nbsp; <a target='_blank' rel='noopener' href='"+riverSection['access_issue']+"'><img title='Access Issue Link' src='/wheres-the-water/pics/warning.png' /></a>";
+            }
+            return linksContent;
         }
         function addRiverMarkers() {
             for (i=0; i<riverSections.length; i++) {
@@ -211,12 +232,12 @@
                 var ext = '.png';
                 var trend = riverSections[i]['trend'];
                 var currentReadingTime = riverSections[i]['currentReadingTime'];
-                var sectionLinks = riverSections[i]['guidebook_link'];
+                var sectionLinks = linksContent(riverSections[i]);
                 var riverReadings = getRiverReadingsTable(riverSections[i], waterLevelValue);
                 var riverFilename = getRiverGraphFilename(riverSections[i]);
                 var icon = getWaterLevelIcon(riverSections[i]);
-                var contentString = "<div><p><b>" + riverSection + "</b></p><p>Level: " + currentReading + " (" + capitaliseFirstLetter(waterLevelValue.toLocaleLowerCase()) + 
-                    ") <img src='" + iconBase + waterLevelValue + ext + "' /></p><p>Trend: " + capitaliseFirstLetter(trend.toLocaleLowerCase()) + "</p><p>Last reading: " + currentReadingTime +
+                var contentString = "<div><p><b>" + riverSection + "</b></p><p>Level: " + currentReading + " (" + tidyStatusString(waterLevelValue) + 
+                    ") <img src='" + iconBase + waterLevelValue + ext + "' /></p><p>Trend: " + tidyStatusString(trend) + "</p><p>Last reading: " + currentReadingTime +
                     "</p><p>" + sectionLinks + "</p>" +
                     "<p><span class='js-calib-table'>Calibrations</span> / <span class='js-chart link' style='text-decoration: underline; color: blue; cursor: pointer'>Level chart</span></p>" + riverReadings + "<p class='js-chart-content' style='display: none'>" +
                     "<a href='/wheres-the-water/charts/"+riverFilename+"-weekly.png'>"+
