@@ -83,86 +83,88 @@
             zoom: 7
         });
         
-        osmLayer = L.tileLayer( 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        var osmLayer = L.tileLayer( 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo( map );
         
-        wwLayer = L.tileLayer( 'http://whitewater.quaker.eu.org/tiles.php/contours/{z}/{x}/{y}.png', {
+        /* Old and ugly but something to aim for in the future
+        var wwLayer = L.tileLayer( 'http://whitewater.quaker.eu.org/tiles.php/contours/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo( map );
+        */
         
         var baseMaps = {
-            "Open WhiteWater Map": wwLayer,
+            // "Open WhiteWater Map": wwLayer,
             "OpenStreetMap": osmLayer
         };
         L.control.layers(baseMaps).addTo(map);
 
         var emptyIcon = L.icon({
-            iconUrl: 'http://canoescotland.org/wheres-the-water/pics/EMPTY.png',
-            iconRetinaUrl: 'http://canoescotland.org/wheres-the-water/pics/EMPTY.png',
+            iconUrl: '/wheres-the-water/pics/EMPTY.png',
+            iconRetinaUrl: '/wheres-the-water/pics/EMPTY.png',
             iconSize: [10, 10],
             iconAnchor: [0, 0],
             popupAnchor: [5, -3]
         });
         var scrapeIcon = L.icon({
-            iconUrl: 'http://canoescotland.org/wheres-the-water/pics/SCRAPE.png',
+            iconUrl: '/wheres-the-water/pics/SCRAPE.png',
             iconRetinaUrl: 'http://canoescotland.org/wheres-the-water/pics/SCRAPE.png',
             iconSize: [10, 10],
             iconAnchor: [0, 0],
             popupAnchor: [5, -3]
         });
         var lowIcon = L.icon({
-            iconUrl: 'http://canoescotland.org/wheres-the-water/pics/LOW.png',
-            iconRetinaUrl: 'http://canoescotland.org/wheres-the-water/pics/LOW.png',
+            iconUrl: '/wheres-the-water/pics/LOW.png',
+            iconRetinaUrl: '/wheres-the-water/pics/LOW.png',
             iconSize: [10, 10],
             iconAnchor: [0, 0],
             popupAnchor: [5, -3]
         });
         var mediumIcon = L.icon({
-            iconUrl: 'http://canoescotland.org/wheres-the-water/pics/MEDIUM.png',
-            iconRetinaUrl: 'http://canoescotland.org/wheres-the-water/pics/MEDIUM.png',
+            iconUrl: '/wheres-the-water/pics/MEDIUM.png',
+            iconRetinaUrl: '/wheres-the-water/pics/MEDIUM.png',
             iconSize: [10, 10],
             iconAnchor: [0, 0],
             popupAnchor: [5, -3]
         });
         var highIcon = L.icon({
-            iconUrl: 'http://canoescotland.org/wheres-the-water/pics/HIGH.png',
-            iconRetinaUrl: 'http://canoescotland.org/wheres-the-water/pics/HIGH.png',
+            iconUrl: '/wheres-the-water/pics/HIGH.png',
+            iconRetinaUrl: '/wheres-the-water/pics/HIGH.png',
             iconSize: [10, 10],
             iconAnchor: [0, 0],
             popupAnchor: [5, -3]
         });
         var veryHighIcon = L.icon({
-            iconUrl: 'http://canoescotland.org/wheres-the-water/pics/VERY_HIGH.png',
-            iconRetinaUrl: 'http://canoescotland.org/wheres-the-water/pics/VERY_HIGH.png',
+            iconUrl: '/wheres-the-water/pics/VERY_HIGH.png',
+            iconRetinaUrl: '/wheres-the-water/pics/VERY_HIGH.png',
             iconSize: [10, 10],
             iconAnchor: [0, 0],
             popupAnchor: [5, -3]
         });
         var hugeIcon = L.icon({
-            iconUrl: 'http://canoescotland.org/wheres-the-water/pics/HUGE.png',
-            iconRetinaUrl: 'http://canoescotland.org/wheres-the-water/pics/HUGE.png',
+            iconUrl: '/wheres-the-water/pics/HUGE.png',
+            iconRetinaUrl: '/wheres-the-water/pics/HUGE.png',
             iconSize: [10, 10],
             iconAnchor: [0, 0],
             popupAnchor: [5, -3]
         });
         var oldDataIcon = L.icon({
-            iconUrl: 'http://canoescotland.org/wheres-the-water/pics/OLD_DATA.png',
-            iconRetinaUrl: 'http://canoescotland.org/wheres-the-water/pics/OLD_DATA.png',
+            iconUrl: '/wheres-the-water/pics/OLD_DATA.png',
+            iconRetinaUrl: '/wheres-the-water/pics/OLD_DATA.png',
             iconSize: [10, 10],
             iconAnchor: [0, 0],
             popupAnchor: [5, -3]
         });
         var noDataIcon = L.icon({
-            iconUrl: 'http://canoescotland.org/wheres-the-water/pics/NO_GUAGE_DATA.png',
-            iconRetinaUrl: 'http://canoescotland.org/wheres-the-water/pics/NO_GUAGE_DATA.png',
+            iconUrl: '/wheres-the-water/pics/NO_GUAGE_DATA.png',
+            iconRetinaUrl: '/wheres-the-water/pics/NO_GUAGE_DATA.png',
             iconSize: [10, 10],
             iconAnchor: [0, 0],
             popupAnchor: [5, -3]
         });
         var needsCalibrationsIcon = L.icon({
-            iconUrl: 'http://canoescotland.org/wheres-the-water/pics/NEEDS_CALIBRATIONS.png',
-            iconRetinaUrl: 'http://canoescotland.org/wheres-the-water/pics/NEEDS_CALIBRATIONS.png',
+            iconUrl: '/wheres-the-water/pics/NEEDS_CALIBRATIONS.png',
+            iconRetinaUrl: '/wheres-the-water/pics/NEEDS_CALIBRATIONS.png',
             iconSize: [10, 10],
             iconAnchor: [0, 0],
             popupAnchor: [5, -3]
@@ -170,13 +172,11 @@
         
         var riverSections;
         var riverSectionsFile = $.getJSON("../data/river-sections.json", function(data) {
-                console.log('section' + data[0]['name']);
                 riverSections = data;
             }
         );
         var riverReadings;
         var riverReadingsFile = $.getJSON("../data/rivers-readings.json", function(data) {
-                console.log('river reading' + data["234189"]["currentReading"]);
                 riverReadings = data;
             }
         );
@@ -189,7 +189,6 @@
         
         function mergeRiverData() {
             for (i=0; i<riverSections.length; i++) {
-                console.log('merging: ' + riverSections[i]['name']);
                 try {
                     var gauge_location_code = riverSections[i]['gauge_location_code']
                     riverSections[i]['currentReading'] = riverReadings[gauge_location_code]['currentReading'];
@@ -201,7 +200,6 @@
             }
         }
         function addRiverMarkers() {
-            console.log('TODO addRiverMarkers()');
             for (i=0; i<riverSections.length; i++) {
                 var riverSection = riverSections[i]['name'];
                 var currentReading = riverSections[i]['currentReading'];
@@ -226,7 +224,13 @@
         }
         function getWaterLevelValue(riverSection) {
             currentReading = riverSection['currentReading'];
-            if (currentReading < riverSection['scrape_value']) {
+            if (currentReading == -1) {
+                return "NO_GUAGE_DATA";
+            } else if (currentReading == 0) {
+                return "OLD_DATA";
+            } else if (riverSection['scrape_value'] == riverSection['huge_value']) {
+                return "NEEDS_CALIBRATIONS";
+            } else if (currentReading < riverSection['scrape_value']) {
                 return "EMPTY";
             } else if (currentReading < riverSection['low_value']) {
                 return "SCRAPE";
@@ -311,7 +315,13 @@
         }
         function getWaterLevelIcon(riverSection) {
             currentReading = riverSection['currentReading'];
-            if (currentReading < riverSection['scrape_value']) {
+            if (currentReading == -1) {
+                return oldDataIcon;
+            } else if (currentReading == 0) {
+                return noDataIcon;
+            } else if (riverSection['scrape_value'] == riverSection['huge_value']) {
+                return needsCalibrationsIcon;
+            } else if (currentReading < riverSection['scrape_value']) {
                 return emptyIcon;
             } else if (currentReading < riverSection['low_value']) {
                 return scrapeIcon;
