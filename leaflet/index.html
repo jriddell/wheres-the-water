@@ -108,7 +108,7 @@
         });
         var scrapeIcon = L.icon({
             iconUrl: '/wheres-the-water/pics/SCRAPE.png',
-            iconRetinaUrl: 'http://canoescotland.org/wheres-the-water/pics/SCRAPE.png',
+            iconRetinaUrl: '/wheres-the-water/pics/SCRAPE.png',
             iconSize: [10, 10],
             iconAnchor: [0, 0],
             popupAnchor: [5, -3]
@@ -212,15 +212,21 @@
                             +riverSection['latitude']+"/"+riverSection['longitude']+"'><img title='Open maps Link' src='/wheres-the-water/pics/osm.png' width='22' height='22' /></a>";
             linksContent += "&nbsp; <a href='geo:"+riverSection['latitude']+","+riverSection['longitude']+"'><img title='Geo reference' src='/wheres-the-water/pics/22-apps-marble.png' width='22' height='22' /></a>";
 
-            if (!'guidebook_link' in riverSection && !riverSection['guidebook_link'].length == 0) {
+            if ('guidebook_link' in riverSection && !riverSection['guidebook_link'].length == 0) {
                 linksContent += "&nbsp; <a target='_blank' rel='noopener' href='"+riverSection['guidebook_link']+"'><img title='UKRGB Link' src='/wheres-the-water/pics/ukrgb.ico'/></a>";
             }
-            if (!'sca_guidebook_no' in riverSection && !riverSection['sca_guidebook_no'].length == 0) {
-                linksContent += "&nbsp; <img title='SCA WW Guidebook number' src='/wheres-the-water/pics/sca.png' />"+riverSection['sca_guidebook_no'];
+            if ('sca_guidebook_no' in riverSection && !riverSection['sca_guidebook_no'].length == 0) {
+                linksContent += "&nbsp; <img title='SCA WW Guidebook number' src='/wheres-the-water/pics/sca.png' /> "+riverSection['sca_guidebook_no'];
             }
-            if (!'access_issue' in riverSection && !riverSection['access_issue'].length == 0) {
+            if ('access_issue' in riverSection && !riverSection['access_issue'].length == 0) {
                 linksContent += "&nbsp; <a target='_blank' rel='noopener' href='"+riverSection['access_issue']+"'><img title='Access Issue Link' src='/wheres-the-water/pics/warning.png' /></a>";
             }
+
+            var filename = getRiverGraphFilename(riverSection);
+            linksContent += "&nbsp; <a target='_blank' rel='noopener' href='/wheres-the-water/charts/"+filename+"-weekly.png'><img title='Weekly Chart' src='/wheres-the-water/pics/chart.png' /></a>";
+            linksContent += "&nbsp; <a target='_blank' rel='noopener' href='/wheres-the-water/charts/"+filename+"-monthly.png'><img title='Monthly Chart' src='/wheres-the-water/pics/chart-monthly.png' /></a>";
+            //linksContent .= "&nbsp; <a target='_blank' rel='noopener' href='/wheres-the-water/charts/"+filename+"-yearly.png'><img title='Weekly Chart' src='/wheres-the-water/pics/chart-yearly.png' /></a>";
+
             return linksContent;
         }
         function addRiverMarkers() {
@@ -228,7 +234,7 @@
                 var riverSection = riverSections[i]['name'];
                 var currentReading = riverSections[i]['currentReading'];
                 var waterLevelValue = getWaterLevelValue(riverSections[i]);
-                var iconBase = 'http://canoescotland.org/wheres-the-water/pics/';
+                var iconBase = '/wheres-the-water/pics/';
                 var ext = '.png';
                 var trend = riverSections[i]['trend'];
                 var currentReadingTime = riverSections[i]['currentReadingTime'];
@@ -236,12 +242,19 @@
                 var riverReadings = getRiverReadingsTable(riverSections[i], waterLevelValue);
                 var riverFilename = getRiverGraphFilename(riverSections[i]);
                 var icon = getWaterLevelIcon(riverSections[i]);
-                var contentString = "<div><p><b>" + riverSection + "</b></p><p>Level: " + currentReading + " (" + tidyStatusString(waterLevelValue) + 
-                    ") <img src='" + iconBase + waterLevelValue + ext + "' /></p><p>Trend: " + tidyStatusString(trend) + "</p><p>Last reading: " + currentReadingTime +
+                var contentString = "<div><p><b>" + riverSection + "</b></p><p>Level: " + currentReading + " (" +
+                    tidyStatusString(waterLevelValue) + 
+                    ") <img src='" + iconBase + waterLevelValue + ext + "' /></p><p>Trend: " +
+                    tidyStatusString(trend) + "</p><p>Last reading: " + currentReadingTime +
                     "</p><p>" + sectionLinks + "</p>" +
-                    "<p><span class='js-calib-table'>Calibrations</span> / <span class='js-chart link' style='text-decoration: underline; color: blue; cursor: pointer'>Level chart</span></p>" + riverReadings + "<p class='js-chart-content' style='display: none'>" +
+                    "<p><span class='js-calib-table'>Calibrations</span> / <span class='js-chart-weekly link' style='text-decoration: underline; color: blue; cursor: pointer'>Weekly Chart</span> / <span class='js-chart-monthly link' style='text-decoration: underline; color: blue; cursor: pointer'>Monthly Chart</span></p>" +
+                    riverReadings + 
+                    "<p class='js-chart-weekly-content' style='display: none'>" +
                     "<a href='/wheres-the-water/charts/"+riverFilename+"-weekly.png'>"+
-                    "<img src='http://canoescotland.org/wheres-the-water/charts/"+riverFilename+"-weekly.png' style='max-width: 250px; width: 100%' /></a></p>" +
+                    "<img src='/wheres-the-water/charts/"+riverFilename+"-weekly.png' style='max-width: 250px; width: 100%' /></a></p>" +
+                    "<p class='js-chart-monthly-content' style='display: none'>" +
+                    "<a href='/wheres-the-water/charts/"+riverFilename+"-monthly.png'>"+
+                    "<img src='/wheres-the-water/charts/"+riverFilename+"-monthly.png' style='max-width: 250px; width: 100%' /></a></p>" +
                     "</div>";
                 L.marker([riverSections[i]['latitude'], riverSections[i]['longitude']], {icon: icon}).bindPopup(contentString).addTo( map );
             }
@@ -362,23 +375,40 @@
             }
         }
 
-        jQuery(document).ready( function(){
-            jQuery('#map').on('click', '.js-calib-table', function(){
-                    if (!jQuery(this).hasClass('js-link')){
-                        jQuery('.js-chart-content').hide();
-                        jQuery('.js-calib-table-content').show();
-                        jQuery(this).attr('style', '');
-                        jQuery('.js-chart').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
+        $(document).ready( function(){
+            $('#map').on('click', '.js-calib-table', function(){
+                    if (!$(this).hasClass('js-link')){
+                        $('.js-chart-weekly-content').hide();
+                        $('.js-chart-monthly-content').hide();
+                        $('.js-calib-table-content').show();
+                        $(this).attr('style', '');
+                        $('.js-chart-weekly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
+                        $('.js-chart-monthly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                     }
-                });
-                jQuery('#map').on('click', '.js-chart', function(){
-                    if (!jQuery(this).hasClass('js-link')){
-                        jQuery('.js-calib-table-content').hide();
-                        jQuery('.js-chart-content').show();
-                        jQuery(this).attr('style', '');
-                        jQuery('.js-calib-table').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
+                }
+            );
+            $('#map').on('click', '.js-chart-weekly', function(){
+                    if (!$(this).hasClass('js-link')){
+                        $('.js-calib-table-content').hide();
+                        $('.js-chart-weekly-content').show();
+                        $('.js-chart-monthly-content').hide();
+                        $(this).attr('style', '');
+                        $('.js-calib-table').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
+                        $('.js-chart-monthly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                     }
-                });
+                }
+            );
+            $('#map').on('click', '.js-chart-monthly', function(){
+                    if (!$(this).hasClass('js-link')){
+                        $('.js-calib-table-content').hide();
+                        $('.js-chart-weekly-content').hide();
+                        $('.js-chart-monthly-content').show();
+                        $(this).attr('style', '');
+                        $('.js-calib-table').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
+                        $('.js-chart-weekly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
+                    }
+                }
+            );
         });
   </script>
 
