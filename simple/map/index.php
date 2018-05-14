@@ -268,6 +268,7 @@ jQuery(document).ready( function(){
 </script>
 
     <script type="text/javascript">
+        $ = jQuery; // for some reason SCA website uses JQuery but does not set $
         var map = L.map( 'map', {
             center: [57.172, -4.6582],
             minZoom: 2,
@@ -392,9 +393,13 @@ jQuery(document).ready( function(){
         }
         // make a string lower case starting with capital and replace _
         function tidyStatusString(string) {
-            string = string.toLocaleLowerCase();
-            string = string.charAt(0).toUpperCase() + string.slice(1);
-            return string.replace('_', ' ');
+            if (string) {
+                string = string.toLocaleLowerCase();
+                string = string.charAt(0).toUpperCase() + string.slice(1);
+                return string.replace('_', ' ');
+            } else {
+                return string;
+            }
         }
         function linksContent(riverSection) {
             var linksContent = "<a target='_blank' rel='noopener' href='http://apps.sepa.org.uk/waterlevels/default.aspx?sd=t&lc="+riverSection['gauge_location_code']+"'><img title='SEPA gauge link' src='/wheres-the-water/pics/graph-icon.png'/></a>";
