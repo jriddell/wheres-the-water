@@ -98,6 +98,7 @@ $riverSections->readFromJson();
         </div>
             			
     	<a class='js-tab-top active' id='map-tab' href=''>Map view</a><a class='js-tab-top' id='table-tab' href=''>List view</a>
+        <input type="button" value="Show River Names" onclick="showTooltips()" id="showRiverNames" />
         
         <div class='js-tab map-tab'>
             <div id="map"></div>
@@ -426,6 +427,8 @@ jQuery(document).ready( function(){
             return linksContent;
         }
         function addRiverMarkers() {
+            markers = new Array();
+            tooltipsAreVisible = false;
             for (i=0; i<riverSections.length; i++) {
                 var riverSection = riverSections[i]['name'];
                 var currentReading = riverSections[i]['currentReading'];
@@ -452,7 +455,9 @@ jQuery(document).ready( function(){
                     "<a href='/wheres-the-water/charts/"+riverFilename+"-monthly.png'>"+
                     "<img src='/wheres-the-water/charts/"+riverFilename+"-monthly.png' style='max-width: 250px; width: 100%' /></a></p>" +
                     "</div>";
-                L.marker([riverSections[i]['latitude'], riverSections[i]['longitude']], {icon: icon}).bindPopup(contentString).addTo( map );
+                var marker = L.marker([riverSections[i]['latitude'], riverSections[i]['longitude']], {icon: icon}).bindPopup(contentString).addTo( map );
+                marker.bindTooltip(riverSection);
+                markers.push(marker);
             }
         }
         function getWaterLevelValue(riverSection) {
@@ -568,6 +573,19 @@ jQuery(document).ready( function(){
                 return veryHighIcon;
             } else {
                 return hugeIcon;
+            }
+        }
+        function showTooltips() {
+            if (tooltipsAreVisible) {
+                for (i=0; i<markers.length; i++) {
+                    markers[i].closeTooltip();
+                }
+                tooltipsAreVisible = false;
+            } else {
+                for (i=0; i<markers.length; i++) {
+                    markers[i].openTooltip();
+                }
+                tooltipsAreVisible = true;
             }
         }
 
