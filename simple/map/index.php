@@ -270,7 +270,7 @@ jQuery(document).ready( function(){
 
     <script type="text/javascript">
         $ = jQuery; // for some reason SCA website uses JQuery but does not set $
-        var map = L.map( 'map', {
+        map = L.map( 'map', {
             center: [57.172, -4.6582],
             minZoom: 2,
             zoom: 7
@@ -625,6 +625,7 @@ jQuery(document).ready( function(){
                     }
                 }
             );
+            map.invalidateSize();
         });
   </script>
 
