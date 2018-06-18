@@ -422,7 +422,7 @@ jQuery(document).ready( function(){
             var filename = getRiverGraphFilename(riverSection);
             linksContent += "&nbsp; <a target='_blank' rel='noopener' href='/wheres-the-water/charts/"+filename+"-weekly.png'><img title='Weekly Chart' src='/wheres-the-water/pics/chart.png' /></a>";
             linksContent += "&nbsp; <a target='_blank' rel='noopener' href='/wheres-the-water/charts/"+filename+"-monthly.png'><img title='Monthly Chart' src='/wheres-the-water/pics/chart-monthly.png' /></a>";
-            //linksContent .= "&nbsp; <a target='_blank' rel='noopener' href='/wheres-the-water/charts/"+filename+"-yearly.png'><img title='Weekly Chart' src='/wheres-the-water/pics/chart-yearly.png' /></a>";
+            linksContent .= "&nbsp; <a target='_blank' rel='noopener' href='/wheres-the-water/charts/"+filename+"-yearly.png'><img title='Yearly Chart' src='/wheres-the-water/pics/chart-yearly.png' /></a>";
 
             return linksContent;
         }
@@ -446,7 +446,7 @@ jQuery(document).ready( function(){
                     ") <img src='" + iconBase + waterLevelValue + ext + "' /></p><p><b>Trend</b>: " +
                     tidyStatusString(trend) + "</p><p><b>Last reading</b>: " + currentReadingTime +
                     "</p><p>" + sectionLinks + "</p>" +
-                    "<p><span class='js-calib-table'>Calibrations</span> / <span class='js-chart-weekly link' style='text-decoration: underline; color: blue; cursor: pointer'>Weekly Chart</span> / <span class='js-chart-monthly link' style='text-decoration: underline; color: blue; cursor: pointer'>Monthly Chart</span></p>" +
+                    "<p><span class='js-calib-table'>Calibrations</span> / <span class='js-chart-weekly link' style='text-decoration: underline; color: blue; cursor: pointer'>Weekly Chart</span> / <span class='js-chart-monthly link' style='text-decoration: underline; color: blue; cursor: pointer'>Monthly Chart</span> / <span class='js-chart-yearly link' style='text-decoration: underline; color: blue; cursor: pointer'>Yearly Chart</span></p>" +
                     riverReadings + 
                     "<p class='js-chart-weekly-content' style='display: none'>" +
                     "<a href='/wheres-the-water/charts/"+riverFilename+"-weekly.png'>"+
@@ -454,6 +454,8 @@ jQuery(document).ready( function(){
                     "<p class='js-chart-monthly-content' style='display: none'>" +
                     "<a href='/wheres-the-water/charts/"+riverFilename+"-monthly.png'>"+
                     "<img src='/wheres-the-water/charts/"+riverFilename+"-monthly.png' style='max-width: 250px; width: 100%' /></a></p>" +
+                    "<a href='/wheres-the-water/charts/"+riverFilename+"-yearly.png'>"+
+                    "<img src='/wheres-the-water/charts/"+riverFilename+"-yearly.png' style='max-width: 250px; width: 100%' /></a></p>" +
                     "</div>";
                 var marker = L.marker([riverSections[i]['latitude'], riverSections[i]['longitude']], {icon: icon}).bindPopup(contentString).addTo( map );
                 marker.bindTooltip(riverSection);
@@ -596,10 +598,12 @@ jQuery(document).ready( function(){
                     if (!$(this).hasClass('js-link')){
                         $('.js-chart-weekly-content').hide();
                         $('.js-chart-monthly-content').hide();
+                        $('.js-chart-yearly-content').hide();
                         $('.js-calib-table-content').show();
                         $(this).attr('style', '');
                         $('.js-chart-weekly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-chart-monthly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
+                        $('.js-chart-yearly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                     }
                 }
             );
@@ -608,9 +612,11 @@ jQuery(document).ready( function(){
                         $('.js-calib-table-content').hide();
                         $('.js-chart-weekly-content').show();
                         $('.js-chart-monthly-content').hide();
+                        $('.js-chart-yearly-content').hide();
                         $(this).attr('style', '');
                         $('.js-calib-table').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-chart-monthly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
+                        $('.js-chart-yearly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                     }
                 }
             );
@@ -619,9 +625,24 @@ jQuery(document).ready( function(){
                         $('.js-calib-table-content').hide();
                         $('.js-chart-weekly-content').hide();
                         $('.js-chart-monthly-content').show();
+                        $('.js-chart-yearly-content').hide();
                         $(this).attr('style', '');
                         $('.js-calib-table').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-chart-weekly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
+                        $('.js-chart-yearly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
+                    }
+                }
+            );
+            $('#map').on('click', '.js-chart-yearly', function(){
+                    if (!$(this).hasClass('js-link')){
+                        $('.js-calib-table-content').hide();
+                        $('.js-chart-weekly-content').hide();
+                        $('.js-chart-monthly-content').hide();
+                        $('.js-chart-yearly-content').show();
+                        $(this).attr('style', '');
+                        $('.js-calib-table').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
+                        $('.js-chart-weekly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
+                        $('.js-chart-monthly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                     }
                 }
             );
