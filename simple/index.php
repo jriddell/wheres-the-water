@@ -47,7 +47,7 @@ print "<p>Readings downloaded from SEPA at " . $riverSections->downloadTime() . 
 print "<p>Most recent SEPA reading: " . $riverSections->calculateMostRecentReading() . "</p>\n";
 ?>
 
-<p><a href="/wtw/map">Simple Map View</a> (<a href="/wtw/map-google">Google Map View</a>)</p>
+<p><a href="/wtw/map">Simple Map View</a></p>
 
     	<div class="clearfix">
             <div style="float: left; margin-right: 1em">
