@@ -454,6 +454,7 @@ jQuery(document).ready( function(){
                     "<p class='js-chart-monthly-content' style='display: none'>" +
                     "<a href='/wheres-the-water/charts/"+riverFilename+"-monthly.png'>"+
                     "<img src='/wheres-the-water/charts/"+riverFilename+"-monthly.png' style='max-width: 250px; width: 100%' /></a></p>" +
+                    "<p class='js-chart-yearly-content' style='display: none'>" +
                     "<a href='/wheres-the-water/charts/"+riverFilename+"-yearly.png'>"+
                     "<img src='/wheres-the-water/charts/"+riverFilename+"-yearly.png' style='max-width: 250px; width: 100%' /></a></p>" +
                     "</div>";
