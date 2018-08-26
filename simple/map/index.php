@@ -419,11 +419,6 @@ jQuery(document).ready( function(){
                 linksContent += "&nbsp; <a target='_blank' rel='noopener' href='"+riverSection['access_issue']+"'><img title='Access Issue Link' src='/wheres-the-water/pics/warning.png' /></a>";
             }
 
-            var filename = getRiverGraphFilename(riverSection);
-            linksContent += "&nbsp; <a target='_blank' rel='noopener' href='/wheres-the-water/charts/"+filename+"-weekly.png'><img title='Weekly Chart' src='/wheres-the-water/pics/chart.png' /></a>";
-            linksContent += "&nbsp; <a target='_blank' rel='noopener' href='/wheres-the-water/charts/"+filename+"-monthly.png'><img title='Monthly Chart' src='/wheres-the-water/pics/chart-monthly.png' /></a>";
-            linksContent += "&nbsp; <a target='_blank' rel='noopener' href='/wheres-the-water/charts/"+filename+"-yearly.png'><img title='Yearly Chart' src='/wheres-the-water/pics/chart-yearly.png' /></a>";
-
             return linksContent;
         }
         function addRiverMarkers() {
