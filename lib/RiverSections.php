@@ -112,7 +112,7 @@ class RiverSections {
         }
         $reply = "";
         $reply .= "<legend>" . $riverSection['name'] . "</legend>";
-        $reply .= $this->editRiverFormInputItem("River/Section Name", "name", $riverSection['name']);
+        $reply .= $this->editRiverFormInputItem("River/Section Name", "rivername", $riverSection['name']);
         $reply .= $this->editRiverFormInputItem("SEPA Gauge Code", "gauge_location_code", $riverSection['gauge_location_code'], "right");
         $reply .= $this->editRiverFormInputItem("Latitude", "latitude", $riverSection['latitude']);
         $reply .= $this->editRiverFormInputItem("Longitude", "longitude", $riverSection['longitude'], "right");
@@ -147,7 +147,7 @@ class RiverSections {
             $name = $riverSection['name'];
             return "<b>&#9888;Not updated $name</b><br />Validation error: " . $e->getMessage();
         }
-        $riverSection['name'] = $postData['name'];
+        $riverSection['name'] = $postData['rivername'];
         $riverSection['gauge_location_code'] = $postData['gauge_location_code'];
         $riverSection['longitude'] = $postData['longitude'];
         $riverSection['latitude'] = $postData['latitude'];
@@ -195,7 +195,7 @@ class RiverSections {
             $postData['very_high_value'] > $postData['huge_value']) {
             throw new Exception("River level values not in sequential order");
         }
-        if (!filter_var($postData['name'], FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>"/^[a-zA-Z \(\)]+$/")))) {
+        if (!filter_var($postData['rivername'], FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>"/^[a-zA-Z \(\)]+$/")))) {
             throw new Exception("Name not text");
         }
     }
@@ -245,11 +245,11 @@ class RiverSections {
         try {
             $this->validateRiverSectionUpdateData($postData);
         } catch (Exception $e) {
-            $name = $postData['name'];
+            $name = $postData['rivername'];
             return "<b>&#9888;Not added $name</b><br />Validation error: " . $e->getMessage() . "<br />Click Back to retry";
         }
         $riverSection = array();
-        $riverSection['name'] = $postData['name'];
+        $riverSection['name'] = $postData['rivername'];
         $riverSection['gauge_location_code'] = $postData['gauge_location_code'];
         $riverSection['longitude'] = $postData['longitude'];
         $riverSection['latitude'] = $postData['latitude'];
@@ -274,7 +274,7 @@ class RiverSections {
         unset($this->riverSectionsData[$jsonid]); // turns it into a hash.
         $this->riverSectionsData = array_values($this->riverSectionsData); // returns it to array.  Go PHP.
         $this->writeToJson();
-        return "Deleted section " . $postData['name'];
+        return "Deleted section " . $postData['rivername'];
     }
 
     //returns time of last download from SEPA
