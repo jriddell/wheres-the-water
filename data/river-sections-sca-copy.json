@@ -576,6 +576,7 @@
         "very_high_value": "1.1"
     },
     {
+        "access_issue": "",
         "gauge_location_code": "116011",
         "grade": "4(5)",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/west-highlands/river-nevis-steall-gorge-to-polldubh-falls",
@@ -586,7 +587,7 @@
         "low_value": "0.65",
         "medium_value": "0.85",
         "name": "Nevis (Upper)",
-        "sca_guidebook_no": "",
+        "sca_guidebook_no": "110",
         "scrape_value": "0.5",
         "very_high_value": "1.3"
     },
