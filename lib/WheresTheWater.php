@@ -56,6 +56,7 @@ class WheresTheWater {
 .js-calib-table-content {
     border-collapse: separate;
     border-spacing: 1px;
+    display: none;
 }
 #map { 
     height: 700px; 
