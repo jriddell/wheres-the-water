@@ -42,7 +42,8 @@ class GrabSepaRivers {
     public function doGrabSepaRiversReadings($riverSectionsData, $force = false) {
         $this->riverSectionsData = $riverSectionsData;
         // Remove download-lock if it is an hour old, means download crashed
-        if (time()-filemtime($this->downloadLockFile) > self::DOWNLOAD_LOCK_TIMEOUT) {
+        if (file_exists($this->timestampFile) && time()-filemtime($this->downloadLockFile) > self::DOWNLOAD_LOCK_TIMEOUT) {
+            print "<p>Removing DOWNLOAD-LOCK as it is over an hour old</p>";
             unlink($this->downloadLockFile);
         }
         if ($force || !file_exists($this->timestampFile) || time()-filemtime($this->timestampFile) > self::SEPA_DOWNLOAD_PERIOD) {
