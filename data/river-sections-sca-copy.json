@@ -619,11 +619,12 @@
         "low_value": "0.5",
         "medium_value": "0.8",
         "name": "Clyde (Stonebyres)",
-        "sca_guidebook_no": "198",
+        "sca_guidebook_no": "268",
         "scrape_value": "0",
         "very_high_value": "2"
     },
     {
+        "access_issue": "",
         "gauge_location_code": "133108",
         "grade": "4(4+)",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/west-highlands/river-luss",
@@ -634,7 +635,7 @@
         "low_value": "0.5",
         "medium_value": "0.7",
         "name": "Luss Water",
-        "sca_guidebook_no": "",
+        "sca_guidebook_no": "192",
         "scrape_value": "0.4",
         "very_high_value": "1"
     },
