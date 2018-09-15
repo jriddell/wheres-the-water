@@ -18,7 +18,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "9514",
-        "grade": "",
+        "grade": "1",
         "guidebook_link": "",
         "high_value": "2",
         "huge_value": "3.5",
@@ -34,7 +34,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "234287",
-        "grade": "",
+        "grade": "1/2",
         "guidebook_link": "",
         "high_value": "1.6",
         "huge_value": "2.3",
@@ -1147,14 +1147,14 @@
         "low_value": "0.7",
         "medium_value": "1",
         "name": "Teviot",
-        "sca_guidebook_no": "",
+        "sca_guidebook_no": "307",
         "scrape_value": "0.4",
         "very_high_value": "1.8"
     },
     {
         "access_issue": "https://www.facebook.com/groups/Scottish.Whitewater/permalink/1727582960610041/",
         "gauge_location_code": "371579",
-        "grade": "3-4",
+        "grade": "3(4)",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/north-east/river-north-esk-scout-camp-to-edzell",
         "high_value": "0.5",
         "huge_value": "0.95",
@@ -1163,7 +1163,7 @@
         "low_value": "0.3",
         "medium_value": "0.4",
         "name": "North Esk (Lower)",
-        "sca_guidebook_no": "",
+        "sca_guidebook_no": "244",
         "scrape_value": "0.15",
         "very_high_value": "0.7"
     }
