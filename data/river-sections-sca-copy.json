@@ -224,6 +224,7 @@
         "very_high_value": "1.2"
     },
     {
+        "access_issue": "",
         "gauge_location_code": "133080",
         "grade": "3",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/west-highlands/river-kelvin-art-galleries-wave",
@@ -234,11 +235,12 @@
         "low_value": "0.6",
         "medium_value": "0.8",
         "name": "Kelvin",
-        "sca_guidebook_no": "",
+        "sca_guidebook_no": "272",
         "scrape_value": "0.5",
         "very_high_value": "1.4"
     },
     {
+        "access_issue": "",
         "gauge_location_code": "234306",
         "grade": "3 (4)",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/north-east/river-findhorn-dulsie-bridge-to-logie-bridge",
@@ -249,7 +251,7 @@
         "low_value": "0.3",
         "medium_value": "0.35",
         "name": "Findhorn (Upper)",
-        "sca_guidebook_no": "",
+        "sca_guidebook_no": "193",
         "scrape_value": "0.2",
         "very_high_value": "1"
     },
