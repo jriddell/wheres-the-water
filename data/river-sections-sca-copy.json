@@ -48,6 +48,7 @@
         "very_high_value": "2"
     },
     {
+        "access_issue": "",
         "gauge_location_code": "133073",
         "grade": "",
         "guidebook_link": "",
@@ -58,7 +59,7 @@
         "low_value": "0.4",
         "medium_value": "0.5",
         "name": "Gryfe",
-        "sca_guidebook_no": "",
+        "sca_guidebook_no": "274",
         "scrape_value": "0.3",
         "very_high_value": "0.8"
     },
@@ -74,11 +75,12 @@
         "low_value": "0.5",
         "medium_value": "0.8",
         "name": "Yarrow",
-        "sca_guidebook_no": "",
+        "sca_guidebook_no": "309",
         "scrape_value": "0.4",
         "very_high_value": "1"
     },
     {
+        "access_issue": "",
         "gauge_location_code": "133111",
         "grade": "",
         "guidebook_link": "",
@@ -89,7 +91,7 @@
         "low_value": "0.6",
         "medium_value": "0.8",
         "name": "Ayr",
-        "sca_guidebook_no": "",
+        "sca_guidebook_no": "280",
         "scrape_value": "0.4",
         "very_high_value": "1.3"
     },
