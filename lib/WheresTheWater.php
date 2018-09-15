@@ -439,6 +439,12 @@ jQuery(document).ready( function(){
             if ('access_issue' in riverSection && !riverSection['access_issue'].length == 0) {
                 linksContent += "<a target='_blank' rel='noopener' href='"+riverSection['access_issue']+"'><img width='16' height='16' title='Access Issue Link' src='/wheres-the-water/pics/warning.png' /> Access Issue</a><br />";
             }
+            if ('google_mymaps' in riverSection && !riverSection['google_mymaps'].length == 0) {
+                linksContent += "<a target='_blank' rel='noopener' href='"+riverSection['google_mymaps']+"'><img width='16' height='16' title='Google MyMaps' src='/wheres-the-water/pics/google-mymaps.png' /> Google MyMaps</a><br />";
+            }
+            if ('kml' in riverSection && !riverSection['kml'].length == 0) {
+                linksContent += "<a target='_blank' rel='noopener' href='"+riverSection['kml']+"'><img width='16' height='16' title='KML' src='/wheres-the-water/pics/kml.png' /> KML</a><br />";
+            }
 
             return linksContent;
         }
