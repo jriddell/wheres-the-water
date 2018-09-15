@@ -446,7 +446,7 @@ jQuery(document).ready( function(){
                     ") <img src='" + iconBase + waterLevelValue + ext + "' /><br /><b>Trend</b>: " +
                     tidyStatusString(trend) + "<br /><b>Last reading</b>: " + currentReadingTime +
                     "<br />" + sectionLinks + "</p>" +
-                    "<p class='js-calibrations-content' style='display: none'>" +
+                    "<p class='js-calibrations-content' style='display: none'>MOO" +
                     riverReadingsTable + "</p>" +
                     "<p class='js-chart-weekly-content' style='display: none'>" +
                     "<a href='/wheres-the-water/charts/"+riverFilename+"-weekly.png'>"+
