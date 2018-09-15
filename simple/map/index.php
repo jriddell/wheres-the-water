@@ -11,6 +11,7 @@ $riverSections->readFromJson();
 
 $wtw = new WheresTheWater;
 $wtw->headerStuff();
-$wtw->theMap();
+$wtw->theMap($riverSections);
 $wtw->theJavaScript();
+
 footer();

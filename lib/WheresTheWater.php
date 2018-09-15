@@ -72,8 +72,10 @@ class WheresTheWater {
     }
  
 
-    /** prints a map and list */
-    public function theMap() {
+    /** prints a map and list 
+        needs a RiverSections object
+    */
+    public function theMap($riverSections) {
 ?>
 <div class='clearfix' style='width: 100%'>
     <div>
