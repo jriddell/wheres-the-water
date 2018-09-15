@@ -15,3 +15,9 @@ timestamp = int(response.read())
 
 if (time.time() - timestamp) > WARNING_TIME:
     print("Warning Warning, code red, the DOWNLOAD-READINGS-TIMESTAMP file is over an hour old")
+
+response = urllib.request.urlopen("http://canoescotland.org/wheres-the-water/charts/CHARTS-GENERATED-TIMESTAMP")
+timestamp = int(response.read())
+
+if (time.time() - timestamp) > WARNING_TIME:
+    print("Warning Warning, code red, the CHARTS-GENERATED-TIMESTAMP file is over an hour old")
