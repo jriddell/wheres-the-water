@@ -475,7 +475,7 @@ jQuery(document).ready( function(){
                     tidyStatusString(waterLevelValue) + 
                     ") <img src='" + iconBase + waterLevelValue + ext + "' /></h4>" +
                     "<p><span class='js-info'>Info</span> / <span class='js-calib-table link' style='text-decoration: underline; color: blue; cursor: pointer'>Calibrations</span> / <span class='js-chart-weekly link' style='text-decoration: underline; color: blue; cursor: pointer'>Weekly Chart</span> / <span class='js-chart-monthly link' style='text-decoration: underline; color: blue; cursor: pointer'>Monthly Chart</span> / <span class='js-chart-yearly link' style='text-decoration: underline; color: blue; cursor: pointer'>Yearly Chart</span></p>" +
-                    "<p class='js-info-content'><b>Last reading</b>: " + currentReadingTime +
+                    "<p class='js-info-content'><img src='/wheres-the-water/pics/clock.png'/> Last reading " + currentReadingTime +
                     "<br />" + sectionLinks + "</p>" + riverReadingsTable +
                     "<p class='js-chart-weekly-content' style='display: none'>" +
                     "<a href='/wheres-the-water/charts/"+riverFilename+"-weekly.png'>"+
