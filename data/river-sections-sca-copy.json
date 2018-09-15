@@ -752,6 +752,7 @@
         "very_high_value": "0.8"
     },
     {
+        "access_issue": "",
         "gauge_location_code": "14887",
         "grade": "2",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/central-highlands/river-teith",
@@ -762,7 +763,7 @@
         "low_value": "0.5",
         "medium_value": "0.8",
         "name": "Teith",
-        "sca_guidebook_no": "",
+        "sca_guidebook_no": "259",
         "scrape_value": "0",
         "very_high_value": "2"
     },
