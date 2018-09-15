@@ -4,7 +4,7 @@ include("config.php");
 include("lib/SepaRiverReadingHistory.php");
 include("lib/RiverSections.php");
 
-const CHARTS_GENERATED_TIMESTAMP = ROOT . '/charts/' . 'CHARTS-GENERATED-TIMESTAMP';
+define("CHARTS_GENERATED_TIMESTAMP", ROOT . '/charts/' . 'CHARTS-GENERATED-TIMESTAMP');
 
 $riverSections = new RiverSections();
 $riverSections->readFromJson();
