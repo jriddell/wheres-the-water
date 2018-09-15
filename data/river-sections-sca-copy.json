@@ -975,6 +975,7 @@
         "very_high_value": "10"
     },
     {
+        "access_issue": "",
         "gauge_location_code": "14916",
         "grade": "1/3",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/north-east/south-esk",
@@ -985,7 +986,7 @@
         "low_value": "1.0",
         "medium_value": "1.2",
         "name": "South Esk (Angus)",
-        "sca_guidebook_no": "",
+        "sca_guidebook_no": "247",
         "scrape_value": "0.9",
         "very_high_value": "1.6"
     },
@@ -1001,7 +1002,7 @@
         "low_value": "1",
         "medium_value": "1.4",
         "name": "Don",
-        "sca_guidebook_no": "",
+        "sca_guidebook_no": "243",
         "scrape_value": "0",
         "very_high_value": "2"
     },
