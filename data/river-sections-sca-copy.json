@@ -528,6 +528,7 @@
         "very_high_value": "1.7"
     },
     {
+        "access_issue": "",
         "gauge_location_code": "234313",
         "grade": "3/4",
         "guidebook_link": "",
@@ -538,7 +539,7 @@
         "low_value": "0.5",
         "medium_value": "0.9",
         "name": "Snizort",
-        "sca_guidebook_no": "",
+        "sca_guidebook_no": "72",
         "scrape_value": "0.3",
         "very_high_value": "1.1"
     },
@@ -554,7 +555,7 @@
         "low_value": "0.8",
         "medium_value": "0.9",
         "name": "Blackwater (Perthshire)",
-        "sca_guidebook_no": "",
+        "sca_guidebook_no": "250",
         "scrape_value": "0.75",
         "very_high_value": "1.4"
     },
