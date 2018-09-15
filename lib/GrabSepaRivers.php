@@ -22,6 +22,7 @@ class GrabSepaRivers {
     const SEPA_DOWNLOAD_PERIOD = 300; // 60 * 5; // make sure current download is no older than 5 minutes
     const SEPA_URL = 'http://apps.sepa.org.uk/database/riverlevels/';
     const RIVERS_READINGS_JSON = 'rivers-readings.json';
+    const DOWNLOAD_LOCK_TIMEOUT = 3600; // 60 * 60; // remove download-lock if older than an hour, it means something crashed
     public $filename;
     public $timestampFile;
     public $downloadLockFile;
@@ -37,6 +38,10 @@ class GrabSepaRivers {
     //TODO report correctly on out of date data or no data
     public function doGrabSepaRiversReadings($riverSectionsData, $force = false) {
         $this->riverSectionsData = $riverSectionsData;
+        // Remove download-lock if it is an hour old, means download crashed
+        if (time()-filemtime($this->downloadLockFile) > self::DOWNLOAD_LOCK_TIMEOUT)) {
+            unlink($this->downloadLockFile);
+        }
         if ($force || !file_exists($this->timestampFile) || time()-filemtime($this->timestampFile) > self::SEPA_DOWNLOAD_PERIOD) {
             $newTimeStampFile = fopen($this->timestampFile, "w") or die("Unable to open file!");
             fwrite($newTimeStampFile, "");
