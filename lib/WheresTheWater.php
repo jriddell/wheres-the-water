@@ -97,9 +97,6 @@ class WheresTheWater {
             <div style="margin-left: 1em; float: left">
                 <p><img title='SCA guide book reference number' src='/wheres-the-water/pics/sca.png' /> SCA guide book reference number</p>
                 <p><img title='Access issue link' src='/wheres-the-water/pics/warning.png' /> Access issue link</p>
-                <p><img title='Weekly Chart' src='/wheres-the-water/pics/chart.png' /> Weekly River Level Chart</p>
-                <p><img title='Monthly Chart' src='/wheres-the-water/pics/chart-monthly.png' /> Monthly River Level Chart</p>
-                <p><img title='Yearly Chart' src='/wheres-the-water/pics/chart-yearly.png' /> Yearly River Level Chart</p>
             </div>
         </div>
 
