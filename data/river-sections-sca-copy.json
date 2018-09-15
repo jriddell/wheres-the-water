@@ -320,6 +320,7 @@
         "very_high_value": "3"
     },
     {
+        "access_issue": "",
         "gauge_location_code": "234167",
         "grade": "1-2",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/north-east/river-spey-ballindalloch-to-tandhu-distillery",
@@ -330,11 +331,12 @@
         "low_value": "0.4",
         "medium_value": "0.8",
         "name": "Spey",
-        "sca_guidebook_no": "",
+        "sca_guidebook_no": "196",
         "scrape_value": "0",
         "very_high_value": "2"
     },
     {
+        "access_issue": "",
         "gauge_location_code": "14959",
         "grade": "4(5)",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/central-highlands/river-tilt",
@@ -345,11 +347,12 @@
         "low_value": "0.4",
         "medium_value": "0.6",
         "name": "Tilt (Marble Lodge)",
-        "sca_guidebook_no": "",
+        "sca_guidebook_no": "214",
         "scrape_value": "0.35",
         "very_high_value": "1.2"
     },
     {
+        "access_issue": "",
         "gauge_location_code": "14888",
         "grade": "3/4(5)",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/central-highlands/river-leny-a84-layby-to-lade-inn",
@@ -360,7 +363,7 @@
         "low_value": "0.7",
         "medium_value": "1.2",
         "name": "Leny",
-        "sca_guidebook_no": "",
+        "sca_guidebook_no": "322",
         "scrape_value": "0.5",
         "very_high_value": "1.8"
     },
@@ -376,11 +379,12 @@
         "low_value": "1",
         "medium_value": "1.2",
         "name": "Avon (Glasgow) (Upper)",
-        "sca_guidebook_no": "",
+        "sca_guidebook_no": "270",
         "scrape_value": "0.9",
         "very_high_value": "1.6"
     },
     {
+        "access_issue": "",
         "gauge_location_code": "133089",
         "grade": "4/5",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/west-highlands/river-falloch-falls-of-falloch-to-loch-lomond",
@@ -391,7 +395,7 @@
         "low_value": "0.9",
         "medium_value": "1",
         "name": "Falloch (Lower)",
-        "sca_guidebook_no": "",
+        "sca_guidebook_no": "184",
         "scrape_value": "0.8",
         "very_high_value": "1.3"
     },
