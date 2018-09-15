@@ -440,16 +440,18 @@ jQuery(document).ready( function(){
                 var trend = riverSections[i]['trend'];
                 var currentReadingTime = riverSections[i]['currentReadingTime'];
                 var sectionLinks = linksContent(riverSections[i]);
-                var riverReadings = getRiverReadingsTable(riverSections[i], waterLevelValue);
+                var riverReadingsTable = getRiverReadingsTable(riverSections[i], waterLevelValue);
                 var riverFilename = getRiverGraphFilename(riverSections[i]);
                 var icon = getWaterLevelIcon(riverSections[i]);
-                var contentString = "<div><p><h4>" + riverSection + "</h4></p><p><b>Level</b>: " + currentReading + " (" +
+                var contentString = "<div><p><h4>" + riverSection + "</h4></p>" +
+                    "<p><span class='js-info'>Info</span> / <span class='js-calib-table link'>Calibrations</span> / <span class='js-chart-weekly link' style='text-decoration: underline; color: blue; cursor: pointer'>Weekly Chart</span> / <span class='js-chart-monthly link' style='text-decoration: underline; color: blue; cursor: pointer'>Monthly Chart</span> / <span class='js-chart-yearly link' style='text-decoration: underline; color: blue; cursor: pointer'>Yearly Chart</span></p>" +
+                    "<p class='js-info-content'><b>Level</b>: " + currentReading + " (" +
                     tidyStatusString(waterLevelValue) + 
-                    ") <img src='" + iconBase + waterLevelValue + ext + "' /></p><p><b>Trend</b>: " +
-                    tidyStatusString(trend) + "</p><p><b>Last reading</b>: " + currentReadingTime +
-                    "</p><p>" + sectionLinks + "</p>" +
-                    "<p><span class='js-calib-table'>Calibrations</span> / <span class='js-chart-weekly link' style='text-decoration: underline; color: blue; cursor: pointer'>Weekly Chart</span> / <span class='js-chart-monthly link' style='text-decoration: underline; color: blue; cursor: pointer'>Monthly Chart</span> / <span class='js-chart-yearly link' style='text-decoration: underline; color: blue; cursor: pointer'>Yearly Chart</span></p>" +
-                    riverReadings + 
+                    ") <img src='" + iconBase + waterLevelValue + ext + "' /><br /><b>Trend</b>: " +
+                    tidyStatusString(trend) + "<br /><b>Last reading</b>: " + currentReadingTime +
+                    "<br />" + sectionLinks + "</p>" +
+                    "<p class='js-calib-table-content' style='display: none'>" +
+                    riverReadingsTable + "</p>"
                     "<p class='js-chart-weekly-content' style='display: none'>" +
                     "<a href='/wheres-the-water/charts/"+riverFilename+"-weekly.png'>"+
                     "<img src='/wheres-the-water/charts/"+riverFilename+"-weekly.png' style='max-width: 250px; width: 100%' /></a></p>" +
@@ -599,6 +601,7 @@ jQuery(document).ready( function(){
             window.location.hash = '#map';
             $('#map').on('click', '.js-calib-table', function(){
                     if (!$(this).hasClass('js-link')){
+                        $('.js-info').hide();
                         $('.js-chart-weekly-content').hide();
                         $('.js-chart-monthly-content').hide();
                         $('.js-chart-yearly-content').hide();
@@ -612,6 +615,7 @@ jQuery(document).ready( function(){
             );
             $('#map').on('click', '.js-chart-weekly', function(){
                     if (!$(this).hasClass('js-link')){
+                        $('.js-info').hide();
                         $('.js-calib-table-content').hide();
                         $('.js-chart-weekly-content').show();
                         $('.js-chart-monthly-content').hide();
@@ -625,6 +629,7 @@ jQuery(document).ready( function(){
             );
             $('#map').on('click', '.js-chart-monthly', function(){
                     if (!$(this).hasClass('js-link')){
+                        $('.js-info').hide();
                         $('.js-calib-table-content').hide();
                         $('.js-chart-weekly-content').hide();
                         $('.js-chart-monthly-content').show();
@@ -638,6 +643,7 @@ jQuery(document).ready( function(){
             );
             $('#map').on('click', '.js-chart-yearly', function(){
                     if (!$(this).hasClass('js-link')){
+                        $('.js-info').hide();
                         $('.js-calib-table-content').hide();
                         $('.js-chart-weekly-content').hide();
                         $('.js-chart-monthly-content').hide();
