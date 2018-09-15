@@ -879,6 +879,7 @@
         "very_high_value": "1"
     },
     {
+        "access_issue": "",
         "gauge_location_code": "14956",
         "grade": "2/3(5)",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/central-highlands/river-ericht",
@@ -888,12 +889,13 @@
         "longitude": "-3.33564",
         "low_value": "0.9",
         "medium_value": "1",
-        "name": "Ericht",
-        "sca_guidebook_no": "",
+        "name": "Ericht (Blairgowrie)",
+        "sca_guidebook_no": "251",
         "scrape_value": "0.8",
         "very_high_value": "1.4"
     },
     {
+        "access_issue": "",
         "gauge_location_code": "8402",
         "grade": "4/5",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/central-highlands/river-braan-rumbling-bridge-to-the-hermitage",
@@ -904,7 +906,7 @@
         "low_value": "0.6",
         "medium_value": "0.7",
         "name": "Braan (Gorge)",
-        "sca_guidebook_no": "",
+        "sca_guidebook_no": "228",
         "scrape_value": "0.5",
         "very_high_value": "1.15"
     },
