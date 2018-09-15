@@ -94,22 +94,8 @@ class WheresTheWater {
     <div>
         <div class="clearfix">
             <div style="float: left; margin-right: 1em">
-                <p><b>Data Last Polled</b></p>
-                <p><?php print $riverSections->downloadTime() ?></p>
-                <p><b>Most Recent SEPA Reading</b></p>
-                <p><?php print $riverSections->calculateMostRecentReading() ?></p>
-            </div>
-            <div style="float: left">
-                <p><b>Symbols Key</b></p>
-                <p><img title='SEPA gauge link' src='/wheres-the-water/pics/graph-icon.png' /> SEPA gauge graph</p>
-                <p><img title='SEPA gauge link - mobile friendly' src='/wheres-the-water/pics/phone-icon.png' /> SEPA gauge graph (mobile friendly)</p>
-                <p><img title='OpenStreetMap link' src='/wheres-the-water/pics/osm.png' /> Map link</p>
-                <p><img title='Geo reference' src='/wheres-the-water/pics/22-apps-marble.png' /> Map link for mobile phones</p>
-                <p><img title='UKRGB link' src='/wheres-the-water/pics/ukrgb.ico' /> UK Rivers Guide Book link</p>
-            </div>
-            <div style="margin-left: 1em; float: left">
-                <p><img title='SCA guide book reference number' src='/wheres-the-water/pics/sca.png' /> SCA guide book reference number</p>
-                <p><img title='Access issue link' src='/wheres-the-water/pics/warning.png' /> Access issue link</p>
+                <p><b>Data Last Polled</b> <?php print $riverSections->downloadTime() ?></p>
+                <p><b>Most Recent SEPA Reading</b> <?php print $riverSections->calculateMostRecentReading() ?></p>
             </div>
         </div>
 
