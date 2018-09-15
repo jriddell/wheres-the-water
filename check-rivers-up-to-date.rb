@@ -5,6 +5,8 @@
 
 # Checks the timestamp written by SCA server and if it is older than an hour print a warning which cron will e-mail to me
 
+# abandoned as seems ruby on embra is too old to have httparty, go to check-rivers-up-to-date.py
+
 require 'httparty'
 
 WARNING_TIME = 3600
