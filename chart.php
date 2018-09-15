@@ -12,7 +12,7 @@ foreach ($riverSections->riverSectionsData as $river) {
     $riverHistory->writeChart($river, 7, "weekly");
     $riverHistory->writeChart($river, 30, "monthly");
     $riverHistory->writeChart($river, 365, "yearly");
-    print "Written Chart for " . $river['name'] . "\n";
+    print date(DATE_RSS) + "Written Chart for " . $river['name'] . "\n";
 }
 
 /*
