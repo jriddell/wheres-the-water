@@ -114,6 +114,12 @@ class RiverSections {
         if (!array_key_exists('access_issue', $riverSection)) {
             $riverSection['access_issue'] = '';
         }
+        if (!array_key_exists('google_mymaps', $riverSection)) {
+            $riverSection['google_mymaps'] = '';
+        }
+        if (!array_key_exists('kml', $riverSection)) {
+            $riverSection['kml'] = '';
+        }
         $reply = "";
         $reply .= "<legend>" . $riverSection['name'] . "</legend>";
         $reply .= $this->editRiverFormInputItem("River/Section Name", "rivername", $riverSection['name']);
