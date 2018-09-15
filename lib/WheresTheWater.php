@@ -419,39 +419,39 @@ jQuery(document).ready( function(){
             }
         }
         function linksContent(riverSection) {
-            var linksContent = "<a target='_blank' rel='noopener' href='http://apps.sepa.org.uk/waterlevels/default.aspx?sd=t&lc="+riverSection['gauge_location_code']+"'><img title='SEPA gauge link' src='/wheres-the-water/pics/graph-icon.png'/></a>";
-            linksContent += "&nbsp; <a target='_blank' rel='noopener' href='http://riverlevels.mobi/SiteDetails/Index/"+riverSection['gauge_location_code']+"'><img  title='SEPA gauge link - mobile friendly' src='/wheres-the-water/pics/phone-icon.png'/></a>";
+            var linksContent = "<a target='_blank' rel='noopener' href='http://apps.sepa.org.uk/waterlevels/default.aspx?sd=t&lc="+riverSection['gauge_location_code']+"'><img width='16' height='16' title='SEPA gauge link' src='/wheres-the-water/pics/graph-icon.png'/></a>";
+            linksContent += "&nbsp; <a target='_blank' rel='noopener' href='http://riverlevels.mobi/SiteDetails/Index/"+riverSection['gauge_location_code']+"'><img width='16' height='16' title='SEPA gauge link - mobile friendly' src='/wheres-the-water/pics/phone-icon.png'/></a>";
             linksContent += "&nbsp; <a target='_blank' rel='noopener' href='https://www.openstreetmap.org/?mlat="+riverSection['latitude']+"&mlon="+riverSection['longitude']+"#map=12/"
-                            +riverSection['latitude']+"/"+riverSection['longitude']+"'><img title='Open maps Link' src='/wheres-the-water/pics/osm.png' width='22' height='22' /></a>";
-            linksContent += "&nbsp; <a href='geo:"+riverSection['latitude']+","+riverSection['longitude']+"'><img title='Geo reference' src='/wheres-the-water/pics/22-apps-marble.png' width='22' height='22' /></a>";
+                            +riverSection['latitude']+"/"+riverSection['longitude']+"'><img title='Open maps Link' src='/wheres-the-water/pics/osm.png' width='16' height='16' /></a>";
+            linksContent += "&nbsp; <a href='geo:"+riverSection['latitude']+","+riverSection['longitude']+"'><img title='Geo reference' src='/wheres-the-water/pics/22-apps-marble.png' width='16' height='16' /></a>";
 
             if ('guidebook_link' in riverSection && !riverSection['guidebook_link'].length == 0) {
-                linksContent += "&nbsp; <a target='_blank' rel='noopener' href='"+riverSection['guidebook_link']+"'><img title='UKRGB Link' src='/wheres-the-water/pics/ukrgb.ico'/></a>";
+                linksContent += "&nbsp; <a target='_blank' rel='noopener' href='"+riverSection['guidebook_link']+"'><img width='16' height='16' title='UKRGB Link' src='/wheres-the-water/pics/ukrgb.ico'/></a>";
             }
             if ('sca_guidebook_no' in riverSection && !riverSection['sca_guidebook_no'].length == 0) {
-                linksContent += "&nbsp; <span style='border: thin solid black; padding-top: 5px; padding-left: 2px;'><img title='SCA WW Guidebook number' src='/wheres-the-water/pics/sca.png' /> "+riverSection['sca_guidebook_no']+"</span>";
+                linksContent += "&nbsp; <span style='border: thin solid black; padding-top: 5px; padding-left: 2px;'><img width='16' height='16' title='SCA WW Guidebook number' src='/wheres-the-water/pics/sca.png' /> "+riverSection['sca_guidebook_no']+"</span>";
             }
             if ('access_issue' in riverSection && !riverSection['access_issue'].length == 0) {
-                linksContent += "&nbsp; <a target='_blank' rel='noopener' href='"+riverSection['access_issue']+"'><img title='Access Issue Link' src='/wheres-the-water/pics/warning.png' /></a>";
+                linksContent += "&nbsp; <a target='_blank' rel='noopener' href='"+riverSection['access_issue']+"'><img width='16' height='16' title='Access Issue Link' src='/wheres-the-water/pics/warning.png' /></a>";
             }
 
             return linksContent;
         }
         function linksContent2(riverSection) {
-            var linksContent = "<a target='_blank' rel='noopener' href='http://apps.sepa.org.uk/waterlevels/default.aspx?sd=t&lc="+riverSection['gauge_location_code']+"'><img title='SEPA gauge link' src='/wheres-the-water/pics/graph-icon.png'/> SEPA Gauge </a><br />";
-            linksContent += "<a target='_blank' rel='noopener' href='http://riverlevels.mobi/SiteDetails/Index/"+riverSection['gauge_location_code']+"'><img  title='SEPA gauge link - mobile friendly' src='/wheres-the-water/pics/phone-icon.png'/> SEPA Gauge Mobile Site</a><br />";
+            var linksContent = "<a target='_blank' rel='noopener' href='http://apps.sepa.org.uk/waterlevels/default.aspx?sd=t&lc="+riverSection['gauge_location_code']+"'><img width='16' height='16' title='SEPA gauge link' src='/wheres-the-water/pics/graph-icon.png'/> SEPA Gauge </a><br />";
+            linksContent += "<a target='_blank' rel='noopener' href='http://riverlevels.mobi/SiteDetails/Index/"+riverSection['gauge_location_code']+"'><img width='16' height='16' title='SEPA gauge link - mobile friendly' src='/wheres-the-water/pics/phone-icon.png'/> SEPA Gauge Mobile Site</a><br />";
             linksContent += "<a target='_blank' rel='noopener' href='https://www.openstreetmap.org/?mlat="+riverSection['latitude']+"&mlon="+riverSection['longitude']+"#map=12/"
-                            +riverSection['latitude']+"/"+riverSection['longitude']+"'><img title='Open maps Link' src='/wheres-the-water/pics/osm.png' width='22' height='22' /> OpenStreetMap</a><br />";
-            linksContent += "<a href='geo:"+riverSection['latitude']+","+riverSection['longitude']+"'><img title='Geo reference' src='/wheres-the-water/pics/22-apps-marble.png' width='22' height='22' /> Mobile Phone Map Link</a><br />";
+                            +riverSection['latitude']+"/"+riverSection['longitude']+"'><img width='16' height='16' title='Open maps Link' src='/wheres-the-water/pics/osm.png' /> OpenStreetMap</a><br />";
+            linksContent += "<a href='geo:"+riverSection['latitude']+","+riverSection['longitude']+"'><img title='Geo reference' src='/wheres-the-water/pics/22-apps-marble.png' width='16' height='16' /> Mobile Phone Map Link</a><br />";
 
             if ('guidebook_link' in riverSection && !riverSection['guidebook_link'].length == 0) {
-                linksContent += "<a target='_blank' rel='noopener' href='"+riverSection['guidebook_link']+"'><img title='UKRGB Link' src='/wheres-the-water/pics/ukrgb.ico'/> UKRGB</a><br />";
+                linksContent += "<a target='_blank' rel='noopener' href='"+riverSection['guidebook_link']+"'><img width='16' height='16' title='UKRGB Link' src='/wheres-the-water/pics/ukrgb.ico'/> UKRGB</a><br />";
             }
             if ('sca_guidebook_no' in riverSection && !riverSection['sca_guidebook_no'].length == 0) {
-                linksContent += "<img title='SCA WW Guidebook number' src='/wheres-the-water/pics/sca.png' /> SCA WW Guidebook No "+riverSection['sca_guidebook_no']+"<br />";
+                linksContent += "<img width='16' height='16' title='SCA WW Guidebook number' src='/wheres-the-water/pics/sca.png' /> SCA WW Guidebook No "+riverSection['sca_guidebook_no']+"<br />";
             }
             if ('access_issue' in riverSection && !riverSection['access_issue'].length == 0) {
-                linksContent += "<a target='_blank' rel='noopener' href='"+riverSection['access_issue']+"'><img title='Access Issue Link' src='/wheres-the-water/pics/warning.png' /> Access Issue</a><br />";
+                linksContent += "<a target='_blank' rel='noopener' href='"+riverSection['access_issue']+"'><img width='16' height='16' title='Access Issue Link' src='/wheres-the-water/pics/warning.png' /> Access Issue</a><br />";
             }
 
             return linksContent;
@@ -475,7 +475,7 @@ jQuery(document).ready( function(){
                     tidyStatusString(waterLevelValue) + 
                     ") <img src='" + iconBase + waterLevelValue + ext + "' /></h4>" +
                     "<p><span class='js-info'>Info</span> / <span class='js-calib-table link' style='text-decoration: underline; color: blue; cursor: pointer'>Calibrations</span> / <span class='js-chart-weekly link' style='text-decoration: underline; color: blue; cursor: pointer'>Weekly Chart</span> / <span class='js-chart-monthly link' style='text-decoration: underline; color: blue; cursor: pointer'>Monthly Chart</span> / <span class='js-chart-yearly link' style='text-decoration: underline; color: blue; cursor: pointer'>Yearly Chart</span></p>" +
-                    "<p class='js-info-content'><img src='/wheres-the-water/pics/clock.png'/> Last reading " + currentReadingTime +
+                    "<p class='js-info-content'><img width='16' height='16' src='/wheres-the-water/pics/clock.png'/> Last reading " + currentReadingTime +
                     "<br />" + sectionLinks + "</p>" + riverReadingsTable +
                     "<p class='js-chart-weekly-content' style='display: none'>" +
                     "<a href='/wheres-the-water/charts/"+riverFilename+"-weekly.png'>"+
