@@ -18,11 +18,13 @@ require_once('GrabSepaRiverReading.php');
 
 class GrabSepaRivers {
     const DATADIR = 'data';
-    const TIMESTAMP = 'rivers_download_timestamp';
+    const TIMESTAMP = 'RIVERS_DOWNLOAD_TIMESTAMP';
     const SEPA_DOWNLOAD_PERIOD = 300; // 60 * 5; // make sure current download is no older than 5 minutes
     const SEPA_URL = 'http://apps.sepa.org.uk/database/riverlevels/';
     const RIVERS_READINGS_JSON = 'rivers-readings.json';
     const DOWNLOAD_LOCK_TIMEOUT = 3600; // 60 * 60; // remove download-lock if older than an hour, it means something crashed
+    const DOWNLOAD_READINGS_TIMESTAMP = 'DOWNLOAD-READINGS-TIMESTAMP';
+    const DOWNLOAD_LOCK = 'DOWNLOAD-LOCK';
     public $filename;
     public $timestampFile;
     public $downloadLockFile;
@@ -31,7 +33,8 @@ class GrabSepaRivers {
     function __construct() {
         $this->filename = ROOT . '/' . self::DATADIR . '/' . self::RIVERS_READINGS_JSON;
         $this->timestampFile = ROOT . '/' . self::DATADIR . '/' . self::TIMESTAMP;
-        $this->downloadLockFile = ROOT . '/' . self::DATADIR . '/' . "DOWNLOAD-LOCK";
+        $this->downloadLockFile = ROOT . '/' . self::DATADIR . '/' . self::DOWNLOAD_LOCK;
+        $this->downloadReadingsTimestampFile = ROOT . '/' . self::DATADIR .'/' . self::DOWNLOAD_READINGS_TIMESTAMP;
         $this->riversReadingsData = array();
     }
 
@@ -39,7 +42,8 @@ class GrabSepaRivers {
     public function doGrabSepaRiversReadings($riverSectionsData, $force = false) {
         $this->riverSectionsData = $riverSectionsData;
         // Remove download-lock if it is an hour old, means download crashed
-        if (time()-filemtime($this->downloadLockFile) > self::DOWNLOAD_LOCK_TIMEOUT) {
+        if (file_exists($this->downloadLockFile) && time()-filemtime($this->downloadLockFile) > self::DOWNLOAD_LOCK_TIMEOUT) {
+            print "<p>Removing DOWNLOAD-LOCK as it is over an hour old</p>";
             unlink($this->downloadLockFile);
         }
         if ($force || !file_exists($this->timestampFile) || time()-filemtime($this->timestampFile) > self::SEPA_DOWNLOAD_PERIOD) {
@@ -73,7 +77,7 @@ class GrabSepaRivers {
                                             );
         }
         $this->writeToJson();
-        $timestampFile = fopen(ROOT . '/' . self::DATADIR .'/download_reading_timestamp', "w") or die("Unable to open file!");
+        $timestampFile = fopen($this->downloadReadingsTimestampFile, "w") or die("Unable to open file!");
         fwrite($timestampFile, time());
     }
 

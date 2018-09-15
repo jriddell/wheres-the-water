@@ -31,6 +31,7 @@ call readFromJson() then $obj->riverSectionsData is an array of rivers with thei
 class RiverSections {
     const RIVER_SECTIONS_JSON = 'river-sections.json';
     const DATADIR = 'data';
+    const DOWNLOAD_READINGS_TIMESTAMP = 'DOWNLOAD-READINGS-TIMESTAMP';
 
     public $riverSectionsData;
     public $filename;
@@ -38,6 +39,7 @@ class RiverSections {
     function __construct() {
         $this->riverSectionsData = array();
         $this->filename = ROOT . '/' . self::DATADIR . '/' . self::RIVER_SECTIONS_JSON;
+        $this->downloadReadingsTimestampFile = ROOT . '/' . self::DATADIR .'/' . self::DOWNLOAD_READINGS_TIMESTAMP;
     }
     /* write data to file */
     function writeToJson() {
@@ -279,7 +281,7 @@ class RiverSections {
 
     //returns time of last download from SEPA
     public function downloadTime() {
-        $timestampFile = fopen(ROOT . '/' . self::DATADIR .'/download_reading_timestamp', "r") or die("Unable to open file!");
+        $timestampFile = fopen($this->downloadReadingsTimestampFile, "r") or die("Unable to open file!");
         $timestamp = fread($timestampFile, 20);
         return date('D d M Y H:i', $timestamp);
     }
