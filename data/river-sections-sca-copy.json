@@ -288,6 +288,7 @@
         "very_high_value": "1.5"
     },
     {
+        "access_issue": "",
         "gauge_location_code": "133089",
         "grade": "2-4(5)",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/west-highlands/river-falloch-upper",
@@ -298,11 +299,12 @@
         "low_value": "1.1",
         "medium_value": "1.3",
         "name": "Falloch (Upper)",
-        "sca_guidebook_no": "",
+        "sca_guidebook_no": "184",
         "scrape_value": "1",
         "very_high_value": "2"
     },
     {
+        "access_issue": "",
         "gauge_location_code": "234178",
         "grade": "4",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/west-highlands/river-spean-spean-bridge-to-lochy-confluence-the-spean-gorge",
@@ -313,7 +315,7 @@
         "low_value": "0.7",
         "medium_value": "1.6",
         "name": "Spean (Gorge)",
-        "sca_guidebook_no": "",
+        "sca_guidebook_no": "144",
         "scrape_value": "0",
         "very_high_value": "3"
     },
