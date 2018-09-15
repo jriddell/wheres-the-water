@@ -1051,7 +1051,7 @@
         "low_value": "10",
         "medium_value": "10",
         "name": "Tweed (Makerstoun)",
-        "sca_guidebook_no": "",
+        "sca_guidebook_no": "306",
         "scrape_value": "10",
         "very_high_value": "10"
     },
@@ -1067,7 +1067,7 @@
         "low_value": "0.6",
         "medium_value": "0.8",
         "name": "Einig",
-        "sca_guidebook_no": "",
+        "sca_guidebook_no": "48",
         "scrape_value": "0.5",
         "very_high_value": "1.2"
     },
