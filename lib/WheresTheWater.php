@@ -447,7 +447,7 @@ jQuery(document).ready( function(){
                     tidyStatusString(trend) + "<br /><b>Last reading</b>: " + currentReadingTime +
                     "<br />" + sectionLinks + "</p>" +
                     "<p class='js-calibrations-content' style='display: none'>" +
-                    riverReadingsTable + "</p>"
+                    riverReadingsTable + "</p>" +
                     "<p class='js-chart-weekly-content' style='display: none'>" +
                     "<a href='/wheres-the-water/charts/"+riverFilename+"-weekly.png'>"+
                     "<img src='/wheres-the-water/charts/"+riverFilename+"-weekly.png' style='max-width: 250px; width: 100%' /></a></p>" +
