@@ -441,7 +441,7 @@ jQuery(document).ready( function(){
                 var riverFilename = getRiverGraphFilename(riverSections[i]);
                 var icon = getWaterLevelIcon(riverSections[i]);
                 var contentString = "<div><p><h4>" + riverSection + "</h4></p>" +
-                    "<p><span class='js-info'>Info</span> / <span class='js-calib-table link'>Calibrations</span> / <span class='js-chart-weekly link' style='text-decoration: underline; color: blue; cursor: pointer'>Weekly Chart</span> / <span class='js-chart-monthly link' style='text-decoration: underline; color: blue; cursor: pointer'>Monthly Chart</span> / <span class='js-chart-yearly link' style='text-decoration: underline; color: blue; cursor: pointer'>Yearly Chart</span></p>" +
+                    "<p><span class='js-info'>Info</span> / <span class='js-calib-table link' style='text-decoration: underline; color: blue; cursor: pointer'>Calibrations</span> / <span class='js-chart-weekly link' style='text-decoration: underline; color: blue; cursor: pointer'>Weekly Chart</span> / <span class='js-chart-monthly link' style='text-decoration: underline; color: blue; cursor: pointer'>Monthly Chart</span> / <span class='js-chart-yearly link' style='text-decoration: underline; color: blue; cursor: pointer'>Yearly Chart</span></p>" +
                     "<p class='js-info-content'><b>Level</b>: " + currentReading + " (" +
                     tidyStatusString(waterLevelValue) + 
                     ") <img src='" + iconBase + waterLevelValue + ext + "' /><br /><b>Trend</b>: " +
