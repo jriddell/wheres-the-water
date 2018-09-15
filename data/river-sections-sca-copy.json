@@ -32,6 +32,7 @@
         "very_high_value": "2.5"
     },
     {
+        "access_issue": "",
         "gauge_location_code": "234287",
         "grade": "",
         "guidebook_link": "",
@@ -42,7 +43,7 @@
         "low_value": "0.9",
         "medium_value": "1.3",
         "name": "Ness",
-        "sca_guidebook_no": "",
+        "sca_guidebook_no": "80",
         "scrape_value": "0",
         "very_high_value": "2"
     },
