@@ -62,6 +62,14 @@ class WheresTheWater {
     color: black;
     text-decoration: none;
 }
+.js-info-content a:link {
+    color: black;
+    text-decoration: none;
+}
+.js-info-content a:visited {
+    color: black;
+    text-decoration: none;
+}
 #map { 
     height: 700px; 
     border: thin solid grey; 
