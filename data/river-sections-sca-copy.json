@@ -411,7 +411,7 @@
         "low_value": "0",
         "medium_value": "1",
         "name": "Tay (Grandtully)",
-        "sca_guidebook_no": "",
+        "sca_guidebook_no": "218",
         "scrape_value": "0",
         "very_high_value": "2"
     },
@@ -427,7 +427,7 @@
         "low_value": "0.7",
         "medium_value": "0.9",
         "name": "Oykel",
-        "sca_guidebook_no": "",
+        "sca_guidebook_no": "19",
         "scrape_value": "0.55",
         "very_high_value": "1.8"
     },
