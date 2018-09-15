@@ -58,6 +58,10 @@ class WheresTheWater {
     border-spacing: 1px;
     display: none;
 }
+.js-info-content a {
+    color: black;
+    text-decoration: none;
+}
 #map { 
     height: 700px; 
     border: thin solid grey; 
