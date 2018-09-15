@@ -440,14 +440,11 @@ jQuery(document).ready( function(){
                 var riverReadingsTable = getRiverReadingsTable(riverSections[i], waterLevelValue);
                 var riverFilename = getRiverGraphFilename(riverSections[i]);
                 var icon = getWaterLevelIcon(riverSections[i]);
-                var contentString = "<div><h4>" + riverSection + currentReading + " (" +
+                var contentString = "<div><h4>" + riverSection + " - " + currentReading + " (" +
                     tidyStatusString(waterLevelValue) + 
                     ") <img src='" + iconBase + waterLevelValue + ext + "' /></h4>" +
                     "<p><span class='js-info'>Info</span> / <span class='js-calib-table link' style='text-decoration: underline; color: blue; cursor: pointer'>Calibrations</span> / <span class='js-chart-weekly link' style='text-decoration: underline; color: blue; cursor: pointer'>Weekly Chart</span> / <span class='js-chart-monthly link' style='text-decoration: underline; color: blue; cursor: pointer'>Monthly Chart</span> / <span class='js-chart-yearly link' style='text-decoration: underline; color: blue; cursor: pointer'>Yearly Chart</span></p>" +
-                    "<p class='js-info-content'><b>Level</b>: " + currentReading + " (" +
-                    tidyStatusString(waterLevelValue) + 
-                    ") <img src='" + iconBase + waterLevelValue + ext + "' /><br /><b>Trend</b>: " +
-                    tidyStatusString(trend) + "<br /><b>Last reading</b>: " + currentReadingTime +
+                    "<p class='js-info-content'><b>Last reading</b>: " + currentReadingTime +
                     "<br />" + sectionLinks + "</p>" + riverReadingsTable +
                     //"<p class='js-calibrations-content' style='display: none'>MOO" + riverReadingsTable + "FOO</p>" +
                     "<p class='js-chart-weekly-content' style='display: none'>" +
