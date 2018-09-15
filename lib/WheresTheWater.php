@@ -423,7 +423,7 @@ jQuery(document).ready( function(){
                 linksContent += "&nbsp; <a target='_blank' rel='noopener' href='"+riverSection['guidebook_link']+"'><img title='UKRGB Link' src='/wheres-the-water/pics/ukrgb.ico'/></a>";
             }
             if ('sca_guidebook_no' in riverSection && !riverSection['sca_guidebook_no'].length == 0) {
-                linksContent += "&nbsp; <img title='SCA WW Guidebook number' src='/wheres-the-water/pics/sca.png' /> "+riverSection['sca_guidebook_no'];
+                linksContent += "&nbsp; <span style='border: thin solid black'><img title='SCA WW Guidebook number' src='/wheres-the-water/pics/sca.png' /> "+riverSection['sca_guidebook_no']+"</span>";
             }
             if ('access_issue' in riverSection && !riverSection['access_issue'].length == 0) {
                 linksContent += "&nbsp; <a target='_blank' rel='noopener' href='"+riverSection['access_issue']+"'><img title='Access Issue Link' src='/wheres-the-water/pics/warning.png' /></a>";
