@@ -16,6 +16,7 @@
         "very_high_value": "1.4"
     },
     {
+        "access_issue": "",
         "gauge_location_code": "9514",
         "grade": "",
         "guidebook_link": "",
@@ -26,7 +27,7 @@
         "low_value": "1.2",
         "medium_value": "1.7",
         "name": "Tweed (Berwick)",
-        "sca_guidebook_no": "",
+        "sca_guidebook_no": "306",
         "scrape_value": "0",
         "very_high_value": "2.5"
     },
