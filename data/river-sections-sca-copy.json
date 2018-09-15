@@ -911,6 +911,7 @@
         "very_high_value": "1.15"
     },
     {
+        "access_issue": "",
         "gauge_location_code": "234247",
         "grade": "3+ (5)",
         "guidebook_link": "",
@@ -921,11 +922,12 @@
         "low_value": "0.5",
         "medium_value": "0.7",
         "name": "Muick",
-        "sca_guidebook_no": "",
+        "sca_guidebook_no": "238",
         "scrape_value": "0.4",
         "very_high_value": "1.2"
     },
     {
+        "access_issue": "",
         "gauge_location_code": "14869",
         "grade": "2 (3)",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/southern-uplands/river-almond-edinburgh",
@@ -936,7 +938,7 @@
         "low_value": "0.6",
         "medium_value": "0.8",
         "name": "Almond (Lothian)",
-        "sca_guidebook_no": "",
+        "sca_guidebook_no": "265",
         "scrape_value": "0.5",
         "very_high_value": "1.2"
     },
