@@ -24,7 +24,9 @@ call readFromJson() then $obj->riverSectionsData is an array of rivers with thei
         "grade": "2-3",
         "guidebook_link": "http://www.ukriversguidebook.co.uk/foo",
         "sca_guidebook_no": "123",
-        "access_issue": "http://www.canoescotland.org/news/river-clyde"
+        "access_issue": "http://www.canoescotland.org/news/river-clyde",
+        "google_mymaps": "https://drive.google.com/open?id=1A3Jqx9E46jVymhbP1-3UNudWxdx4PNuG&usp=sharing",
+        "kml": "http://www.andyjacksonfund.org.uk/wheres-the-water/kml/stanley.kml"
     }
 ]
 */
@@ -128,6 +130,8 @@ class RiverSections {
         $reply .= $this->editRiverFormInputItem("Guidebook Link", "guidebook_link", $riverSection['guidebook_link'], "right");
         $reply .= $this->editRiverFormInputItem("SCA Guidebook No", "sca_guidebook_no", $riverSection['sca_guidebook_no']);
         $reply .= $this->editRiverFormInputItem("Acccess Issue Link", "access_issue", $riverSection['access_issue'], "right");
+        $reply .= $this->editRiverFormInputItem("Google My Maps Link", "google_mymaps", $riverSection['google_mymaps']);
+        $reply .= $this->editRiverFormInputItem("KML Link", "access_issue", $riverSection['kml'], "right");
         return $reply;
     }
 
@@ -163,6 +167,9 @@ class RiverSections {
         $riverSection['guidebook_link'] = $postData['guidebook_link'];
         $riverSection['sca_guidebook_no'] = $postData['sca_guidebook_no'];
         $riverSection['access_issue'] = $postData['access_issue'];
+        $riverSection['google_mymaps'] = $postData['google_mymaps'];
+        $riverSection['kml'] = $postData['kml'];
+
         $this->riverSectionsData[$jsonid] = $riverSection;
         $this->writeToJson();
         return "Updated data for " . $riverSection['name'];
@@ -233,6 +240,8 @@ class RiverSections {
         $riverSection['guidebook_link'] = "";
         $riverSection['sca_guidebook_no'] = "";
         $riverSection['access_issue'] = "";
+        $riverSection['google_mymaps'] = "";
+        $riverSection['kml'] = "";
 
         $reply = "<legend>Add New River Section</legend>";
         $reply .= "<form action='river-section.php' method='post'>\n";
@@ -265,6 +274,8 @@ class RiverSections {
         $riverSection['guidebook_link'] = $postData['guidebook_link'];
         $riverSection['sca_guidebook_no'] = $postData['sca_guidebook_no'];
         $riverSection['access_issue'] = $postData['access_issue'];
+        $riverSection['google_mymaps'] = $postData['google_mymaps'];
+        $riverSection['kml'] = $postData['kml'];
         $this->riverSectionsData[] = $riverSection;
         $this->writeToJson();
         return "Added new river " . $riverSection['name'];
