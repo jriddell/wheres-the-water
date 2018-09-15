@@ -148,11 +148,7 @@ jQuery(document).ready( function(){
 			jQuery('.js-tab-top').removeClass('active');
 			
 			jQuery(this).addClass('active');
-			
-			
-			
 		}
-		
 	});
 });
 </script>
@@ -450,7 +446,7 @@ jQuery(document).ready( function(){
                     ") <img src='" + iconBase + waterLevelValue + ext + "' /><br /><b>Trend</b>: " +
                     tidyStatusString(trend) + "<br /><b>Last reading</b>: " + currentReadingTime +
                     "<br />" + sectionLinks + "</p>" +
-                    "<p class='js-calib-table-content' style='display: none'>" +
+                    "<p class='js-calibrations-content' style='display: none'>" +
                     riverReadingsTable + "</p>"
                     "<p class='js-chart-weekly-content' style='display: none'>" +
                     "<a href='/wheres-the-water/charts/"+riverFilename+"-weekly.png'>"+
@@ -605,7 +601,7 @@ jQuery(document).ready( function(){
                         $('.js-chart-weekly-content').hide();
                         $('.js-chart-monthly-content').hide();
                         $('.js-chart-yearly-content').hide();
-                        $('.js-calib-table-content').hide();
+                        $('.js-calibrations-content').hide();
                         $(this).attr('style', '');
                         $('.js-calib-table').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-chart-weekly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
@@ -620,7 +616,7 @@ jQuery(document).ready( function(){
                         $('.js-chart-weekly-content').hide();
                         $('.js-chart-monthly-content').hide();
                         $('.js-chart-yearly-content').hide();
-                        $('.js-calib-table-content').show();
+                        $('.js-calibrations-content').show();
                         $(this).attr('style', '');
                         $('.js-info').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-chart-weekly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
@@ -632,7 +628,7 @@ jQuery(document).ready( function(){
             $('#map').on('click', '.js-chart-weekly', function(){
                     if (!$(this).hasClass('js-link')){
                         $('.js-info-content').hide();
-                        $('.js-calib-table-content').hide();
+                        $('.js-calibrations-content').hide();
                         $('.js-chart-weekly-content').show();
                         $('.js-chart-monthly-content').hide();
                         $('.js-chart-yearly-content').hide();
@@ -647,7 +643,7 @@ jQuery(document).ready( function(){
             $('#map').on('click', '.js-chart-monthly', function(){
                     if (!$(this).hasClass('js-link')){
                         $('.js-info-content').hide();
-                        $('.js-calib-table-content').hide();
+                        $('.js-calibrations-content').hide();
                         $('.js-chart-weekly-content').hide();
                         $('.js-chart-monthly-content').show();
                         $('.js-chart-yearly-content').hide();
@@ -662,7 +658,7 @@ jQuery(document).ready( function(){
             $('#map').on('click', '.js-chart-yearly', function(){
                     if (!$(this).hasClass('js-link')){
                         $('.js-info-content').hide();
-                        $('.js-calib-table-content').hide();
+                        $('.js-calibrations-content').hide();
                         $('.js-chart-weekly-content').hide();
                         $('.js-chart-monthly-content').hide();
                         $('.js-chart-yearly-content').show();
