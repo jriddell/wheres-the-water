@@ -1018,7 +1018,7 @@
         "low_value": "1.1",
         "medium_value": "1.4",
         "name": "Water of Ruchill",
-        "sca_guidebook_no": "",
+        "sca_guidebook_no": "255",
         "scrape_value": "0.9",
         "very_high_value": "2"
     },
