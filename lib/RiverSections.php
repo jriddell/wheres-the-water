@@ -137,7 +137,7 @@ class RiverSections {
         $reply .= $this->editRiverFormInputItem("SCA Guidebook No", "sca_guidebook_no", $riverSection['sca_guidebook_no']);
         $reply .= $this->editRiverFormInputItem("Acccess Issue Link", "access_issue", $riverSection['access_issue'], "right");
         $reply .= $this->editRiverFormInputItem("Google My Maps Link", "google_mymaps", $riverSection['google_mymaps']);
-        $reply .= $this->editRiverFormInputItem("KML Link", "access_issue", $riverSection['kml'], "right");
+        $reply .= $this->editRiverFormInputItem("KML Link", "kml", $riverSection['kml'], "right");
         return $reply;
     }
 
