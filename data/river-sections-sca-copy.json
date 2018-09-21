@@ -1168,5 +1168,23 @@
         "sca_guidebook_no": "244",
         "scrape_value": "0.15",
         "very_high_value": "0.7"
+    },
+    {
+        "access_issue": "",
+        "gauge_location_code": "234186",
+        "google_mymaps": "",
+        "grade": "3-4(5)",
+        "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/far-north/river-blackwater",
+        "high_value": "0.6",
+        "huge_value": "0.9",
+        "kml": "",
+        "latitude": "57.5685",
+        "longitude": "-4.58164",
+        "low_value": "0.4",
+        "medium_value": "0.4",
+        "name": "Lower Blackwater",
+        "sca_guidebook_no": "",
+        "scrape_value": "0.35",
+        "very_high_value": "0.7"
     }
 ]
