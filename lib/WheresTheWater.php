@@ -479,8 +479,8 @@ jQuery(document).ready( function(){
                 var riverReadingsTable = getRiverReadingsTable(riverSections[i], waterLevelValue);
                 var riverFilename = getRiverGraphFilename(riverSections[i]);
                 var icon = getWaterLevelIcon(riverSections[i]);
-                var contentString = "<div><h4>" + riverSection + "</h4>" +
-                    "&nbsp;&nbsp;&nbsp;<img src='" + iconBase + waterLevelValue + ext + "' /> " +
+                var contentString = "<div><h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + riverSection + "</h4>" +
+                    "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src='" + iconBase + waterLevelValue + ext + "' /> " +
                     tidyStatusString(waterLevelValue) + ", " + currentReading +
                     "<p><span class='js-info'>Info</span> / <span class='js-calib-table link' style='text-decoration: underline; color: blue; cursor: pointer'>Calibrations</span> / <span class='js-chart-weekly link' style='text-decoration: underline; color: blue; cursor: pointer'>Weekly Chart</span> / <span class='js-chart-monthly link' style='text-decoration: underline; color: blue; cursor: pointer'>Monthly Chart</span> / <span class='js-chart-yearly link' style='text-decoration: underline; color: blue; cursor: pointer'>Yearly Chart</span></p>" +
                     "<p class='js-info-content'><img width='16' height='16' src='/wheres-the-water/pics/clock.png'/> Last reading " + currentReadingTime +
