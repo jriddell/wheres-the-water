@@ -612,10 +612,12 @@
     {
         "access_issue": "http://canoescotland.org/news/clyde-crossford",
         "gauge_location_code": "133094",
+        "google_mymaps": "https://drive.google.com/open?id=1J8FELMrZrK2531CXsh7Fldyr6XZDy0kC&usp=sharing",
         "grade": "2/3",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/southern-uplands/clyde-stonebyres-to-crossford",
         "high_value": "1.6",
         "huge_value": "2.2",
+        "kml": "http://canoescotland.org/wheres-the-water/kml/clyde-stonebyres.kmz",
         "latitude": "55.678",
         "longitude": "-3.83818",
         "low_value": "0.5",
