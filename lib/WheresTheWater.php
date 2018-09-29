@@ -54,9 +54,12 @@ class WheresTheWater {
 }
 
 .js-calib-table-content {
-    border-collapse: separate;
-    border-spacing: 1px;
+    border-collapse: collapse;
+    border: 1px solid black;
     display: none;
+}
+.js-calib-table-content td {
+   border: 1px solid black;
 }
 .js-info-content a {
     color: black;
