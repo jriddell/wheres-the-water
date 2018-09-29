@@ -569,7 +569,8 @@ jQuery(document).ready( function(){
                                     '<td style="background-color: ' + boxColors[6] + '">< ' + riverSection['scrape_value'] + '</td>' +
                                 '</tr>' +
                             '</tbody>' +
-                        '</table>';
+                        '</table>' +
+                        '<p>Help Calibrate: <a href="https://goo.gl/forms/nnEOgVkw8ebhygW52">River Level Report form</a>.</p>';
             return riverReadings
         }
         function getRiverGraphFilename(riverSection) {
