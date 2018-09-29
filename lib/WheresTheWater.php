@@ -57,7 +57,7 @@ class WheresTheWater {
     border-collapse: collapse;
     border: 1px solid black;
     display: none;
-    width: 50%;
+    width: 50% !important;
 }
 
 #block-system-main .js-calib-table-content td {
