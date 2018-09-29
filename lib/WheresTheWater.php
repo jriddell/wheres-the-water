@@ -58,16 +58,19 @@ class WheresTheWater {
     border: 1px solid black;
     display: none;
 }
+
 #block-system-main .js-calib-table-content td {
     border: 1px solid black;
     padding: 0px;
     width: 50%;
 }
+
 .js-calib-table-content td {
     border: 1px solid black;
     padding: 0px;
     width: 50%;
 }
+
 .js-info-content a {
     color: black;
     text-decoration: none;
