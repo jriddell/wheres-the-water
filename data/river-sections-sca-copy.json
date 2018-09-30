@@ -356,10 +356,12 @@
     {
         "access_issue": "",
         "gauge_location_code": "14888",
+        "google_mymaps": "https://drive.google.com/open?id=1mVyaoPqAICBmHOkplD0R7ysSZ3UeirgC&usp=sharing",
         "grade": "3/4(5)",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/central-highlands/river-leny-a84-layby-to-lade-inn",
         "high_value": "1.5",
         "huge_value": "2.3",
+        "kml": "http://canoescotland.org/wheres-the-water/kml/leny.kmz",
         "latitude": "56.258",
         "longitude": "-4.2857",
         "low_value": "0.7",
