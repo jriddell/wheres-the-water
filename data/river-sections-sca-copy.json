@@ -776,10 +776,12 @@
     {
         "access_issue": "http://canoescotland.org/news/glen-orchy-bailey-bridge-works-and-tree-felling",
         "gauge_location_code": "133087",
+        "google_mymaps": "https://drive.google.com/open?id=1i64desUTuyjWXxwc-gpANxGz2pQJeGIZ&usp=sharing",
         "grade": "3-5",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/west-highlands/river-orchy-bridge-of-orchy-to-falls-of-orchy",
         "high_value": "1.1",
         "huge_value": "2",
+        "kml": "http://canoescotland.org/wheres-the-water/kml/orchy.kmz",
         "latitude": "56.5176",
         "longitude": "-4.7709",
         "low_value": "0.6",
