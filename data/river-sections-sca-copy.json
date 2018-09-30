@@ -404,10 +404,12 @@
     {
         "access_issue": "http://canoescotland.org/news/river-tay-grandtully-rapids",
         "gauge_location_code": "14935",
+        "google_mymaps": "https://drive.google.com/open?id=1NyCGONhCSxE-2EeOV_DU7_LTFJTzZaJR&usp=sharing",
         "grade": "2(3)",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/central-highlands/river-tay-sca-access-point-to-grandtully",
         "high_value": "1.5",
         "huge_value": "3",
+        "kml": "http://canoescotland.org/wheres-the-water/kml/grandtully.kmz",
         "latitude": "56.6385",
         "longitude": "-3.82874",
         "low_value": "0",
