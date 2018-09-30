@@ -2,10 +2,12 @@
     {
         "access_issue": "",
         "gauge_location_code": "234189",
+        "google_mymaps": "https://drive.google.com/open?id=1IPf8zywLzDxXK26S82mTPMQckW8pdSnY&usp=sharing",
         "grade": "3",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/west-highlands/river-garry",
         "high_value": "1",
         "huge_value": "1.8",
+        "kml": "http://canoescotland.org/wheres-the-water/kml/garry.kmz",
         "latitude": "57.0759",
         "longitude": "-4.84497",
         "low_value": "0.6",
