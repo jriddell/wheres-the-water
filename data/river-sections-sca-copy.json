@@ -874,10 +874,12 @@
     {
         "access_issue": "",
         "gauge_location_code": "14933",
+        "google_mymaps": "https://drive.google.com/open?id=1gUwotl2KhJWLXdT0mW1LO8eHCXpDZMsF&usp=sharing",
         "grade": "4",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/central-highlands/river-dochart-falls-of-dochart",
         "high_value": "0.8",
         "huge_value": "1.2",
+        "kml": "http://canoescotland.org/wheres-the-water/kml/dochart.kmz",
         "latitude": "56.466841",
         "longitude": "-4.312733",
         "low_value": "0.5",
