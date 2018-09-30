@@ -970,10 +970,12 @@
     {
         "access_issue": "",
         "gauge_location_code": "14979",
+        "google_mymaps": "https://drive.google.com/open?id=1TfqoftceHblbyeimd0HgvATx3ouL5H1K&usp=sharing",
         "grade": "1-2",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/southern-uplands/river-tweed-peel-to-fairnilee-farm",
         "high_value": "10",
         "huge_value": "10",
+        "kml": "http://canoescotland.org/wheres-the-water/kml/fairnilee.kmz",
         "latitude": "55.5838",
         "longitude": "-2.8605",
         "low_value": "10",
