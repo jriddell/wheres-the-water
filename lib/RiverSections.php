@@ -398,7 +398,7 @@ class RiverSections {
         $linkContent .= "&nbsp; <a target='_blank' rel='noopener' href='/wheres-the-water/charts/${filename}-weekly.png'><img title='Weekly Chart' src='/wheres-the-water/pics/chart.png' /></a>";
         $linkContent .= "&nbsp; <a target='_blank' rel='noopener' href='/wheres-the-water/charts/${filename}-monthly.png'><img title='Monthly Chart' src='/wheres-the-water/pics/chart-monthly.png' /></a>";
         $linkContent .= "&nbsp; <a target='_blank' rel='noopener' href='/wheres-the-water/charts/${filename}-yearly.png'><img title='Yearly Chart' src='/wheres-the-water/pics/chart-yearly.png' /></a>";
-        $linkContent. .= "</div><!--riverLinks-->";
+        $linkContent .= "</div><!--riverLinks-->";
         
         //User friendly water level values
         $waterLevelValueReadable = array('EMPTY'=>'Empty', 'SCRAPE'=>'Scrape', 'LOW'=>'Low', 'MEDIUM'=>'Medium', 'HIGH'=>'High', 'VERY_HIGH'=>'Very High', 'HUGE'=>'Huge', 'NO_GUAGE_DATA'=>'No Gauge Data', 'OLD_DATA'=>'Old Data', 'NEEDS_CALIBRATIONS'=>'Needs Calibrations');
