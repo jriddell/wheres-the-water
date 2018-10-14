@@ -50,8 +50,6 @@ table a {
 require_once('../wheres-the-water/lib/RiverSections.php');
 $riverSections = new RiverSections();
 $riverSections->readFromJson();
-print "<p>Readings downloaded from SEPA at " . $riverSections->downloadTime() . "</p>\n";
-print "<p>Most recent SEPA reading: " . $riverSections->calculateMostRecentReading() . "</p>\n";
 ?>
 
 <p><a href="/wtw/map">Simple Map View</a></p>
