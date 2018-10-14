@@ -36,6 +36,10 @@ table a {
 .hide {
     display: none;
 }
+.riverLinks {
+    size: smaller;
+    color: green;
+}
 
 </style>
 

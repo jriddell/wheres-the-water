@@ -367,7 +367,7 @@ class RiverSections {
             $waterLevelValue = "NEEDS_CALIBRATIONS";
         }
 
-        $linkContent = "<a target='_blank' rel='noopener' href='http://apps.sepa.org.uk/waterlevels/default.aspx?sd=t&lc=".$riverSection['gauge_location_code']."'><img width='16' height='16' title='SEPA gauge link' src='/wheres-the-water/pics/graph-icon.png'/>SEPA Gauge</a>,";
+        $linkContent = "<div class='riverLinks'><a target='_blank' rel='noopener' href='http://apps.sepa.org.uk/waterlevels/default.aspx?sd=t&lc=".$riverSection['gauge_location_code']."'><img width='16' height='16' title='SEPA gauge link' src='/wheres-the-water/pics/graph-icon.png'/>SEPA Gauge</a>,";
         $linkContent .= "&nbsp; <a target='_blank' rel='noopener' href='http://riverlevels.mobi/SiteDetails/Index/".$riverSection['gauge_location_code']."'><img width='16' height='16' title='SEPA gauge link - mobile friendly' src='/wheres-the-water/pics/phone-icon.png'/>Mobile SEPA Gauge</a>,";
         $linkContent .= "&nbsp; <a target='_blank' rel='noopener' href='https://www.openstreetmap.org/?mlat=".$riverSection['latitude']."&mlon=".$riverSection['longitude']."#map=12/"
                         .$riverSection['latitude']."/".$riverSection['longitude']."'><img  title='Open maps Link' src='/wheres-the-water/pics/osm.png' width='16' height='16' />OpenStreetMap</a>, ";
@@ -398,6 +398,7 @@ class RiverSections {
         $linkContent .= "&nbsp; <a target='_blank' rel='noopener' href='/wheres-the-water/charts/${filename}-weekly.png'><img title='Weekly Chart' src='/wheres-the-water/pics/chart.png' /></a>";
         $linkContent .= "&nbsp; <a target='_blank' rel='noopener' href='/wheres-the-water/charts/${filename}-monthly.png'><img title='Monthly Chart' src='/wheres-the-water/pics/chart-monthly.png' /></a>";
         $linkContent .= "&nbsp; <a target='_blank' rel='noopener' href='/wheres-the-water/charts/${filename}-yearly.png'><img title='Yearly Chart' src='/wheres-the-water/pics/chart-yearly.png' /></a>";
+        $linkContent. .= "</div><!--riverLinks-->";
         
         //User friendly water level values
         $waterLevelValueReadable = array('EMPTY'=>'Empty', 'SCRAPE'=>'Scrape', 'LOW'=>'Low', 'MEDIUM'=>'Medium', 'HIGH'=>'High', 'VERY_HIGH'=>'Very High', 'HUGE'=>'Huge', 'NO_GUAGE_DATA'=>'No Gauge Data', 'OLD_DATA'=>'Old Data', 'NEEDS_CALIBRATIONS'=>'Needs Calibrations');
