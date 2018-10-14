@@ -766,10 +766,12 @@
     {
         "access_issue": "",
         "gauge_location_code": "14887",
+        "google_mymaps": "https://drive.google.com/open?id=1ERN7VTJIDuoXAmzK7Ctr2DVjAXgopfiG&usp=sharing",
         "grade": "2",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/central-highlands/river-teith",
         "high_value": "1.5",
         "huge_value": "3",
+        "kml": "http://canoescotland.org/wheres-the-water/kml/teith.kmz",
         "latitude": "56.1903",
         "longitude": "-4.08485",
         "low_value": "0.5",
