@@ -36,7 +36,7 @@ table a {
 .hide {
     display: none;
 }
-.riverLinks a {
+.riverLinks a, .riverLinks {
     size: smaller;
     color: green;
 }
