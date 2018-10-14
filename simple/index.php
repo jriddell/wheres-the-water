@@ -38,7 +38,6 @@ table a {
 }
 .riverLinks a, .riverLinks {
     font-size: small;
-    color: green;
 }
 .riverLinks {
     width: 20em;
