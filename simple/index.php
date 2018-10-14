@@ -40,7 +40,7 @@ table a {
     font-size: smaller;
     color: green;
 }
-.riverSectionRow {
+.riverLinks {
     width: 20em;
 }
 
