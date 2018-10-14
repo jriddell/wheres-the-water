@@ -40,6 +40,9 @@ table a {
     font-size: smaller;
     color: green;
 }
+.riverSectionRow {
+    width: 20em;
+}
 
 </style>
 
