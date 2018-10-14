@@ -395,7 +395,7 @@ class RiverSections {
         $filename = str_replace(" ", "-", $filename);
         $filename = str_replace("(", "", $filename);
         $filename = str_replace(")", "", $filename);
-        $linkContent .= "<a target='_blank' rel='noopener' href='/wheres-the-water/charts/${filename}-weekly.png'>Weekly Chart</a> / ";
+        $linkContent .= "<img width='16' height='16' title='Charts' src='/wheres-the-water/pics/chart-monthly.png' /><a target='_blank' rel='noopener' href='/wheres-the-water/charts/${filename}-weekly.png'>Weekly Chart</a> / ";
         $linkContent .= "<a target='_blank' rel='noopener' href='/wheres-the-water/charts/${filename}-monthly.png'>Monthly Chart</a> / ";
         $linkContent .= "<a target='_blank' rel='noopener' href='/wheres-the-water/charts/${filename}-yearly.png'>Yearly Chart</a><br />";
         $linkContent .= "</div><!--riverLinks-->";
