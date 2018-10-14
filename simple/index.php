@@ -37,7 +37,7 @@ table a {
     display: none;
 }
 .riverLinks a, .riverLinks {
-    size: smaller;
+    font-size: smaller;
     color: green;
 }
 
