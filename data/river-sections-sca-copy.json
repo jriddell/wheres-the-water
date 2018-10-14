@@ -684,10 +684,12 @@
     {
         "access_issue": "",
         "gauge_location_code": "14927",
+        "google_mymaps": "https://drive.google.com/open?id=1ksoUeNPrTjXDickP0idcLMYmsXnDUuFT&usp=sharing",
         "grade": "4/4+",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/north-east/river-north-esk-tribs-to-dalbrack-bridge",
         "high_value": "1.3",
         "huge_value": "1.9",
+        "kml": "http://canoescotland.org/wheres-the-water/kml/lower-north-esk.kmz",
         "latitude": "56.8996",
         "longitude": "-2.87979",
         "low_value": "0.9",
@@ -858,22 +860,6 @@
         "sca_guidebook_no": "220",
         "scrape_value": "0.2",
         "very_high_value": "1.4"
-    },
-    {
-        "access_issue": "",
-        "gauge_location_code": "14927",
-        "grade": "3 (4)",
-        "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/north-east/river-north-esk-scout-camp-to-edzell",
-        "high_value": "0.55",
-        "huge_value": "1.2",
-        "latitude": "56.766877",
-        "longitude": "-2.4933655",
-        "low_value": "0.45",
-        "medium_value": "0.5",
-        "name": "North Esk (Lower) (old gauge)",
-        "sca_guidebook_no": "244",
-        "scrape_value": "0.3",
-        "very_high_value": "0.75"
     },
     {
         "access_issue": "",
