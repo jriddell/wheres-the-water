@@ -368,19 +368,19 @@ class RiverSections {
         }
 
         $linkContent = "<div class='riverLinks'><a target='_blank' rel='noopener' href='http://apps.sepa.org.uk/waterlevels/default.aspx?sd=t&lc=".$riverSection['gauge_location_code']."'><img width='16' height='16' title='SEPA gauge link' src='/wheres-the-water/pics/graph-icon.png'/>SEPA Gauge</a><br />";
-        $linkContent .= "<a target='_blank' rel='noopener' href='http://riverlevels.mobi/SiteDetails/Index/".$riverSection['gauge_location_code']."'><img width='16' height='16' title='SEPA gauge link - mobile friendly' src='/wheres-the-water/pics/phone-icon.png'/>Mobile SEPA Gauge</a><br />";
-        $linkContent .= "<a target='_blank' rel='noopener' href='https://www.openstreetmap.org/?mlat=".$riverSection['latitude']."&mlon=".$riverSection['longitude']."#map=12/"
-                        .$riverSection['latitude']."/".$riverSection['longitude']."'><img  title='Open maps Link' src='/wheres-the-water/pics/osm.png' width='16' height='16' />OpenStreetMap</a><br /> ";
-        $linkContent .= "<a href='geo:".$riverSection['latitude'].",".$riverSection['longitude']."'><img  title='Geo reference' src='/wheres-the-water/pics/22-apps-marble.png' width='16' height='16'' />Mobile Map</a><br />";
+        $linkContent .= " <a target='_blank' rel='noopener' href='http://riverlevels.mobi/SiteDetails/Index/".$riverSection['gauge_location_code']."'><img width='16' height='16' title='SEPA gauge link - mobile friendly' src='/wheres-the-water/pics/phone-icon.png'/>Mobile SEPA Gauge</a><br />";
+        $linkContent .= " <a target='_blank' rel='noopener' href='https://www.openstreetmap.org/?mlat=".$riverSection['latitude']."&mlon=".$riverSection['longitude']."#map=12/"
+                        .$riverSection['latitude']."/".$riverSection['longitude']."'><img title='Open maps Link' src='/wheres-the-water/pics/osm.png' width='16' height='16' />OpenStreetMap</a><br /> ";
+        $linkContent .= " <a href='geo:".$riverSection['latitude'].",".$riverSection['longitude']."'><img  title='Geo reference' src='/wheres-the-water/pics/22-apps-marble.png' width='16' height='16'' />Mobile Map</a><br />";
         
         if (!empty($riverSection['guidebook_link'])) {
-            $linkContent .= "<a target='_blank' rel='noopener' href='".$riverSection['guidebook_link']."'><img width='16' height='16' title='UKRGB Link' src='/wheres-the-water/pics/ukrgb.ico'/>UKRGB</a><br />";
+            $linkContent .= "<a target='_blank' rel='noopener' href='".$riverSection['guidebook_link']."'><img width='16' height='16' title='UKRGB Link' src='/wheres-the-water/pics/ukrgb.ico'/> UKRGB</a><br />";
         }
         if (!empty($riverSection['sca_guidebook_no'])) {
-            $linkContent .= "<img width='16' height='16' title='SCA WW Guidebook number' src='/wheres-the-water/pics/sca.png' />SCA Guidebook No ".$riverSection['sca_guidebook_no']."<br />";
+            $linkContent .= "<img width='16' height='16' title='SCA WW Guidebook number' src='/wheres-the-water/pics/sca.png' /> SCA Guidebook No ".$riverSection['sca_guidebook_no']."<br />";
         }
         if (!empty($riverSection['access_issue'])) {
-            $linkContent .= "<a target='_blank' rel='noopener' href='".$riverSection['access_issue']."'><img width='16' height='16' title='Access Issue Link' src='/wheres-the-water/pics/warning.png' />Access Issue</a><br />";
+            $linkContent .= "<a target='_blank' rel='noopener' href='".$riverSection['access_issue']."'><img width='16' height='16' title='Access Issue Link' src='/wheres-the-water/pics/warning.png' /> Access Issue</a><br />";
         }
         /* TODO port to PHP
         if ('google_mymaps' in riverSection && !riverSection['google_mymaps'].length == 0) {
@@ -395,7 +395,7 @@ class RiverSections {
         $filename = str_replace(" ", "-", $filename);
         $filename = str_replace("(", "", $filename);
         $filename = str_replace(")", "", $filename);
-        $linkContent .= "<img width='16' height='16' title='Charts' src='/wheres-the-water/pics/chart-monthly.png' /><a target='_blank' rel='noopener' href='/wheres-the-water/charts/${filename}-weekly.png'>Weekly Chart</a> / ";
+        $linkContent .= "<img width='16' height='16' title='Charts' src='/wheres-the-water/pics/chart-monthly.png' /> <a target='_blank' rel='noopener' href='/wheres-the-water/charts/${filename}-weekly.png'>Weekly Chart</a> / ";
         $linkContent .= "<a target='_blank' rel='noopener' href='/wheres-the-water/charts/${filename}-monthly.png'>Monthly Chart</a> / ";
         $linkContent .= "<a target='_blank' rel='noopener' href='/wheres-the-water/charts/${filename}-yearly.png'>Yearly Chart</a><br />";
         $linkContent .= "</div><!--riverLinks-->";

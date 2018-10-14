@@ -89,6 +89,7 @@ class WheresTheWater {
 .riverLinks a, .riverLinks {
     font-size: small;
     text-decoration: none;
+    color: black;
 }
 .riverLinks {
     width: 20em;
