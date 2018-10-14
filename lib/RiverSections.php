@@ -385,14 +385,9 @@ class RiverSections {
         if (!empty($riverSection['google_mymaps'])) {
             $linkContent .= "<a target='_blank' rel='noopener' href='".$riverSection['google_mymaps']."'><img width='16' height='16' title='Google MyMaps Link' src='/wheres-the-water/pics/google-mymaps.png' /> Google MyMaps</a><br />";
         }
-        /* TODO port to PHP 
-        if ('google_mymaps' in riverSection && !riverSection['google_mymaps'].length == 0) {
-            linksContent += "<a target='_blank' rel='noopener' href='"+riverSection['google_mymaps']+"'><img width='16' height='16' title='Google MyMaps' src='/wheres-the-water/pics/google-mymaps.png' /> Google MyMaps</a><br />";
+        if (!empty($riverSection['kml'])) {
+            $linkContent .= "<a target='_blank' rel='noopener' href='".$riverSection['kml']."'><img width='16' height='16' title='KML Map' src='/wheres-the-water/pics/kml.png' /> KML Map</a><br />";
         }
-        if ('kml' in riverSection && !riverSection['kml'].length == 0) {
-            linksContent += "<a target='_blank' rel='noopener' href='"+riverSection['kml']+"'><img width='16' height='16' title='KML' src='/wheres-the-water/pics/kml.png' /> KML</a><br />";
-        }
-        */
         /* Render the picture */
         $filename = strtolower($riverSection['name']);
         $filename = str_replace(" ", "-", $filename);
