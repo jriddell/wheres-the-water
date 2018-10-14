@@ -386,7 +386,7 @@ class RiverSections {
             $linkContent .= "<a target='_blank' rel='noopener' href='".$riverSection['google_mymaps']."'><img width='16' height='16' title='Google MyMaps Link' src='/wheres-the-water/pics/google-mymaps.png' /> Google MyMaps</a><br />";
         }
         if (!empty($riverSection['kml'])) {
-            $linkContent .= "<a target='_blank' rel='noopener' href='".$riverSection['kml']."'><img width='16' height='16' title='KML Map' src='/wheres-the-water/pics/kml.png' /> KML Map</a><br />";
+            $linkContent .= "<a target='_blank' rel='noopener' href='".$riverSection['kml']."'><img width='16' height='16' title='KML Map' src='/wheres-the-water/pics/kml.png' /> KML Map Layer</a><br />";
         }
         /* Render the picture */
         $filename = strtolower($riverSection['name']);
