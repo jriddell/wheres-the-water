@@ -58,12 +58,10 @@ print "<p>Most recent SEPA reading: " . $riverSections->calculateMostRecentReadi
 
     	<div class="clearfix">
             <div style="float: left; margin-right: 1em">
-                <p><b>Data Last Polled</b></p>
-                <p><?php print $riverSections->downloadTime() ?></p>
-                <p><b>Most Recent SEPA Reading</b></p>
-                <p><?php print $riverSections->calculateMostRecentReading() ?></p>
-                
+                <p><b>Data Last Polled</b> <?php print $riverSections->downloadTime() ?></p>
+                <p><b>Most Recent SEPA Reading</b> <?php print $riverSections->calculateMostRecentReading() ?></p>
             </div>
+            <!--
             <div style="float: left">
                 <p><b>Symbols Key</b></p>
                 <p><img src='/wheres-the-water/pics/graph-icon.png' /> SEPA gauge graph</p>
@@ -79,6 +77,7 @@ print "<p>Most recent SEPA reading: " . $riverSections->calculateMostRecentReadi
                 <p><img title='Monthly Chart' src='/wheres-the-water/pics/chart-monthly.png' /> Monthly River Level Chart</p>
                 <p><img title='Yearly Chart' src='/wheres-the-water/pics/chart-yearly.png' /> Yearly River Level Chart</p>
             </div>
+            -->
         </div>
             			
 <br clear="all" />        	
