@@ -137,7 +137,7 @@ class WheresTheWater {
                     <th class='clickable' id='js-river-grade'>Grade <span class='order-arrow'></span></th>
                     <th class='clickable' id='js-river-level'>Level <span class='order-arrow'></span></th>
                     <th>Trend</th>
-                    <th>Link</th>
+                    <th>Links</th>
                 </tr>
             <?php $riverSections->printTable();?>
             </table>
