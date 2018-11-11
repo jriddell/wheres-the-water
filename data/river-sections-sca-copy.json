@@ -460,12 +460,14 @@
         "very_high_value": "1.4"
     },
     {
-        "access_issue": "http://canoescotland.org/news/thurso-river",
+        "access_issue": "http://canoescotland.org/news/hazard-electric-fence-thurso-river-halkirk-section",
         "gauge_location_code": "234231",
+        "google_mymaps": "",
         "grade": "2/3",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/far-north/thurso-river",
         "high_value": "1",
         "huge_value": "2.5",
+        "kml": "",
         "latitude": "58.5822",
         "longitude": "-3.52713",
         "low_value": "0.6",
