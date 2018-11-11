@@ -378,22 +378,6 @@
         "very_high_value": "1.8"
     },
     {
-        "access_issue": "http://canoescotland.org/news/lanarkshire-avon-changes-weir-millheugh",
-        "gauge_location_code": "133084",
-        "grade": "3(4)",
-        "guidebook_link": "",
-        "high_value": "1.4",
-        "huge_value": "2",
-        "latitude": "55.7031",
-        "longitude": "-3.98632",
-        "low_value": "1",
-        "medium_value": "1.2",
-        "name": "Avon (Glasgow) (Upper)",
-        "sca_guidebook_no": "270",
-        "scrape_value": "0.9",
-        "very_high_value": "1.6"
-    },
-    {
         "access_issue": "",
         "gauge_location_code": "133089",
         "grade": "4/5",
