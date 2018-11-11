@@ -882,12 +882,14 @@
         "very_high_value": "1"
     },
     {
-        "access_issue": "",
+        "access_issue": "http://canoescotland.org/news/access-issue-got-ericht",
         "gauge_location_code": "14956",
+        "google_mymaps": "",
         "grade": "2/3(5)",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/central-highlands/river-ericht",
         "high_value": "1.2",
         "huge_value": "1.7",
+        "kml": "",
         "latitude": "56.5999",
         "longitude": "-3.33564",
         "low_value": "0.9",
