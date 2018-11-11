@@ -1178,16 +1178,16 @@
         "grade": "3-4(5)",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/far-north/river-blackwater",
         "high_value": "1",
-        "huge_value": "1.2",
+        "huge_value": "1.5",
         "kml": "",
         "latitude": "57.5685",
         "longitude": "-4.58164",
-        "low_value": "0.8",
-        "medium_value": "0.9",
+        "low_value": "0.5",
+        "medium_value": "0.8",
         "name": "Blackwater (Garve)",
         "sca_guidebook_no": "",
-        "scrape_value": "0.7",
-        "very_high_value": "1.1"
+        "scrape_value": "0.4",
+        "very_high_value": "1.4"
     },
     {
         "access_issue": "",
