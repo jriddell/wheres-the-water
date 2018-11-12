@@ -1222,11 +1222,11 @@
         "kml": "",
         "latitude": "55.3892",
         "longitude": "-3.2453",
-        "low_value": "0.8",
-        "medium_value": "1.0",
+        "low_value": "0.75",
+        "medium_value": "1.1",
         "name": "Ettrick (Upper)",
         "sca_guidebook_no": "310",
-        "scrape_value": "0.75",
+        "scrape_value": "0.7",
         "very_high_value": "1.3"
     }
 ]
