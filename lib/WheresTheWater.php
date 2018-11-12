@@ -504,14 +504,14 @@ jQuery(document).ready( function(){
                     "<p class='js-info-content'><img width='16' height='16' src='/wheres-the-water/pics/clock.png'/> Last reading " + currentReadingTime +
                     "<br />" + sectionLinks + "</p>" + riverReadingsTable +
                     "<p class='js-chart-weekly-content' style='display: none'>" +
-                    "<a href='/wheres-the-water/charts/"+riverFilename+"-weekly.png'>"+
-                    "<img src='/wheres-the-water/charts/"+riverFilename+"-weekly.png' style='max-width: 250px; width: 100%' /></a></p>" +
+                    "<a href='http://canoescotland.org/wheres-the-water/charts/"+riverFilename+"-weekly.png'>"+
+                    "<img src='http://canoescotland.org/wheres-the-water/charts/"+riverFilename+"-weekly.png' style='max-width: 250px; width: 100%' /></a></p>" +
                     "<p class='js-chart-monthly-content' style='display: none'>" +
-                    "<a href='/wheres-the-water/charts/"+riverFilename+"-monthly.png'>"+
-                    "<img src='/wheres-the-water/charts/"+riverFilename+"-monthly.png' style='max-width: 250px; width: 100%' /></a></p>" +
+                    "<a href='http://canoescotland.org/wheres-the-water/charts/"+riverFilename+"-monthly.png'>"+
+                    "<img src='http://canoescotland.org/wheres-the-water/charts/"+riverFilename+"-monthly.png' style='max-width: 250px; width: 100%' /></a></p>" +
                     "<p class='js-chart-yearly-content' style='display: none'>" +
-                    "<a href='/wheres-the-water/charts/"+riverFilename+"-yearly.png'>"+
-                    "<img src='/wheres-the-water/charts/"+riverFilename+"-yearly.png' style='max-width: 250px; width: 100%' /></a></p>" +
+                    "<a href='http://canoescotland.org/wheres-the-water/charts/"+riverFilename+"-yearly.png'>"+
+                    "<img src='http://canoescotland.org/wheres-the-water/charts/"+riverFilename+"-yearly.png' style='max-width: 250px; width: 100%' /></a></p>" +
                     "</div>";
                 var marker = L.marker([riverSections[i]['latitude'], riverSections[i]['longitude']], {icon: icon}).bindPopup(contentString).addTo( map );
                 marker.bindTooltip(riverSection);
