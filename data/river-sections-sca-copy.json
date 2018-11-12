@@ -1210,5 +1210,23 @@
         "sca_guidebook_no": "",
         "scrape_value": "1",
         "very_high_value": "1"
+    },
+    {
+        "access_issue": "",
+        "gauge_location_code": "14987",
+        "google_mymaps": "",
+        "grade": "2/3",
+        "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/southern-uplands/river-ettrick-upper-section",
+        "high_value": "1.2",
+        "huge_value": "1.4",
+        "kml": "",
+        "latitude": "55.3892",
+        "longitude": "-3.2453",
+        "low_value": "0.8",
+        "medium_value": "1.0",
+        "name": "Ettrick (Upper)",
+        "sca_guidebook_no": "310",
+        "scrape_value": "0.75",
+        "very_high_value": "1.3"
     }
 ]
