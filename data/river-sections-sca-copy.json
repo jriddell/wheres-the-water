@@ -2,6 +2,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "234189",
+        "gauge_name": "Craigard",
         "google_mymaps": "https://drive.google.com/open?id=1IPf8zywLzDxXK26S82mTPMQckW8pdSnY&usp=sharing",
         "grade": "3",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/west-highlands/river-garry",
@@ -20,6 +21,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "9514",
+        "gauge_name": "Norham",
         "grade": "1",
         "guidebook_link": "",
         "high_value": "2",
@@ -36,6 +38,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "234287",
+        "gauge_name": "Ness-side",
         "grade": "1/2",
         "guidebook_link": "",
         "high_value": "1.6",
@@ -52,6 +55,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "133073",
+        "gauge_name": "Craigend",
         "grade": "3(4+)",
         "guidebook_link": "",
         "high_value": "0.6",
@@ -68,6 +72,7 @@
     {
         "access_issue": "http://canoescotland.org/news/river-yarrow-fallen-tree-and-wire",
         "gauge_location_code": "14985",
+        "gauge_name": "Philiphaugh",
         "grade": "2/3",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/southern-uplands/river-yarrow-yarrowford-to-generals-brig",
         "high_value": "1.0",
@@ -84,6 +89,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "133111",
+        "gauge_name": "Mainholm",
         "grade": "2/3(4)",
         "guidebook_link": "",
         "high_value": "1",
@@ -100,6 +106,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "234306",
+        "gauge_name": "Shenachie",
         "grade": "3/4 (5)",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/north-east/river-findhorn-randolphs-leap-to-mains-of-sluie",
         "high_value": "0.37",
@@ -116,6 +123,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "234174",
+        "gauge_name": "Bruachrobie",
         "grade": "2",
         "guidebook_link": "",
         "high_value": "1.6",
@@ -132,6 +140,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "234264",
+        "gauge_name": "Little Assynt",
         "grade": "4",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/far-north/river-inver",
         "high_value": "1.2",
@@ -148,6 +157,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "234227",
+        "gauge_name": "Glenmeanie",
         "grade": "2/3",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/far-north/river-meig-upper-section-above-dam",
         "high_value": "0.8",
@@ -164,6 +174,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "14890",
+        "gauge_name": "Kinbuck",
         "grade": "3+(4)",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/central-highlands/river-allan",
         "high_value": "1.3",
@@ -180,6 +191,7 @@
     {
         "access_issue": "http://canoescotland.org/news/stanley-access-2018",
         "gauge_location_code": "14937",
+        "gauge_name": "Ballathie",
         "google_mymaps": "https://drive.google.com/open?id=1A3Jqx9E46jVymhbP1-3UNudWxdx4PNuG&usp=sharing",
         "grade": "2/3",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/central-highlands/river-tay-stanley-to-thistlebrig",
@@ -198,6 +210,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "234306",
+        "gauge_name": "Shenachie",
         "grade": "2/3",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/north-east/river-findhorn-logie-bridge-to-randolphs-leap",
         "high_value": "0.8",
@@ -214,6 +227,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "133123",
+        "gauge_name": "Robstone",
         "grade": "3",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/southern-uplands/water-of-girvan",
         "high_value": "1",
@@ -230,6 +244,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "133080",
+        "gauge_name": "Dryfield",
         "grade": "3",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/west-highlands/river-kelvin-art-galleries-wave",
         "high_value": "1",
@@ -246,6 +261,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "234306",
+        "gauge_name": "Shenachie",
         "grade": "3(4)",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/north-east/river-findhorn-dulsie-bridge-to-logie-bridge",
         "high_value": "0.8",
@@ -262,6 +278,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "14933",
+        "gauge_name": "Killin",
         "grade": "4(5)",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/central-highlands/river-lochay",
         "high_value": "1.3",
@@ -278,6 +295,7 @@
     {
         "access_issue": "http://canoescotland.org/news/hazard-tree-blockage-river-avon",
         "gauge_location_code": "133084",
+        "gauge_name": "Fairholm",
         "google_mymaps": "",
         "grade": "",
         "guidebook_link": "",
@@ -296,6 +314,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "133089",
+        "gauge_name": "Glenfalloch",
         "grade": "2-4(5)",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/west-highlands/river-falloch-upper",
         "high_value": "1.6",
@@ -312,6 +331,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "234178",
+        "gauge_name": "Camisky",
         "grade": "4",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/west-highlands/river-spean-spean-bridge-to-lochy-confluence-the-spean-gorge",
         "high_value": "2.5",
@@ -328,6 +348,7 @@
     {
         "access_issue": "http://canoescotland.org/news/hazard-tree-river-knockando",
         "gauge_location_code": "234167",
+        "gauge_name": "Boat o  Brig",
         "google_mymaps": "",
         "grade": "1-2",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/north-east/river-spey-ballindalloch-to-tandhu-distillery",
@@ -346,6 +367,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "14959",
+        "gauge_name": "Marble Lodge",
         "grade": "4(5)",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/central-highlands/river-tilt",
         "high_value": "1",
@@ -362,6 +384,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "14888",
+        "gauge_name": "Anie",
         "google_mymaps": "https://drive.google.com/open?id=1mVyaoPqAICBmHOkplD0R7ysSZ3UeirgC&usp=sharing",
         "grade": "3/4(5)",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/central-highlands/river-leny-a84-layby-to-lade-inn",
@@ -380,6 +403,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "133089",
+        "gauge_name": "Glenfalloch",
         "grade": "4/5",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/west-highlands/river-falloch-falls-of-falloch-to-loch-lomond",
         "high_value": "1.2",
@@ -396,6 +420,7 @@
     {
         "access_issue": "http://canoescotland.org/news/river-tay-grandtully-rapids",
         "gauge_location_code": "14935",
+        "gauge_name": "Pitnacree",
         "google_mymaps": "https://drive.google.com/open?id=1NyCGONhCSxE-2EeOV_DU7_LTFJTzZaJR&usp=sharing",
         "grade": "2(3)",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/central-highlands/river-tay-sca-access-point-to-grandtully",
@@ -414,6 +439,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "234209",
+        "gauge_name": "Easter Turnaig",
         "grade": "3(6)",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/far-north/river-oykel",
         "high_value": "1.5",
@@ -430,6 +456,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "234306",
+        "gauge_name": "Shenachie",
         "grade": "3(4)",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/north-east/river-findhorn-upper-section-to-dulsie-bridge",
         "high_value": "1",
@@ -446,6 +473,7 @@
     {
         "access_issue": "http://canoescotland.org/news/hazard-electric-fence-thurso-river-halkirk-section",
         "gauge_location_code": "234231",
+        "gauge_name": "Halkirk",
         "google_mymaps": "",
         "grade": "2/3",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/far-north/thurso-river",
@@ -464,6 +492,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "234155",
+        "gauge_name": "Ardachy Bridge",
         "grade": "5",
         "guidebook_link": "",
         "high_value": "0.8",
@@ -480,6 +509,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "133148",
+        "gauge_name": "Canonbie",
         "grade": "3(4)",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/southern-uplands/river-esk-scottish-borders",
         "high_value": "1.3",
@@ -496,6 +526,7 @@
     {
         "access_issue": "http://canoescotland.org/news/fallen-tree-river-nith",
         "gauge_location_code": "133154",
+        "gauge_name": "Drumlanrig",
         "grade": "3/4",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/southern-uplands/river-nith-glen-airlie-picnic-site-to-drumlanrig-bridge",
         "high_value": "1.2",
@@ -512,6 +543,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "234152",
+        "gauge_name": "Alness",
         "grade": "3/4",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/far-north/river-averon",
         "high_value": "1.4",
@@ -528,6 +560,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "234313",
+        "gauge_name": "Skeabost",
         "grade": "3/4",
         "guidebook_link": "",
         "high_value": "1",
@@ -544,6 +577,7 @@
     {
         "access_issue": "http://canoescotland.org/news/bridge-closure-blackwater-netherton-dec-1-31",
         "gauge_location_code": "14956",
+        "gauge_name": "Craighall (Perth)",
         "google_mymaps": "",
         "grade": "4",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/north-east/river-blackwater",
@@ -562,6 +596,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "502896",
+        "gauge_name": "Wheeb Bridge",
         "grade": "4(5)",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/southern-uplands/river-cree",
         "high_value": "1.0",
@@ -578,6 +613,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "116011",
+        "gauge_name": "Claggan",
         "grade": "4(5)",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/west-highlands/river-nevis-steall-gorge-to-polldubh-falls",
         "high_value": "1",
@@ -594,6 +630,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "133097",
+        "gauge_name": "Inverlochy",
         "grade": "5",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/west-highlands/river-lochy-tyndrum",
         "high_value": "1.3",
@@ -610,6 +647,7 @@
     {
         "access_issue": "http://canoescotland.org/news/clyde-crossford",
         "gauge_location_code": "133094",
+        "gauge_name": "Hazelbank",
         "google_mymaps": "https://drive.google.com/open?id=1J8FELMrZrK2531CXsh7Fldyr6XZDy0kC&usp=sharing",
         "grade": "2/3",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/southern-uplands/clyde-stonebyres-to-crossford",
@@ -628,6 +666,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "133108",
+        "gauge_name": "Luss",
         "grade": "4(4+)",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/west-highlands/river-luss",
         "high_value": "0.9",
@@ -644,6 +683,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "234253",
+        "gauge_name": "Kilphedir",
         "grade": "3/4(4+)",
         "guidebook_link": "",
         "high_value": "1.5",
@@ -660,6 +700,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "234217",
+        "gauge_name": "Feshie Bridge",
         "grade": "3(3+)",
         "guidebook_link": "",
         "high_value": "1.3",
@@ -676,6 +717,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "14927",
+        "gauge_name": "Logie Mill",
         "google_mymaps": "",
         "grade": "4/4+",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/north-east/river-north-esk-tribs-to-dalbrack-bridge",
@@ -694,6 +736,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "234289",
+        "gauge_name": "New Kelso",
         "google_mymaps": "",
         "grade": "4+",
         "guidebook_link": "",
@@ -712,6 +755,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "8402",
+        "gauge_name": "Hermitage",
         "grade": "2-4",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/central-highlands/river-braan-upper-section-to-rumbling-bridge",
         "high_value": "1.3",
@@ -728,6 +772,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "234178",
+        "gauge_name": "Camisky",
         "grade": "1 (2/3)",
         "guidebook_link": "",
         "high_value": "1.4",
@@ -744,6 +789,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "234153",
+        "gauge_name": "Apigill",
         "grade": "2",
         "guidebook_link": "",
         "high_value": "0.7",
@@ -760,6 +806,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "14887",
+        "gauge_name": "Bridge of Teith",
         "google_mymaps": "https://drive.google.com/open?id=1ERN7VTJIDuoXAmzK7Ctr2DVjAXgopfiG&usp=sharing",
         "grade": "2",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/central-highlands/river-teith",
@@ -778,6 +825,7 @@
     {
         "access_issue": "http://canoescotland.org/news/glen-orchy-bailey-bridge-works-and-tree-felling",
         "gauge_location_code": "133087",
+        "gauge_name": "Glen Orchy",
         "google_mymaps": "https://drive.google.com/open?id=1i64desUTuyjWXxwc-gpANxGz2pQJeGIZ&usp=sharing",
         "grade": "3-5",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/west-highlands/river-orchy-bridge-of-orchy-to-falls-of-orchy",
@@ -796,6 +844,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "133168",
+        "gauge_name": "Minnoch Bridge",
         "grade": "5",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/southern-uplands/water-of-minnoch-palgowan-bridge-to-stroan-bridge",
         "high_value": "0.8",
@@ -812,6 +861,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "234305",
+        "gauge_name": "Sgodachail",
         "grade": "4 (4+)",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/far-north/river-carron",
         "high_value": "1.5",
@@ -828,6 +878,7 @@
     {
         "access_issue": "http://canoescotland.org/news/river-dee-rope-hazard-ballater",
         "gauge_location_code": "234294",
+        "gauge_name": "Polhollick",
         "grade": "1-3",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/north-east/river-dee-banchory-to-aberdeen",
         "high_value": "1.5",
@@ -844,6 +895,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "14951",
+        "gauge_name": "Comrie Bridge",
         "grade": "3-4(5)",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/central-highlands/river-lyon",
         "high_value": "1",
@@ -860,6 +912,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "14933",
+        "gauge_name": "Killin",
         "google_mymaps": "https://drive.google.com/open?id=1gUwotl2KhJWLXdT0mW1LO8eHCXpDZMsF&usp=sharing",
         "grade": "4",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/central-highlands/river-dochart-falls-of-dochart",
@@ -878,6 +931,7 @@
     {
         "access_issue": "http://canoescotland.org/news/access-issue-got-ericht",
         "gauge_location_code": "14956",
+        "gauge_name": "Craighall (Perth)",
         "google_mymaps": "",
         "grade": "2/3(5)",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/central-highlands/river-ericht",
@@ -896,6 +950,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "8402",
+        "gauge_name": "Hermitage",
         "grade": "4/5",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/central-highlands/river-braan-rumbling-bridge-to-the-hermitage",
         "high_value": "0.9",
@@ -912,6 +967,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "234247",
+        "gauge_name": "Invermuick",
         "grade": "3+ (5)",
         "guidebook_link": "",
         "high_value": "1",
@@ -928,6 +984,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "14869",
+        "gauge_name": "Almondell",
         "grade": "2 (3)",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/southern-uplands/river-almond-edinburgh",
         "high_value": "1",
@@ -944,6 +1001,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "8295",
+        "gauge_name": "Kenmore",
         "grade": "1-2",
         "guidebook_link": "",
         "high_value": "1.0",
@@ -960,6 +1018,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "14979",
+        "gauge_name": "Peebles",
         "google_mymaps": "https://drive.google.com/open?id=1TfqoftceHblbyeimd0HgvATx3ouL5H1K&usp=sharing",
         "grade": "1-2",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/southern-uplands/river-tweed-peel-to-fairnilee-farm",
@@ -978,6 +1037,7 @@
     {
         "access_issue": "http://canoescotland.org/news/tree-hazards-angus-south-esk",
         "gauge_location_code": "14916",
+        "gauge_name": "Gella Bridge",
         "google_mymaps": "",
         "grade": "1/3",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/north-east/south-esk",
@@ -996,6 +1056,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "234292",
+        "gauge_name": "Parkhill",
         "grade": "2-3",
         "guidebook_link": "",
         "high_value": "1.8",
@@ -1012,6 +1073,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "14965",
+        "gauge_name": "Cultybraggan",
         "grade": "3(4+)",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/central-highlands/water-of-ruchill",
         "high_value": "1.7",
@@ -1028,6 +1090,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "356328",
+        "gauge_name": "Loch A Bhraoin",
         "grade": "5",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/far-north/river-cuileig-upper",
         "high_value": "1.28",
@@ -1044,6 +1107,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "533744",
+        "gauge_name": "Boleside",
         "grade": "2",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/southern-uplands/river-tweed-st.-boswells-to-kelso",
         "high_value": "10",
@@ -1060,6 +1124,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "234209",
+        "gauge_name": "Easter Turnaig",
         "google_mymaps": "",
         "grade": "4(5)",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/far-north/river-einig",
@@ -1078,6 +1143,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "234209",
+        "gauge_name": "Easter Turnaig",
         "grade": "4(5)",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/far-north/corriemulzie-river",
         "high_value": "1.2",
@@ -1094,6 +1160,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "133060",
+        "gauge_name": "Auchendrane",
         "grade": "3 (3+)",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/southern-uplands/river-doon-ness-glen",
         "high_value": "1.2",
@@ -1110,6 +1177,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "14990",
+        "gauge_name": "Lindean",
         "google_mymaps": "",
         "grade": "2/3 (3+)",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/southern-uplands/river-ettrick-ettrickbridge-to-selkirk",
@@ -1128,6 +1196,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "15018",
+        "gauge_name": "Abbey St Bathans",
         "grade": "2/3 (4)",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/southern-uplands/river-whiteadder",
         "high_value": "0.9",
@@ -1144,6 +1213,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "15001",
+        "gauge_name": "Hawick",
         "grade": "2 (3-)",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/southern-uplands/river-teviot-martins-bridge-to-riverside-caravan-park",
         "high_value": "1.5",
@@ -1160,6 +1230,7 @@
     {
         "access_issue": "http://canoescotland.org/news/hazard-tree-blockage-river-esk",
         "gauge_location_code": "371579",
+        "gauge_name": "Inveriscandye",
         "google_mymaps": "https://drive.google.com/open?id=1ksoUeNPrTjXDickP0idcLMYmsXnDUuFT&usp=sharing",
         "grade": "3(4)",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/north-east/river-north-esk-scout-camp-to-edzell",
@@ -1178,6 +1249,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "234225",
+        "gauge_name": "Garve",
         "google_mymaps": "",
         "grade": "3-4(5)",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/far-north/river-blackwater",
@@ -1196,6 +1268,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "133149",
+        "gauge_name": "Capenoch",
         "google_mymaps": "",
         "grade": "3 (4/5)",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/southern-uplands/scaur-water",
@@ -1214,6 +1287,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "14987",
+        "gauge_name": "Brockhoperig",
         "google_mymaps": "",
         "grade": "2/3",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/southern-uplands/river-ettrick-upper-section",
