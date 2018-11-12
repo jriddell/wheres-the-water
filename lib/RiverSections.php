@@ -351,6 +351,7 @@ class RiverSections {
 
     private function trForRiver($jsonid, $riverSection, $sepaGaugesData, $riverReadingData) {
         $sepaGaugeLocationCode = $riverSection['gauge_location_code'];
+        $gaugeName = $sepaGaugesData[$sepaGaugeLocationCode]['gauge_name'];
         print "<tr class='riverSectionRow'>\n";
         if (!array_key_exists($sepaGaugeLocationCode, $sepaGaugesData)) {
             //print "\n// Error: no SEPA reading for river " . $riverSection['name'] . "\n";
@@ -367,8 +368,6 @@ class RiverSections {
             $waterLevelValue = "NEEDS_CALIBRATIONS";
         }
 
-        $gauge_id = $riverSection['gauge_location_code'];
-        $gaugeName = $sepaGaugesData[$gauge_id]['gauge_name'];
 
         $linkContent = "<div class='riverLinks'><a target='_blank' rel='noopener' href='http://apps.sepa.org.uk/waterlevels/default.aspx?sd=t&lc=".$riverSection['gauge_location_code']."'><img width='16' height='16' title='SEPA gauge link' src='/wheres-the-water/pics/graph-icon.png'/> SEPA Gauge: ".$gaugeName."</a><br />";
         $linkContent .= " <a target='_blank' rel='noopener' href='http://riverlevels.mobi/SiteDetails/Index/".$riverSection['gauge_location_code']."'><img width='16' height='16' title='SEPA gauge link - mobile friendly' src='/wheres-the-water/pics/phone-icon.png'/> SEPA Gauge Mobile View</a><br />";
@@ -531,6 +530,7 @@ class RiverSections {
             $waterLevelValue = "NEEDS_CALIBRATIONS";
         }
 
+        print "XXXX";
         print "var point$jsonid = new GLatLng(".$riverSection['latitude'].",".$riverSection['longitude'].");\n";
         print "markerOptions = { icon:${waterLevelValue}Icon };\n";
         print "var marker$jsonid = new GMarker(point$jsonid, markerOptions);\n";
