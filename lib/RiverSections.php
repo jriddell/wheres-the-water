@@ -26,7 +26,8 @@ call readFromJson() then $obj->riverSectionsData is an array of rivers with thei
         "sca_guidebook_no": "123",
         "access_issue": "http://www.canoescotland.org/news/river-clyde",
         "google_mymaps": "https://drive.google.com/open?id=1A3Jqx9E46jVymhbP1-3UNudWxdx4PNuG&usp=sharing",
-        "kml": "http://www.andyjacksonfund.org.uk/wheres-the-water/kml/stanley.kml"
+        "kml": "http://www.andyjacksonfund.org.uk/wheres-the-water/kml/stanley.kml",
+        "gauge_name": "Logie"
     }
 ]
 */
