@@ -264,7 +264,8 @@ class RiverSections {
         $grabSepaGauges = new GrabSepaGauges;
         $sepaGaugesData = $grabSepaGauges->sepaData();
         foreach($this->riverSectionsData as $jsonid => $riverSection) {
-            $this->riverSectionsData[$jsonid]['gauge_name'] = $sepaGaugesData[$jsonid]['gauge_name'];
+            $gauge_id = $this->riverSectionsData[$jsonid]['gauge_location_code'];
+            $this->riverSectionsData[$jsonid]['gauge_name'] = $sepaGaugesData[$gauge_id ]['gauge_name'];
         }
     }
 
