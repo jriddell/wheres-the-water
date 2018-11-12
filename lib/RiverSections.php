@@ -257,8 +257,20 @@ class RiverSections {
         return $reply;
     }
 
+    /* Add the SEPA gauge name from the .csv file to the river sections
+    .json so it is accessible from JavaScript */
+    public function mergeInGaugeNames() {
+        $grabSepaGauges = new GrabSepaGauges;
+        $sepaGaugesData = $grabSepaGauges->sepaData();
+        foreach($this->riverSectionsData as $jsonid => $riverSection) {
+            $this->riverSectionsData[$jsonid]['gauge_name'] = $sepaGaugesData[$jsonid]['gauge_name'];
+        }
+    }
+
     /* process add new river submit */
     public function addNewRiverSection($postData) {
+        $this->mergeInGaugeNames();
+
         try {
             $this->validateRiverSectionUpdateData($postData);
         } catch (Exception $e) {
@@ -491,7 +503,7 @@ class RiverSections {
         print "</tr>\n";
     }
 
-    /* javascript for website */
+    /* javascript for website - note this is not used */
     public function outputJavascript() {
         $grabSepaGauges = new GrabSepaGauges;
         $sepaGaugesData = $grabSepaGauges->sepaData();
@@ -513,6 +525,7 @@ class RiverSections {
         }
     }
 
+    /* note this is not used */
     private function jsForRiver($jsonid, $riverSection, $sepaGaugesData, $riverReadingData) {
         $sepaGaugeLocationCode = $riverSection['gauge_location_code'];
         $waterLevelValue = "";
@@ -530,7 +543,6 @@ class RiverSections {
             $waterLevelValue = "NEEDS_CALIBRATIONS";
         }
 
-        print "XXXX";
         print "var point$jsonid = new GLatLng(".$riverSection['latitude'].",".$riverSection['longitude'].");\n";
         print "markerOptions = { icon:${waterLevelValue}Icon };\n";
         print "var marker$jsonid = new GMarker(point$jsonid, markerOptions);\n";
@@ -544,6 +556,7 @@ class RiverSections {
 
     // return the human readable water level (low, medium etc)
     //TODO will puting a space in very high break anything? yep, fix
+    /* Note: this is not used */
     private function waterLevelValue($currentLevel, $riverSection) {
         if ($currentLevel < $riverSection['scrape_value']) {
             return "EMPTY";
