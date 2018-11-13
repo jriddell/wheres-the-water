@@ -1388,6 +1388,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "234274",
+        "gauge_name": "Mar Lodge",
         "google_mymaps": "",
         "grade": "1/3",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/north-east/river-dee-above-braemar-to-potarch",
@@ -1401,6 +1402,25 @@
         "name": "Dee (Grampian) (Top)",
         "notes": "Please send calibrations for this section on with Mar Lodge gauge",
         "sca_guidebook_no": "240",
+        "scrape_value": "1",
+        "very_high_value": "1"
+    },
+    {
+        "access_issue": "",
+        "gauge_location_code": "369548",
+        "google_mymaps": "",
+        "grade": "",
+        "guidebook_link": "",
+        "high_value": "1",
+        "huge_value": "1",
+        "kml": "",
+        "latitude": "57.454986",
+        "longitude": "-2.8075603",
+        "low_value": "1",
+        "medium_value": "1",
+        "name": "Deveron",
+        "notes": "Please send calibrations for this section on Deveron with Huntley gauge. Needs guidebook entry, grade.",
+        "sca_guidebook_no": "",
         "scrape_value": "1",
         "very_high_value": "1"
     }
