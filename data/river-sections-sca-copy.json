@@ -1273,7 +1273,8 @@
         "low_value": "0.5",
         "medium_value": "0.8",
         "name": "Blackwater (Garve)",
-        "sca_guidebook_no": "",
+        "notes": "New gauge Oct 2018 for Blackwater (Lower). Gauge for upper/middle has been removed by SEPA.",
+        "sca_guidebook_no": "051",
         "scrape_value": "0.4",
         "very_high_value": "1.4"
     },
