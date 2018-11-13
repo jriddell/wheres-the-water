@@ -139,6 +139,7 @@ class RiverSections {
         $reply .= $this->editRiverFormInputItem("Acccess Issue Link", "access_issue", $riverSection['access_issue'], "right");
         $reply .= $this->editRiverFormInputItem("Google My Maps Link", "google_mymaps", $riverSection['google_mymaps']);
         $reply .= $this->editRiverFormInputItem("KML Link", "kml", $riverSection['kml'], "right");
+        $reply .= $this->editRiverFormInputItem("Notes", "notes", $riverSection['notes']);
         return $reply;
     }
 
@@ -176,6 +177,7 @@ class RiverSections {
         $riverSection['access_issue'] = $postData['access_issue'];
         $riverSection['google_mymaps'] = $postData['google_mymaps'];
         $riverSection['kml'] = $postData['kml'];
+        $riverSection['notes'] = $postData['notes'];
 
         $this->riverSectionsData[$jsonid] = $riverSection;
         $this->writeToJson();
@@ -249,6 +251,7 @@ class RiverSections {
         $riverSection['access_issue'] = "";
         $riverSection['google_mymaps'] = "";
         $riverSection['kml'] = "";
+        $riverSection['notes'] = "";
 
         $reply = "<legend>Add New River Section</legend>";
         $reply .= "<form action='river-section.php' method='post'>\n";
@@ -296,6 +299,7 @@ class RiverSections {
         $riverSection['access_issue'] = $postData['access_issue'];
         $riverSection['google_mymaps'] = $postData['google_mymaps'];
         $riverSection['kml'] = $postData['kml'];
+        $riverSection['notes'] = $postData['notes'];
         $this->riverSectionsData[] = $riverSection;
         $this->writeToJson();
         return "Added new river " . $riverSection['name'];
@@ -403,6 +407,9 @@ class RiverSections {
         }
         if (!empty($riverSection['kml'])) {
             $linkContent .= "<a target='_blank' rel='noopener' href='".$riverSection['kml']."'><img width='16' height='16' title='KML Map' src='/wheres-the-water/pics/kml.png' /> KML Map Layer</a><br />";
+        }
+        if (!empty($riverSection['notes'])) {
+            $linkContent .= "Notes: ".$riverSection['notes']."<br />";
         }
         /* Render the picture */
         $filename = strtolower($riverSection['name']);
