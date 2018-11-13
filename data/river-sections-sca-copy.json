@@ -1342,6 +1342,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "234237",
+        "gauge_name": "Heugh Head",
         "google_mymaps": "",
         "grade": "2/3",
         "guidebook_link": "",
@@ -1355,6 +1356,25 @@
         "name": "Dye",
         "notes": "Needs calibrations",
         "sca_guidebook_no": "242",
+        "scrape_value": "1",
+        "very_high_value": "1"
+    },
+    {
+        "access_issue": "",
+        "gauge_location_code": "234198",
+        "google_mymaps": "",
+        "grade": "3(5)",
+        "guidebook_link": "",
+        "high_value": "1",
+        "huge_value": "1",
+        "kml": "",
+        "latitude": "57.2396",
+        "longitude": "-3.3890",
+        "low_value": "1",
+        "medium_value": "1",
+        "name": "Avon (Spey)",
+        "notes": "",
+        "sca_guidebook_no": "197",
         "scrape_value": "1",
         "very_high_value": "1"
     }
