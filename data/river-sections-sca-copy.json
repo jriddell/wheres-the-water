@@ -1368,6 +1368,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "234198",
+        "gauge_name": "Delnashaugh",
         "google_mymaps": "",
         "grade": "3(5)",
         "guidebook_link": "",
@@ -1381,6 +1382,25 @@
         "name": "Avon (Spey)",
         "notes": "Please send calibrations for this Dalnashaugh gauge on Avon (Spey). Guidebook says low at 0.8",
         "sca_guidebook_no": "197",
+        "scrape_value": "1",
+        "very_high_value": "1"
+    },
+    {
+        "access_issue": "",
+        "gauge_location_code": "234274",
+        "google_mymaps": "",
+        "grade": "1/3",
+        "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/north-east/river-dee-above-braemar-to-potarch",
+        "high_value": "1",
+        "huge_value": "1",
+        "kml": "",
+        "latitude": "56.9882",
+        "longitude": "-3.5458",
+        "low_value": "1",
+        "medium_value": "1",
+        "name": "Dee (Grampian) (Top)",
+        "notes": "",
+        "sca_guidebook_no": "240",
         "scrape_value": "1",
         "very_high_value": "1"
     }
