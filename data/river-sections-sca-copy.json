@@ -752,6 +752,7 @@
         "low_value": "1.3",
         "medium_value": "1.35",
         "name": "Carron (Wester Ross)",
+        "notes": "New calibrations Nov 2018, thanks Chris and Jonny",
         "sca_guidebook_no": "58",
         "scrape_value": "1.2",
         "very_high_value": "1.5"
@@ -1034,7 +1035,7 @@
         "low_value": "10",
         "medium_value": "10",
         "name": "Tweed (Fairnilee)",
-        "notes": "Please send calibrations for this Peebles gauge",
+        "notes": "Please send calibrations for this Peebles gauge as relevant for Fairnilee",
         "sca_guidebook_no": "306",
         "scrape_value": "10",
         "very_high_value": "10"
@@ -1124,7 +1125,7 @@
         "low_value": "10",
         "medium_value": "10",
         "name": "Tweed (Makerstoun)",
-        "notes": "Please send calibrations for this Boleside gauge at Makerstoun",
+        "notes": "Please send calibrations for this Boleside gauge as relevant for Makerstoun",
         "sca_guidebook_no": "306",
         "scrape_value": "10",
         "very_high_value": "10"
