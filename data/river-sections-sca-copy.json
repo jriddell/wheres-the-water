@@ -1322,6 +1322,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "368014",
+        "gauge_name": "Garthdee",
         "google_mymaps": "",
         "grade": "1",
         "guidebook_link": "",
@@ -1337,5 +1338,24 @@
         "sca_guidebook_no": "240",
         "scrape_value": "0.0",
         "very_high_value": "2"
+    },
+    {
+        "access_issue": "",
+        "gauge_location_code": "234237",
+        "google_mymaps": "",
+        "grade": "2/3",
+        "guidebook_link": "",
+        "high_value": "1",
+        "huge_value": "1",
+        "kml": "",
+        "latitude": "56.964506",
+        "longitude": "-2.575959",
+        "low_value": "1",
+        "medium_value": "1",
+        "name": "Dye",
+        "notes": "Needs calibrations",
+        "sca_guidebook_no": "242",
+        "scrape_value": "1",
+        "very_high_value": "1"
     }
 ]
