@@ -729,6 +729,7 @@
         "low_value": "0.9",
         "medium_value": "1.1",
         "name": "North Esk (Upper)",
+        "notes": "Uses a gauge close to the sea, please send calibrations for Inveriscandye",
         "sca_guidebook_no": "244",
         "scrape_value": "0.8",
         "very_high_value": "1.5"
