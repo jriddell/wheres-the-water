@@ -1254,6 +1254,7 @@
         "low_value": "0.3",
         "medium_value": "0.4",
         "name": "North Esk (Lower)",
+        "notes": "New gauge April 2018, please send calibrations to confirm/adjust.",
         "sca_guidebook_no": "244",
         "scrape_value": "0.14",
         "very_high_value": "0.7"
