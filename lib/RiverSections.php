@@ -392,7 +392,7 @@ class RiverSections {
 
         $linkContent = "<div class='riverLinks'>";
         if (!empty($riverSection['notes'])) {
-            $linkContent .= "<img width='16' height='16' title='Notes' src='/wheres-the-water/pics/notes.png' /> Notes: ".$riverSection['notes']."<br />";
+            $linkContent .= "<img width='16' height='16' title='Notes' src='/wheres-the-water/pics/notes.png' /> <b>Notes:</b> ".$riverSection['notes']."<br />";
         }
         $linkContent .= "<a target='_blank' rel='noopener' href='http://apps.sepa.org.uk/waterlevels/default.aspx?sd=t&lc=".$riverSection['gauge_location_code']."'><img width='16' height='16' title='SEPA gauge link' src='/wheres-the-water/pics/graph-icon.png'/> SEPA Gauge: ".$gaugeName."</a><br />";
         $linkContent .= " <a target='_blank' rel='noopener' href='http://riverlevels.mobi/SiteDetails/Index/".$riverSection['gauge_location_code']."'><img width='16' height='16' title='SEPA gauge link - mobile friendly' src='/wheres-the-water/pics/phone-icon.png'/> SEPA Gauge Mobile View</a><br />";

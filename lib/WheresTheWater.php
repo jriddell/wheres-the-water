@@ -430,7 +430,7 @@ jQuery(document).ready( function(){
         function linksContent2(riverSection) {
             var linksContent = "";
             if ('notes' in riverSection && !riverSection['notes'].length == 0) {
-                linksContent += "<img width='16' height='16' title='Notes' src='/wheres-the-water/pics/notes.png' /> Notes: "+riverSection['notes']+"<br />";
+                linksContent += "<img width='16' height='16' title='Notes' src='/wheres-the-water/pics/notes.png' /> <b>Notes:</b> "+riverSection['notes']+"<br />";
             }
             if ('grade' in riverSection && !riverSection['grade'].length == 0) {
                 linksContent += "<img width='16' height='16' src='/wheres-the-water/pics/grade.png'/> Grade: " + riverSection['grade'] + "<br />";
