@@ -412,7 +412,7 @@ class RiverSections {
             $linkContent .= "<a target='_blank' rel='noopener' href='".$riverSection['kml']."'><img width='16' height='16' title='KML Map' src='/wheres-the-water/pics/kml.png' /> KML Map Layer</a><br />";
         }
         if (!empty($riverSection['notes'])) {
-            $linkContent .= "Notes: ".$riverSection['notes']."<br />";
+            $linkContent .= "<img width='16' height='16' title='Notes' src='/wheres-the-water/pics/notes.png' /> Notes: ".$riverSection['notes']."<br />";
         }
         /* Render the picture */
         $filename = strtolower($riverSection['name']);
