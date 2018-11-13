@@ -662,6 +662,7 @@
         "low_value": "0.5",
         "medium_value": "0.8",
         "name": "Clyde (Stonebyres)",
+        "notes": "Crossford to Hazelbank calibration.  New calibrations from Robin April 2018, please fill in calibrations form to confirm or adjust.",
         "sca_guidebook_no": "268",
         "scrape_value": "0",
         "very_high_value": "2"
