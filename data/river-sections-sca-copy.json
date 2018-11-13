@@ -752,7 +752,7 @@
         "low_value": "1.3",
         "medium_value": "1.35",
         "name": "Carron (Wester Ross)",
-        "notes": "New calibrations Nov 2018, thanks Chris and Jonny",
+        "notes": "New calibrations Nov 2018, thanks Chris and Gavin",
         "sca_guidebook_no": "58",
         "scrape_value": "1.2",
         "very_high_value": "1.5"
@@ -1289,6 +1289,7 @@
         "low_value": "1",
         "medium_value": "1",
         "name": "Scaur Water",
+        "notes": "Also called Scar Water. Only calibration sent has 1 as medium.  Please send more.",
         "sca_guidebook_no": "",
         "scrape_value": "1",
         "very_high_value": "1"
