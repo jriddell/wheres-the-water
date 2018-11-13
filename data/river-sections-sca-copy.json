@@ -1057,6 +1057,7 @@
         "low_value": "0.8",
         "medium_value": "1.0",
         "name": "South Esk (Angus)",
+        "notes": "Calibration adjusted Nov 2018, medium 0.9 &#8594; 1.0.  Thanks Jon.",
         "sca_guidebook_no": "247",
         "scrape_value": "0.7",
         "very_high_value": "1.6"
