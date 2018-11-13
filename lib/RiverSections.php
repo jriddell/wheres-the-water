@@ -121,6 +121,9 @@ class RiverSections {
         if (!array_key_exists('kml', $riverSection)) {
             $riverSection['kml'] = '';
         }
+        if (!array_key_exists('notes', $riverSection)) {
+            $riverSection['notes'] = '';
+        }
         $reply = "";
         $reply .= "<legend>" . $riverSection['name'] . "</legend>";
         $reply .= $this->editRiverFormInputItem("River/Section Name", "rivername", $riverSection['name']);
