@@ -1300,7 +1300,7 @@
         "low_value": "0.75",
         "medium_value": "1.1",
         "name": "Ettrick (Upper)",
-        "notes": "Not many calibrations for higher levels",
+        "notes": "Not many calibrations for higher levels, please send more",
         "sca_guidebook_no": "310",
         "scrape_value": "0.7",
         "very_high_value": "1.3"
