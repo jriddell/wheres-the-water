@@ -35,7 +35,6 @@ class WheresTheWater {
     width: 100% !important;
     background-color: #ffffff;
     color: black;
-    table-layout: fixed;
 }
 
 #river-table td, #river-table th {
