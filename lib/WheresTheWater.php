@@ -34,6 +34,7 @@ class WheresTheWater {
     border-collapse: collapse;
     width: 100%;
     background-color: #ffffff;
+    color: black;
 }
 
 #river-table td, #river-table th {
