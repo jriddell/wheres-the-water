@@ -32,9 +32,9 @@ class WheresTheWater {
 }
 #river-table {
     border-collapse: collapse;
-    width: 100% !important;
     background-color: #ffffff;
     color: black;
+    min-width: 40em;
 }
 
 #river-table td, #river-table th {
