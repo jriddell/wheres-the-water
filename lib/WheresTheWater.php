@@ -35,12 +35,19 @@ class WheresTheWater {
     width: 100%;
     background-color: #ffffff;
     color: black;
+    table-layout: fixed;
 }
 
 #river-table td, #river-table th {
     padding: 0.5em;
     border-bottom: 1px solid #595959;
     text-align: left;
+}
+#river-table td.riverSection {
+    width: 10em;
+}
+#river-table td.currentReading {
+    width: 10em;
 }
 
 #river-readings {
