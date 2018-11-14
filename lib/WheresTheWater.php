@@ -32,7 +32,7 @@ class WheresTheWater {
 }
 #river-table {
     border-collapse: collapse;
-    width: 100%;
+    width: 100% !important;
     background-color: #ffffff;
     color: black;
     table-layout: fixed;
@@ -42,12 +42,6 @@ class WheresTheWater {
     padding: 0.5em;
     border-bottom: 1px solid #595959;
     text-align: left;
-}
-#river-table td.riverSection {
-    width: 10em;
-}
-#river-table td.currentReading {
-    width: 10em;
 }
 
 #river-readings {
