@@ -14,7 +14,7 @@ python -mjson.tool /home/jr/tmp/river-sections.json > /home/jr/tmp/river-section
 if [ -s /home/jr/tmp/river-sections-tidy.json ]; then
     cp /home/jr/tmp/river-sections-tidy.json /home/jr/www/www.andyjacksonfund.org.uk/wheres-the-water/data/river-sections.json
     cp /home/jr/www/www.andyjacksonfund.org.uk/wheres-the-water/data/river-sections.json /home/jr/www/www.andyjacksonfund.org.uk/wheres-the-water/data/river-sections-sca-copy.json 
-    cd /home/jr/www/www.andyjacksonfund.org.uk/wheres-the-water/
+    cd /home/jr/www/www.andyjacksonfund.org.uk/wheres-the-water/data/
     git diff
     git add river-sections-sca-copy.json > /dev/null
     git commit -m 'update river-sections-sca-copy.json from sca server' > /dev/null && git push 2>&1 > /dev/null
