@@ -356,7 +356,7 @@
         "low_value": "0.7",
         "medium_value": "1.6",
         "name": "Spean (Gorge)",
-        "notes": "",
+        "notes": "Gauge is not on this river and often does not reflect well the flow here.",
         "sca_guidebook_no": "144",
         "scrape_value": "0",
         "very_high_value": "3"
