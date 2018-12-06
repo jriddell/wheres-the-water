@@ -56,14 +56,16 @@ class GrabWeatherForecast {
         $html = "";
         foreach($this->weatherForecast['list'] as $forecast) {
             //show weather at 9 o'clock in morning and 3 in afternoon
+            $html .= "<div style='font-size: smaller'>";
             if (date('G', $forecast['dt']) == "9" or date('G', $forecast['dt']) == "15") {
-                $html .= date('D j M Y, G:i', $forecast['dt']);
-                $html .= " ";
+                $html .= date('D G:i', $forecast['dt']);
+                $html .= ":";
                 $html .= $forecast['weather'][0]['description'];
                 $html .= " ";
                 $html .= "<img src='http://openweathermap.org/img/w/".$forecast['weather'][0]['icon'].".png' width='50' height='50'/>";
                 $html .= "<br />";
             }
+            $html .= "</div>";
         }
         return $html;
     }
