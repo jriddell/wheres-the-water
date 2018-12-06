@@ -29,7 +29,7 @@ class GrabWeatherForecast {
                 flush();
                 return False;
             }
-            if (!$this->validateRiverData($weatherData)) {
+            if (!$this->validateWeatherData($weatherData)) {
                 print "<p>Empty OpenWeatherMap file downloaded for " . $gauge_id . "</p>\n";
                 $this->currentReading = -1;
                 flush();
