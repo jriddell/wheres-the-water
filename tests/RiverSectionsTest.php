@@ -3,8 +3,8 @@
    May be copied under the GNU GPL version 3 only
 */
 
-require_once('../lib/RiverSections.php');
 require_once('../config.php');
+require_once('../lib/RiverSections.php');
 
 use PHPUnit\Framework\TestCase;
 

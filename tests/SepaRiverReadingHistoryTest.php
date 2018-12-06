@@ -1,7 +1,7 @@
 <?php
 
-require_once('../lib/SepaRiverReadingHistory.php');
 require_once('../config.php');
+require_once('../lib/SepaRiverReadingHistory.php');
 
 use PHPUnit\Framework\TestCase;
 

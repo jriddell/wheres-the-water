@@ -5,6 +5,7 @@
 
 require_once 'GrabSepaGauges.php';
 require_once 'GrabSepaRivers.php';
+require_once('GrabWeatherForecast.php');
 
 /*
 Class to deal with the river sections data
@@ -366,11 +367,14 @@ class RiverSections {
         }
         foreach($this->riverSectionsData as $jsonid => $riverSection) {
             //read river data and pass to jsForRiver
-            $this->trForRiver($jsonid, $riverSection, $sepaGaugesData, $grabSepaRivers->riversReadingsData[$riverSection['gauge_location_code']]);
+            $forecast = new GrabWeatherForecast();
+            $forecast->doGrabWeatherForecast($riverSection['gauge_location_code'], $riverSection['longitude'], $riverSection['latitude']);
+            
+            $this->trForRiver($jsonid, $riverSection, $sepaGaugesData, $grabSepaRivers->riversReadingsData[$riverSection['gauge_location_code']], $forecast);
         }
     }
 
-    private function trForRiver($jsonid, $riverSection, $sepaGaugesData, $riverReadingData) {
+    private function trForRiver($jsonid, $riverSection, $sepaGaugesData, $riverReadingData, $forecase) {
         $sepaGaugeLocationCode = $riverSection['gauge_location_code'];
         $gaugeName = $sepaGaugesData[$sepaGaugeLocationCode]['gauge_name'];
         print "<tr class='riverSectionRow'>\n";
@@ -513,6 +517,7 @@ class RiverSections {
             }
             print "<td class='$class'$visibility>$val</td>\n";
         }
+        print "<td>".$forecast->printForecast()."</td>";
         print "</tr>\n";
     }
 

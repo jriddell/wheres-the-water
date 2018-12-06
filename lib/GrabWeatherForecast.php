@@ -6,6 +6,10 @@
 /* Downloads and makes available the weather forecast from openweathermap.org
     in config.php set your API key:
     define("OPENWEATHERKEY", "1234abcd1234abcd");
+    call doGrabWeatherForecast() and it will set $this->weatherForecast with the forecast data
+    See format docs at:
+    https://openweathermap.org/forecast5
+    https://openweathermap.org/weather-conditions
 */
 
 class GrabWeatherForecast {
@@ -40,10 +44,17 @@ class GrabWeatherForecast {
         } else {
             $weatherData = file_get_contents($weatherFilePath);
         }
+        $this->weatherForecast = json_decode($weatherData, true);
     }
 
     private function validateWeatherData($weatherData) {
         //TODO
         return true;
+    }
+    
+    public function forecastHtml() {
+        $html = "";
+        $html .= $this->weatherForecast['list'][0]['weather'][0]['description'];
+        return $html;
     }
 }
