@@ -15,6 +15,7 @@ $obj->riversReadingsData = {'1243':
 */
 
 require_once('GrabSepaRiverReading.php');
+require_once('GrabWeatherForecast.php');
 
 class GrabSepaRivers {
     const DATADIR = 'data';
