@@ -44,6 +44,6 @@ class GrabWeatherForecast {
 
     private function validateWeatherData($weatherData) {
         //TODO
-        return true
+        return true;
     }
 }
