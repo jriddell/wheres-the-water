@@ -90,6 +90,7 @@ $riverSections->readFromJson();
         			<th class='clickable' id='js-river-level'>Level <span class='order-arrow'></span></th>
         			<th>Trend</th>
         			<th>Link</th>
+        			<th>Forecast</th>
         		</tr>
         		<?php $riverSections->printTable();?>
         	</table>
