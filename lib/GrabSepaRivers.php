@@ -75,6 +75,8 @@ class GrabSepaRivers {
                                             "trend"=>$river->trend,
                                             "currentReadingTime"=>$river->currentReadingTime
                                             );
+            $forecast = new GrabWeatherForecast();
+            $forecast->doGrabWeatherForecast($riverSection['gauge_location_code'], $riverSection['longitude'], $riverSection['latitude']);
         }
         $this->writeToJson();
         $timestampFile = fopen($this->downloadReadingsTimestampFile, "w") or die("Unable to open file!");
