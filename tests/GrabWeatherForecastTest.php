@@ -23,6 +23,6 @@ final class GrabWeatherForecastTest extends TestCase
 
     public function testForecastHtml() {
         $this->initGrabWeatherForecastTest();
-        $this->assertEquals('light rain', $this->forecast->forecastHtml());
+        $this->assertEquals('Fri 7 Dec 2018, 9:00 light rain http://openweathermap.org/img/w/10d.png<br />Fri 7 Dec 2018, 15:00 light rain http://openweathermap.org/img/w/10d.png<br />Sat 8 Dec 2018, 9:00 overcast clouds http://openweathermap.org/img/w/04d.png<br />Sat 8 Dec 2018, 15:00 light rain http://openweathermap.org/img/w/10d.png<br />Sun 9 Dec 2018, 9:00 clear sky http://openweathermap.org/img/w/01d.png<br />Sun 9 Dec 2018, 15:00 light rain http://openweathermap.org/img/w/10d.png<br />Mon 10 Dec 2018, 9:00 light rain http://openweathermap.org/img/w/10d.png<br />Mon 10 Dec 2018, 15:00 light rain http://openweathermap.org/img/w/10d.png<br />Tue 11 Dec 2018, 9:00 few clouds http://openweathermap.org/img/w/02d.png<br />Tue 11 Dec 2018, 15:00 light rain http://openweathermap.org/img/w/10d.png<br />', $this->forecast->forecastHtml());
     }
 }

@@ -369,12 +369,13 @@ class RiverSections {
             //read river data and pass to jsForRiver
             $forecast = new GrabWeatherForecast();
             $forecast->doGrabWeatherForecast($riverSection['gauge_location_code'], $riverSection['longitude'], $riverSection['latitude']);
+            $forecastHtml = $forecast->forecastHtml();
             
-            $this->trForRiver($jsonid, $riverSection, $sepaGaugesData, $grabSepaRivers->riversReadingsData[$riverSection['gauge_location_code']], $forecast);
+            $this->trForRiver($jsonid, $riverSection, $sepaGaugesData, $grabSepaRivers->riversReadingsData[$riverSection['gauge_location_code']], $forecastHtml);
         }
     }
 
-    private function trForRiver($jsonid, $riverSection, $sepaGaugesData, $riverReadingData, $forecase) {
+    private function trForRiver($jsonid, $riverSection, $sepaGaugesData, $riverReadingData, $forecastHtml) {
         $sepaGaugeLocationCode = $riverSection['gauge_location_code'];
         $gaugeName = $sepaGaugesData[$sepaGaugeLocationCode]['gauge_name'];
         print "<tr class='riverSectionRow'>\n";
@@ -461,7 +462,8 @@ class RiverSections {
             'veryHighValue' => $riverSection['very_high_value'],
             'hugeValue' => $riverSection['huge_value'],
             'gaugeLocationCode' => $riverSection['gauge_location_code'],
-            'link' => $linkContent
+            'link' => $linkContent,
+            'forecast' => $forecastHtml
         );
         
         switch ($infoArray['waterLevelValue']){
@@ -500,7 +502,7 @@ class RiverSections {
         }
         
 
-        $displayedValues = array('riverSection', 'riverGrade', 'waterLevelValueRead', 'trendSymbol', 'link');
+        $displayedValues = array('riverSection', 'riverGrade', 'waterLevelValueRead', 'trendSymbol', 'link', 'forecast');
 
         
         // Populate the table
@@ -517,7 +519,6 @@ class RiverSections {
             }
             print "<td class='$class'$visibility>$val</td>\n";
         }
-        print "<td>".$forecast->printForecast()."</td>";
         print "</tr>\n";
     }
 
