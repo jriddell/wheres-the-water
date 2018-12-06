@@ -18,7 +18,7 @@ class GrabWeatherForecast {
         $this->dataDir = ROOT . '/' . self::DATADIR;
     }
     
-    public function doGrabSepaRiver($gauge_id, $longitude, $latitude) {
+    public function doGrabWeatherForecast($gauge_id, $longitude, $latitude) {
         $weatherFilename = "${gauge_id}-weather.json";
         $weatherFilePath = $this->dataDir . '/' . $weatherFilename;
         $weatherFileURL = $this->forecastAPIURL . "?lat=" . $latitude . "&lon=" . $longitude . "&appid=" . OPENWEATHERKEY;
