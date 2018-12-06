@@ -56,8 +56,11 @@ class GrabWeatherForecast {
         $html = "";
         foreach($this->weatherForecast['list'] as $forecast) {
             //show weather at 9 o'clock in morning and 3 in afternoon
+            $max_forecasts = 6;
+            $i = 0;
             $html .= "<div style='font-size: smaller'>";
-            if (date('G', $forecast['dt']) == "9" or date('G', $forecast['dt']) == "15") {
+            if ($i < $max_forecasts and (date('G', $forecast['dt']) == "9" or date('G', $forecast['dt']) == "15")) {
+                $i++;
                 $html .= date('D G:i', $forecast['dt']);
                 $html .= ":";
                 $html .= $forecast['weather'][0]['description'];
