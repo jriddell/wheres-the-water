@@ -66,7 +66,7 @@ class GrabWeatherForecast {
                 $html .= date('D', $forecast['dt']);
                 $html .= "<br />";
                 $html .= date('G:i', $forecast['dt']);
-                $html .= "</span>&nbsp;";
+                $html .= "&nbsp;</span>";
                 if ($count % 2 == 0) {
                     $html .= "<br />";
                 }
