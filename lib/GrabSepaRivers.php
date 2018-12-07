@@ -83,7 +83,8 @@ class GrabSepaRivers {
             $forecast->doGrabWeatherForecast($riverSection['gauge_location_code'], $riverSection['longitude'], $riverSection['latitude']);
             $sectionForecastsHtml[$riverSection['gauge_location_code']] = $forecast->forecastHtml();
         }
-        $fp = fopen($file->sectionForecastsFile, 'w');
+        print "<p>Written forecast HTML to " . self::SECTION_FORECASTS_FILE . "</p>\n";
+        $fp = fopen($this->sectionForecastsFile, 'w');
         fwrite($fp, json_encode($sectionForecastsHtml, JSON_PRETTY_PRINT));
         fclose($fp);
 
