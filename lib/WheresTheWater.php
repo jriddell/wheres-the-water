@@ -98,6 +98,12 @@ class WheresTheWater {
 .riverLinks {
     width: 20em;
 }
+.riverForecast {
+    width: 10em;
+    font-size: smaller;
+    display: table-cell;
+/*    line-height: 0px;*/
+}
 
 </style>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
