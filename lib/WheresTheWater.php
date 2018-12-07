@@ -484,6 +484,11 @@ jQuery(document).ready( function(){
                 var riverFilename = getRiverGraphFilename(riverSections[i]);
                 var icon = getWaterLevelIcon(riverSections[i]);
                 //TODO get weather forecast html in JS here
+                var sectionForecasts;
+                var sectionForecastsFile = $.getJSON("/wheres-the-water/data/section-forecasts.json", function(data) {
+                        sectionForecasts = data;
+                    }
+                );
                 var contentString = "<div><h4 style='padding-left: 30px;'>" + riverSection + "</h4>" +
                     "<p style='padding-left: 30px;'><img src='" + iconBase + waterLevelValue + ext + "' /> " +
                     tidyStatusString(waterLevelValue) + ", " + currentReading + "</p>" +
@@ -499,6 +504,7 @@ jQuery(document).ready( function(){
                     "<p class='js-chart-yearly-content' style='display: none'>" +
                     "<a href='http://canoescotland.org/wheres-the-water/charts/"+riverFilename+"-yearly.png'>"+
                     "<img src='http://canoescotland.org/wheres-the-water/charts/"+riverFilename+"-yearly.png' style='max-width: 250px; width: 100%' /></a></p>" +
+                    "<p>" + sectionForecasts[riverSections[i]['gauge_location_code']] + "</p>" +
                     "</div>";
                 var marker = L.marker([riverSections[i]['latitude'], riverSections[i]['longitude']], {icon: icon}).bindPopup(contentString).addTo( map );
                 marker.bindTooltip(riverSection);
