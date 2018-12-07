@@ -60,7 +60,7 @@ class GrabWeatherForecast {
             $i = 0;
             $html .= "<div style='font-size: smaller'>";
             if ($i < $max_forecasts and (date('G', $forecast['dt']) == "9" or date('G', $forecast['dt']) == "15")) {
-                $i++;
+                $i = $i + 1;
                 $html .= date('D G:i', $forecast['dt']);
                 $html .= ":";
                 $html .= $forecast['weather'][0]['description'];
