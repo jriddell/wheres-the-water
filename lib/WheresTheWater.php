@@ -407,7 +407,13 @@ jQuery(document).ready( function(){
                 riverReadings = data;
             }
         );
-        var bothFiles = $.when(riverSectionsFile, riverReadingsFile);
+        var sectionForecasts;
+        var sectionForecastsFile = $.getJSON("/wheres-the-water/data/section-forecasts.json", function(data) {
+                sectionForecasts = data;
+            }
+        );
+
+        var bothFiles = $.when(riverSectionsFile, riverReadingsFile, sectionForecasts);
 
         bothFiles.done(function () {
             mergeRiverData();
@@ -484,11 +490,6 @@ jQuery(document).ready( function(){
                 var riverFilename = getRiverGraphFilename(riverSections[i]);
                 var icon = getWaterLevelIcon(riverSections[i]);
                 //TODO get weather forecast html in JS here
-                var sectionForecasts;
-                var sectionForecastsFile = $.getJSON("/wheres-the-water/data/section-forecasts.json", function(data) {
-                        sectionForecasts = data;
-                    }
-                );
                 var contentString = "<div><h4 style='padding-left: 30px;'>" + riverSection + "</h4>" +
                     "<p style='padding-left: 30px;'><img src='" + iconBase + waterLevelValue + ext + "' /> " +
                     tidyStatusString(waterLevelValue) + ", " + currentReading + "</p>" +
