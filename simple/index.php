@@ -44,8 +44,9 @@ table a {
     width: 15em;
 }
 .riverForecast {
-    font-size: smaller;
     width: 10em;
+    font-size: smaller;
+    display: table-cell;
 }
 
 </style>
