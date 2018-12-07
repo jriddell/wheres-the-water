@@ -65,7 +65,7 @@ class GrabWeatherForecast {
                 $html .= ":";
                 //$html .= $forecast['weather'][0]['description'];
                 //$html .= " ";
-                $html .= "<img src='http://openweathermap.org/img/w/".$forecast['weather'][0]['icon'].".png' width='20' height='20'/>";
+                $html .= "<img src='http://openweathermap.org/img/w/".$forecast['weather'][0]['icon'].".png' width='25' height='25'/>";
                 $html .= "<br />";
                 $html .= "</div>";
             }
