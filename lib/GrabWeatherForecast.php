@@ -61,7 +61,7 @@ class GrabWeatherForecast {
             if ($count < $max_forecasts and (date('G', $forecast['dt']) == "9" or date('G', $forecast['dt']) == "15")) {
                 $count = $count + 1;
                 $html .= "<span class='riverForecast'>";
-                $html .= "<img src='http://openweathermap.org/img/w/".$forecast['weather'][0]['icon'].".png' width='35' height='35'/>";
+                $html .= "<img src='https://openweathermap.org/img/w/".$forecast['weather'][0]['icon'].".png' width='35' height='35'/>";
                 $html .= "<br />";
                 $html .= date('D', $forecast['dt']);
                 $html .= "<br />";
