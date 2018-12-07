@@ -413,7 +413,7 @@ jQuery(document).ready( function(){
             }
         );
 
-        var bothFiles = $.when(riverSectionsFile, riverReadingsFile, sectionForecasts);
+        var bothFiles = $.when(riverSectionsFile, riverReadingsFile, sectionForecastsFile);
 
         bothFiles.done(function () {
             mergeRiverData();
