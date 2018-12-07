@@ -63,9 +63,9 @@ class GrabWeatherForecast {
                 $html .= "<div style='font-size: smaller'>";
                 $html .= date('D G:i', $forecast['dt']);
                 $html .= ":";
-                $html .= $forecast['weather'][0]['description'];
-                $html .= " ";
-                $html .= "<img src='http://openweathermap.org/img/w/".$forecast['weather'][0]['icon'].".png' width='50' height='50'/>";
+                //$html .= $forecast['weather'][0]['description'];
+                //$html .= " ";
+                $html .= "<img src='http://openweathermap.org/img/w/".$forecast['weather'][0]['icon'].".png' width='20' height='20'/>";
                 $html .= "<br />";
                 $html .= "</div>";
             }
