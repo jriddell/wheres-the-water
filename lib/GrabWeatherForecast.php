@@ -54,21 +54,26 @@ class GrabWeatherForecast {
     
     public function forecastHtml() {
         $html = "";
+        $max_forecasts = 6;
+        $count = 0;
         foreach($this->weatherForecast['list'] as $forecast) {
             //show weather at 9 o'clock in morning and 3 in afternoon
-            $max_forecasts = 6;
-            $i = 0;
-            $html .= "<div style='font-size: smaller'>";
-            if ($i < $max_forecasts and (date('G', $forecast['dt']) == "9" or date('G', $forecast['dt']) == "15")) {
-                $i = $i + 1;
-                $html .= date('D G:i', $forecast['dt']);
-                $html .= ":";
-                $html .= $forecast['weather'][0]['description'];
-                $html .= " ";
-                $html .= "<img src='http://openweathermap.org/img/w/".$forecast['weather'][0]['icon'].".png' width='50' height='50'/>";
-                $html .= "<br />";
+            if ($count < $max_forecasts) {
+                $html .= "<div style='font-size: smaller'>";
+                print "count: $count";
+                if ($count < $max_forecasts and (date('G', $forecast['dt']) == "9" or date('G', $forecast['dt']) == "15")) {
+                    $count = $count + 1;
+                    print "count here: $count";
+                    $html .= date('D G:i', $forecast['dt']);
+                    $html .= ":";
+                    $html .= $forecast['weather'][0]['description'];
+                    $html .= " ";
+                    $html .= "<img src='http://openweathermap.org/img/w/".$forecast['weather'][0]['icon'].".png' width='50' height='50'/>";
+                    $html .= "<br />";
+                }
+                print "count after: $count";
+                $html .= "</div>";
             }
-            $html .= "</div>";
         }
         return $html;
     }
