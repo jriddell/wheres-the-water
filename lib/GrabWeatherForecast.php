@@ -58,17 +58,15 @@ class GrabWeatherForecast {
         $count = 0;
         foreach($this->weatherForecast['list'] as $forecast) {
             //show weather at 9 o'clock in morning and 3 in afternoon
-            if ($count < $max_forecasts) {
+            if ($count < $max_forecasts and (date('G', $forecast['dt']) == "9" or date('G', $forecast['dt']) == "15")) {
+                $count = $count + 1;
                 $html .= "<div style='font-size: smaller'>";
-                if ($count < $max_forecasts and (date('G', $forecast['dt']) == "9" or date('G', $forecast['dt']) == "15")) {
-                    $count = $count + 1;
-                    $html .= date('D G:i', $forecast['dt']);
-                    $html .= ":";
-                    $html .= $forecast['weather'][0]['description'];
-                    $html .= " ";
-                    $html .= "<img src='http://openweathermap.org/img/w/".$forecast['weather'][0]['icon'].".png' width='50' height='50'/>";
-                    $html .= "<br />";
-                }
+                $html .= date('D G:i', $forecast['dt']);
+                $html .= ":";
+                $html .= $forecast['weather'][0]['description'];
+                $html .= " ";
+                $html .= "<img src='http://openweathermap.org/img/w/".$forecast['weather'][0]['icon'].".png' width='50' height='50'/>";
+                $html .= "<br />";
                 $html .= "</div>";
             }
         }
