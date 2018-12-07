@@ -483,6 +483,7 @@ jQuery(document).ready( function(){
                 var riverReadingsTable = getRiverReadingsTable(riverSections[i], waterLevelValue);
                 var riverFilename = getRiverGraphFilename(riverSections[i]);
                 var icon = getWaterLevelIcon(riverSections[i]);
+                //TODO get weather forecast html in JS here
                 var contentString = "<div><h4 style='padding-left: 30px;'>" + riverSection + "</h4>" +
                     "<p style='padding-left: 30px;'><img src='" + iconBase + waterLevelValue + ext + "' /> " +
                     tidyStatusString(waterLevelValue) + ", " + currentReading + "</p>" +

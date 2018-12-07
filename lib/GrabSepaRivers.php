@@ -26,6 +26,7 @@ class GrabSepaRivers {
     const DOWNLOAD_LOCK_TIMEOUT = 3600; // 60 * 60; // remove download-lock if older than an hour, it means something crashed
     const DOWNLOAD_READINGS_TIMESTAMP = 'DOWNLOAD-READINGS-TIMESTAMP';
     const DOWNLOAD_LOCK = 'DOWNLOAD-LOCK';
+    const SECTION_FORECASTS_FILE = 'section-forecasts.json'; // Write HTML for all forecasts to a file for loading by map JS
     public $filename;
     public $timestampFile;
     public $downloadLockFile;
@@ -37,6 +38,7 @@ class GrabSepaRivers {
         $this->downloadLockFile = ROOT . '/' . self::DATADIR . '/' . self::DOWNLOAD_LOCK;
         $this->downloadReadingsTimestampFile = ROOT . '/' . self::DATADIR .'/' . self::DOWNLOAD_READINGS_TIMESTAMP;
         $this->riversReadingsData = array();
+        $this->sectionForecastsFile = ROOT . '/' . self::DATADIR . '/' . self::SECTION_FORECASTS_FILE;
     }
 
     //TODO report correctly on out of date data or no data
@@ -68,6 +70,7 @@ class GrabSepaRivers {
     
     private function downloadRiversData() {
         $this->riversReadingsData = array();
+        $sectionForecastsHtml = array();
         foreach($this->riverSectionsData as $riverSection) {
             $river = new GrabSepaRiverReading();
             $river->doGrabSepaRiver($riverSection['gauge_location_code']);
@@ -78,7 +81,12 @@ class GrabSepaRivers {
                                             );
             $forecast = new GrabWeatherForecast();
             $forecast->doGrabWeatherForecast($riverSection['gauge_location_code'], $riverSection['longitude'], $riverSection['latitude']);
+            $sectionForecastsHtml[$riverSection['gauge_location_code']] = $forecast->forecastHtml();
         }
+        $fp = fopen($file->sectionForecastsFile, 'w');
+        fwrite($fp, json_encode($sectionForecastsHtml, JSON_PRETTY_PRINT));
+        fclose($fp);
+
         $this->writeToJson();
         $timestampFile = fopen($this->downloadReadingsTimestampFile, "w") or die("Unable to open file!");
         fwrite($timestampFile, time());
