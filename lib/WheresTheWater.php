@@ -660,7 +660,7 @@ jQuery(document).ready( function(){
                         $('.js-chart-weekly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-chart-monthly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-chart-yearly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
-                        $('.js-chart-forecast').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
+                        $('.js-forecast').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                     }
                 }
             );
@@ -677,7 +677,7 @@ jQuery(document).ready( function(){
                         $('.js-chart-weekly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-chart-monthly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-chart-yearly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
-                        $('.js-chart-forecast').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
+                        $('.js-forecast').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                     }
                 }
             );
@@ -694,7 +694,7 @@ jQuery(document).ready( function(){
                         $('.js-calib-table').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-chart-monthly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-chart-yearly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
-                        $('.js-chart-forecast').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
+                        $('.js-forecast').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                     }
                 }
             );
