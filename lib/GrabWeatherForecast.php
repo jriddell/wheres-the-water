@@ -60,7 +60,6 @@ class GrabWeatherForecast {
             //show weather at 9 o'clock in morning and 3 in afternoon
             if ($count < $max_forecasts) {
                 $html .= "<div style='font-size: smaller'>";
-                print "count: $count";
                 if ($count < $max_forecasts and (date('G', $forecast['dt']) == "9" or date('G', $forecast['dt']) == "15")) {
                     $count = $count + 1;
                     $html .= date('D G:i', $forecast['dt']);
