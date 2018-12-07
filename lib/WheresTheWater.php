@@ -493,7 +493,7 @@ jQuery(document).ready( function(){
                 var contentString = "<div><h4 style='padding-left: 30px;'>" + riverSection + "</h4>" +
                     "<p style='padding-left: 30px;'><img src='" + iconBase + waterLevelValue + ext + "' /> " +
                     tidyStatusString(waterLevelValue) + ", " + currentReading + "</p>" +
-                    "<p><span class='js-info'>Info</span> / <span class='js-calib-table link' style='text-decoration: underline; color: blue; cursor: pointer'>Calibrations</span> / <span class='js-chart-weekly link' style='text-decoration: underline; color: blue; cursor: pointer'>Weekly Chart</span> / <span class='js-chart-monthly link' style='text-decoration: underline; color: blue; cursor: pointer'>Monthly Chart</span> / <span class='js-chart-yearly link' style='text-decoration: underline; color: blue; cursor: pointer'>Yearly Chart</span></p>" +
+                    "<p><span class='js-info'>Info</span> / <span class='js-calib-table link' style='text-decoration: underline; color: blue; cursor: pointer'>Calibrations</span> / <span class='js-chart-weekly link' style='text-decoration: underline; color: blue; cursor: pointer'>Weekly Chart</span> / <span class='js-chart-monthly link' style='text-decoration: underline; color: blue; cursor: pointer'>Monthly Chart</span> / <span class='js-chart-yearly link' style='text-decoration: underline; color: blue; cursor: pointer'>Yearly Chart</span> / <span class='js-forecast link' style='text-decoration: underline; color: blue; cursor: pointer'>Forecast</span></p>" +
                     "<p class='js-info-content'><img width='16' height='16' src='/wheres-the-water/pics/clock.png'/> Last reading " + currentReadingTime +
                     "<br />" + sectionLinks + "</p>" + riverReadingsTable +
                     "<p class='js-chart-weekly-content' style='display: none'>" +
@@ -505,7 +505,9 @@ jQuery(document).ready( function(){
                     "<p class='js-chart-yearly-content' style='display: none'>" +
                     "<a href='http://canoescotland.org/wheres-the-water/charts/"+riverFilename+"-yearly.png'>"+
                     "<img src='http://canoescotland.org/wheres-the-water/charts/"+riverFilename+"-yearly.png' style='max-width: 250px; width: 100%' /></a></p>" +
-                    "<p>" + sectionForecasts[riverSections[i]['gauge_location_code']] + "</p>" +
+                    "<p class='js-forecast-content' style='display: none'>" +
+                    sectionForecasts[riverSections[i]['gauge_location_code']] +
+                    "</p>" +
                     "</div>";
                 var marker = L.marker([riverSections[i]['latitude'], riverSections[i]['longitude']], {icon: icon}).bindPopup(contentString).addTo( map );
                 marker.bindTooltip(riverSection);
@@ -652,11 +654,13 @@ jQuery(document).ready( function(){
                         $('.js-chart-monthly-content').hide();
                         $('.js-chart-yearly-content').hide();
                         $('.js-calib-table-content').hide();
+                        $('.js-forecast-content').hide();
                         $(this).attr('style', '');
                         $('.js-calib-table').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-chart-weekly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-chart-monthly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-chart-yearly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
+                        $('.js-chart-forecast').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                     }
                 }
             );
@@ -667,11 +671,13 @@ jQuery(document).ready( function(){
                         $('.js-chart-monthly-content').hide();
                         $('.js-chart-yearly-content').hide();
                         $('.js-calib-table-content').show();
+                        $('.js-forecast-content').hide();
                         $(this).attr('style', '');
                         $('.js-info').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-chart-weekly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-chart-monthly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-chart-yearly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
+                        $('.js-chart-forecast').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                     }
                 }
             );
@@ -682,11 +688,13 @@ jQuery(document).ready( function(){
                         $('.js-chart-weekly-content').show();
                         $('.js-chart-monthly-content').hide();
                         $('.js-chart-yearly-content').hide();
+                        $('.js-forecast-content').hide();
                         $(this).attr('style', '');
                         $('.js-info').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-calib-table').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-chart-monthly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-chart-yearly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
+                        $('.js-chart-forecast').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                     }
                 }
             );
@@ -697,11 +705,13 @@ jQuery(document).ready( function(){
                         $('.js-chart-weekly-content').hide();
                         $('.js-chart-monthly-content').show();
                         $('.js-chart-yearly-content').hide();
+                        $('.js-forecast-content').hide();
                         $(this).attr('style', '');
                         $('.js-info').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-calib-table').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-chart-weekly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-chart-yearly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
+                        $('.js-forecast').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                     }
                 }
             );
@@ -712,11 +722,30 @@ jQuery(document).ready( function(){
                         $('.js-chart-weekly-content').hide();
                         $('.js-chart-monthly-content').hide();
                         $('.js-chart-yearly-content').show();
+                        $('.js-forecast-content').hide();
                         $(this).attr('style', '');
                         $('.js-info').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-calib-table').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-chart-weekly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-chart-monthly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
+                        $('.js-forecast').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
+                    }
+                }
+            );
+            $('#map').on('click', '.js-forecast', function(){
+                    if (!$(this).hasClass('js-link')){
+                        $('.js-info-content').hide();
+                        $('.js-calib-table-content').hide();
+                        $('.js-chart-weekly-content').hide();
+                        $('.js-chart-monthly-content').hide();
+                        $('.js-chart-yearly-content').hide();
+                        $('.js-forecast-content').show();
+                        $(this).attr('style', '');
+                        $('.js-info').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
+                        $('.js-calib-table').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
+                        $('.js-chart-weekly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
+                        $('.js-chart-monthly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
+                        $('.js-yearly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                     }
                 }
             );
