@@ -61,11 +61,12 @@ class GrabWeatherForecast {
             if ($count < $max_forecasts and (date('G', $forecast['dt']) == "9" or date('G', $forecast['dt']) == "15")) {
                 $count = $count + 1;
                 $windSpeed = round(($forecast['wind']['speed'] * 1000) / 60, 1); // km/h
+                $temperature = round($forecast['main']['temp'], 1);
                 $html .= "<span class='riverForecast'>";
                 $html .= "<img src='https://openweathermap.org/img/w/".$forecast['weather'][0]['icon'].".png' width='35' height='35'/>";
                 $html .= "<br />";
-                $html .= $forecast['main']['temp'] . "°C ";
-                $html .= "Wind:" . $forecast['wind']['speed'] . "km/h";
+                $html .= $temperature . "°C ";
+                $html .= $windSpeed . "km/h";
                 $html .= "<br />";
                 $html .= date('D ', $forecast['dt']);
                 //$html .= "<br />";
