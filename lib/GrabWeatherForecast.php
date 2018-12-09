@@ -25,7 +25,7 @@ class GrabWeatherForecast {
     public function doGrabWeatherForecast($gauge_id, $longitude, $latitude) {
         $weatherFilename = "${gauge_id}-weather.json";
         $weatherFilePath = $this->dataDir . '/' . $weatherFilename;
-        $weatherFileURL = $this->forecastAPIURL . "?lat=" . $latitude . "&lon=" . $longitude . "&appid=" . OPENWEATHERKEY;
+        $weatherFileURL = $this->forecastAPIURL . "?lat=" . $latitude . "&lon=" . $longitude . "&appid=" . OPENWEATHERKEY . "&units=metric";
         if (!file_exists($weatherFilePath) || time()-filemtime($weatherFilePath) > self::OPENWEATHER_DOWNLOAD_PERIOD) {
             $weatherData = @file_get_contents($weatherFileURL);
             if($weatherData == false) {
@@ -60,8 +60,12 @@ class GrabWeatherForecast {
             //show weather at 9 o'clock in morning and 3 in afternoon
             if ($count < $max_forecasts and (date('G', $forecast['dt']) == "9" or date('G', $forecast['dt']) == "15")) {
                 $count = $count + 1;
+                $windSpeed = ($forecast['wind']['speed'] * 1000) / 60; // km/h
                 $html .= "<span class='riverForecast'>";
                 $html .= "<img src='https://openweathermap.org/img/w/".$forecast['weather'][0]['icon'].".png' width='35' height='35'/>";
+                $html .= "<br />";
+                $html .= "Temp: " . $forecast['main']['temp'] . "°C";
+                $html .= "Wind: " . $forecast['wind']['speed'] . "km/h";
                 $html .= "<br />";
                 $html .= date('D', $forecast['dt']);
                 $html .= "<br />";
