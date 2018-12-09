@@ -60,15 +60,15 @@ class GrabWeatherForecast {
             //show weather at 9 o'clock in morning and 3 in afternoon
             if ($count < $max_forecasts and (date('G', $forecast['dt']) == "9" or date('G', $forecast['dt']) == "15")) {
                 $count = $count + 1;
-                $windSpeed = ($forecast['wind']['speed'] * 1000) / 60; // km/h
+                $windSpeed = round(($forecast['wind']['speed'] * 1000) / 60, 1); // km/h
                 $html .= "<span class='riverForecast'>";
                 $html .= "<img src='https://openweathermap.org/img/w/".$forecast['weather'][0]['icon'].".png' width='35' height='35'/>";
                 $html .= "<br />";
-                $html .= "Temp: " . $forecast['main']['temp'] . "°C";
-                $html .= "Wind: " . $forecast['wind']['speed'] . "km/h";
+                $html .= $forecast['main']['temp'] . "°C";
+                $html .= "Wind:" . $forecast['wind']['speed'] . "km/h";
                 $html .= "<br />";
                 $html .= date('D', $forecast['dt']);
-                $html .= "<br />";
+                //$html .= "<br />";
                 $html .= date('G:i', $forecast['dt']);
                 $html .= "&nbsp;</span>";
                 if ($count % 2 == 0) {
