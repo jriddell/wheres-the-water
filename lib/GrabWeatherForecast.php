@@ -63,14 +63,14 @@ class GrabWeatherForecast {
                 $windSpeed = round($forecast['wind']['speed'] * 3.6, 1); // convert to km/h
                 $temperature = round($forecast['main']['temp'], 1);
                 $html .= "<span class='riverForecast'>";
-                $html .= "<img src='https://openweathermap.org/img/w/".$forecast['weather'][0]['icon'].".png' width='35' height='35'/>";
+                $html .= date('D ', $forecast['dt']);
+                //$html .= "<br />";
+                $html .= date('G:i', $forecast['dt']);
                 $html .= "<br />";
                 $html .= $temperature . "°C ";
                 $html .= $windSpeed . "km/h";
                 $html .= "<br />";
-                $html .= date('D ', $forecast['dt']);
-                //$html .= "<br />";
-                $html .= date('G:i', $forecast['dt']);
+                $html .= "<img src='https://openweathermap.org/img/w/".$forecast['weather'][0]['icon'].".png' width='35' height='35'/>";
                 $html .= "&nbsp;</span>";
                 if ($count % 2 == 0) {
                     $html .= "<br />";
