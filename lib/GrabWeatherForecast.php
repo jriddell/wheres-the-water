@@ -25,7 +25,7 @@ class GrabWeatherForecast {
     public function doGrabWeatherForecast($gauge_id, $longitude, $latitude) {
         $weatherFilename = "${gauge_id}-weather.json";
         $weatherFilePath = $this->dataDir . '/' . $weatherFilename;
-        $weatherFileURL = $this->forecastAPIURL . "?lat=" . $latitude . "&lon=" . $longitude . "&appid=" . OPENWEATHERKEY . "&units=metric";
+        $weatherFileURL = $this->forecastAPIURL . "?lat=" . $latitude . "&lon=" . $longitude . "&units=metric&appid=" . OPENWEATHERKEY;
         if (!file_exists($weatherFilePath) || time()-filemtime($weatherFilePath) > self::OPENWEATHER_DOWNLOAD_PERIOD) {
             $weatherData = @file_get_contents($weatherFileURL);
             if($weatherData == false) {
