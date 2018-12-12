@@ -1438,6 +1438,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "369548",
+        "gauge_name": "Huntly GS",
         "google_mymaps": "",
         "grade": "",
         "guidebook_link": "",
@@ -1453,5 +1454,24 @@
         "sca_guidebook_no": "",
         "scrape_value": "1",
         "very_high_value": "1"
+    },
+    {
+        "access_issue": "",
+        "gauge_location_code": "133177",
+        "google_mymaps": "",
+        "grade": "3/4+",
+        "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/southern-uplands/big-water-of-fleet",
+        "high_value": "1.8",
+        "huge_value": "2.5",
+        "kml": "",
+        "latitude": "54.9515",
+        "longitude": "-4.2531",
+        "low_value": "1",
+        "medium_value": "1.1",
+        "name": "Big Water of Fleet",
+        "notes": "New gauge 12/12/18, please send calibrations to confirm/adjust",
+        "sca_guidebook_no": "303",
+        "scrape_value": "0.8",
+        "very_high_value": "2"
     }
 ]
