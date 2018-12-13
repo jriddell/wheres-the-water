@@ -1458,6 +1458,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "133177",
+        "gauge_name": "Rusko",
         "google_mymaps": "",
         "grade": "3/4+",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/southern-uplands/big-water-of-fleet",
@@ -1473,5 +1474,24 @@
         "sca_guidebook_no": "303",
         "scrape_value": "0.8",
         "very_high_value": "2"
+    },
+    {
+        "access_issue": "",
+        "gauge_location_code": "1234",
+        "google_mymaps": "",
+        "grade": "1",
+        "guidebook_link": "1",
+        "high_value": "1",
+        "huge_value": "1",
+        "kml": "",
+        "latitude": "55",
+        "longitude": "-2",
+        "low_value": "1",
+        "medium_value": "1",
+        "name": "asdf",
+        "notes": "",
+        "sca_guidebook_no": "1",
+        "scrape_value": "1",
+        "very_high_value": "1"
     }
 ]
