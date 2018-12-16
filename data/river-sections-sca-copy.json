@@ -1226,7 +1226,7 @@
         "access_issue": "",
         "gauge_location_code": "14990",
         "gauge_name": "Lindean",
-        "google_mymaps": "",
+        "google_mymaps": "https://drive.google.com/open?id=1CdpeqnhYWUOEjzGL7xNaXglCF9CHi4Ng&usp=sharing",
         "grade": "2/3 (3+)",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/southern-uplands/river-ettrick-ettrickbridge-to-selkirk",
         "high_value": "1.20",
@@ -1237,6 +1237,7 @@
         "low_value": "0.75",
         "medium_value": "0.85",
         "name": "Ettrick (Gorge)",
+        "notes": "",
         "sca_guidebook_no": "310",
         "scrape_value": "0.70",
         "very_high_value": "1.5"
