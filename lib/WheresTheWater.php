@@ -42,6 +42,7 @@ class WheresTheWater {
     padding: 0.5em;
     border-bottom: 1px solid #595959;
     text-align: left;
+    min-width: 5em;
 }
 
 #river-readings {
