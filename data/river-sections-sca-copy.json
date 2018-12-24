@@ -379,9 +379,11 @@
         "low_value": "0.4",
         "medium_value": "0.8",
         "name": "Spey",
+        "notes": "",
         "sca_guidebook_no": "196",
         "scrape_value": "0",
-        "very_high_value": "2"
+        "very_high_value": "2",
+        "webcam": "https://www.farsondigitalwatercams.com/locations/aberlour"
     },
     {
         "access_issue": "",
