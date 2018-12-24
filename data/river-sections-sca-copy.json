@@ -96,18 +96,22 @@
         "access_issue": "",
         "gauge_location_code": "133111",
         "gauge_name": "Mainholm",
+        "google_mymaps": "",
         "grade": "2/3(4)",
         "guidebook_link": "",
         "high_value": "1",
         "huge_value": "1.6",
+        "kml": "",
         "latitude": "55.4798",
         "longitude": "-4.48036",
         "low_value": "0.6",
         "medium_value": "0.8",
         "name": "Ayr",
+        "notes": "",
         "sca_guidebook_no": "280",
         "scrape_value": "0.4",
-        "very_high_value": "1.3"
+        "very_high_value": "1.3",
+        "webcam": "https://www.farsondigitalwatercams.com/locations/tarholm"
     },
     {
         "access_issue": "",
