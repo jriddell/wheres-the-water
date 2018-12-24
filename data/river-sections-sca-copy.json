@@ -1047,18 +1047,22 @@
         "access_issue": "",
         "gauge_location_code": "14869",
         "gauge_name": "Almondell",
+        "google_mymaps": "",
         "grade": "2 (3)",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/southern-uplands/river-almond-edinburgh",
         "high_value": "1",
         "huge_value": "1.4",
+        "kml": "",
         "latitude": "55.901805",
         "longitude": "-3.4633852",
         "low_value": "0.6",
         "medium_value": "0.8",
         "name": "Almond (Lothian)",
+        "notes": "",
         "sca_guidebook_no": "265",
         "scrape_value": "0.5",
-        "very_high_value": "1.2"
+        "very_high_value": "1.2",
+        "webcam": "https://www.farsondigitalwatercams.com/locations/livingston"
     },
     {
         "access_issue": "",
