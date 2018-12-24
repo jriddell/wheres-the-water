@@ -472,6 +472,9 @@ jQuery(document).ready( function(){
             if ('kml' in riverSection && !riverSection['kml'].length == 0) {
                 linksContent += "<a target='_blank' rel='noopener' href='"+riverSection['kml']+"'><img width='16' height='16' title='KML' src='/wheres-the-water/pics/kml.png' /> KML</a><br />";
             }
+            if ('webcam' in riverSection && !riverSection['webcam'].length == 0) {
+                linksContent += "<a target='_blank' rel='noopener' href='"+riverSection['webcam']+"'><img width='16' height='16' title='Webcam' src='/wheres-the-water/pics/webcam.png' /> Webcam</a><br />";
+            }
 
             return linksContent;
         }
