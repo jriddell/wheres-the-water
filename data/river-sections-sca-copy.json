@@ -552,18 +552,22 @@
         "access_issue": "http://canoescotland.org/news/fallen-tree-river-nith",
         "gauge_location_code": "133154",
         "gauge_name": "Drumlanrig",
+        "google_mymaps": "",
         "grade": "3/4",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/southern-uplands/river-nith-glen-airlie-picnic-site-to-drumlanrig-bridge",
         "high_value": "1.2",
         "huge_value": "1.8",
+        "kml": "",
         "latitude": "55.3489",
         "longitude": "-3.88161",
         "low_value": "0.65",
         "medium_value": "1",
         "name": "Nith (Drumlanrig)",
+        "notes": "",
         "sca_guidebook_no": "287",
         "scrape_value": "0.4",
-        "very_high_value": "1.5"
+        "very_high_value": "1.5",
+        "webcam": "https://www.farsondigitalwatercams.com/locations/auldgirth"
     },
     {
         "access_issue": "",
