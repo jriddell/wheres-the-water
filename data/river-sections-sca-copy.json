@@ -1464,7 +1464,8 @@
         "notes": "Please send calibrations for this section on Deveron with Huntley gauge. Needs guidebook entry, grade.",
         "sca_guidebook_no": "",
         "scrape_value": "1",
-        "very_high_value": "1"
+        "very_high_value": "1",
+        "webcam": "https://www.farsondigitalwatercams.com/locations/turriff"
     },
     {
         "access_issue": "",
