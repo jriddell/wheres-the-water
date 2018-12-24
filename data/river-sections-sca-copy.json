@@ -988,9 +988,11 @@
         "low_value": "0.8",
         "medium_value": "1",
         "name": "Ericht (Blairgowrie)",
+        "notes": "",
         "sca_guidebook_no": "251",
         "scrape_value": "0.6",
-        "very_high_value": "1.4"
+        "very_high_value": "1.4",
+        "webcam": "https://www.farsondigitalwatercams.com/locations/blairgowrie"
     },
     {
         "access_issue": "",
@@ -1404,7 +1406,7 @@
         "low_value": "2.2",
         "medium_value": "2.5",
         "name": "Dye",
-        "notes": "Added Nov 2018. Please report calibrations to confirm or adjust. Webcam link is for Feuch.",
+        "notes": "Added Nov 2018. Please report calibrations to confirm or adjust. Gauge and webcam link is on Feuch.",
         "sca_guidebook_no": "242",
         "scrape_value": "1.8",
         "very_high_value": "2.9",
