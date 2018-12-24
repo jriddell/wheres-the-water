@@ -859,9 +859,11 @@
         "low_value": "0.5",
         "medium_value": "0.8",
         "name": "Teith",
+        "notes": "",
         "sca_guidebook_no": "259",
         "scrape_value": "0",
-        "very_high_value": "2"
+        "very_high_value": "2",
+        "webcam": "https://www.farsondigitalwatercams.com/locations/callander"
     },
     {
         "access_issue": "http://canoescotland.org/news/glen-orchy-bailey-bridge-works-and-tree-felling",
