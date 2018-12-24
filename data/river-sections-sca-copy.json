@@ -1123,18 +1123,22 @@
         "access_issue": "",
         "gauge_location_code": "234292",
         "gauge_name": "Parkhill",
+        "google_mymaps": "",
         "grade": "2-3",
         "guidebook_link": "",
         "high_value": "1.8",
         "huge_value": "2.4",
+        "kml": "",
         "latitude": "57.218321",
         "longitude": "-2.1875865",
         "low_value": "1",
         "medium_value": "1.4",
         "name": "Don",
+        "notes": "",
         "sca_guidebook_no": "243",
         "scrape_value": "0",
-        "very_high_value": "2"
+        "very_high_value": "2",
+        "webcam": "https://www.farsondigitalwatercams.com/locations/kintore"
     },
     {
         "access_issue": "",
