@@ -1068,18 +1068,22 @@
         "access_issue": "",
         "gauge_location_code": "8295",
         "gauge_name": "Kenmore",
+        "google_mymaps": "",
         "grade": "1-2",
         "guidebook_link": "",
         "high_value": "1.0",
         "huge_value": "2.0",
+        "kml": "",
         "latitude": "56.596388",
         "longitude": "-3.9850618",
         "low_value": "0.5",
         "medium_value": "0.7",
         "name": "Tay (Kenmore)",
+        "notes": "",
         "sca_guidebook_no": "218",
         "scrape_value": "0.3",
-        "very_high_value": "1.5"
+        "very_high_value": "1.5",
+        "webcam": "https://www.farsondigitalwatercams.com/locations/taymouth"
     },
     {
         "access_issue": "",
