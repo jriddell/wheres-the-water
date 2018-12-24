@@ -1386,7 +1386,8 @@
         "notes": "Marathon site. Based on 1 calibration at Drumoak using Garthdee gauge, please fill in form to report more",
         "sca_guidebook_no": "240",
         "scrape_value": "0.0",
-        "very_high_value": "2"
+        "very_high_value": "2",
+        "webcam": "https://www.farsondigitalwatercams.com/locations/banchory"
     },
     {
         "access_issue": "",
@@ -1446,7 +1447,8 @@
         "notes": "Please send calibrations for this section on with Mar Lodge gauge",
         "sca_guidebook_no": "240",
         "scrape_value": "1",
-        "very_high_value": "1"
+        "very_high_value": "1",
+        "webcam": "https://www.farsondigitalwatercams.com/locations/mar_lodge"
     },
     {
         "access_issue": "",
