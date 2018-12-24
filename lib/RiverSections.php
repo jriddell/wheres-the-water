@@ -28,6 +28,7 @@ call readFromJson() then $obj->riverSectionsData is an array of rivers with thei
         "access_issue": "http://www.canoescotland.org/news/river-clyde",
         "google_mymaps": "https://drive.google.com/open?id=1A3Jqx9E46jVymhbP1-3UNudWxdx4PNuG&usp=sharing",
         "kml": "http://www.andyjacksonfund.org.uk/wheres-the-water/kml/stanley.kml",
+        "webcam": "https://www.farsondigitalwatercams.com/locations/crossford",
         "gauge_name": "Logie"
     }
 ]
@@ -122,6 +123,9 @@ class RiverSections {
         if (!array_key_exists('kml', $riverSection)) {
             $riverSection['kml'] = '';
         }
+        if (!array_key_exists('webcam', $riverSection)) {
+            $riverSection['webcam'] = '';
+        }
         if (!array_key_exists('notes', $riverSection)) {
             $riverSection['notes'] = '';
         }
@@ -143,7 +147,8 @@ class RiverSections {
         $reply .= $this->editRiverFormInputItem("Acccess Issue Link", "access_issue", $riverSection['access_issue'], "right");
         $reply .= $this->editRiverFormInputItem("Google My Maps Link", "google_mymaps", $riverSection['google_mymaps']);
         $reply .= $this->editRiverFormInputItem("KML Link", "kml", $riverSection['kml'], "right");
-        $reply .= $this->editRiverFormInputItem("Notes", "notes", $riverSection['notes']);
+        $reply .= $this->editRiverFormInputItem("Webcam", "webcam", $riverSection['webcam']);
+        $reply .= $this->editRiverFormInputItem("Notes", "notes", $riverSection['notes'], "right");
         return $reply;
     }
 
@@ -181,6 +186,7 @@ class RiverSections {
         $riverSection['access_issue'] = $postData['access_issue'];
         $riverSection['google_mymaps'] = $postData['google_mymaps'];
         $riverSection['kml'] = $postData['kml'];
+        $riverSection['webcam'] = $postData['webcam'];
         $riverSection['notes'] = $postData['notes'];
 
         $this->riverSectionsData[$jsonid] = $riverSection;
@@ -255,6 +261,7 @@ class RiverSections {
         $riverSection['access_issue'] = "";
         $riverSection['google_mymaps'] = "";
         $riverSection['kml'] = "";
+        $riverSection['webcam'] = "";
         $riverSection['notes'] = "";
 
         $reply = "<legend>Add New River Section</legend>";
@@ -303,6 +310,7 @@ class RiverSections {
         $riverSection['access_issue'] = $postData['access_issue'];
         $riverSection['google_mymaps'] = $postData['google_mymaps'];
         $riverSection['kml'] = $postData['kml'];
+        $riverSection['webcam'] = $postData['webcam'];
         $riverSection['notes'] = $postData['notes'];
         $this->riverSectionsData[] = $riverSection;
         $this->writeToJson();
@@ -419,6 +427,9 @@ class RiverSections {
         }
         if (!empty($riverSection['kml'])) {
             $linkContent .= "<a target='_blank' rel='noopener' href='".$riverSection['kml']."'><img width='16' height='16' title='KML Map' src='/wheres-the-water/pics/kml.png' /> KML Map Layer</a><br />";
+        }
+        if (!empty($riverSection['webcam'])) {
+            $linkContent .= "<a target='_blank' rel='noopener' href='".$riverSection['webcam']."'><img width='16' height='16' title='Webcam' src='/wheres-the-water/pics/webcam.png' /> Webcam</a><br />";
         }
         /* Render the picture */
         $filename = strtolower($riverSection['name']);
