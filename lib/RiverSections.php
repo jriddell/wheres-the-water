@@ -410,11 +410,6 @@ class RiverSections {
         }
         $linkContent .= "<a target='_blank' rel='noopener' href='http://apps.sepa.org.uk/waterlevels/default.aspx?sd=t&lc=".$riverSection['gauge_location_code']."'><img width='16' height='16' title='SEPA gauge link' src='/wheres-the-water/pics/graph-icon.png'/> SEPA Gauge: ".$gaugeName."</a><br />";
         $linkContent .= " <a target='_blank' rel='noopener' href='http://riverlevels.mobi/SiteDetails/Index/".$riverSection['gauge_location_code']."'><img width='16' height='16' title='SEPA gauge link - mobile friendly' src='/wheres-the-water/pics/phone-icon.png'/> SEPA Gauge Mobile View</a><br />";
-        /*
-        $linkContent .= " <a target='_blank' rel='noopener' href='https://www.openstreetmap.org/?mlat=".$riverSection['latitude']."&mlon=".$riverSection['longitude']."#map=12/"
-                        .$riverSection['latitude']."/".$riverSection['longitude']."'><img title='Open maps Link' src='/wheres-the-water/pics/osm.png' width='16' height='16' /> OpenStreetMap</a><br /> ";
-        $linkContent .= " <a href='geo:".$riverSection['latitude'].",".$riverSection['longitude']."'><img  title='Geo reference' src='/wheres-the-water/pics/22-apps-marble.png' width='16' height='16'' /> Mobile Map</a><br />";
-        */
         $linkContent .= "<img title='Open maps Link' src='/wheres-the-water/pics/osm.png' width='16' height='16' /> <a target='_blank' rel='noopener' href='https://www.openstreetmap.org/?mlat=".$riverSection['latitude']."&mlon=".$riverSection['longitude']."#map=12/"
                         .$riverSection['latitude']."/".$riverSection['longitude']."'>OpenStreetMap</a> / ";
         $linkContent .= " <a target='_blank' rel='noopener' href='https://www.bing.com/maps?cp=".$riverSection['latitude']."~".$riverSection['longitude']."&lvl=14&style=s'>Ordnance Survey</a> / ";
