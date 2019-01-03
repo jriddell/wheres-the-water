@@ -602,18 +602,22 @@
         "access_issue": "",
         "gauge_location_code": "234313",
         "gauge_name": "Skeabost",
+        "google_mymaps": "https://drive.google.com/open?id=1EbvYVqguikPsr1gaT4hOSqvfm4GxqOr2&usp=sharing",
         "grade": "3/4",
         "guidebook_link": "",
         "high_value": "1",
         "huge_value": "1.3",
+        "kml": "",
         "latitude": "57.4124",
         "longitude": "-6.29448",
         "low_value": "0.5",
         "medium_value": "0.9",
         "name": "Snizort",
+        "notes": "",
         "sca_guidebook_no": "72",
         "scrape_value": "0.3",
-        "very_high_value": "1.1"
+        "very_high_value": "1.1",
+        "webcam": ""
     },
     {
         "access_issue": "http://canoescotland.org/news/bridge-closure-blackwater-netherton-dec-1-31",
