@@ -456,9 +456,17 @@ jQuery(document).ready( function(){
             }
             linksContent += "<a target='_blank' rel='noopener' href='http://apps.sepa.org.uk/waterlevels/default.aspx?sd=t&lc="+riverSection['gauge_location_code']+"'><img width='16' height='16' title='SEPA gauge link' src='/wheres-the-water/pics/graph-icon.png'/> SEPA Gauge: "+riverSection['gauge_name']+"</a><br />";
             linksContent += "<a target='_blank' rel='noopener' href='http://riverlevels.mobi/SiteDetails/Index/"+riverSection['gauge_location_code']+"'><img width='16' height='16' title='SEPA gauge link - mobile friendly' src='/wheres-the-water/pics/phone-icon.png'/> SEPA Gauge Mobile View</a><br />";
+            /*
             linksContent += "<a target='_blank' rel='noopener' href='https://www.openstreetmap.org/?mlat="+riverSection['latitude']+"&mlon="+riverSection['longitude']+"#map=12/"
                             +riverSection['latitude']+"/"+riverSection['longitude']+"'><img width='16' height='16' title='Open maps Link' src='/wheres-the-water/pics/osm.png' /> OpenStreetMap</a><br />";
             linksContent += "<a href='geo:"+riverSection['latitude']+","+riverSection['longitude']+"'><img title='Geo reference' src='/wheres-the-water/pics/22-apps-marble.png' width='16' height='16' /> Mobile Phone Map Link</a><br />";
+            */
+            linksContent += "<img width='16' height='16' title='Open maps Link' src='/wheres-the-water/pics/osm.png' /> ";
+            linksContent += "<a target='_blank' rel='noopener' href='https://www.openstreetmap.org/?mlat="+riverSection['latitude']+"&mlon="+riverSection['longitude']+"#map=12/"
+                            +riverSection['latitude']+"/"+riverSection['longitude']+"'>OpenStreetMap</a> / ";
+            linksContent += "<a target='_blank' rel='noopener' href='https://www.bing.com/maps?cp="+riverSection['latitude']+"~"+riverSection['longitude']+"&lvl=14&style=s'>Ordnance Survey</a> / ";
+            linksContent += " <a target='_blank' rel='noopener' href='https://www.google.com/maps?q="+riverSection['latitude']+","+riverSection['longitude']+"'>Google Maps</a> / ";
+            linksContent += "<a href='geo:"+riverSection['latitude']+","+riverSection['longitude']+"'>Maps App</a><br />";
 
             if ('guidebook_link' in riverSection && !riverSection['guidebook_link'].length == 0) {
                 linksContent += "<a target='_blank' rel='noopener' href='"+riverSection['guidebook_link']+"'><img width='16' height='16' title='UKRGB Link' src='/wheres-the-water/pics/ukrgb.ico'/> UKRGB</a><br />";
