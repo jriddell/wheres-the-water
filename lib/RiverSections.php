@@ -154,6 +154,7 @@ class RiverSections {
 
     /* one text field in the river form */
     public function editRiverFormInputItem($text, $name, $value, $column="left") {
+        $value = addslashes($value);
         $reply = "";
         $reply .= "<label for='{$name}' class='{$column}'>{$text}:</label>\n";
         $reply .= "<input type='text' name='{$name}' value='{$value}' class='{$column}' /> \n";
