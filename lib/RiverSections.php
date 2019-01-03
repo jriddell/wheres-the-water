@@ -415,11 +415,11 @@ class RiverSections {
                         .$riverSection['latitude']."/".$riverSection['longitude']."'><img title='Open maps Link' src='/wheres-the-water/pics/osm.png' width='16' height='16' /> OpenStreetMap</a><br /> ";
         $linkContent .= " <a href='geo:".$riverSection['latitude'].",".$riverSection['longitude']."'><img  title='Geo reference' src='/wheres-the-water/pics/22-apps-marble.png' width='16' height='16'' /> Mobile Map</a><br />";
         */
-        $linkContent .= "Map: <a target='_blank' rel='noopener' href='https://www.openstreetmap.org/?mlat=".$riverSection['latitude']."&mlon=".$riverSection['longitude']."#map=12/"
-                        .$riverSection['latitude']."/".$riverSection['longitude']."'><img title='Open maps Link' src='/wheres-the-water/pics/osm.png' width='16' height='16' />OSM</a>, ";
-        $linkContent .= " <a target='_blank' rel='noopener' href='https://www.bing.com/maps?cp=".$riverSection['latitude']."~".$riverSection['longitude']."&lvl=14&style=s'>OS</a>, ";
+        $linkContent .= "<img title='Open maps Link' src='/wheres-the-water/pics/osm.png' width='16' height='16' /> <a target='_blank' rel='noopener' href='https://www.openstreetmap.org/?mlat=".$riverSection['latitude']."&mlon=".$riverSection['longitude']."#map=12/"
+                        .$riverSection['latitude']."/".$riverSection['longitude']."'>OpenStreetMap</a>, ";
+        $linkContent .= " <a target='_blank' rel='noopener' href='https://www.bing.com/maps?cp=".$riverSection['latitude']."~".$riverSection['longitude']."&lvl=14&style=s'>Ordnance Survey</a>, ";
         $linkContent .= " <a target='_blank' rel='noopener' href='https://www.google.com/maps?q=".$riverSection['latitude'].",".$riverSection['longitude']."'>Google</a>, ";
-        $linkContent .= " <a href='geo:".$riverSection['latitude'].",".$riverSection['longitude']."'><img  title='Geo reference' src='/wheres-the-water/pics/22-apps-marble.png' width='16' height='16'' /> Maps App</a><br />";
+        $linkContent .= " <a href='geo:".$riverSection['latitude'].",".$riverSection['longitude']."'>Maps App</a><br />";
         
         if (!empty($riverSection['guidebook_link'])) {
             $linkContent .= "<a target='_blank' rel='noopener' href='".$riverSection['guidebook_link']."'><img width='16' height='16' title='UKRGB Link' src='/wheres-the-water/pics/ukrgb.ico'/> UKRGB</a><br />";
