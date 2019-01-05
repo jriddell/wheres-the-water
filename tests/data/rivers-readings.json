@@ -1,12 +1,12 @@
 {
     "10048": {
-        "currentReading": "1.024",
+        "currentReading": "0.664",
         "trend": "FALLING",
-        "currentReadingTime": "06\/12\/2018 18:45:00"
+        "currentReadingTime": "05\/01\/2019 10:45:00"
     },
     "9514": {
-        "currentReading": "2.008",
-        "trend": "STABLE",
-        "currentReadingTime": "06\/12\/2018 22:15:00"
+        "currentReading": "1.342",
+        "trend": "FALLING",
+        "currentReadingTime": "05\/01\/2019 11:30:00"
     }
 }
