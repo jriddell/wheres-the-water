@@ -27,6 +27,7 @@ class UpdateFarsonCameraThumbs {
             print "<h1>Sorry no river section data available, try again soon</h1>";
             die();
         }
+        $riverSectionId = 0;
         foreach ($this->riverSections->riverSectionsData as $river) {
             print "<p>".$river['name']."</p>\n";
             if (!array_key_exists('webcam', $river) || $river['webcam'] == "") {
@@ -34,39 +35,21 @@ class UpdateFarsonCameraThumbs {
             }
             $cameraName = $river['webcam'];
             $cameraName = str_replace("https://www.farsondigitalwatercams.com/locations/", "", $cameraName);
-            print "XXX $cameraName";
             foreach ($this->faronsonLocationsFileArray as $line) {
                 $lcline = strtolower($line);
                 if (strpos($lcline, "camera at $cameraName") !== false) {
-                    print "Found Line! $line";
                     $start = strpos($line, "src=\"");
                     $end = strpos($line, "\" />");
                     $url = substr($line, $start + 5, $end - $start - 5);
                     print "URL: $url";
+                    $this->riverSections->riverSectionsData[$riverSectionId]['webcam_thumbnail'] = $url;
                 }
             }
-            
+            $riverSectionId++;
         }
     }
 
-    private function validateClassificationData($classificationData) {
-        //TODO
-        return true;
-    }
-
-    private function updateClassification($classificationData, $riverSectionId) {
-        $riverClassificationAttributes = $classificationData['results'][0]['attributes'];
-        
-        print "<p>name: " . $riverClassificationAttributes['WATER_BODY_NAME'] . "<br />\n";
-        print "classification: " . $riverClassificationAttributes['OVERALL_CLASSIFICATION'] . "<br />\n";
-        print "\n</p>";
-        $this->riverSections->riverSectionsData[$riverSectionId]['classification'] = $riverClassificationAttributes['OVERALL_CLASSIFICATION'];
-        $this->riverSections->riverSectionsData[$riverSectionId]['classification_url'] = $riverClassificationAttributes['CLASS_DS_URL'];
-        
-        flush();
-    }
-    
-    public function writeOutClassification() {
+    public function writeOutThumbs() {
             $this->riverSections->writeToJson();
     }
 }
