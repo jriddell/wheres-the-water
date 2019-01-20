@@ -32,7 +32,7 @@ class UpdateFarsonCameraThumbs {
         foreach ($this->riverSections->riverSectionsData as $river) {
             print $river['name'];
             break;
-            print " done ";
+            print " done2 ";
         }
         foreach ($this->riverSections->riverSectionsData as $river) {
             print "<p>foo".$river['name']."</p>\n";
