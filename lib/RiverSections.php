@@ -450,9 +450,12 @@ class RiverSections {
             $linkContent .= "<a target='_blank' rel='noopener' href='".$riverSection['webcam']."'><img width='16' height='16' title='Webcam' src='/wheres-the-water/pics/webcam.png' /> Webcam</a><br />";
         }
         if (!empty($riverSection['classification'])) {
+        /*
             print "class: " . $riverSection['classification'];
             $classificatonIcon = split(" ", $riverSection['classification'])[0];
             $classificatonIcon = strtolower(split(" ", $riverSection['classification'])[0]);
+        */
+            $classificatonIcon = "good";
             $linkContent .= "<a target='_blank' rel='noopener' href='".$riverSection['classification_url']."'><img width='16' height='16' title='Webcam' src='/wheres-the-water/pics/classification-".$classificatonIcon.".png' /> Water Classification: ".$riverSection['classification']."</a><br />";
         }
         /* Render the picture */
