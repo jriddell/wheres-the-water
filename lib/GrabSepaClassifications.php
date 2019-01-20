@@ -1,6 +1,12 @@
 <?php
 /* Copyright 2018 Jonathan Riddell <jr@jriddell.org>
    May be copied under the GNU GPL version 3 (or later) only
+
+   SEPA Classifications from https://map.environment.gov.scot/sewebmap/?layers=riverClass
+   This gives an idea of pollution level but also has stuff like dams to stop wildlife so I'm not sure how useful it is
+
+   The data does not change much and takes a while to download so update-classifications.php uses this class to download for
+   all the river sections and merge that data into the river-sections.json file
 */
 
 /*
