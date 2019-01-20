@@ -28,17 +28,10 @@ class UpdateFarsonCameraThumbs {
             die();
         }
         $riverSectionId = 0;
-        //print_r($this->riverSections->riverSectionsData);
-        foreach ($this->riverSections->riverSectionsData as $river) {
-            print $river['name'];
-            break;
-            print " done2 ";
-        }
         foreach ($this->riverSections->riverSectionsData as $river) {
             print "<p>foo".$river['name']."</p>\n";
             if (!array_key_exists('webcam', $river) || $river['webcam'] == "") {
-                print "breaking";
-                break;
+                continue;
             }
             $cameraName = $river['webcam'];
             $cameraName = str_replace("https://www.farsondigitalwatercams.com/locations/", "", $cameraName);
