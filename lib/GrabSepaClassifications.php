@@ -69,7 +69,7 @@ class GrabSepaClassifications {
         flush();
     }
     
-    private function writeOutClassification() {
+    public function writeOutClassification() {
             $this->riverSections->writeToJson();
     }
 }
