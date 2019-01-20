@@ -682,12 +682,14 @@ jQuery(document).ready( function(){
                         $('.js-chart-yearly-content').hide();
                         $('.js-calib-table-content').hide();
                         $('.js-forecast-content').hide();
+                        $('.js-webcam-content').hide();
                         $(this).attr('style', '');
                         $('.js-calib-table').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-chart-weekly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-chart-monthly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-chart-yearly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-forecast').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
+                        $('.js-webcam').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                     }
                 }
             );
@@ -699,12 +701,14 @@ jQuery(document).ready( function(){
                         $('.js-chart-yearly-content').hide();
                         $('.js-calib-table-content').show();
                         $('.js-forecast-content').hide();
+                        $('.js-webcam-content').hide();
                         $(this).attr('style', '');
                         $('.js-info').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-chart-weekly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-chart-monthly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-chart-yearly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-forecast').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
+                        $('.js-webcam').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                     }
                 }
             );
@@ -716,12 +720,14 @@ jQuery(document).ready( function(){
                         $('.js-chart-monthly-content').hide();
                         $('.js-chart-yearly-content').hide();
                         $('.js-forecast-content').hide();
+                        $('.js-webcam-content').hide();
                         $(this).attr('style', '');
                         $('.js-info').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-calib-table').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-chart-monthly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-chart-yearly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-forecast').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
+                        $('.js-webcam').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                     }
                 }
             );
@@ -733,12 +739,14 @@ jQuery(document).ready( function(){
                         $('.js-chart-monthly-content').show();
                         $('.js-chart-yearly-content').hide();
                         $('.js-forecast-content').hide();
+                        $('.js-webcam-content').hide();
                         $(this).attr('style', '');
                         $('.js-info').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-calib-table').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-chart-weekly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-chart-yearly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-forecast').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
+                        $('.js-webcam').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                     }
                 }
             );
@@ -750,12 +758,14 @@ jQuery(document).ready( function(){
                         $('.js-chart-monthly-content').hide();
                         $('.js-chart-yearly-content').show();
                         $('.js-forecast-content').hide();
+                        $('.js-webcam-content').hide();
                         $(this).attr('style', '');
                         $('.js-info').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-calib-table').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-chart-weekly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-chart-monthly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-forecast').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
+                        $('.js-webcam').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                     }
                 }
             );
@@ -767,12 +777,14 @@ jQuery(document).ready( function(){
                         $('.js-chart-monthly-content').hide();
                         $('.js-chart-yearly-content').hide();
                         $('.js-forecast-content').show();
+                        $('.js-webcam-content').hide();
                         $(this).attr('style', '');
                         $('.js-info').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-calib-table').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-chart-weekly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-chart-monthly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-yearly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
+                        $('.js-webcam').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                     }
                 }
             );
