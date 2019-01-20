@@ -579,7 +579,7 @@
         "low_value": "0.45",
         "medium_value": "1",
         "name": "Nith (Drumlanrig)",
-        "notes": "Access issue updated Jan 2019",
+        "notes": "Access issue updated Jan 2019. Low was 0.65 now 0.45, Jan 2019.",
         "sca_guidebook_no": "287",
         "scrape_value": "0.4",
         "very_high_value": "1.5",
