@@ -375,8 +375,8 @@ class RiverSections {
         }
         $warning = "";
         if (time() - $mostRecentTimestamp > 20) {
-            $hours = (time() - $mostRecentTimestamp) / 60;
-            $warning = "<b>Warning data from SEPA is over $hours old.</p>";
+            $hours = round((time() - $mostRecentTimestamp) / 60 / 60);
+            $warning = "<b>Warning data from SEPA is over $hours hours old.</p>";
         }
         return "$mostRecentRiver at $mostRecentTime reading $mostRecentLevel $warning";
     }
