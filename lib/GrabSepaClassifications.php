@@ -30,7 +30,6 @@ class GrabSepaClassifications {
             print "<p>".$river['name']."</p>\n";
             $geometry = 'geometry=' . $river['longitude'] . "," . $river['latitude'];
             $url = self::SEPA_CLASSIFICATIONS_URL . '&' . $geometry;
-            print "URL: $url\n";
             $classificationDataJson = @file_get_contents($url);
             if ($classificationDataJson == false) {
                 print "<p>No Classification data for " . $river['name'] . "</p>\n";
@@ -57,7 +56,7 @@ class GrabSepaClassifications {
     }
 
     private function updateClassification($classificationData, $riverSectionId) {
-        $riverClassificationAttributes= $classificationData['results'][0]['attributes'];
+        $riverClassificationAttributes = $classificationData['results'][0]['attributes'];
         
         print "<p>name: " . $riverClassificationAttributes['WATER_BODY_NAME'] . "<br />\n";
         print "classification: " . $riverClassificationAttributes['OVERALL_CLASSIFICATION'] . "<br />\n";

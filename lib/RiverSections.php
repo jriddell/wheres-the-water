@@ -130,6 +130,12 @@ class RiverSections {
         if (!array_key_exists('notes', $riverSection)) {
             $riverSection['notes'] = '';
         }
+        if (!array_key_exists('classification', $riverSection)) {
+            $riverSection['classification'] = '';
+        }
+        if (!array_key_exists('classification_url', $riverSection)) {
+            $riverSection['classification_url'] = '';
+        }
         $reply = "";
         $reply .= "<legend>" . $riverSection['name'] . "</legend>";
         $reply .= $this->editRiverFormInputItem("River/Section Name", "rivername", $riverSection['name']);
@@ -150,6 +156,8 @@ class RiverSections {
         $reply .= $this->editRiverFormInputItem("KML Link", "kml", $riverSection['kml'], "right");
         $reply .= $this->editRiverFormInputItem("Webcam", "webcam", $riverSection['webcam']);
         $reply .= $this->editRiverFormInputItem("Notes", "notes", $riverSection['notes'], "right");
+        $reply .= $this->editRiverFormInputItem("Classification", "classification", $riverSection['classification']);
+        $reply .= $this->editRiverFormInputItem("Classification URL", "classification_url", $riverSection['classification_url'], "right");
         return $reply;
     }
 
