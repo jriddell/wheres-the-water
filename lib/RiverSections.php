@@ -57,6 +57,7 @@ class RiverSections {
     function readFromJson() {
         $json = file_get_contents($this->filename);
         $this->riverSectionsData = json_decode($json, true); // truely we do want this to be an array PHP
+        return true;
     }
 
     /* read from database and convert to our format, 

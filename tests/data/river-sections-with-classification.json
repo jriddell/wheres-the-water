@@ -9,7 +9,9 @@
         "medium_value": 2,
         "high_value": 3,
         "very_high_value": 4,
-        "huge_value": 5
+        "huge_value": 5,
+        "classification": "Good",
+        "classification_url": "https:\/\/www.sepa.org.uk\/data-visualisation\/water-classification-hub\/?display=information_sheet&waterbodyid=6500"
     },
     {
         "name": "Ericht",
@@ -21,6 +23,8 @@
         "medium_value": 2.5,
         "high_value": 3.5,
         "very_high_value": 4.5,
-        "huge_value": 5.5
+        "huge_value": 5.5,
+        "classification": "Moderate",
+        "classification_url": "https:\/\/www.sepa.org.uk\/data-visualisation\/water-classification-hub\/?display=information_sheet&waterbodyid=6535"
     }
 ]
