@@ -50,9 +50,10 @@ table a {
 }
 
 </style>
+<link href="https://www.kde.org/css/ekko-lightbox.css" rel="stylesheet" type="text/css" />
 
-<script src="https://www.kde.org/js/jquery-3.1.1.min.js" defer></script>
-<script src="https://www.kde.org/js/ekko-lightbox.min.js" defer></script>
+<script src="https://www.kde.org/js/jquery-3.1.1.min.js" defer="true"></script>
+<script src="https://www.kde.org/js/ekko-lightbox.min.js" defer="true"></script>
 <script src="https://www.kde.org/js/use-ekko-lightbox.js" defer="true"></script>
 
 <?php
