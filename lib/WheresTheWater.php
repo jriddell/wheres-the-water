@@ -532,7 +532,7 @@ jQuery(document).ready( function(){
                     "</p>"
                 if ('webcam_thumbnail' in riverSections[i] && !riverSections[i]['webcam_thumbnail'].length == 0) {
                     contentString +=
-                    "<p class='js-webcam-content' style='display: block'><img src='"+riverSections[i]['webcam_thumbnail']+"'/>" +
+                    "<p class='js-webcam-content' style='display: none'><img src='"+riverSections[i]['webcam_thumbnail']+"'/>" +
                     "</p>";
                 }
                 contentString += "</div>";
