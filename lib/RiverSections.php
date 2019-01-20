@@ -198,6 +198,8 @@ class RiverSections {
         $riverSection['kml'] = $postData['kml'];
         $riverSection['webcam'] = $postData['webcam'];
         $riverSection['notes'] = $postData['notes'];
+        $riverSection['classification'] = $postData['classification'];
+        $riverSection['classification_url'] = $postData['classification_url'];
 
         $this->riverSectionsData[$jsonid] = $riverSection;
         $this->writeToJson();
@@ -371,7 +373,12 @@ class RiverSections {
                 $mostRecentLevel = $grabSepaRivers->riversReadingsData[$riverSection['gauge_location_code']]['currentReading'];
             }
         }
-        return "$mostRecentRiver at $mostRecentTime reading $mostRecentLevel";
+        $warning = "";
+        if (time() - $mostRecentTimestamp > 20) {
+            $hours = (time() - $mostRecentTimestamp) / 60;
+            $warning = "<b>Warning data from SEPA is over $hours old.</p>";
+        }
+        return "$mostRecentRiver at $mostRecentTime reading $mostRecentLevel $warning";
     }
 
     // Used by table-view.php to print the table
