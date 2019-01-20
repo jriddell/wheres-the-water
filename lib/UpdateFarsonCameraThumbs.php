@@ -31,6 +31,7 @@ class UpdateFarsonCameraThumbs {
         foreach ($this->riverSections->riverSectionsData as $river) {
             print "<p>".$river['name']."</p>\n";
             if (!array_key_exists('webcam', $river) || $river['webcam'] == "") {
+                $riverSectionId++;
                 continue;
             }
             $cameraName = $river['webcam'];
