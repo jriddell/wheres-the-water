@@ -51,7 +51,9 @@ table a {
 
 </style>
 
-<?php 
+<script src="https://www.kde.org/js/use-ekko-lightbox.js" defer="true"></script>
+
+<?php
 require_once('../wheres-the-water/lib/RiverSections.php');
 $riverSections = new RiverSections();
 $riverSections->readFromJson();
