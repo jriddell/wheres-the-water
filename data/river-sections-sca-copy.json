@@ -1543,6 +1543,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "234252",
+        "gauge_name": "Killilan",
         "google_mymaps": "",
         "grade": "4/5",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/far-north/river-ling",
@@ -1559,5 +1560,25 @@
         "scrape_value": "0.47",
         "very_high_value": "1.1",
         "webcam": ""
+    },
+    {
+        "access_issue": "",
+        "gauge_location_code": "234243",
+        "google_mymaps": "",
+        "grade": "2(3/4)",
+        "guidebook_link": "",
+        "high_value": "1",
+        "huge_value": "1.5",
+        "kml": "",
+        "latitude": "57.059926",
+        "longitude": "-3.0695189",
+        "low_value": "0.65",
+        "medium_value": "0.8",
+        "name": "Gairn",
+        "notes": "",
+        "sca_guidebook_no": "",
+        "scrape_value": "0.6",
+        "very_high_value": "1.2",
+        "webcam": "https://www.farsondigitalwatercams.com/locations/bridge-of-gairn"
     }
 ]
