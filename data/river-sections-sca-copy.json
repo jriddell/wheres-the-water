@@ -18,8 +18,7 @@
         "name": "Garry (Great Glen)",
         "sca_guidebook_no": "94",
         "scrape_value": "0.4",
-        "very_high_value": "1.4",
-        "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImF5ci8yMDE5LzAxLzIwLzIxOjMwOjAwLmpwZyJdLFsicCIsInRodW1iIiwieDE1MCJdXQ.jpg"
+        "very_high_value": "1.4"
     },
     {
         "access_issue": "",
@@ -60,8 +59,7 @@
         "name": "Ness",
         "sca_guidebook_no": "80",
         "scrape_value": "0",
-        "very_high_value": "2",
-        "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImJsYWNrc2JvYXQvMjAxOS8wMS8yMC8yMTozMDowMC5qcGciXSxbInAiLCJ0aHVtYiIsIngxNTAiXV0.jpg"
+        "very_high_value": "2"
     },
     {
         "access_issue": "",
@@ -80,8 +78,7 @@
         "name": "Gryfe",
         "sca_guidebook_no": "274",
         "scrape_value": "0.3",
-        "very_high_value": "0.8",
-        "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImdyYW5kdHVsbHkvMjAxOS8wMS8yMC8yMTozMDowMC5qcGciXSxbInAiLCJ0aHVtYiIsIngxNTAiXV0.jpg"
+        "very_high_value": "0.8"
     },
     {
         "access_issue": "http://canoescotland.org/news/river-yarrow-fallen-tree-and-wire",
@@ -103,8 +100,7 @@
         "notes": "",
         "sca_guidebook_no": "309",
         "scrape_value": "0.4",
-        "very_high_value": "1",
-        "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsIm5pdGgvMjAxOS8wMS8yMC8yMTozMDowMC5qcGciXSxbInAiLCJ0aHVtYiIsIngxNTAiXV0.jpg"
+        "very_high_value": "1"
     },
     {
         "access_issue": "",
@@ -127,8 +123,7 @@
         "sca_guidebook_no": "280",
         "scrape_value": "0.4",
         "very_high_value": "1.3",
-        "webcam": "https://www.farsondigitalwatercams.com/locations/tarholm",
-        "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImNseWRlLzIwMTkvMDEvMjAvMjE6MzA6MDAuanBnIl0sWyJwIiwidGh1bWIiLCJ4MTUwIl1d.jpg"
+        "webcam": "https://www.farsondigitalwatercams.com/locations/tarholm"
     },
     {
         "access_issue": "",
@@ -150,8 +145,7 @@
         "notes": "",
         "sca_guidebook_no": "193",
         "scrape_value": "0",
-        "very_high_value": "0.5",
-        "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsInRlaXRoX2NhbGxhbmRlci8yMDE5LzAxLzIwLzIxOjMwOjAwLmpwZyJdLFsicCIsInRodW1iIiwieDE1MCJdXQ.jpg"
+        "very_high_value": "0.5"
     },
     {
         "access_issue": "",
@@ -193,8 +187,7 @@
         "sca_guidebook_no": "16",
         "scrape_value": "0.6",
         "very_high_value": "1.0",
-        "webcam": "",
-        "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImVyaWNodC8yMDE5LzAxLzIwLzIxOjMwOjAwLmpwZyJdLFsicCIsInRodW1iIiwieDE1MCJdXQ.jpg"
+        "webcam": ""
     },
     {
         "access_issue": "",
@@ -213,8 +206,7 @@
         "name": "Upper Meig",
         "sca_guidebook_no": "54",
         "scrape_value": "0",
-        "very_high_value": "1.3",
-        "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImRlZV9iYWxsYXRlci8yMDE5LzAxLzIwLzIxOjMwOjAwLmpwZyJdLFsicCIsInRodW1iIiwieDE1MCJdXQ.jpg"
+        "very_high_value": "1.3"
     },
     {
         "access_issue": "",
@@ -233,8 +225,7 @@
         "name": "Allan Water",
         "sca_guidebook_no": "258",
         "scrape_value": "0.7",
-        "very_high_value": "1.5",
-        "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImFsbW9uZF9raXJrdG9ud2Vpcl9saXZpbmdzdG9uZS8yMDE5LzAxLzIwLzIxOjMwOjAwLmpwZyJdLFsicCIsInRodW1iIiwieDE1MCJdXQ.jpg"
+        "very_high_value": "1.5"
     },
     {
         "access_issue": "http://canoescotland.org/news/stanley-access-2018",
@@ -255,8 +246,7 @@
         "name": "Tay (Stanley)",
         "sca_guidebook_no": "218",
         "scrape_value": "0",
-        "very_high_value": "2.7",
-        "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImxvY2hfdGF5LzIwMTkvMDEvMjAvMjE6MzA6MDAuanBnIl0sWyJwIiwidGh1bWIiLCJ4MTUwIl1d.jpg"
+        "very_high_value": "2.7"
     },
     {
         "access_issue": "",
@@ -276,8 +266,7 @@
         "notes": "",
         "sca_guidebook_no": "193",
         "scrape_value": "0.2",
-        "very_high_value": "1",
-        "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsInR3ZWVkX3RyYXF1YWlyLzIwMTkvMDEvMjAvMjE6MzA6MDAuanBnIl0sWyJwIiwidGh1bWIiLCJ4MTUwIl1d.jpg"
+        "very_high_value": "1"
     },
     {
         "access_issue": "",
@@ -319,8 +308,7 @@
         "name": "Kelvin",
         "sca_guidebook_no": "272",
         "scrape_value": "0.5",
-        "very_high_value": "1.4",
-        "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImRvbl9raW50b3JlLzIwMTkvMDEvMjAvMjE6MzA6MDAuanBnIl0sWyJwIiwidGh1bWIiLCJ4MTUwIl1d.jpg"
+        "very_high_value": "1.4"
     },
     {
         "access_issue": "",
@@ -342,8 +330,7 @@
         "notes": "",
         "sca_guidebook_no": "193",
         "scrape_value": "0.2",
-        "very_high_value": "1",
-        "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImtlbHNvLzIwMTkvMDEvMjAvMjE6MzA6MDAuanBnIl0sWyJwIiwidGh1bWIiLCJ4MTUwIl1d.jpg"
+        "very_high_value": "1"
     },
     {
         "access_issue": "",
@@ -362,8 +349,7 @@
         "name": "Lochay",
         "sca_guidebook_no": "223",
         "scrape_value": "0.6",
-        "very_high_value": "1.6",
-        "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImRvb24vMjAxOS8wMS8yMC8yMTozMDowMC5qcGciXSxbInAiLCJ0aHVtYiIsIngxNTAiXV0.jpg"
+        "very_high_value": "1.6"
     },
     {
         "access_issue": "http://canoescotland.org/news/hazard-tree-blockage-river-avon",
@@ -385,8 +371,7 @@
         "notes": "New calibrations Nov 2018, thanks Robin. Please fill in calibration report form to confirm or adjust.",
         "sca_guidebook_no": "270",
         "scrape_value": "0.5",
-        "very_high_value": "1.5",
-        "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsInBoaWxsaXBoYXVnaC8yMDE5LzAxLzIwLzIxOjMwOjAwLmpwZyJdLFsicCIsInRodW1iIiwieDE1MCJdXQ.jpg"
+        "very_high_value": "1.5"
     },
     {
         "access_issue": "",
@@ -405,8 +390,7 @@
         "name": "Falloch (Upper)",
         "sca_guidebook_no": "184",
         "scrape_value": "1",
-        "very_high_value": "2",
-        "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsInRldmlvdC8yMDE5LzAxLzIwLzIxOjMwOjAwLmpwZyJdLFsicCIsInRodW1iIiwieDE1MCJdXQ.jpg"
+        "very_high_value": "2"
     },
     {
         "access_issue": "",
@@ -428,8 +412,7 @@
         "notes": "Gauge is not on this river and often does not reflect well the flow here.",
         "sca_guidebook_no": "144",
         "scrape_value": "0",
-        "very_high_value": "3",
-        "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImVza19lZHplbGwvMjAxOS8wMS8yMC8yMTozMDowMC5qcGciXSxbInAiLCJ0aHVtYiIsIngxNTAiXV0.jpg"
+        "very_high_value": "3"
     },
     {
         "access_issue": "http://canoescotland.org/news/hazard-tree-river-knockando",
@@ -452,8 +435,7 @@
         "sca_guidebook_no": "196",
         "scrape_value": "0",
         "very_high_value": "2",
-        "webcam": "https://www.farsondigitalwatercams.com/locations/aberlour",
-        "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImZldWdoX2ZhbGxzLzIwMTkvMDEvMjAvMjE6MzA6MDAuanBnIl0sWyJwIiwidGh1bWIiLCJ4MTUwIl1d.jpg"
+        "webcam": "https://www.farsondigitalwatercams.com/locations/aberlour"
     },
     {
         "access_issue": "",
@@ -470,8 +452,7 @@
         "name": "Tilt (Marble Lodge)",
         "sca_guidebook_no": "214",
         "scrape_value": "0.35",
-        "very_high_value": "1.2",
-        "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImZldWdoX2ZhbGxzLzIwMTkvMDEvMjAvMjE6MzA6MDAuanBnIl0sWyJwIiwidGh1bWIiLCJ4MTUwIl1d.jpg"
+        "very_high_value": "1.2"
     },
     {
         "access_issue": "",
@@ -511,8 +492,7 @@
         "name": "Falloch (Lower)",
         "sca_guidebook_no": "184",
         "scrape_value": "0.8",
-        "very_high_value": "1.3",
-        "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImF2b2NoaWUvMjAxOS8wMS8yMC8yMTozMDowMC5qcGciXSxbInAiLCJ0aHVtYiIsIngxNTAiXV0.jpg"
+        "very_high_value": "1.3"
     },
     {
         "access_issue": "http://canoescotland.org/news/river-tay-grandtully-rapids",
