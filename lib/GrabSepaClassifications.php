@@ -59,14 +59,17 @@ class GrabSepaClassifications {
     private function updateClassification($classificationData, $riverSectionId) {
         $riverClassificationAttributes= $classificationData['results'][0]['attributes'];
         
-        print "name: " . $riverClassificationAttributes['WATER_BODY_NAME'] . "\n";
-        print "url: " . $riverClassificationAttributes['CLASS_DS_URL'] . "\n";
-        print "classification: " . $riverClassificationAttributes['OVERALL_CLASSIFICATION'] . "\n";
-        print "\n";
+        print "<p>name: " . $riverClassificationAttributes['WATER_BODY_NAME'] . "<br />\n";
+        print "url: " . $riverClassificationAttributes['CLASS_DS_URL'] . "<br />\n";
+        print "classification: " . $riverClassificationAttributes['OVERALL_CLASSIFICATION'] . "<br />\n";
+        print "\n</p>";
         $this->riverSections->riverSectionsData[$riverSectionId]['classification'] = $riverClassificationAttributes['OVERALL_CLASSIFICATION'];
         $this->riverSections->riverSectionsData[$riverSectionId]['classification_url'] = $riverClassificationAttributes['CLASS_DS_URL'];
         
         flush();
-        $this->riverSections->writeToJson();
+    }
+    
+    private function writeOutClassification() {
+            $this->riverSections->writeToJson();
     }
 }
