@@ -10,20 +10,17 @@ final class UpdateFarsonCameraThumbsTest extends TestCase
     public function initGrabSepaClassificationsTest() {
         $this->updateThumbs = new UpdateFarsonCameraThumbs();
         $this->updateThumbs->riverSections->filename = ROOT . '/tests/data/river-sections-webcams.json';
-        //$this->classifications->riverSections->filename = ROOT . '/data/river-sections-sca-copy.json';
     }
 
     public function testDoUpdateThumbs() {
         $this->initGrabSepaClassificationsTest();
         
         $this->updateThumbs->doUpdateThumbs();
-        print_r($this->updateThumbs->riverSections->riverSectionsData);
-        /*
-        $jsonFromFile = file_get_contents(ROOT . '/tests/data/river-sections-new.json');
-        $json = json_encode($this->classifications->riverSections->riverSectionsData, JSON_PRETTY_PRINT);
+        //print_r($this->updateThumbs->riverSections->riverSectionsData);
+        $jsonFromFile = file_get_contents(ROOT . '/tests/data/river-sections-webcams-updated.json');
+        $json = json_encode($this->updateThumbs->riverSections->riverSectionsData, JSON_PRETTY_PRINT);
         
-        $this->assertEquals($json, $jsonFromFile);
-        */
+        $this->assertEquals($json."\n", $jsonFromFile);
     }
 
     /*
