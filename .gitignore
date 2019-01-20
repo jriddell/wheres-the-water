@@ -19,3 +19,9 @@ data/download_reading_timestamp
 .settings/org.eclipse.php.core.prefs
 .settings/org.eclipse.wst.common.project.facet.core.xml
 farsoncookie
+data/farson-camera-locations
+data/section-forecasts.json
+data/DOWNLOAD-READINGS-TIMESTAMP
+data/RIVERS_DOWNLOAD_TIMESTAMP
+*~
+data/*weather.json

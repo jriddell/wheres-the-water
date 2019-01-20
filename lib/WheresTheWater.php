@@ -511,7 +511,7 @@ jQuery(document).ready( function(){
                 var contentString = "<div><h4 style='padding-left: 30px;'>" + riverSection + "</h4>" +
                     "<p style='padding-left: 30px;'><img src='" + iconBase + waterLevelValue + ext + "' /> " +
                     tidyStatusString(waterLevelValue) + ", " + currentReading + "</p>" +
-                    "<p><span class='js-info'>Info</span> / <span class='js-calib-table link' style='text-decoration: underline; color: blue; cursor: pointer'>Calibrations</span> / <span class='js-chart-weekly link' style='text-decoration: underline; color: blue; cursor: pointer'>Weekly Chart</span> / <span class='js-chart-monthly link' style='text-decoration: underline; color: blue; cursor: pointer'>Monthly Chart</span> / <span class='js-chart-yearly link' style='text-decoration: underline; color: blue; cursor: pointer'>Yearly Chart</span> / <span class='js-forecast link' style='text-decoration: underline; color: blue; cursor: pointer'>Forecast</span></p>" +
+                    "<p><span class='js-info'>Info</span> / <span class='js-calib-table link' style='text-decoration: underline; color: blue; cursor: pointer'>Calibrations</span> / <span class='js-chart-weekly link' style='text-decoration: underline; color: blue; cursor: pointer'>Weekly Chart</span> / <span class='js-chart-monthly link' style='text-decoration: underline; color: blue; cursor: pointer'>Monthly Chart</span> / <span class='js-chart-yearly link' style='text-decoration: underline; color: blue; cursor: pointer'>Yearly Chart</span> / <span class='js-forecast link' style='text-decoration: underline; color: blue; cursor: pointer'>Forecast</span> / <span class='js-webcam link' style='text-decoration: underline; color: blue; cursor: pointer'>Webcam</span></p>" +
                     "<p class='js-info-content'><img width='16' height='16' src='/wheres-the-water/pics/clock.png'/> Last reading " + currentReadingTime +
                     "<br />" + sectionLinks + "</p>" + riverReadingsTable +
                     "<p class='js-chart-weekly-content' style='display: none'>" +
@@ -525,6 +525,9 @@ jQuery(document).ready( function(){
                     "<img src='http://canoescotland.org/wheres-the-water/charts/"+riverFilename+"-yearly.png' style='max-width: 250px; width: 100%' /></a></p>" +
                     "<p class='js-forecast-content' style='display: none'>" +
                     sectionForecasts[riverSections[i]['gauge_location_code']] +
+                    "</p>" +
+                    "<p class='js-webcome-content' style='display: none'>" +
+                    "<img src='"+riverSections[i]['webcam_thumbnail']+"/>" +
                     "</p>" +
                     "</div>";
                 var marker = L.marker([riverSections[i]['latitude'], riverSections[i]['longitude']], {icon: icon}).bindPopup(contentString).addTo( map );
@@ -758,6 +761,24 @@ jQuery(document).ready( function(){
                         $('.js-chart-monthly-content').hide();
                         $('.js-chart-yearly-content').hide();
                         $('.js-forecast-content').show();
+                        $(this).attr('style', '');
+                        $('.js-info').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
+                        $('.js-calib-table').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
+                        $('.js-chart-weekly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
+                        $('.js-chart-monthly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
+                        $('.js-yearly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
+                    }
+                }
+            );
+            $('#map').on('click', '.js-webcam', function(){
+                    if (!$(this).hasClass('js-link')){
+                        $('.js-info-content').hide();
+                        $('.js-calib-table-content').hide();
+                        $('.js-chart-weekly-content').hide();
+                        $('.js-chart-monthly-content').hide();
+                        $('.js-chart-yearly-content').hide();
+                        $('.js-forecast-content').hide();
+                        $('.js-webcam-content').show();
                         $(this).attr('style', '');
                         $('.js-info').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
                         $('.js-calib-table').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
