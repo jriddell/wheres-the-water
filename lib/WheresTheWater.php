@@ -526,8 +526,7 @@ jQuery(document).ready( function(){
                     "<p class='js-forecast-content' style='display: none'>" +
                     sectionForecasts[riverSections[i]['gauge_location_code']] +
                     "</p>" +
-                    "<p class='js-webcam-content' style='display: block'>HELLO" +
-                    "<img src='"+riverSections[i]['webcam_thumbnail']+"/>" +
+                    "<p class='js-webcam-content' style='display: block'>HELLO<img src='"+riverSections[i]['webcam_thumbnail']+"/>" +
                     "</p>" +
                     "</div>";
                 var marker = L.marker([riverSections[i]['latitude'], riverSections[i]['longitude']], {icon: icon}).bindPopup(contentString).addTo( map );
