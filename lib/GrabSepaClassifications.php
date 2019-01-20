@@ -60,7 +60,6 @@ class GrabSepaClassifications {
         $riverClassificationAttributes= $classificationData['results'][0]['attributes'];
         
         print "<p>name: " . $riverClassificationAttributes['WATER_BODY_NAME'] . "<br />\n";
-        print "url: " . $riverClassificationAttributes['CLASS_DS_URL'] . "<br />\n";
         print "classification: " . $riverClassificationAttributes['OVERALL_CLASSIFICATION'] . "<br />\n";
         print "\n</p>";
         $this->riverSections->riverSectionsData[$riverSectionId]['classification'] = $riverClassificationAttributes['OVERALL_CLASSIFICATION'];
