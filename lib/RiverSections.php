@@ -198,6 +198,8 @@ class RiverSections {
         $riverSection['kml'] = $postData['kml'];
         $riverSection['webcam'] = $postData['webcam'];
         $riverSection['notes'] = $postData['notes'];
+        $riverSection['classification'] = $postData['classification'];
+        $riverSection['classification_url'] = $postData['classification_url'];
 
         $this->riverSectionsData[$jsonid] = $riverSection;
         $this->writeToJson();
@@ -371,7 +373,12 @@ class RiverSections {
                 $mostRecentLevel = $grabSepaRivers->riversReadingsData[$riverSection['gauge_location_code']]['currentReading'];
             }
         }
-        return "$mostRecentRiver at $mostRecentTime reading $mostRecentLevel";
+        $warning = "";
+        $hours = round((time() - $mostRecentTimestamp) / 60 / 60, 0, PHP_ROUND_HALF_DOWN);
+        if ($hours >= 4) {
+            $warning = "<b style='color: red'>Warning data from SEPA is over $hours hours old.</b>";
+        }
+        return "$mostRecentRiver at $mostRecentTime reading $mostRecentLevel $warning";
     }
 
     // Used by table-view.php to print the table
@@ -441,6 +448,10 @@ class RiverSections {
         }
         if (!empty($riverSection['webcam'])) {
             $linkContent .= "<a target='_blank' rel='noopener' href='".$riverSection['webcam']."'><img width='16' height='16' title='Webcam' src='/wheres-the-water/pics/webcam.png' /> Webcam</a><br />";
+        }
+        if (!empty($riverSection['classification'])) {
+            $classificatonIcon = strtolower(split(" ", $riverSection['classification'])[0]);
+            $linkContent .= "<a target='_blank' rel='noopener' href='".$riverSection['classification_url']."'><img width='16' height='16' title='Webcam' src='/wheres-the-water/pics/classification-'.$classificatonIcon'.png' /> Water Classification: ".$riverSection['classification']."</a><br />";
         }
         /* Render the picture */
         $filename = strtolower($riverSection['name']);
