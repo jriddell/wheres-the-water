@@ -527,11 +527,11 @@ jQuery(document).ready( function(){
                     sectionForecasts[riverSections[i]['gauge_location_code']] +
                     "</p>"
                 if ('webcam_thumbnail' in riverSections[i] && !riverSections[i]['webcam_thumbnail'].length == 0) {
-                    contentString .=
+                    contentString +=
                     "<p class='js-webcam-content' style='display: block'>HELLO"+riverSections[i]['webcam_thumbnail']+"/>" +
                     "</p>";
                 }
-                contentString .= "</div>";
+                contentString += "</div>";
                 var marker = L.marker([riverSections[i]['latitude'], riverSections[i]['longitude']], {icon: icon}).bindPopup(contentString).addTo( map );
                 marker.bindTooltip(riverSection);
                 markers.push(marker);
