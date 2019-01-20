@@ -20,6 +20,7 @@ if (array_key_exists('download', $_GET)) {
     $classifications->doClassificationsGrab();
     $classifications->writeOutClassification();
     print "\n<h1>Done</h1>\n";
+    print "<p>Now run on embra: scp /home/jr/www/www.andyjacksonfund.org.uk/wheres-the-water/data/river-sections.json canoedev@canoescotland.org:/var/www/vhosts/canoescotland.org/httpdocs/wheres-the-water/data/</p>";
 }
 
 ?>
