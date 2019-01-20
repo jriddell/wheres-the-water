@@ -525,10 +525,13 @@ jQuery(document).ready( function(){
                     "<img src='http://canoescotland.org/wheres-the-water/charts/"+riverFilename+"-yearly.png' style='max-width: 250px; width: 100%' /></a></p>" +
                     "<p class='js-forecast-content' style='display: none'>" +
                     sectionForecasts[riverSections[i]['gauge_location_code']] +
-                    "</p>" +
-                    "<p class='js-webcam-content' style='display: block'>HELLO<img src='"+riverSections[i]['webcam_thumbnail']+"/>" +
-                    "</p>" +
-                    "</div>";
+                    "</p>"
+                if ('webcam_thumbnail' in riverSections[i] && !riverSections[i]['webcam_thumbnail'].length == 0) {
+                    contentString .=
+                    "<p class='js-webcam-content' style='display: block'>HELLO"+riverSections[i]['webcam_thumbnail']+"/>" +
+                    "</p>";
+                }
+                contentString .= "</div>";
                 var marker = L.marker([riverSections[i]['latitude'], riverSections[i]['longitude']], {icon: icon}).bindPopup(contentString).addTo( map );
                 marker.bindTooltip(riverSection);
                 markers.push(marker);
