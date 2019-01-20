@@ -1547,12 +1547,12 @@
         "kml": "",
         "latitude": "57.336696",
         "longitude": "-5.415560",
-        "low_value": "0.90",
-        "medium_value": "0.90",
+        "low_value": "0.94",
+        "medium_value": "0.94",
         "name": "Ling",
         "notes": "1 calibration for high at 0.95.  Please send more.",
         "sca_guidebook_no": "",
-        "scrape_value": "0.90",
+        "scrape_value": "0.94",
         "very_high_value": "10",
         "webcam": ""
     }
