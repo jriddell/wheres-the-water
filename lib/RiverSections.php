@@ -451,7 +451,7 @@ class RiverSections {
         }
         if (!empty($riverSection['classification'])) {
             $classificatonIcon = strtolower(split(" ", $riverSection['classification'])[0]);
-            $linkContent .= "<a target='_blank' rel='noopener' href='".$riverSection['classification_url']."'><img width='16' height='16' title='Webcam' src='/wheres-the-water/pics/classification-'.$classificatonIcon'.png' /> Water Classification: ".$riverSection['classification']."</a><br />";
+            $linkContent .= "<a target='_blank' rel='noopener' href='".$riverSection['classification_url']."'><img width='16' height='16' title='Webcam' src='/wheres-the-water/pics/classification-".$classificatonIcon.".png' /> Water Classification: ".$riverSection['classification']."</a><br />";
         }
         /* Render the picture */
         $filename = strtolower($riverSection['name']);
