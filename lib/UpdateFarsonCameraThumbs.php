@@ -31,6 +31,7 @@ class UpdateFarsonCameraThumbs {
         //print_r($this->riverSections->riverSectionsData);
         foreach ($this->riverSections->riverSectionsData as $river) {
             print $river['name'];
+            break;
             print " done ";
         }
         foreach ($this->riverSections->riverSectionsData as $river) {
