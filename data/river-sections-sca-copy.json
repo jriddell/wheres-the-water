@@ -1,6 +1,8 @@
 [
     {
         "access_issue": "",
+        "classification": "Good ecological potential",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=20254",
         "gauge_location_code": "234189",
         "gauge_name": "Craigard",
         "google_mymaps": "https://drive.google.com/open?id=1IPf8zywLzDxXK26S82mTPMQckW8pdSnY&usp=sharing",
@@ -20,6 +22,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Good",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=5200",
         "gauge_location_code": "9514",
         "gauge_name": "Norham",
         "google_mymaps": "",
@@ -40,6 +44,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Moderate",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=23394",
         "gauge_location_code": "234287",
         "gauge_name": "Ness-side",
         "grade": "1/2",
@@ -57,6 +63,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Moderate ecological potential",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=10031",
         "gauge_location_code": "133073",
         "gauge_name": "Craigend",
         "grade": "3(4+)",
@@ -74,6 +82,8 @@
     },
     {
         "access_issue": "http://canoescotland.org/news/river-yarrow-fallen-tree-and-wire",
+        "classification": "Moderate",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=5290",
         "gauge_location_code": "14985",
         "gauge_name": "Philiphaugh",
         "google_mymaps": "https://drive.google.com/open?id=1SW_LEzv-d0Qt9WyonD7cjVDOzm1L_O5M&usp=sharing",
@@ -94,6 +104,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Good",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=10420",
         "gauge_location_code": "133111",
         "gauge_name": "Mainholm",
         "google_mymaps": "",
@@ -115,6 +127,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Good",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=23000",
         "gauge_location_code": "234306",
         "gauge_name": "Shenachie",
         "google_mymaps": "https://drive.google.com/open?id=18PxkUQKPHAZne4n7eOwBn0-dH3jLhSEl&usp=sharing",
@@ -135,6 +149,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Good",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=20057",
         "gauge_location_code": "234174",
         "gauge_name": "Bruachrobie",
         "grade": "2",
@@ -152,6 +168,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Good",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=20558",
         "gauge_location_code": "234264",
         "gauge_name": "Little Assynt",
         "google_mymaps": "",
@@ -173,6 +191,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Good",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=20191",
         "gauge_location_code": "234227",
         "gauge_name": "Glenmeanie",
         "grade": "2/3",
@@ -190,6 +210,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Moderate",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=6832",
         "gauge_location_code": "14890",
         "gauge_name": "Kinbuck",
         "grade": "3+(4)",
@@ -207,6 +229,8 @@
     },
     {
         "access_issue": "http://canoescotland.org/news/stanley-access-2018",
+        "classification": "Good",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=6498",
         "gauge_location_code": "14937",
         "gauge_name": "Ballathie",
         "google_mymaps": "https://drive.google.com/open?id=1A3Jqx9E46jVymhbP1-3UNudWxdx4PNuG&usp=sharing",
@@ -246,6 +270,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Moderate",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=10455",
         "gauge_location_code": "133123",
         "gauge_name": "Robstone",
         "google_mymaps": "",
@@ -267,6 +293,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Poor ecological potential",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=10130",
         "gauge_location_code": "133080",
         "gauge_name": "Dryfield",
         "grade": "3",
@@ -284,6 +312,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Moderate",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=23004",
         "gauge_location_code": "234306",
         "gauge_name": "Shenachie",
         "google_mymaps": "https://drive.google.com/open?id=18PxkUQKPHAZne4n7eOwBn0-dH3jLhSEl&usp=sharing",
@@ -304,6 +334,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Moderate ecological potential",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=6922",
         "gauge_location_code": "14933",
         "gauge_name": "Killin",
         "grade": "4(5)",
@@ -321,6 +353,8 @@
     },
     {
         "access_issue": "http://canoescotland.org/news/hazard-tree-blockage-river-avon",
+        "classification": "Moderate",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=10076",
         "gauge_location_code": "133084",
         "gauge_name": "Fairholm",
         "google_mymaps": "",
@@ -341,6 +375,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Moderate",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=10166",
         "gauge_location_code": "133089",
         "gauge_name": "Glenfalloch",
         "grade": "2-4(5)",
@@ -358,6 +394,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Good ecological potential",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=20346",
         "gauge_location_code": "234178",
         "gauge_name": "Camisky",
         "google_mymaps": "https://drive.google.com/open?id=1rUrRL-8xKkuB8e1q7brhx7MK2cz3qFQe&usp=sharing",
@@ -378,6 +416,8 @@
     },
     {
         "access_issue": "http://canoescotland.org/news/hazard-tree-river-knockando",
+        "classification": "Good",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=23066",
         "gauge_location_code": "234167",
         "gauge_name": "Boat o  Brig",
         "google_mymaps": "",
@@ -416,6 +456,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Good",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=4718",
         "gauge_location_code": "14888",
         "gauge_name": "Anie",
         "google_mymaps": "https://drive.google.com/open?id=1mVyaoPqAICBmHOkplD0R7ysSZ3UeirgC&usp=sharing",
@@ -435,6 +477,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Good ecological potential",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=10165",
         "gauge_location_code": "133089",
         "gauge_name": "Glenfalloch",
         "grade": "4/5",
@@ -452,6 +496,8 @@
     },
     {
         "access_issue": "http://canoescotland.org/news/river-tay-grandtully-rapids",
+        "classification": "Good",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=6500",
         "gauge_location_code": "14935",
         "gauge_name": "Pitnacree",
         "google_mymaps": "https://drive.google.com/open?id=1NyCGONhCSxE-2EeOV_DU7_LTFJTzZaJR&usp=sharing",
@@ -473,6 +519,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Good",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=20116",
         "gauge_location_code": "234209",
         "gauge_name": "Easter Turnaig",
         "grade": "3(6)",
@@ -490,6 +538,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Moderate",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=23004",
         "gauge_location_code": "234306",
         "gauge_name": "Shenachie",
         "google_mymaps": "https://drive.google.com/open?id=18PxkUQKPHAZne4n7eOwBn0-dH3jLhSEl&usp=sharing",
@@ -510,6 +560,8 @@
     },
     {
         "access_issue": "http://canoescotland.org/news/hazard-electric-fence-thurso-river-halkirk-section",
+        "classification": "Good",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=20637",
         "gauge_location_code": "234231",
         "gauge_name": "Halkirk",
         "google_mymaps": "",
@@ -546,6 +598,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Good",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=10758",
         "gauge_location_code": "133148",
         "gauge_name": "Canonbie",
         "google_mymaps": "https://drive.google.com/open?id=1bO01VbzW3b4MJxGb9qbCHGG6_eQ47Scx&usp=sharing",
@@ -604,6 +658,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Good",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=20733",
         "gauge_location_code": "234313",
         "gauge_name": "Skeabost",
         "google_mymaps": "https://drive.google.com/open?id=1EbvYVqguikPsr1gaT4hOSqvfm4GxqOr2&usp=sharing",
@@ -625,6 +681,8 @@
     },
     {
         "access_issue": "http://canoescotland.org/news/bridge-closure-blackwater-netherton-dec-1-31",
+        "classification": "Moderate",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=6540",
         "gauge_location_code": "14956",
         "gauge_name": "Craighall (Perth)",
         "google_mymaps": "",
@@ -661,6 +719,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Good ecological potential",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=20329",
         "gauge_location_code": "116011",
         "gauge_name": "Claggan",
         "grade": "4(5)",
@@ -678,6 +738,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Moderate",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=10286",
         "gauge_location_code": "133097",
         "gauge_name": "Inverlochy",
         "grade": "5",
@@ -695,6 +757,8 @@
     },
     {
         "access_issue": "http://canoescotland.org/news/clyde-crossford",
+        "classification": "Good",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=10919",
         "gauge_location_code": "133094",
         "gauge_name": "Hazelbank",
         "google_mymaps": "https://drive.google.com/open?id=1J8FELMrZrK2531CXsh7Fldyr6XZDy0kC&usp=sharing",
@@ -716,6 +780,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Moderate",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=10160",
         "gauge_location_code": "133108",
         "gauge_name": "Luss",
         "grade": "4(4+)",
@@ -733,6 +799,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Good",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=20002",
         "gauge_location_code": "234253",
         "gauge_name": "Kilphedir",
         "grade": "3/4(4+)",
@@ -750,6 +818,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Moderate",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=23129",
         "gauge_location_code": "234217",
         "gauge_name": "Feshie Bridge",
         "google_mymaps": "https://drive.google.com/open?id=17kIXA7rrADj0iFSBFh9-AzOEDc_DlHQr&usp=sharing",
@@ -790,6 +860,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Good",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=20455",
         "gauge_location_code": "234289",
         "gauge_name": "New Kelso",
         "google_mymaps": "",
@@ -885,6 +957,8 @@
     },
     {
         "access_issue": "http://canoescotland.org/news/glen-orchy-bailey-bridge-works-and-tree-felling",
+        "classification": "Moderate",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=10285",
         "gauge_location_code": "133087",
         "gauge_name": "Glen Orchy",
         "google_mymaps": "https://drive.google.com/open?id=1i64desUTuyjWXxwc-gpANxGz2pQJeGIZ&usp=sharing",
@@ -904,6 +978,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Moderate",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=10528",
         "gauge_location_code": "133168",
         "gauge_name": "Minnoch Bridge",
         "grade": "5",
@@ -921,6 +997,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Good ecological potential",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=20130",
         "gauge_location_code": "234305",
         "gauge_name": "Sgodachail",
         "grade": "4 (4+)",
@@ -938,6 +1016,8 @@
     },
     {
         "access_issue": "http://canoescotland.org/news/river-dee-rope-hazard-ballater",
+        "classification": "Moderate",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=23332",
         "gauge_location_code": "234294",
         "gauge_name": "Polhollick",
         "google_mymaps": "",
@@ -959,6 +1039,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Good ecological potential",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=6639",
         "gauge_location_code": "14951",
         "gauge_name": "Comrie Bridge",
         "google_mymaps": "",
@@ -980,6 +1062,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Moderate ecological potential",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=6502",
         "gauge_location_code": "14933",
         "gauge_name": "Killin",
         "google_mymaps": "https://drive.google.com/open?id=1gUwotl2KhJWLXdT0mW1LO8eHCXpDZMsF&usp=sharing",
@@ -999,6 +1083,8 @@
     },
     {
         "access_issue": "http://canoescotland.org/news/access-issue-got-ericht",
+        "classification": "Moderate",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=6535",
         "gauge_location_code": "14956",
         "gauge_name": "Craighall (Perth)",
         "google_mymaps": "",
@@ -1020,6 +1106,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Good",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=6576",
         "gauge_location_code": "8402",
         "gauge_name": "Hermitage",
         "google_mymaps": "https://drive.google.com/open?id=1gIXTCFC7nDLgiQAiAp81cTvLdkN59sMZ&usp=sharing",
@@ -1040,6 +1128,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Good",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=23351",
         "gauge_location_code": "234247",
         "gauge_name": "Invermuick",
         "google_mymaps": "",
@@ -1061,6 +1151,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Poor",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=3001",
         "gauge_location_code": "14869",
         "gauge_name": "Almondell",
         "google_mymaps": "",
@@ -1082,6 +1174,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Good",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=6501",
         "gauge_location_code": "8295",
         "gauge_name": "Kenmore",
         "google_mymaps": "",
@@ -1103,6 +1197,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Good",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=5203",
         "gauge_location_code": "14979",
         "gauge_name": "Peebles",
         "google_mymaps": "https://drive.google.com/open?id=1TfqoftceHblbyeimd0HgvATx3ouL5H1K&usp=sharing",
@@ -1124,6 +1220,8 @@
     },
     {
         "access_issue": "http://canoescotland.org/news/tree-hazards-angus-south-esk",
+        "classification": "Good",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=5800",
         "gauge_location_code": "14916",
         "gauge_name": "Gella Bridge",
         "google_mymaps": "",
@@ -1183,6 +1281,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Moderate",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=20549",
         "gauge_location_code": "356328",
         "gauge_name": "Loch A Bhraoin",
         "grade": "5",
@@ -1221,6 +1321,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Good",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=20121",
         "gauge_location_code": "234209",
         "gauge_name": "Easter Turnaig",
         "google_mymaps": "",
@@ -1240,6 +1342,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Good",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=20124",
         "gauge_location_code": "234209",
         "gauge_name": "Easter Turnaig",
         "grade": "4(5)",
@@ -1257,6 +1361,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Moderate ecological potential",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=10924",
         "gauge_location_code": "133060",
         "gauge_name": "Auchendrane",
         "google_mymaps": "",
@@ -1278,6 +1384,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Moderate",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=5287",
         "gauge_location_code": "14990",
         "gauge_name": "Lindean",
         "google_mymaps": "https://drive.google.com/open?id=1CdpeqnhYWUOEjzGL7xNaXglCF9CHi4Ng&usp=sharing",
@@ -1299,6 +1407,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Poor ecological potential",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=5101",
         "gauge_location_code": "15018",
         "gauge_name": "Abbey St Bathans",
         "grade": "2/3 (4)",
@@ -1337,6 +1447,8 @@
     },
     {
         "access_issue": "https://www.facebook.com/will.leigh.3/videos/2089680591047360/",
+        "classification": "Good",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=5701",
         "gauge_location_code": "371579",
         "gauge_name": "Inveriscandye",
         "google_mymaps": "https://drive.google.com/open?id=1ksoUeNPrTjXDickP0idcLMYmsXnDUuFT&usp=sharing",
@@ -1358,6 +1470,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Moderate ecological potential",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=23392",
         "gauge_location_code": "234225",
         "gauge_name": "Garve",
         "google_mymaps": "",
@@ -1398,6 +1512,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Moderate",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=5288",
         "gauge_location_code": "14987",
         "gauge_name": "Brockhoperig",
         "google_mymaps": "",
@@ -1418,6 +1534,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Moderate",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=23316",
         "gauge_location_code": "368014",
         "gauge_name": "Garthdee",
         "google_mymaps": "",
@@ -1439,6 +1557,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Good",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=23328",
         "gauge_location_code": "234237",
         "gauge_name": "Heugh Head",
         "google_mymaps": "",
@@ -1480,6 +1600,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Good",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=23346",
         "gauge_location_code": "234274",
         "gauge_name": "Mar Lodge",
         "google_mymaps": "",
@@ -1501,6 +1623,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Good",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=23182",
         "gauge_location_code": "369548",
         "gauge_name": "Huntly GS",
         "google_mymaps": "",
@@ -1522,6 +1646,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Poor",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=10540",
         "gauge_location_code": "133177",
         "gauge_name": "Rusko",
         "google_mymaps": "",
@@ -1542,6 +1668,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Poor",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=20451",
         "gauge_location_code": "234252",
         "gauge_name": "Killilan",
         "google_mymaps": "",
@@ -1563,6 +1691,8 @@
     },
     {
         "access_issue": "",
+        "classification": "Good",
+        "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=23347",
         "gauge_location_code": "234243",
         "google_mymaps": "",
         "grade": "2(3/4)",
