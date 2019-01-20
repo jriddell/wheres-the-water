@@ -484,6 +484,8 @@ jQuery(document).ready( function(){
                 linksContent += "<a target='_blank' rel='noopener' href='"+riverSection['webcam']+"'><img width='16' height='16' title='Webcam' src='/wheres-the-water/pics/webcam.png' /> Webcam</a><br />";
             }
             if ('classification' in riverSection && !riverSection['classification'].length == 0) {
+                var icon = riverSection['classification'];
+                icon = icon.toLowerCase();
                 linksContent += "<a target='_blank' rel='noopener' href='"+riverSection['classification_url']+"'><img width='16' height='16' title='Classification' src='/wheres-the-water/pics/classification-.png' /> Water Classification: "+riverSection['classification']+"</a><br />";
             }
 
