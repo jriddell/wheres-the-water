@@ -951,7 +951,7 @@
         "low_value": "0.5",
         "medium_value": "1",
         "name": "Dee (Grampian) (Middle)",
-        "notes": "",
+        "notes": "Uses gauge upstream of Bridge of Gairn, may be better to change to Woodend gauge which is closer",
         "sca_guidebook_no": "240",
         "scrape_value": "0",
         "very_high_value": "2",
