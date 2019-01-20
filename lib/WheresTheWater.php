@@ -526,7 +526,7 @@ jQuery(document).ready( function(){
                     "<p class='js-forecast-content' style='display: none'>" +
                     sectionForecasts[riverSections[i]['gauge_location_code']] +
                     "</p>" +
-                    "<p class='js-webcam-content' style='display: none'>" +
+                    "<p class='js-webcam-content' style='display: block'>HELLO" +
                     "<img src='"+riverSections[i]['webcam_thumbnail']+"/>" +
                     "</p>" +
                     "</div>";
