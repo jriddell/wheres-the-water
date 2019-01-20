@@ -375,6 +375,7 @@ class RiverSections {
         }
         $warning = "";
         $hours = round((time() - $mostRecentTimestamp) / 60 / 60, 0, PHP_ROUND_HALF_DOWN);
+        print "<p>hours: $hours</p>";
         if ($hours > -1) {
             $warning = "<b style='color: red'>Warning data from SEPA is over $hours hours old.</b>";
         }
