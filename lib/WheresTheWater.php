@@ -512,9 +512,11 @@ jQuery(document).ready( function(){
                     "<p style='padding-left: 30px;'><img src='" + iconBase + waterLevelValue + ext + "' /> " +
                     tidyStatusString(waterLevelValue) + ", " + currentReading + "</p>" +
                     "<p><span class='js-info'>Info</span> / <span class='js-calib-table link' style='text-decoration: underline; color: blue; cursor: pointer'>Calibrations</span> / <span class='js-chart-weekly link' style='text-decoration: underline; color: blue; cursor: pointer'>Weekly Chart</span> / <span class='js-chart-monthly link' style='text-decoration: underline; color: blue; cursor: pointer'>Monthly Chart</span> / <span class='js-chart-yearly link' style='text-decoration: underline; color: blue; cursor: pointer'>Yearly Chart</span> / <span class='js-forecast link' style='text-decoration: underline; color: blue; cursor: pointer'>Forecast</span>";
+                /*
                 if ('webcam_thumbnail' in riverSections[i] && !riverSections[i]['webcam_thumbnail'].length == 0) {
                     contentString += " / <span class='js-webcam link' style='text-decoration: underline; color: blue; cursor: pointer'>Webcam</span>";
                 }
+                */
                 contentString += "</p>" +
                     "<p class='js-info-content'><img width='16' height='16' src='/wheres-the-water/pics/clock.png'/> Last reading " + currentReadingTime +
                     "<br />" + sectionLinks + "</p>" + riverReadingsTable +
@@ -530,11 +532,13 @@ jQuery(document).ready( function(){
                     "<p class='js-forecast-content' style='display: none'>" +
                     sectionForecasts[riverSections[i]['gauge_location_code']] +
                     "</p>"
+                /*
                 if ('webcam_thumbnail' in riverSections[i] && !riverSections[i]['webcam_thumbnail'].length == 0) {
                     contentString +=
                     "<p class='js-webcam-content' style='display: none'><a href='"+riverSections[i]['webcam']+"'><img src='"+riverSections[i]['webcam_thumbnail']+"'/></a>" +
                     "</p>";
                 }
+                */
                 contentString += "</div>";
                 var marker = L.marker([riverSections[i]['latitude'], riverSections[i]['longitude']], {icon: icon}).bindPopup(contentString).addTo( map );
                 marker.bindTooltip(riverSection);
