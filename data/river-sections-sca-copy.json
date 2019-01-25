@@ -1714,6 +1714,7 @@
         "classification": "Good",
         "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=23347",
         "gauge_location_code": "234243",
+        "gauge_name": "Invergairn",
         "google_mymaps": "",
         "grade": "2(3/4)",
         "guidebook_link": "",
@@ -1730,5 +1731,25 @@
         "scrape_value": "0.6",
         "very_high_value": "1.2",
         "webcam": "https://www.farsondigitalwatercams.com/locations/bridge-of-gairn"
+    },
+    {
+        "access_issue": "",
+        "gauge_location_code": "133151",
+        "google_mymaps": "",
+        "grade": "3 (3+)",
+        "guidebook_link": "https://en.wikipedia.org/wiki/Urr_Water",
+        "high_value": "1.5",
+        "huge_value": "2",
+        "kml": "",
+        "latitude": "55.0610",
+        "longitude": "-3.9329",
+        "low_value": "0.8",
+        "medium_value": "1",
+        "name": "Urr Water",
+        "notes": "New section Jan 2019",
+        "sca_guidebook_no": "291",
+        "scrape_value": "0.7",
+        "very_high_value": "1.8",
+        "webcam": ""
     }
 ]
