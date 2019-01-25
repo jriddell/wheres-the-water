@@ -1737,6 +1737,7 @@
         "classification": "",
         "classification_url": "",
         "gauge_location_code": "133151",
+        "gauge_name": "Dalbeattie",
         "google_mymaps": "",
         "grade": "3 (3+)",
         "guidebook_link": "https://en.wikipedia.org/wiki/Urr_Water",
@@ -1752,6 +1753,26 @@
         "sca_guidebook_no": "291",
         "scrape_value": "0.8",
         "very_high_value": "1.8",
+        "webcam": ""
+    },
+    {
+        "access_issue": "",
+        "gauge_location_code": "133175",
+        "google_mymaps": "",
+        "grade": "3 (4)",
+        "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/southern-uplands/kinnel-water",
+        "high_value": "1.5",
+        "huge_value": "1.8",
+        "kml": "",
+        "latitude": "55.2475",
+        "longitude": "-3.4710",
+        "low_value": "1.1",
+        "medium_value": "1.3",
+        "name": "Kinnel Water",
+        "notes": "",
+        "sca_guidebook_no": "315",
+        "scrape_value": "0.9",
+        "very_high_value": "1.7",
         "webcam": ""
     }
 ]
