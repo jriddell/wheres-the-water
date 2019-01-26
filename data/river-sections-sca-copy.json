@@ -119,7 +119,7 @@
         "low_value": "0.6",
         "medium_value": "1.3",
         "name": "Ayr",
-        "notes": "New calibrations Jan 2019. Poorly calibrated, more calibrations welcome on this gauge and Catrine gauge.",
+        "notes": "New calibrations Jan 2019. Poorly calibrated, more calibrations welcome on this gauge and Catrine gauge. Ignore gauge calibration in guidebook which is wrong.",
         "sca_guidebook_no": "280",
         "scrape_value": "0.4",
         "very_high_value": "2.0",
