@@ -550,7 +550,7 @@ jQuery(document).ready( function(){
             // 27/01/2019 17:45:00
             // 1995-12-17T03:24:00
             var splitDateTime = currentReadingTime.split(" ");
-            var splitDate = splitDateTime[0]("/");
+            var splitDate = splitDateTime[0].split("/");
             var currentReadingTimeFormatted = splitDate[2] + "/" + splitDate[1] + "/" + splitDate[0] + "T" + splitDateTime[1];
             console.log(currentReadingTimeFormatted);
             
