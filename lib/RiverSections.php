@@ -404,7 +404,7 @@ class RiverSections {
     private function readingIsOld($currentReadingTime) {
         print "XXX $currentReadingTime";
         $old = "60 * 60 * 24"; // 24 hours
-        $time_explode = explode('/', $this->currentReadingTime); // need to swap date and month cos PHP likes US date format
+        $time_explode = explode('/', $currentReadingTime); // need to swap date and month cos PHP likes US date format
         $ustime = $time_explode[1] . '/' . $time_explode[0] . '/' . $time_explode[2];
         $timestamp = strtotime($ustime);
         if (time() - $timestamp > $old) {
