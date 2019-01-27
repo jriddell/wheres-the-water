@@ -415,7 +415,7 @@ class RiverSections {
             //return;
             $riverReadingData['currentReading'] = 0;
             $waterLevelValue = "NO_GUAGE_DATA";
-        } elseif ($riverReadingData['currentReading'] == '-1' || readingIsOld($riverReadingData['currentReadingTime'])) {
+        } elseif ($riverReadingData['currentReading'] == '-1' || $this->readingIsOld($riverReadingData['currentReadingTime'])) {
             $waterLevelValue = "OLD_DATA";
         } else {
             $waterLevelValue = $this->waterLevelValue($riverReadingData['currentReading'], $riverSection);
