@@ -555,7 +555,9 @@ jQuery(document).ready( function(){
             console.log(currentReadingTimeFormatted);
             
             var currentReadingDate = new Date(currentReadingTimeFormatted);
+            var currentDate = new Date();
             console.log("XXX date: " + currentReadingDate);
+            console.log("difference: " + (currentDate - currentReadingDate));
             return false;
         }
         function getWaterLevelValue(riverSection) {
