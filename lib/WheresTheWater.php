@@ -549,6 +549,7 @@ jQuery(document).ready( function(){
             console.log("XXX currentReadingTime " + currentReadingTime)
             // 27/01/2019 17:45:00
             // 1995-12-17T03:24:00
+            var old = 1000 * 60 * 60 * 24; // 24 hours is old
             var splitDateTime = currentReadingTime.split(" ");
             var splitDate = splitDateTime[0].split("/");
             var currentReadingTimeFormatted = splitDate[2] + "-" + splitDate[1] + "-" + splitDate[0] + "T" + splitDateTime[1];
@@ -558,6 +559,10 @@ jQuery(document).ready( function(){
             var currentDate = new Date();
             console.log("XXX date: " + currentReadingDate);
             console.log("difference: " + (currentDate - currentReadingDate));
+            var difference = currentDate - currentReadingDate;
+            if (difference > old) {
+                return true;
+            }
             return false;
         }
         function getWaterLevelValue(riverSection) {
