@@ -545,9 +545,10 @@ jQuery(document).ready( function(){
                 markers.push(marker);
             }
         }
-        /* takes a reading time "24/01/2019 00:15:00" and returns true if it is over 24 days old */
-        function readingIsOld(currentReadingTime) {
+u        function readingIsOld(currentReadingTime) {
             console.log("XXX currentReadingTime " + currentReadingTime)
+            var currentReadingDate = new Date(currentReadingTime);
+            console.log("XXX date: " + currentReadingDate);
             return false;
         }
         function getWaterLevelValue(riverSection) {
