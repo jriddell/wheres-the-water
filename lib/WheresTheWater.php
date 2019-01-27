@@ -562,6 +562,7 @@ jQuery(document).ready( function(){
         }
         function getWaterLevelValue(riverSection) {
             currentReading = riverSection['currentReading'];
+            console.log("name " + riverSection['name']);
             if (currentReading == -1) {
                 return "NO_GUAGE_DATA";
             } else if (currentReading == 0 || readingIsOld(riverSection['currentReadingTime'])) {
