@@ -400,6 +400,12 @@ class RiverSections {
         }
     }
 
+    /* takes a reading time "24/01/2019 00:15:00" and returns true if it is over 24 days old */
+    private function readingIsOld($currentReadingTime) {
+        print "XXX $currentReadingTime";
+        return false;
+    }
+
     private function trForRiver($jsonid, $riverSection, $sepaGaugesData, $riverReadingData, $forecastHtml) {
         $sepaGaugeLocationCode = $riverSection['gauge_location_code'];
         $gaugeName = $sepaGaugesData[$sepaGaugeLocationCode]['gauge_name'];
@@ -409,7 +415,7 @@ class RiverSections {
             //return;
             $riverReadingData['currentReading'] = 0;
             $waterLevelValue = "NO_GUAGE_DATA";
-        } elseif ($riverReadingData['currentReading'] == '-1') {
+        } elseif ($riverReadingData['currentReading'] == '-1' || readingIsOld($riverReadingData['currentReadingTime'])) {
             $waterLevelValue = "OLD_DATA";
         } else {
             $waterLevelValue = $this->waterLevelValue($riverReadingData['currentReading'], $riverSection);

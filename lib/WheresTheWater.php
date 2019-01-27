@@ -545,11 +545,16 @@ jQuery(document).ready( function(){
                 markers.push(marker);
             }
         }
+        /* takes a reading time "24/01/2019 00:15:00" and returns true if it is over 24 days old */
+        function readingIsOld(currentReadingTime) {
+            console.log("XXX currentReadingTime " + currentReadingTime)
+            return false;
+        }
         function getWaterLevelValue(riverSection) {
             currentReading = riverSection['currentReading'];
             if (currentReading == -1) {
                 return "NO_GUAGE_DATA";
-            } else if (currentReading == 0) {
+            } else if (currentReading == 0 || readingIsOld(riverSection['currentReadingTime'])) {
                 return "OLD_DATA";
             } else if (riverSection['scrape_value'] == riverSection['huge_value']) {
                 return "NEEDS_CALIBRATIONS";
