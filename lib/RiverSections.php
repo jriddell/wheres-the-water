@@ -402,20 +402,20 @@ class RiverSections {
 
     /* takes a reading time "24/01/2019 00:15:00" and returns true if it is over 24 days old */
     private function readingIsOld($currentReadingTime) {
-        $old = "60 * 60 * 24"; // 24 hours
+        $old = 60 * 60 * 24; // 24 hours
         $time_explode = explode('/', $currentReadingTime); // need to swap date and month cos PHP likes US date format
         $ustime = $time_explode[1] . '/' . $time_explode[0] . '/' . $time_explode[2];
         $timestamp = strtotime($ustime);
-        print "XXX time: " . time();
-        print "XXX timestamp " . $timestamp;
-        print "XXX " . time() - $timestamp;
-        print "XXX " . $old;
-        print "XXX $currentReadingTime:" . time() - $timestamp;
+        print " XXX time: " . time();
+        print " XXX timestamp " . $timestamp;
+        print " XXX " . time() - $timestamp;
+        print " XXX " . $old;
+        print " XXX $currentReadingTime:" . time() - $timestamp;
         if ((time() - $timestamp) > $old) {
-            print "YYY true";
+            print " YYY true";
             return true;
         }
-        print "YYY false";
+        print " YYY false";
         return false;
     }
 
