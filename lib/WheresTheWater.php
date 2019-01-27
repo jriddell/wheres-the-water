@@ -660,7 +660,7 @@ jQuery(document).ready( function(){
         }
         function getWaterLevelIcon(riverSection) {
             currentReading = riverSection['currentReading'];
-            if (currentReading == -1) {
+            if (currentReading == -1 || readingIsOld(riverSection['currentReadingTime']) {
                 return oldDataIcon;
             } else if (currentReading == 0) {
                 return noDataIcon;
