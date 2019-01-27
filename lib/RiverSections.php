@@ -406,6 +406,10 @@ class RiverSections {
         $time_explode = explode('/', $currentReadingTime); // need to swap date and month cos PHP likes US date format
         $ustime = $time_explode[1] . '/' . $time_explode[0] . '/' . $time_explode[2];
         $timestamp = strtotime($ustime);
+        print "XXX time: " . time();
+        print "XXX timestamp " . $timestamp;
+        print "XXX " . time() - $timestamp;
+        print "XXX " . $old;
         print "XXX $currentReadingTime:" . time() - $timestamp;
         if ((time() - $timestamp) > $old) {
             print "YYY true";
