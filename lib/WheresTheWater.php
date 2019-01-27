@@ -545,22 +545,19 @@ jQuery(document).ready( function(){
                 markers.push(marker);
             }
         }
+        /* checks if the currentReadingTime is over 24 hours */
         function readingIsOld(currentReadingTime) {
-            console.log("XXX currentReadingTime " + currentReadingTime)
-            // 27/01/2019 17:45:00
-            // 1995-12-17T03:24:00
-            var old = 1000 * 60 * 60 * 24; // 24 hours is old
+            var old = 1000 * 60 * 60 * 24; // milliseconds for 24 hours is old
+            // 27/01/2019 17:45:00  SEPA style
+            // 1995-12-17T03:24:00  What Date() needs
+            // convert the currentReadingTime from SEPA into a javaScript Date()
             var splitDateTime = currentReadingTime.split(" ");
             var splitDate = splitDateTime[0].split("/");
-            var currentReadingTimeFormatted = splitDate[2] + "-" + splitDate[1] + "-" + splitDate[0] + "T" + splitDateTime[1];
-            console.log(currentReadingTimeFormatted);
-            
+            var currentReadingTimeFormatted = splitDate[2] + "-" + splitDate[1] + "-" + splitDate[0] + "T" + splitDateTime[1];            
             var currentReadingDate = new Date(currentReadingTimeFormatted);
             var currentDate = new Date();
-            console.log("XXX date: " + currentReadingDate);
-            console.log("difference: " + (currentDate - currentReadingDate));
-            var difference = currentDate - currentReadingDate;
-            if (difference > old) {
+            var dateDifference = currentDate - currentReadingDate;
+            if (dateDifference > old) {
                 return true;
             }
             return false;
