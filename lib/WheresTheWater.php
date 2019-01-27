@@ -545,7 +545,7 @@ jQuery(document).ready( function(){
                 markers.push(marker);
             }
         }
-u        function readingIsOld(currentReadingTime) {
+        function readingIsOld(currentReadingTime) {
             console.log("XXX currentReadingTime " + currentReadingTime)
             var currentReadingDate = new Date(currentReadingTime);
             console.log("XXX date: " + currentReadingDate);
