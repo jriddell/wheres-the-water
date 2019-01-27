@@ -407,7 +407,7 @@ class RiverSections {
         $ustime = $time_explode[1] . '/' . $time_explode[0] . '/' . $time_explode[2];
         $timestamp = strtotime($ustime);
         print " XXX time: " . time();
-        print " XXX timestamp " . $timestamp "<<<";
+        print " XXX timestamp " . $timestamp . "<<<";
         print " XXX " . time() - $timestamp;
         print " XXX " . $old;
         print " XXX $currentReadingTime:" . time() - $timestamp;
