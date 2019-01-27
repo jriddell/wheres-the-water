@@ -408,7 +408,7 @@ class RiverSections {
         $ustime = $time_explode[1] . '/' . $time_explode[0] . '/' . $time_explode[2];
         $timestamp = strtotime($ustime);
         if (time() - $timestamp > $old) {
-            return true
+            return true;
         }
         return false;
     }
