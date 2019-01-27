@@ -552,7 +552,7 @@ jQuery(document).ready( function(){
             var splitDateTime = currentReadingTime.split(" ");
             var splitDate = splitDateTime[0]("/");
             var currentReadingTimeFormatted = splitDate[2] + "/" + splitDate[1] + "/" + splitDate[0] + "T" + splitDateTime[1];
-            console.log(currentReadingTimeFormatted
+            console.log(currentReadingTimeFormatted);
             
             var currentReadingDate = new Date(currentReadingTimeFormatted);
             console.log("XXX date: " + currentReadingDate);
