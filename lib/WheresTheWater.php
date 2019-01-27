@@ -551,7 +551,7 @@ jQuery(document).ready( function(){
             // 1995-12-17T03:24:00
             var splitDateTime = currentReadingTime.split(" ");
             var splitDate = splitDateTime[0].split("/");
-            var currentReadingTimeFormatted = splitDate[2] + "/" + splitDate[1] + "/" + splitDate[0] + "T" + splitDateTime[1];
+            var currentReadingTimeFormatted = splitDate[2] + "-" + splitDate[1] + "-" + splitDate[0] + "T" + splitDateTime[1];
             console.log(currentReadingTimeFormatted);
             
             var currentReadingDate = new Date(currentReadingTimeFormatted);
