@@ -1276,20 +1276,26 @@
     },
     {
         "access_issue": "",
+        "classification": "",
+        "classification_url": "",
         "gauge_location_code": "14965",
         "gauge_name": "Cultybraggan",
+        "google_mymaps": "https://drive.google.com/open?id=1TA1ug_0y17_DXc87La-vDOiob4Ak7xLJ&usp=sharing",
         "grade": "3(4+)",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/central-highlands/water-of-ruchill",
         "high_value": "1.7",
         "huge_value": "2.5",
+        "kml": "",
         "latitude": "56.319482",
         "longitude": "-4.0854982",
         "low_value": "1.1",
         "medium_value": "1.4",
         "name": "Water of Ruchill",
+        "notes": "",
         "sca_guidebook_no": "255",
         "scrape_value": "0.9",
-        "very_high_value": "2"
+        "very_high_value": "2",
+        "webcam": ""
     },
     {
         "access_issue": "",
