@@ -845,9 +845,11 @@
     },
     {
         "access_issue": "",
+        "classification": "",
+        "classification_url": "",
         "gauge_location_code": "14927",
         "gauge_name": "Logie Mill",
-        "google_mymaps": "",
+        "google_mymaps": "https://drive.google.com/open?id=1ksoUeNPrTjXDickP0idcLMYmsXnDUuFT&usp=sharing",
         "grade": "4/4+",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/north-east/river-north-esk-tribs-to-dalbrack-bridge",
         "high_value": "1.3",
@@ -861,7 +863,8 @@
         "notes": "Uses a gauge close to the sea, please send calibrations for Inveriscandye",
         "sca_guidebook_no": "244",
         "scrape_value": "0.8",
-        "very_high_value": "1.5"
+        "very_high_value": "1.5",
+        "webcam": ""
     },
     {
         "access_issue": "",
