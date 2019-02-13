@@ -1193,7 +1193,7 @@
         "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImFsbW9uZF9raXJrdG9ud2Vpcl9saXZpbmdzdG9uZS8yMDE5LzAxLzIxLzA4OjUwOjAwLmpwZyJdLFsicCIsInRodW1iIiwieDE1MCJdXQ.jpg"
     },
     {
-        "access_issue": "",
+        "access_issue": "http://canoescotland.org/news/river-tay-tree-hazard",
         "classification": "Good",
         "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=6501",
         "gauge_location_code": "8295",
