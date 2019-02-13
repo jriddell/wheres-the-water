@@ -416,7 +416,7 @@
         "very_high_value": "3"
     },
     {
-        "access_issue": "http://canoescotland.org/news/hazard-tree-river-knockando",
+        "access_issue": "http://canoescotland.org/news/hazard-river-spey-kingussie",
         "classification": "Good",
         "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=23066",
         "gauge_location_code": "234167",
@@ -622,7 +622,9 @@
         "very_high_value": "1.7"
     },
     {
-        "access_issue": "http://canoescotland.org/news/river-nith-fallen-tree",
+        "access_issue": "",
+        "classification": "",
+        "classification_url": "",
         "gauge_location_code": "133154",
         "gauge_name": "Drumlanrig",
         "google_mymaps": "https://drive.google.com/open?id=1kOaDSBkAx0v7JSUmm-Ly4h-8JG0Bli5i&usp=sharing",
