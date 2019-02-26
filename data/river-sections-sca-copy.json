@@ -312,7 +312,7 @@
         "very_high_value": "1.4"
     },
     {
-        "access_issue": "",
+        "access_issue": "http://canoescotland.org/news/middle-findhorn-fence",
         "classification": "Moderate",
         "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=23004",
         "gauge_location_code": "234306",
@@ -331,7 +331,8 @@
         "notes": "",
         "sca_guidebook_no": "193",
         "scrape_value": "0.2",
-        "very_high_value": "1"
+        "very_high_value": "1",
+        "webcam": ""
     },
     {
         "access_issue": "",
