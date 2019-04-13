@@ -44,7 +44,6 @@ class GrabWeatherForecast {
         } else {
             $weatherData = file_get_contents($weatherFilePath);
         }
-        print "XXX doGrabWeatherForecast length: " . strlen($weatherData) . "XXX";
         $this->weatherForecast = json_decode($weatherData, true);
     }
 
@@ -54,11 +53,12 @@ class GrabWeatherForecast {
     }
     
     public function forecastHtml() {
-        print " XXX forecastHTML()";
+        print " XXX forecastHTML()\n";
         $html = "";
         $max_forecasts = 6;
         $count = 0;
         foreach($this->weatherForecast['list'] as $forecast) {
+            print "XXX foreach list\n";
             //show weather at 9 o'clock in morning and 3 in afternoon
             if ($count < $max_forecasts and (date('G', $forecast['dt']) == "9" or date('G', $forecast['dt']) == "15")) {
                 $count = $count + 1;
@@ -78,6 +78,7 @@ class GrabWeatherForecast {
                     $html .= "<br />";
                 }
             }
+            print "XXX foreach list done \n";
         }
         print " XXX forecast: $html";
         return $html;
