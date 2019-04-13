@@ -460,6 +460,8 @@
         "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=10076",
         "gauge_location_code": "133084",
         "gauge_name": "Fairholm",
+        "get_out_lat": "55.7895",
+        "get_out_long": "-4.0217",
         "google_mymaps": "",
         "grade": "3(5)",
         "guidebook_link": "",
@@ -472,9 +474,12 @@
         "medium_value": "0.8",
         "name": "Avon (Glasgow)",
         "notes": "New calibrations Nov 2018, thanks Robin. Please fill in calibration report form to confirm or adjust.",
+        "put_in_lat": "55.7039",
+        "put_in_long": "-3.9892",
         "sca_guidebook_no": "270",
         "scrape_value": "0.5",
-        "very_high_value": "1.5"
+        "very_high_value": "1.5",
+        "webcam": ""
     },
     {
         "access_issue": "",
