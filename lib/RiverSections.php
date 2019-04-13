@@ -107,12 +107,12 @@ class RiverSections {
     /* HTML editable form */
     public function editRiverForm() {
         $reply = "";
-        $sectionCount = 0;
+        $sectionCount = 1;
 
         foreach($this->riverSectionsData as $jsonid => $riverSection) {
             $reply .= "<form action='river-section.php' method='post'>\n";
             $reply .= "<input type='hidden' name='riverUpdates' value='{$jsonid}' />\n";
-            $reply .= $this->editRiverFormLine($sectionCount, $riverSection);
+            $reply .= $this->editRiverFormLine($riverSection, $sectionCount);
             $reply .= "<input type='submit' name='save' value='Save' />\n";
             $reply .= "<input type='submit' name='delete' value='&#10060;' class='right' />\n";
             $reply .= "</form>\n";
@@ -122,7 +122,7 @@ class RiverSections {
     }
 
     /* HTML editable form for a river section */
-    public function editRiverFormLine($sectionCount, $riverSection) {
+    public function editRiverFormLine($riverSection, $sectionCount=0) {
         if (!array_key_exists('access_issue', $riverSection)) {
             $riverSection['access_issue'] = '';
         }
