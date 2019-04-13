@@ -44,6 +44,7 @@ class GrabWeatherForecast {
         } else {
             $weatherData = file_get_contents($weatherFilePath);
         }
+        print "XXX doGrabWeatherForecast length: " . strlen($weatherData) . "XXX";
         $this->weatherForecast = json_decode($weatherData, true);
     }
 
