@@ -60,6 +60,7 @@ class GrabWeatherForecast {
         foreach($this->weatherForecast['list'] as $forecast) {
             print "XXX foreach list\n";
             //show weather at 9 o'clock in morning and 3 in afternoon
+            print "XXX dt: " . $forecast['dt'] . "\n";
             if ($count < $max_forecasts and (date('G', $forecast['dt']) == "9" or date('G', $forecast['dt']) == "15")) {
                 print "XXX inside if\n";
                 $count = $count + 1;
