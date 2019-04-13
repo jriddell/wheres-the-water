@@ -55,6 +55,7 @@ class RiverSections {
     function writeToJson() {
         $fp = fopen($this->filename, 'w');
         fwrite($fp, json_encode($this->riverSectionsData, JSON_PRETTY_PRINT));
+        fwrite($fp, "\n");
         fclose($fp);
     }
 
@@ -140,6 +141,27 @@ class RiverSections {
         }
         if (!array_key_exists('classification_url', $riverSection)) {
             $riverSection['classification_url'] = '';
+        }
+        if (!array_key_exists('grade', $riverSection)) {
+            $riverSection['grade'] = '';
+        }
+        if (!array_key_exists('guidebook_link', $riverSection)) {
+            $riverSection['guidebook_link'] = '';
+        }
+        if (!array_key_exists('sca_guidebook_no', $riverSection)) {
+            $riverSection['sca_guidebook_no'] = '';
+        }
+        if (!array_key_exists('put_in_lat', $riverSection)) {
+            $riverSection['put_in_lat'] = '';
+        }
+        if (!array_key_exists('put_in_long', $riverSection)) {
+            $riverSection['put_in_long'] = '';
+        }
+        if (!array_key_exists('get_out_lat', $riverSection)) {
+            $riverSection['get_out_lat'] = '';
+        }
+        if (!array_key_exists('get_out_long', $riverSection)) {
+            $riverSection['get_out_long'] = '';
         }
         $reply = "";
         $reply .= "<legend>" . $riverSection['name'] . "</legend>";
