@@ -105,6 +105,22 @@ class WheresTheWater {
     display: table-cell;
 /*    line-height: 0px;*/
 }
+.desktop {
+    display: none;
+}
+@media only screen and (min-width: 768px) {
+  .desktop {
+    display: block;
+  }
+}
+.mobile {
+    display: none;
+}
+@media only screen and (max-width: 768px) {
+  .mobile {
+    display: block;
+  }
+}
 
 </style>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
@@ -464,9 +480,9 @@ jQuery(document).ready( function(){
             linksContent += "<img width='16' height='16' title='Open maps Link' src='/wheres-the-water/pics/osm.png' /> ";
             linksContent += "<a target='_blank' rel='noopener' href='https://www.openstreetmap.org/?mlat="+riverSection['latitude']+"&mlon="+riverSection['longitude']+"#map=12/"
                             +riverSection['latitude']+"/"+riverSection['longitude']+"'>OpenStreetMap</a> / ";
-            linksContent += "<a target='_blank' class='desktop' rel='noopener' href='https://www.bing.com/maps?cp="+riverSection['latitude']+"~"+riverSection['longitude']+"&lvl=14&style=s'>Ordnance Survey</a> / ";
-            linksContent += " <a target='_blank' rel='noopener' href='https://www.google.com/maps?q="+riverSection['latitude']+","+riverSection['longitude']+"'>Google Maps</a> / ";
-            linksContent += "<a href='geo:"+riverSection['latitude']+","+riverSection['longitude']+"'>Maps App</a><br />";
+            linksContent += "<span class='desktop'><a target='_blank' rel='noopener' href='https://www.bing.com/maps?cp="+riverSection['latitude']+"~"+riverSection['longitude']+"&lvl=14&style=s'>Ordnance Survey</a> /</span> ";
+            linksContent += " <span class='desktop'><a target='_blank' rel='noopener' href='https://www.google.com/maps?q="+riverSection['latitude']+","+riverSection['longitude']+"'>Google Maps</a> /</span> ";
+            linksContent += "<span class='mobile'><a href='geo:"+riverSection['latitude']+","+riverSection['longitude']+"'>Maps App</a></span><br />";
 
             if ('guidebook_link' in riverSection && !riverSection['guidebook_link'].length == 0) {
                 linksContent += "<a target='_blank' rel='noopener' href='"+riverSection['guidebook_link']+"'><img width='16' height='16' title='UKRGB Link' src='/wheres-the-water/pics/ukrgb.ico'/> UKRGB</a><br />";

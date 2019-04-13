@@ -48,11 +48,19 @@ table a {
     font-size: smaller;
     display: table-cell;
 }
-a.desktop {
+.desktop {
     display: none;
 }
 @media only screen and (min-width: 768px) {
-  a.desktop {
+  .desktop {
+    display: block;
+  }
+}
+.mobile {
+    display: none;
+}
+@media only screen and (max-width: 768px) {
+  .mobile {
     display: block;
   }
 }
