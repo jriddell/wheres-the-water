@@ -253,10 +253,10 @@ class RiverSections {
         $this->validateFloat("High Value", $postData['high_value']);
         $this->validateFloat("Very High Value", $postData['very_high_value']);
         $this->validateFloat("Huge Value", $postData['huge_value']);
-        $this->validateFloat("Put In Longitude", $postData['put_in_long']);
-        $this->validateFloat("Put In Latitude", $postData['put_in_lat']);
-        $this->validateFloat("Get Out Longitude", $postData['get_out_long']);
-        $this->validateFloat("Get Out Latitude", $postData['get_out_lat']);
+        $this->validateFloatOrEmpty("Put In Longitude", $postData['put_in_long']);
+        $this->validateFloatOrEmpty("Put In Latitude", $postData['put_in_lat']);
+        $this->validateFloatOrEmpty("Get Out Longitude", $postData['get_out_long']);
+        $this->validateFloatOrEmpty("Get Out Latitude", $postData['get_out_lat']);
         if (filter_var($postData['gauge_location_code'], FILTER_VALIDATE_INT) === false) {
             throw new Exception("SEPA gauge code not an int");
         }
@@ -286,6 +286,12 @@ class RiverSections {
         }
     }
 
+    /* throw exception if it's not a float or empty */
+    private function validateFloatOrEmpty($name, $data) {
+        if ($data != "" && filter_var($data, FILTER_VALIDATE_FLOAT) === false && filter_var($data, FILTER_VALIDATE_INT) === false) {
+            throw new Exception("$name $data is not a number");
+        }
+    }
     /* throw exception if it's negatuve */
     private function validateNotNegative($name, $data) {
         if ($data < 0) {
