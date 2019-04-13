@@ -468,6 +468,7 @@ class RiverSections {
     }
 
     private function trForRiver($jsonid, $riverSection, $sepaGaugesData, $riverReadingData, $forecastHtml) {
+        print "XXX trforRiver: forecast: $forecastHtml";
         $sepaGaugeLocationCode = $riverSection['gauge_location_code'];
         $gaugeName = $sepaGaugesData[$sepaGaugeLocationCode]['gauge_name'];
         print "<tr class='riverSectionRow'>\n";
