@@ -447,9 +447,11 @@ class RiverSections {
         }
         foreach($this->riverSectionsData as $jsonid => $riverSection) {
             //read river data and pass to jsForRiver
+            print "XXX getting forecast ";
             $forecast = new GrabWeatherForecast();
             $forecast->doGrabWeatherForecast($riverSection['gauge_location_code'], $riverSection['longitude'], $riverSection['latitude']);
             $forecastHtml = $forecast->forecastHtml();
+            print "XXX got forecast: $forecastHtml XXX";
             
             $this->trForRiver($jsonid, $riverSection, $sepaGaugesData, $grabSepaRivers->riversReadingsData[$riverSection['gauge_location_code']], $forecastHtml);
         }
@@ -468,7 +470,6 @@ class RiverSections {
     }
 
     private function trForRiver($jsonid, $riverSection, $sepaGaugesData, $riverReadingData, $forecastHtml) {
-        print "XXX trforRiver: forecast: $forecastHtml";
         $sepaGaugeLocationCode = $riverSection['gauge_location_code'];
         $gaugeName = $sepaGaugesData[$sepaGaugeLocationCode]['gauge_name'];
         print "<tr class='riverSectionRow'>\n";
