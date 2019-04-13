@@ -53,7 +53,7 @@ table a {
 }
 @media only screen and (min-width: 768px) {
   .desktop {
-    display: block;
+    display: inline;
   }
 }
 .mobile {
@@ -61,7 +61,7 @@ table a {
 }
 @media only screen and (max-width: 768px) {
   .mobile {
-    display: block;
+    display: inline;
   }
 }
 
