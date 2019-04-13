@@ -29,9 +29,14 @@ call readFromJson() then $obj->riverSectionsData is an array of rivers with thei
         "google_mymaps": "https://drive.google.com/open?id=1A3Jqx9E46jVymhbP1-3UNudWxdx4PNuG&usp=sharing",
         "kml": "http://www.andyjacksonfund.org.uk/wheres-the-water/kml/stanley.kml",
         "webcam": "https://www.farsondigitalwatercams.com/locations/crossford",
-        "gauge_name": "Logie"
+        "gauge_name": "Logie",
+        "put_in_long": "-4.84497",
+        "put_in_lat": "57.0759",
+        "get_out_long": "-4.84497",
+        "get_out_lat": "57.0759",
     }
 ]
+put_in_long, put_in_lat, get_out_long, get_out_lat: added at request of Tim from rivermap.ch so he can add those.  in return we get pretty graphs.
 */
 class RiverSections {
     const RIVER_SECTIONS_JSON = 'river-sections.json';
@@ -158,6 +163,10 @@ class RiverSections {
         $reply .= $this->editRiverFormInputItem("Notes", "notes", $riverSection['notes'], "right");
         $reply .= $this->editRiverFormInputItem("Classification", "classification", $riverSection['classification']);
         $reply .= $this->editRiverFormInputItem("Classification URL", "classification_url", $riverSection['classification_url'], "right");
+        $reply .= $this->editRiverFormInputItem("Put In Latitude", "put_in_lat", $riverSection['put_in_lat']);
+        $reply .= $this->editRiverFormInputItem("Put In Longitude", "put_in_long", $riverSection['put_in_long'], "right");
+        $reply .= $this->editRiverFormInputItem("Get Out Latitude", "get_out_lat", $riverSection['get_out_lat']);
+        $reply .= $this->editRiverFormInputItem("Get Out Longitude", "get_out_long", $riverSection['get_out_long'], "right");
         return $reply;
     }
 
@@ -182,8 +191,8 @@ class RiverSections {
         }
         $riverSection['name'] = $postData['rivername'];
         $riverSection['gauge_location_code'] = $postData['gauge_location_code'];
-        $riverSection['longitude'] = $postData['longitude'];
         $riverSection['latitude'] = $postData['latitude'];
+        $riverSection['longitude'] = $postData['longitude'];
         $riverSection['scrape_value'] = $postData['scrape_value'];
         $riverSection['low_value'] = $postData['low_value'];
         $riverSection['medium_value'] = $postData['medium_value'];
@@ -200,6 +209,10 @@ class RiverSections {
         $riverSection['notes'] = $postData['notes'];
         $riverSection['classification'] = $postData['classification'];
         $riverSection['classification_url'] = $postData['classification_url'];
+        $riverSection['put_in_lat'] = $postData['put_in_lat'];
+        $riverSection['put_in_long'] = $postData['put_in_long'];
+        $riverSection['get_out_lat'] = $postData['get_out_lat'];
+        $riverSection['get_out_long'] = $postData['get_out_long'];
 
         $this->riverSectionsData[$jsonid] = $riverSection;
         $this->writeToJson();
@@ -218,6 +231,10 @@ class RiverSections {
         $this->validateFloat("High Value", $postData['high_value']);
         $this->validateFloat("Very High Value", $postData['very_high_value']);
         $this->validateFloat("Huge Value", $postData['huge_value']);
+        $this->validateFloat("Put In Longitude", $postData['put_in_long']);
+        $this->validateFloat("Put In Latitude", $postData['put_in_lat']);
+        $this->validateFloat("Get Out Longitude", $postData['get_out_long']);
+        $this->validateFloat("Get Out Latitude", $postData['get_out_lat']);
         if (filter_var($postData['gauge_location_code'], FILTER_VALIDATE_INT) === false) {
             throw new Exception("SEPA gauge code not an int");
         }
@@ -275,6 +292,10 @@ class RiverSections {
         $riverSection['kml'] = "";
         $riverSection['webcam'] = "";
         $riverSection['notes'] = "";
+        $riverSection['put_in_long'] = "";
+        $riverSection['put_in_lat'] = "";
+        $riverSection['get_out_long'] = "";
+        $riverSection['get_out_lat'] = "";
 
         $reply = "<legend>Add New River Section</legend>";
         $reply .= "<form action='river-section.php' method='post'>\n";
@@ -324,6 +345,10 @@ class RiverSections {
         $riverSection['kml'] = $postData['kml'];
         $riverSection['webcam'] = $postData['webcam'];
         $riverSection['notes'] = $postData['notes'];
+        $riverSection['put_in_long'] = $postData['put_in_long'];
+        $riverSection['put_in_lat'] = $postData['put_in_lat'];
+        $riverSection['get_out_long'] = $postData['get_out_long'];
+        $riverSection['get_out_lat'] = $postData['get_out_lat'];
         $this->riverSectionsData[] = $riverSection;
         $this->writeToJson();
         return "Added new river " . $riverSection['name'];
