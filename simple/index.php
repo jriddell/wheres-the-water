@@ -48,6 +48,14 @@ table a {
     font-size: smaller;
     display: table-cell;
 }
+a.desktop {
+    display: none;
+}
+@media only screen and (min-width: 768px) {
+  a.desktop {
+    display: block;
+  }
+}
 
 </style>
 <!--

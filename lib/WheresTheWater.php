@@ -464,7 +464,7 @@ jQuery(document).ready( function(){
             linksContent += "<img width='16' height='16' title='Open maps Link' src='/wheres-the-water/pics/osm.png' /> ";
             linksContent += "<a target='_blank' rel='noopener' href='https://www.openstreetmap.org/?mlat="+riverSection['latitude']+"&mlon="+riverSection['longitude']+"#map=12/"
                             +riverSection['latitude']+"/"+riverSection['longitude']+"'>OpenStreetMap</a> / ";
-            linksContent += "<a target='_blank' rel='noopener' href='https://www.bing.com/maps?cp="+riverSection['latitude']+"~"+riverSection['longitude']+"&lvl=14&style=s'>Ordnance Survey</a> / ";
+            linksContent += "<a target='_blank' class='desktop' rel='noopener' href='https://www.bing.com/maps?cp="+riverSection['latitude']+"~"+riverSection['longitude']+"&lvl=14&style=s'>Ordnance Survey</a> / ";
             linksContent += " <a target='_blank' rel='noopener' href='https://www.google.com/maps?q="+riverSection['latitude']+","+riverSection['longitude']+"'>Google Maps</a> / ";
             linksContent += "<a href='geo:"+riverSection['latitude']+","+riverSection['longitude']+"'>Maps App</a><br />";
 
