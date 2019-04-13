@@ -108,6 +108,8 @@
         "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=5290",
         "gauge_location_code": "14985",
         "gauge_name": "Philiphaugh",
+        "get_out_lat": "55.5501",
+        "get_out_long": "-2.8508",
         "google_mymaps": "https://drive.google.com/open?id=1SW_LEzv-d0Qt9WyonD7cjVDOzm1L_O5M&usp=sharing",
         "grade": "2/3",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/southern-uplands/river-yarrow-yarrowford-to-generals-brig",
@@ -120,9 +122,12 @@
         "medium_value": "0.8",
         "name": "Yarrow",
         "notes": "",
+        "put_in_lat": "55.5596",
+        "put_in_long": "-2.9393",
         "sca_guidebook_no": "309",
         "scrape_value": "0.4",
-        "very_high_value": "1"
+        "very_high_value": "1",
+        "webcam": ""
     },
     {
         "access_issue": "",
