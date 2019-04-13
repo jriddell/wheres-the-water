@@ -481,7 +481,7 @@ jQuery(document).ready( function(){
             linksContent += "<a target='_blank' rel='noopener' href='https://www.openstreetmap.org/?mlat="+riverSection['latitude']+"&mlon="+riverSection['longitude']+"#map=12/"
                             +riverSection['latitude']+"/"+riverSection['longitude']+"'>OpenStreetMap</a> / ";
             linksContent += "<span class='desktop'><a target='_blank' rel='noopener' href='https://www.bing.com/maps?cp="+riverSection['latitude']+"~"+riverSection['longitude']+"&lvl=14&style=s'>Ordnance Survey</a> /</span> ";
-            linksContent += " <span class='desktop'><a target='_blank' rel='noopener' href='https://www.google.com/maps?q="+riverSection['latitude']+","+riverSection['longitude']+"'>Google Maps</a> /</span> ";
+            linksContent += " <span class='desktop'><a target='_blank' rel='noopener' href='https://www.google.com/maps?q="+riverSection['latitude']+","+riverSection['longitude']+"'>Google Maps</a></span> ";
             linksContent += "<span class='mobile'><a href='geo:"+riverSection['latitude']+","+riverSection['longitude']+"'>Maps App</a></span><br />";
 
             if ('guidebook_link' in riverSection && !riverSection['guidebook_link'].length == 0) {
