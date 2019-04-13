@@ -298,6 +298,8 @@
         "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=6498",
         "gauge_location_code": "14937",
         "gauge_name": "Ballathie",
+        "get_out_lat": "56.4536",
+        "get_out_long": "-3.4629",
         "google_mymaps": "https://drive.google.com/open?id=1A3Jqx9E46jVymhbP1-3UNudWxdx4PNuG&usp=sharing",
         "grade": "2/3",
         "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/central-highlands/river-tay-stanley-to-thistlebrig",
@@ -309,9 +311,13 @@
         "low_value": "0",
         "medium_value": "1",
         "name": "Tay (Stanley)",
+        "notes": "",
+        "put_in_lat": "56.4881",
+        "put_in_long": "-3.4321",
         "sca_guidebook_no": "218",
         "scrape_value": "0",
-        "very_high_value": "2.7"
+        "very_high_value": "2.7",
+        "webcam": ""
     },
     {
         "access_issue": "http://canoescotland.org/news/middle-findhorn-fence",
