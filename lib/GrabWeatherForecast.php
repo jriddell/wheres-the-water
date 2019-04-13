@@ -53,6 +53,7 @@ class GrabWeatherForecast {
     }
     
     public function forecastHtml() {
+        print " XXX forecastHTML()";
         $html = "";
         $max_forecasts = 6;
         $count = 0;
@@ -77,6 +78,7 @@ class GrabWeatherForecast {
                 }
             }
         }
+        print " XXX forecast: $html";
         return $html;
     }
 }
