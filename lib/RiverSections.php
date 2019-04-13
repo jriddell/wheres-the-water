@@ -107,20 +107,22 @@ class RiverSections {
     /* HTML editable form */
     public function editRiverForm() {
         $reply = "";
+        $sectionCount = 0;
 
         foreach($this->riverSectionsData as $jsonid => $riverSection) {
             $reply .= "<form action='river-section.php' method='post'>\n";
             $reply .= "<input type='hidden' name='riverUpdates' value='{$jsonid}' />\n";
-            $reply .= $this->editRiverFormLine($riverSection);
+            $reply .= $this->editRiverFormLine($sectionCount, $riverSection);
             $reply .= "<input type='submit' name='save' value='Save' />\n";
             $reply .= "<input type='submit' name='delete' value='&#10060;' class='right' />\n";
             $reply .= "</form>\n";
+            $sectionCount++;
         }
         return $reply;
     }
 
     /* HTML editable form for a river section */
-    public function editRiverFormLine($riverSection) {
+    public function editRiverFormLine($sectionCount, $riverSection) {
         if (!array_key_exists('access_issue', $riverSection)) {
             $riverSection['access_issue'] = '';
         }
@@ -164,7 +166,7 @@ class RiverSections {
             $riverSection['get_out_long'] = '';
         }
         $reply = "";
-        $reply .= "<legend>" . $riverSection['name'] . "</legend>";
+        $reply .= "<legend>" . $sectionCount . ") " . $riverSection['name'] . "</legend>";
         $reply .= $this->editRiverFormInputItem("River/Section Name", "rivername", $riverSection['name']);
         $reply .= $this->editRiverFormInputItem("SEPA Gauge Code", "gauge_location_code", $riverSection['gauge_location_code'], "right");
         $reply .= $this->editRiverFormInputItem("Latitude", "latitude", $riverSection['latitude']);
