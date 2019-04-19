@@ -2306,6 +2306,7 @@
         "classification": "",
         "classification_url": "",
         "gauge_location_code": "14954",
+        "gauge_name": "Almondbank",
         "get_out_lat": "",
         "get_out_long": "",
         "google_mymaps": "",
@@ -2325,6 +2326,30 @@
         "sca_guidebook_no": "229",
         "scrape_value": "1",
         "very_high_value": "1",
+        "webcam": ""
+    },
+    {
+        "access_issue": "",
+        "gauge_location_code": "234262",
+        "get_out_lat": "57.2016",
+        "get_out_long": "-4.7102",
+        "google_mymaps": "",
+        "grade": "4(5)",
+        "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/far-north/river-moriston-upper-section",
+        "high_value": "0.4",
+        "huge_value": "0.4",
+        "kml": "",
+        "latitude": "57.219377",
+        "longitude": "-4.6480849",
+        "low_value": "0.4",
+        "medium_value": "0.4",
+        "name": "Moriston",
+        "notes": "New gauge, please send calibrations",
+        "put_in_lat": "57.2023",
+        "put_in_long": "-4.7198",
+        "sca_guidebook_no": "90",
+        "scrape_value": "0.4",
+        "very_high_value": "0.4",
         "webcam": ""
     }
 ]
