@@ -2331,6 +2331,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "234262",
+        "gauge_name": "Levishie",
         "get_out_lat": "57.2016",
         "get_out_long": "-4.7102",
         "google_mymaps": "",
@@ -2351,5 +2352,29 @@
         "scrape_value": "0.4",
         "very_high_value": "0.4",
         "webcam": ""
+    },
+    {
+        "access_issue": "",
+        "gauge_location_code": "14963",
+        "get_out_lat": "56.648565",
+        "get_out_long": "-3.6716007",
+        "google_mymaps": "",
+        "grade": "1(2)",
+        "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/central-highlands/river-tummel-pitlochry-to-the-tay",
+        "high_value": "0.58",
+        "huge_value": "0.58",
+        "kml": "",
+        "latitude": "56.696568",
+        "longitude": "-3.7207949",
+        "low_value": "0.58",
+        "medium_value": "0.58",
+        "name": "Tummel (Bottom)",
+        "notes": "New section added April 2019.  0.58 reported as medium.  Please send more calibrations.",
+        "put_in_lat": "56.696568",
+        "put_in_long": "-3.7207949",
+        "sca_guidebook_no": "",
+        "scrape_value": "0.58",
+        "very_high_value": "0.58",
+        "webcam": "https://www.farsondigitalwatercams.com/locations/pitlochry"
     }
 ]
