@@ -2355,6 +2355,8 @@
     },
     {
         "access_issue": "",
+        "classification": "",
+        "classification_url": "",
         "gauge_location_code": "14963",
         "get_out_lat": "56.648565",
         "get_out_long": "-3.6716007",
@@ -2372,7 +2374,7 @@
         "notes": "New section added April 2019.  0.58 reported as medium.  Please send more calibrations.",
         "put_in_lat": "56.696568",
         "put_in_long": "-3.7207949",
-        "sca_guidebook_no": "",
+        "sca_guidebook_no": "Touring 85",
         "scrape_value": "0.58",
         "very_high_value": "0.58",
         "webcam": "https://www.farsondigitalwatercams.com/locations/pitlochry"
