@@ -59,4 +59,9 @@ class RiverZoneStations {
             $this->sepaIdToRiverZoneId = json_decode($sepaIdToRiverZoneIdData, true); // truely we do want this to be an array PHP
         }
     }
+
+    function iframe($sepaGauge, $sectionName, $thresholds) {
+        https://riverzone.eu/calibration/115be799-cd1d-56a5-83e7-897e2930f27e.H#height=600&creditName=WtW&title=Fikjhhnkjhdhorn+(Gorge)&zones=,ff0000,Huge|80,ff6060,Very+High|50,ffc004,High|37,ffff33,Medium|30,00ff00,Low|20,ccffcc,Scrapeable|0,cccccc,Empty
+        $html = '<iframe src=URL'>;
+    }
 }
