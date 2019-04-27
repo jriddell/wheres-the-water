@@ -19,4 +19,12 @@ final class RiverZoneStationsTest extends TestCase
         $grabRiverZoneStations->doGrab();
         $this->assertEquals('Pitnacree', $grabRiverZoneStations->riverZoneStationsData['stations'][552]['name']);
     }
+
+    public function testParse()
+    {
+        $grabRiverZoneStations = new RiverZoneStations();
+        $grabRiverZoneStations->parseRiverZoneStations();
+        // print_r($grabRiverZoneStations->sepaIdToRiverZoneId);
+        $this->assertEquals('bf4b8b77-7400-56f1-9aaa-59a825b6c40a', $grabRiverZoneStations->sepaIdToRiverZoneId['14935']);
+    }
 }
