@@ -2358,6 +2358,7 @@
         "classification": "",
         "classification_url": "",
         "gauge_location_code": "14963",
+        "gauge_name": "Pitlochry",
         "get_out_lat": "56.648565",
         "get_out_long": "-3.6716007",
         "google_mymaps": "",
@@ -2378,5 +2379,29 @@
         "scrape_value": "0.58",
         "very_high_value": "0.58",
         "webcam": "https://www.farsondigitalwatercams.com/locations/pitlochry"
+    },
+    {
+        "access_issue": "",
+        "gauge_location_code": "133103",
+        "get_out_lat": "55.499",
+        "get_out_long": "-4.3913",
+        "google_mymaps": "",
+        "grade": "2/3",
+        "guidebook_link": "",
+        "high_value": "1.5",
+        "huge_value": "1.5",
+        "kml": "",
+        "latitude": "55.4661",
+        "longitude": "-4.2255",
+        "low_value": "1.5",
+        "medium_value": "1.5",
+        "name": "Lugar Water",
+        "notes": "",
+        "put_in_lat": "55.4661",
+        "put_in_long": "-4.2255",
+        "sca_guidebook_no": "281",
+        "scrape_value": "1.5",
+        "very_high_value": "1.5",
+        "webcam": ""
     }
 ]
