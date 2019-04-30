@@ -527,7 +527,10 @@ class RiverSections {
             $classificatonIcon = strtolower($classificatonIcon);
             $linkContent .= "<a target='_blank' rel='noopener' href='".$riverSection['classification_url']."'><img width='16' height='16' title='Webcam' src='/wheres-the-water/pics/classification-".$classificatonIcon.".png' /> Water Classification: ".$riverSection['classification']."</a><br />";
         }
-        $linkContent .= "<a target='_blank' rel='noopener' href='".$this->riverZoneStations->link($riverSection)."'><img width='16' height='16' title='Webcam' src='/wheres-the-water/pics/webcam.png' /> Chart</a><br />";
+        $chartLink = $this->riverZoneStations->link($riverSection);
+        if ($chartLink != false) {
+            $linkContent .= "<a target='_blank' rel='noopener' href='".$this->riverZoneStations->link($riverSection)."'><img width='16' height='16' title='Webcam' src='/wheres-the-water/pics/webcam.png' /> Chart</a><br />";
+        }
         /* Render the picture */
         $filename = strtolower($riverSection['name']);
         $filename = str_replace(" ", "-", $filename);

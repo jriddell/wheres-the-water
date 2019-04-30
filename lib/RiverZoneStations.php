@@ -62,9 +62,12 @@ class RiverZoneStations {
     }
 
     function link($riverSection) {
+        if (!in_array($riverSection['gauge_location_code'], $this->sepaIdToRiverZoneId)) {
+            return false;
+        }
         $url = 'https://riverzone.eu/calibration/';
-        print "XXX " . $riverSection['gauge_location_code'] . gettype($riverSection['gauge_location_code']) . $this->sepaIdToRiverZoneId[$riverSection['gauge_location_code']];
-        print_r($this->sepaIdToRiverZoneId);
+        //print "XXX " . $riverSection['gauge_location_code'] . gettype($riverSection['gauge_location_code']) . $this->sepaIdToRiverZoneId[$riverSection['gauge_location_code']];
+        //print_r($this->sepaIdToRiverZoneId);
         $url .= $this->sepaIdToRiverZoneId[$riverSection['gauge_location_code']];
         $url .= '.H#height=600&creditName=WtW&title=';
         $url .= $riverSection['name'];
