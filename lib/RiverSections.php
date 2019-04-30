@@ -526,7 +526,7 @@ class RiverSections {
             $classificatonIcon = strtolower($classificatonIcon);
             $linkContent .= "<a target='_blank' rel='noopener' href='".$riverSection['classification_url']."'><img width='16' height='16' title='Webcam' src='/wheres-the-water/pics/classification-".$classificatonIcon.".png' /> Water Classification: ".$riverSection['classification']."</a><br />";
         }
-        $linkContent .= "<a target='_blank' rel='noopener' href='".$this->riverZoneStations.link($riverSection)."'><img width='16' height='16' title='Webcam' src='/wheres-the-water/pics/webcam.png' /> Chart</a><br />";
+        $linkContent .= "<a target='_blank' rel='noopener' href='".$this->riverZoneStations->link($riverSection)."'><img width='16' height='16' title='Webcam' src='/wheres-the-water/pics/webcam.png' /> Chart</a><br />";
         $linkContent .= "<img width='16' height='16' title='Charts' src='/wheres-the-water/pics/chart-monthly.png' /> <a data-toggle='lightbox' target='_blank' rel='noopener' href='/wheres-the-water/charts/${filename}-weekly.png'>Weekly Chart</a> / ";
         $linkContent .= "<a data-toggle='lightbox' target='_blank' rel='noopener' href='/wheres-the-water/charts/${filename}-monthly.png'>Monthly Chart</a> / ";
         $linkContent .= "<a data-toggle='lightbox' target='_blank' rel='noopener' href='/wheres-the-water/charts/${filename}-yearly.png'>Yearly Chart</a><br />";
