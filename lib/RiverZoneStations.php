@@ -66,12 +66,12 @@ class RiverZoneStations {
         $url .= '.H#height=600&creditName=WtW&title=';
         $url .= $riverSection['name'];
         $url .= '&zones=,';
-        $url .= $riverSection['huge_value'] ',ff0000,Huge|';
-        $url .= $riverSection['very_high_value'] ',ff0000,Very+High|';
-        $url .= $riverSection['high_value'] ',ff0000,High|';
-        $url .= $riverSection['medium_value'] ',ff0000,Medium|';
-        $url .= $riverSection['low_value'] ',ff0000,Low|';
-        $url .= $riverSection['scrape_value'] ',ff0000,Scrapeable|';
+        $url .= $riverSection['huge_value'] . ',ff0000,Huge|';
+        $url .= $riverSection['very_high_value'] . ',ff0000,Very+High|';
+        $url .= $riverSection['high_value'] . ',ff0000,High|';
+        $url .= $riverSection['medium_value'] . ',ff0000,Medium|';
+        $url .= $riverSection['low_value'] . ',ff0000,Low|';
+        $url .= $riverSection['scrape_value'] . ',ff0000,Scrapeable|';
         $url .= '0,ff0000,Empty';
         return $url;
     }
