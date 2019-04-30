@@ -53,6 +53,7 @@ class RiverSections {
         $this->filename = ROOT . '/' . self::DATADIR . '/' . self::RIVER_SECTIONS_JSON;
         $this->downloadReadingsTimestampFile = ROOT . '/' . self::DATADIR .'/' . self::DOWNLOAD_READINGS_TIMESTAMP;
         $this->riverZoneStations = new riverZoneStations();
+        $this->riverZoneStations->parseRiverZoneStations();
     }
 
     /* write data to file */
