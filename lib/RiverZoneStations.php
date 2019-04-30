@@ -4,7 +4,7 @@
 */
 
 /*
-Class and methods to download stations (gauges) list from riverzone.eu and match to SEPA gauges and offer maps
+Class and methods to download stations (gauges) list from riverzone.eu and match to SEPA gauges and offer hash
 
 Call parseRiverZoneStations() and $sepaIdToRiverZoneId has mapping of sepa ids to river zone ids
 */
@@ -60,8 +60,19 @@ class RiverZoneStations {
         }
     }
 
-    function iframe($sepaGauge, $sectionName, $thresholds) {
-        https://riverzone.eu/calibration/115be799-cd1d-56a5-83e7-897e2930f27e.H#height=600&creditName=WtW&title=Fikjhhnkjhdhorn+(Gorge)&zones=,ff0000,Huge|80,ff6060,Very+High|50,ffc004,High|37,ffff33,Medium|30,00ff00,Low|20,ccffcc,Scrapeable|0,cccccc,Empty
-        $html = '<iframe src=URL'>;
+    function link($riverSection) {
+        $url = 'https://riverzone.eu/calibration/';
+        $url .= $this->sepaIdToRiverZoneId[$riverSection['gauge_location_code']];
+        $url .= '.H#height=600&creditName=WtW&title=';
+        $url .= $riverSection['name'];
+        $url .= '&zones=,';
+        $url .= $riverSection['huge_value'] ',ff0000,Huge|';
+        $url .= $riverSection['very_high_value'] ',ff0000,Very+High|';
+        $url .= $riverSection['high_value'] ',ff0000,High|';
+        $url .= $riverSection['medium_value'] ',ff0000,Medium|';
+        $url .= $riverSection['low_value'] ',ff0000,Low|';
+        $url .= $riverSection['scrape_value'] ',ff0000,Scrapeable|';
+        $url .= '0,ff0000,Empty';
+        return $url;
     }
 }
