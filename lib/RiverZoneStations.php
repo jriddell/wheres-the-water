@@ -63,6 +63,8 @@ class RiverZoneStations {
 
     function link($riverSection) {
         $url = 'https://riverzone.eu/calibration/';
+        print "XXX " . $riverSection['gauge_location_code'];
+        print_r($this->sepaIdToRiverZoneId);
         $url .= $this->sepaIdToRiverZoneId[$riverSection['gauge_location_code']];
         $url .= '.H#height=600&creditName=WtW&title=';
         $url .= $riverSection['name'];
