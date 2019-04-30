@@ -12,7 +12,7 @@ class RiverZoneStations {
     const RIVER_ZONE_STATIONS_FILENAME = 'river-zone-stations.json';
     const DATADIR = 'data';
     const RIVER_ZONE_DOWNLOAD_PERIOD = 86400; // 60 * 60 * 24; // download stations once a day
-    const RIVER_ZONE_STATIONS_URL = 'https://api.riverzone.eu/v2/stations?key=' . RIVER_ZONE_API_KEY;
+    const RIVER_ZONE_STATIONS_URL = 'https://api.riverzone.eu/v2/stations?key='; // . RIVER_ZONE_API_KEY;
     const SEPA_SOURCE_ID = '53027ba1-4afc-4848-8768-c4c0caf3a1a5'; // UUID RZ give to SEPA found in https://api.riverzone.eu/v2/sources
     const SEPA_ID_TO_RIVERZONE_ID = 'sepa-id-to-riverzone-id.json';
 
@@ -25,11 +25,12 @@ class RiverZoneStations {
     function __construct() {
         $this->riverZoneStationsFile = ROOT . '/' . self::DATADIR . '/' . self::RIVER_ZONE_STATIONS_FILENAME; // filename
         $this->sepaIdToRiverZoneIdFile = ROOT . '/' . self::DATADIR . '/' . self::SEPA_ID_TO_RIVERZONE_ID; // filename
+        $this->riverZoneStationsUrl = self::RIVER_ZONE_STATIONS_URL . RIVER_ZONE_API_KEY;
     }
     /* if file does not exist or is too old download it and write, else just read locally */
     function doGrab() {
         if (!file_exists($this->riverZoneStationsFile) || time()-filemtime($this->riverZoneStationsFile) > self::RIVER_ZONE_DOWNLOAD_PERIOD) {
-            $this->riverZoneStationsJson = file_get_contents(self::RIVER_ZONE_STATIONS_URL);
+            $this->riverZoneStationsJson = file_get_contents($this->riverZoneStationsUrl);
             $this->riverZoneStationsData = json_decode($this->riverZoneStationsJson, true); // truely we do want this to be an array PHP
             $newRiverZoneStationsFile = fopen($this->riverZoneStationsFile, "w") or die("Unable to open file!");
             fwrite($newRiverZoneStationsFile, $this->riverZoneStationsJson);
