@@ -71,8 +71,8 @@ p.message b { font-size: larger; }
 
 <?php
 foreach($riverSections->riverSectionsData as $jsonid => $riverSection) {
-    if ($riverZoneStations->link($riverSections) === false) {
-        print "No Riverzone station found for " . $riverSections['name'];
+    if ($riverZoneStations->link($riverSection) === false) {
+        print "No Riverzone station found for " . $riverSection['name'];
     }
 }
 ?>
