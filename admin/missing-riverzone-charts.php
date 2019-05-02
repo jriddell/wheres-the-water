@@ -14,7 +14,7 @@ $riverZoneStations->parseRiverZoneStations();
 <!html>
 <html>
 <head>
-<title>SCA Where's the Water River Section Editing</title>
+<title>Where's the Water River Missing RiverZone Gauges/Stations</title>
 <style>
 
 form {font-family: sans-serif; 
@@ -63,9 +63,9 @@ p.message b { font-size: larger; }
 </style>
 </head>
 <body>
-<h1>Where's the Water River Section Editing</h1>
+<h1>Where's the Water River Missing RiverZone Gauges/Stations</h1>
 
-<p><a href="index.html">&#8592; back to admin index</a> | <a href="http://canoescotland.org/admin/config/development/performance">Clear Cache to Show Changes</a></p>
+<p><a href="index.html">&#8592; back to admin index</a>
 
 <?php
 print "No Riverzone station found for:<ul>";

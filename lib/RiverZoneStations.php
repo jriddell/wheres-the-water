@@ -65,7 +65,6 @@ class RiverZoneStations {
 
     function link($riverSection) {
         if (!in_array($riverSection['gauge_location_code'], array_keys($this->sepaIdToRiverZoneId))) {
-            print "RiverZoneStations link return false: " . $riverSection['gauge_location_code'] . $riverSection['name'];
             return false;
         }
         $url = 'https://riverzone.eu/calibration/';
