@@ -529,7 +529,7 @@ class RiverSections {
         }
         $chartLink = $this->riverZoneStations->link($riverSection);
         if ($chartLink != false) {
-            $linkContent .= "<a target='_blank' rel='noopener' href='".$this->riverZoneStations->link($riverSection)."'><img width='16' height='16' title='Webcam' src='/wheres-the-water/pics/webcam.png' /> Chart</a><br />";
+            $linkContent .= "<a target='_blank' rel='noopener' href='".$this->riverZoneStations->link($riverSection)."'><img width='16' height='16' title='Webcam' src='/wheres-the-water/pics/webcam.png' /> XXX Chart</a><br />";
         }
         /* Render the picture */
         $filename = strtolower($riverSection['name']);
