@@ -51,7 +51,8 @@ class RiverZoneStations {
             $this->doGrab();
             foreach($this->riverZoneStationsData['stations'] as $station) {
                 if ($station['dataSourceId'] == self::SEPA_SOURCE_ID) {
-                    $sepaGauge = explode(',', $station['parserConfigs'])[0];
+                    $text = explode(',', $station['parserConfigs']);
+                    $sepaGauge = $text[0];
                     $this->sepaIdToRiverZoneId[$sepaGauge] = $station['id'];
                 }
             }
