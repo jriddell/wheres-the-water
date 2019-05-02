@@ -67,13 +67,19 @@ class RiverZoneStations {
         }
     }
 
-    function link($riverSection) {
+    function link($riverSection, $mobile=false) {
         if (!in_array($riverSection['gauge_location_code'], array_keys($this->sepaIdToRiverZoneId))) {
             return false;
         }
         $url = 'https://riverzone.eu/calibration/';
         $url .= $this->sepaIdToRiverZoneId[$riverSection['gauge_location_code']];
-        $url .= '.H#height=600&creditName=SCA Where%27s the Water&title=';
+        $url .= '.H#height=';
+        if ($mobile) {
+            $url .= '400';
+        else {
+            $url .= '600';
+        }
+        $url .= '&creditName=SCA Where%27s the Water&title=';
         $url .= $riverSection['name'];
         $url .= '&zones=';
         $url .= ',ff0000,Huge|';
@@ -92,6 +98,7 @@ class RiverZoneStations {
         foreach($this->riverSections->riverSectionsData as $jsonid => $riverSection) {
             if ($this->link($riverSection) !== false) {
                 $this->riverSections->riverSectionsData[$jsonid]['river_zone_url'] = $this->link($riverSection);
+                $this->riverSections->riverSectionsData[$jsonid]['river_zone_url_mobile'] = $this->link($riverSection, true);
             }
         }
         $this->riverSections->writeToJson();

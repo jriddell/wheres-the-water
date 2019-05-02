@@ -507,7 +507,8 @@ jQuery(document).ready( function(){
             }
 
             if ('river_zone_url' in riverSection && !riverSection['river_zone_url'].length == 0) {
-                linksContent += "<a target='_blank' rel='noopener' href='"+riverSection['river_zone_url']+"'><img width='16' height='16' title='RiverZone Chart' src='/wheres-the-water/pics/chart-yearly.png' /> RiverZone Chart</a><br />";
+                linksContent += "<span class='desktop'><a target='_blank' rel='noopener' href='"+riverSection['river_zone_url']+"'><img width='16' height='16' title='RiverZone Chart' src='/wheres-the-water/pics/chart-yearly.png' /> RiverZone Chart</a><br /></span>";
+                linksContent += "<span class='mobile'><a target='_blank' rel='noopener' href='"+riverSection['river_zone_url_mobile']+"'><img width='16' height='16' title='RiverZone Chart' src='/wheres-the-water/pics/chart-yearly.png' /> RiverZone Chart</a><br /></span>";
             }
 
             return linksContent;
