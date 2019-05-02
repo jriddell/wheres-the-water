@@ -71,7 +71,7 @@ p.message b { font-size: larger; }
 print "No Riverzone station found for:<ul>";
 foreach($riverSections->riverSectionsData as $jsonid => $riverSection) {
     if ($riverZoneStations->link($riverSection) === false) {
-        print "<li>" $riverSection['gauge_location_code'] . " " . $riverSection['name'] . "</li>";
+        print "<li>" . $riverSection['gauge_location_code'] . " " . $riverSection['name'] . "</li>";
     }
 }
 ?>
