@@ -482,7 +482,7 @@ jQuery(document).ready( function(){
                             +riverSection['latitude']+"/"+riverSection['longitude']+"'>OpenStreetMap</a> / ";
             linksContent += "<span class='desktop'><a target='_blank' rel='noopener' href='https://www.bing.com/maps?cp="+riverSection['latitude']+"~"+riverSection['longitude']+"&lvl=14&style=s'>Ordnance Survey</a> /</span> ";
             linksContent += " <span class='desktop'><a target='_blank' rel='noopener' href='https://www.google.com/maps?q="+riverSection['latitude']+","+riverSection['longitude']+"'>Google Maps</a></span> ";
-            linksContent += "<span class='mobile'><a href='geo:"+riverSection['latitude']+","+riverSection['longitude']+"'>Maps App</a></span><br /><br />";
+            linksContent += "<span class='mobile'><a href='geo:"+riverSection['latitude']+","+riverSection['longitude']+"'>Maps App</a><br /></span>";
 
             if ('guidebook_link' in riverSection && !riverSection['guidebook_link'].length == 0) {
                 linksContent += "<a target='_blank' rel='noopener' href='"+riverSection['guidebook_link']+"'><img width='16' height='16' title='UKRGB Link' src='/wheres-the-water/pics/ukrgb.ico'/> UKRGB</a><br />";
