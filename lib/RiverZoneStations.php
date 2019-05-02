@@ -91,7 +91,7 @@ class RiverZoneStations {
         $this->riverSections->readFromJson();
         foreach($this->riverSections->riverSectionsData as $jsonid => $riverSection) {
             if ($this->link($riverSection) !== false) {
-                $this->riverSections->riverSectionsData['river_zone_url'] = $this->link($riverSection);
+                $this->riverSections->riverSectionsData[$jsonid]['river_zone_url'] = $this->link($riverSection);
             }
         }
         $this->riverSections->writeToJson();

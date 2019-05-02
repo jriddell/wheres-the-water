@@ -506,6 +506,10 @@ jQuery(document).ready( function(){
                 linksContent += "<a target='_blank' rel='noopener' href='"+riverSection['classification_url']+"'><img width='16' height='16' title='Classification' src='/wheres-the-water/pics/classification-"+classIcon+".png' /> Water Classification: "+riverSection['classification']+"</a><br />";
             }
 
+            if ('river_zone_url' in riverSection && !riverSection['river_zone_url'].length == 0) {
+                linksContent += "<a target='_blank' rel='noopener' href='"+riverSection['river_zone_url']+"'><img width='16' height='16' title='RiverZone Chart' src='/wheres-the-water/pics/chart-yearly.png' /> RiverZone Chart</a><br />";
+            }
+
             return linksContent;
         }
         function addRiverMarkers() {
