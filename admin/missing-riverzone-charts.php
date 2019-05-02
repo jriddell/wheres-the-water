@@ -9,9 +9,7 @@ $riverSections = new RiverSections;
 $riverSections->readFromJson();
 
 $riverZoneStations = new RiverZoneStations();
-
-
-
+$riverZoneStations->parseRiverZoneStations();
 ?>
 <!html>
 <html>
