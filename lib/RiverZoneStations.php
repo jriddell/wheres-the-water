@@ -10,6 +10,9 @@ Call parseRiverZoneStations() and $sepaIdToRiverZoneId has mapping of sepa ids t
 
 RiverZone calls a "gauge" a "station"
 */
+
+require_once('RiverSections.php');
+
 class RiverZoneStations {
     const RIVER_ZONE_STATIONS_FILENAME = 'river-zone-stations.json';
     const DATADIR = 'data';
@@ -81,5 +84,16 @@ class RiverZoneStations {
         $url .= $riverSection['low_value']*100 . ',ccffcc,Scrapeable|';
         $url .= $riverSection['scrape_value']*100 . ',cccccc,Empty';
         return $url;
+    }
+
+    function addLinksToRiverSections() {
+        $this->riverSections = new RiverSections();
+        $this->riverSections->readFromJson();
+        foreach($this->riverSections->riverSectionsData as $jsonid => $riverSection) {
+            if ($this->link($riverSection) !== false) {
+                $this->riverSections->riverSectionsData['river_zone_url'] = $this->link($riverSection);
+            }
+        }
+        $this->riverSections->writeToJson();
     }
 }

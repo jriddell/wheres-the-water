@@ -74,6 +74,12 @@ foreach($riverSections->riverSectionsData as $jsonid => $riverSection) {
         print "<li>" . $riverSection['gauge_location_code'] . " " . $riverSection['name'] . "</li>";
     }
 }
+
+print "<p>Adding Links to River Sections</p>";
+
+$riverZoneStations->addLinksToRiverSections();
+
+print "<p>Done adding Links to River Sections</p>";
 ?>
 </body>
 </html>
