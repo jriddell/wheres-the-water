@@ -68,16 +68,16 @@ class RiverZoneStations {
         }
         $url = 'https://riverzone.eu/calibration/';
         $url .= $this->sepaIdToRiverZoneId[$riverSection['gauge_location_code']];
-        $url .= '.H#height=600&creditName=WtW&title=';
+        $url .= '.H#height=600&creditName=SCA Where%27s the Water&title=';
         $url .= $riverSection['name'];
-        $url .= '&zones=,';
-        $url .= $riverSection['huge_value'] . ',ff0000,Huge|';
-        $url .= $riverSection['very_high_value'] . ',ff0000,Very+High|';
-        $url .= $riverSection['high_value'] . ',ff0000,High|';
-        $url .= $riverSection['medium_value'] . ',ff0000,Medium|';
-        $url .= $riverSection['low_value'] . ',ff0000,Low|';
-        $url .= $riverSection['scrape_value'] . ',ff0000,Scrapeable|';
-        $url .= '0,ff0000,Empty';
+        $url .= '&zones=';
+        $url .= ',ff0000,Huge|';
+        $url .= $riverSection['huge_value']*100 . ',ff6060,Very+High|';
+        $url .= $riverSection['very_high_value']*100 . ',ffc004,High|';
+        $url .= $riverSection['high_value']*100 . ',ffff33,Medium|';
+        $url .= $riverSection['medium_value']*100 . ',00ff00,Low|';
+        $url .= $riverSection['low_value']*100 . ',ccffcc,Scrapeable|';
+        $url .= $riverSection['scrape_value']*100 . ',cccccc,Empty';
         return $url;
     }
 }
