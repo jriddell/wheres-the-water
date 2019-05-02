@@ -76,7 +76,7 @@ class RiverZoneStations {
         $url .= '.H#height=';
         if ($mobile) {
             $url .= '400';
-        else {
+        } else {
             $url .= '600';
         }
         $url .= '&creditName=SCA Where%27s the Water&title=';
