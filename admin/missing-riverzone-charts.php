@@ -68,7 +68,7 @@ p.message b { font-size: larger; }
 <p><a href="index.html">&#8592; back to admin index</a>
 
 <?php
-print "No Riverzone station found for:<ul>";
+print "<p>No Riverzone station found for:</p><ul>";
 foreach($riverSections->riverSectionsData as $jsonid => $riverSection) {
     if ($riverZoneStations->link($riverSection) === false) {
         print "<li>" . $riverSection['gauge_location_code'] . " " . $riverSection['name'] . "</li>";
