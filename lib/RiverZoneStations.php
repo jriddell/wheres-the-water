@@ -7,6 +7,8 @@
 Class and methods to download stations (gauges) list from riverzone.eu and match to SEPA gauges and offer hash
 
 Call parseRiverZoneStations() and $sepaIdToRiverZoneId has mapping of sepa ids to river zone ids
+
+RiverZone calls a "gauge" a "station"
 */
 class RiverZoneStations {
     const RIVER_ZONE_STATIONS_FILENAME = 'river-zone-stations.json';
