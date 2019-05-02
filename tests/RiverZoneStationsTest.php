@@ -41,6 +41,6 @@ final class RiverZoneStationsTest extends TestCase
         $riverSection['low_value'] = '0.6';
         $riverSection['scrape_value'] = '0.5';
         $link = $grabRiverZoneStations->link($riverSection);
-        $this->assertEquals('https://riverzone.eu/calibration/254d4d1e-8593-5e71-923d-2ce85378da66.H#height=600&creditName=WtW&title=foo&zones=,1,ff0000,Huge|0.9,ff0000,Very+High|0.8,ff0000,High|0.7,ff0000,Medium|0.6,ff0000,Low|0.5,ff0000,Scrapeable|0,ff0000,Empty', $link);
+        $this->assertEquals('https://riverzone.eu/calibration/254d4d1e-8593-5e71-923d-2ce85378da66.H#height=600&creditName=SCA Where%27s the Water&title=foo&zones=,ff0000,Huge|100,ff6060,Very+High|90,ffc004,High|80,ffff33,Medium|70,00ff00,Low|60,ccffcc,Scrapeable|50,cccccc,Empty', $link);
     }
 }
