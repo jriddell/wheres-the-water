@@ -29,11 +29,13 @@
         "webcam": ""
     },
     {
-        "access_issue": "",
+        "access_issue": "http://canoescotland.org/news/river-tweed-lower-makerstoun",
         "classification": "Good",
         "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=5200",
         "gauge_location_code": "9514",
         "gauge_name": "Norham",
+        "get_out_lat": "",
+        "get_out_long": "",
         "google_mymaps": "",
         "grade": "1",
         "guidebook_link": "",
@@ -46,11 +48,14 @@
         "medium_value": "1.7",
         "name": "Tweed (Berwick)",
         "notes": "Old gauge near the sea but calibrated for Fairnilee",
+        "put_in_lat": "",
+        "put_in_long": "",
         "river_zone_url": "https://riverzone.eu/calibration/967272ac-c4e7-58e6-a165-56949d3438c1.H#height=600&creditName=SCA Where%27s the Water&title=Tweed (Berwick)&zones=,ff0000,Huge|350,ff6060,Very+High|250,ffc004,High|200,ffff33,Medium|170,00ff00,Low|120,ccffcc,Scrapeable|0,cccccc,Empty",
         "river_zone_url_mobile": "https://riverzone.eu/calibration/967272ac-c4e7-58e6-a165-56949d3438c1.H#height=400&creditName=SCA Where%27s the Water&title=Tweed (Berwick)&zones=,ff0000,Huge|350,ff6060,Very+High|250,ffc004,High|200,ffff33,Medium|170,00ff00,Low|120,ccffcc,Scrapeable|0,cccccc,Empty",
         "sca_guidebook_no": "306",
         "scrape_value": "0",
-        "very_high_value": "2.5"
+        "very_high_value": "2.5",
+        "webcam": ""
     },
     {
         "access_issue": "",
@@ -576,7 +581,7 @@
         "webcam": ""
     },
     {
-        "access_issue": "http://canoescotland.org/news/hazard-river-spey-kingussie",
+        "access_issue": "http://canoescotland.org/news/spey-fiddich-park-campsite",
         "classification": "Good",
         "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=23066",
         "gauge_location_code": "234167",
@@ -594,7 +599,7 @@
         "low_value": "0.4",
         "medium_value": "0.8",
         "name": "Spey",
-        "notes": "New access issue 07 January 2019 ",
+        "notes": "New access issue 07 May 2019 ",
         "put_in_lat": "57.4144",
         "put_in_long": "-3.3879",
         "river_zone_url": "https://riverzone.eu/calibration/11035f80-164c-585a-9063-a86089f19735.H#height=600&creditName=SCA Where%27s the Water&title=Spey&zones=,ff0000,Huge|270,ff6060,Very+High|200,ffc004,High|140,ffff33,Medium|80,00ff00,Low|40,ccffcc,Scrapeable|0,cccccc,Empty",
