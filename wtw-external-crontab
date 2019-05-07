@@ -1,3 +1,0 @@
-# Update SCA Where's the Water data from SEPA
-* * * * * /home/jr/www/www.andyjacksonfund.org.uk/wheres-the-water/wtw-external-update-cron.sh
-4 * * * * /home/jr/www/www.andyjacksonfund.org.uk/wheres-the-water/check-rivers-up-to-date.py
