@@ -1,0 +1,4 @@
+On laptop install php7.2 and php7.2-gd
+
+run tests:
+./phpunit GrabSepaRiverReadingTest.php

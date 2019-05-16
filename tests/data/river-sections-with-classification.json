@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Tay",
+        "gauge_location_code": 10048,
+        "latitude": 56.6385,
+        "longitude": -3.82874,
+        "scrape_value": 1,
+        "low_value": 1.5,
+        "medium_value": 2,
+        "high_value": 3,
+        "very_high_value": 4,
+        "huge_value": 5,
+        "classification": "Good",
+        "classification_url": "https:\/\/www.sepa.org.uk\/data-visualisation\/water-classification-hub\/?display=information_sheet&waterbodyid=6500"
+    },
+    {
+        "name": "Ericht",
+        "gauge_location_code": 12345,
+        "latitude": 56.5999,
+        "longitude": -3.33564,
+        "scrape_value": 1.5,
+        "low_value": 1.7,
+        "medium_value": 2.5,
+        "high_value": 3.5,
+        "very_high_value": 4.5,
+        "huge_value": 5.5,
+        "classification": "Moderate",
+        "classification_url": "https:\/\/www.sepa.org.uk\/data-visualisation\/water-classification-hub\/?display=information_sheet&waterbodyid=6535"
+    }
+]

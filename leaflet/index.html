@@ -1,0 +1,429 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <title>Leaflet</title>
+
+  <style>
+        #map { height: 700px; border: thin solid grey; }
+        .js-tab-top {
+            padding: 1em;
+            border-radius: 10px 10px 0 0;
+            display: inline-block;
+            background-color: #e6f2ff;
+        }
+
+        .active, .js-tab {
+            background-color: #f2f2f2;
+        }
+
+        .js-tab {
+            padding: 1em;
+        }
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        #river-table {
+            border-collapse: collapse;
+            width: 100%;
+            background-color: #ffffff;
+        }
+
+        #river-table td, #river-table th {
+            padding: 0.5em;
+            border-bottom: 1px solid #595959;
+            text-align: left;
+        }
+
+        #river-readings {
+            display: none;
+        }
+
+        .clickable, .js-link {
+            cursor: pointer;
+        }
+
+        .js-link {
+            text-decoration: underline;
+            color: blue;
+        }
+
+        .js-calib-table-content {
+            border-collapse: separate;
+            border-spacing: 1px;
+        }
+    </style>  
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
+    integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"
+    integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
+    crossorigin=""></script>   
+</head>
+
+<body>
+
+<div class="container-fluid">
+  
+    <div id="map"></div>
+
+    <script type="text/javascript">
+        $ = jQuery; // for some reason SCA website uses JQuery but does not set $
+        var map = L.map( 'map', {
+            center: [57.172, -4.6582],
+            minZoom: 2,
+            zoom: 7
+        });
+        
+        var osmLayer = L.tileLayer( 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: 'Map &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a> | <a href="https://github.com/jriddell/wheres-the-water">River Data</a> by SCA'
+        }).addTo( map );
+        
+        /* Old and ugly but something to aim for in the future
+        var wwLayer = L.tileLayer( 'http://whitewater.quaker.eu.org/tiles.php/contours/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo( map );
+        */
+        
+        var baseMaps = {
+            // "Open WhiteWater Map": wwLayer,
+            "OpenStreetMap": osmLayer
+        };
+        L.control.layers(baseMaps).addTo(map);
+
+        var emptyIcon = L.icon({
+            iconUrl: '/wheres-the-water/pics/EMPTY.png',
+            iconRetinaUrl: '/wheres-the-water/pics/EMPTY.png',
+            iconSize: [10, 10],
+            iconAnchor: [0, 0],
+            popupAnchor: [5, -3]
+        });
+        var scrapeIcon = L.icon({
+            iconUrl: '/wheres-the-water/pics/SCRAPE.png',
+            iconRetinaUrl: '/wheres-the-water/pics/SCRAPE.png',
+            iconSize: [10, 10],
+            iconAnchor: [0, 0],
+            popupAnchor: [5, -3]
+        });
+        var lowIcon = L.icon({
+            iconUrl: '/wheres-the-water/pics/LOW.png',
+            iconRetinaUrl: '/wheres-the-water/pics/LOW.png',
+            iconSize: [10, 10],
+            iconAnchor: [0, 0],
+            popupAnchor: [5, -3]
+        });
+        var mediumIcon = L.icon({
+            iconUrl: '/wheres-the-water/pics/MEDIUM.png',
+            iconRetinaUrl: '/wheres-the-water/pics/MEDIUM.png',
+            iconSize: [10, 10],
+            iconAnchor: [0, 0],
+            popupAnchor: [5, -3]
+        });
+        var highIcon = L.icon({
+            iconUrl: '/wheres-the-water/pics/HIGH.png',
+            iconRetinaUrl: '/wheres-the-water/pics/HIGH.png',
+            iconSize: [10, 10],
+            iconAnchor: [0, 0],
+            popupAnchor: [5, -3]
+        });
+        var veryHighIcon = L.icon({
+            iconUrl: '/wheres-the-water/pics/VERY_HIGH.png',
+            iconRetinaUrl: '/wheres-the-water/pics/VERY_HIGH.png',
+            iconSize: [10, 10],
+            iconAnchor: [0, 0],
+            popupAnchor: [5, -3]
+        });
+        var hugeIcon = L.icon({
+            iconUrl: '/wheres-the-water/pics/HUGE.png',
+            iconRetinaUrl: '/wheres-the-water/pics/HUGE.png',
+            iconSize: [10, 10],
+            iconAnchor: [0, 0],
+            popupAnchor: [5, -3]
+        });
+        var oldDataIcon = L.icon({
+            iconUrl: '/wheres-the-water/pics/OLD_DATA.png',
+            iconRetinaUrl: '/wheres-the-water/pics/OLD_DATA.png',
+            iconSize: [10, 10],
+            iconAnchor: [0, 0],
+            popupAnchor: [5, -3]
+        });
+        var noDataIcon = L.icon({
+            iconUrl: '/wheres-the-water/pics/NO_GUAGE_DATA.png',
+            iconRetinaUrl: '/wheres-the-water/pics/NO_GUAGE_DATA.png',
+            iconSize: [10, 10],
+            iconAnchor: [0, 0],
+            popupAnchor: [5, -3]
+        });
+        var needsCalibrationsIcon = L.icon({
+            iconUrl: '/wheres-the-water/pics/NEEDS_CALIBRATIONS.png',
+            iconRetinaUrl: '/wheres-the-water/pics/NEEDS_CALIBRATIONS.png',
+            iconSize: [10, 10],
+            iconAnchor: [0, 0],
+            popupAnchor: [5, -3]
+        });
+        
+        var riverSections;
+        var riverSectionsFile = $.getJSON("/wheres-the-water/data/river-sections.json", function(data) {
+                riverSections = data;
+            }
+        );
+        var riverReadings;
+        var riverReadingsFile = $.getJSON("/wheres-the-water/data/rivers-readings.json", function(data) {
+                riverReadings = data;
+            }
+        );
+        var bothFiles = $.when(riverSectionsFile, riverReadingsFile);
+
+        bothFiles.done(function () {
+            mergeRiverData();
+            addRiverMarkers();
+        });
+        
+        function mergeRiverData() {
+            for (i=0; i<riverSections.length; i++) {
+                try {
+                    var gauge_location_code = riverSections[i]['gauge_location_code']
+                    riverSections[i]['currentReading'] = riverReadings[gauge_location_code]['currentReading'];
+                    riverSections[i]['trend'] = riverReadings[gauge_location_code]['trend'];
+                    riverSections[i]['currentReadingTime'] = riverReadings[gauge_location_code]['currentReadingTime'];
+                } catch(error) {
+                    console.log('Error on merging ' + riverSections[i]['name'] + ' ' + error.message);
+                }
+            }
+        }
+        // make a string lower case starting with capital and replace _
+        function tidyStatusString(string) {
+            if (string) {
+                string = string.toLocaleLowerCase();
+                string = string.charAt(0).toUpperCase() + string.slice(1);
+                return string.replace('_', ' ');
+            } else {
+                return string;
+            }
+        }
+        function linksContent(riverSection) {
+            var linksContent = "<a target='_blank' rel='noopener' href='http://apps.sepa.org.uk/waterlevels/default.aspx?sd=t&lc="+riverSection['gauge_location_code']+"'><img title='SEPA gauge link' src='/wheres-the-water/pics/graph-icon.png'/></a>";
+            linksContent += "&nbsp; <a target='_blank' rel='noopener' href='http://riverlevels.mobi/SiteDetails/Index/"+riverSection['gauge_location_code']+"'><img  title='SEPA gauge link - mobile friendly' src='/wheres-the-water/pics/phone-icon.png'/></a>";
+            linksContent += "&nbsp; <a target='_blank' rel='noopener' href='https://www.openstreetmap.org/?mlat="+riverSection['latitude']+"&mlon="+riverSection['longitude']+"#map=12/"
+                            +riverSection['latitude']+"/"+riverSection['longitude']+"'><img title='Open maps Link' src='/wheres-the-water/pics/osm.png' width='22' height='22' /></a>";
+            linksContent += "&nbsp; <a href='geo:"+riverSection['latitude']+","+riverSection['longitude']+"'><img title='Geo reference' src='/wheres-the-water/pics/22-apps-marble.png' width='22' height='22' /></a>";
+
+            if ('guidebook_link' in riverSection && !riverSection['guidebook_link'].length == 0) {
+                linksContent += "&nbsp; <a target='_blank' rel='noopener' href='"+riverSection['guidebook_link']+"'><img title='UKRGB Link' src='/wheres-the-water/pics/ukrgb.ico'/></a>";
+            }
+            if ('sca_guidebook_no' in riverSection && !riverSection['sca_guidebook_no'].length == 0) {
+                linksContent += "&nbsp; <img title='SCA WW Guidebook number' src='/wheres-the-water/pics/sca.png' /> "+riverSection['sca_guidebook_no'];
+            }
+            if ('access_issue' in riverSection && !riverSection['access_issue'].length == 0) {
+                linksContent += "&nbsp; <a target='_blank' rel='noopener' href='"+riverSection['access_issue']+"'><img title='Access Issue Link' src='/wheres-the-water/pics/warning.png' /></a>";
+            }
+
+            var filename = getRiverGraphFilename(riverSection);
+            linksContent += "&nbsp; <a target='_blank' rel='noopener' href='/wheres-the-water/charts/"+filename+"-weekly.png'><img title='Weekly Chart' src='/wheres-the-water/pics/chart.png' /></a>";
+            linksContent += "&nbsp; <a target='_blank' rel='noopener' href='/wheres-the-water/charts/"+filename+"-monthly.png'><img title='Monthly Chart' src='/wheres-the-water/pics/chart-monthly.png' /></a>";
+            //linksContent .= "&nbsp; <a target='_blank' rel='noopener' href='/wheres-the-water/charts/"+filename+"-yearly.png'><img title='Weekly Chart' src='/wheres-the-water/pics/chart-yearly.png' /></a>";
+
+            return linksContent;
+        }
+        function addRiverMarkers() {
+            for (i=0; i<riverSections.length; i++) {
+                var riverSection = riverSections[i]['name'];
+                var currentReading = riverSections[i]['currentReading'];
+                var waterLevelValue = getWaterLevelValue(riverSections[i]);
+                var iconBase = '/wheres-the-water/pics/';
+                var ext = '.png';
+                var trend = riverSections[i]['trend'];
+                var currentReadingTime = riverSections[i]['currentReadingTime'];
+                var sectionLinks = linksContent(riverSections[i]);
+                var riverReadings = getRiverReadingsTable(riverSections[i], waterLevelValue);
+                var riverFilename = getRiverGraphFilename(riverSections[i]);
+                var icon = getWaterLevelIcon(riverSections[i]);
+                var contentString = "<div><p><h4>" + riverSection + "</h4></p><p><b>Level</b>: " + currentReading + " (" +
+                    tidyStatusString(waterLevelValue) + 
+                    ") <img src='" + iconBase + waterLevelValue + ext + "' /></p><p><b>Trend</b>: " +
+                    tidyStatusString(trend) + "</p><p><b>Last reading</b>: " + currentReadingTime +
+                    "</p><p>" + sectionLinks + "</p>" +
+                    "<p><span class='js-calib-table'>Calibrations</span> / <span class='js-chart-weekly link' style='text-decoration: underline; color: blue; cursor: pointer'>Weekly Chart</span> / <span class='js-chart-monthly link' style='text-decoration: underline; color: blue; cursor: pointer'>Monthly Chart</span></p>" +
+                    riverReadings + 
+                    "<p class='js-chart-weekly-content' style='display: none'>" +
+                    "<a href='/wheres-the-water/charts/"+riverFilename+"-weekly.png'>"+
+                    "<img src='/wheres-the-water/charts/"+riverFilename+"-weekly.png' style='max-width: 250px; width: 100%' /></a></p>" +
+                    "<p class='js-chart-monthly-content' style='display: none'>" +
+                    "<a href='/wheres-the-water/charts/"+riverFilename+"-monthly.png'>"+
+                    "<img src='/wheres-the-water/charts/"+riverFilename+"-monthly.png' style='max-width: 250px; width: 100%' /></a></p>" +
+                    "</div>";
+                L.marker([riverSections[i]['latitude'], riverSections[i]['longitude']], {icon: icon}).bindPopup(contentString).addTo( map );
+            }
+        }
+        function getWaterLevelValue(riverSection) {
+            currentReading = riverSection['currentReading'];
+            if (currentReading == -1) {
+                return "NO_GUAGE_DATA";
+            } else if (currentReading == 0) {
+                return "OLD_DATA";
+            } else if (riverSection['scrape_value'] == riverSection['huge_value']) {
+                return "NEEDS_CALIBRATIONS";
+            } else if (currentReading < riverSection['scrape_value']) {
+                return "EMPTY";
+            } else if (currentReading < riverSection['low_value']) {
+                return "SCRAPE";
+            } else if (currentReading < riverSection['medium_value']) {
+                return "LOW";
+            } else if (currentReading < riverSection['high_value']) {
+                return "MEDIUM";
+            } else if (currentReading < riverSection['very_high_value']) {
+                return "HIGH";
+            } else if (currentReading < riverSection['huge_value']) {
+                return "VERY_HIGH";
+            } else {
+                return "HUGE";
+            }
+        }
+        function getRiverReadingsTable(riverSection, waterLevelValue) {
+
+            var boxColors = ['#e6e6e6', '#e6e6e6', '#e6e6e6', '#e6e6e6', '#e6e6e6', '#e6e6e6', '#e6e6e6'];
+            switch(waterLevelValue) {
+                case 'HUGE':
+                    boxColors[0] = '#ffffff';
+                    break;
+                case 'VERY_HIGH':
+                    boxColors[1] = '#ffffff';
+                    break;
+                case 'HIGH':
+                    boxColors[2] = '#ffffff';
+                    break;
+                case 'MEDIUM':
+                    boxColors[3] = '#ffffff';
+                    break;
+                case 'LOW':
+                    boxColors[4] = '#ffffff';
+                    break;
+                case 'SCRAPE':
+                    boxColors[5] = '#ffffff';
+                    break;
+                case 'EMPTY':
+                    boxColors[6] = '#ffffff';
+                    break;
+            }
+            var riverReadings = '<table class="js-calib-table-content" style="background-color: #424242">' +
+                            '<tbody>' +
+                                '<tr>' +
+                                    '<td style="background-color: #FF0000">Huge</td>' +
+                                    '<td style="background-color: ' + boxColors[0] + '">> ' + riverSection['huge_value'] + '</td>' +
+                                '</tr>' +
+                                '<tr>' +
+                                    '<td style="background-color: #FF6060">Very High</td>' +
+                                    '<td style="background-color: ' + boxColors[1] + '">' + riverSection['very_high_value'] + ' - ' + riverSection['huge_value'] + '</td>' +
+                                '</tr>' +
+                                '<tr>' +
+                                    '<td style="background-color: #FFC004">High</td>' +
+                                    '<td style="background-color: ' + boxColors[2] + '">' + riverSection['high_value'] + ' - ' + riverSection['very_high_value'] + '</td>' +
+                                '</tr>' +
+                                '<tr>' +
+                                    '<td style="background-color: #FFFF33">Medium</td>' +
+                                    '<td style="background-color: ' + boxColors[3] + '">' + riverSection['medium_value'] + ' - ' + riverSection['high_value'] + '</td>' +
+                                '</tr>' +
+                                '<tr>' +
+                                    '<td style="background-color: #00FF00">Low</td>' +
+                                    '<td style="background-color: ' + boxColors[4] + '">' + riverSection['low_value'] + ' - ' + riverSection['medium_value'] + '</td>' +
+                                '</tr>' +
+                                '<tr>' +
+                                    '<td style="background-color: #CCFFCC">Scrapeable</td>' +
+                                    '<td style="background-color: ' + boxColors[5] + '">' + riverSection['scrape_value'] + ' - ' + riverSection['low_value'] + '</td>' +
+                                '</tr>' +
+                                '<tr>' +
+                                    '<td style="background-color: #CCCCCC">Empty</td>' +
+                                    '<td style="background-color: ' + boxColors[6] + '">< ' + riverSection['scrape_value'] + '</td>' +
+                                '</tr>' +
+                            '</tbody>' +
+                        '</table>';
+            return riverReadings
+        }
+        function getRiverGraphFilename(riverSection) {
+            var riverFilename = riverSection['name'].toLowerCase();
+            riverFilename = riverFilename.replace(/ /g, '-');
+            riverFilename = riverFilename.replace(/\(/g, '');
+            riverFilename = riverFilename.replace(/\)/g, '');
+            return riverFilename
+        }
+        function getWaterLevelIcon(riverSection) {
+            currentReading = riverSection['currentReading'];
+            if (currentReading == -1) {
+                return oldDataIcon;
+            } else if (currentReading == 0) {
+                return noDataIcon;
+            } else if (riverSection['scrape_value'] == riverSection['huge_value']) {
+                return needsCalibrationsIcon;
+            } else if (currentReading < riverSection['scrape_value']) {
+                return emptyIcon;
+            } else if (currentReading < riverSection['low_value']) {
+                return scrapeIcon;
+            } else if (currentReading < riverSection['medium_value']) {
+                return lowIcon;
+            } else if (currentReading < riverSection['high_value']) {
+                return mediumIcon;
+            } else if (currentReading < riverSection['very_high_value']) {
+                return highIcon;
+            } else if (currentReading < riverSection['huge_value']) {
+                return veryHighIcon;
+            } else {
+                return hugeIcon;
+            }
+        }
+
+        $(document).ready( function(){
+            $('#map').attr('style', 'height: ' + $(window).height() + 'px');
+            $('#map').on('click', '.js-calib-table', function(){
+                    if (!$(this).hasClass('js-link')){
+                        $('.js-chart-weekly-content').hide();
+                        $('.js-chart-monthly-content').hide();
+                        $('.js-calib-table-content').show();
+                        $(this).attr('style', '');
+                        $('.js-chart-weekly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
+                        $('.js-chart-monthly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
+                    }
+                }
+            );
+            $('#map').on('click', '.js-chart-weekly', function(){
+                    if (!$(this).hasClass('js-link')){
+                        $('.js-calib-table-content').hide();
+                        $('.js-chart-weekly-content').show();
+                        $('.js-chart-monthly-content').hide();
+                        $(this).attr('style', '');
+                        $('.js-calib-table').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
+                        $('.js-chart-monthly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
+                    }
+                }
+            );
+            $('#map').on('click', '.js-chart-monthly', function(){
+                    if (!$(this).hasClass('js-link')){
+                        $('.js-calib-table-content').hide();
+                        $('.js-chart-weekly-content').hide();
+                        $('.js-chart-monthly-content').show();
+                        $(this).attr('style', '');
+                        $('.js-calib-table').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
+                        $('.js-chart-weekly').attr('style', 'text-decoration: underline; color: blue; cursor: pointer');
+                    }
+                }
+            );
+        });
+  </script>
+
+</div>
+
+</body>
+</html>
