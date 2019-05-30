@@ -2,7 +2,7 @@
 
 require_once '../../wheres-the-water/common.php';
 require_once '../../wheres-the-water/config.php';
-if ($_GET['iframe'] == 'true' {
+if ($_GET['iframe'] == 'true') {
     heading(true);
 } else {
     heading();
