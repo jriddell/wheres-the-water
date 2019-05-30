@@ -10,6 +10,7 @@ $riverSections = new RiverSections;
 $riverSections->readFromJson();
 
 $wtw = new WheresTheWater;
+$wtw->headerStuff();
 $wtw->theMap($riverSections);
 $wtw->theJavaScript();
 
