@@ -27,13 +27,14 @@ function heading($iframe=false) {
 </head>
 
 <body style="background: white" onload="sortTable(0)">
-?>
-if (!$iframe) {
 <?php
+if (!$iframe) {
+?>
 <p><a href="http://www.andyjacksonfund.org.uk"><img src="/wheres-the-water/andy-jackson-fund.png" width="350" /></a>
 <a href="http://canoescotland.org"><img src="/wheres-the-water/scottish-canoe-association-social.jpg" width="350" /></a></p>
-?>
+<?php
 }
+?>
 
 <h1>SCA Where&#039;s The Water?</h1>
 
