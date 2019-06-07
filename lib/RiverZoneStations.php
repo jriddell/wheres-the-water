@@ -79,7 +79,7 @@ class RiverZoneStations {
         } else {
             $url .= '600';
         }
-        $url .= '&creditName=SCA Where%27s the Water&title=';
+        $url .= '&from=-7&creditName=SCA Where%27s the Water&title=';
         $url .= $riverSection['name'];
         $url .= '&zones=';
         $url .= ',ff0000,Huge|';
