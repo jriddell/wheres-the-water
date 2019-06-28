@@ -567,6 +567,9 @@ jQuery(document).ready( function(){
         }
         /* checks if the currentReadingTime is over 24 hours */
         function readingIsOld(currentReadingTime) {
+            if (currentReadingTime === null) {
+                return true;
+            }
             var old = 1000 * 60 * 60 * 24; // milliseconds for 24 hours is old
             // 27/01/2019 17:45:00  SEPA style
             // 1995-12-17T03:24:00  What Date() needs
