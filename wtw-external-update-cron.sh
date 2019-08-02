@@ -6,6 +6,7 @@
 
 #tell both servers to update river readings from SEPA
 wget http://`cat ~/bin/wtw-admin-ajfund`@www.andyjacksonfund.org.uk/wheres-the-water/admin/download-river-readings.php?download=1 -o /dev/null -O /dev/null
+wget http://`cat ~/bin/wtw-admin-ajfund`@dev.andyjacksonfund.org.uk/wheres-the-water/admin/download-river-readings.php?download=1 -o /dev/null -O /dev/null
 wget http://`cat ~/bin/wtw-admin-canoescotland`@canoescotland.org/wheres-the-water/admin/download-river-readings.php?download=1  -o /home/jr/tmp/riverlog -O /home/jr/tmp/river
 
 #wget http://`cat ~/bin/wtw-admin-canoescotland`@canoescotland.org/wheres-the-water/admin/update-thumbs.php?download=1  -o /home/jr/tmp/riverlog-thumbs -O /home/jr/tmp/river-thumbs
@@ -15,6 +16,7 @@ wget http://canoescotland.org/wheres-the-water/data/river-sections.json -o /dev/
 python -mjson.tool /home/jr/tmp/river-sections.json > /home/jr/tmp/river-sections-tidy.json
 if [ -s /home/jr/tmp/river-sections-tidy.json ]; then
     cp /home/jr/tmp/river-sections-tidy.json /home/jr/www/www.andyjacksonfund.org.uk/wheres-the-water/data/river-sections.json
+    cp /home/jr/tmp/river-sections-tidy.json /home/jr/www/dev.andyjacksonfund.org.uk/wheres-the-water/data/river-sections.json
     cp /home/jr/www/www.andyjacksonfund.org.uk/wheres-the-water/data/river-sections.json /home/jr/www/www.andyjacksonfund.org.uk/wheres-the-water/data/river-sections-sca-copy.json 
     cd /home/jr/www/www.andyjacksonfund.org.uk/wheres-the-water/data/
     git diff
