@@ -12,8 +12,8 @@ function heading($iframe=false) {
     <meta name="description" content="Water levels on popular kayaking rivers around Scotland" />
     <meta name="og:description" content="Water levels on popular kayaking rivers around Scotland" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script type="text/javascript" src="http://canoescotland.org/sites/all/themes/basestation_open/js/riverLevels.js"></script>
-    <script type="text/javascript" src="http://canoescotland.org/sites/all/themes/basestation_open/js/utilLib.js?"></script>
+    <script type="text/javascript" src="/wheres-the-water/js/riverLevels.js"></script>
+    <script type="text/javascript" src="/wheres-the-water/js/utilLib.js?"></script>
     <!-- Latest compiled and minified CSS -->
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
     <!-- jQuery library -->
