@@ -3,6 +3,7 @@
 require_once '../../wheres-the-water/common.php';
 require_once '../../wheres-the-water/config.php';
 if (array_key_exists('iframe', $_GET) and $_GET['iframe'] == 'true') {
+    print '<p>Iframe heading</p>';
     heading(true);
 } else {
     heading();

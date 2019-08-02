@@ -28,18 +28,16 @@ function heading($iframe=false) {
 
 <body style="background: white" onload="sortTable(0)">
 <?php
-if (!$iframe) {
+    if (!$iframe) {
 ?>
 <p><a href="http://www.andyjacksonfund.org.uk"><img src="/wheres-the-water/andy-jackson-fund.png" width="350" /></a>
 <a href="http://canoescotland.org"><img src="/wheres-the-water/scottish-canoe-association-social.jpg" width="350" /></a></p>
-<?php
-}
-?>
 
 <h1>SCA Where&#039;s The Water?</h1>
 
 <h2>Scottish River Levels</h2>
 <?php
+    } // if !frame
 }
 
 function footer() {
