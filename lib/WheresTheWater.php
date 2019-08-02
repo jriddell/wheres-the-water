@@ -562,6 +562,7 @@ jQuery(document).ready( function(){
                     "</p>";
                 }
                 */
+                contentString += '<p>Help Calibrate: <a href="https://goo.gl/forms/nnEOgVkw8ebhygW52">River Level Report form</a>.</p>';
                 contentString += "</div>";
                 var marker = L.marker([riverSections[i]['latitude'], riverSections[i]['longitude']], {icon: icon}).bindPopup(contentString).addTo( map );
                 marker.bindTooltip(riverSection);
@@ -670,8 +671,7 @@ jQuery(document).ready( function(){
                                     '<td style="background-color: ' + boxColors[6] + '">< ' + riverSection['scrape_value'] + '</td>' +
                                 '</tr>' +
                             '</tbody>' +
-                        '</table>' +
-                        '<p>Help Calibrate: <a href="https://goo.gl/forms/nnEOgVkw8ebhygW52">River Level Report form</a>.</p>';
+                        '</table>';
             return riverReadings
         }
         function getRiverGraphFilename(riverSection) {
