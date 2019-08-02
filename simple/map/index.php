@@ -20,7 +20,7 @@ $wtw->theJavaScript();
 
 if (array_key_exists('iframe', $_GET) and $_GET['iframe'] == 'true') {
     footer();
-else {
+} else {
     <?
     </body>
 </html>
