@@ -10,7 +10,7 @@ if (array_key_exists('iframe', $_GET) and $_GET['iframe'] == 'true') {
 require_once '../../wheres-the-water/lib/RiverSections.php';
 require_once '../../wheres-the-water/lib/WheresTheWater.php';
 
-print '<p>XXX iframe: ' . $_GET['iframe']
+print '<p>XXX iframe: ' . $_GET['iframe'];
 $riverSections = new RiverSections;
 $riverSections->readFromJson();
 
