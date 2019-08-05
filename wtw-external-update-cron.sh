@@ -5,8 +5,8 @@
 # It also downloads the river-sections.json, tidies it up and adds it into Git for backup and changelog
 
 #tell both servers to update river readings from SEPA
-wget http://`cat ~/bin/wtw-admin-ajfund`@www.andyjacksonfund.org.uk/wheres-the-water/admin/download-river-readings.php?download=1 -o /dev/null -O /dev/null
-wget http://`cat ~/bin/wtw-admin-ajfund`@dev.andyjacksonfund.org.uk/wheres-the-water/admin/download-river-readings.php?download=1 -o /dev/null -O /dev/null
+wget https://`cat ~/bin/wtw-admin-ajfund`@www.andyjacksonfund.org.uk/wheres-the-water/admin/download-river-readings.php?download=1 -o /dev/null -O /dev/null
+wget https://`cat ~/bin/wtw-admin-ajfund`@dev.andyjacksonfund.org.uk/wheres-the-water/admin/download-river-readings.php?download=1 -o /dev/null -O /dev/null
 wget http://`cat ~/bin/wtw-admin-canoescotland`@canoescotland.org/wheres-the-water/admin/download-river-readings.php?download=1  -o /home/jr/tmp/riverlog -O /home/jr/tmp/river
 
 #wget http://`cat ~/bin/wtw-admin-canoescotland`@canoescotland.org/wheres-the-water/admin/update-thumbs.php?download=1  -o /home/jr/tmp/riverlog-thumbs -O /home/jr/tmp/river-thumbs
