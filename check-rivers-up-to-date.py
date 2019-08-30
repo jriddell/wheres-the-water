@@ -10,14 +10,14 @@ import time
 
 WARNING_TIME = 3600
 
-response = urllib.request.urlopen("http://canoescotland.org/wheres-the-water/data/DOWNLOAD-READINGS-TIMESTAMP")
+response = urllib.request.urlopen("https://www.andyjacksonfund.org.uk/wheres-the-water/data/DOWNLOAD-READINGS-TIMESTAMP")
 timestamp = int(response.read())
 
 if (time.time() - timestamp) > WARNING_TIME:
     print("Warning Warning, code red, the DOWNLOAD-READINGS-TIMESTAMP file is over an hour old")
 
-response = urllib.request.urlopen("http://canoescotland.org/wheres-the-water/charts/CHARTS-GENERATED-TIMESTAMP")
-timestamp = int(response.read())
+#response = urllib.request.urlopen("http://canoescotland.org/wheres-the-water/charts/CHARTS-GENERATED-TIMESTAMP")
+#timestamp = int(response.read())
 
-if (time.time() - timestamp) > WARNING_TIME * 2 :
-    print("Warning Warning, code red, the CHARTS-GENERATED-TIMESTAMP file is over two hours old")
+#if (time.time() - timestamp) > WARNING_TIME * 2 :
+#    print("Warning Warning, code red, the CHARTS-GENERATED-TIMESTAMP file is over two hours old")
