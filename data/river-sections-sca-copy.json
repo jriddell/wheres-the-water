@@ -2626,6 +2626,7 @@
     {
         "access_issue": "",
         "gauge_location_code": "133130",
+        "gauge_name": "Tulliford Mill",
         "get_out_lat": "55.6753",
         "get_out_long": "-3.8027",
         "google_mymaps": "",
@@ -2645,6 +2646,30 @@
         "sca_guidebook_no": "268",
         "scrape_value": "0.7",
         "very_high_value": "1.2",
+        "webcam": ""
+    },
+    {
+        "access_issue": "",
+        "gauge_location_code": "567430",
+        "get_out_lat": "",
+        "get_out_long": "",
+        "google_mymaps": "",
+        "grade": "2/3",
+        "guidebook_link": "",
+        "high_value": "0.8",
+        "huge_value": "1.2",
+        "kml": "",
+        "latitude": "57.484274",
+        "longitude": "-3.722185",
+        "low_value": "0.4",
+        "medium_value": "0.5",
+        "name": "Findhorn (Middle) (New Gauge)",
+        "notes": "",
+        "put_in_lat": "",
+        "put_in_long": "",
+        "sca_guidebook_no": "",
+        "scrape_value": "0.35",
+        "very_high_value": "1.0",
         "webcam": ""
     }
 ]
