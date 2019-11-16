@@ -2677,6 +2677,8 @@
     },
     {
         "access_issue": "",
+        "classification": "",
+        "classification_url": "",
         "gauge_location_code": "14958",
         "get_out_lat": "56.7279",
         "get_out_long": "-3.7775",
@@ -2691,7 +2693,7 @@
         "low_value": "0.7",
         "medium_value": "1",
         "name": "Garry (Perthshire)",
-        "notes": "",
+        "notes": "New gauge Nov 2019, more calibrations needed",
         "put_in_lat": "56.7437",
         "put_in_long": "-3.7808",
         "sca_guidebook_no": "216",
