@@ -2680,6 +2680,7 @@
         "classification": "",
         "classification_url": "",
         "gauge_location_code": "14958",
+        "gauge_name": "Killiecrankie",
         "get_out_lat": "56.7279",
         "get_out_long": "-3.7775",
         "google_mymaps": "",
@@ -2699,6 +2700,30 @@
         "sca_guidebook_no": "216",
         "scrape_value": "0.6",
         "very_high_value": "1.1",
+        "webcam": ""
+    },
+    {
+        "access_issue": "",
+        "gauge_location_code": "234294",
+        "get_out_lat": "",
+        "get_out_long": "",
+        "google_mymaps": "",
+        "grade": "",
+        "guidebook_link": "",
+        "high_value": "0.8",
+        "huge_value": "2",
+        "kml": "",
+        "latitude": "57.0652",
+        "longitude": "-2.6485",
+        "low_value": "0.6",
+        "medium_value": "0.7",
+        "name": "Dee (Balmoral)",
+        "notes": "",
+        "put_in_lat": "",
+        "put_in_long": "",
+        "sca_guidebook_no": "",
+        "scrape_value": "0.5",
+        "very_high_value": "1",
         "webcam": ""
     }
 ]
