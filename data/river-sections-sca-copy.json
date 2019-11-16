@@ -2653,6 +2653,7 @@
         "classification": "",
         "classification_url": "",
         "gauge_location_code": "567430",
+        "gauge_name": "Logie Bridge",
         "get_out_lat": "",
         "get_out_long": "",
         "google_mymaps": "",
@@ -2672,6 +2673,30 @@
         "sca_guidebook_no": "",
         "scrape_value": "0.35",
         "very_high_value": "1.0",
+        "webcam": ""
+    },
+    {
+        "access_issue": "",
+        "gauge_location_code": "14958",
+        "get_out_lat": "56.7279",
+        "get_out_long": "-3.7775",
+        "google_mymaps": "",
+        "grade": "2/3(5)",
+        "guidebook_link": "",
+        "high_value": "1.1",
+        "huge_value": "1.1",
+        "kml": "",
+        "latitude": "56.7437",
+        "longitude": "-3.7808",
+        "low_value": "0.7",
+        "medium_value": "1",
+        "name": "Garry (Perthshire)",
+        "notes": "",
+        "put_in_lat": "56.7437",
+        "put_in_long": "-3.7808",
+        "sca_guidebook_no": "216",
+        "scrape_value": "0.6",
+        "very_high_value": "1.1",
         "webcam": ""
     }
 ]
