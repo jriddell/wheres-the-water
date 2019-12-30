@@ -10,7 +10,8 @@ wget https://`cat ~/bin/wtw-admin-ajfund`@dev.andyjacksonfund.org.uk/wheres-the-
 
 # backup section data from SCA server into Git
 python -mjson.tool /home/jr/www/www.andyjacksonfund.org.uk/wheres-the-water/data/river-sections.json > /home/jr/tmp/river-sections-tidy.json
-if [ -s /home/jr/tmp/river-sections-tidy.json ]; then
+HEAD=`head -n1 /home/jr/tmp/river-sections-sca-copy.json`
+if [ $HEAD = '[' ]; then
     cp /home/jr/tmp/river-sections-tidy.json /home/jr/www/dev.andyjacksonfund.org.uk/wheres-the-water/data/river-sections.json
     cp /home/jr/tmp/river-sections-tidy.json /home/jr/www/www.andyjacksonfund.org.uk/wheres-the-water/data/river-sections.json
     cp /home/jr/www/www.andyjacksonfund.org.uk/wheres-the-water/data/river-sections.json /home/jr/www/www.andyjacksonfund.org.uk/wheres-the-water/data/river-sections-sca-copy.json 
