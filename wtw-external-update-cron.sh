@@ -21,4 +21,5 @@ if [ $HEAD = '[' ]; then
     git commit -m 'update river-sections-sca-copy.json from embra server' > /dev/null && git push 2>&1 > /dev/null
 else
     echo "embra cron: downloaded river-sections.json has zero size, not updating git"
+    cp /home/jr/www/www.andyjacksonfund.org.uk/wheres-the-water/data/river-sections-sca-copy.json /home/jr/www/www.andyjacksonfund.org.uk/wheres-the-water/data/river-sections.json
 fi
