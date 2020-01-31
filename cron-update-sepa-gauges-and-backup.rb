@@ -41,18 +41,8 @@ class UpdateAndBackup
   end
 
   def trigger_sepa_gauges_update
-    uri = URI("https://" + admin_login + "@www.andyjacksonfund.org.uk/wheres-the-water/admin/download-river-readings.php?download=1")
-
-    req = Net::HTTP::Get.new(uri)
-    req.basic_auth uri.user, uri.password
-
-    res = Net::HTTP.start(uri.hostname, uri.port, :use_ssl => true) {|http|
-      http.request(req)
-    }
-    #puts res.body
-    uri2 = URI("http://" + admin_login + "@dev.andyjacksonfund.org.uk/wheres-the-water/admin/download-river-readings.php?download=1")
-    response = Net::HTTP.get(uri2)
-    #puts response
+    %x{wget https://`cat ~/bin/wtw-admin-ajfund`@www.andyjacksonfund.org.uk/wheres-the-water/admin/download-river-readings.php?download=1  -o /dev/null -O /dev/null }
+    %x{wget http://`cat ~/bin/wtw-admin-ajfund`@www.andyjacksonfund.org.uk/wheres-the-water/admin/download-river-readings.php?download=1  -o /dev/null -O /dev/null }
   end
 
   def run
