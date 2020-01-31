@@ -78,3 +78,9 @@ config.php should have the root file location set:
  'Unable to open file' will be displayed if the above steps have not been performed correctly
  
  
+Cron
+====
+
+Run cron-update-sepa-gauges-and-backup.rb every minute in cron to update river gauge readings and backup section file
+
+Run check-rivers-up-to-date.py ever few minutes to check that the river gauge readings have updated
