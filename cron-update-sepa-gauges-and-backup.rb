@@ -7,6 +7,9 @@
 # tidies it up and adds it into Git for backup and changelog
 
 require 'pp'
+require 'net/http'
+require 'net/https'
+LOCK_FILE2 = Dir.pwd + '/' + 'WTW-EXTERNAL-UPDATE-CRON-LOCK'
 
 class UpdateAndBackup
   LOCK_FILE = Dir.pwd + '/' + 'WTW-EXTERNAL-UPDATE-CRON-LOCK'
@@ -28,9 +31,38 @@ class UpdateAndBackup
     pp "lock deleted"
   end
   
+  def admin_login
+    f = File.open('/home/jr/bin/wtw-admin-ajfund', 'r')
+    login = f.read
+    login.chomp!
+  end
+
+  def update_sepa_gauges
+    uri = URI("https://" + admin_login + "@www.andyjacksonfund.org.uk/wheres-the-water/admin/download-river-readings.php?download=1")
+
+    req = Net::HTTP::Get.new(uri)
+    req.basic_auth uri.user, uri.password
+
+    res = Net::HTTP.start(uri.hostname, uri.port, :use_ssl => true) {|http|
+      http.request(req)
+    }
+    puts res.body
+    uri2 = URI("http://" + admin_login + "@dev.andyjacksonfund.org.uk/wheres-the-water/admin/download-river-readings.php?download=1")
+
+    req = Net::HTTP::Get.new(uri2)
+    req.basic_auth uri2.user, uri2.password
+
+    res = Net::HTTP.start(uri2.hostname, uri2.port, :use_ssl => false) {|http|
+      #http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+      http.request(req)
+    }
+    puts res.body
+  end
+  
   def run
     run_locked do
       pp "running locked"
+      update_sepa_gauges()
       # GET the download-river-readsings
 
       # get JSON and tidy
@@ -43,7 +75,13 @@ class UpdateAndBackup
 end
 
 update_and_backup = UpdateAndBackup.new
-update_and_backup.run
+begin
+  update_and_backup.run
+rescue StandardError => e
+  puts "exception, quitting " + e.message
+  # Remove lock file
+  File.delete(LOCK_FILE2)
+end
 
 =begin
 
