@@ -57,7 +57,7 @@ class UpdateAndBackup
       File.write(RIVER_SECTIONS_DEV_FILE, JSON.pretty_generate(river_sections_json))
 
       # commit to git
-      puts `git diff`
+      pp `git diff`
       `git add data/river-sections-sca-copy.json`
       `git commit -m 'update river-sections-sca-copy.json from embra server' && git push`
     end
