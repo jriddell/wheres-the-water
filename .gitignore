@@ -27,3 +27,4 @@ data/RIVERS_DOWNLOAD_TIMESTAMP
 *~
 data/*weather.json
 data/sepa-id-to-riverzone-id.json
+CRON-UPDATE-SEPA-GAUGES-AND-BACKUP-LOCK

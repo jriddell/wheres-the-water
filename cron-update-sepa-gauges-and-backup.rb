@@ -9,11 +9,14 @@
 require 'pp'
 require 'net/http'
 require 'net/https'
-LOCK_FILE2 = Dir.pwd + '/' + 'WTW-EXTERNAL-UPDATE-CRON-LOCK'
+require 'json'
+require 'git'
+LOCK_FILE = Dir.pwd + '/' + 'CRON-UPDATE-SEPA-GAUGES-AND-BACKUP-LOCK'
+RIVER_SECTIONS_FILE = '/home/jr/www/www.andyjacksonfund.org.uk/wheres-the-water/data/river-sections.json'
+RIVER_SECTIONS_FILE_COPY = '/home/jr/www/www.andyjacksonfund.org.uk/wheres-the-water/data/river-sections-sca-copy.json'
+RIVER_SECTIONS_DEV_FILE = '/home/jr/www/dev.andyjacksonfund.org.uk/wheres-the-water/data/river-sections.json'
 
 class UpdateAndBackup
-  LOCK_FILE = Dir.pwd + '/' + 'WTW-EXTERNAL-UPDATE-CRON-LOCK'
-
   def run_locked
     # Write lock file or quit if it exists
     if File.exist?(LOCK_FILE)
@@ -37,7 +40,7 @@ class UpdateAndBackup
     login.chomp!
   end
 
-  def update_sepa_gauges
+  def trigger_sepa_gauges_update
     uri = URI("https://" + admin_login + "@www.andyjacksonfund.org.uk/wheres-the-water/admin/download-river-readings.php?download=1")
 
     req = Net::HTTP::Get.new(uri)
@@ -46,29 +49,32 @@ class UpdateAndBackup
     res = Net::HTTP.start(uri.hostname, uri.port, :use_ssl => true) {|http|
       http.request(req)
     }
-    puts res.body
+    #puts res.body
     uri2 = URI("http://" + admin_login + "@dev.andyjacksonfund.org.uk/wheres-the-water/admin/download-river-readings.php?download=1")
-
-    req = Net::HTTP::Get.new(uri2)
-    req.basic_auth uri2.user, uri2.password
-
-    res = Net::HTTP.start(uri2.hostname, uri2.port, :use_ssl => false) {|http|
-      #http.verify_mode = OpenSSL::SSL::VERIFY_NONE
-      http.request(req)
-    }
-    puts res.body
+    response = Net::HTTP.get(uri2)
+    #puts response
   end
   
   def run
     run_locked do
       pp "running locked"
-      update_sepa_gauges()
-      # GET the download-river-readsings
+      trigger_sepa_gauges_update()
 
-      # get JSON and tidy
+      # get JSON and tidy and backup
+      river_sections_json = JSON.parse(File.open(RIVER_SECTIONS_FILE).read)
+      File.write(RIVER_SECTIONS_FILE, JSON.pretty_generate(river_sections_json))
+      File.write(RIVER_SECTIONS_FILE_COPY, JSON.pretty_generate(river_sections_json))
+      File.write(RIVER_SECTIONS_DEV_FILE, JSON.pretty_generate(river_sections_json))
 
-      # copy tidy json to river-sections.json and dev and -sca-copy.json
       # git diff and add and push
+      git = Git.open(Dir.pwd)
+      git.add('data/river-sections-sca-copy.json')
+      begin
+        git.commit('Update river-sections-sca-copy.json')
+        git.push
+      rescue StandardError => e
+        puts e.message
+      end
     end
     pp "run done"
   end
@@ -79,8 +85,9 @@ begin
   update_and_backup.run
 rescue StandardError => e
   puts "exception, quitting " + e.message
-  # Remove lock file
-  File.delete(LOCK_FILE2)
+  # Really remove lock file
+  pp "really deleting lock"
+  File.delete(LOCK_FILE)
 end
 
 =begin
