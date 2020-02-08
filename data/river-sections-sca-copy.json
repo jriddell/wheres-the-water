@@ -1602,7 +1602,7 @@
     "webcam": ""
   },
   {
-    "access_issue": "",
+    "access_issue": "https://www.canoescotland.org/river-muick-new-signage",
     "classification": "Good",
     "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=23351",
     "gauge_location_code": "234247",
@@ -1620,7 +1620,7 @@
     "low_value": "0.5",
     "medium_value": "0.7",
     "name": "Muick",
-    "notes": "",
+    "notes": "New access signage Oct 2019, see access issue link",
     "put_in_lat": "56.9871",
     "put_in_long": "-3.1083",
     "river_zone_url": "https://riverzone.eu/calibration/95b27f16-f75d-51c6-9f9c-7ef5c69599ef.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Muick&zones=,ff0000,Huge|150,ff6060,Very+High|120,ffc004,High|100,ffff33,Medium|70,00ff00,Low|50,ccffcc,Scrapeable|40,cccccc,Empty",
