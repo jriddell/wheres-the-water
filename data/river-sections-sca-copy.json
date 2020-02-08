@@ -320,7 +320,7 @@
     "webcam": ""
   },
   {
-    "access_issue": "http://canoescotland.org/news/stanley-access-2018",
+    "access_issue": "",
     "classification": "Good",
     "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=6498",
     "gauge_location_code": "14937",
@@ -436,7 +436,7 @@
     "webcam": ""
   },
   {
-    "access_issue": "http://canoescotland.org/news/middle-findhorn-fence",
+    "access_issue": "",
     "classification": "Moderate",
     "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=23004",
     "gauge_location_code": "234306",
@@ -494,7 +494,7 @@
     "webcam": ""
   },
   {
-    "access_issue": "http://canoescotland.org/news/hazard-tree-blockage-river-avon",
+    "access_issue": "",
     "classification": "Moderate",
     "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=10076",
     "gauge_location_code": "133084",
@@ -581,7 +581,7 @@
     "webcam": ""
   },
   {
-    "access_issue": "http://canoescotland.org/news/spey-fiddich-park-campsite",
+    "access_issue": "",
     "classification": "Good",
     "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=23066",
     "gauge_location_code": "234167",
@@ -698,7 +698,7 @@
     "webcam": ""
   },
   {
-    "access_issue": "http://canoescotland.org/news/river-tay-grandtully-rapids",
+    "access_issue": "",
     "classification": "Good",
     "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=6500",
     "gauge_location_code": "14935",
@@ -786,7 +786,7 @@
     "webcam": ""
   },
   {
-    "access_issue": "http://canoescotland.org/news/hazard-electric-fence-thurso-river-halkirk-section",
+    "access_issue": "",
     "classification": "Good",
     "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=20637",
     "gauge_location_code": "234231",
@@ -903,7 +903,7 @@
     "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsIm5pdGgvMjAxOS8wMS8yMS8wODo1MDowMC5qcGciXSxbInAiLCJ0aHVtYiIsIngxNTAiXV0.jpg"
   },
   {
-    "access_issue": "http://canoescotland.org/news/middle-averon-wires",
+    "access_issue": "",
     "classification": "",
     "classification_url": "",
     "gauge_location_code": "234152",
@@ -961,7 +961,7 @@
     "webcam": ""
   },
   {
-    "access_issue": "http://canoescotland.org/news/bridge-closure-blackwater-netherton-dec-1-31",
+    "access_issue": "",
     "classification": "Moderate",
     "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=6540",
     "gauge_location_code": "14956",
