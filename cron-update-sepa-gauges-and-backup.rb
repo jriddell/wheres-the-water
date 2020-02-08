@@ -11,6 +11,8 @@ require 'net/http'
 require 'net/https'
 require 'json'
 require 'logger'
+require 'inifile'
+require 'telegram/bot'
 LOCK_FILE = Dir.pwd + '/' + 'CRON-UPDATE-SEPA-GAUGES-AND-BACKUP-LOCK'
 RIVER_SECTIONS_FILE = '/home/jr/www/www.andyjacksonfund.org.uk/wheres-the-water/data/river-sections.json'
 RIVER_SECTIONS_FILE_COPY = '/home/jr/www/www.andyjacksonfund.org.uk/wheres-the-water/data/river-sections-sca-copy.json'
@@ -41,13 +43,18 @@ class UpdateAndBackup
   end
 
   def trigger_sepa_gauges_update
-    %x{wget https://`cat ~/bin/wtw-admin-ajfund`@www.andyjacksonfund.org.uk/wheres-the-water/admin/download-river-readings.php?download=1  -o /dev/null -O /dev/null }
-    %x{wget http://`cat ~/bin/wtw-admin-ajfund`@www.andyjacksonfund.org.uk/wheres-the-water/admin/download-river-readings.php?download=1  -o /dev/null -O /dev/null }
+    %x{wget https://#{admin_web_login}@www.andyjacksonfund.org.uk/wheres-the-water/admin/download-river-readings.php?download=1  -o /dev/null -O /dev/null }
+    %x{wget http://#{admin_web_login}@www.andyjacksonfund.org.uk/wheres-the-water/admin/download-river-readings.php?download=1  -o /dev/null -O /dev/null }
+  end
+
+  def admin_web_login
+    @myini['Cron']['AdminWebLogin']
   end
 
   def run
     run_locked do
       #pp "running locked"
+      @myini = IniFile.load('config.ini')
       trigger_sepa_gauges_update()
 
       # get JSON and tidy and backup
