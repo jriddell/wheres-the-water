@@ -8,7 +8,7 @@ require 'inifile'
 class TelegramNotify
 
   def initialize
-    @myini = IniFile.load('config.ini')
+    @myini = IniFile.load('/home/jr/wheres-the-water/wheres-the-water/config.ini')
   end
   
   def telegram_token
