@@ -1680,7 +1680,7 @@
     "low_value": "0.5",
     "medium_value": "0.7",
     "name": "Tay (Kenmore)",
-    "notes": "See Access link for Upper Tay Joint Statement",
+    "notes": "See Access link for Upper Tay Joint Statement June 2019",
     "put_in_lat": "56.583472",
     "put_in_long": "-3.996751",
     "river_zone_url": "https://riverzone.eu/calibration/60cf0430-2017-5245-ad61-6a29718f4418.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Tay (Kenmore)&zones=,ff0000,Huge|200,ff6060,Very+High|150,ffc004,High|100,ffff33,Medium|70,00ff00,Low|50,ccffcc,Scrapeable|30,cccccc,Empty",
@@ -1722,7 +1722,7 @@
     "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsInR3ZWVkX3RyYXF1YWlyLzIwMTkvMDEvMjEvMDg6NTA6MDAuanBnIl0sWyJwIiwidGh1bWIiLCJ4MTUwIl1d.jpg"
   },
   {
-    "access_issue": "",
+    "access_issue": "https://www.canoescotland.org/south-esk-blockage",
     "classification": "Good",
     "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=5800",
     "gauge_location_code": "14916",
@@ -1740,7 +1740,7 @@
     "low_value": "0.8",
     "medium_value": "1.0",
     "name": "South Esk (Angus)",
-    "notes": "Calibration adjusted Nov 2018, medium 0.9 &#8594; 1.0.  Thanks Jon. Webcam downstream at Finavon,",
+    "notes": "New access issue March 08",
     "put_in_lat": "56.7749",
     "put_in_long": "-3.0279",
     "river_zone_url": "https://riverzone.eu/calibration/0b4a34d2-8f32-51c6-a2e5-9c01800c7006.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=South Esk (Angus)&zones=,ff0000,Huge|180,ff6060,Very+High|160,ffc004,High|140,ffff33,Medium|100,00ff00,Low|80,ccffcc,Scrapeable|70,cccccc,Empty",
