@@ -1662,7 +1662,7 @@
     "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImFsbW9uZF9raXJrdG9ud2Vpcl9saXZpbmdzdG9uZS8yMDE5LzAxLzIxLzA4OjUwOjAwLmpwZyJdLFsicCIsInRodW1iIiwieDE1MCJdXQ.jpg"
   },
   {
-    "access_issue": "",
+    "access_issue": "https://www.canoescotland.org/upper-tay-joint-statement",
     "classification": "Good",
     "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=6501",
     "gauge_location_code": "8295",
@@ -1680,7 +1680,7 @@
     "low_value": "0.5",
     "medium_value": "0.7",
     "name": "Tay (Kenmore)",
-    "notes": "New access issue 13 Feb 2019",
+    "notes": "See Access link for Upper Tay Joint Statement",
     "put_in_lat": "56.583472",
     "put_in_long": "-3.996751",
     "river_zone_url": "https://riverzone.eu/calibration/60cf0430-2017-5245-ad61-6a29718f4418.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Tay (Kenmore)&zones=,ff0000,Huge|200,ff6060,Very+High|150,ffc004,High|100,ffff33,Medium|70,00ff00,Low|50,ccffcc,Scrapeable|30,cccccc,Empty",
