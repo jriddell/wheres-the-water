@@ -1456,7 +1456,7 @@
     "webcam": ""
   },
   {
-    "access_issue": "http://canoescotland.org/news/river-dee-caution",
+    "access_issue": "",
     "classification": "Moderate",
     "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=23332",
     "gauge_location_code": "234294",
@@ -1543,7 +1543,7 @@
     "webcam": ""
   },
   {
-    "access_issue": "http://canoescotland.org/news/access-issue-got-ericht",
+    "access_issue": "",
     "classification": "Moderate",
     "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=6535",
     "gauge_location_code": "14956",
@@ -1602,7 +1602,7 @@
     "webcam": ""
   },
   {
-    "access_issue": "https://www.canoescotland.org/river-muick-new-signage",
+    "access_issue": "",
     "classification": "Good",
     "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=23351",
     "gauge_location_code": "234247",
@@ -1662,7 +1662,7 @@
     "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImFsbW9uZF9raXJrdG9ud2Vpcl9saXZpbmdzdG9uZS8yMDE5LzAxLzIxLzA4OjUwOjAwLmpwZyJdLFsicCIsInRodW1iIiwieDE1MCJdXQ.jpg"
   },
   {
-    "access_issue": "http://canoescotland.org/news/river-tay-tree-hazard",
+    "access_issue": "",
     "classification": "Good",
     "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=6501",
     "gauge_location_code": "8295",
