@@ -84,3 +84,10 @@ Cron
 Run cron-update-sepa-gauges-and-backup.rb every minute in cron to update river gauge readings and backup section file
 
 Run check-rivers-up-to-date.py ever few minutes to check that the river gauge readings have updated
+
+Locally make a file config.ini in the top repo directory (this is ignored with .gitignore and can not be committed)
+
+[Cron]
+AdminWebLogin=myuser:mypass
+TelegramToken=botid:botid
+TelegramChatId=123123123

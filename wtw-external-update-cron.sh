@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# This old script was replaced with cron-update-sepa-gauges-and-backup.rb feb 2020 which is more reliable
+
 # This gets run on an external server (my embra one in 2018) to trigger the downloading of river readings
 # It can't be run from canoescotland.org because of firewall rules
 # It also downloads the river-sections.json, tidies it up and adds it into Git for backup and changelog
