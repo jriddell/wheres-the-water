@@ -903,7 +903,7 @@
     "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsIm5pdGgvMjAxOS8wMS8yMS8wODo1MDowMC5qcGciXSxbInAiLCJ0aHVtYiIsIngxNTAiXV0.jpg"
   },
   {
-    "access_issue": "",
+    "access_issue": "https://www.canoescotland.org/river-averon-tree-blockage",
     "classification": "",
     "classification_url": "",
     "gauge_location_code": "234152",
@@ -921,7 +921,7 @@
     "low_value": "0.8",
     "medium_value": "1.1",
     "name": "Averon of Alness",
-    "notes": "Access issue updated 11th March 2019",
+    "notes": "Access issue updated October 2019",
     "put_in_lat": "57.7333",
     "put_in_long": "-4.3982",
     "river_zone_url": "https://riverzone.eu/calibration/a2e07e63-008d-5940-b74d-7535b237446c.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Averon of Alness&zones=,ff0000,Huge|200,ff6060,Very+High|170,ffc004,High|140,ffff33,Medium|110,00ff00,Low|80,ccffcc,Scrapeable|70,cccccc,Empty",
