@@ -1722,7 +1722,7 @@
     "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsInR3ZWVkX3RyYXF1YWlyLzIwMTkvMDEvMjEvMDg6NTA6MDAuanBnIl0sWyJwIiwidGh1bWIiLCJ4MTUwIl1d.jpg"
   },
   {
-    "access_issue": "http://canoescotland.org/news/south-esk-blockage",
+    "access_issue": "",
     "classification": "Good",
     "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=5800",
     "gauge_location_code": "14916",
@@ -1839,7 +1839,7 @@
     "webcam": ""
   },
   {
-    "access_issue": "http://canoescotland.org/news/river-tweed-lower-makerstoun",
+    "access_issue": "",
     "classification": "",
     "classification_url": "",
     "gauge_location_code": "533744",
