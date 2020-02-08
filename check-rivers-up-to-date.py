@@ -17,9 +17,9 @@ timestamp = int(response.read())
 if (time.time() - timestamp) > WARNING_TIME:
     print("Warning Warning, code red, the DOWNLOAD-READINGS-TIMESTAMP file is over an hour old")
     os.system('/home/jr/wheres-the-water/wheres-the-water/telegram-notify.rb Out of date WtW readings')
-else:
-    print("we are cool")
-    os.system('/home/jr/wheres-the-water/wheres-the-water/telegram-notify.rb WtW readings are all good')
+#else:
+#    print("we are cool")
+#    os.system('/home/jr/wheres-the-water/wheres-the-water/telegram-notify.rb WtW readings are all good')
 
 #response = urllib.request.urlopen("http://canoescotland.org/wheres-the-water/charts/CHARTS-GENERATED-TIMESTAMP")
 #timestamp = int(response.read())
