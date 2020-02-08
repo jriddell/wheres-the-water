@@ -494,7 +494,7 @@
     "webcam": ""
   },
   {
-    "access_issue": "",
+    "access_issue": "https://www.canoescotland.org/hazard-tree-blockage-river-avon",
     "classification": "Moderate",
     "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=10076",
     "gauge_location_code": "133084",
@@ -512,7 +512,7 @@
     "low_value": "0.6",
     "medium_value": "0.8",
     "name": "Avon (Glasgow)",
-    "notes": "New calibrations Nov 2018, thanks Robin. Please fill in calibration report form to confirm or adjust.",
+    "notes": "New calibrations Nov 2018, thanks Robin. Tree removed with funding from AJ Access Fund 2019",
     "put_in_lat": "55.7039",
     "put_in_long": "-3.9892",
     "river_zone_url": "https://riverzone.eu/calibration/f34029f1-3f7b-58b6-9f48-5577f703b47d.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Avon (Glasgow)&zones=,ff0000,Huge|170,ff6060,Very+High|150,ffc004,High|110,ffff33,Medium|80,00ff00,Low|60,ccffcc,Scrapeable|50,cccccc,Empty",
