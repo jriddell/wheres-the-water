@@ -1270,7 +1270,7 @@
     "low_value": "0.9",
     "medium_value": "1.1",
     "name": "Braan (Upper)",
-    "notes": "",
+    "notes": "Gauge is far below so readings not always up to date",
     "put_in_lat": "56.5101",
     "put_in_long": "-3.7879",
     "river_zone_url": "https://riverzone.eu/calibration/ed14eafb-a25c-5040-86ed-3dbb5e4c39ab.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Braan (Upper)&zones=,ff0000,Huge|170,ff6060,Very+High|150,ffc004,High|130,ffff33,Medium|110,00ff00,Low|90,ccffcc,Scrapeable|80,cccccc,Empty",
