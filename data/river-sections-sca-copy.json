@@ -262,7 +262,7 @@
     "webcam": ""
   },
   {
-    "access_issue": "http://canoescotland.org/news/lower-meig-hazard",
+    "access_issue": "",
     "classification": "Good",
     "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=20191",
     "gauge_location_code": "234227",
@@ -349,7 +349,7 @@
     "webcam": ""
   },
   {
-    "access_issue": "http://canoescotland.org/news/middle-findhorn-fence",
+    "access_issue": "",
     "classification": "",
     "classification_url": "",
     "gauge_location_code": "234306",
