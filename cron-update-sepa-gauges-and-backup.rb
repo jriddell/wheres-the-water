@@ -12,7 +12,7 @@ require 'net/https'
 require 'json'
 require 'logger'
 require 'inifile'
-require 'telegram/bot'
+
 LOCK_FILE = Dir.pwd + '/' + 'CRON-UPDATE-SEPA-GAUGES-AND-BACKUP-LOCK'
 RIVER_SECTIONS_FILE = '/home/jr/www/www.andyjacksonfund.org.uk/wheres-the-water/data/river-sections.json'
 RIVER_SECTIONS_FILE_COPY = '/home/jr/www/www.andyjacksonfund.org.uk/wheres-the-water/data/river-sections-sca-copy.json'
