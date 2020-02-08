@@ -891,7 +891,7 @@
     "low_value": "0.45",
     "medium_value": "0.9",
     "name": "Nith (Drumlanrig)",
-    "notes": "Access issue updated Jan 2019. Low was 0.65 now 0.45, Jan 2019.",
+    "notes": "Access issue updated Jan 2019. Low was 0.65 now 0.45, Jan 2019. Med was 1.0 now 0.9, Feb 2020.",
     "put_in_lat": "55.3307",
     "put_in_long": "-3.8382",
     "river_zone_url": "https://riverzone.eu/calibration/bf952ad2-48fa-5937-a726-24a0eaef16b2.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Nith (Drumlanrig)&zones=,ff0000,Huge|180,ff6060,Very+High|150,ffc004,High|120,ffff33,Medium|100,00ff00,Low|45,ccffcc,Scrapeable|40,cccccc,Empty",
