@@ -6,7 +6,7 @@
 /* Downloads and makes available the reading levels for a given river defined by the SEPA gauge_id
    use doGrabSepaRiver($gauge_id) to initialise
    Uses level data .csv file e.g.
-   http://apps.sepa.org.uk/database/riverlevels/133094-SG.csv
+   https://www2.sepa.org.uk/database/riverlevels/133094-SG.csv
    This is only for use by GrabSepaRivers when doing the bulk download, too slow and resource intensive to do it more often
 */
 
@@ -15,7 +15,7 @@ require_once 'SepaRiverReadingHistory.php';
 class GrabSepaRiverReading {
     const DATADIR = 'data';
     const SEPA_DOWNLOAD_PERIOD = 300; // 60 * 5; // make sure current download is no older than 5 minutes
-    const SEPA_URL = 'http://apps.sepa.org.uk/database/riverlevels/';
+    const SEPA_URL = 'https://www2.sepa.org.uk/database/riverlevels/';
 
     public $gauge_id;
     public $currentReading;

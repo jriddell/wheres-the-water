@@ -21,7 +21,7 @@ class GrabSepaRivers {
     const DATADIR = 'data';
     const TIMESTAMP = 'RIVERS_DOWNLOAD_TIMESTAMP';
     const SEPA_DOWNLOAD_PERIOD = 300; // 60 * 5; // make sure current download is no older than 5 minutes
-    const SEPA_URL = 'http://apps.sepa.org.uk/database/riverlevels/';
+    const SEPA_URL = 'https://www2.sepa.org.uk/database/riverlevels/';
     const RIVERS_READINGS_JSON = 'rivers-readings.json';
     const DOWNLOAD_LOCK_TIMEOUT = 3600; // 60 * 60; // remove download-lock if older than an hour, it means something crashed
     const DOWNLOAD_READINGS_TIMESTAMP = 'DOWNLOAD-READINGS-TIMESTAMP';
