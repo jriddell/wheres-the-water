@@ -611,7 +611,7 @@
     "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImJsYWNrc2JvYXQvMjAxOS8wMS8yMS8wODo1MDowMC5qcGciXSxbInAiLCJ0aHVtYiIsIngxNTAiXV0.jpg"
   },
   {
-    "access_issue": "",
+    "access_issue": "https://www.facebook.com/groups/Scottish.Whitewater/permalink/2897260896975569/",
     "classification": "",
     "classification_url": "",
     "gauge_location_code": "14959",
@@ -629,7 +629,7 @@
     "low_value": "0.4",
     "medium_value": "0.6",
     "name": "Tilt (Marble Lodge)",
-    "notes": "",
+    "notes": "Access issue added 16 Feb 2020",
     "put_in_lat": "56.8246",
     "put_in_long": "-3.8023",
     "river_zone_url": "https://riverzone.eu/calibration/b8baf626-159b-509c-be77-4f0987dcf33d.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Tilt (Marble Lodge)&zones=,ff0000,Huge|150,ff6060,Very+High|120,ffc004,High|100,ffff33,Medium|60,00ff00,Low|40,ccffcc,Scrapeable|35,cccccc,Empty",
