@@ -407,7 +407,7 @@
     "webcam": "https://www.farsondigitalwatercams.com/locations/dailly"
   },
   {
-    "access_issue": "",
+    "access_issue": "https://www.facebook.com/groups/Scottish.Whitewater/permalink/2895180173850308/",
     "classification": "Poor ecological potential",
     "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=10130",
     "gauge_location_code": "133080",
@@ -425,7 +425,7 @@
     "low_value": "0.6",
     "medium_value": "0.8",
     "name": "Kelvin",
-    "notes": "",
+    "notes": "Access issue added 16 Feb 2020",
     "put_in_lat": "55.8905",
     "put_in_long": "-4.3018",
     "river_zone_url": "https://riverzone.eu/calibration/6fa6a496-a6f2-55e2-b4a4-ebe11ba16cf7.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Kelvin&zones=,ff0000,Huge|200,ff6060,Very+High|140,ffc004,High|100,ffff33,Medium|80,00ff00,Low|60,ccffcc,Scrapeable|50,cccccc,Empty",
