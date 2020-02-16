@@ -2701,33 +2701,5 @@
     "scrape_value": "0.6",
     "very_high_value": "1.1",
     "webcam": ""
-  },
-  {
-    "access_issue": "",
-    "gauge_location_code": "234294",
-    "get_out_lat": "",
-    "get_out_long": "",
-    "google_mymaps": "",
-    "grade": "",
-    "guidebook_link": "",
-    "high_value": "0.8",
-    "huge_value": "2",
-    "kml": "",
-    "latitude": "57.0652",
-    "longitude": "-2.6485",
-    "low_value": "0.6",
-    "medium_value": "0.7",
-    "name": "Dee (Balmoral)",
-    "notes": "",
-    "put_in_lat": "",
-    "put_in_long": "",
-    "sca_guidebook_no": "",
-    "scrape_value": "0.5",
-    "very_high_value": "1",
-    "webcam": "",
-    "river_zone_url": "https://riverzone.eu/calibration/c48d829c-049e-5fb2-9ce4-593dc14d5943.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Dee (Balmoral)&zones=,ff0000,Huge|200,ff6060,Very+High|100,ffc004,High|80,ffff33,Medium|70,00ff00,Low|60,ccffcc,Scrapeable|50,cccccc,Empty",
-    "river_zone_url_mobile": "https://riverzone.eu/calibration/c48d829c-049e-5fb2-9ce4-593dc14d5943.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Dee (Balmoral)&zones=,ff0000,Huge|200,ff6060,Very+High|100,ffc004,High|80,ffff33,Medium|70,00ff00,Low|60,ccffcc,Scrapeable|50,cccccc,Empty",
-    "classification": "",
-    "classification_url": ""
   }
 ]
