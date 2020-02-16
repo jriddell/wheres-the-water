@@ -2726,6 +2726,8 @@
     "very_high_value": "1",
     "webcam": "",
     "river_zone_url": "https://riverzone.eu/calibration/c48d829c-049e-5fb2-9ce4-593dc14d5943.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Dee (Balmoral)&zones=,ff0000,Huge|200,ff6060,Very+High|100,ffc004,High|80,ffff33,Medium|70,00ff00,Low|60,ccffcc,Scrapeable|50,cccccc,Empty",
-    "river_zone_url_mobile": "https://riverzone.eu/calibration/c48d829c-049e-5fb2-9ce4-593dc14d5943.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Dee (Balmoral)&zones=,ff0000,Huge|200,ff6060,Very+High|100,ffc004,High|80,ffff33,Medium|70,00ff00,Low|60,ccffcc,Scrapeable|50,cccccc,Empty"
+    "river_zone_url_mobile": "https://riverzone.eu/calibration/c48d829c-049e-5fb2-9ce4-593dc14d5943.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Dee (Balmoral)&zones=,ff0000,Huge|200,ff6060,Very+High|100,ffc004,High|80,ffff33,Medium|70,00ff00,Low|60,ccffcc,Scrapeable|50,cccccc,Empty",
+    "classification": "",
+    "classification_url": ""
   }
 ]
