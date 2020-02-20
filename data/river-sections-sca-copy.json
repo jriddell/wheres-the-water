@@ -2723,10 +2723,12 @@
     "google_mymaps": "",
     "kml": "",
     "webcam": "",
-    "notes": "",
+    "notes": "New section Feb 2020, higher level calibrations are guesses. Please send in calibrations to confirm.",
     "put_in_long": "-2.8779",
     "put_in_lat": "56.8333",
     "get_out_long": "-2.7816",
-    "get_out_lat": "56.8121"
+    "get_out_lat": "56.8121",
+    "classification": "",
+    "classification_url": ""
   }
 ]
