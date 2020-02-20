@@ -2707,6 +2707,7 @@
   {
     "name": "West Water",
     "gauge_location_code": "14925",
+    "gauge_name": "Dahousie Bridge",
     "longitude": "-2.8779",
     "latitude": "56.8333",
     "scrape_value": "0.6",
