@@ -70,7 +70,9 @@ class ScheduledSections {
         $reply .= "<input type='hidden' name='scheduledUpdates' />\n";
         foreach($this->scheduledSectionsData as $jsonid => $scheduledSection) {
             $reply .= $this->editScheduledSectionFormLine($scheduledSection, $sectionCount);
-            $reply .= "<input type='submit' name='${sectionCount}_delete' value='&#10060; Delete ${sectionCount}' />\n";
+            //$reply .= "<input type='button' name='${sectionCount}_adddate' value='Add Date ${sectionCount}' class='adddate' onclick='adddate(${sectionCount});' />\n";
+            $reply .= "<button type='button' name='${sectionCount}' class='add' class='adddate btn btn-success'>Add More</button>";
+            $reply .= "<input type='submit' name='${sectionCount}_delete' value='&#10060; Delete ${sectionCount}' class='delete' />\n";
             $sectionCount++;
         }
         $reply .= "<input type='submit' name='save' value='Save' />\n";
@@ -104,6 +106,12 @@ class ScheduledSections {
         $reply .= $this->editScheduledSectionFormInputItem("Get Out Latitude", "${sectionCount}_get_out_lat", $scheduledSection['get_out_lat']);
         $reply .= $this->editScheduledSectionFormInputItem("Get Out Longitude", "${sectionCount}_get_out_long", $scheduledSection['get_out_long'], "right");
         $reply .= $this->editScheduledSectionFormInputItem("Constant (boolean)", "${sectionCount}_constant", $scheduledSection['constant']);
+        if (isset($scheduledSection['dates'])) {
+            foreach($scheduledSection['dates'] as $dateid => $date) {
+                $reply .= $this->editScheduledSectionFormInputItem("Date {$dateid}", "${sectionCount}_{$dateid}", $date);
+            }
+        }
+        $reply .= "<span id='{$sectionCount}_dates' /></span>\n";
         return $reply;
     }
 
@@ -116,6 +124,27 @@ class ScheduledSections {
         return $reply;
     }
 
+    /* print the javascript */
+    public function editScheduledSectionsFormJavascript() {
+?>
+    <h1 id="moo">Text</h1>
+    <script>
+        $(document).ready( function() {
+            console.log('ScheduledSections Javascript');
+            $('#moo').append('Appended');
+        $('.add').click(function(){  
+            console.log('add button clicked');
+            console.log($(this).attr('name'));
+            $sectionCount = $(this).attr('name');
+            $('#' + $sectionCount + '_dates').append('HELLO');
+            i++;  
+            $('#dynamic_field').append('<input type="text" name="name[]" placeholder="Enter your Name" class="form-control name_list" /></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');  
+        });  
+      });
+    </script>
+<?php
+    }
+
     /* read submitted HTML form to update rivers */
     public function updateScheduledSections($postData) {
         $sectionCount = 1;
@@ -126,12 +155,6 @@ class ScheduledSections {
             }
 
             $scheduledSection = [];
-            try {
-                $this->validateScheduledSectionUpdateData($postData);
-            } catch (Exception $e) {
-                $name = $riverSection['name'];
-                return "<b>&#9888;Not updated $name</b><br />Validation error: " . $e->getMessage();
-            }
             $scheduledSection['name'] = $postData["{$sectionCount}_sectionname"];
             $scheduledSection['latitude'] = $postData["{$sectionCount}_latitude"];
             $scheduledSection['longitude'] = $postData["{$sectionCount}_longitude"];
@@ -149,8 +172,15 @@ class ScheduledSections {
             $scheduledSection['get_out_lat'] = $postData["{$sectionCount}_get_out_lat"];
             $scheduledSection['get_out_long'] = $postData["{$sectionCount}_get_out_long"];
             $scheduledSection['constant'] = $postData["{$sectionCount}_constant"];
+            // TODO cycle over dates to make array for $scheduledSection['dates']
             $newScheduledSectionsData[] = $scheduledSection;
             $sectionCount++;
+            try {
+                $this->validateScheduledSectionUpdateData($scheduledSection);
+            } catch (Exception $e) {
+                $name = $scheduledSection['name'];
+                return "<b>&#9888;Not updated $name</b><br />Validation error: " . $e->getMessage();
+            }
         }
 
         $this->scheduledSectionsData = $newScheduledSectionsData;
@@ -161,39 +191,16 @@ class ScheduledSections {
     /* do validation on river section values
        throw exception if a problem
     */
-    private function validateScheduledSectionUpdateData($postData) {
-        return;
-        //TODO
-        $this->validateFloat("Longitude", $postData['longitude']);
-        $this->validateFloat("Latitude", $postData['latitude']);
-        $this->validateFloat("Scrape Value", $postData['scrape_value']);
-        $this->validateFloat("Low Value", $postData['low_value']);
-        $this->validateFloat("Medium Value", $postData['medium_value']);
-        $this->validateFloat("High Value", $postData['high_value']);
-        $this->validateFloat("Very High Value", $postData['very_high_value']);
-        $this->validateFloat("Huge Value", $postData['huge_value']);
-        $this->validateFloatOrEmpty("Put In Longitude", $postData['put_in_long']);
-        $this->validateFloatOrEmpty("Put In Latitude", $postData['put_in_lat']);
-        $this->validateFloatOrEmpty("Get Out Longitude", $postData['get_out_long']);
-        $this->validateFloatOrEmpty("Get Out Latitude", $postData['get_out_lat']);
-        if (filter_var($postData['gauge_location_code'], FILTER_VALIDATE_INT) === false) {
-            throw new Exception("SEPA gauge code not an int");
-        }
-        $this->validateNotNegative("Latitude", $postData['latitude']);
-        $this->validateNotNegative("Scrape Value", $postData['scrape_value']);
-        $this->validateNotNegative("Low Value", $postData['low_value']);
-        $this->validateNotNegative("Medium Value", $postData['medium_value']);
-        $this->validateNotNegative("High Value", $postData['high_value']);
-        $this->validateNotNegative("Very High Value", $postData['very_high_value']);
-        $this->validateNotNegative("Huge Value", $postData['huge_value']);
-        if ($postData['scrape_value'] > $postData['low_value'] ||
-            $postData['low_value'] > $postData['medium_value'] ||
-            $postData['medium_value'] > $postData['high_value'] ||
-            $postData['high_value'] > $postData['very_high_value'] ||
-            $postData['very_high_value'] > $postData['huge_value']) {
-            throw new Exception("River level values not in sequential order");
-        }
-        if (!filter_var($postData['rivername'], FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>"/^[a-zA-Z \(\)]+$/")))) {
+    private function validateScheduledSectionUpdateData($scheduledSection) {
+        $this->validateFloat("Longitude", $scheduledSection['longitude']);
+        $this->validateFloat("Latitude", $scheduledSection['latitude']);
+        $this->validateFloatOrEmpty("Put In Longitude", $scheduledSection['put_in_long']);
+        $this->validateFloatOrEmpty("Put In Latitude", $scheduledSection['put_in_lat']);
+        $this->validateFloatOrEmpty("Get Out Longitude", $scheduledSection['get_out_long']);
+        $this->validateFloatOrEmpty("Get Out Latitude", $scheduledSection['get_out_lat']);
+        $this->validateNotNegative("Latitude", $scheduledSection['latitude']);
+        $this->validateBoolean("Constant", $scheduledSection['constant']);
+        if (!filter_var($scheduledSection['name'], FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>"/^[a-zA-Z \(\)]+$/")))) {
             throw new Exception("Name not text");
         }
     }
@@ -211,10 +218,18 @@ class ScheduledSections {
             throw new Exception("$name $data is not a number");
         }
     }
+
     /* throw exception if it's negatuve */
     private function validateNotNegative($name, $data) {
         if ($data < 0) {
             throw new Exception("$name is negative");
+        }
+    }
+
+    /* throw exception if it's negatuve */
+    private function validateBoolean($name, $data) {
+        if ($data != 0 && $data != 1) {
+            throw new Exception("$name is not 0 or 1");
         }
     }
 

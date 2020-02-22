@@ -56,8 +56,10 @@ input[type=submit] { grid-column: 1/2;
                      border: 2px solid black;
                      margin: 1em;
                    }
-input.right[type=submit] { grid-column: 2/3; 
-                        width: 2em;
+input.delete[type=submit] { grid-column: 3/3; 
+                     border: 2px solid black;
+                   }
+input.adddate[type=button] { grid-column: 1/2; 
                      border: 2px solid black;
                    }
 
@@ -67,6 +69,7 @@ p.message { border: 1px solid black;
           }
 p.message b { font-size: larger; }
 </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
 <h1>Where's the Water Scheduled Section Editing</h1>
@@ -80,6 +83,7 @@ if (isset($message)) {
 
 print $scheduledSections->editScheduledSectionsForm();
 print $scheduledSections->addScheduledSectionForm();
+print $scheduledSections->editScheduledSectionsFormJavascript();
 ?>
 </body>
 </html>
