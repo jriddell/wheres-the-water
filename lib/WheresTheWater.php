@@ -583,10 +583,25 @@ jQuery(document).ready( function(){
                 marker.bindTooltip(riverSection);
                 markers.push(marker);
             }
+            // Scheduled Sections
             for (i=0; i<scheduledSections.length; i++) {
                 console.log("Scheduled section No " + i + " : " + scheduledSections[i]['name'] + scheduledSections[i]['latitude'] + scheduledSections[i]['longitude']);
                 var scheduledSection = scheduledSections[i]['name'];
-                contentString = "TODO";
+                var scheduledSectionValue = getScheduledSectionValue(scheduledSections[i]['dates']);
+
+                var contentString = "<div><h4 style='padding-left: 30px;'>" + scheduledSection + "</h4>" +
+                    "<p style='padding-left: 30px;'><img src='" + iconBase + scheduledSectionValue + ext + "' /> " +
+                    tidyStatusString(scheduledSectionValue) + "</p>" +
+                    "<p><span class='js-info'>Info</span> / <span class='js-calib-table link' style='text-decoration: underline; color: blue; cursor: pointer'>Dates</span> / <span class='js-forecast link' style='text-decoration: underline; color: blue; cursor: pointer'>Weather</span>";
+                contentString += "</p>" +
+                    "<p class='js-info-content'><img width='16' height='16' src='/wheres-the-water/pics/clock.png'/> Next Date " + "TODO add next date" +
+                    //"<br />" + sectionLinks + "</p>" + riverReadingsTable +
+                    //"<p class='js-forecast-content' style='display: none'>" +
+                    //sectionForecasts[riverSections[i]['gauge_location_code']] +
+                    "</p>"
+                contentString += '<p>Help Calibrate: <a href="https://goo.gl/forms/nnEOgVkw8ebhygW52">River Level Report form</a>.</p>';
+                contentString += "</div>";
+
                 var icon = todayIcon;
                 var marker = L.marker([scheduledSections[i]['latitude'], scheduledSections[i]['longitude']], {icon: icon}).bindPopup(contentString).addTo( map );
                 marker.bindTooltip(scheduledSection);
@@ -616,6 +631,33 @@ jQuery(document).ready( function(){
             return false;
         }
         function getWaterLevelValue(riverSection) {
+            currentReading = riverSection['currentReading'];
+            console.log("name " + riverSection['name']);
+            if (currentReading == -1) {
+                return "NO_GUAGE_DATA";
+            } else if (currentReading == 0 || readingIsOld(riverSection['currentReadingTime'])) {
+                return "OLD_DATA";
+            } else if (riverSection['scrape_value'] == riverSection['huge_value']) {
+                return "NEEDS_CALIBRATIONS";
+            } else if (currentReading < riverSection['scrape_value']) {
+                return "EMPTY";
+            } else if (currentReading < riverSection['low_value']) {
+                return "SCRAPE";
+            } else if (currentReading < riverSection['medium_value']) {
+                return "LOW";
+            } else if (currentReading < riverSection['high_value']) {
+                return "MEDIUM";
+            } else if (currentReading < riverSection['very_high_value']) {
+                return "HIGH";
+            } else if (currentReading < riverSection['huge_value']) {
+                return "VERY_HIGH";
+            } else {
+                return "HUGE";
+            }
+        }
+        function getScheduledSectionValue(dates) {
+            //TODO
+            return "TOMORROW";
             currentReading = riverSection['currentReading'];
             console.log("name " + riverSection['name']);
             if (currentReading == -1) {
