@@ -6,10 +6,10 @@ require_once('../config.php');
 require_once('../lib/ScheduledSections.php');
 $scheduledSections = new ScheduledSections;
 $scheduledSections->readFromJson();
-if (isset($_POST['riverUpdates']) && isset($_POST['save'])) {
-  $message = $scheduledSections->updateScheduledSection($_POST);
+if (isset($_POST['scheduledUpdates']) && isset($_POST['save'])) {
+  $message = $scheduledSections->updateScheduledSections($_POST);
 }
-if (isset($_POST['riverUpdates']) && isset($_POST['delete'])) {
+if (isset($_POST['scheduledUpdates']) && isset($_POST['delete'])) {
   $message = $scheduledSections->deleteScheduledSection($_POST);
 }
 if (isset($_POST['add'])) {
@@ -78,8 +78,8 @@ if (isset($message)) {
   print "<p class='message'>$message</p>";
 }
 
-print $scheduledSections->editRiverForm();
-print $scheduledSections->addRiverForm();
+print $scheduledSections->editScheduledSectionsForm();
+print $scheduledSections->addScheduledSectionForm();
 ?>
 </body>
 </html>
