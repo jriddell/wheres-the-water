@@ -23,7 +23,7 @@ if (isset($_POST['add'])) {
 <title>SCA Where's the Water Scheduled Section Editing</title>
 <style>
 
-form {font-family: sans-serif; 
+div.form {font-family: sans-serif; 
       border: 1px solid black; 
       background-color: #eee;
       grid-template-columns: 200px 1fr 200px 1fr;
@@ -57,6 +57,9 @@ input[type=submit] { grid-column: 1/2;
                      margin: 1em;
                    }
 input.delete[type=submit] { grid-column: 3/4; 
+                     border: 2px solid black;
+                   }
+button.delete { grid-column: 3/4; 
                      border: 2px solid black;
                    }
 div.datesdiv { grid-column: 2/3; 

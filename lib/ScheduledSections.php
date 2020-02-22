@@ -69,6 +69,7 @@ class ScheduledSections {
         $reply .= "<form action='scheduled-section.php' method='post'>\n";
         $reply .= "<input type='hidden' name='scheduledUpdates' />\n";
         foreach($this->scheduledSectionsData as $jsonid => $scheduledSection) {
+            $reply .= "<div class='form' id='section-" . $sectionCount . "'>\n";
             $reply .= $this->editScheduledSectionFormLine($scheduledSection, $sectionCount);
             //$reply .= "<input type='button' name='${sectionCount}_adddate' value='Add Date ${sectionCount}' class='adddate' onclick='adddate(${sectionCount});' />\n";
             $datesLength = 0;
@@ -76,7 +77,9 @@ class ScheduledSections {
                 $datesLength = sizeof($scheduledSection['dates']);
             }
             $reply .= "<button type='button' name='add-${sectionCount}-$datesLength' class='add adddate btn btn-success'>Add Date</button>";
-            $reply .= "<input type='submit' name='${sectionCount}_delete' value='&#10060; Delete ${sectionCount}' class='delete' />\n";
+            $reply .= "<button type='button' name='delete-${sectionCount}' class='delete'>Delete Section</button>";
+            $reply .= "</div>\n";
+            // $reply .= "<input type='submit' name='${sectionCount}_delete' value='&#10060; Delete ${sectionCount}' class='delete' />\n";
             $sectionCount++;
         }
         $reply .= "<input type='submit' name='save' value='Save' />\n";
@@ -92,7 +95,7 @@ class ScheduledSections {
         }
         */
         $reply = "";
-        $reply .= "<legend>" . $sectionCount . ") " . $scheduledSection['name'] . "</legend>";
+        $reply .= "<legend>" . $sectionCount . ") " . $scheduledSection['name'] . "</legend>\n";
         $reply .= $this->editScheduledSectionFormInputItem("River/Section Name", "${sectionCount}_sectionname", $scheduledSection['name']);
         $reply .= $this->editScheduledSectionFormInputItem("Latitude", "${sectionCount}_latitude", $scheduledSection['latitude'], "right");
         $reply .= $this->editScheduledSectionFormInputItem("Longitude", "${sectionCount}_longitude", $scheduledSection['longitude']);
@@ -116,7 +119,8 @@ class ScheduledSections {
                 $reply .= $this->editScheduledSectionFormInputItem("Date {$dateid}", "${sectionCount}_date_{$dateid}", $date) . "<br />";
             }
         }
-        $reply .= "</div>\n";
+        $reply .= "</div><!-- id=X-dates -->\n";
+        //$reply .= "</div><!-- id=section-X -->\n";
         return $reply;
     }
 
@@ -136,20 +140,25 @@ class ScheduledSections {
     <script>
         $(document).ready( function() {
             var currentDateCount = 0;
-            $('.add').click(function(){  
-                console.log('add button clicked');
+            $('.add').click(function() {  
+                //console.log('add button clicked' + $(this).attr('name'));
                 var dateValues = $(this).attr('name').split("-");
                 var sectionCount = dateValues[1];
                 var dateCount = dateValues[2];
                 if (currentDateCount == 0) {
                     currentDateCount = dateCount;
                 }
-                console.log($(this).attr('name'));
                 newInput = '<label for="'+sectionCount+'_date_'+currentDateCount+'" class="left">Date '+currentDateCount+': </label>';
                 newInput += "<input type='text' name='"+sectionCount+"_date_"+currentDateCount+"' value='' /><br /> ";
-                console.log('adding to: ' + '#' + sectionCount + '_dates');
+                //console.log('adding to: ' + '#' + sectionCount + '_dates');
                 $('#' + sectionCount + '_dates').append(newInput);
                 currentDateCount++;
+            });  
+            $('.delete').click(function() {  
+                //console.log('delete section' + $(this).attr('name'));
+                var sectionCount = $(this).attr('name').split("-")[1];
+                //console.log('delete section count:' + sectionCount);
+                $('#section-' + sectionCount).remove();
             });  
       });
     </script>
@@ -158,49 +167,52 @@ class ScheduledSections {
 
     /* read submitted HTML form to update rivers */
     public function updateScheduledSections($postData) {
-        $sectionCount = 1;
+        $sectionCount = 0;
         $newScheduledSectionsData = array();
         while (true) {
-            if (!isset($postData["{$sectionCount}_sectionname"])) {
+            $sectionCount++;
+            // code red, this count is an arbitrary number which limits how many we can add, fix coding somehow
+            if ($sectionCount > 100) {
                 break;
             }
 
-            $scheduledSection = [];
-            $scheduledSection['name'] = $postData["{$sectionCount}_sectionname"];
-            $scheduledSection['latitude'] = $postData["{$sectionCount}_latitude"];
-            $scheduledSection['longitude'] = $postData["{$sectionCount}_longitude"];
-            $scheduledSection['grade'] = $postData["{$sectionCount}_grade"];
-            $scheduledSection['guidebook_link'] = $postData["{$sectionCount}_guidebook_link"];
-            $scheduledSection['sca_guidebook_no'] = $postData["{$sectionCount}_sca_guidebook_no"];
-            $scheduledSection['info_link'] = $postData["{$sectionCount}_info_link"];
-            $scheduledSection['access_issue'] = $postData["{$sectionCount}_access_issue"];
-            $scheduledSection['google_mymaps'] = $postData["{$sectionCount}_google_mymaps"];
-            $scheduledSection['kml'] = $postData["{$sectionCount}_kml"];
-            $scheduledSection['webcam'] = $postData["{$sectionCount}_webcam"];
-            $scheduledSection['notes'] = $postData["{$sectionCount}_notes"];
-            $scheduledSection['put_in_lat'] = $postData["{$sectionCount}_put_in_lat"];
-            $scheduledSection['put_in_long'] = $postData["{$sectionCount}_put_in_long"];
-            $scheduledSection['get_out_lat'] = $postData["{$sectionCount}_get_out_lat"];
-            $scheduledSection['get_out_long'] = $postData["{$sectionCount}_get_out_long"];
-            $scheduledSection['constant'] = $postData["{$sectionCount}_constant"];
-            // TODO cycle over dates to make array for $scheduledSection['dates']
-            $scheduledSection['dates'] = array();
-            $dateCount = 0;
-            while (true) {
-                if (isset($postData["{$sectionCount}_date_{$dateCount}"])) {
-                    $scheduledSection['dates'][] = $postData["{$sectionCount}_date_{$dateCount}"];
-                } else {
-                    break;
+            if (isset($postData["{$sectionCount}_sectionname"])) {
+                $scheduledSection = [];
+                $scheduledSection['name'] = $postData["{$sectionCount}_sectionname"];
+                $scheduledSection['latitude'] = $postData["{$sectionCount}_latitude"];
+                $scheduledSection['longitude'] = $postData["{$sectionCount}_longitude"];
+                $scheduledSection['grade'] = $postData["{$sectionCount}_grade"];
+                $scheduledSection['guidebook_link'] = $postData["{$sectionCount}_guidebook_link"];
+                $scheduledSection['sca_guidebook_no'] = $postData["{$sectionCount}_sca_guidebook_no"];
+                $scheduledSection['info_link'] = $postData["{$sectionCount}_info_link"];
+                $scheduledSection['access_issue'] = $postData["{$sectionCount}_access_issue"];
+                $scheduledSection['google_mymaps'] = $postData["{$sectionCount}_google_mymaps"];
+                $scheduledSection['kml'] = $postData["{$sectionCount}_kml"];
+                $scheduledSection['webcam'] = $postData["{$sectionCount}_webcam"];
+                $scheduledSection['notes'] = $postData["{$sectionCount}_notes"];
+                $scheduledSection['put_in_lat'] = $postData["{$sectionCount}_put_in_lat"];
+                $scheduledSection['put_in_long'] = $postData["{$sectionCount}_put_in_long"];
+                $scheduledSection['get_out_lat'] = $postData["{$sectionCount}_get_out_lat"];
+                $scheduledSection['get_out_long'] = $postData["{$sectionCount}_get_out_long"];
+                $scheduledSection['constant'] = $postData["{$sectionCount}_constant"];
+                // TODO cycle over dates to make array for $scheduledSection['dates']
+                $scheduledSection['dates'] = array();
+                $dateCount = 0;
+                while (true) {
+                    if (isset($postData["{$sectionCount}_date_{$dateCount}"])) {
+                        $scheduledSection['dates'][] = $postData["{$sectionCount}_date_{$dateCount}"];
+                    } else {
+                        break;
+                    }
+                    $dateCount++;
                 }
-                $dateCount++;
-            }
-            $newScheduledSectionsData[] = $scheduledSection;
-            $sectionCount++;
-            try {
-                $this->validateScheduledSectionUpdateData($scheduledSection);
-            } catch (Exception $e) {
-                $name = $scheduledSection['name'];
-                return "<b>&#9888;Not updated $name</b><br />Validation error: " . $e->getMessage();
+                $newScheduledSectionsData[] = $scheduledSection;
+                try {
+                    $this->validateScheduledSectionUpdateData($scheduledSection);
+                } catch (Exception $e) {
+                    $name = $scheduledSection['name'];
+                    return "<b>&#9888;Not updated $name</b><br />Validation error: " . $e->getMessage();
+                }
             }
         }
 
