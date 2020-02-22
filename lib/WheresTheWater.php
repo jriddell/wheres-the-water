@@ -412,6 +412,41 @@ jQuery(document).ready( function(){
             iconAnchor: [0, 0],
             popupAnchor: [5, -3]
         });
+        var noDatesIcon = L.icon({
+            iconUrl: '/wheres-the-water/pics/NODATES.png',
+            iconRetinaUrl: '/wheres-the-water/pics/NODATES.png',
+            iconSize: [10, 10],
+            iconAnchor: [0, 0],
+            popupAnchor: [5, -3]
+        });
+        var todayIcon = L.icon({
+            iconUrl: '/wheres-the-water/pics/TODAY.png',
+            iconRetinaUrl: '/wheres-the-water/pics/TODAY.png',
+            iconSize: [10, 10],
+            iconAnchor: [0, 0],
+            popupAnchor: [5, -3]
+        });
+        var tomorrowIcon = L.icon({
+            iconUrl: '/wheres-the-water/pics/TOMORROW.png',
+            iconRetinaUrl: '/wheres-the-water/pics/TOMORROW.png',
+            iconSize: [10, 10],
+            iconAnchor: [0, 0],
+            popupAnchor: [5, -3]
+        });
+        var thisWeekIcon = L.icon({
+            iconUrl: '/wheres-the-water/pics/THISWEEK.png',
+            iconRetinaUrl: '/wheres-the-water/pics/THISWEEK.png',
+            iconSize: [10, 10],
+            iconAnchor: [0, 0],
+            popupAnchor: [5, -3]
+        });
+        var notThisWeekIcon = L.icon({
+            iconUrl: '/wheres-the-water/pics/NOTTHISWEEK.png',
+            iconRetinaUrl: '/wheres-the-water/pics/NOTTHISWEEK.png',
+            iconSize: [10, 10],
+            iconAnchor: [0, 0],
+            popupAnchor: [5, -3]
+        });
         
         var riverSections;
         var riverSectionsFile = $.getJSON("/wheres-the-water/data/river-sections.json", function(data) {
@@ -577,7 +612,7 @@ jQuery(document).ready( function(){
                 console.log("Scheduled section No " + i + " : " + scheduledSections[i]['name'] + scheduledSections[i]['latitude'] + scheduledSections[i]['longitude']);
                 var scheduledSection = scheduledSections[i]['name'];
                 contentString = "TODO";
-                var icon = emptyIcon;
+                var icon = noDatesIcon;
                 var marker = L.marker([scheduledSections[i]['latitude'], scheduledSections[i]['longitude']], {icon: icon}).bindPopup(contentString).addTo( map );
                 marker.bindTooltip(scheduledSection);
                 console.log("bindTooltip: " + scheduledSection);
