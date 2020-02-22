@@ -567,41 +567,16 @@ jQuery(document).ready( function(){
                 var riverReadingsTable = getRiverReadingsTable(riverSections[i], waterLevelValue);
                 var riverFilename = getRiverGraphFilename(riverSections[i]);
                 var icon = getWaterLevelIcon(riverSections[i]);
-                //TODO get weather forecast html in JS here
                 var contentString = "<div><h4 style='padding-left: 30px;'>" + riverSection + "</h4>" +
                     "<p style='padding-left: 30px;'><img src='" + iconBase + waterLevelValue + ext + "' /> " +
                     tidyStatusString(waterLevelValue) + ", " + currentReading + "</p>" +
-                    "<p><span class='js-info'>Info</span> / <span class='js-calib-table link' style='text-decoration: underline; color: blue; cursor: pointer'>Calibrations</span> / <span class='js-forecast link' style='text-decoration: underline; color: blue; cursor: pointer'>Forecast</span>";
-                    // "<p><span class='js-info'>Info</span> / <span class='js-calib-table link' style='text-decoration: underline; color: blue; cursor: pointer'>Calibrations</span> / <span class='js-chart-weekly link' style='text-decoration: underline; color: blue; cursor: pointer'>Weekly Chart</span> / <span class='js-chart-monthly link' style='text-decoration: underline; color: blue; cursor: pointer'>Monthly Chart</span> / <span class='js-chart-yearly link' style='text-decoration: underline; color: blue; cursor: pointer'>Yearly Chart</span> / <span class='js-forecast link' style='text-decoration: underline; color: blue; cursor: pointer'>Forecast</span>";
-                /*
-                if ('webcam_thumbnail' in riverSections[i] && !riverSections[i]['webcam_thumbnail'].length == 0) {
-                    contentString += " / <span class='js-webcam link' style='text-decoration: underline; color: blue; cursor: pointer'>Webcam</span>";
-                }
-                */
+                    "<p><span class='js-info'>Info</span> / <span class='js-calib-table link' style='text-decoration: underline; color: blue; cursor: pointer'>Calibrations</span> / <span class='js-forecast link' style='text-decoration: underline; color: blue; cursor: pointer'>Weather</span>";
                 contentString += "</p>" +
                     "<p class='js-info-content'><img width='16' height='16' src='/wheres-the-water/pics/clock.png'/> Last reading " + currentReadingTime +
                     "<br />" + sectionLinks + "</p>" + riverReadingsTable +
-                    /*
-                    "<p class='js-chart-weekly-content' style='display: none'>" +
-                    "<a href='http://canoescotland.org/wheres-the-water/charts/"+riverFilename+"-weekly.png'>"+
-                    "<img src='http://canoescotland.org/wheres-the-water/charts/"+riverFilename+"-weekly.png' style='max-width: 250px; width: 100%' /></a></p>" +
-                    "<p class='js-chart-monthly-content' style='display: none'>" +
-                    "<a href='http://canoescotland.org/wheres-the-water/charts/"+riverFilename+"-monthly.png'>"+
-                    "<img src='http://canoescotland.org/wheres-the-water/charts/"+riverFilename+"-monthly.png' style='max-width: 250px; width: 100%' /></a></p>" +
-                    "<p class='js-chart-yearly-content' style='display: none'>" +
-                    "<a href='http://canoescotland.org/wheres-the-water/charts/"+riverFilename+"-yearly.png'>"+
-                    "<img src='http://canoescotland.org/wheres-the-water/charts/"+riverFilename+"-yearly.png' style='max-width: 250px; width: 100%' /></a></p>" +
-                    */
                     "<p class='js-forecast-content' style='display: none'>" +
                     sectionForecasts[riverSections[i]['gauge_location_code']] +
                     "</p>"
-                /*
-                if ('webcam_thumbnail' in riverSections[i] && !riverSections[i]['webcam_thumbnail'].length == 0) {
-                    contentString +=
-                    "<p class='js-webcam-content' style='display: none'><a href='"+riverSections[i]['webcam']+"'><img src='"+riverSections[i]['webcam_thumbnail']+"'/></a>" +
-                    "</p>";
-                }
-                */
                 contentString += '<p>Help Calibrate: <a href="https://goo.gl/forms/nnEOgVkw8ebhygW52">River Level Report form</a>.</p>';
                 contentString += "</div>";
                 var marker = L.marker([riverSections[i]['latitude'], riverSections[i]['longitude']], {icon: icon}).bindPopup(contentString).addTo( map );
@@ -612,7 +587,7 @@ jQuery(document).ready( function(){
                 console.log("Scheduled section No " + i + " : " + scheduledSections[i]['name'] + scheduledSections[i]['latitude'] + scheduledSections[i]['longitude']);
                 var scheduledSection = scheduledSections[i]['name'];
                 contentString = "TODO";
-                var icon = noDatesIcon;
+                var icon = todayIcon;
                 var marker = L.marker([scheduledSections[i]['latitude'], scheduledSections[i]['longitude']], {icon: icon}).bindPopup(contentString).addTo( map );
                 marker.bindTooltip(scheduledSection);
                 console.log("bindTooltip: " + scheduledSection);
