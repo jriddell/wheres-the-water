@@ -493,6 +493,7 @@ jQuery(document).ready( function(){
             if (string) {
                 string = string.toLocaleLowerCase();
                 string = string.charAt(0).toUpperCase() + string.slice(1);
+                string = string.replace('_', ' ');
                 return string.replace('_', ' ');
             } else {
                 return string;
@@ -552,6 +553,40 @@ jQuery(document).ready( function(){
 
             return linksContent;
         }
+        function linksContentScheduled(scheduledSection) {
+            var linksContent = "";
+            if ('notes' in scheduledSection && !scheduledSection['notes'].length == 0) {
+                linksContent += "<img width='16' height='16' title='Notes' src='/wheres-the-water/pics/notes.png' /> <b>Notes:</b> "+scheduledSection['notes']+"<br />";
+            }
+            if ('grade' in scheduledSection && !scheduledSection['grade'].length == 0) {
+                linksContent += "<img width='16' height='16' src='/wheres-the-water/pics/grade.png'/> Grade: " + scheduledSection['grade'] + "<br />";
+            }
+            if ('sca_guidebook_no' in scheduledSection && !scheduledSection['sca_guidebook_no'].length == 0) {
+                linksContent += "<img width='16' height='16' title='SCA WW Guidebook number' src='/wheres-the-water/pics/sca.png' /> SCA WW Guidebook No "+scheduledSection['sca_guidebook_no']+"<br />";
+            }
+            linksContent += "<img width='16' height='16' title='Open maps Link' src='/wheres-the-water/pics/osm.png' /> ";
+            linksContent += "<a target='_blank' rel='noopener' href='https://www.openstreetmap.org/?mlat="+scheduledSection['latitude']+"&mlon="+scheduledSection['longitude']+"#map=12/"
+                            +scheduledSection['latitude']+"/"+scheduledSection['longitude']+"'>OpenStreetMap</a> / ";
+            linksContent += "<span class='desktop'><a target='_blank' rel='noopener' href='https://www.bing.com/maps?cp="+scheduledSection['latitude']+"~"+scheduledSection['longitude']+"&lvl=14&style=s'>Ordnance Survey</a> /</span> ";
+            linksContent += " <span class='desktop'><a target='_blank' rel='noopener' href='https://www.google.com/maps?q="+scheduledSection['latitude']+","+scheduledSection['longitude']+"'>Google Maps</a></span> ";
+            linksContent += "<span class='mobile'><a href='geo:"+scheduledSection['latitude']+","+scheduledSection['longitude']+"'>Maps App</a><br /></span>";
+            if ('guidebook_link' in scheduledSection && !scheduledSection['guidebook_link'].length == 0) {
+                linksContent += "<a target='_blank' rel='noopener' href='"+scheduledSection['guidebook_link']+"'><img width='16' height='16' title='UKRGB Link' src='/wheres-the-water/pics/ukrgb.ico'/> UKRGB</a><br />";
+            }
+            if ('access_issue' in scheduledSection && !scheduledSection['access_issue'].length == 0) {
+                linksContent += "<a target='_blank' rel='noopener' href='"+scheduledSection['access_issue']+"'><img width='16' height='16' title='Access Issue Link' src='/wheres-the-water/pics/warning.png' /> Access Issue</a><br />";
+            }
+            if ('google_mymaps' in scheduledSection && !scheduledSection['google_mymaps'].length == 0) {
+                linksContent += "<a target='_blank' rel='noopener' href='"+scheduledSection['google_mymaps']+"'><img width='16' height='16' title='Google MyMaps' src='/wheres-the-water/pics/google-mymaps.png' /> Google MyMaps</a><br />";
+            }
+            if ('kml' in scheduledSection && !scheduledSection['kml'].length == 0) {
+                linksContent += "<a target='_blank' rel='noopener' href='"+scheduledSection['kml']+"'><img width='16' height='16' title='KML' src='/wheres-the-water/pics/kml.png' /> KML</a><br />";
+            }
+            if ('webcam' in scheduledSection && !scheduledSection['webcam'].length == 0) {
+                linksContent += "<a target='_blank' rel='noopener' href='"+scheduledSection['webcam']+"'><img width='16' height='16' title='Webcam' src='/wheres-the-water/pics/webcam.png' /> Webcam</a><br />";
+            }
+            return linksContent;
+        }
         function addRiverMarkers() {
             markers = new Array();
             tooltipsAreVisible = false;
@@ -587,6 +622,7 @@ jQuery(document).ready( function(){
             for (i=0; i<scheduledSections.length; i++) {
                 console.log("Scheduled section No " + i + " : " + scheduledSections[i]['name'] + scheduledSections[i]['latitude'] + scheduledSections[i]['longitude']);
                 var scheduledSection = scheduledSections[i]['name'];
+                var sectionLinks = linksContentScheduled(scheduledSections[i]);
                 var scheduledSectionValue;
                 if (scheduledSections[i]['constant'] == "1") {
                     scheduledSectionValue = "CONSTANT"
@@ -595,14 +631,21 @@ jQuery(document).ready( function(){
                 } else {
                     scheduledSectionValue = "NO_KNOWN_DATES";
                 }
+                var nextDateString;
+                if (scheduledSections[i]['constant'] == "1") {
+                    nextDateString = "Constant Flow";
+                } else {
+                    var nextDate = getNextDate(scheduledSections[i]['dates']);
+                    nextDateString = nextDate.toDateString();
+                }
 
                 var contentString = "<div><h4 style='padding-left: 30px;'>" + scheduledSection + "</h4>" +
                     "<p style='padding-left: 30px;'><img src='" + iconBase + scheduledSectionValue + ext + "' /> " +
                     tidyStatusString(scheduledSectionValue) + "</p>" +
-                    "<p><span class='js-info'>Info</span> / <span class='js-calib-table link' style='text-decoration: underline; color: blue; cursor: pointer'>Dates</span> / <span class='js-forecast link' style='text-decoration: underline; color: blue; cursor: pointer'>Weather</span>";
+                    "<p><span class='js-info'>Info</span> / <span class='js-calib-table link' style='text-decoration: underline; color: blue; cursor: pointer'>Dates</span>"; // / <span class='js-forecast link' style='text-decoration: underline; color: blue; cursor: pointer'>Weather</span>";
                 contentString += "</p>" +
-                    "<p class='js-info-content'><img width='16' height='16' src='/wheres-the-water/pics/clock.png'/> Next Date " + "TODO add next date" +
-                    //"<br />" + sectionLinks + "</p>" + riverReadingsTable +
+                    "<p class='js-info-content'><img width='16' height='16' src='/wheres-the-water/pics/clock.png'/> Next Date: " + nextDateString +
+                    "<br />" + sectionLinks + "</p>"// + riverReadingsTable +
                     //"<p class='js-forecast-content' style='display: none'>" +
                     //sectionForecasts[riverSections[i]['gauge_location_code']] +
                     "</p>"
@@ -661,23 +704,28 @@ jQuery(document).ready( function(){
                 return "HUGE";
             }
         }
-        function getScheduledSectionValue(dates) {
-            //FIXME this logic is repeated below for the icon name
-            jsDates = [];
-            for (k=0; k<dates.length; k++) {
-              jsDate = new Date(dates[k]);
+        function getNextDate(dates) {
+            var jsDates = [];
+            for (var k=0; k<dates.length; k++) {
+              var jsDate = new Date(dates[k]);
               jsDates.push(jsDate);
               //console.log("date: " + jsDate);
             }
             // find the next date
             var nextDate = -1;
             var now = Date.now();
-            for (j=0; j<jsDates.length; j++) {
+            for (var j=0; j<jsDates.length; j++) {
                 var diff = jsDates[j] - now;
                 if (diff > 0 && (nextDate == -1 || jsDates[j] < nextDate)) {
                     nextDate = jsDates[j];
                 }
             }
+            return nextDate
+        }
+        function getScheduledSectionValue(dates) {
+            //FIXME this logic is repeated below for the icon name
+            var nextDate = getNextDate(dates);
+            var now = Date.now();
             console.log("nearest Date: " + nextDate);
             if (nextDate == -1) {
                 return "NO_KNOWN_DATES";
