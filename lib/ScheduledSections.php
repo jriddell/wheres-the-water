@@ -154,7 +154,8 @@ class ScheduledSections {
                 newInput = '<div id="div-'+sectionCount+'_date_'+currentDateCount+'">';
                 newInput += '<label for="'+sectionCount+'_date_'+currentDateCount+'" class="left">Date '+currentDateCount+': </label>';
                 newInput += "<input type='text' name='"+sectionCount+"_date_"+currentDateCount+"' value='' /> ";
-                newInput += "<button type='button' name='delete-"+sectionCount+"_date_"+ currentDateCount +"' class='delete-date'>&#10060;</button>";
+                // The added delete button does not call the .delete-date function below for some reason
+                //newInput += "<button type='button' name='delete-"+sectionCount+"_date_"+ currentDateCount +"' class='delete-date'>&#10060;</button>";
                 newInput += "</div>\n";
                 //console.log('adding to: ' + '#' + sectionCount + '_dates');
                 $('#' + sectionCount + '_dates').append(newInput);
@@ -298,38 +299,34 @@ class ScheduledSections {
 
     /* HTML editable form for adding a new section */
     public function addScheduledSectionForm() {
-    /* TODO
-        $riverSection = array();
-        $riverSection['name'] = "";
-        $riverSection['gauge_location_code'] = "";
-        $riverSection['longitude'] = "";
-        $riverSection['latitude'] = "";
-        $riverSection['scrape_value'] = "";
-        $riverSection['low_value'] = "";
-        $riverSection['medium_value'] = "";
-        $riverSection['high_value'] = "";
-        $riverSection['very_high_value'] = "";
-        $riverSection['huge_value'] = "";
-        $riverSection['grade'] = "";
-        $riverSection['guidebook_link'] = "";
-        $riverSection['sca_guidebook_no'] = "";
-        $riverSection['access_issue'] = "";
-        $riverSection['google_mymaps'] = "";
-        $riverSection['kml'] = "";
-        $riverSection['webcam'] = "";
-        $riverSection['notes'] = "";
-        $riverSection['put_in_long'] = "";
-        $riverSection['put_in_lat'] = "";
-        $riverSection['get_out_long'] = "";
-        $riverSection['get_out_lat'] = "";
+        $scheduledSection = array();
+        $scheduledSection['name'] = "";
+        $scheduledSection['longitude'] = "";
+        $scheduledSection['latitude'] = "";
+        $scheduledSection['grade'] = "";
+        $scheduledSection['guidebook_link'] = "";
+        $scheduledSection['sca_guidebook_no'] = "";
+        $scheduledSection['info_link'] = "";
+        $scheduledSection['access_issue'] = "";
+        $scheduledSection['google_mymaps'] = "";
+        $scheduledSection['kml'] = "";
+        $scheduledSection['webcam'] = "";
+        $scheduledSection['notes'] = "";
+        $scheduledSection['put_in_long'] = "";
+        $scheduledSection['put_in_lat'] = "";
+        $scheduledSection['get_out_long'] = "";
+        $scheduledSection['get_out_lat'] = "";
+        $scheduledSection['constant'] = "";
+        $scheduledSection['dates'] = array();
 
-        $reply = "<legend>Add New River Section</legend>";
-        $reply .= "<form action='river-section.php' method='post'>\n";
-        $reply .= $this->editRiverFormLine($riverSection);
-        $reply .= "<input type='submit' name='add' value='Add New River' />\n";
+        $reply = "<form action='scheduled-section.php' method='post'>\n";
+        $reply .= "<div class='form' id='section-new'>";
+        $reply .= "<legend>Add New Scheduled Section</legend>";
+        $reply .= $this->editScheduledSectionFormLine($scheduledSection);
+        $reply .= "<input type='submit' name='add' value='Add New Scheduled Section' />\n";
+        $reply .= "</div>";
         $reply .= "</form>\n";
         return $reply;
-        */
     }
 
     /* process add new river submit */
@@ -368,58 +365,6 @@ class ScheduledSections {
 
         $this->writeToJson();
         return "Added new river " . $riverSection['name'];
-    }
-
-    /* deal with submitted request to delete a river */
-    public function deleteRiverSection($postData) {
-        $jsonid = $postData['riverUpdates'];
-        unset($this->riverSectionsData[$jsonid]); // turns it into a hash.
-        $this->riverSectionsData = array_values($this->riverSectionsData); // returns it to array.  Go PHP.
-        $this->writeToJson();
-        return "Deleted section " . $postData['rivername'];
-    }
-
-    //returns time of last download from SEPA
-    public function downloadTime() {
-        $timestampFile = fopen($this->downloadReadingsTimestampFile, "r") or die("Unable to open file!");
-        $timestamp = fread($timestampFile, 20);
-        return date('D d M Y H:i', $timestamp);
-    }
-
-    //returns SEPA reading which is most recent
-    public function calculateMostRecentReading() {
-        $grabSepaGauges = new GrabSepaGauges;
-        $sepaGaugesData = $grabSepaGauges->sepaData();
-        $grabSepaRivers = new GrabSepaRivers();
-        if (!$grabSepaRivers->readFromJson()) {
-            print "<h1>Sorry no river reading data available, try again soon</h1>";
-            die();
-        }
-        $mostRecentTimestamp = 0;
-        $mostRecentTime = "";
-        $mostRecentRiver = "";
-        $mostRecentLevel = 0;
-        foreach($this->riverSectionsData as $jsonid => $riverSection) {
-            $time = $grabSepaRivers->riversReadingsData[$riverSection['gauge_location_code']]['currentReadingTime'];
-            if (empty($time)) {
-                continue;
-            }
-            $time_explode = explode('/', $time); // need to swap date and month cos PHP likes US date format
-            $ustime = $time_explode[1] . '/' . $time_explode[0] . '/' . $time_explode[2];
-            $timestamp = strtotime($ustime);
-            if ($timestamp > $mostRecentTimestamp) {
-                $mostRecentTimestamp = $timestamp;
-                $mostRecentTime = $time;
-                $mostRecentRiver = $riverSection['name'];
-                $mostRecentLevel = $grabSepaRivers->riversReadingsData[$riverSection['gauge_location_code']]['currentReading'];
-            }
-        }
-        $warning = "";
-        $hours = round((time() - $mostRecentTimestamp) / 60 / 60, 0, PHP_ROUND_HALF_DOWN);
-        if ($hours >= 4) {
-            $warning = "<b style='color: red'>Warning data from SEPA is over $hours hours old.</b>";
-        }
-        return "$mostRecentRiver at $mostRecentTime reading $mostRecentLevel $warning";
     }
 
     // Used by table-view.php to print the table
