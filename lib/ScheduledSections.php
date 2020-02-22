@@ -75,7 +75,7 @@ class ScheduledSections {
             if (isset($scheduledSection['dates'])) {
                 $datesLength = sizeof($scheduledSection['dates']);
             }
-            $reply .= "<button type='button' name='add-${sectionCount}-$datesLength' class='add adddate btn btn-success'>Add More</button>";
+            $reply .= "<button type='button' name='add-${sectionCount}-$datesLength' class='add adddate btn btn-success'>Add Date</button>";
             $reply .= "<input type='submit' name='${sectionCount}_delete' value='&#10060; Delete ${sectionCount}' class='delete' />\n";
             $sectionCount++;
         }
@@ -224,6 +224,11 @@ class ScheduledSections {
         if (!filter_var($scheduledSection['name'], FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>"/^[a-zA-Z \(\)]+$/")))) {
             throw new Exception("Name not text");
         }
+        if (isset($scheduledSection['dates'])) {
+            foreach($scheduledSection['dates'] as $date) {
+                $this->validateDate("Date", $date);
+            }
+        }
     }
 
     /* throw exception if it's not a float */
@@ -251,6 +256,20 @@ class ScheduledSections {
     private function validateBoolean($name, $data) {
         if ($data != 0 && $data != 1) {
             throw new Exception("$name is not 0 or 1");
+        }
+    }
+
+    /* throw exception if it's negatuve */
+    private function validateDate($name, $data) {
+        $date = explode("-", $data);
+        if ($date[0] < 2020 or $date[0] > 2100) {
+            throw new Exception("$data is not a valid year");
+        }
+        if ($date[1] < 1 or $date[1] > 12) {
+            throw new Exception("$data is not a valid month");
+        }
+        if ($date[2] < 1 or $date[2] > 31) {
+            throw new Exception("$data is not a valid day");
         }
     }
 
