@@ -73,9 +73,9 @@ class ScheduledSections {
             //$reply .= "<input type='button' name='${sectionCount}_adddate' value='Add Date ${sectionCount}' class='adddate' onclick='adddate(${sectionCount});' />\n";
             $datesLength = 0;
             if (isset($scheduledSection['dates'])) {
-                $datesLength = sizeof($dates);
+                $datesLength = sizeof($scheduledSection['dates']);
             }
-            $reply .= "<button type='button' name='add-${sectionCount}-$datesLength' class='add' class='adddate btn btn-success'>Add More</button>";
+            $reply .= "<button type='button' name='add-${sectionCount}-$datesLength' class='add adddate btn btn-success'>Add More</button>";
             $reply .= "<input type='submit' name='${sectionCount}_delete' value='&#10060; Delete ${sectionCount}' class='delete' />\n";
             $sectionCount++;
         }
@@ -110,13 +110,13 @@ class ScheduledSections {
         $reply .= $this->editScheduledSectionFormInputItem("Get Out Latitude", "${sectionCount}_get_out_lat", $scheduledSection['get_out_lat']);
         $reply .= $this->editScheduledSectionFormInputItem("Get Out Longitude", "${sectionCount}_get_out_long", $scheduledSection['get_out_long'], "right");
         $reply .= $this->editScheduledSectionFormInputItem("Constant (boolean)", "${sectionCount}_constant", $scheduledSection['constant']);
-        $reply .= "<span id='{$sectionCount}_dates' />\n";
+        $reply .= "<div id='{$sectionCount}_dates' class='datesdiv'/>\n";
         if (isset($scheduledSection['dates'])) {
             foreach($scheduledSection['dates'] as $dateid => $date) {
-                $reply .= $this->editScheduledSectionFormInputItem("Date {$dateid}", "${sectionCount}_{$dateid}", $date);
+                $reply .= $this->editScheduledSectionFormInputItem("Date {$dateid}", "${sectionCount}_date_{$dateid}", $date) . "<br />";
             }
         }
-        $reply .= "</span>\n";
+        $reply .= "</div>\n";
         return $reply;
     }
 
@@ -135,15 +135,21 @@ class ScheduledSections {
     <h1 id="moo">Text</h1>
     <script>
         $(document).ready( function() {
+            var currentDateCount = 0;
             $('.add').click(function(){  
                 console.log('add button clicked');
                 var dateValues = $(this).attr('name').split("-");
                 var sectionCount = dateValues[1];
                 var dateCount = dateValues[2];
+                if (currentDateCount == 0) {
+                    currentDateCount = dateCount;
+                }
                 console.log($(this).attr('name'));
-                newInput = "<input type='text' name='"+sectionCount+"_date_"+dateCount+"' value='' /> ";
+                newInput = '<label for="'+sectionCount+'_date_'+currentDateCount+'" class="left">Date '+currentDateCount+': </label>';
+                newInput += "<input type='text' name='"+sectionCount+"_date_"+currentDateCount+"' value='' /><br /> ";
                 console.log('adding to: ' + '#' + sectionCount + '_dates');
                 $('#' + sectionCount + '_dates').append(newInput);
+                currentDateCount++;
             });  
       });
     </script>
@@ -178,6 +184,16 @@ class ScheduledSections {
             $scheduledSection['get_out_long'] = $postData["{$sectionCount}_get_out_long"];
             $scheduledSection['constant'] = $postData["{$sectionCount}_constant"];
             // TODO cycle over dates to make array for $scheduledSection['dates']
+            $scheduledSection['dates'] = array();
+            $dateCount = 0;
+            while (true) {
+                if (isset($postData["{$sectionCount}_date_{$dateCount}"])) {
+                    $scheduledSection['dates'][] = $postData["{$sectionCount}_date_{$dateCount}"];
+                } else {
+                    break;
+                }
+                $dateCount++;
+            }
             $newScheduledSectionsData[] = $scheduledSection;
             $sectionCount++;
             try {

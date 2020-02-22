@@ -56,13 +56,14 @@ input[type=submit] { grid-column: 1/2;
                      border: 2px solid black;
                      margin: 1em;
                    }
-input.delete[type=submit] { grid-column: 3/3; 
+input.delete[type=submit] { grid-column: 3/4; 
                      border: 2px solid black;
                    }
-input.adddate[type=button] { grid-column: 1/2; 
-                     border: 2px solid black;
-                   }
-
+div.datesdiv { grid-column: 2/3; 
+            }
+button.adddate {grid-column: 1/2; 
+            }
+                   
 p.message { border: 1px solid black;
             color: #339;
             padding: 1ex;
