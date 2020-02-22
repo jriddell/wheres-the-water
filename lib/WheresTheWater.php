@@ -587,7 +587,12 @@ jQuery(document).ready( function(){
             for (i=0; i<scheduledSections.length; i++) {
                 console.log("Scheduled section No " + i + " : " + scheduledSections[i]['name'] + scheduledSections[i]['latitude'] + scheduledSections[i]['longitude']);
                 var scheduledSection = scheduledSections[i]['name'];
-                var scheduledSectionValue = getScheduledSectionValue(scheduledSections[i]['dates']);
+                var scheduledSectionValue;
+                if ('dates' in scheduledSections[i]) {
+                    scheduledSectionValue = getScheduledSectionValue(scheduledSections[i]['dates']);
+                } else {
+                    scheduledSectionValue = "moo";
+                }
 
                 var contentString = "<div><h4 style='padding-left: 30px;'>" + scheduledSection + "</h4>" +
                     "<p style='padding-left: 30px;'><img src='" + iconBase + scheduledSectionValue + ext + "' /> " +
@@ -602,6 +607,7 @@ jQuery(document).ready( function(){
                 contentString += "</div>";
 
                 var icon = todayIcon;
+                console.log("name: " + scheduledSection + i);
                 var marker = L.marker([scheduledSections[i]['latitude'], scheduledSections[i]['longitude']], {icon: icon}).bindPopup(contentString).addTo( map );
                 marker.bindTooltip(scheduledSection);
                 markers.push(marker);
@@ -655,6 +661,23 @@ jQuery(document).ready( function(){
         }
         function getScheduledSectionValue(dates) {
             //TODO
+            jsDates = [];
+            for (k=0; k<dates.length; k++) {
+              jsDate = new Date(dates[k]);
+              jsDates.push(jsDate);
+              //console.log("date: " + jsDate);
+            }
+            // find the next date
+            var nextDate = -1;
+            for (j=0; j<jsDates.length; j++) {
+                var now = Date.now();
+                var diff = jsDates[j] - now;
+                if (diff > 0 && (nextDate == -1 || jsDates[j] < nextDate)) {
+                    nextDate = jsDates[j];
+                }
+            }
+            console.log("nearest Date: " + nextDate);
+
             return "TOMORROW";
             currentReading = riverSection['currentReading'];
             console.log("name " + riverSection['name']);
