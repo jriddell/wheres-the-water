@@ -60,9 +60,19 @@ class WheresTheWater {
 
 .js-calib-table-content {
     border-collapse: collapse;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     display: none;
     width: 50% !important;
+}
+ul.js-calib-table-content {
+  list-style: none; /* Remove list bullets */
+  padding: 0;
+  margin: 0;
+}
+.js-calib-table-content li:before {
+  content: "🌊"; /* Insert content that looks like bullets */
+  padding-right: 8px;
+  color: blue; /* Or a color you prefer */
 }
 
 #block-system-main .js-calib-table-content td {
@@ -623,6 +633,7 @@ jQuery(document).ready( function(){
                 console.log("Scheduled section No " + i + " : " + scheduledSections[i]['name'] + scheduledSections[i]['latitude'] + scheduledSections[i]['longitude']);
                 var scheduledSection = scheduledSections[i]['name'];
                 var sectionLinks = linksContentScheduled(scheduledSections[i]);
+                var datesTable = getDatesTable(scheduledSections[i]['dates']);
                 var scheduledSectionValue;
                 if (scheduledSections[i]['constant'] == "1") {
                     scheduledSectionValue = "CONSTANT"
@@ -645,7 +656,7 @@ jQuery(document).ready( function(){
                     "<p><span class='js-info'>Info</span> / <span class='js-calib-table link' style='text-decoration: underline; color: blue; cursor: pointer'>Dates</span>"; // / <span class='js-forecast link' style='text-decoration: underline; color: blue; cursor: pointer'>Weather</span>";
                 contentString += "</p>" +
                     "<p class='js-info-content'><img width='16' height='16' src='/wheres-the-water/pics/clock.png'/> Next Date: " + nextDateString +
-                    "<br />" + sectionLinks + "</p>"// + riverReadingsTable +
+                    "<br />" + sectionLinks + "</p>" + datesTable +
                     //"<p class='js-forecast-content' style='display: none'>" +
                     //sectionForecasts[riverSections[i]['gauge_location_code']] +
                     "</p>"
@@ -801,6 +812,17 @@ jQuery(document).ready( function(){
                         '</table>';
             return riverReadings
         }
+
+        function getDatesTable(scheduledSectionDates) {
+            var datesTable = '<ul class="js-calib-table-content">';
+            for (var k=0; k<scheduledSectionDates.length; k++) {
+              var jsDate = new Date(scheduledSectionDates[k]);
+              datesTable += "<li>" + jsDate.toDateString() + "</li>\n";
+            }
+            datesTable += '</ul>';
+            return datesTable;
+        }
+
         function getRiverGraphFilename(riverSection) {
             var riverFilename = riverSection['name'].toLowerCase();
             riverFilename = riverFilename.replace(/ /g, '-');
@@ -808,6 +830,7 @@ jQuery(document).ready( function(){
             riverFilename = riverFilename.replace(/\)/g, '');
             return riverFilename
         }
+
         function getWaterLevelIcon(riverSection) {
             currentReading = riverSection['currentReading'];
             if (currentReading == -1 || readingIsOld(riverSection['currentReadingTime'])) {
