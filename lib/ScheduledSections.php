@@ -116,7 +116,10 @@ class ScheduledSections {
         $reply .= "<div id='{$sectionCount}_dates' class='datesdiv'/>\n";
         if (isset($scheduledSection['dates'])) {
             foreach($scheduledSection['dates'] as $dateid => $date) {
-                $reply .= $this->editScheduledSectionFormInputItem("Date {$dateid}", "${sectionCount}_date_{$dateid}", $date) . "<br />";
+                $reply .= "<div id='div-${sectionCount}_date_{$dateid}'>";
+                $reply .= $this->editScheduledSectionFormInputItem("Date {$dateid}", "${sectionCount}_date_{$dateid}", $date);
+                $reply .= "<button type='button' name='delete-${sectionCount}_date_{$dateid}' class='delete-date'>&#10060;</button><br />\n";
+                $reply .= "</div>";
             }
         }
         $reply .= "</div><!-- id=X-dates -->\n";
@@ -148,8 +151,11 @@ class ScheduledSections {
                 if (currentDateCount == 0) {
                     currentDateCount = dateCount;
                 }
-                newInput = '<label for="'+sectionCount+'_date_'+currentDateCount+'" class="left">Date '+currentDateCount+': </label>';
-                newInput += "<input type='text' name='"+sectionCount+"_date_"+currentDateCount+"' value='' /><br /> ";
+                newInput = '<div id="div-'+sectionCount+'_date_'+currentDateCount+'">';
+                newInput += '<label for="'+sectionCount+'_date_'+currentDateCount+'" class="left">Date '+currentDateCount+': </label>';
+                newInput += "<input type='text' name='"+sectionCount+"_date_"+currentDateCount+"' value='' /> ";
+                newInput += "<button type='button' name='delete-"+sectionCount+"_date_"+ currentDateCount +"' class='delete-date'>&#10060;</button>";
+                newInput += "</div>\n";
                 //console.log('adding to: ' + '#' + sectionCount + '_dates');
                 $('#' + sectionCount + '_dates').append(newInput);
                 currentDateCount++;
@@ -159,6 +165,12 @@ class ScheduledSections {
                 var sectionCount = $(this).attr('name').split("-")[1];
                 //console.log('delete section count:' + sectionCount);
                 $('#section-' + sectionCount).remove();
+            });  
+            $('.delete-date').click(function() {  
+                console.log('delete date button: ' + $(this).attr('name'));
+                var dateNumber = $(this).attr('name').split("-")[1];
+                console.log('delete date count:' + dateNumber);
+                $('#div-' + dateNumber).remove();
             });  
       });
     </script>
@@ -195,7 +207,6 @@ class ScheduledSections {
                 $scheduledSection['get_out_lat'] = $postData["{$sectionCount}_get_out_lat"];
                 $scheduledSection['get_out_long'] = $postData["{$sectionCount}_get_out_long"];
                 $scheduledSection['constant'] = $postData["{$sectionCount}_constant"];
-                // TODO cycle over dates to make array for $scheduledSection['dates']
                 $scheduledSection['dates'] = array();
                 $dateCount = 0;
                 while (true) {
