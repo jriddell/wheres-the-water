@@ -71,7 +71,11 @@ class ScheduledSections {
         foreach($this->scheduledSectionsData as $jsonid => $scheduledSection) {
             $reply .= $this->editScheduledSectionFormLine($scheduledSection, $sectionCount);
             //$reply .= "<input type='button' name='${sectionCount}_adddate' value='Add Date ${sectionCount}' class='adddate' onclick='adddate(${sectionCount});' />\n";
-            $reply .= "<button type='button' name='${sectionCount}' class='add' class='adddate btn btn-success'>Add More</button>";
+            $datesLength = 0;
+            if (isset($scheduledSection['dates'])) {
+                $datesLength = sizeof($dates);
+            }
+            $reply .= "<button type='button' name='add-${sectionCount}-$datesLength' class='add' class='adddate btn btn-success'>Add More</button>";
             $reply .= "<input type='submit' name='${sectionCount}_delete' value='&#10060; Delete ${sectionCount}' class='delete' />\n";
             $sectionCount++;
         }
@@ -106,12 +110,13 @@ class ScheduledSections {
         $reply .= $this->editScheduledSectionFormInputItem("Get Out Latitude", "${sectionCount}_get_out_lat", $scheduledSection['get_out_lat']);
         $reply .= $this->editScheduledSectionFormInputItem("Get Out Longitude", "${sectionCount}_get_out_long", $scheduledSection['get_out_long'], "right");
         $reply .= $this->editScheduledSectionFormInputItem("Constant (boolean)", "${sectionCount}_constant", $scheduledSection['constant']);
+        $reply .= "<span id='{$sectionCount}_dates' />\n";
         if (isset($scheduledSection['dates'])) {
             foreach($scheduledSection['dates'] as $dateid => $date) {
                 $reply .= $this->editScheduledSectionFormInputItem("Date {$dateid}", "${sectionCount}_{$dateid}", $date);
             }
         }
-        $reply .= "<span id='{$sectionCount}_dates' /></span>\n";
+        $reply .= "</span>\n";
         return $reply;
     }
 
@@ -130,16 +135,16 @@ class ScheduledSections {
     <h1 id="moo">Text</h1>
     <script>
         $(document).ready( function() {
-            console.log('ScheduledSections Javascript');
-            $('#moo').append('Appended');
-        $('.add').click(function(){  
-            console.log('add button clicked');
-            console.log($(this).attr('name'));
-            $sectionCount = $(this).attr('name');
-            $('#' + $sectionCount + '_dates').append('HELLO');
-            i++;  
-            $('#dynamic_field').append('<input type="text" name="name[]" placeholder="Enter your Name" class="form-control name_list" /></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');  
-        });  
+            $('.add').click(function(){  
+                console.log('add button clicked');
+                var dateValues = $(this).attr('name').split("-");
+                var sectionCount = dateValues[1];
+                var dateCount = dateValues[2];
+                console.log($(this).attr('name'));
+                newInput = "<input type='text' name='"+sectionCount+"_date_"+dateCount+"' value='' /> ";
+                console.log('adding to: ' + '#' + sectionCount + '_dates');
+                $('#' + sectionCount + '_dates').append(newInput);
+            });  
       });
     </script>
 <?php
