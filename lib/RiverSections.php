@@ -353,8 +353,6 @@ class RiverSections {
 
     /* process add new river submit */
     public function addNewRiverSection($postData) {
-        $this->mergeInGaugeNames();
-
         try {
             $this->validateRiverSectionUpdateData($postData);
         } catch (Exception $e) {
@@ -385,6 +383,8 @@ class RiverSections {
         $riverSection['get_out_long'] = $postData['get_out_long'];
         $riverSection['get_out_lat'] = $postData['get_out_lat'];
         $this->riverSectionsData[] = $riverSection;
+        $this->mergeInGaugeNames();
+
         $this->writeToJson();
         return "Added new river " . $riverSection['name'];
     }
