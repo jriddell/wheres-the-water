@@ -413,8 +413,8 @@ jQuery(document).ready( function(){
             popupAnchor: [5, -3]
         });
         var noDatesIcon = L.icon({
-            iconUrl: '/wheres-the-water/pics/NODATES.png',
-            iconRetinaUrl: '/wheres-the-water/pics/NODATES.png',
+            iconUrl: '/wheres-the-water/pics/NO_KNOWN_DATES.png',
+            iconRetinaUrl: '/wheres-the-water/pics/NO_KNOWN_DATES.png',
             iconSize: [10, 10],
             iconAnchor: [0, 0],
             popupAnchor: [5, -3]
@@ -434,15 +434,15 @@ jQuery(document).ready( function(){
             popupAnchor: [5, -3]
         });
         var thisWeekIcon = L.icon({
-            iconUrl: '/wheres-the-water/pics/THISWEEK.png',
-            iconRetinaUrl: '/wheres-the-water/pics/THISWEEK.png',
+            iconUrl: '/wheres-the-water/pics/THIS_WEEK.png',
+            iconRetinaUrl: '/wheres-the-water/pics/THIS_WEEK.png',
             iconSize: [10, 10],
             iconAnchor: [0, 0],
             popupAnchor: [5, -3]
         });
         var notThisWeekIcon = L.icon({
-            iconUrl: '/wheres-the-water/pics/NOTTHISWEEK.png',
-            iconRetinaUrl: '/wheres-the-water/pics/NOTTHISWEEK.png',
+            iconUrl: '/wheres-the-water/pics/NOT_THIS_WEEK.png',
+            iconRetinaUrl: '/wheres-the-water/pics/NOT_THIS_WEEK.png',
             iconSize: [10, 10],
             iconAnchor: [0, 0],
             popupAnchor: [5, -3]
@@ -588,10 +588,12 @@ jQuery(document).ready( function(){
                 console.log("Scheduled section No " + i + " : " + scheduledSections[i]['name'] + scheduledSections[i]['latitude'] + scheduledSections[i]['longitude']);
                 var scheduledSection = scheduledSections[i]['name'];
                 var scheduledSectionValue;
-                if ('dates' in scheduledSections[i]) {
+                if (scheduledSections[i]['constant'] == "1") {
+                    scheduledSectionValue = "CONSTANT"
+                } else if ('dates' in scheduledSections[i]) {
                     scheduledSectionValue = getScheduledSectionValue(scheduledSections[i]['dates']);
                 } else {
-                    scheduledSectionValue = "moo";
+                    scheduledSectionValue = "NO_KNOWN_DATES";
                 }
 
                 var contentString = "<div><h4 style='padding-left: 30px;'>" + scheduledSection + "</h4>" +
@@ -678,7 +680,7 @@ jQuery(document).ready( function(){
             }
             console.log("nearest Date: " + nextDate);
             if (nextDate == -1) {
-                return "NODATES";
+                return "NO_KNOWN_DATES";
             }
             var dateDiff = (nextDate - now)/1000;
             if (dateDiff < 24*60*60) {
@@ -686,9 +688,9 @@ jQuery(document).ready( function(){
             } else if (dateDiff < 2*24*60*60) {
                 return "TOMORROW";
             } else if (dateDiff < 7*24*60*60) {
-                return "THISWEEK";
+                return "THIS_WEEK";
             } else {
-                return "NOTTHISWEEK";
+                return "NOT_THIS_WEEK";
             }
         }
         function getRiverReadingsTable(riverSection, waterLevelValue) {
