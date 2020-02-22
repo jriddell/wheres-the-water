@@ -606,7 +606,7 @@ jQuery(document).ready( function(){
                     "</p>"
                 contentString += "</div>";
 
-                var icon = todayIcon;
+                var icon = getScheduledSectionIcon(scheduledSections[i]);
                 console.log("name: " + scheduledSection + i);
                 var marker = L.marker([scheduledSections[i]['latitude'], scheduledSections[i]['longitude']], {icon: icon}).bindPopup(contentString).addTo( map );
                 marker.bindTooltip(scheduledSection);
@@ -660,7 +660,7 @@ jQuery(document).ready( function(){
             }
         }
         function getScheduledSectionValue(dates) {
-            //TODO
+            //FIXME this logic is repeated below for the icon name
             jsDates = [];
             for (k=0; k<dates.length; k++) {
               jsDate = new Date(dates[k]);
@@ -669,38 +669,26 @@ jQuery(document).ready( function(){
             }
             // find the next date
             var nextDate = -1;
+            var now = Date.now();
             for (j=0; j<jsDates.length; j++) {
-                var now = Date.now();
                 var diff = jsDates[j] - now;
                 if (diff > 0 && (nextDate == -1 || jsDates[j] < nextDate)) {
                     nextDate = jsDates[j];
                 }
             }
             console.log("nearest Date: " + nextDate);
-
-            return "TOMORROW";
-            currentReading = riverSection['currentReading'];
-            console.log("name " + riverSection['name']);
-            if (currentReading == -1) {
-                return "NO_GUAGE_DATA";
-            } else if (currentReading == 0 || readingIsOld(riverSection['currentReadingTime'])) {
-                return "OLD_DATA";
-            } else if (riverSection['scrape_value'] == riverSection['huge_value']) {
-                return "NEEDS_CALIBRATIONS";
-            } else if (currentReading < riverSection['scrape_value']) {
-                return "EMPTY";
-            } else if (currentReading < riverSection['low_value']) {
-                return "SCRAPE";
-            } else if (currentReading < riverSection['medium_value']) {
-                return "LOW";
-            } else if (currentReading < riverSection['high_value']) {
-                return "MEDIUM";
-            } else if (currentReading < riverSection['very_high_value']) {
-                return "HIGH";
-            } else if (currentReading < riverSection['huge_value']) {
-                return "VERY_HIGH";
+            if (nextDate == -1) {
+                return "NODATES";
+            }
+            var dateDiff = (nextDate - now)/1000;
+            if (dateDiff < 24*60*60) {
+                return "TODAY";
+            } else if (dateDiff < 2*24*60*60) {
+                return "TOMORROW";
+            } else if (dateDiff < 7*24*60*60) {
+                return "THISWEEK";
             } else {
-                return "HUGE";
+                return "NOTTHISWEEK";
             }
         }
         function getRiverReadingsTable(riverSection, waterLevelValue) {
@@ -793,6 +781,52 @@ jQuery(document).ready( function(){
             } else {
                 return hugeIcon;
             }
+        }
+        function getScheduledSectionIcon(scheduledSection) {
+            // FIXME this logic is duplicated above where it returns the name of the icon
+            console.log("constant: " + scheduledSection['constant']);
+            console.log("info_link: " + scheduledSection['info_link']);
+            if (scheduledSection['constant'] == "1") {
+                return todayIcon;
+            }
+            var dates = scheduledSection['dates'];
+            var jsDates = [];
+            
+            for (var k=0; k<dates.length; k++) {
+              jsDate = new Date(dates[k]);
+              jsDates.push(jsDate);
+              //console.log("date: " + jsDate);
+            }
+            // find the next date
+            var nextDate = -1;
+            var now = Date.now();
+            for (var j=0; j<jsDates.length; j++) {
+                var diff = jsDates[j] - now;
+                if (diff > 0 && (nextDate == -1 || jsDates[j] < nextDate)) {
+                    nextDate = jsDates[j];
+                }
+            }
+            console.log("nearest Date: " + nextDate);
+            if (nextDate == -1) {
+                return noDatesIcon;
+            }
+            var dateDiff = (nextDate - now)/1000;
+            console.log("dateDiff: " + dateDiff);
+            if (dateDiff < 24*60*60) {
+                console.log("returning Today");
+                return todayIcon;
+            } else if (dateDiff < 2*24*60*60) {
+                console.log("returning Tomorrow");
+                return tomorrowIcon;
+            } else if (dateDiff < 7*24*60*60) {
+                console.log("returning This Week");
+                return thisWeekIcon;
+            } else {
+                console.log("returning Not This Week");
+                return notThisWeekIcon;
+            }
+
+            return noDatesIcon;
         }
         function showTooltips() {
             if (tooltipsAreVisible) {
