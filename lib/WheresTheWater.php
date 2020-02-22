@@ -428,8 +428,13 @@ jQuery(document).ready( function(){
                 sectionForecasts = data;
             }
         );
+        var scheduledSectionSections;
+        var scheduledSectionSectionsFile = $.getJSON("/wheres-the-water/data/scheduled-sections.json", function(data) {
+                scheduledSections = data;
+            }
+        );
 
-        var bothFiles = $.when(riverSectionsFile, riverReadingsFile, sectionForecastsFile);
+        var bothFiles = $.when(riverSectionsFile, riverReadingsFile, sectionForecastsFile, scheduledSectionSectionsFile);
 
         bothFiles.done(function () {
             mergeRiverData();
@@ -568,6 +573,17 @@ jQuery(document).ready( function(){
                 marker.bindTooltip(riverSection);
                 markers.push(marker);
             }
+            for (i=0; i<scheduledSections.length; i++) {
+                console.log("Scheduled section No " + i + " : " + scheduledSections[i]['name'] + scheduledSections[i]['latitude'] + scheduledSections[i]['longitude']);
+                var scheduledSection = scheduledSections[i]['name'];
+                contentString = "TODO";
+                var icon = emptyIcon;
+                var marker = L.marker([scheduledSections[i]['latitude'], scheduledSections[i]['longitude']], {icon: icon}).bindPopup(contentString).addTo( map );
+                marker.bindTooltip(scheduledSection);
+                console.log("bindTooltip: " + scheduledSection);
+                markers.push(marker);
+            }
+
         }
         /* checks if the currentReadingTime is over 24 hours */
         function readingIsOld(currentReadingTime) {
