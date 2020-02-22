@@ -599,13 +599,11 @@ jQuery(document).ready( function(){
                     //"<p class='js-forecast-content' style='display: none'>" +
                     //sectionForecasts[riverSections[i]['gauge_location_code']] +
                     "</p>"
-                contentString += '<p>Help Calibrate: <a href="https://goo.gl/forms/nnEOgVkw8ebhygW52">River Level Report form</a>.</p>';
                 contentString += "</div>";
 
                 var icon = todayIcon;
                 var marker = L.marker([scheduledSections[i]['latitude'], scheduledSections[i]['longitude']], {icon: icon}).bindPopup(contentString).addTo( map );
                 marker.bindTooltip(scheduledSection);
-                console.log("bindTooltip: " + scheduledSection);
                 markers.push(marker);
             }
 
