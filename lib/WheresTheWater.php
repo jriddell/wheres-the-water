@@ -638,14 +638,17 @@ jQuery(document).ready( function(){
                 console.log("Scheduled section No " + i + " : " + scheduledSections[i]['name'] + scheduledSections[i]['latitude'] + scheduledSections[i]['longitude']);
                 var scheduledSection = scheduledSections[i]['name'];
                 var sectionLinks = linksContentScheduled(scheduledSections[i]);
-                var datesTable = getDatesTable(scheduledSections[i]['dates']);
+                var datesTable;
                 var scheduledSectionValue;
                 if (scheduledSections[i]['constant'] == "1") {
                     scheduledSectionValue = "CONSTANT"
+                    datesTable = '<p class="js-calib-table-content">Constant Flows</p>';
                 } else if ('dates' in scheduledSections[i]) {
                     scheduledSectionValue = getScheduledSectionValue(scheduledSections[i]['dates']);
+                    datesTable = getDatesTable(scheduledSections[i]['dates']);
                 } else {
                     scheduledSectionValue = "NO_KNOWN_DATES";
+                    datesTable = '';
                 }
                 var nextDateString;
                 var valueString = tidyStatusString(scheduledSectionValue);
@@ -766,7 +769,7 @@ jQuery(document).ready( function(){
             } else if (dateDiff < 30*24*60*60) {
                 return "NEXT_30_DAYS";
             } else {
-                return "NOT_THIS_WEEK";
+                return "NOT_THIS_MONTH";
             }
         }
         function getRiverReadingsTable(riverSection, waterLevelValue) {
