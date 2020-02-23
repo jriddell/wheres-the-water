@@ -405,5 +405,49 @@
             "2020-09-26",
             "2020-09-27"
         ]
+    },
+    {
+        "name": "Solway Bore",
+        "latitude": "54.964222",
+        "longitude": "-3.185575",
+        "grade": "",
+        "guidebook_link": "",
+        "sca_guidebook_no": "",
+        "info_link": "",
+        "access_issue": "",
+        "google_mymaps": "",
+        "kml": "",
+        "webcam": "",
+        "notes": "Anyone have dates and times for this?",
+        "put_in_lat": "",
+        "put_in_long": "",
+        "get_out_lat": "",
+        "get_out_long": "",
+        "constant": "",
+        "dates": [
+
+        ]
+    },
+    {
+        "name": "Loch Seaforth Rapids",
+        "latitude": "58.0461",
+        "longitude": "-6.679",
+        "grade": "3",
+        "guidebook_link": "",
+        "sca_guidebook_no": "077",
+        "info_link": "https:\/\/tides.willyweather.co.uk\/he\/western-isles\/loch-seaforthw.html",
+        "access_issue": "",
+        "google_mymaps": "",
+        "kml": "",
+        "webcam": "",
+        "notes": "Needs tidal range above 4m. Get there 2 hours before low water.",
+        "put_in_lat": "",
+        "put_in_long": "",
+        "get_out_lat": "",
+        "get_out_long": "",
+        "constant": "",
+        "dates": [
+
+        ]
     }
 ]
