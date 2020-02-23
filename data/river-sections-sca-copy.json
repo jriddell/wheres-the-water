@@ -2732,7 +2732,7 @@
     "classification_url": ""
   },
   {
-    "name": "Dee (Middle)",
+    "name": "Dee (Potarch)",
     "gauge_location_code": "234294",
     "longitude": "-2.6485",
     "latitude": "57.0652",
@@ -2753,6 +2753,8 @@
     "put_in_long": "",
     "put_in_lat": "",
     "get_out_long": "",
-    "get_out_lat": ""
+    "get_out_lat": "",
+    "classification": "",
+    "classification_url": ""
   }
 ]
