@@ -838,7 +838,12 @@ jQuery(document).ready( function(){
             for (var k=0; k<scheduledSectionDates.length; k++) {
               var jsDate = new Date(scheduledSectionDates[k]);
               datesTable += "<li>" + jsDate.toDateString() + "</li>\n";
+              if (k==10) {
+                datesTable += "💦..."
+                datesTable += "<span style='display: none'>";
+              }
             }
+            datesTable += "</span>"
             datesTable += '</ul>';
             return datesTable;
         }

@@ -286,6 +286,9 @@ class ScheduledSections {
 
     /* throw exception if it's negatuve */
     private function validateDate($name, $data) {
+        if ($data == "") {
+            return;
+        }
         $date = explode("-", $data);
         if ($date[0] < 2020 or $date[0] > 2100) {
             throw new Exception("$data is not a valid year");
