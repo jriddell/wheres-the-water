@@ -443,16 +443,23 @@ jQuery(document).ready( function(){
             iconAnchor: [0, 0],
             popupAnchor: [5, -3]
         });
-        var thisWeekIcon = L.icon({
-            iconUrl: '/wheres-the-water/pics/THIS_WEEK.png',
-            iconRetinaUrl: '/wheres-the-water/pics/THIS_WEEK.png',
+        var next7DaysIcon = L.icon({
+            iconUrl: '/wheres-the-water/pics/NEXT_7_DAYS.png',
+            iconRetinaUrl: '/wheres-the-water/pics/NEXT_7_DAYS.png',
+            iconSize: [10, 10],
+            iconAnchor: [0, 0],
+            popupAnchor: [5, -3]
+        });
+        var next30DaysIcon = L.icon({
+            iconUrl: '/wheres-the-water/pics/NEXT_30_DAYS.png',
+            iconRetinaUrl: '/wheres-the-water/pics/NEXT_30_DAYS.png',
             iconSize: [10, 10],
             iconAnchor: [0, 0],
             popupAnchor: [5, -3]
         });
         var notThisWeekIcon = L.icon({
-            iconUrl: '/wheres-the-water/pics/NOT_THIS_WEEK.png',
-            iconRetinaUrl: '/wheres-the-water/pics/NOT_THIS_WEEK.png',
+            iconUrl: '/wheres-the-water/pics/NOT_THIS_MONTH.png',
+            iconRetinaUrl: '/wheres-the-water/pics/NOT_THIS_MONTH.png',
             iconSize: [10, 10],
             iconAnchor: [0, 0],
             popupAnchor: [5, -3]
@@ -522,11 +529,6 @@ jQuery(document).ready( function(){
             }
             linksContent += "<span class='desktop'><a target='_blank' rel='noopener' href='https://www2.sepa.org.uk/waterlevels/default.aspx?sd=t&lc="+riverSection['gauge_location_code']+"'><img width='16' height='16' title='SEPA gauge link' src='/wheres-the-water/pics/graph-icon.png'/> SEPA Gauge: "+riverSection['gauge_name']+"</a><br /></span>";
             linksContent += "<span class='mobile'><a target='_blank' rel='noopener' href='http://riverlevels.mobi/SiteDetails/Index/"+riverSection['gauge_location_code']+"'><img width='16' height='16' title='SEPA gauge link - mobile friendly' src='/wheres-the-water/pics/graph-icon.png'/> SEPA Gauge: "+riverSection['gauge_name']+"</a><br /></span>";
-            /*
-            linksContent += "<a target='_blank' rel='noopener' href='https://www.openstreetmap.org/?mlat="+riverSection['latitude']+"&mlon="+riverSection['longitude']+"#map=12/"
-                            +riverSection['latitude']+"/"+riverSection['longitude']+"'><img width='16' height='16' title='Open maps Link' src='/wheres-the-water/pics/osm.png' /> OpenStreetMap</a><br />";
-            linksContent += "<a href='geo:"+riverSection['latitude']+","+riverSection['longitude']+"'><img title='Geo reference' src='/wheres-the-water/pics/22-apps-marble.png' width='16' height='16' /> Mobile Phone Map Link</a><br />";
-            */
             linksContent += "<img width='16' height='16' title='Open maps Link' src='/wheres-the-water/pics/osm.png' /> ";
             linksContent += "<a target='_blank' rel='noopener' href='https://www.openstreetmap.org/?mlat="+riverSection['latitude']+"&mlon="+riverSection['longitude']+"#map=12/"
                             +riverSection['latitude']+"/"+riverSection['longitude']+"'>OpenStreetMap</a> / ";
@@ -647,10 +649,14 @@ jQuery(document).ready( function(){
                     nextDateString = "Constant Flow";
                 } else {
                     var nextDate = getNextDate(scheduledSections[i]['dates']);
-                    nextDateString = nextDate.toDateString();
+                    if (nextDate == -1) {
+                        nextDateString = "No known dates";
+                    } else {
+                        nextDateString = nextDate.toDateString();
+                    }
                 }
 
-                var contentString = "<div><h4 style='padding-left: 30px;'>" + scheduledSection + "</h4>" +
+                var contentString = "<div><h4 style='padding-left: 30px;'>Scheduled Water: " + scheduledSection + "</h4>" +
                     "<p style='padding-left: 30px;'><img src='" + iconBase + scheduledSectionValue + ext + "' /> " +
                     tidyStatusString(scheduledSectionValue) + "</p>" +
                     "<p><span class='js-info'>Info</span> / <span class='js-calib-table link' style='text-decoration: underline; color: blue; cursor: pointer'>Dates</span>"; // / <span class='js-forecast link' style='text-decoration: underline; color: blue; cursor: pointer'>Weather</span>";
@@ -747,7 +753,9 @@ jQuery(document).ready( function(){
             } else if (dateDiff < 2*24*60*60) {
                 return "TOMORROW";
             } else if (dateDiff < 7*24*60*60) {
-                return "THIS_WEEK";
+                return "NEXT_7_DAYS";
+            } else if (dateDiff < 30*24*60*60) {
+                return "NEXT_30_DAYS";
             } else {
                 return "NOT_THIS_WEEK";
             }
@@ -857,8 +865,6 @@ jQuery(document).ready( function(){
         }
         function getScheduledSectionIcon(scheduledSection) {
             // FIXME this logic is duplicated above where it returns the name of the icon
-            console.log("constant: " + scheduledSection['constant']);
-            console.log("info_link: " + scheduledSection['info_link']);
             if (scheduledSection['constant'] == "1") {
                 return todayIcon;
             }
@@ -868,7 +874,6 @@ jQuery(document).ready( function(){
             for (var k=0; k<dates.length; k++) {
               jsDate = new Date(dates[k]);
               jsDates.push(jsDate);
-              //console.log("date: " + jsDate);
             }
             // find the next date
             var nextDate = -1;
@@ -879,27 +884,21 @@ jQuery(document).ready( function(){
                     nextDate = jsDates[j];
                 }
             }
-            console.log("nearest Date: " + nextDate);
             if (nextDate == -1) {
                 return noDatesIcon;
             }
             var dateDiff = (nextDate - now)/1000;
-            console.log("dateDiff: " + dateDiff);
             if (dateDiff < 24*60*60) {
-                console.log("returning Today");
                 return todayIcon;
             } else if (dateDiff < 2*24*60*60) {
-                console.log("returning Tomorrow");
                 return tomorrowIcon;
             } else if (dateDiff < 7*24*60*60) {
-                console.log("returning This Week");
-                return thisWeekIcon;
+                return next7DaysIcon;
+            } else if (dateDiff < 30*24*60*60) {
+                return next30DaysIcon;
             } else {
-                console.log("returning Not This Week");
                 return notThisWeekIcon;
             }
-
-            return noDatesIcon;
         }
         function showTooltips() {
             if (tooltipsAreVisible) {
