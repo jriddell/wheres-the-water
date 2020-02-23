@@ -645,6 +645,7 @@ jQuery(document).ready( function(){
                     scheduledSectionValue = "NO_KNOWN_DATES";
                 }
                 var nextDateString;
+                var valueString = tidyStatusString(scheduledSectionValue);
                 if (scheduledSections[i]['constant'] == "1") {
                     nextDateString = "Constant Flow";
                 } else {
@@ -654,11 +655,16 @@ jQuery(document).ready( function(){
                     } else {
                         nextDateString = nextDate.toDateString();
                     }
+                    if (scheduledSectionValue == 'NEXT_30_DAYS') {
+                        valueString = (nextDate - Date.now())/(1000*24*60*60);
+                        valueString = Math.floor(valueString);
+                        valueString = valueString + " days to go";
+                    }
                 }
 
-                var contentString = "<div><h4 style='padding-left: 30px;'>Scheduled Water: " + scheduledSection + "</h4>" +
+                var contentString = "<div><h4 style='padding-left: 30px;'><span style='font-size: larger'>Scheduled Water</span>: " + scheduledSection + "</h4>" +
                     "<p style='padding-left: 30px;'><img src='" + iconBase + scheduledSectionValue + ext + "' /> " +
-                    tidyStatusString(scheduledSectionValue) + "</p>" +
+                    valueString + "</p>" +
                     "<p><span class='js-info'>Info</span> / <span class='js-calib-table link' style='text-decoration: underline; color: blue; cursor: pointer'>Dates</span>"; // / <span class='js-forecast link' style='text-decoration: underline; color: blue; cursor: pointer'>Weather</span>";
                 contentString += "</p>" +
                     "<p class='js-info-content'><img width='16' height='16' src='/wheres-the-water/pics/clock.png'/> Next Date: " + nextDateString +
@@ -724,9 +730,9 @@ jQuery(document).ready( function(){
         function getNextDate(dates) {
             var jsDates = [];
             for (var k=0; k<dates.length; k++) {
-              var jsDate = new Date(dates[k]);
-              jsDates.push(jsDate);
-              //console.log("date: " + jsDate);
+                // calculate from end of listed day so it still returns 'today' if it's today
+                var jsDate = new Date(dates[k] + 'T23:59:00');
+                jsDates.push(jsDate);
             }
             // find the next date
             var nextDate = -1;
@@ -872,8 +878,9 @@ jQuery(document).ready( function(){
             var jsDates = [];
             
             for (var k=0; k<dates.length; k++) {
-              jsDate = new Date(dates[k]);
-              jsDates.push(jsDate);
+                // calculate from end of listed day so it still returns 'today' if it's today
+                jsDate = new Date(dates[k] + 'T23:59:00'); 
+                jsDates.push(jsDate);
             }
             // find the next date
             var nextDate = -1;
