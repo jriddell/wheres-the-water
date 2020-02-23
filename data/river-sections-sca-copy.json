@@ -2730,31 +2730,5 @@
     "get_out_lat": "56.8121",
     "classification": "",
     "classification_url": ""
-  },
-  {
-    "name": "Dee (Grampian) (Potarch)",
-    "gauge_location_code": "234294",
-    "longitude": "-2.6485",
-    "latitude": "57.0652",
-    "scrape_value": "0.45",
-    "low_value": "0.6",
-    "medium_value": "0.7",
-    "high_value": "0.8",
-    "very_high_value": "1",
-    "huge_value": "1.5",
-    "grade": "2(3)",
-    "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/north-east/river-dee-potarch-to-banchory",
-    "sca_guidebook_no": "240",
-    "access_issue": "",
-    "google_mymaps": "",
-    "kml": "",
-    "webcam": "https://www.farsondigitalwatercams.com/locations/potarch-bridge",
-    "notes": "",
-    "put_in_long": "",
-    "put_in_lat": "",
-    "get_out_long": "",
-    "get_out_lat": "",
-    "classification": "",
-    "classification_url": ""
   }
 ]
