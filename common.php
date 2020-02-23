@@ -43,12 +43,12 @@ function heading($iframe=false) {
 function footer() {
 ?>
 <p>Newly added Feb 2020 Scheduled Water Flows.
-<img src="pics/TODAY.png" width="10" height="10" />Today, scheduled date on now.
-<img src="pics/TOMORROW.png" width="10" height="10" />Tomorrow, scheduled date is mañana.
-<img src="pics/NEXT_7_DAYS.png" width="10" height="10" />Next date is within 7 days.
-<img src="pics/NEXT_30_DAYS.png" width="10" height="10" />Next date is within 30 days.
-<img src="pics/NOT_THIS_MONTH.png" width="10" height="10" />Not This Month (schedule date over 30s days in future).
-<img src="pics/CONSTANT.png.png" width="10" height="10" />Constant. Flow is always on.
+<img src="/pics/TODAY.png" width="10" height="10" />Today, scheduled date on now.
+<img src="/pics/TOMORROW.png" width="10" height="10" />Tomorrow, scheduled date is mañana.
+<img src="/pics/NEXT_7_DAYS.png" width="10" height="10" />Next date is within 7 days.
+<img src="/pics/NEXT_30_DAYS.png" width="10" height="10" />Next date is within 30 days.
+<img src="/pics/NOT_THIS_MONTH.png" width="10" height="10" />Not This Month (schedule date over 30s days in future).
+<img src="/pics/CONSTANT.png.png" width="10" height="10" />Constant. Flow is always on.
 Dates are added manually.  <a href="https://jriddell.org/contact/">Feedback and contributions welcome</a>.</p>
 
 <p>SCA Where's the Water uses <a href="https://www2.sepa.org.uk/waterlevels/">water level data from SEPA</a>.</p>
