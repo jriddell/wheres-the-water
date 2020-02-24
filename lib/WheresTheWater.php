@@ -571,7 +571,7 @@ jQuery(document).ready( function(){
                 linksContent += "<img width='16' height='16' title='Notes' src='/wheres-the-water/pics/notes.png' /> <b>Notes:</b> "+scheduledSection['notes']+"<br />";
             }
             if ('info_link' in scheduledSection && !scheduledSection['info_link'].length == 0) {
-                linksContent += "<a target='_blank' rel='noopener' href='"+scheduledSection['info_link']+"'><img width='16' height='16' title='UKRGB Link' src='/wheres-the-water/pics/calendar.png'/> Info Page</a><br />";
+                linksContent += "<img width='16' height='16' title='UKRGB Link' src='/wheres-the-water/pics/calendar.png'/> Info: <a target='_blank' rel='noopener' href='https://"+scheduledSection['info_link']+"'>"+ scheduledSection['info_link'] + "</a><br />";
             }
             if ('grade' in scheduledSection && !scheduledSection['grade'].length == 0) {
                 linksContent += "<img width='16' height='16' src='/wheres-the-water/pics/grade.png'/> Grade: " + scheduledSection['grade'] + "<br />";
