@@ -645,7 +645,7 @@ jQuery(document).ready( function(){
                     datesTable = '<p class="js-calib-table-content">Constant Flows</p>';
                 } else if ('dates' in scheduledSections[i]) {
                     scheduledSectionValue = getScheduledSectionValue(scheduledSections[i]['dates']);
-                    datesTable = getDatesTable(scheduledSections[i]['dates']);
+                    datesTable = getDatesTable(scheduledSections[i]['dates'], scheduledSections[i]['info_link']);
                 } else {
                     scheduledSectionValue = "NO_KNOWN_DATES";
                     datesTable = '';
@@ -833,13 +833,13 @@ jQuery(document).ready( function(){
             return riverReadings
         }
 
-        function getDatesTable(scheduledSectionDates) {
+        function getDatesTable(scheduledSectionDates, info_link) {
             var datesTable = '<ul class="js-calib-table-content">';
             for (var k=0; k<scheduledSectionDates.length; k++) {
               var jsDate = new Date(scheduledSectionDates[k]);
               datesTable += "<li>" + jsDate.toDateString() + "</li>\n";
               if (k==10) {
-                datesTable += "💦..."
+                datesTable += "<a href='"+info_link+"'>💦...</a>";
                 datesTable += "<span style='display: none'>";
               }
             }
