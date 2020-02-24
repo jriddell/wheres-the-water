@@ -139,7 +139,6 @@ class ScheduledSections {
     /* print the javascript */
     public function editScheduledSectionsFormJavascript() {
 ?>
-    <h1 id="moo">Text</h1>
     <script>
         $(document).ready( function() {
             var currentDateCount = 0;
