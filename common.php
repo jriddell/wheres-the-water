@@ -42,6 +42,15 @@ function heading($iframe=false) {
 
 function footer() {
 ?>
+<p>Newly added Feb 2020 Scheduled Water Flows.
+<img src="/wheres-the-water/pics/CONSTANT.png" width="10" height="10" />Constant. Flow is always on.
+<img src="/wheres-the-water/pics/TODAY.png" width="10" height="10" />Today, scheduled date on now.
+<img src="/wheres-the-water/pics/TOMORROW.png" width="10" height="10" />Tomorrow, scheduled date is mañana.
+<img src="/wheres-the-water/pics/NEXT_7_DAYS.png" width="10" height="10" />Next date is within 7 days.
+<img src="/wheres-the-water/pics/NEXT_30_DAYS.png" width="10" height="10" />Next date is within 30 days.
+<img src="/wheres-the-water/pics/NOT_THIS_MONTH.png" width="10" height="10" />Not This Month (schedule date over 30s days in future).
+Dates are added manually.  <a href="https://jriddell.org/contact/">Feedback and contributions welcome</a>.</p>
+
 <p>SCA Where's the Water uses <a href="https://www2.sepa.org.uk/waterlevels/">water level data from SEPA</a>.</p>
 
 <p>Code written and maintained by <a href="http://www.edinburghlinux.co.uk">Jonathan Riddell</a>. <a href="https://github.com/jriddell/wheres-the-water">Code on GitHub</a>.  Please file <a href="https://github.com/jriddell/wheres-the-water/issues">bug reports and feature requests on GitHub</a>.</p>

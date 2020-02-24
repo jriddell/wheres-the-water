@@ -60,9 +60,19 @@ class WheresTheWater {
 
 .js-calib-table-content {
     border-collapse: collapse;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     display: none;
     width: 50% !important;
+}
+ul.js-calib-table-content {
+  list-style: none; /* Remove list bullets */
+  padding: 0;
+  margin: 0;
+}
+.js-calib-table-content li:before {
+  content: "🌊"; /* Insert content that looks like bullets */
+  padding-right: 8px;
+  color: blue; /* Or a color you prefer */
 }
 
 #block-system-main .js-calib-table-content td {
@@ -412,6 +422,48 @@ jQuery(document).ready( function(){
             iconAnchor: [0, 0],
             popupAnchor: [5, -3]
         });
+        var noDatesIcon = L.icon({
+            iconUrl: '/wheres-the-water/pics/NO_KNOWN_DATES.png',
+            iconRetinaUrl: '/wheres-the-water/pics/NO_KNOWN_DATES.png',
+            iconSize: [10, 10],
+            iconAnchor: [0, 0],
+            popupAnchor: [5, -3]
+        });
+        var todayIcon = L.icon({
+            iconUrl: '/wheres-the-water/pics/TODAY.png',
+            iconRetinaUrl: '/wheres-the-water/pics/TODAY.png',
+            iconSize: [10, 10],
+            iconAnchor: [0, 0],
+            popupAnchor: [5, -3]
+        });
+        var tomorrowIcon = L.icon({
+            iconUrl: '/wheres-the-water/pics/TOMORROW.png',
+            iconRetinaUrl: '/wheres-the-water/pics/TOMORROW.png',
+            iconSize: [10, 10],
+            iconAnchor: [0, 0],
+            popupAnchor: [5, -3]
+        });
+        var next7DaysIcon = L.icon({
+            iconUrl: '/wheres-the-water/pics/NEXT_7_DAYS.png',
+            iconRetinaUrl: '/wheres-the-water/pics/NEXT_7_DAYS.png',
+            iconSize: [10, 10],
+            iconAnchor: [0, 0],
+            popupAnchor: [5, -3]
+        });
+        var next30DaysIcon = L.icon({
+            iconUrl: '/wheres-the-water/pics/NEXT_30_DAYS.png',
+            iconRetinaUrl: '/wheres-the-water/pics/NEXT_30_DAYS.png',
+            iconSize: [10, 10],
+            iconAnchor: [0, 0],
+            popupAnchor: [5, -3]
+        });
+        var notThisWeekIcon = L.icon({
+            iconUrl: '/wheres-the-water/pics/NOT_THIS_MONTH.png',
+            iconRetinaUrl: '/wheres-the-water/pics/NOT_THIS_MONTH.png',
+            iconSize: [10, 10],
+            iconAnchor: [0, 0],
+            popupAnchor: [5, -3]
+        });
         
         var riverSections;
         var riverSectionsFile = $.getJSON("/wheres-the-water/data/river-sections.json", function(data) {
@@ -428,8 +480,13 @@ jQuery(document).ready( function(){
                 sectionForecasts = data;
             }
         );
+        var scheduledSectionSections;
+        var scheduledSectionSectionsFile = $.getJSON("/wheres-the-water/data/scheduled-sections.json", function(data) {
+                scheduledSections = data;
+            }
+        );
 
-        var bothFiles = $.when(riverSectionsFile, riverReadingsFile, sectionForecastsFile);
+        var bothFiles = $.when(riverSectionsFile, riverReadingsFile, sectionForecastsFile, scheduledSectionSectionsFile);
 
         bothFiles.done(function () {
             mergeRiverData();
@@ -453,6 +510,7 @@ jQuery(document).ready( function(){
             if (string) {
                 string = string.toLocaleLowerCase();
                 string = string.charAt(0).toUpperCase() + string.slice(1);
+                string = string.replace('_', ' ');
                 return string.replace('_', ' ');
             } else {
                 return string;
@@ -471,11 +529,6 @@ jQuery(document).ready( function(){
             }
             linksContent += "<span class='desktop'><a target='_blank' rel='noopener' href='https://www2.sepa.org.uk/waterlevels/default.aspx?sd=t&lc="+riverSection['gauge_location_code']+"'><img width='16' height='16' title='SEPA gauge link' src='/wheres-the-water/pics/graph-icon.png'/> SEPA Gauge: "+riverSection['gauge_name']+"</a><br /></span>";
             linksContent += "<span class='mobile'><a target='_blank' rel='noopener' href='http://riverlevels.mobi/SiteDetails/Index/"+riverSection['gauge_location_code']+"'><img width='16' height='16' title='SEPA gauge link - mobile friendly' src='/wheres-the-water/pics/graph-icon.png'/> SEPA Gauge: "+riverSection['gauge_name']+"</a><br /></span>";
-            /*
-            linksContent += "<a target='_blank' rel='noopener' href='https://www.openstreetmap.org/?mlat="+riverSection['latitude']+"&mlon="+riverSection['longitude']+"#map=12/"
-                            +riverSection['latitude']+"/"+riverSection['longitude']+"'><img width='16' height='16' title='Open maps Link' src='/wheres-the-water/pics/osm.png' /> OpenStreetMap</a><br />";
-            linksContent += "<a href='geo:"+riverSection['latitude']+","+riverSection['longitude']+"'><img title='Geo reference' src='/wheres-the-water/pics/22-apps-marble.png' width='16' height='16' /> Mobile Phone Map Link</a><br />";
-            */
             linksContent += "<img width='16' height='16' title='Open maps Link' src='/wheres-the-water/pics/osm.png' /> ";
             linksContent += "<a target='_blank' rel='noopener' href='https://www.openstreetmap.org/?mlat="+riverSection['latitude']+"&mlon="+riverSection['longitude']+"#map=12/"
                             +riverSection['latitude']+"/"+riverSection['longitude']+"'>OpenStreetMap</a> / ";
@@ -512,6 +565,43 @@ jQuery(document).ready( function(){
 
             return linksContent;
         }
+        function linksContentScheduled(scheduledSection) {
+            var linksContent = "";
+            if ('notes' in scheduledSection && !scheduledSection['notes'].length == 0) {
+                linksContent += "<img width='16' height='16' title='Notes' src='/wheres-the-water/pics/notes.png' /> <b>Notes:</b> "+scheduledSection['notes']+"<br />";
+            }
+            if ('info_link' in scheduledSection && !scheduledSection['info_link'].length == 0) {
+                linksContent += "<a target='_blank' rel='noopener' href='"+scheduledSection['info_link']+"'><img width='16' height='16' title='UKRGB Link' src='/wheres-the-water/pics/calendar.png'/> Info Page</a><br />";
+            }
+            if ('grade' in scheduledSection && !scheduledSection['grade'].length == 0) {
+                linksContent += "<img width='16' height='16' src='/wheres-the-water/pics/grade.png'/> Grade: " + scheduledSection['grade'] + "<br />";
+            }
+            if ('sca_guidebook_no' in scheduledSection && !scheduledSection['sca_guidebook_no'].length == 0) {
+                linksContent += "<img width='16' height='16' title='SCA WW Guidebook number' src='/wheres-the-water/pics/sca.png' /> SCA WW Guidebook No "+scheduledSection['sca_guidebook_no']+"<br />";
+            }
+            linksContent += "<img width='16' height='16' title='Open maps Link' src='/wheres-the-water/pics/osm.png' /> ";
+            linksContent += "<a target='_blank' rel='noopener' href='https://www.openstreetmap.org/?mlat="+scheduledSection['latitude']+"&mlon="+scheduledSection['longitude']+"#map=12/"
+                            +scheduledSection['latitude']+"/"+scheduledSection['longitude']+"'>OpenStreetMap</a> / ";
+            linksContent += "<span class='desktop'><a target='_blank' rel='noopener' href='https://www.bing.com/maps?cp="+scheduledSection['latitude']+"~"+scheduledSection['longitude']+"&lvl=14&style=s'>Ordnance Survey</a> /</span> ";
+            linksContent += " <span class='desktop'><a target='_blank' rel='noopener' href='https://www.google.com/maps?q="+scheduledSection['latitude']+","+scheduledSection['longitude']+"'>Google Maps</a></span> ";
+            linksContent += "<span class='mobile'><a href='geo:"+scheduledSection['latitude']+","+scheduledSection['longitude']+"'>Maps App</a><br /></span>";
+            if ('guidebook_link' in scheduledSection && !scheduledSection['guidebook_link'].length == 0) {
+                linksContent += "<a target='_blank' rel='noopener' href='"+scheduledSection['guidebook_link']+"'><img width='16' height='16' title='UKRGB Link' src='/wheres-the-water/pics/ukrgb.ico'/> UKRGB</a><br />";
+            }
+            if ('access_issue' in scheduledSection && !scheduledSection['access_issue'].length == 0) {
+                linksContent += "<a target='_blank' rel='noopener' href='"+scheduledSection['access_issue']+"'><img width='16' height='16' title='Access Issue Link' src='/wheres-the-water/pics/warning.png' /> Access Issue</a><br />";
+            }
+            if ('google_mymaps' in scheduledSection && !scheduledSection['google_mymaps'].length == 0) {
+                linksContent += "<a target='_blank' rel='noopener' href='"+scheduledSection['google_mymaps']+"'><img width='16' height='16' title='Google MyMaps' src='/wheres-the-water/pics/google-mymaps.png' /> Google MyMaps</a><br />";
+            }
+            if ('kml' in scheduledSection && !scheduledSection['kml'].length == 0) {
+                linksContent += "<a target='_blank' rel='noopener' href='"+scheduledSection['kml']+"'><img width='16' height='16' title='KML' src='/wheres-the-water/pics/kml.png' /> KML</a><br />";
+            }
+            if ('webcam' in scheduledSection && !scheduledSection['webcam'].length == 0) {
+                linksContent += "<a target='_blank' rel='noopener' href='"+scheduledSection['webcam']+"'><img width='16' height='16' title='Webcam' src='/wheres-the-water/pics/webcam.png' /> Webcam</a><br />";
+            }
+            return linksContent;
+        }
         function addRiverMarkers() {
             markers = new Array();
             tooltipsAreVisible = false;
@@ -527,47 +617,76 @@ jQuery(document).ready( function(){
                 var riverReadingsTable = getRiverReadingsTable(riverSections[i], waterLevelValue);
                 var riverFilename = getRiverGraphFilename(riverSections[i]);
                 var icon = getWaterLevelIcon(riverSections[i]);
-                //TODO get weather forecast html in JS here
                 var contentString = "<div><h4 style='padding-left: 30px;'>" + riverSection + "</h4>" +
                     "<p style='padding-left: 30px;'><img src='" + iconBase + waterLevelValue + ext + "' /> " +
                     tidyStatusString(waterLevelValue) + ", " + currentReading + "</p>" +
-                    "<p><span class='js-info'>Info</span> / <span class='js-calib-table link' style='text-decoration: underline; color: blue; cursor: pointer'>Calibrations</span> / <span class='js-forecast link' style='text-decoration: underline; color: blue; cursor: pointer'>Forecast</span>";
-                    // "<p><span class='js-info'>Info</span> / <span class='js-calib-table link' style='text-decoration: underline; color: blue; cursor: pointer'>Calibrations</span> / <span class='js-chart-weekly link' style='text-decoration: underline; color: blue; cursor: pointer'>Weekly Chart</span> / <span class='js-chart-monthly link' style='text-decoration: underline; color: blue; cursor: pointer'>Monthly Chart</span> / <span class='js-chart-yearly link' style='text-decoration: underline; color: blue; cursor: pointer'>Yearly Chart</span> / <span class='js-forecast link' style='text-decoration: underline; color: blue; cursor: pointer'>Forecast</span>";
-                /*
-                if ('webcam_thumbnail' in riverSections[i] && !riverSections[i]['webcam_thumbnail'].length == 0) {
-                    contentString += " / <span class='js-webcam link' style='text-decoration: underline; color: blue; cursor: pointer'>Webcam</span>";
-                }
-                */
+                    "<p><span class='js-info'>Info</span> / <span class='js-calib-table link' style='text-decoration: underline; color: blue; cursor: pointer'>Calibrations</span> / <span class='js-forecast link' style='text-decoration: underline; color: blue; cursor: pointer'>Weather</span>";
                 contentString += "</p>" +
                     "<p class='js-info-content'><img width='16' height='16' src='/wheres-the-water/pics/clock.png'/> Last reading " + currentReadingTime +
                     "<br />" + sectionLinks + "</p>" + riverReadingsTable +
-                    /*
-                    "<p class='js-chart-weekly-content' style='display: none'>" +
-                    "<a href='http://canoescotland.org/wheres-the-water/charts/"+riverFilename+"-weekly.png'>"+
-                    "<img src='http://canoescotland.org/wheres-the-water/charts/"+riverFilename+"-weekly.png' style='max-width: 250px; width: 100%' /></a></p>" +
-                    "<p class='js-chart-monthly-content' style='display: none'>" +
-                    "<a href='http://canoescotland.org/wheres-the-water/charts/"+riverFilename+"-monthly.png'>"+
-                    "<img src='http://canoescotland.org/wheres-the-water/charts/"+riverFilename+"-monthly.png' style='max-width: 250px; width: 100%' /></a></p>" +
-                    "<p class='js-chart-yearly-content' style='display: none'>" +
-                    "<a href='http://canoescotland.org/wheres-the-water/charts/"+riverFilename+"-yearly.png'>"+
-                    "<img src='http://canoescotland.org/wheres-the-water/charts/"+riverFilename+"-yearly.png' style='max-width: 250px; width: 100%' /></a></p>" +
-                    */
                     "<p class='js-forecast-content' style='display: none'>" +
                     sectionForecasts[riverSections[i]['gauge_location_code']] +
                     "</p>"
-                /*
-                if ('webcam_thumbnail' in riverSections[i] && !riverSections[i]['webcam_thumbnail'].length == 0) {
-                    contentString +=
-                    "<p class='js-webcam-content' style='display: none'><a href='"+riverSections[i]['webcam']+"'><img src='"+riverSections[i]['webcam_thumbnail']+"'/></a>" +
-                    "</p>";
-                }
-                */
                 contentString += '<p>Help Calibrate: <a href="https://goo.gl/forms/nnEOgVkw8ebhygW52">River Level Report form</a>.</p>';
                 contentString += "</div>";
                 var marker = L.marker([riverSections[i]['latitude'], riverSections[i]['longitude']], {icon: icon}).bindPopup(contentString).addTo( map );
                 marker.bindTooltip(riverSection);
                 markers.push(marker);
             }
+            // Scheduled Sections
+            for (i=0; i<scheduledSections.length; i++) {
+                console.log("Scheduled section No " + i + " : " + scheduledSections[i]['name'] + scheduledSections[i]['latitude'] + scheduledSections[i]['longitude']);
+                var scheduledSection = scheduledSections[i]['name'];
+                var sectionLinks = linksContentScheduled(scheduledSections[i]);
+                var datesTable;
+                var scheduledSectionValue;
+                if (scheduledSections[i]['constant'] == "1") {
+                    scheduledSectionValue = "CONSTANT"
+                    datesTable = '<p class="js-calib-table-content">Constant Flows</p>';
+                } else if ('dates' in scheduledSections[i]) {
+                    scheduledSectionValue = getScheduledSectionValue(scheduledSections[i]['dates']);
+                    datesTable = getDatesTable(scheduledSections[i]['dates']);
+                } else {
+                    scheduledSectionValue = "NO_KNOWN_DATES";
+                    datesTable = '';
+                }
+                var nextDateString;
+                var valueString = tidyStatusString(scheduledSectionValue);
+                if (scheduledSections[i]['constant'] == "1") {
+                    nextDateString = "Constant Flow";
+                } else {
+                    var nextDate = getNextDate(scheduledSections[i]['dates']);
+                    if (nextDate == -1) {
+                        nextDateString = "No known dates";
+                    } else {
+                        nextDateString = nextDate.toDateString();
+                    }
+                    if (scheduledSectionValue == 'NEXT_30_DAYS') {
+                        valueString = (nextDate - Date.now())/(1000*24*60*60);
+                        valueString = Math.floor(valueString);
+                        valueString = valueString + " days to go";
+                    }
+                }
+
+                var contentString = "<div><h4 style='padding-left: 30px;'><span style='font-size: larger'>Scheduled Water</span>: " + scheduledSection + "</h4>" +
+                    "<p style='padding-left: 30px;'><img src='" + iconBase + scheduledSectionValue + ext + "' /> " +
+                    valueString + "</p>" +
+                    "<p><span class='js-info'>Info</span> / <span class='js-calib-table link' style='text-decoration: underline; color: blue; cursor: pointer'>Dates</span>"; // / <span class='js-forecast link' style='text-decoration: underline; color: blue; cursor: pointer'>Weather</span>";
+                contentString += "</p>" +
+                    "<p class='js-info-content'><img width='16' height='16' src='/wheres-the-water/pics/clock.png'/> Next Date: " + nextDateString +
+                    "<br />" + sectionLinks + "</p>" + datesTable +
+                    //"<p class='js-forecast-content' style='display: none'>" +
+                    //sectionForecasts[riverSections[i]['gauge_location_code']] +
+                    "</p>"
+                contentString += "</div>";
+
+                var icon = getScheduledSectionIcon(scheduledSections[i]);
+                console.log("name: " + scheduledSection + i);
+                var marker = L.marker([scheduledSections[i]['latitude'], scheduledSections[i]['longitude']], {icon: icon}).bindPopup(contentString).addTo( map );
+                marker.bindTooltip(scheduledSection);
+                markers.push(marker);
+            }
+
         }
         /* checks if the currentReadingTime is over 24 hours */
         function readingIsOld(currentReadingTime) {
@@ -612,6 +731,45 @@ jQuery(document).ready( function(){
                 return "VERY_HIGH";
             } else {
                 return "HUGE";
+            }
+        }
+        function getNextDate(dates) {
+            var jsDates = [];
+            for (var k=0; k<dates.length; k++) {
+                // calculate from end of listed day so it still returns 'today' if it's today
+                var jsDate = new Date(dates[k] + 'T23:59:00');
+                jsDates.push(jsDate);
+            }
+            // find the next date
+            var nextDate = -1;
+            var now = Date.now();
+            for (var j=0; j<jsDates.length; j++) {
+                var diff = jsDates[j] - now;
+                if (diff > 0 && (nextDate == -1 || jsDates[j] < nextDate)) {
+                    nextDate = jsDates[j];
+                }
+            }
+            return nextDate
+        }
+        function getScheduledSectionValue(dates) {
+            //FIXME this logic is repeated below for the icon name
+            var nextDate = getNextDate(dates);
+            var now = Date.now();
+            console.log("nearest Date: " + nextDate);
+            if (nextDate == -1) {
+                return "NO_KNOWN_DATES";
+            }
+            var dateDiff = (nextDate - now)/1000;
+            if (dateDiff < 24*60*60) {
+                return "TODAY";
+            } else if (dateDiff < 2*24*60*60) {
+                return "TOMORROW";
+            } else if (dateDiff < 7*24*60*60) {
+                return "NEXT_7_DAYS";
+            } else if (dateDiff < 30*24*60*60) {
+                return "NEXT_30_DAYS";
+            } else {
+                return "NOT_THIS_MONTH";
             }
         }
         function getRiverReadingsTable(riverSection, waterLevelValue) {
@@ -674,6 +832,22 @@ jQuery(document).ready( function(){
                         '</table>';
             return riverReadings
         }
+
+        function getDatesTable(scheduledSectionDates) {
+            var datesTable = '<ul class="js-calib-table-content">';
+            for (var k=0; k<scheduledSectionDates.length; k++) {
+              var jsDate = new Date(scheduledSectionDates[k]);
+              datesTable += "<li>" + jsDate.toDateString() + "</li>\n";
+              if (k==10) {
+                datesTable += "💦..."
+                datesTable += "<span style='display: none'>";
+              }
+            }
+            datesTable += "</span>"
+            datesTable += '</ul>';
+            return datesTable;
+        }
+
         function getRiverGraphFilename(riverSection) {
             var riverFilename = riverSection['name'].toLowerCase();
             riverFilename = riverFilename.replace(/ /g, '-');
@@ -681,6 +855,7 @@ jQuery(document).ready( function(){
             riverFilename = riverFilename.replace(/\)/g, '');
             return riverFilename
         }
+
         function getWaterLevelIcon(riverSection) {
             currentReading = riverSection['currentReading'];
             if (currentReading == -1 || readingIsOld(riverSection['currentReadingTime'])) {
@@ -703,6 +878,44 @@ jQuery(document).ready( function(){
                 return veryHighIcon;
             } else {
                 return hugeIcon;
+            }
+        }
+        function getScheduledSectionIcon(scheduledSection) {
+            // FIXME this logic is duplicated above where it returns the name of the icon
+            if (scheduledSection['constant'] == "1") {
+                return todayIcon;
+            }
+            var dates = scheduledSection['dates'];
+            var jsDates = [];
+            
+            for (var k=0; k<dates.length; k++) {
+                // calculate from end of listed day so it still returns 'today' if it's today
+                jsDate = new Date(dates[k] + 'T23:59:00'); 
+                jsDates.push(jsDate);
+            }
+            // find the next date
+            var nextDate = -1;
+            var now = Date.now();
+            for (var j=0; j<jsDates.length; j++) {
+                var diff = jsDates[j] - now;
+                if (diff > 0 && (nextDate == -1 || jsDates[j] < nextDate)) {
+                    nextDate = jsDates[j];
+                }
+            }
+            if (nextDate == -1) {
+                return noDatesIcon;
+            }
+            var dateDiff = (nextDate - now)/1000;
+            if (dateDiff < 24*60*60) {
+                return todayIcon;
+            } else if (dateDiff < 2*24*60*60) {
+                return tomorrowIcon;
+            } else if (dateDiff < 7*24*60*60) {
+                return next7DaysIcon;
+            } else if (dateDiff < 30*24*60*60) {
+                return next30DaysIcon;
+            } else {
+                return notThisWeekIcon;
             }
         }
         function showTooltips() {

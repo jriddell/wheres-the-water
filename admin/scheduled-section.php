@@ -1,29 +1,29 @@
 <?php
-/* Copyright 2017 Jonathan Riddell <jr@jriddell.org>
+/* Copyright 2020 Jonathan Riddell <jr@jriddell.org>
    May be copied under the GNU GPL version 3 only
 */
 require_once('../config.php');
-require_once('../lib/RiverSections.php');
-$riverSections = new RiverSections;
-$riverSections->readFromJson();
-if (isset($_POST['riverUpdates']) && isset($_POST['save'])) {
-  $message = $riverSections->updateRiverSection($_POST);
+require_once('../lib/ScheduledSections.php');
+$scheduledSections = new ScheduledSections;
+$scheduledSections->readFromJson();
+if (isset($_POST['scheduledUpdates']) && isset($_POST['save'])) {
+  $message = $scheduledSections->updateScheduledSections($_POST);
 }
-if (isset($_POST['riverUpdates']) && isset($_POST['delete'])) {
-  $message = $riverSections->deleteRiverSection($_POST);
+if (isset($_POST['scheduledUpdates']) && isset($_POST['delete'])) {
+  $message = $scheduledSections->deleteScheduledSection($_POST);
 }
 if (isset($_POST['add'])) {
-  $message = $riverSections->addNewRiverSection($_POST);
+  $message = $scheduledSections->addNewScheduledSection($_POST);
 }
   
 ?>
 <!html>
 <html>
 <head>
-<title>SCA Where's the Water River Section Editing</title>
+<title>SCA Where's the Water Scheduled Section Editing</title>
 <style>
 
-form {font-family: sans-serif; 
+div.form {font-family: sans-serif; 
       border: 1px solid black; 
       background-color: #eee;
       grid-template-columns: 200px 1fr 200px 1fr;
@@ -56,20 +56,27 @@ input[type=submit] { grid-column: 1/2;
                      border: 2px solid black;
                      margin: 1em;
                    }
-input.right[type=submit] { grid-column: 2/3; 
-                        width: 2em;
+input.delete[type=submit] { grid-column: 3/4; 
                      border: 2px solid black;
                    }
-
+button.delete { grid-column: 3/4; 
+                     border: 2px solid black;
+                   }
+div.datesdiv { grid-column: 2/3; 
+            }
+button.adddate {grid-column: 1/2; 
+            }
+                   
 p.message { border: 1px solid black;
             color: #339;
             padding: 1ex;
           }
 p.message b { font-size: larger; }
 </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
-<h1>Where's the Water River Section Editing</h1>
+<h1>Where's the Water Scheduled Section Editing</h1>
 
 <p><a href="index.html">&#8592; back to admin index</a></p>
 
@@ -78,8 +85,9 @@ if (isset($message)) {
   print "<p class='message'>$message</p>";
 }
 
-print $riverSections->editRiverForm();
-print $riverSections->addRiverForm();
+print $scheduledSections->editScheduledSectionsForm();
+print $scheduledSections->addScheduledSectionForm();
+print $scheduledSections->editScheduledSectionsFormJavascript();
 ?>
 </body>
 </html>

@@ -6,60 +6,50 @@
 require_once 'GrabSepaGauges.php';
 require_once 'GrabSepaRivers.php';
 require_once('GrabWeatherForecast.php');
-require_once('RiverZoneStations.php');
 
 /*
-Class to deal with the river sections data
-call readFromJson() then $obj->riverSectionsData is an array of rivers with their data
+Class to deal with the scheduled sections data
+call readFromJson() then $obj->scheduledSectionsData is an array of rivers with their data
 [
     {
-        "name": "Garry",
-        "gauge_location_code": "234189",
+        "name": "Falls of Lora",
+        "notes": "Tidal static waves",
         "longitude": "-4.84497",
         "latitude": "57.0759",
-        "scrape_value": "0.4",
-        "low_value": "0.6",
-        "medium_value": "0.8",
-        "high_value": "1",
-        "very_high_value": "1.4",
-        "huge_value": "1.8"
         "grade": "2-3",
+        "info_link": "http://www.canoescotland.org/tummel-releases",
         "guidebook_link": "http://www.ukriversguidebook.co.uk/foo",
         "sca_guidebook_no": "123",
         "access_issue": "http://www.canoescotland.org/news/river-clyde",
         "google_mymaps": "https://drive.google.com/open?id=1A3Jqx9E46jVymhbP1-3UNudWxdx4PNuG&usp=sharing",
         "kml": "http://www.andyjacksonfund.org.uk/wheres-the-water/kml/stanley.kml",
         "webcam": "https://www.farsondigitalwatercams.com/locations/crossford",
-        "gauge_name": "Logie",
         "put_in_long": "-4.84497",
         "put_in_lat": "57.0759",
         "get_out_long": "-4.84497",
         "get_out_lat": "57.0759",
+        "dates": ["2020-01-01", "2020-02-01", "2020-03-01"],
+        "constant": 0
     }
 ]
 put_in_long, put_in_lat, get_out_long, get_out_lat: added at request of Tim from rivermap.ch so he can add those.  in return we get pretty graphs.
 */
-class RiverSections {
-    const RIVER_SECTIONS_JSON = 'river-sections.json';
+class ScheduledSections {
+    const SCHEDULED_SECTIONS_JSON = 'scheduled-sections.json';
     const DATADIR = 'data';
-    const DOWNLOAD_READINGS_TIMESTAMP = 'DOWNLOAD-READINGS-TIMESTAMP';
 
-    public $riverSectionsData;
+    public $scheduledSectionsData;
     public $filename;
-    public $riverZoneStations;
 
     function __construct() {
-        $this->riverSectionsData = array();
-        $this->filename = ROOT . '/' . self::DATADIR . '/' . self::RIVER_SECTIONS_JSON;
-        $this->downloadReadingsTimestampFile = ROOT . '/' . self::DATADIR .'/' . self::DOWNLOAD_READINGS_TIMESTAMP;
-        $this->riverZoneStations = new riverZoneStations();
-        $this->riverZoneStations->parseRiverZoneStations();
+        $this->scheduledSectionsData = array();
+        $this->filename = ROOT . '/' . self::DATADIR . '/' . self::SCHEDULED_SECTIONS_JSON;
     }
 
     /* write data to file */
     function writeToJson() {
         $fp = fopen($this->filename, 'w');
-        fwrite($fp, json_encode($this->riverSectionsData, JSON_PRETTY_PRINT));
+        fwrite($fp, json_encode($this->scheduledSectionsData, JSON_PRETTY_PRINT));
         fwrite($fp, "\n");
         fclose($fp);
     }
@@ -67,140 +57,78 @@ class RiverSections {
     /* read river data from file */
     function readFromJson() {
         $json = file_get_contents($this->filename);
-        $this->riverSectionsData = json_decode($json, true); // truely we do want this to be an array PHP
+        $this->scheduledSectionsData = json_decode($json, true); // truely we do want this to be an array PHP
         return true;
     }
 
-    /* read from database and convert to our format, 
-       to be called once ever in testReadFromDatabaseWriteJsonForReal() 
-       to overwrite the .json file 
-    */
-    public function readFromDatabase() {  
-        require('../config/database.php'); // sets $servername, $username, $password, $dbname
-        // Create connection
-        $conn = new mysqli($servername, $username, $password, $dbname);
-
-        // Check connection
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
-        $sql = "SELECT * FROM node_revisions join content_type_river_section ON node_revisions.vid = content_type_river_section.vid";
-        $result = $conn->query($sql);
-
-        if ($result->num_rows > 0) {
-            // output data of each row
-            while($row = $result->fetch_assoc()) {
-                $riverSection = array('name'=> $row["title"],
-                                 'gauge_location_code' => $row["field_guageid_0_value"],
-                                 'longitude' => $row["field_longitude_value"],
-                                 'latitude' => $row["field_latitude_value"],
-                                 'scrape_value' => $row["field_scrape_value"],
-                                 'low_value' => $row["field_low_value"],
-                                 'medium_value' => $row["field_medium_value"],
-                                 'high_value' => $row["field_high_value"],
-                                 'very_high_value' => $row["field_very_high_value"],
-                                 'huge_value' => $row["field_huge_value"]
-                                 );
-                $this->riverSectionsData[] = $riverSection;
-            }
-        } else {
-            echo "0 results";
-        }
-        $conn->close();
-    }
-
     /* HTML editable form */
-    public function editRiverForm() {
+    public function editScheduledSectionsForm() {
         $reply = "";
         $sectionCount = 1;
 
-        foreach($this->riverSectionsData as $jsonid => $riverSection) {
-            $reply .= "<form action='river-section.php' method='post'>\n";
-            $reply .= "<input type='hidden' name='riverUpdates' value='{$jsonid}' />\n";
-            $reply .= $this->editRiverFormLine($riverSection, $sectionCount);
-            $reply .= "<input type='submit' name='save' value='Save' />\n";
-            $reply .= "<input type='submit' name='delete' value='&#10060;' class='right' />\n";
-            $reply .= "</form>\n";
+        $reply .= "<form action='scheduled-section.php' method='post'>\n";
+        $reply .= "<input type='hidden' name='scheduledUpdates' />\n";
+        foreach($this->scheduledSectionsData as $jsonid => $scheduledSection) {
+            $reply .= "<div class='form' id='section-" . $sectionCount . "'>\n";
+            $reply .= $this->editScheduledSectionFormLine($scheduledSection, $sectionCount);
+            //$reply .= "<input type='button' name='${sectionCount}_adddate' value='Add Date ${sectionCount}' class='adddate' onclick='adddate(${sectionCount});' />\n";
+            $datesLength = 0;
+            if (isset($scheduledSection['dates'])) {
+                $datesLength = sizeof($scheduledSection['dates']);
+            }
+            $reply .= "<button type='button' name='add-${sectionCount}-$datesLength' class='add adddate btn btn-success'>Add Date</button>";
+            $reply .= "<button type='button' name='delete-${sectionCount}' class='delete'>Delete Section</button>";
+            $reply .= "</div>\n";
+            // $reply .= "<input type='submit' name='${sectionCount}_delete' value='&#10060; Delete ${sectionCount}' class='delete' />\n";
             $sectionCount++;
         }
+        $reply .= "<input type='submit' name='save' value='Save' />\n";
+        $reply .= "</form>\n";
         return $reply;
     }
 
     /* HTML editable form for a river section */
-    public function editRiverFormLine($riverSection, $sectionCount=0) {
-        if (!array_key_exists('access_issue', $riverSection)) {
-            $riverSection['access_issue'] = '';
+    public function editScheduledSectionFormLine($scheduledSection, $sectionCount=0) {
+        /* for newly added fields we can explicitly set them to empty here
+        if (!array_key_exists('access_issue', $scheduledSection)) {
+            $scheduledSection['access_issue'] = '';
         }
-        if (!array_key_exists('google_mymaps', $riverSection)) {
-            $riverSection['google_mymaps'] = '';
-        }
-        if (!array_key_exists('kml', $riverSection)) {
-            $riverSection['kml'] = '';
-        }
-        if (!array_key_exists('webcam', $riverSection)) {
-            $riverSection['webcam'] = '';
-        }
-        if (!array_key_exists('notes', $riverSection)) {
-            $riverSection['notes'] = '';
-        }
-        if (!array_key_exists('classification', $riverSection)) {
-            $riverSection['classification'] = '';
-        }
-        if (!array_key_exists('classification_url', $riverSection)) {
-            $riverSection['classification_url'] = '';
-        }
-        if (!array_key_exists('grade', $riverSection)) {
-            $riverSection['grade'] = '';
-        }
-        if (!array_key_exists('guidebook_link', $riverSection)) {
-            $riverSection['guidebook_link'] = '';
-        }
-        if (!array_key_exists('sca_guidebook_no', $riverSection)) {
-            $riverSection['sca_guidebook_no'] = '';
-        }
-        if (!array_key_exists('put_in_lat', $riverSection)) {
-            $riverSection['put_in_lat'] = '';
-        }
-        if (!array_key_exists('put_in_long', $riverSection)) {
-            $riverSection['put_in_long'] = '';
-        }
-        if (!array_key_exists('get_out_lat', $riverSection)) {
-            $riverSection['get_out_lat'] = '';
-        }
-        if (!array_key_exists('get_out_long', $riverSection)) {
-            $riverSection['get_out_long'] = '';
-        }
+        */
         $reply = "";
-        $reply .= "<legend>" . $sectionCount . ") " . $riverSection['name'] . "</legend>";
-        $reply .= $this->editRiverFormInputItem("River/Section Name", "rivername", $riverSection['name']);
-        $reply .= $this->editRiverFormInputItem("SEPA Gauge Code", "gauge_location_code", $riverSection['gauge_location_code'], "right");
-        $reply .= $this->editRiverFormInputItem("Latitude", "latitude", $riverSection['latitude']);
-        $reply .= $this->editRiverFormInputItem("Longitude", "longitude", $riverSection['longitude'], "right");
-        $reply .= $this->editRiverFormInputItem("Scrape", "scrape_value", $riverSection['scrape_value']);
-        $reply .= $this->editRiverFormInputItem("Low", "low_value", $riverSection['low_value'], "right");
-        $reply .= $this->editRiverFormInputItem("Medium", "medium_value", $riverSection['medium_value']);
-        $reply .= $this->editRiverFormInputItem("High", "high_value", $riverSection['high_value'], "right");
-        $reply .= $this->editRiverFormInputItem("Very High", "very_high_value", $riverSection['very_high_value']);
-        $reply .= $this->editRiverFormInputItem("Huge", "huge_value", $riverSection['huge_value'], "right");
-        $reply .= $this->editRiverFormInputItem("Grade", "grade", $riverSection['grade']);
-        $reply .= $this->editRiverFormInputItem("Guidebook Link", "guidebook_link", $riverSection['guidebook_link'], "right");
-        $reply .= $this->editRiverFormInputItem("SCA Guidebook No", "sca_guidebook_no", $riverSection['sca_guidebook_no']);
-        $reply .= $this->editRiverFormInputItem("Acccess Issue Link", "access_issue", $riverSection['access_issue'], "right");
-        $reply .= $this->editRiverFormInputItem("Google My Maps Link", "google_mymaps", $riverSection['google_mymaps']);
-        $reply .= $this->editRiverFormInputItem("KML Link", "kml", $riverSection['kml'], "right");
-        $reply .= $this->editRiverFormInputItem("Webcam", "webcam", $riverSection['webcam']);
-        $reply .= $this->editRiverFormInputItem("Notes", "notes", $riverSection['notes'], "right");
-        $reply .= $this->editRiverFormInputItem("Classification", "classification", $riverSection['classification']);
-        $reply .= $this->editRiverFormInputItem("Classification URL", "classification_url", $riverSection['classification_url'], "right");
-        $reply .= $this->editRiverFormInputItem("Put In Latitude", "put_in_lat", $riverSection['put_in_lat']);
-        $reply .= $this->editRiverFormInputItem("Put In Longitude", "put_in_long", $riverSection['put_in_long'], "right");
-        $reply .= $this->editRiverFormInputItem("Get Out Latitude", "get_out_lat", $riverSection['get_out_lat']);
-        $reply .= $this->editRiverFormInputItem("Get Out Longitude", "get_out_long", $riverSection['get_out_long'], "right");
+        $reply .= "<legend>" . $sectionCount . ") " . $scheduledSection['name'] . "</legend>\n";
+        $reply .= $this->editScheduledSectionFormInputItem("River/Section Name", "${sectionCount}_sectionname", $scheduledSection['name']);
+        $reply .= $this->editScheduledSectionFormInputItem("Latitude", "${sectionCount}_latitude", $scheduledSection['latitude'], "right");
+        $reply .= $this->editScheduledSectionFormInputItem("Longitude", "${sectionCount}_longitude", $scheduledSection['longitude']);
+        $reply .= $this->editScheduledSectionFormInputItem("Grade", "${sectionCount}_grade", $scheduledSection['grade'], "right");
+        $reply .= $this->editScheduledSectionFormInputItem("Guidebook Link", "${sectionCount}_guidebook_link", $scheduledSection['guidebook_link']);
+        $reply .= $this->editScheduledSectionFormInputItem("SCA Guidebook No", "${sectionCount}_sca_guidebook_no", $scheduledSection['sca_guidebook_no'], "right");
+        $reply .= $this->editScheduledSectionFormInputItem("Info Link", "${sectionCount}_info_link", $scheduledSection['info_link']);
+        $reply .= $this->editScheduledSectionFormInputItem("Acccess Issue Link", "${sectionCount}_access_issue", $scheduledSection['access_issue'], "right");
+        $reply .= $this->editScheduledSectionFormInputItem("Google My Maps Link", "${sectionCount}_google_mymaps", $scheduledSection['google_mymaps']);
+        $reply .= $this->editScheduledSectionFormInputItem("KML Link", "${sectionCount}_kml", $scheduledSection['kml'], "right");
+        $reply .= $this->editScheduledSectionFormInputItem("Webcam", "${sectionCount}_webcam", $scheduledSection['webcam']);
+        $reply .= $this->editScheduledSectionFormInputItem("Notes", "${sectionCount}_notes", $scheduledSection['notes'], "right");
+        $reply .= $this->editScheduledSectionFormInputItem("Put In Latitude", "${sectionCount}_put_in_lat", $scheduledSection['put_in_lat']);
+        $reply .= $this->editScheduledSectionFormInputItem("Put In Longitude", "${sectionCount}_put_in_long", $scheduledSection['put_in_long'], "right");
+        $reply .= $this->editScheduledSectionFormInputItem("Get Out Latitude", "${sectionCount}_get_out_lat", $scheduledSection['get_out_lat']);
+        $reply .= $this->editScheduledSectionFormInputItem("Get Out Longitude", "${sectionCount}_get_out_long", $scheduledSection['get_out_long'], "right");
+        $reply .= $this->editScheduledSectionFormInputItem("Constant (0/1 boolean)", "${sectionCount}_constant", $scheduledSection['constant']);
+        $reply .= "<div id='{$sectionCount}_dates' class='datesdiv'/>\n";
+        if (isset($scheduledSection['dates'])) {
+            foreach($scheduledSection['dates'] as $dateid => $date) {
+                $reply .= "<div id='div-${sectionCount}_date_{$dateid}'>";
+                $reply .= $this->editScheduledSectionFormInputItem("Date {$dateid}", "${sectionCount}_date_{$dateid}", $date);
+                $reply .= "<button type='button' name='delete-${sectionCount}_date_{$dateid}' class='delete-date'>&#10060;</button><br />\n";
+                $reply .= "</div>";
+            }
+        }
+        $reply .= "</div><!-- id=X-dates -->\n";
+        //$reply .= "</div><!-- id=section-X -->\n";
         return $reply;
     }
 
     /* one text field in the river form */
-    public function editRiverFormInputItem($text, $name, $value, $column="left") {
+    public function editScheduledSectionFormInputItem($text, $name, $value, $column="left") {
         $value = str_replace("'", "&#39;", $value);
         $reply = "";
         $reply .= "<label for='{$name}' class='{$column}'>{$text}:</label>\n";
@@ -208,81 +136,121 @@ class RiverSections {
         return $reply;
     }
 
-    /* read submitted HTML form to update rivers */
-    public function updateRiverSection($postData) {
-        $jsonid = $postData['riverUpdates'];
-        $riverSection = $this->riverSectionsData[$jsonid];
-        try {
-            $this->validateRiverSectionUpdateData($postData);
-        } catch (Exception $e) {
-            $name = $riverSection['name'];
-            return "<b>&#9888;Not updated $name</b><br />Validation error: " . $e->getMessage();
-        }
-        $riverSection['name'] = $postData['rivername'];
-        $riverSection['gauge_location_code'] = $postData['gauge_location_code'];
-        $riverSection['latitude'] = $postData['latitude'];
-        $riverSection['longitude'] = $postData['longitude'];
-        $riverSection['scrape_value'] = $postData['scrape_value'];
-        $riverSection['low_value'] = $postData['low_value'];
-        $riverSection['medium_value'] = $postData['medium_value'];
-        $riverSection['high_value'] = $postData['high_value'];
-        $riverSection['very_high_value'] = $postData['very_high_value'];
-        $riverSection['huge_value'] = $postData['huge_value'];
-        $riverSection['grade'] = $postData['grade'];
-        $riverSection['guidebook_link'] = $postData['guidebook_link'];
-        $riverSection['sca_guidebook_no'] = $postData['sca_guidebook_no'];
-        $riverSection['access_issue'] = $postData['access_issue'];
-        $riverSection['google_mymaps'] = $postData['google_mymaps'];
-        $riverSection['kml'] = $postData['kml'];
-        $riverSection['webcam'] = $postData['webcam'];
-        $riverSection['notes'] = $postData['notes'];
-        $riverSection['classification'] = $postData['classification'];
-        $riverSection['classification_url'] = $postData['classification_url'];
-        $riverSection['put_in_lat'] = $postData['put_in_lat'];
-        $riverSection['put_in_long'] = $postData['put_in_long'];
-        $riverSection['get_out_lat'] = $postData['get_out_lat'];
-        $riverSection['get_out_long'] = $postData['get_out_long'];
+    /* print the javascript */
+    public function editScheduledSectionsFormJavascript() {
+?>
+    <script>
+        $(document).ready( function() {
+            var currentDateCount = 0;
+            $('.add').click(function() {  
+                //console.log('add button clicked' + $(this).attr('name'));
+                var dateValues = $(this).attr('name').split("-");
+                var sectionCount = dateValues[1];
+                var dateCount = dateValues[2];
+                if (currentDateCount == 0) {
+                    currentDateCount = dateCount;
+                }
+                newInput = '<div id="div-'+sectionCount+'_date_'+currentDateCount+'">';
+                newInput += '<label for="'+sectionCount+'_date_'+currentDateCount+'" class="left">Date '+currentDateCount+': </label>';
+                newInput += "<input type='text' name='"+sectionCount+"_date_"+currentDateCount+"' value='' /> ";
+                // The added delete button does not call the .delete-date function below for some reason
+                //newInput += "<button type='button' name='delete-"+sectionCount+"_date_"+ currentDateCount +"' class='delete-date'>&#10060;</button>";
+                newInput += "</div>\n";
+                //console.log('adding to: ' + '#' + sectionCount + '_dates');
+                $('#' + sectionCount + '_dates').append(newInput);
+                currentDateCount++;
+            });  
+            $('.delete').click(function() {  
+                //console.log('delete section' + $(this).attr('name'));
+                var sectionCount = $(this).attr('name').split("-")[1];
+                //console.log('delete section count:' + sectionCount);
+                $('#section-' + sectionCount).remove();
+            });  
+            $('.delete-date').click(function() {  
+                console.log('delete date button: ' + $(this).attr('name'));
+                var dateNumber = $(this).attr('name').split("-")[1];
+                console.log('delete date count:' + dateNumber);
+                $('#div-' + dateNumber).remove();
+            });  
+      });
+    </script>
+<?php
+    }
 
-        $this->riverSectionsData[$jsonid] = $riverSection;
+    /* read submitted HTML form to update rivers */
+    public function updateScheduledSections($postData) {
+        $sectionCount = 0;
+        $newScheduledSectionsData = array();
+        while (true) {
+            $sectionCount++;
+            // code red, this count is an arbitrary number which limits how many we can add, fix coding somehow
+            if ($sectionCount > 100) {
+                break;
+            }
+
+            if (isset($postData["{$sectionCount}_sectionname"])) {
+                $scheduledSection = [];
+                $scheduledSection['name'] = $postData["{$sectionCount}_sectionname"];
+                $scheduledSection['latitude'] = $postData["{$sectionCount}_latitude"];
+                $scheduledSection['longitude'] = $postData["{$sectionCount}_longitude"];
+                $scheduledSection['grade'] = $postData["{$sectionCount}_grade"];
+                $scheduledSection['guidebook_link'] = $postData["{$sectionCount}_guidebook_link"];
+                $scheduledSection['sca_guidebook_no'] = $postData["{$sectionCount}_sca_guidebook_no"];
+                $scheduledSection['info_link'] = $postData["{$sectionCount}_info_link"];
+                $scheduledSection['access_issue'] = $postData["{$sectionCount}_access_issue"];
+                $scheduledSection['google_mymaps'] = $postData["{$sectionCount}_google_mymaps"];
+                $scheduledSection['kml'] = $postData["{$sectionCount}_kml"];
+                $scheduledSection['webcam'] = $postData["{$sectionCount}_webcam"];
+                $scheduledSection['notes'] = $postData["{$sectionCount}_notes"];
+                $scheduledSection['put_in_lat'] = $postData["{$sectionCount}_put_in_lat"];
+                $scheduledSection['put_in_long'] = $postData["{$sectionCount}_put_in_long"];
+                $scheduledSection['get_out_lat'] = $postData["{$sectionCount}_get_out_lat"];
+                $scheduledSection['get_out_long'] = $postData["{$sectionCount}_get_out_long"];
+                $scheduledSection['constant'] = $postData["{$sectionCount}_constant"];
+                $scheduledSection['dates'] = array();
+                $dateCount = 0;
+                while (true) {
+                    if (isset($postData["{$sectionCount}_date_{$dateCount}"])) {
+                        $scheduledSection['dates'][] = $postData["{$sectionCount}_date_{$dateCount}"];
+                    } else {
+                        break;
+                    }
+                    $dateCount++;
+                }
+                $newScheduledSectionsData[] = $scheduledSection;
+                try {
+                    $this->validateScheduledSectionUpdateData($scheduledSection);
+                } catch (Exception $e) {
+                    $name = $scheduledSection['name'];
+                    return "<b>&#9888;Not updated $name</b><br />Validation error: " . $e->getMessage();
+                }
+            }
+        }
+
+        $this->scheduledSectionsData = $newScheduledSectionsData;
         $this->writeToJson();
-        return "Updated data for " . $riverSection['name'];
+        return "Updated schedule sections data";
     }
 
     /* do validation on river section values
        throw exception if a problem
     */
-    private function validateRiverSectionUpdateData($postData) {
-        $this->validateFloat("Longitude", $postData['longitude']);
-        $this->validateFloat("Latitude", $postData['latitude']);
-        $this->validateFloat("Scrape Value", $postData['scrape_value']);
-        $this->validateFloat("Low Value", $postData['low_value']);
-        $this->validateFloat("Medium Value", $postData['medium_value']);
-        $this->validateFloat("High Value", $postData['high_value']);
-        $this->validateFloat("Very High Value", $postData['very_high_value']);
-        $this->validateFloat("Huge Value", $postData['huge_value']);
-        $this->validateFloatOrEmpty("Put In Longitude", $postData['put_in_long']);
-        $this->validateFloatOrEmpty("Put In Latitude", $postData['put_in_lat']);
-        $this->validateFloatOrEmpty("Get Out Longitude", $postData['get_out_long']);
-        $this->validateFloatOrEmpty("Get Out Latitude", $postData['get_out_lat']);
-        if (filter_var($postData['gauge_location_code'], FILTER_VALIDATE_INT) === false) {
-            throw new Exception("SEPA gauge code not an int");
-        }
-        $this->validateNotNegative("Latitude", $postData['latitude']);
-        $this->validateNotNegative("Scrape Value", $postData['scrape_value']);
-        $this->validateNotNegative("Low Value", $postData['low_value']);
-        $this->validateNotNegative("Medium Value", $postData['medium_value']);
-        $this->validateNotNegative("High Value", $postData['high_value']);
-        $this->validateNotNegative("Very High Value", $postData['very_high_value']);
-        $this->validateNotNegative("Huge Value", $postData['huge_value']);
-        if ($postData['scrape_value'] > $postData['low_value'] ||
-            $postData['low_value'] > $postData['medium_value'] ||
-            $postData['medium_value'] > $postData['high_value'] ||
-            $postData['high_value'] > $postData['very_high_value'] ||
-            $postData['very_high_value'] > $postData['huge_value']) {
-            throw new Exception("River level values not in sequential order");
-        }
-        if (!filter_var($postData['rivername'], FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>"/^[a-zA-Z \(\)]+$/")))) {
+    private function validateScheduledSectionUpdateData($scheduledSection) {
+        $this->validateFloat("Longitude", $scheduledSection['longitude']);
+        $this->validateFloat("Latitude", $scheduledSection['latitude']);
+        $this->validateFloatOrEmpty("Put In Longitude", $scheduledSection['put_in_long']);
+        $this->validateFloatOrEmpty("Put In Latitude", $scheduledSection['put_in_lat']);
+        $this->validateFloatOrEmpty("Get Out Longitude", $scheduledSection['get_out_long']);
+        $this->validateFloatOrEmpty("Get Out Latitude", $scheduledSection['get_out_lat']);
+        $this->validateNotNegative("Latitude", $scheduledSection['latitude']);
+        $this->validateBoolean("Constant", $scheduledSection['constant']);
+        if (!filter_var($scheduledSection['name'], FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>"/^[a-zA-Z \(\)]+$/")))) {
             throw new Exception("Name not text");
+        }
+        if (isset($scheduledSection['dates'])) {
+            foreach($scheduledSection['dates'] as $date) {
+                $this->validateDate("Date", $date);
+            }
         }
     }
 
@@ -299,6 +267,7 @@ class RiverSections {
             throw new Exception("$name $data is not a number");
         }
     }
+
     /* throw exception if it's negatuve */
     private function validateNotNegative($name, $data) {
         if ($data < 0) {
@@ -306,139 +275,94 @@ class RiverSections {
         }
     }
 
-    /* HTML editable form for adding a new section */
-    public function addRiverForm() {
-        $riverSection = array();
-        $riverSection['name'] = "";
-        $riverSection['gauge_location_code'] = "";
-        $riverSection['longitude'] = "";
-        $riverSection['latitude'] = "";
-        $riverSection['scrape_value'] = "";
-        $riverSection['low_value'] = "";
-        $riverSection['medium_value'] = "";
-        $riverSection['high_value'] = "";
-        $riverSection['very_high_value'] = "";
-        $riverSection['huge_value'] = "";
-        $riverSection['grade'] = "";
-        $riverSection['guidebook_link'] = "";
-        $riverSection['sca_guidebook_no'] = "";
-        $riverSection['access_issue'] = "";
-        $riverSection['google_mymaps'] = "";
-        $riverSection['kml'] = "";
-        $riverSection['webcam'] = "";
-        $riverSection['notes'] = "";
-        $riverSection['put_in_long'] = "";
-        $riverSection['put_in_lat'] = "";
-        $riverSection['get_out_long'] = "";
-        $riverSection['get_out_lat'] = "";
+    /* throw exception if it's negatuve */
+    private function validateBoolean($name, $data) {
+        $int = (int) $data;
+        if ($int != "0" && $int != "1") {
+            throw new Exception("$name is not 0 or 1");
+        }
+    }
 
-        $reply = "<legend>Add New River Section</legend>";
-        $reply .= "<form action='river-section.php' method='post'>\n";
-        $reply .= $this->editRiverFormLine($riverSection);
-        $reply .= "<input type='submit' name='add' value='Add New River' />\n";
+    /* throw exception if it's negatuve */
+    private function validateDate($name, $data) {
+        if ($data == "") {
+            return;
+        }
+        $date = explode("-", $data);
+        if ($date[0] < 2020 or $date[0] > 2100) {
+            throw new Exception("$data is not a valid year");
+        }
+        if ($date[1] < 1 or $date[1] > 12) {
+            throw new Exception("$data is not a valid month");
+        }
+        if ($date[2] < 1 or $date[2] > 31) {
+            throw new Exception("$data is not a valid day");
+        }
+    }
+
+    /* HTML editable form for adding a new section */
+    public function addScheduledSectionForm() {
+        $scheduledSection = array();
+        $scheduledSection['name'] = "";
+        $scheduledSection['longitude'] = "";
+        $scheduledSection['latitude'] = "";
+        $scheduledSection['grade'] = "";
+        $scheduledSection['guidebook_link'] = "";
+        $scheduledSection['sca_guidebook_no'] = "";
+        $scheduledSection['info_link'] = "";
+        $scheduledSection['access_issue'] = "";
+        $scheduledSection['google_mymaps'] = "";
+        $scheduledSection['kml'] = "";
+        $scheduledSection['webcam'] = "";
+        $scheduledSection['notes'] = "";
+        $scheduledSection['put_in_long'] = "";
+        $scheduledSection['put_in_lat'] = "";
+        $scheduledSection['get_out_long'] = "";
+        $scheduledSection['get_out_lat'] = "";
+        $scheduledSection['constant'] = "";
+        $scheduledSection['dates'] = array();
+
+        $reply = "<form action='scheduled-section.php' method='post'>\n";
+        $reply .= "<div class='form' id='section-new'>";
+        $reply .= "<legend>Add New Scheduled Section</legend>";
+        $reply .= $this->editScheduledSectionFormLine($scheduledSection);
+        $reply .= "<input type='submit' name='add' value='Add New Scheduled Section' />\n";
+        $reply .= "</div>";
         $reply .= "</form>\n";
         return $reply;
     }
 
-    /* Add the SEPA gauge name from the .csv file to the river sections
-    .json so it is accessible from JavaScript */
-    public function mergeInGaugeNames() {
-        $grabSepaGauges = new GrabSepaGauges;
-        $sepaGaugesData = $grabSepaGauges->sepaData();
-        foreach($this->riverSectionsData as $jsonid => $riverSection) {
-            $gauge_id = $this->riverSectionsData[$jsonid]['gauge_location_code'];
-            $this->riverSectionsData[$jsonid]['gauge_name'] = $sepaGaugesData[$gauge_id ]['gauge_name'];
-        }
-    }
-
-    /* process add new river submit */
-    public function addNewRiverSection($postData) {
+    /* process add new section submit */
+    public function addNewScheduledSection($postData) {
+        $scheduledSection = array();
+        $scheduledSection['name'] = $postData['0_sectionname'];
+        $scheduledSection['longitude'] = $postData['0_longitude'];
+        $scheduledSection['latitude'] = $postData['0_latitude'];
+        $scheduledSection['grade'] = $postData['0_grade'];
+        $scheduledSection['guidebook_link'] = $postData['0_guidebook_link'];
+        $scheduledSection['sca_guidebook_no'] = $postData['0_sca_guidebook_no'];
+        $scheduledSection['info_link'] = $postData['0_info_link'];
+        $scheduledSection['access_issue'] = $postData['0_access_issue'];
+        $scheduledSection['google_mymaps'] = $postData['0_google_mymaps'];
+        $scheduledSection['kml'] = $postData['0_kml'];
+        $scheduledSection['webcam'] = $postData['0_webcam'];
+        $scheduledSection['notes'] = $postData['0_notes'];
+        $scheduledSection['put_in_long'] = $postData['0_put_in_long'];
+        $scheduledSection['put_in_lat'] = $postData['0_put_in_lat'];
+        $scheduledSection['get_out_long'] = $postData['0_get_out_long'];
+        $scheduledSection['get_out_lat'] = $postData['0_get_out_lat'];
+        $scheduledSection['constant'] = $postData['0_constant'];
+        $scheduledSection['dates'] = array();
         try {
-            $this->validateRiverSectionUpdateData($postData);
+            $this->validateScheduledSectionUpdateData($scheduledSection);
         } catch (Exception $e) {
-            $name = $postData['rivername'];
+            $name = $postData['0_sectionname'];
             return "<b>&#9888;Not added $name</b><br />Validation error: " . $e->getMessage() . "<br />Click Back to retry";
         }
-        $riverSection = array();
-        $riverSection['name'] = $postData['rivername'];
-        $riverSection['gauge_location_code'] = $postData['gauge_location_code'];
-        $riverSection['longitude'] = $postData['longitude'];
-        $riverSection['latitude'] = $postData['latitude'];
-        $riverSection['scrape_value'] = $postData['scrape_value'];
-        $riverSection['low_value'] = $postData['low_value'];
-        $riverSection['medium_value'] = $postData['medium_value'];
-        $riverSection['high_value'] = $postData['high_value'];
-        $riverSection['very_high_value'] = $postData['very_high_value'];
-        $riverSection['huge_value'] = $postData['huge_value'];
-        $riverSection['grade'] = $postData['grade'];
-        $riverSection['guidebook_link'] = $postData['guidebook_link'];
-        $riverSection['sca_guidebook_no'] = $postData['sca_guidebook_no'];
-        $riverSection['access_issue'] = $postData['access_issue'];
-        $riverSection['google_mymaps'] = $postData['google_mymaps'];
-        $riverSection['kml'] = $postData['kml'];
-        $riverSection['webcam'] = $postData['webcam'];
-        $riverSection['notes'] = $postData['notes'];
-        $riverSection['put_in_long'] = $postData['put_in_long'];
-        $riverSection['put_in_lat'] = $postData['put_in_lat'];
-        $riverSection['get_out_long'] = $postData['get_out_long'];
-        $riverSection['get_out_lat'] = $postData['get_out_lat'];
-        $this->riverSectionsData[] = $riverSection;
-        $this->mergeInGaugeNames();
+        $this->scheduledSectionsData[] = $scheduledSection;
 
         $this->writeToJson();
-        return "Added new river " . $riverSection['name'];
-    }
-
-    /* deal with submitted request to delete a river */
-    public function deleteRiverSection($postData) {
-        $jsonid = $postData['riverUpdates'];
-        unset($this->riverSectionsData[$jsonid]); // turns it into a hash.
-        $this->riverSectionsData = array_values($this->riverSectionsData); // returns it to array.  Go PHP.
-        $this->writeToJson();
-        return "Deleted section " . $postData['rivername'];
-    }
-
-    //returns time of last download from SEPA
-    public function downloadTime() {
-        $timestampFile = fopen($this->downloadReadingsTimestampFile, "r") or die("Unable to open file!");
-        $timestamp = fread($timestampFile, 20);
-        return date('D d M Y H:i', $timestamp);
-    }
-
-    //returns SEPA reading which is most recent
-    public function calculateMostRecentReading() {
-        $grabSepaGauges = new GrabSepaGauges;
-        $sepaGaugesData = $grabSepaGauges->sepaData();
-        $grabSepaRivers = new GrabSepaRivers();
-        if (!$grabSepaRivers->readFromJson()) {
-            print "<h1>Sorry no river reading data available, try again soon</h1>";
-            die();
-        }
-        $mostRecentTimestamp = 0;
-        $mostRecentTime = "";
-        $mostRecentRiver = "";
-        $mostRecentLevel = 0;
-        foreach($this->riverSectionsData as $jsonid => $riverSection) {
-            $time = $grabSepaRivers->riversReadingsData[$riverSection['gauge_location_code']]['currentReadingTime'];
-            if (empty($time)) {
-                continue;
-            }
-            $time_explode = explode('/', $time); // need to swap date and month cos PHP likes US date format
-            $ustime = $time_explode[1] . '/' . $time_explode[0] . '/' . $time_explode[2];
-            $timestamp = strtotime($ustime);
-            if ($timestamp > $mostRecentTimestamp) {
-                $mostRecentTimestamp = $timestamp;
-                $mostRecentTime = $time;
-                $mostRecentRiver = $riverSection['name'];
-                $mostRecentLevel = $grabSepaRivers->riversReadingsData[$riverSection['gauge_location_code']]['currentReading'];
-            }
-        }
-        $warning = "";
-        $hours = round((time() - $mostRecentTimestamp) / 60 / 60, 0, PHP_ROUND_HALF_DOWN);
-        if ($hours >= 4) {
-            $warning = "<b style='color: red'>Warning data from SEPA is over $hours hours old.</b>";
-        }
-        return "$mostRecentRiver at $mostRecentTime reading $mostRecentLevel $warning";
+        return "Added new section " . $scheduledSection['name'];
     }
 
     // Used by table-view.php to print the table
