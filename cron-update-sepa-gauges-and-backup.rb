@@ -17,6 +17,9 @@ LOCK_FILE = Dir.pwd + '/' + 'CRON-UPDATE-SEPA-GAUGES-AND-BACKUP-LOCK'
 RIVER_SECTIONS_FILE = '/home/jr/www/www.andyjacksonfund.org.uk/wheres-the-water/data/river-sections.json'
 RIVER_SECTIONS_FILE_COPY = '/home/jr/www/www.andyjacksonfund.org.uk/wheres-the-water/data/river-sections-sca-copy.json'
 RIVER_SECTIONS_DEV_FILE = '/home/jr/www/dev.andyjacksonfund.org.uk/wheres-the-water/data/river-sections.json'
+SCHEDULED_SECTIONS_FILE = '/home/jr/www/www.andyjacksonfund.org.uk/wheres-the-water/data/scheduled-sections.json'
+SCHEDULED_SECTIONS_FILE_COPY = '/home/jr/www/www.andyjacksonfund.org.uk/wheres-the-water/data/scheduled-sections-sca-copy.json'
+SCHEDULED_SECTIONS_DEV_FILE = '/home/jr/www/dev.andyjacksonfund.org.uk/wheres-the-water/data/scheduled-sections.json'
 
 class UpdateAndBackup
   def run_locked
@@ -63,10 +66,17 @@ class UpdateAndBackup
       File.write(RIVER_SECTIONS_FILE_COPY, JSON.pretty_generate(river_sections_json))
       File.write(RIVER_SECTIONS_DEV_FILE, JSON.pretty_generate(river_sections_json))
 
+      # get JSON and tidy and backup
+      river_sections_json = JSON.parse(File.open(SCHEDULED_SECTIONS_FILE).read)
+      File.write(SCHEDULED_SECTIONS_FILE, JSON.pretty_generate(river_sections_json))
+      File.write(SCHEDULED_SECTIONS_FILE_COPY, JSON.pretty_generate(river_sections_json))
+      File.write(SCHEDULED_SECTIONS_DEV_FILE, JSON.pretty_generate(river_sections_json))
+
       # commit to git
       diff = `git diff`
       puts diff if diff.length > 3
       `git add data/river-sections-sca-copy.json`
+      `git add data/scheduled-sections-sca-copy.json`
       `git commit -m 'update river-sections-sca-copy.json from embra server' && git push`
     end
     #pp "run done"
