@@ -2759,5 +2759,30 @@
     "get_out_long": "",
     "get_out_lat": "",
     "gauge_name": "Dalmore"
+  },
+  {
+    "name": "Water of Leith",
+    "gauge_location_code": "14868",
+    "longitude": "-3.24883",
+    "latitude": "55.92380",
+    "scrape_value": "10",
+    "low_value": "10",
+    "medium_value": "10",
+    "high_value": "10",
+    "very_high_value": "10",
+    "huge_value": "10",
+    "grade": "2/3",
+    "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/southern-uplands/water-of-leith-balerno-to-stockbridge",
+    "sca_guidebook_no": "266",
+    "access_issue": "",
+    "google_mymaps": "",
+    "kml": "",
+    "webcam": "",
+    "notes": "",
+    "put_in_long": "",
+    "put_in_lat": "",
+    "get_out_long": "",
+    "get_out_lat": "",
+    "gauge_name": "Murrayfield"
   }
 ]
