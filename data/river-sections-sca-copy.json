@@ -2734,5 +2734,30 @@
     "get_out_lat": "56.8121",
     "classification": "",
     "classification_url": ""
+  },
+  {
+    "name": "North Esk (Lothian)",
+    "gauge_location_code": "14873",
+    "longitude": "-3.1649",
+    "latitude": "55.8531",
+    "scrape_value": "10",
+    "low_value": "10",
+    "medium_value": "10",
+    "high_value": "10",
+    "very_high_value": "10",
+    "huge_value": "10",
+    "grade": "2(3)",
+    "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/southern-uplands/river-north-esk-penicuik-to-the-sea",
+    "sca_guidebook_no": "266",
+    "access_issue": "",
+    "google_mymaps": "",
+    "kml": "",
+    "webcam": "",
+    "notes": "",
+    "put_in_long": "",
+    "put_in_lat": "",
+    "get_out_long": "",
+    "get_out_lat": "",
+    "gauge_name": "Dalmore"
   }
 ]
