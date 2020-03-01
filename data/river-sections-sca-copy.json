@@ -1474,7 +1474,7 @@
     "low_value": "0.6",
     "medium_value": "0.7",
     "name": "Dee (Grampian) (Middle)",
-    "notes": "Uses gauge upstream of Bridge of Gairn, may be better to change to Woodend gauge which is closer",
+    "notes": "New calibrations Feb 2020, please send more calibrations for confirmation",
     "put_in_lat": "57.0652",
     "put_in_long": "-2.6485",
     "river_zone_url": "https://riverzone.eu/calibration/c48d829c-049e-5fb2-9ce4-593dc14d5943.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Dee (Grampian) (Middle)&zones=,ff0000,Huge|250,ff6060,Very+High|200,ffc004,High|150,ffff33,Medium|100,00ff00,Low|50,ccffcc,Scrapeable|0,cccccc,Empty",
@@ -2178,7 +2178,7 @@
     "longitude": "-2.3381246",
     "low_value": "0.77",
     "medium_value": "1",
-    "name": "Dee (Drumoak)",
+    "name": "Dee (Grampian) (Drumoak)",
     "notes": "Marathon site. Based on 1 calibration at Drumoak using Garthdee gauge, please fill in form to report more",
     "river_zone_url": "https://riverzone.eu/calibration/99e98e00-2d64-4220-bb5e-d328f82f406e.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Dee (Drumoak)&zones=,ff0000,Huge|200,ff6060,Very+High|200,ffc004,High|200,ffff33,Medium|100,00ff00,Low|77,ccffcc,Scrapeable|0,cccccc,Empty",
     "river_zone_url_mobile": "https://riverzone.eu/calibration/99e98e00-2d64-4220-bb5e-d328f82f406e.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Dee (Drumoak)&zones=,ff0000,Huge|200,ff6060,Very+High|200,ffc004,High|200,ffff33,Medium|100,00ff00,Low|77,ccffcc,Scrapeable|0,cccccc,Empty",
@@ -2186,7 +2186,11 @@
     "scrape_value": "0.0",
     "very_high_value": "2",
     "webcam": "https://www.farsondigitalwatercams.com/locations/banchory",
-    "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImZldWdoX2ZhbGxzLzIwMTkvMDEvMjEvMDg6NTA6MDAuanBnIl0sWyJwIiwidGh1bWIiLCJ4MTUwIl1d.jpg"
+    "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImZldWdoX2ZhbGxzLzIwMTkvMDEvMjEvMDg6NTA6MDAuanBnIl0sWyJwIiwidGh1bWIiLCJ4MTUwIl1d.jpg",
+    "put_in_lat": "",
+    "put_in_long": "",
+    "get_out_lat": "",
+    "get_out_long": ""
   },
   {
     "access_issue": "",
