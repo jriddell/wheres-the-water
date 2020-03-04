@@ -18,7 +18,7 @@ class GrabSepaGauges {
     const SEPA_CSV = 'SEPA_River_Levels_Web.csv';
     const DATADIR = 'data';
     const SEPA_DOWNLOAD_PERIOD = 86400; // 60 * 60 * 24; // download gauges once a day
-    const SEPA_URL = 'http://apps.sepa.org.uk/database/riverlevels/SEPA_River_Levels_Web.csv';
+    const SEPA_URL = 'https://www2.sepa.org.uk/waterlevels/CSVs/SEPA_River_Levels_Web.csv';
 
     public $sepaFile;
     public $sepaCsvData; // csv data as string
