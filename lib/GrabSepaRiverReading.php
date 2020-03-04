@@ -15,7 +15,7 @@ require_once 'SepaRiverReadingHistory.php';
 class GrabSepaRiverReading {
     const DATADIR = 'data';
     const SEPA_DOWNLOAD_PERIOD = 300; // 60 * 5; // make sure current download is no older than 5 minutes
-    const SEPA_URL = 'https://apps.sepa.org.uk/database/riverlevels/';
+    const SEPA_URL = 'https://www2.sepa.org.uk/waterlevels/CSVs/';
 
     public $gauge_id;
     public $currentReading;
