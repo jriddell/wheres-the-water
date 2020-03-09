@@ -2803,11 +2803,13 @@
     "google_mymaps": "",
     "kml": "",
     "webcam": "",
-    "notes": "",
+    "notes": "Please send calibrations for confirmation",
     "put_in_long": "-3.6299",
     "put_in_lat": "57.4945",
     "get_out_long": "-3.6713",
     "get_out_lat": "57.525",
-    "gauge_name": "Dunphail"
+    "gauge_name": "Dunphail",
+    "classification": "",
+    "classification_url": ""
   }
 ]
