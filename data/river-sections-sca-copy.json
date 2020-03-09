@@ -2784,5 +2784,30 @@
     "get_out_long": "",
     "get_out_lat": "",
     "gauge_name": "Murrayfield"
+  },
+  {
+    "name": "Divie",
+    "gauge_location_code": "234206",
+    "longitude": "-3.6299",
+    "latitude": "57.4945",
+    "scrape_value": "0.2",
+    "low_value": "0.25",
+    "medium_value": "0.4",
+    "high_value": "0.6",
+    "very_high_value": "0.8",
+    "huge_value": "1.2",
+    "grade": "4 (5)",
+    "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/north-east/river-divie",
+    "sca_guidebook_no": "194",
+    "access_issue": "",
+    "google_mymaps": "",
+    "kml": "",
+    "webcam": "",
+    "notes": "",
+    "put_in_long": "-3.6299",
+    "put_in_lat": "57.4945",
+    "get_out_long": "-3.6713",
+    "get_out_lat": "57.525",
+    "gauge_name": "Dunphail"
   }
 ]
