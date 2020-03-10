@@ -2811,5 +2811,30 @@
     "gauge_name": "Dunphail",
     "classification": "",
     "classification_url": ""
+  },
+  {
+    "name": "Liddel Water",
+    "gauge_location_code": "133170",
+    "longitude": "-2.893",
+    "latitude": "55.087",
+    "scrape_value": "0.5",
+    "low_value": "0.6",
+    "medium_value": "0.75",
+    "high_value": "0.8",
+    "very_high_value": "0.9",
+    "huge_value": "1.0",
+    "grade": "4",
+    "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/england/north-west/liddel-water",
+    "sca_guidebook_no": "316",
+    "access_issue": "",
+    "google_mymaps": "",
+    "kml": "",
+    "webcam": "",
+    "notes": "Calibrations unconfirmed, please send more to confirm",
+    "put_in_long": "",
+    "put_in_lat": "",
+    "get_out_long": "",
+    "get_out_lat": "",
+    "gauge_name": "Newcastleton"
   }
 ]
