@@ -2838,5 +2838,30 @@
     "gauge_name": "Newcastleton",
     "classification": "",
     "classification_url": ""
+  },
+  {
+    "name": "Annan",
+    "gauge_location_code": "133146",
+    "longitude": "-3.407399",
+    "latitude": "55.156374",
+    "scrape_value": "0.6",
+    "low_value": "0.6",
+    "medium_value": "0.6",
+    "high_value": "0.6",
+    "very_high_value": "0.6",
+    "huge_value": "0.6",
+    "grade": "1(2)",
+    "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/southern-uplands/river-annan-johnstonebridge-to-st-mungos-church",
+    "sca_guidebook_no": "Touring 126",
+    "access_issue": "",
+    "google_mymaps": "",
+    "kml": "",
+    "webcam": "https://www.farsondigitalwatercams.com/locations/hoddom",
+    "notes": "0.6 reported as Low.  Please send more calibrations.",
+    "put_in_long": "",
+    "put_in_lat": "",
+    "get_out_long": "",
+    "get_out_lat": "",
+    "gauge_name": "Brydekirk"
   }
 ]
