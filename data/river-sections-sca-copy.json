@@ -2912,6 +2912,8 @@
     "put_in_lat": "",
     "get_out_long": "",
     "get_out_lat": "",
-    "gauge_name": "Culfork"
+    "gauge_name": "Culfork",
+    "classification": "",
+    "classification_url": ""
   }
 ]
