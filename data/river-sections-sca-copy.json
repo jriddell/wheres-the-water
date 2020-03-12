@@ -2863,5 +2863,30 @@
     "get_out_long": "",
     "get_out_lat": "",
     "gauge_name": "Brydekirk"
+  },
+  {
+    "name": "Don (Middle)",
+    "gauge_location_code": "234170",
+    "longitude": "-2.71712",
+    "latitude": "57.2423",
+    "scrape_value": "0",
+    "low_value": "0",
+    "medium_value": "0",
+    "high_value": "0",
+    "very_high_value": "0",
+    "huge_value": "0",
+    "grade": "1/2",
+    "guidebook_link": "",
+    "sca_guidebook_no": "Touring 86",
+    "access_issue": "",
+    "google_mymaps": "",
+    "kml": "",
+    "webcam": "https://www.farsondigitalwatercams.com/locations/alford_don",
+    "notes": "",
+    "put_in_long": "",
+    "put_in_lat": "",
+    "get_out_long": "",
+    "get_out_lat": "",
+    "gauge_name": "Alford"
   }
 ]
