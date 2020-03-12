@@ -2888,5 +2888,30 @@
     "get_out_long": "",
     "get_out_lat": "",
     "gauge_name": "Alford"
+  },
+  {
+    "name": "Don (Upper)",
+    "gauge_location_code": "234191",
+    "longitude": "-3.11016",
+    "latitude": "57.18022",
+    "scrape_value": "0.7",
+    "low_value": "0.8",
+    "medium_value": "0.9",
+    "high_value": "1.0",
+    "very_high_value": "1.1",
+    "huge_value": "1.2",
+    "grade": "1/2",
+    "guidebook_link": "",
+    "sca_guidebook_no": "Touring 86",
+    "access_issue": "",
+    "google_mymaps": "",
+    "kml": "",
+    "webcam": "https://www.farsondigitalwatercams.com/locations/alford_don",
+    "notes": "New calibrations thanks Graham.  Please send reports for confirmations.",
+    "put_in_long": "",
+    "put_in_lat": "",
+    "get_out_long": "",
+    "get_out_lat": "",
+    "gauge_name": "Culfork"
   }
 ]
