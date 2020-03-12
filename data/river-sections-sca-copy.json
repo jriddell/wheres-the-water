@@ -2953,7 +2953,7 @@
     "very_high_value": "0",
     "huge_value": "0",
     "grade": "1",
-    "guidebook_link": "",
+    "guidebook_link": "Please report calibrations for Park gauge",
     "sca_guidebook_no": "Touring 82",
     "access_issue": "",
     "google_mymaps": "",
@@ -2964,6 +2964,8 @@
     "put_in_lat": "",
     "get_out_long": "",
     "get_out_lat": "",
-    "gauge_name": "Park"
+    "gauge_name": "Park",
+    "classification": "",
+    "classification_url": ""
   }
 ]
