@@ -2971,5 +2971,30 @@
     "gauge_name": "Park",
     "classification": "",
     "classification_url": ""
+  },
+  {
+    "name": "Nethan",
+    "gauge_location_code": "133102",
+    "longitude": "-3.8888",
+    "latitude": "55.6896",
+    "scrape_value": "0.8",
+    "low_value": "0.8",
+    "medium_value": "0.8",
+    "high_value": "0.8",
+    "very_high_value": "0.8",
+    "huge_value": "0.8",
+    "grade": "3/4",
+    "guidebook_link": "",
+    "sca_guidebook_no": "269",
+    "access_issue": "",
+    "google_mymaps": "",
+    "kml": "",
+    "webcam": "",
+    "notes": "0.8 reported as minimum, please send in calibrations",
+    "put_in_long": "",
+    "put_in_lat": "",
+    "get_out_long": "",
+    "get_out_lat": "",
+    "gauge_name": "Kirkmuirhill"
   }
 ]
