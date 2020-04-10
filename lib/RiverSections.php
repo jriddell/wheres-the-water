@@ -7,6 +7,7 @@ require_once 'GrabSepaGauges.php';
 require_once 'GrabSepaRivers.php';
 require_once('GrabWeatherForecast.php');
 require_once('RiverZoneStations.php');
+require_once('UUID.php');
 
 /*
 Class to deal with the river sections data
@@ -196,6 +197,7 @@ class RiverSections {
         $reply .= $this->editRiverFormInputItem("Put In Longitude", "put_in_long", $riverSection['put_in_long'], "right");
         $reply .= $this->editRiverFormInputItem("Get Out Latitude", "get_out_lat", $riverSection['get_out_lat']);
         $reply .= $this->editRiverFormInputItem("Get Out Longitude", "get_out_long", $riverSection['get_out_long'], "right");
+        $reply .= $this->editRiverFormInputItem("UUID", "uuid", $riverSection['uuid']);
         return $reply;
     }
 
@@ -242,6 +244,7 @@ class RiverSections {
         $riverSection['put_in_long'] = $postData['put_in_long'];
         $riverSection['get_out_lat'] = $postData['get_out_lat'];
         $riverSection['get_out_long'] = $postData['get_out_long'];
+        $riverSection['uuid'] = $postData['uuid'];
 
         $this->riverSectionsData[$jsonid] = $riverSection;
         $this->writeToJson();
@@ -331,6 +334,7 @@ class RiverSections {
         $riverSection['put_in_lat'] = "";
         $riverSection['get_out_long'] = "";
         $riverSection['get_out_lat'] = "";
+        $riverSection['uuid'] = "";
 
         $reply = "<legend>Add New River Section</legend>";
         $reply .= "<form action='river-section.php' method='post'>\n";
@@ -382,6 +386,7 @@ class RiverSections {
         $riverSection['put_in_lat'] = $postData['put_in_lat'];
         $riverSection['get_out_long'] = $postData['get_out_long'];
         $riverSection['get_out_lat'] = $postData['get_out_lat'];
+        $riverSection['uuid'] = UUID::v5('653a336a-7dfd-4503-be17-5c0d935d5423', $postData['rivername']);
         $this->riverSectionsData[] = $riverSection;
         $this->mergeInGaugeNames();
 
