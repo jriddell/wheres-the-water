@@ -24,7 +24,7 @@ if (array_key_exists('download', $_GET)) {
 
 ?>
 
-<form action="add-uuid.php" method="get">
+<form action="add-uuids.php" method="get">
 <input type="submit" name="download" value="Add UUIDs" />
 </form>
 
