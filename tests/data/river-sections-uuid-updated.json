@@ -10,8 +10,8 @@
         "high_value": 3,
         "very_high_value": 4,
         "huge_value": 5,
-        "webcam": "https://www.farsondigitalwatercams.com/locations/grandtully",
-        "uuid": "12345-asdfbv-1234"
+        "webcam": "https:\/\/www.farsondigitalwatercams.com\/locations\/grandtully",
+        "uuid": "Tay5e903af323b64"
     },
     {
         "name": "Ericht",
@@ -23,6 +23,7 @@
         "medium_value": 2.5,
         "high_value": 3.5,
         "very_high_value": 4.5,
-        "huge_value": 5.5
+        "huge_value": 5.5,
+        "uuid": "Ericht5e903af323b69"
     }
 ]

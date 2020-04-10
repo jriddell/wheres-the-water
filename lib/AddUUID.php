@@ -9,7 +9,7 @@
 
 require_once('RiverSections.php');
 
-class UpdateFarsonCameraThumbs {
+class AddUUID {
     const DATADIR = 'data';
     const RIVER_SECTIONS_FILE = 'river-sections.json'; // Write output here
 
@@ -18,7 +18,7 @@ class UpdateFarsonCameraThumbs {
         $this->riverSections = new RiverSections();
     }
 
-    public function doUpdateThumbs() {
+    public function doAddUUID() {
         if (!$this->riverSections->readFromJson()) {
             print "<h1>Sorry no river section data available, try again soon</h1>";
             die();
@@ -26,7 +26,7 @@ class UpdateFarsonCameraThumbs {
         $riverSectionId = 0;
         foreach ($this->riverSections->riverSectionsData as $river) {
             print "<p>".$river['name']."</p>\n";
-            if (!array_key_exists('uuid', $river) || $river['uuid'] == "") {
+            if (array_key_exists('uuid', $river) && $river['uuid'] != "") {
                 $riverSectionId++;
                 continue;
             }
