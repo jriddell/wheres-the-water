@@ -31,7 +31,7 @@ class AddUUID {
                 $riverSectionId++;
                 continue;
             }
-            $uuid = UUID::v5('1546058f-5a25-4334-85ae-e68f2a44bbaf', $this->riverSections->riverSectionsData[$riverSectionId]['name']);
+            $uuid = UUID::v5('653a336a-7dfd-4503-be17-5c0d935d5423', $this->riverSections->riverSectionsData[$riverSectionId]['name']);
             $this->riverSections->riverSectionsData[$riverSectionId]['uuid'] = $uuid;
             $riverSectionId++;
         }
