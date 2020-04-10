@@ -19,11 +19,11 @@ final class AddUUIDTest extends TestCase
         //print_r($this->addUUID->riverSections->riverSectionsData);
         $stringFromFile = file_get_contents(ROOT . '/tests/data/river-sections-uuid-updated.json');
         $jsonFromFile = json_decode($stringFromFile, true);
-        print "result:";
-        print_r($jsonFromFile[0]["uuid"]);
+        //print "result:";
+        //print_r($jsonFromFile[0]["uuid"]);
         //$json = json_encode($this->addUUID->riverSections->riverSectionsData, JSON_PRETTY_PRINT);
         $json = $this->addUUID->riverSections->riverSectionsData;
-        $this->assertEquals(substr($jsonFromFile[0]["uuid"], 0, 3), substr($json[0]["uuid"], 0, 3));
-        $this->assertEquals(substr($jsonFromFile[1]["uuid"], 0, 3), substr($json[1]["uuid"], 0, 3));
+        $this->assertEquals(substr($jsonFromFile[0]["uuid"], 0, 50), substr($json[0]["uuid"], 0, 50));
+        $this->assertEquals(substr($jsonFromFile[1]["uuid"], 0, 50), substr($json[1]["uuid"], 0, 50));
     }
 }

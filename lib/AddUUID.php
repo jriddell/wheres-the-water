@@ -8,6 +8,7 @@
 */
 
 require_once('RiverSections.php');
+require_once('UUID.php');
 
 class AddUUID {
     const DATADIR = 'data';
@@ -30,7 +31,7 @@ class AddUUID {
                 $riverSectionId++;
                 continue;
             }
-            $uuid = uniqid($this->riverSections->riverSectionsData[$riverSectionId]['name']);
+            $uuid = UUID::v5('1546058f-5a25-4334-85ae-e68f2a44bbaf', $this->riverSections->riverSectionsData[$riverSectionId]['name']);
             $this->riverSections->riverSectionsData[$riverSectionId]['uuid'] = $uuid;
             $riverSectionId++;
         }
