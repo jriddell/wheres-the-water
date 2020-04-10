@@ -26,7 +26,8 @@
     "sca_guidebook_no": "94",
     "scrape_value": "0.4",
     "very_high_value": "1.4",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "cf2dffcd-00f3-553a-a32b-c8f0ac7d94e5"
   },
   {
     "access_issue": "",
@@ -55,7 +56,8 @@
     "sca_guidebook_no": "306",
     "scrape_value": "0",
     "very_high_value": "2.5",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "83316709-141a-5a67-8437-bf3ead983d77"
   },
   {
     "access_issue": "",
@@ -84,7 +86,8 @@
     "sca_guidebook_no": "80",
     "scrape_value": "0",
     "very_high_value": "2",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "5110cf7f-1f7d-5b82-8f69-d6a70f6d40e8"
   },
   {
     "access_issue": "",
@@ -113,7 +116,8 @@
     "sca_guidebook_no": "274",
     "scrape_value": "0.3",
     "very_high_value": "0.8",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "83f61d9a-773e-5114-ad67-a9bc8e281c90"
   },
   {
     "access_issue": "",
@@ -142,7 +146,8 @@
     "sca_guidebook_no": "309",
     "scrape_value": "0.4",
     "very_high_value": "1",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "558d0163-1cd4-59b5-b5b5-eabdffe697f4"
   },
   {
     "access_issue": "",
@@ -172,7 +177,8 @@
     "scrape_value": "0.4",
     "very_high_value": "2.0",
     "webcam": "https://www.farsondigitalwatercams.com/locations/tarholm",
-    "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImF5ci8yMDE5LzAxLzIxLzA4OjUwOjAwLmpwZyJdLFsicCIsInRodW1iIiwieDE1MCJdXQ.jpg"
+    "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImF5ci8yMDE5LzAxLzIxLzA4OjUwOjAwLmpwZyJdLFsicCIsInRodW1iIiwieDE1MCJdXQ.jpg",
+    "uuid": "4b1aaf6b-290f-5462-9c0b-a150d773743d"
   },
   {
     "access_issue": "",
@@ -201,7 +207,8 @@
     "sca_guidebook_no": "193",
     "scrape_value": "0",
     "very_high_value": "0.5",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "dfb0ce2b-9826-5bb5-9284-1c3a1dac3bcc"
   },
   {
     "access_issue": "",
@@ -230,7 +237,8 @@
     "sca_guidebook_no": "4",
     "scrape_value": "0.8",
     "very_high_value": "1.8",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "4d88ff7f-91dd-5388-b17d-8185e3ed68f3"
   },
   {
     "access_issue": "",
@@ -259,7 +267,8 @@
     "sca_guidebook_no": "16",
     "scrape_value": "0.5",
     "very_high_value": "1.0",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "decce1aa-af00-59dd-93ae-2f6335135730"
   },
   {
     "access_issue": "",
@@ -288,7 +297,8 @@
     "sca_guidebook_no": "54",
     "scrape_value": "0",
     "very_high_value": "1.3",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "dba1ac5d-f5be-5f44-85d4-662416c5a170"
   },
   {
     "access_issue": "",
@@ -317,7 +327,8 @@
     "sca_guidebook_no": "258",
     "scrape_value": "0.7",
     "very_high_value": "1.5",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "f5e1a87f-72e9-5d1e-acc2-4b332bebe48f"
   },
   {
     "access_issue": "",
@@ -346,7 +357,8 @@
     "sca_guidebook_no": "218",
     "scrape_value": "0",
     "very_high_value": "2.7",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "def0d09f-c814-5a96-9f3d-7d3dc39fab9d"
   },
   {
     "access_issue": "",
@@ -375,7 +387,8 @@
     "sca_guidebook_no": "193",
     "scrape_value": "0.2",
     "very_high_value": "1",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "d9df9875-0820-5d41-9615-d4bffdc9a1a7"
   },
   {
     "access_issue": "",
@@ -404,7 +417,8 @@
     "sca_guidebook_no": "362",
     "scrape_value": "0.6",
     "very_high_value": "1.8",
-    "webcam": "https://www.farsondigitalwatercams.com/locations/dailly"
+    "webcam": "https://www.farsondigitalwatercams.com/locations/dailly",
+    "uuid": "08e67551-752c-542c-88e7-b70016099f95"
   },
   {
     "access_issue": "https://www.facebook.com/groups/Scottish.Whitewater/permalink/2895180173850308/",
@@ -433,7 +447,8 @@
     "sca_guidebook_no": "272",
     "scrape_value": "0.5",
     "very_high_value": "1.4",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "9a5c433f-5b1c-5e38-acdb-49dc12deb7ec"
   },
   {
     "access_issue": "",
@@ -462,7 +477,8 @@
     "sca_guidebook_no": "193",
     "scrape_value": "0.2",
     "very_high_value": "1",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "23d01334-aac1-54b1-9561-b7ce42a1f82a"
   },
   {
     "access_issue": "",
@@ -491,7 +507,8 @@
     "sca_guidebook_no": "223",
     "scrape_value": "0.6",
     "very_high_value": "1.6",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "b7f5a441-02e2-57a8-80cb-8874f922cbed"
   },
   {
     "access_issue": "https://www.canoescotland.org/hazard-tree-blockage-river-avon",
@@ -520,7 +537,8 @@
     "sca_guidebook_no": "270",
     "scrape_value": "0.5",
     "very_high_value": "1.5",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "a386f2c0-2f44-5252-95cd-db1c1938bf9d"
   },
   {
     "access_issue": "",
@@ -549,7 +567,8 @@
     "sca_guidebook_no": "184",
     "scrape_value": "1",
     "very_high_value": "2",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "dc8e32cd-48e7-5793-b6ad-164a8f5ef85f"
   },
   {
     "access_issue": "",
@@ -578,7 +597,8 @@
     "sca_guidebook_no": "144",
     "scrape_value": "0",
     "very_high_value": "3",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "61a04fc8-5dda-5ae9-9706-3a632829341d"
   },
   {
     "access_issue": "https://www.facebook.com/groups/Scottish.Whitewater/permalink/2945458202155838/",
@@ -608,7 +628,8 @@
     "scrape_value": "0",
     "very_high_value": "2",
     "webcam": "https://www.farsondigitalwatercams.com/locations/aberlour",
-    "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImJsYWNrc2JvYXQvMjAxOS8wMS8yMS8wODo1MDowMC5qcGciXSxbInAiLCJ0aHVtYiIsIngxNTAiXV0.jpg"
+    "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImJsYWNrc2JvYXQvMjAxOS8wMS8yMS8wODo1MDowMC5qcGciXSxbInAiLCJ0aHVtYiIsIngxNTAiXV0.jpg",
+    "uuid": "fe91216f-06fc-52a3-a982-e6713ce64d6f"
   },
   {
     "access_issue": "https://www.facebook.com/groups/Scottish.Whitewater/permalink/2897260896975569/",
@@ -637,7 +658,8 @@
     "sca_guidebook_no": "214",
     "scrape_value": "0.35",
     "very_high_value": "1.2",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "3313f365-be18-5193-8b33-04c54a32fb23"
   },
   {
     "access_issue": "",
@@ -666,7 +688,8 @@
     "sca_guidebook_no": "322",
     "scrape_value": "0.5",
     "very_high_value": "1.6",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "a50a5d86-1849-5758-8222-e44245ba12b4"
   },
   {
     "access_issue": "",
@@ -695,7 +718,8 @@
     "sca_guidebook_no": "184",
     "scrape_value": "0.8",
     "very_high_value": "1.3",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "d2287032-562d-5bd8-b8e6-80894da04f79"
   },
   {
     "access_issue": "",
@@ -725,7 +749,8 @@
     "scrape_value": "0",
     "very_high_value": "2",
     "webcam": "https://www.farsondigitalwatercams.com/locations/grandtully",
-    "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImdyYW5kdHVsbHkvMjAxOS8wMS8yMS8wODo1MDowMC5qcGciXSxbInAiLCJ0aHVtYiIsIngxNTAiXV0.jpg"
+    "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImdyYW5kdHVsbHkvMjAxOS8wMS8yMS8wODo1MDowMC5qcGciXSxbInAiLCJ0aHVtYiIsIngxNTAiXV0.jpg",
+    "uuid": "de620d51-ba64-5dcf-b68c-141bf45e741a"
   },
   {
     "access_issue": "",
@@ -754,7 +779,8 @@
     "sca_guidebook_no": "19",
     "scrape_value": "0.55",
     "very_high_value": "1.8",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "009b7c52-aca1-5295-ad6c-75c8a165617d"
   },
   {
     "access_issue": "",
@@ -783,7 +809,8 @@
     "sca_guidebook_no": "193",
     "scrape_value": "0.3",
     "very_high_value": "1.4",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "097f165c-1a34-5cee-bc79-449acc0b6819"
   },
   {
     "access_issue": "",
@@ -812,7 +839,8 @@
     "sca_guidebook_no": "10",
     "scrape_value": "0.4",
     "very_high_value": "2",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "c57ee26e-5cdd-56e3-8331-644cc2bc7d70"
   },
   {
     "access_issue": "",
@@ -841,7 +869,8 @@
     "sca_guidebook_no": "93",
     "scrape_value": "0.8",
     "very_high_value": "1.4",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "f922c912-ac68-577a-b563-29a54eec5a8c"
   },
   {
     "access_issue": "",
@@ -870,7 +899,8 @@
     "sca_guidebook_no": "316",
     "scrape_value": "0.6",
     "very_high_value": "1.7",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "796ce0c5-ea42-58dd-9a3b-96732c1135a0"
   },
   {
     "access_issue": "",
@@ -900,7 +930,8 @@
     "scrape_value": "0.4",
     "very_high_value": "1.5",
     "webcam": "https://www.farsondigitalwatercams.com/locations/auldgirth",
-    "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsIm5pdGgvMjAxOS8wMS8yMS8wODo1MDowMC5qcGciXSxbInAiLCJ0aHVtYiIsIngxNTAiXV0.jpg"
+    "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsIm5pdGgvMjAxOS8wMS8yMS8wODo1MDowMC5qcGciXSxbInAiLCJ0aHVtYiIsIngxNTAiXV0.jpg",
+    "uuid": "e8608c5a-8a7d-51ae-89b4-0238ef4e2128"
   },
   {
     "access_issue": "https://www.facebook.com/groups/Scottish.Whitewater/permalink/2945162608852064/",
@@ -929,7 +960,8 @@
     "sca_guidebook_no": "50",
     "scrape_value": "0.7",
     "very_high_value": "1.6",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "dee96820-3bfb-5276-998f-65fc26977969"
   },
   {
     "access_issue": "",
@@ -958,7 +990,8 @@
     "sca_guidebook_no": "72",
     "scrape_value": "0.3",
     "very_high_value": "1.1",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "37925bdb-a2f0-5138-8141-8c0d2d8b0036"
   },
   {
     "access_issue": "",
@@ -987,7 +1020,8 @@
     "sca_guidebook_no": "250",
     "scrape_value": "0.75",
     "very_high_value": "1.4",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "df8485cd-7f8f-5b5d-97bf-f02eb17a92f7"
   },
   {
     "access_issue": "",
@@ -1016,7 +1050,8 @@
     "sca_guidebook_no": "298",
     "scrape_value": "0.6",
     "very_high_value": "1.1",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "09a140d8-ec52-515e-aca3-73fe16e208f8"
   },
   {
     "access_issue": "",
@@ -1045,7 +1080,8 @@
     "sca_guidebook_no": "110",
     "scrape_value": "0.5",
     "very_high_value": "1.3",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "5d6f029f-069e-5efe-ba0a-015e33706efc"
   },
   {
     "access_issue": "",
@@ -1074,7 +1110,8 @@
     "sca_guidebook_no": "180",
     "scrape_value": "0.5",
     "very_high_value": "1.5",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "ea147adf-9858-51db-bcde-dbfe7af79f04"
   },
   {
     "access_issue": "",
@@ -1104,7 +1141,8 @@
     "scrape_value": "0",
     "very_high_value": "2",
     "webcam": "https://www.farsondigitalwatercams.com/locations/crossford",
-    "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImNseWRlLzIwMTkvMDEvMjEvMDg6NTA6MDAuanBnIl0sWyJwIiwidGh1bWIiLCJ4MTUwIl1d.jpg"
+    "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImNseWRlLzIwMTkvMDEvMjEvMDg6NTA6MDAuanBnIl0sWyJwIiwidGh1bWIiLCJ4MTUwIl1d.jpg",
+    "uuid": "77b9d805-0cf9-569e-9a12-db48d95b8243"
   },
   {
     "access_issue": "",
@@ -1133,7 +1171,8 @@
     "sca_guidebook_no": "192",
     "scrape_value": "0.4",
     "very_high_value": "1.1",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "820acba2-4b2e-512c-90b6-4ae5ab1d8761"
   },
   {
     "access_issue": "",
@@ -1162,7 +1201,8 @@
     "sca_guidebook_no": "7",
     "scrape_value": "0.9",
     "very_high_value": "2",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "10c9d423-ce2f-547b-bd35-800102e55a2a"
   },
   {
     "access_issue": "",
@@ -1191,7 +1231,8 @@
     "sca_guidebook_no": "203",
     "scrape_value": "0.4",
     "very_high_value": "1.7",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "8fc8da9f-278a-54bc-8787-dc440936d29f"
   },
   {
     "access_issue": "",
@@ -1220,7 +1261,8 @@
     "sca_guidebook_no": "244",
     "scrape_value": "0.30",
     "very_high_value": "1.5",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "23c5c91f-1bc8-5db6-ad47-614625527fc8"
   },
   {
     "access_issue": "",
@@ -1249,7 +1291,8 @@
     "sca_guidebook_no": "58",
     "scrape_value": "1.2",
     "very_high_value": "1.5",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "ae15b83b-67e1-5d59-ae4c-a2b5614dbfe5"
   },
   {
     "access_issue": "",
@@ -1278,7 +1321,8 @@
     "sca_guidebook_no": "228",
     "scrape_value": "0.8",
     "very_high_value": "1.5",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "b59d8af5-a893-5777-9f7b-fce6fb0657cd"
   },
   {
     "access_issue": "",
@@ -1307,7 +1351,8 @@
     "sca_guidebook_no": "107",
     "scrape_value": "0",
     "very_high_value": "2.4",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "4651f221-a602-539a-bd9b-84bd69da8911"
   },
   {
     "access_issue": "",
@@ -1336,7 +1381,8 @@
     "sca_guidebook_no": "13",
     "scrape_value": "0.4",
     "very_high_value": "0.8",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "42fc8531-4fcb-5420-8132-688cf6aaae04"
   },
   {
     "access_issue": "",
@@ -1366,7 +1412,8 @@
     "scrape_value": "0",
     "very_high_value": "2",
     "webcam": "https://www.farsondigitalwatercams.com/locations/callander",
-    "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsInRlaXRoX2NhbGxhbmRlci8yMDE5LzAxLzIxLzA4OjUwOjAwLmpwZyJdLFsicCIsInRodW1iIiwieDE1MCJdXQ.jpg"
+    "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsInRlaXRoX2NhbGxhbmRlci8yMDE5LzAxLzIxLzA4OjUwOjAwLmpwZyJdLFsicCIsInRodW1iIiwieDE1MCJdXQ.jpg",
+    "uuid": "fea5c874-39db-5bde-9568-e55f776b0673"
   },
   {
     "access_issue": "",
@@ -1395,7 +1442,8 @@
     "sca_guidebook_no": "178",
     "scrape_value": "0.5",
     "very_high_value": "1.5",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "2b5e028e-d01b-54e2-8b64-1a9a997f74f4"
   },
   {
     "access_issue": "",
@@ -1424,7 +1472,8 @@
     "sca_guidebook_no": "299",
     "scrape_value": "1.0",
     "very_high_value": "2.0",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "3429820e-fb98-5398-b7af-0653dfd3f81d"
   },
   {
     "access_issue": "",
@@ -1453,7 +1502,8 @@
     "sca_guidebook_no": "28",
     "scrape_value": "0.8",
     "very_high_value": "1.8",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "3cee6b12-8e31-55bd-b035-44d169c91173"
   },
   {
     "access_issue": "",
@@ -1482,7 +1532,8 @@
     "sca_guidebook_no": "240",
     "scrape_value": "0",
     "very_high_value": "0",
-    "webcam": "https://www.farsondigitalwatercams.com/locations/potarch-bridge"
+    "webcam": "https://www.farsondigitalwatercams.com/locations/potarch-bridge",
+    "uuid": "6bd89aac-dea3-5536-b298-9c984cc17548"
   },
   {
     "access_issue": "",
@@ -1511,7 +1562,8 @@
     "sca_guidebook_no": "220",
     "scrape_value": "0.2",
     "very_high_value": "1.4",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "2b4d8482-a331-551b-8413-19f03158d581"
   },
   {
     "access_issue": "",
@@ -1540,7 +1592,8 @@
     "sca_guidebook_no": "224",
     "scrape_value": "0.4",
     "very_high_value": "1",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "63cf0362-ae2f-52b4-9a28-29b85f0dfe55"
   },
   {
     "access_issue": "",
@@ -1570,7 +1623,8 @@
     "scrape_value": "0.6",
     "very_high_value": "1.4",
     "webcam": "https://www.farsondigitalwatercams.com/locations/blairgowrie",
-    "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImVyaWNodC8yMDE5LzAxLzIxLzA4OjUwOjAwLmpwZyJdLFsicCIsInRodW1iIiwieDE1MCJdXQ.jpg"
+    "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImVyaWNodC8yMDE5LzAxLzIxLzA4OjUwOjAwLmpwZyJdLFsicCIsInRodW1iIiwieDE1MCJdXQ.jpg",
+    "uuid": "a528a284-90b8-5d31-b77e-294dc92ac37e"
   },
   {
     "access_issue": "https://www.facebook.com/groups/Scottish.Whitewater/permalink/2678927252142269/",
@@ -1599,7 +1653,8 @@
     "sca_guidebook_no": "228",
     "scrape_value": "0.5",
     "very_high_value": "1.15",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "91b8c64b-90c4-5f22-bacd-baaf6e5d29d2"
   },
   {
     "access_issue": "https://www.canoescotland.org/river-muick-new-signage",
@@ -1629,7 +1684,8 @@
     "scrape_value": "0.4",
     "very_high_value": "1.2",
     "webcam": "https://www.farsondigitalwatercams.com/locations/ballater",
-    "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImRlZV9iYWxsYXRlci8yMDE5LzAxLzIxLzA4OjUwOjAwLmpwZyJdLFsicCIsInRodW1iIiwieDE1MCJdXQ.jpg"
+    "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImRlZV9iYWxsYXRlci8yMDE5LzAxLzIxLzA4OjUwOjAwLmpwZyJdLFsicCIsInRodW1iIiwieDE1MCJdXQ.jpg",
+    "uuid": "51f01c9b-9a42-564b-8ebd-a70c27cfb28f"
   },
   {
     "access_issue": "",
@@ -1659,7 +1715,8 @@
     "scrape_value": "0.5",
     "very_high_value": "1.2",
     "webcam": "https://www.farsondigitalwatercams.com/locations/livingston",
-    "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImFsbW9uZF9raXJrdG9ud2Vpcl9saXZpbmdzdG9uZS8yMDE5LzAxLzIxLzA4OjUwOjAwLmpwZyJdLFsicCIsInRodW1iIiwieDE1MCJdXQ.jpg"
+    "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImFsbW9uZF9raXJrdG9ud2Vpcl9saXZpbmdzdG9uZS8yMDE5LzAxLzIxLzA4OjUwOjAwLmpwZyJdLFsicCIsInRodW1iIiwieDE1MCJdXQ.jpg",
+    "uuid": "ddf82334-3e5b-5407-8ce1-c91bbd0b37c8"
   },
   {
     "access_issue": "https://www.canoescotland.org/upper-tay-joint-statement",
@@ -1689,7 +1746,8 @@
     "scrape_value": "0.3",
     "very_high_value": "1.5",
     "webcam": "https://www.farsondigitalwatercams.com/locations/taymouth",
-    "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImxvY2hfdGF5LzIwMTkvMDEvMjEvMDg6NTA6MDAuanBnIl0sWyJwIiwidGh1bWIiLCJ4MTUwIl1d.jpg"
+    "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImxvY2hfdGF5LzIwMTkvMDEvMjEvMDg6NTA6MDAuanBnIl0sWyJwIiwidGh1bWIiLCJ4MTUwIl1d.jpg",
+    "uuid": "6f940f85-54cd-5c31-b3f3-ad4218e51b5f"
   },
   {
     "access_issue": "",
@@ -1719,7 +1777,8 @@
     "scrape_value": "0",
     "very_high_value": "1.613",
     "webcam": "https://www.farsondigitalwatercams.com/locations/traquair",
-    "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsInR3ZWVkX3RyYXF1YWlyLzIwMTkvMDEvMjEvMDg6NTA6MDAuanBnIl0sWyJwIiwidGh1bWIiLCJ4MTUwIl1d.jpg"
+    "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsInR3ZWVkX3RyYXF1YWlyLzIwMTkvMDEvMjEvMDg6NTA6MDAuanBnIl0sWyJwIiwidGh1bWIiLCJ4MTUwIl1d.jpg",
+    "uuid": "3023e767-45d1-5533-a4c8-d7259f3be6a1"
   },
   {
     "access_issue": "https://www.canoescotland.org/south-esk-blockage",
@@ -1748,7 +1807,8 @@
     "sca_guidebook_no": "247",
     "scrape_value": "0.7",
     "very_high_value": "1.6",
-    "webcam": "https://www.farsondigitalwatercams.com/locations/finavon-castle"
+    "webcam": "https://www.farsondigitalwatercams.com/locations/finavon-castle",
+    "uuid": "fc2572ed-9f78-5487-8406-6c5a8d37d7bd"
   },
   {
     "access_issue": "",
@@ -1778,7 +1838,8 @@
     "scrape_value": "0",
     "very_high_value": "2",
     "webcam": "https://www.farsondigitalwatercams.com/locations/kintore",
-    "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImRvbl9raW50b3JlLzIwMTkvMDEvMjEvMDg6NTA6MDAuanBnIl0sWyJwIiwidGh1bWIiLCJ4MTUwIl1d.jpg"
+    "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImRvbl9raW50b3JlLzIwMTkvMDEvMjEvMDg6NTA6MDAuanBnIl0sWyJwIiwidGh1bWIiLCJ4MTUwIl1d.jpg",
+    "uuid": "82a16d0a-a98d-5f06-b9a2-7cd820bc253a"
   },
   {
     "access_issue": "",
@@ -1807,7 +1868,8 @@
     "sca_guidebook_no": "255",
     "scrape_value": "0.9",
     "very_high_value": "2",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "aed32634-eeb1-5977-add2-2774db57e83a"
   },
   {
     "access_issue": "",
@@ -1836,7 +1898,8 @@
     "sca_guidebook_no": "34",
     "scrape_value": "1.22",
     "very_high_value": "1.30",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "32d3173f-dc5f-5d02-8eb8-109d8eeac2c6"
   },
   {
     "access_issue": "https://www.canoescotland.org/river-tweed-lower-makerstoun",
@@ -1866,7 +1929,8 @@
     "scrape_value": "0",
     "very_high_value": "1.5",
     "webcam": "https://www.farsondigitalwatercams.com/locations/kelso",
-    "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImtlbHNvLzIwMTkvMDEvMjEvMDg6NTA6MDAuanBnIl0sWyJwIiwidGh1bWIiLCJ4MTUwIl1d.jpg"
+    "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImtlbHNvLzIwMTkvMDEvMjEvMDg6NTA6MDAuanBnIl0sWyJwIiwidGh1bWIiLCJ4MTUwIl1d.jpg",
+    "uuid": "6b6893a5-9782-5d03-8fb5-75d8f51b584a"
   },
   {
     "access_issue": "",
@@ -1895,7 +1959,8 @@
     "sca_guidebook_no": "20",
     "scrape_value": "0.5",
     "very_high_value": "1.2",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "bf1e0dc1-c0a7-5b54-91cc-f67af3f9e8c8"
   },
   {
     "access_issue": "",
@@ -1924,7 +1989,8 @@
     "sca_guidebook_no": "22",
     "scrape_value": "0.7",
     "very_high_value": "1.4",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "a39a45b5-00cc-5000-804e-590a1274f2f1"
   },
   {
     "access_issue": "",
@@ -1954,7 +2020,8 @@
     "scrape_value": "0.7",
     "very_high_value": "1.5",
     "webcam": "https://www.farsondigitalwatercams.com/locations/doonfoot",
-    "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImRvb24vMjAxOS8wMS8yMS8wODo1MDowMC5qcGciXSxbInAiLCJ0aHVtYiIsIngxNTAiXV0.jpg"
+    "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImRvb24vMjAxOS8wMS8yMS8wODo1MDowMC5qcGciXSxbInAiLCJ0aHVtYiIsIngxNTAiXV0.jpg",
+    "uuid": "054b903e-a603-5349-80bb-a6878a2bb4a9"
   },
   {
     "access_issue": "",
@@ -1984,7 +2051,8 @@
     "scrape_value": "0.70",
     "very_high_value": "1.5",
     "webcam": "https://www.farsondigitalwatercams.com/locations/philliphaugh",
-    "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsInBoaWxsaXBoYXVnaC8yMDE5LzAxLzIxLzA4OjUwOjAwLmpwZyJdLFsicCIsInRodW1iIiwieDE1MCJdXQ.jpg"
+    "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsInBoaWxsaXBoYXVnaC8yMDE5LzAxLzIxLzA4OjUwOjAwLmpwZyJdLFsicCIsInRodW1iIiwieDE1MCJdXQ.jpg",
+    "uuid": "ed3b92a5-96d2-505b-a0ee-5ad8244904db"
   },
   {
     "access_issue": "",
@@ -2013,7 +2081,8 @@
     "sca_guidebook_no": "305",
     "scrape_value": "0.3",
     "very_high_value": "1.2",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "887d6c53-1c1e-5671-9eea-d0e07a0af1fe"
   },
   {
     "access_issue": "",
@@ -2043,7 +2112,8 @@
     "scrape_value": "0.4",
     "very_high_value": "1.8",
     "webcam": "https://www.farsondigitalwatercams.com/locations/eckford",
-    "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsInRldmlvdC8yMDE5LzAxLzIxLzA4OjUwOjAwLmpwZyJdLFsicCIsInRodW1iIiwieDE1MCJdXQ.jpg"
+    "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsInRldmlvdC8yMDE5LzAxLzIxLzA4OjUwOjAwLmpwZyJdLFsicCIsInRodW1iIiwieDE1MCJdXQ.jpg",
+    "uuid": "ae46b273-149b-562a-83eb-8e5d0df20da9"
   },
   {
     "access_issue": "https://www.facebook.com/will.leigh.3/videos/2089680591047360/",
@@ -2073,7 +2143,8 @@
     "scrape_value": "0.14",
     "very_high_value": "0.7",
     "webcam": "https://www.farsondigitalwatercams.com/locations/edzell",
-    "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImVza19lZHplbGwvMjAxOS8wMS8yMS8wODo1MDowMC5qcGciXSxbInAiLCJ0aHVtYiIsIngxNTAiXV0.jpg"
+    "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImVza19lZHplbGwvMjAxOS8wMS8yMS8wODo1MDowMC5qcGciXSxbInAiLCJ0aHVtYiIsIngxNTAiXV0.jpg",
+    "uuid": "ca468973-e146-5caa-b4fa-af1f6fba2c9f"
   },
   {
     "access_issue": "",
@@ -2102,7 +2173,8 @@
     "sca_guidebook_no": "051",
     "scrape_value": "0.1",
     "very_high_value": "1.1",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "a4618de7-00b6-5dca-8b2e-43e2aac46e3d"
   },
   {
     "access_issue": "",
@@ -2131,7 +2203,8 @@
     "sca_guidebook_no": "288",
     "scrape_value": "0.8",
     "very_high_value": "1.8",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "e5f3938f-30da-5121-aa51-55784b2eb346"
   },
   {
     "access_issue": "",
@@ -2160,7 +2233,8 @@
     "sca_guidebook_no": "310",
     "scrape_value": "0.7",
     "very_high_value": "1.3",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "d595aabe-d968-5b4a-80af-396995560b3b"
   },
   {
     "access_issue": "",
@@ -2190,7 +2264,8 @@
     "put_in_lat": "",
     "put_in_long": "",
     "get_out_lat": "",
-    "get_out_long": ""
+    "get_out_long": "",
+    "uuid": "e3fbb864-558e-5610-9425-3857b7564bec"
   },
   {
     "access_issue": "",
@@ -2220,7 +2295,8 @@
     "scrape_value": "1.8",
     "very_high_value": "2.9",
     "webcam": "https://www.farsondigitalwatercams.com/locations/banchory",
-    "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImZldWdoX2ZhbGxzLzIwMTkvMDEvMjEvMDg6NTA6MDAuanBnIl0sWyJwIiwidGh1bWIiLCJ4MTUwIl1d.jpg"
+    "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImZldWdoX2ZhbGxzLzIwMTkvMDEvMjEvMDg6NTA6MDAuanBnIl0sWyJwIiwidGh1bWIiLCJ4MTUwIl1d.jpg",
+    "uuid": "80d4d050-c32c-59c9-8760-a8e76a24e358"
   },
   {
     "access_issue": "",
@@ -2249,7 +2325,8 @@
     "sca_guidebook_no": "197",
     "scrape_value": "0.7",
     "very_high_value": "1.2",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "a83d72cc-95d7-51da-8d27-e88705c0e54b"
   },
   {
     "access_issue": "",
@@ -2278,7 +2355,8 @@
     "sca_guidebook_no": "240",
     "scrape_value": "0.65",
     "very_high_value": "1.2",
-    "webcam": "https://www.farsondigitalwatercams.com/locations/mar_lodge"
+    "webcam": "https://www.farsondigitalwatercams.com/locations/mar_lodge",
+    "uuid": "dc11fe84-fdd7-5ef8-b32a-f15759183542"
   },
   {
     "access_issue": "",
@@ -2308,7 +2386,8 @@
     "scrape_value": "0.3",
     "very_high_value": "1",
     "webcam": "https://www.farsondigitalwatercams.com/locations/avochie",
-    "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImF2b2NoaWUvMjAxOS8wMS8yMS8wODo1MDowMC5qcGciXSxbInAiLCJ0aHVtYiIsIngxNTAiXV0.jpg"
+    "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImF2b2NoaWUvMjAxOS8wMS8yMS8wODo1MDowMC5qcGciXSxbInAiLCJ0aHVtYiIsIngxNTAiXV0.jpg",
+    "uuid": "7d0cb169-e337-5e96-9ab7-14baf75d9ddc"
   },
   {
     "access_issue": "",
@@ -2337,7 +2416,8 @@
     "sca_guidebook_no": "303",
     "scrape_value": "0.8",
     "very_high_value": "2",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "601a76eb-3a49-5570-8d32-195092f1b424"
   },
   {
     "access_issue": "",
@@ -2366,7 +2446,8 @@
     "sca_guidebook_no": "62",
     "scrape_value": "0.47",
     "very_high_value": "1.1",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "bb29695a-39b4-56d7-8e9d-011c6ded3cf2"
   },
   {
     "access_issue": "",
@@ -2395,7 +2476,8 @@
     "sca_guidebook_no": "239",
     "scrape_value": "0.6",
     "very_high_value": "1.2",
-    "webcam": "https://www.farsondigitalwatercams.com/locations/bridge-of-gairn"
+    "webcam": "https://www.farsondigitalwatercams.com/locations/bridge-of-gairn",
+    "uuid": "cc09fbcc-a36c-58ee-a148-d5beda4b1f9f"
   },
   {
     "access_issue": "",
@@ -2424,7 +2506,8 @@
     "sca_guidebook_no": "291",
     "scrape_value": "0.8",
     "very_high_value": "1.8",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "42b7f5cd-5d0a-54d7-8a6b-2d558513b26e"
   },
   {
     "access_issue": "https://www.facebook.com/groups/Scottish.Whitewater/permalink/2964927566875568/",
@@ -2453,7 +2536,8 @@
     "sca_guidebook_no": "315",
     "scrape_value": "0.9",
     "very_high_value": "1.7",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "b4ead6f2-a8a9-5905-b17f-c2c938956236"
   },
   {
     "access_issue": "",
@@ -2482,7 +2566,8 @@
     "sca_guidebook_no": "299",
     "scrape_value": "0.7",
     "very_high_value": "2.0",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "24e7021b-3978-56ee-8828-131ca6a31e08"
   },
   {
     "access_issue": "",
@@ -2511,7 +2596,8 @@
     "sca_guidebook_no": "229",
     "scrape_value": "1",
     "very_high_value": "1",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "d3667ad4-d26f-5a88-9762-7a9cb4fc637b"
   },
   {
     "access_issue": "",
@@ -2540,7 +2626,8 @@
     "sca_guidebook_no": "90",
     "scrape_value": "0.4",
     "very_high_value": "1.0",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "b1b3c4fe-2585-5d70-99e4-333e3597bbfe"
   },
   {
     "access_issue": "",
@@ -2569,7 +2656,8 @@
     "sca_guidebook_no": "Touring 85",
     "scrape_value": "0.58",
     "very_high_value": "0.58",
-    "webcam": "https://www.farsondigitalwatercams.com/locations/pitlochry"
+    "webcam": "https://www.farsondigitalwatercams.com/locations/pitlochry",
+    "uuid": "20b65df4-a397-5e4d-9d80-f97a69e6c2b1"
   },
   {
     "access_issue": "",
@@ -2598,7 +2686,8 @@
     "sca_guidebook_no": "281",
     "scrape_value": "1.5",
     "very_high_value": "1.5",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "3fb65e64-425d-5c90-9a6c-4b3ae1b5fdc8"
   },
   {
     "access_issue": "Fence for portage at 55.9348424, -3.7038011 reported Sept 2019",
@@ -2625,7 +2714,8 @@
     "sca_guidebook_no": "",
     "scrape_value": "0.5",
     "very_high_value": "2.0",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "761c2985-e8f8-5f47-ae5e-4d7edef4f346"
   },
   {
     "access_issue": "",
@@ -2652,7 +2742,8 @@
     "very_high_value": "1.3",
     "webcam": "",
     "classification": "",
-    "classification_url": ""
+    "classification_url": "",
+    "uuid": "42c156a6-ff83-5d72-be37-0e60583efb2b"
   },
   {
     "access_issue": "",
@@ -2679,7 +2770,8 @@
     "sca_guidebook_no": "",
     "scrape_value": "0.35",
     "very_high_value": "1.0",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "11d83071-1195-5b80-a564-b604d22cd1ee"
   },
   {
     "access_issue": "",
@@ -2706,7 +2798,8 @@
     "sca_guidebook_no": "216",
     "scrape_value": "0.6",
     "very_high_value": "1.1",
-    "webcam": ""
+    "webcam": "",
+    "uuid": "a683bc1c-d044-5d23-97cd-77ae82739648"
   },
   {
     "name": "West Water",
@@ -2733,7 +2826,8 @@
     "get_out_long": "-2.7816",
     "get_out_lat": "56.8121",
     "classification": "",
-    "classification_url": ""
+    "classification_url": "",
+    "uuid": "5cfe8b26-5b96-5f67-ac5f-2333acdb8fa4"
   },
   {
     "name": "North Esk (Lothian)",
@@ -2760,7 +2854,8 @@
     "get_out_lat": "",
     "gauge_name": "Dalmore",
     "classification": "",
-    "classification_url": ""
+    "classification_url": "",
+    "uuid": "67b611a7-ca95-5893-a953-e957f1cb67c2"
   },
   {
     "name": "Water of Leith",
@@ -2787,7 +2882,8 @@
     "get_out_lat": "",
     "gauge_name": "Murrayfield",
     "classification": "",
-    "classification_url": ""
+    "classification_url": "",
+    "uuid": "0812240c-902c-584d-ac2f-3dafeb179fae"
   },
   {
     "name": "Divie",
@@ -2814,7 +2910,8 @@
     "get_out_lat": "57.525",
     "gauge_name": "Dunphail",
     "classification": "",
-    "classification_url": ""
+    "classification_url": "",
+    "uuid": "0f2f9993-9a04-5a4b-8862-39f74fb820b8"
   },
   {
     "name": "Liddel Water",
@@ -2841,7 +2938,8 @@
     "get_out_lat": "",
     "gauge_name": "Newcastleton",
     "classification": "",
-    "classification_url": ""
+    "classification_url": "",
+    "uuid": "5b620b69-8470-5eb5-8547-386bb24e97d3"
   },
   {
     "name": "Annan",
@@ -2866,7 +2964,8 @@
     "put_in_lat": "",
     "get_out_long": "",
     "get_out_lat": "",
-    "gauge_name": "Brydekirk"
+    "gauge_name": "Brydekirk",
+    "uuid": "c0fee64f-378f-5cf4-9666-92795d2ce424"
   },
   {
     "name": "Don (Middle)",
@@ -2891,7 +2990,8 @@
     "put_in_lat": "",
     "get_out_long": "",
     "get_out_lat": "",
-    "gauge_name": "Alford"
+    "gauge_name": "Alford",
+    "uuid": "a0bbb220-a784-5591-a047-01a1c5314aa7"
   },
   {
     "name": "Don (Upper)",
@@ -2918,7 +3018,8 @@
     "get_out_lat": "",
     "gauge_name": "Culfork",
     "classification": "",
-    "classification_url": ""
+    "classification_url": "",
+    "uuid": "e629bb9d-faad-5654-b97d-ea7b9daca172"
   },
   {
     "name": "Dee (Grampian) (Upper)",
@@ -2943,7 +3044,8 @@
     "put_in_lat": "",
     "get_out_long": "",
     "get_out_lat": "",
-    "gauge_name": "Polhollick"
+    "gauge_name": "Polhollick",
+    "uuid": "d35ab757-4635-5ee4-86c1-ca6255877530"
   },
   {
     "name": "Dee (Grampian) (Drumoak)",
@@ -2970,7 +3072,8 @@
     "get_out_lat": "",
     "gauge_name": "Park",
     "classification": "",
-    "classification_url": ""
+    "classification_url": "",
+    "uuid": "2f70f0d9-7c85-5795-81d7-e3e245935dc5"
   },
   {
     "name": "Nethan",
@@ -2995,6 +3098,7 @@
     "put_in_lat": "",
     "get_out_long": "",
     "get_out_lat": "",
-    "gauge_name": "Kirkmuirhill"
+    "gauge_name": "Kirkmuirhill",
+    "uuid": "8524a975-af1a-5047-8117-6d4c9a426e13"
   }
 ]
