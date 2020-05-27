@@ -2776,7 +2776,8 @@
     "very_high_value": "1.0",
     "webcam": "",
     "river_zone_url": "https://riverzone.eu/calibration/63aa6893-319c-4d02-8cc5-36d2ebc992ec.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Findhorn (Middle) (New Gauge)&zones=,ff0000,Huge|120,ff6060,Very+High|100,ffc004,High|80,ffff33,Medium|50,00ff00,Low|40,ccffcc,Scrapeable|35,cccccc,Empty",
-    "river_zone_url_mobile": "https://riverzone.eu/calibration/63aa6893-319c-4d02-8cc5-36d2ebc992ec.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Findhorn (Middle) (New Gauge)&zones=,ff0000,Huge|120,ff6060,Very+High|100,ffc004,High|80,ffff33,Medium|50,00ff00,Low|40,ccffcc,Scrapeable|35,cccccc,Empty"
+    "river_zone_url_mobile": "https://riverzone.eu/calibration/63aa6893-319c-4d02-8cc5-36d2ebc992ec.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Findhorn (Middle) (New Gauge)&zones=,ff0000,Huge|120,ff6060,Very+High|100,ffc004,High|80,ffff33,Medium|50,00ff00,Low|40,ccffcc,Scrapeable|35,cccccc,Empty",
+    "uuid": "11d83071-1195-5b80-a564-b604d22cd1ee"
   },
   {
     "access_issue": "",
