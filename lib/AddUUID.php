@@ -2,9 +2,7 @@
 /* Copyright 2018 Jonathan Riddell <jr@jriddell.org>
    May be copied under the GNU GPL version 3 (or later) only
 
-   Greps https://www.farsondigitalwatercams.com/scotland/locations for each river section with a webcam and grabs
-   the thumbnail image URL
-
+   Generate a UUID based on a set seed and the section name, add into the river-sections.json file.  This can be used by Riverzone etc to refer to our sections.
 */
 
 require_once('RiverSections.php');
