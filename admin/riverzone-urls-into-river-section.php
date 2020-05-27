@@ -5,6 +5,7 @@
 
 // Call me after adding a new section.  You may need to rm data/sepa-id-to-riverzone-id.json to refresh that.  
 // This then syncs it into data/river-sections.php to make it easy to get to from JavaScript for the map.
+//<p>FIXME: run this stuff after adding a new section.</p>
 
 require_once('../config.php');
 require_once('../lib/RiverSections.php');
@@ -72,7 +73,7 @@ p.message b { font-size: larger; }
 <p><a href="index.html">&#8592; back to admin index</a>
 
 <p>Call me after adding a new section.  You may need to rm data/sepa-id-to-riverzone-id.json to refresh that.  This then syncs it into data/river-sections.php to make it easy to get to from JavaScript for the map.</p>
-
+<p>FIXME: run this stuff after adding a new section.</p>
 <?php
 
 print "<p>Adding Links to River Sections</p>";

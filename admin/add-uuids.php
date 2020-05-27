@@ -3,7 +3,8 @@ require_once('../config.php');
 require_once('../lib/RiverSections.php');
 require_once('../lib/AddUUID.php');
 
-   Generate a UUID based on a set seed and the section name, add into the river-sections.json file.  This can be used by Riverzone etc to refer to our sections.
+//Generate a UUID based on a set seed and the section name, add into the river-sections.json file.  This can be used by Riverzone etc to refer to our sections.
+//FIXME do this after adding a new section
 ?>
 
 <html>
@@ -12,6 +13,7 @@ require_once('../lib/AddUUID.php');
 
 <h1>Add UUIDs</h1>
 <p>Generate a UUID based on a set seed and the section name, add into the river-sections.json file.  This can be used by Riverzone etc to refer to our sections.</p>
+<p>FIXME do this after adding a new section</p>
 <p><a href="index.html">&#8592; back to admin index</a></p>
 
 <?php

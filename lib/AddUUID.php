@@ -3,6 +3,7 @@
    May be copied under the GNU GPL version 3 (or later) only
 
    Generate a UUID based on a set seed and the section name, add into the river-sections.json file.  This can be used by Riverzone etc to refer to our sections.
+   FIXME do this after adding a new section
 */
 
 require_once('RiverSections.php');
