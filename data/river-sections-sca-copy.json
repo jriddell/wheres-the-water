@@ -30,7 +30,7 @@
     "uuid": "cf2dffcd-00f3-553a-a32b-c8f0ac7d94e5"
   },
   {
-    "access_issue": "",
+    "access_issue": "https://www.canoescotland.org/river-tweed-chain-bridge-at-melrose",
     "classification": "Good",
     "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=5200",
     "gauge_location_code": "9514",
@@ -48,7 +48,7 @@
     "low_value": "1.2",
     "medium_value": "1.7",
     "name": "Tweed (Berwick)",
-    "notes": "Old gauge near the sea but calibrated for Fairnilee",
+    "notes": "Access issue at Melrose Cauld added June 2020. Old gauge near the sea but calibrated for Fairnilee.",
     "put_in_lat": "",
     "put_in_long": "",
     "river_zone_url": "https://riverzone.eu/calibration/967272ac-c4e7-58e6-a165-56949d3438c1.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Tweed (Berwick)&zones=,ff0000,Huge|350,ff6060,Very+High|250,ffc004,High|200,ffff33,Medium|170,00ff00,Low|120,ccffcc,Scrapeable|0,cccccc,Empty",
@@ -1750,7 +1750,7 @@
     "uuid": "6f940f85-54cd-5c31-b3f3-ad4218e51b5f"
   },
   {
-    "access_issue": "",
+    "access_issue": "https://www.canoescotland.org/river-tweed-chain-bridge-at-melrose",
     "classification": "Good",
     "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=5203",
     "gauge_location_code": "14979",
@@ -1768,7 +1768,7 @@
     "low_value": "0.21",
     "medium_value": "0.5",
     "name": "Tweed (Fairnilee)",
-    "notes": "New calibrations Feb 2020, please send more calibrations for this Peebles gauge as relevant for Fairnilee",
+    "notes": "Access issue at Melroe Cauld added June 2020. New calibrations Feb 2020, please send more calibrations for this Peebles gauge as relevant for Fairnilee",
     "put_in_lat": "55.605646",
     "put_in_long": "-2.896935",
     "river_zone_url": "https://riverzone.eu/calibration/aa8bc9ce-97d5-5952-a6f3-471d20b32c3c.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Tweed (Fairnilee)&zones=,ff0000,Huge|190,ff6060,Very+High|161.3,ffc004,High|94.5,ffff33,Medium|50,00ff00,Low|21,ccffcc,Scrapeable|0,cccccc,Empty",
