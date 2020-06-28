@@ -3116,5 +3116,31 @@
     "get_out_lat": "",
     "gauge_name": "Kirkmuirhill",
     "uuid": "8524a975-af1a-5047-8117-6d4c9a426e13"
+  },
+  {
+    "name": "Evan Water",
+    "gauge_location_code": "133143",
+    "longitude": "-3.5026",
+    "latitude": "55.3442",
+    "scrape_value": "0",
+    "low_value": "0",
+    "medium_value": "0",
+    "high_value": "0",
+    "very_high_value": "0",
+    "huge_value": "0",
+    "grade": "3-3+",
+    "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/southern-uplands/evan-water",
+    "sca_guidebook_no": "314",
+    "access_issue": "",
+    "google_mymaps": "",
+    "kml": "",
+    "webcam": "",
+    "notes": "Needs calibrations",
+    "put_in_long": "-3.5026",
+    "put_in_lat": "55.3442",
+    "get_out_long": "-3.4541",
+    "get_out_lat": "55.3103",
+    "uuid": "e314d572-08e4-5d03-b0b6-eb739b4ed8b0",
+    "gauge_name": "Beattock"
   }
 ]
