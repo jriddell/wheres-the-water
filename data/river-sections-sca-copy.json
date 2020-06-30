@@ -3163,12 +3163,14 @@
     "google_mymaps": "",
     "kml": "",
     "webcam": "",
-    "notes": "",
+    "notes": "New add June 2020. Thanks to Calum P for calibrations.  Flows into Glazert then Kelvin.",
     "put_in_long": "",
     "put_in_lat": "",
     "get_out_long": "",
     "get_out_lat": "",
     "uuid": "63a3ebf0-7a82-5e66-80ae-29c7330336e5",
-    "gauge_name": "Lennox Castle"
+    "gauge_name": "Lennox Castle",
+    "classification": "",
+    "classification_url": ""
   }
 ]
