@@ -3144,5 +3144,31 @@
     "gauge_name": "Beattock",
     "classification": "",
     "classification_url": ""
+  },
+  {
+    "name": "Kirk Burn",
+    "gauge_location_code": "133104",
+    "longitude": "-4.223761",
+    "latitude": "55.995075",
+    "scrape_value": "0.5",
+    "low_value": "0.6",
+    "medium_value": "0.65",
+    "high_value": "0.75",
+    "very_high_value": "0.85",
+    "huge_value": "0.9",
+    "grade": "4",
+    "guidebook_link": "https://www.instagram.com/p/B8Zjhgpl9Le/",
+    "sca_guidebook_no": "",
+    "access_issue": "",
+    "google_mymaps": "",
+    "kml": "",
+    "webcam": "",
+    "notes": "",
+    "put_in_long": "",
+    "put_in_lat": "",
+    "get_out_long": "",
+    "get_out_lat": "",
+    "uuid": "63a3ebf0-7a82-5e66-80ae-29c7330336e5",
+    "gauge_name": "Lennox Castle"
   }
 ]
