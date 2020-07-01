@@ -582,7 +582,7 @@ jQuery(document).ready( function(){
             linksContent += "<img width='16' height='16' title='Open maps Link' src='/wheres-the-water/pics/osm.png' /> ";
             linksContent += "<a target='_blank' rel='noopener' href='https://www.openstreetmap.org/?mlat="+scheduledSection['latitude']+"&mlon="+scheduledSection['longitude']+"#map=12/"
                             +scheduledSection['latitude']+"/"+scheduledSection['longitude']+"'>OpenStreetMap</a> / ";
-            linksContent += "<span class='desktop'><a target='_blank' rel='noopener' href='https://www.bing.com/maps?cp="+scheduledSection['latitude']+"~"+scheduledSection['longitude']+"&sp=point."+scheduledSection['latitude']+"_"+scheduledSection['longitude']+"+"&lvl=14&style=s'>Ordnance Survey</a> /</span> ";
+            linksContent += "<span class='desktop'><a target='_blank' rel='noopener' href='https://www.bing.com/maps?cp="+scheduledSection['latitude']+"~"+scheduledSection['longitude']+"&sp=point."+scheduledSection['latitude']+"_"+scheduledSection['longitude']+"&lvl=14&style=s'>Ordnance Survey</a> /</span> ";
             linksContent += " <span class='desktop'><a target='_blank' rel='noopener' href='https://maps.google.com/maps?z=12&t=h&q=loc:"+scheduledSection['latitude']+"+"+scheduledSection['longitude']+"'>Google Maps</a></span> ";
             linksContent += "<span class='mobile'><a href='geo:0,0?q="+scheduledSection['latitude']+","+scheduledSection['longitude']+"'>Maps App</a><br /></span>";
             if ('guidebook_link' in scheduledSection && !scheduledSection['guidebook_link'].length == 0) {
