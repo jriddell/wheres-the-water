@@ -506,7 +506,7 @@ class RiverSections {
         $linkContent .= "<img title='Open maps Link' src='/wheres-the-water/pics/osm.png' width='16' height='16' /> <a target='_blank' rel='noopener' href='https://www.openstreetmap.org/?mlat=".$riverSection['latitude']."&mlon=".$riverSection['longitude']."#map=12/".$riverSection['latitude']."/".$riverSection['longitude']."'>OpenStreetMap</a> / ";
         $linkContent .= "<span class='desktop'><a target='_blank' rel='noopener' href='https://www.bing.com/maps?cp=".$riverSection['latitude']."~".$riverSection['longitude']."&lvl=14&style=s'>Ordnance Survey</a> / </span>";
         $linkContent .= "<span class='desktop'><a target='_blank' rel='noopener' href='https://maps.google.com/maps?z=12&t=h&q=loc:".$riverSection['latitude']."+".$riverSection['longitude']."'>Google Maps</a></span>";
-        $linkContent .= "<span class='mobile'><a href='geo:".$riverSection['latitude'].",".$riverSection['longitude']."'>Maps App</a></span><br />";
+        $linkContent .= "<span class='mobile'><a href='geo:0,0?q=".$riverSection['latitude'].",".$riverSection['longitude']."'>Maps App</a></span><br />";
         
         if (!empty($riverSection['guidebook_link'])) {
             $linkContent .= "<a target='_blank' rel='noopener' href='".$riverSection['guidebook_link']."'><img width='16' height='16' title='UKRGB Link' src='/wheres-the-water/pics/ukrgb.ico'/> UKRGB</a><br />";
