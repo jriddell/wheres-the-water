@@ -439,9 +439,11 @@ class ScheduledSections {
         if (!empty($riverSection['google_mymaps'])) {
             $linkContent .= "<a target='_blank' rel='noopener' href='".$riverSection['google_mymaps']."'><img width='16' height='16' title='Google MyMaps Link' src='/wheres-the-water/pics/google-mymaps.png' /> Google MyMaps</a><br />";
         }
+        /*
         if (!empty($riverSection['kml'])) {
             $linkContent .= "<a target='_blank' rel='noopener' href='".$riverSection['kml']."'><img width='16' height='16' title='KML Map' src='/wheres-the-water/pics/kml.png' /> KML Map Layer</a><br />";
         }
+        */
         if (!empty($riverSection['webcam'])) {
             $linkContent .= "<a target='_blank' rel='noopener' href='".$riverSection['webcam']."'><img width='16' height='16' title='Webcam' src='/wheres-the-water/pics/webcam.png' /> Webcam</a><br />";
         }
