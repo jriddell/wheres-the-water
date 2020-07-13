@@ -619,7 +619,7 @@ jQuery(document).ready( function(){
                 var riverReadingsTable = getRiverReadingsTable(riverSections[i], waterLevelValue);
                 var riverFilename = getRiverGraphFilename(riverSections[i]);
                 var icon = getWaterLevelIcon(riverSections[i]);
-                var contentString = "<div><p>🦠 Be considerate, be conservative. Paddle within limits, no car sharing, groups of 3 households max, stay 2m apart, practice kit hygiene. 😷</p><h4 style='padding-left: 30px;'>" + riverSection + "</h4>" +
+                var contentString = "<div><p>🦠 Be considerate, be conservative. Paddle within limits, no car sharing, groups of 4 households max, stay 2m apart, practice kit hygiene. 😷</p><h4 style='padding-left: 30px;'>" + riverSection + "</h4>" +
                     "<p style='padding-left: 30px;'><img src='" + iconBase + waterLevelValue + ext + "' /> " +
                     tidyStatusString(waterLevelValue) + ", " + currentReading + "</p>" +
                     "<p><span class='js-info'>Info</span> / <span class='js-calib-table link' style='text-decoration: underline; color: blue; cursor: pointer'>Calibrations</span> / <span class='js-forecast link' style='text-decoration: underline; color: blue; cursor: pointer'>Weather</span>";
