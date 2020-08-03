@@ -3144,5 +3144,31 @@
     "gauge_name": "Lennox Castle",
     "classification": "",
     "classification_url": ""
+  },
+  {
+    "name": "North Esk (Lower) (Old)",
+    "gauge_location_code": "14927",
+    "longitude": "-2.4933655",
+    "latitude": "56.766877",
+    "scrape_value": "0.3",
+    "low_value": "0.45",
+    "medium_value": "0.5",
+    "high_value": "0.55",
+    "very_high_value": "0.75",
+    "huge_value": "1.2",
+    "grade": "3(4)",
+    "guidebook_link": "",
+    "sca_guidebook_no": "",
+    "access_issue": "",
+    "google_mymaps": "",
+    "kml": "",
+    "webcam": "",
+    "notes": "Old gauge near the sea",
+    "put_in_long": "",
+    "put_in_lat": "",
+    "get_out_long": "",
+    "get_out_lat": "",
+    "uuid": "a1f50917-7896-5fda-a161-103dbbccb135",
+    "gauge_name": "Logie Mill"
   }
 ]
