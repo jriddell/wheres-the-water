@@ -3170,5 +3170,31 @@
     "get_out_lat": "",
     "uuid": "a1f50917-7896-5fda-a161-103dbbccb135",
     "gauge_name": "Logie Mill"
+  },
+  {
+    "name": "Shin",
+    "gauge_location_code": "234240",
+    "longitude": "-4.408",
+    "latitude": "57.9603",
+    "scrape_value": "0",
+    "low_value": "0",
+    "medium_value": "0",
+    "high_value": "0",
+    "very_high_value": "0",
+    "huge_value": "0",
+    "grade": "3(4)",
+    "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/far-north/river-shin",
+    "sca_guidebook_no": "53",
+    "access_issue": "",
+    "google_mymaps": "",
+    "kml": "",
+    "webcam": "",
+    "notes": "Please send calibrations.  Can only be run when dam is releasing, possibly on Sundays.",
+    "put_in_long": "-4.408",
+    "put_in_lat": "57.9603",
+    "get_out_long": "-4.4089",
+    "get_out_lat": "57.9444",
+    "uuid": "837b854e-7254-5e40-94d4-0eb11b0c4786",
+    "gauge_name": "Inveran"
   }
 ]
