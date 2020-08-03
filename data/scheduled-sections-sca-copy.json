@@ -466,5 +466,27 @@
     "dates": [
 
     ]
+  },
+  {
+    "name": "Meig (Lower)",
+    "longitude": "-4.716651",
+    "latitude": "57.564946",
+    "grade": "4",
+    "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/far-north/river-meig-gorge",
+    "sca_guidebook_no": "54",
+    "info_link": "",
+    "access_issue": "",
+    "google_mymaps": "",
+    "kml": "",
+    "webcam": "",
+    "notes": "Constant low flow, sometimes higher flow on Thursdays",
+    "put_in_long": "-4.716651",
+    "put_in_lat": "57.564946",
+    "get_out_long": "-4.700172",
+    "get_out_lat": "57.569549",
+    "constant": "1",
+    "dates": [
+
+    ]
   }
 ]
