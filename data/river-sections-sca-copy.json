@@ -3174,8 +3174,8 @@
   {
     "name": "Findhorn (Middle) (New Gauge)",
     "gauge_location_code": "567430",
-    "longitude": "-3.662630",
-    "latitude": "57.484083",
+    "longitude": "-3.729950",
+    "latitude": "57.484064",
     "scrape_value": "0.35",
     "low_value": "0.4",
     "medium_value": "0.5",
@@ -3195,6 +3195,8 @@
     "get_out_long": "-3.6713",
     "get_out_lat": "57.5250",
     "uuid": "11d83071-1195-5b80-a564-b604d22cd1ee",
-    "gauge_name": "Logie Bridge"
+    "gauge_name": "Logie Bridge",
+    "classification": "",
+    "classification_url": ""
   }
 ]
