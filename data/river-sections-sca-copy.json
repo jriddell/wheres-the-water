@@ -3170,5 +3170,31 @@
     "get_out_lat": "57.9444",
     "uuid": "837b854e-7254-5e40-94d4-0eb11b0c4786",
     "gauge_name": "Inveran"
+  },
+  {
+    "name": "Findhorn (Middle) (New Gauge)",
+    "gauge_location_code": "567430",
+    "longitude": "-3.662630",
+    "latitude": "57.484083",
+    "scrape_value": "0.35",
+    "low_value": "0.4",
+    "medium_value": "0.5",
+    "high_value": "0.8",
+    "very_high_value": "1.0",
+    "huge_value": "1.2",
+    "grade": "2/3",
+    "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/north-east/river-findhorn-logie-bridge-to-randolphs-leap",
+    "sca_guidebook_no": "193",
+    "access_issue": "",
+    "google_mymaps": "https://drive.google.com/open?id=18PxkUQKPHAZne4n7eOwBn0-dH3jLhSEl&usp=sharing",
+    "kml": "",
+    "webcam": "",
+    "notes": "New gauge Nov 2019, more calibrations needed",
+    "put_in_long": "-3.7468",
+    "put_in_lat": "57.4833",
+    "get_out_long": "-3.6713",
+    "get_out_lat": "57.5250",
+    "uuid": "11d83071-1195-5b80-a564-b604d22cd1ee",
+    "gauge_name": "Logie Bridge"
   }
 ]
