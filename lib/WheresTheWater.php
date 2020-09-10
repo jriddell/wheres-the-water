@@ -533,7 +533,7 @@ jQuery(document).ready( function(){
             linksContent += "<a target='_blank' rel='noopener' href='https://www.openstreetmap.org/?mlat="+riverSection['latitude']+"&mlon="+riverSection['longitude']+"#map=12/"
                             +riverSection['latitude']+"/"+riverSection['longitude']+"'>OpenStreetMap</a> / ";
             linksContent += "<span class='desktop'><a target='_blank' rel='noopener' href='https://www.bing.com/maps?cp="+riverSection['latitude']+"~"+riverSection['longitude']+"&sp=point."+riverSection['latitude']+"_"+riverSection['longitude']+"&lvl=14&style=s'>Ordnance Survey</a> /</span> ";
-            linksContent += " <span class='desktop'><a target='_blank' rel='noopener' href='https://maps.google.com/maps?z=12&t=h&q=loc:"+riverSection['latitude']+"+"+riverSection['longitude']+"'>Google Maps</a></span> ";
+            linksContent += " <span class='desktop'><a target='_blank' rel='noopener' href='https://maps.google.com/maps?z=12&t=h&q=loc:"+riverSection['latitude']+"+"+riverSection['longitude']+"'>Google Maps</a></span><br /> ";
             linksContent += "<span class='mobile'><a href='geo:0,0?q="+riverSection['latitude']+","+riverSection['longitude']+"'>Maps App</a><br /></span>";
 
             if ('guidebook_link' in riverSection && !riverSection['guidebook_link'].length == 0) {
@@ -619,7 +619,7 @@ jQuery(document).ready( function(){
                 var riverReadingsTable = getRiverReadingsTable(riverSections[i], waterLevelValue);
                 var riverFilename = getRiverGraphFilename(riverSections[i]);
                 var icon = getWaterLevelIcon(riverSections[i]);
-                var contentString = "<div><p>🦠 Be considerate, be conservative. Paddle within limits, no car sharing, groups of 5 households max, stay 2m apart, practice kit hygiene. 😷</p><h4 style='padding-left: 30px;'>" + riverSection + "</h4>" +
+                var contentString = "<div><p style='background-color: lightred'>🦠 No car sharing, groups of 2 households &amp; 6 people max, stay 2m apart, practice kit hygiene. 😷</p><h4 style='padding-left: 30px;'>" + riverSection + "</h4>" +
                     "<p style='padding-left: 30px;'><img src='" + iconBase + waterLevelValue + ext + "' /> " +
                     tidyStatusString(waterLevelValue) + ", " + currentReading + "</p>" +
                     "<p><span class='js-info'>Info</span> / <span class='js-calib-table link' style='text-decoration: underline; color: blue; cursor: pointer'>Calibrations</span> / <span class='js-forecast link' style='text-decoration: underline; color: blue; cursor: pointer'>Weather</span>";
