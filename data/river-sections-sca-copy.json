@@ -301,7 +301,7 @@
     "uuid": "dba1ac5d-f5be-5f44-85d4-662416c5a170"
   },
   {
-    "access_issue": "https://www.canoescotland.org/river-allan-ashfield",
+    "access_issue": "https://www.facebook.com/groups/Scottish.Whitewater/permalink/3445997805435206/",
     "classification": "Moderate",
     "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=6832",
     "gauge_location_code": "14890",
@@ -319,7 +319,7 @@
     "low_value": "0.9",
     "medium_value": "1.1",
     "name": "Allan Water",
-    "notes": "From Monday 24th August to Monday 7th September (inclusive) no parking at Ashfield, see access issue link.",
+    "notes": "Access issue reported 15 Sep 2020, Rail bridge just above wall of death rapid, see access issue link",
     "put_in_lat": "56.2127",
     "put_in_long": "-3.9587",
     "river_zone_url": "https://riverzone.eu/calibration/5b7abdb9-9713-5fa8-88e5-cc4fc7c7d693.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Allan Water&zones=,ff0000,Huge|170,ff6060,Very+High|150,ffc004,High|130,ffff33,Medium|110,00ff00,Low|90,ccffcc,Scrapeable|70,cccccc,Empty",
