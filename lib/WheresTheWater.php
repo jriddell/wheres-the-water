@@ -670,7 +670,7 @@ jQuery(document).ready( function(){
                     }
                 }
 
-                var contentString = "<div><h4 style='padding-left: 30px;'><span style='font-size: larger'>Scheduled Water</span>: " + scheduledSection + "</h4>" +
+                var contentString = "<div><p style='background-color: greenyellow'>🦠 No car sharing, groups of 2 households max, stay 2m apart, practice kit hygiene. Clubs with covid officers can plan for larger groups.😷</p><p style='background-color: yellow'>Central Belters Fri 9-Sun 25 Oct: <a href='https://www.gov.scot/publications/coronavirus-covid-19-update-first-ministers-speech-7-october-2020/'>don't travel outside the health board area you live in for leisure</a>, <a href='https://www.gov.scot/news/new-moves-to-stop-covid-19-spread/'>no adult contact sports or training</a>.</p><h4 style='padding-left: 30px;'><span style='font-size: larger'>Scheduled Water</span>: " + scheduledSection + "</h4>" +
                     "<p style='padding-left: 30px;'><img src='" + iconBase + scheduledSectionValue + ext + "' /> " +
                     valueString + "</p>" +
                     "<p><span class='js-info'>Info</span> / <span class='js-calib-table link' style='text-decoration: underline; color: blue; cursor: pointer'>Dates</span>"; // / <span class='js-forecast link' style='text-decoration: underline; color: blue; cursor: pointer'>Weather</span>";
