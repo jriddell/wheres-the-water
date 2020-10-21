@@ -605,7 +605,7 @@ jQuery(document).ready( function(){
             return linksContent;
         }
         function addRiverMarkers() {
-            var covidString = "<p style='background-color: greenyellow'>🦠 No car sharing, groups of 2 households max, stay 2m apart, practice kit hygiene. Clubs with covid officers can plan for larger groups.😷</p>" + "<p style='background-color: yellow'><a href='https://www.gov.scot/publications/coronavirus-covid-19-additional-measures-october-2020/'>Central Belters until Sun 1 Nov</a>: don't travel outwith the health board area you live in or into the central belt for leisure, no adult contact sports or training.</p>"
+            var covidString = "<p style='background-color: greenyellow'>🦠 No car sharing, groups of 2 households max, stay 2m apart, practice kit hygiene. Clubs with covid officers can plan for larger groups.😷</p>" + "<p style='background-color: yellow'><a href='https://www.gov.scot/publications/coronavirus-covid-19-additional-measures-october-2020/'>Central Belters until Sun 1 Nov</a>: don't travel outwith the health board area you live in or into the central belt for leisure, no adult contact sports.</p>"
             markers = new Array();
             tooltipsAreVisible = false;
             for (i=0; i<riverSections.length; i++) {
