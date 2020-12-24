@@ -605,7 +605,7 @@ jQuery(document).ready( function(){
             return linksContent;
         }
         function addRiverMarkers() {
-            var covidString = "<p style='background-color: greenyellow'>🦠 No car sharing, groups of 2 households max, stay 2m apart, practice kit hygiene. Clubs with covid officers can plan for larger groups.😷</p>" + "<p style='background-color: yellow'><a href='https://www.gov.scot/publications/coronavirus-covid-19-protection-levels/pages/protection-level-3/'>Level 3</a> restrictions</a>: it's illegal to travel outwith the local council area for leisure except 5-miles over the council border for outdoor informal exercise, max 2 households that starts and finishes at the same place.  Level 1 and 2 areas: don't travel into level 3 for leisure.</p>";
+            var covidString = "<p style='background-color: greenyellow'>🦠 It is illegal to travel outwith the local council area for leisure except 5-miles over the council border for outdoor informal exercise. No car sharing outwith your household, groups of 2 households max, stay 2m apart, practice kit hygiene. Clubs with covid officers can plan for larger groups.😷</p>";
             markers = new Array();
             tooltipsAreVisible = false;
             for (i=0; i<riverSections.length; i++) {
