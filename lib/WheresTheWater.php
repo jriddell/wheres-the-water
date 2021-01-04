@@ -605,7 +605,7 @@ jQuery(document).ready( function(){
             return linksContent;
         }
         function addRiverMarkers() {
-            var covidString = "<p style='background-color: greenyellow'><b>Level 4: Stay Local</b><br />🦠 It is illegal to travel outwith the local council area for leisure except 5-miles over the council border for outdoor informal exercise. No car sharing outwith your household, single household or groups of 2 people from 2 households max, stay 2m apart, practice kit hygiene.😷</p>";
+            var covidString = "<p style='background-color: greenyellow'><b>Lockdown: Stay at Home, Exercise Local</b><br />🦠 It is illegal to travel outwith the local council area for leisure except 5-miles over the council border for outdoor informal exercise. No car sharing outwith your household, single household or groups of 2 people from 2 households max, stay 2m apart, practice kit hygiene.😷</p>";
             markers = new Array();
             tooltipsAreVisible = false;
             for (i=0; i<riverSections.length; i++) {
