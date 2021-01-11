@@ -31,12 +31,12 @@ class GrabSepaGauges {
     function doGrab() {
         if (!file_exists($this->sepaFile) || time()-filemtime($this->sepaFile) > self::SEPA_DOWNLOAD_PERIOD) {
             $this->sepaCsvData = file_get_contents(self::SEPA_URL);
-            $this->verifyCsvData() || die('CSV data did not verify');
+            $this->verifyCsvData() || die('<a href="https://www.sepa.org.uk/help/system-temporarily-unavailable">SEPA data invalid</a>, cybers have attacked. <img src="https://i.redd.it/8falj3k93rg21.jpg">'); // CSV data did not verify
             $newSepaFile = fopen($this->sepaFile, "w") or die("Unable to open file!");
             fwrite($newSepaFile, $this->sepaCsvData);
         } else {
             $this->sepaCsvData = file_get_contents($this->sepaFile);
-            $this->verifyCsvData() || die('CSV data did not verify');
+            $this->verifyCsvData() || die('<a href="https://www.sepa.org.uk/help/system-temporarily-unavailable">SEPA data invalid</a>, cybers have attacked. <img src="https://i.redd.it/8falj3k93rg21.jpg">'); // CSV data did not verify
         }
     }
 
