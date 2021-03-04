@@ -33,7 +33,7 @@ class GrabSepaRiverReading {
         $this->gauge_id = $gauge_id;
 
         $riverFilename = "${gauge_id}?csv=true";
-        $riverFilePath = $this->dataDir . '/' . $riverFilename;
+        $riverFilePath = $this->dataDir . '/' . "${gauge_id}-SG.csv";
         $riverFileURL = $this->sepaURL . $riverFilename;
         if (!file_exists($riverFilePath) || time()-filemtime($riverFilePath) > self::SEPA_DOWNLOAD_PERIOD) {
             $riverData = @file_get_contents($riverFileURL);
