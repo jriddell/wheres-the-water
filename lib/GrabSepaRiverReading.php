@@ -15,7 +15,7 @@ require_once 'SepaRiverReadingHistory.php';
 class GrabSepaRiverReading {
     const DATADIR = 'data';
     const SEPA_DOWNLOAD_PERIOD = 300; // 60 * 5; // make sure current download is no older than 5 minutes
-    const SEPA_URL = 'https://www2.sepa.org.uk/waterlevels/CSVs/';
+    const SEPA_URL = 'https://www2.sepa.org.uk/HydroData/api/Level15/';
 
     public $gauge_id;
     public $currentReading;
@@ -32,7 +32,7 @@ class GrabSepaRiverReading {
     public function doGrabSepaRiver($gauge_id) {
         $this->gauge_id = $gauge_id;
 
-        $riverFilename = "${gauge_id}-SG.csv";
+        $riverFilename = "${gauge_id}?csv=true";
         $riverFilePath = $this->dataDir . '/' . $riverFilename;
         $riverFileURL = $this->sepaURL . $riverFilename;
         if (!file_exists($riverFilePath) || time()-filemtime($riverFilePath) > self::SEPA_DOWNLOAD_PERIOD) {
