@@ -76,7 +76,7 @@ class GrabSepaRiverReading {
         } else {
             $this->trend = 'FALLING';
         }
-        print "<p>Downloaded River Reading for gauge ".$gauge_id."</p>\n";
+        print "<p>Downloaded River Reading for gauge ".$gauge_id." ".$riverFileURL."</p>\n";
         flush();
         // save it to history
         $history = new SepaRiverReadingHistory($gauge_id);
