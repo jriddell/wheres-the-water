@@ -18,18 +18,7 @@
     "get_out_long": "-4.84497",
     "constant": "",
     "dates": [
-      "2020-03-11",
-      "2020-04-08",
-      "2020-04-09",
-      "2020-04-10",
-      "2020-09-18",
-      "2020-09-19",
-      "2020-09-20",
-      "2020-10-16",
-      "2020-10-17",
-      "2020-10-18",
-      "2020-11-15",
-      "2020-11-16"
+      "2021-03-28"
     ]
   },
   {
@@ -469,8 +458,8 @@
   },
   {
     "name": "Meig (Lower)",
-    "longitude": "-4.716651",
     "latitude": "57.564946",
+    "longitude": "-4.716651",
     "grade": "4",
     "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/far-north/river-meig-gorge",
     "sca_guidebook_no": "54",
@@ -480,10 +469,10 @@
     "kml": "",
     "webcam": "",
     "notes": "Constant low flow, sometimes higher flow on Thursdays",
-    "put_in_long": "-4.716651",
     "put_in_lat": "57.564946",
-    "get_out_long": "-4.700172",
+    "put_in_long": "-4.716651",
     "get_out_lat": "57.569549",
+    "get_out_long": "-4.700172",
     "constant": "1",
     "dates": [
 
