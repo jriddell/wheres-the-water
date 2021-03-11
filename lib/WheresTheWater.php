@@ -151,7 +151,6 @@ ul.js-calib-table-content {
     <div>
         <div class="clearfix">
             <div style="float: left; margin-right: 1em">
-            <p style='background-color: greenyellow'><b><a href='https://www.canoescotland.org/paddlesport-guidance-6th-jan'>Lockdown: Stay at Home, Exercise Local</a></b><br />🦠 It is illegal to travel outwith the local council area for leisure except 5-miles over the council border for outdoor informal exercise. No car sharing outwith your household, single household or groups of 2 people from 2 households max, stay 2m apart, practice kit hygiene.😷</p>
                 <p><b>Data Last Polled</b> <?php print $riverSections->downloadTime() ?></p>
                 <p><b>Most Recent SEPA Reading</b> <?php print $riverSections->calculateMostRecentReading() ?></p>
             </div>
