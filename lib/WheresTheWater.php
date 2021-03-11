@@ -843,7 +843,7 @@ jQuery(document).ready( function(){
               var jsDate = new Date(scheduledSectionDates[k]);
               datesTable += "<li>" + jsDate.toDateString() + "</li>\n";
               if (k==10) {
-                datesTable += "<a target='_blank' href='"+info_link+"'>💦...</a>";
+                datesTable += "<a target='_blank' href='https://"+info_link+"'>💦...</a>";
                 datesTable += "<span style='display: none'>";
               }
             }
