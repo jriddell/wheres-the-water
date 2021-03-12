@@ -605,7 +605,7 @@ jQuery(document).ready( function(){
             return linksContent;
         }
         function addRiverMarkers() {
-            var covidString = "<p style='background-color: greenyellow'><b>Lockdown: Stay at Home, Exercise Local</b><br />🦠 It is illegal to travel outwith the local council area for leisure except 5-miles over the council border for outdoor informal exercise. No car sharing outwith your household, single household or groups of 4 people from 2 households max, stay 2m apart, practice kit hygiene.  Clubs with Covid officers can organise activities in local authority area only for up to 15 people.😷</p>";
+            var covidString = "<p style='background-color: greenyellow'><b>Lockdown: Stay at Home, Exercise Local</b><br />🦠 It is illegal to travel outwith the local council area for leisure except 5-miles over the council border for outdoor informal exercise. No car sharing outwith your household, single household or groups of 4 people from 2 households max, stay 2m apart, practice kit hygiene.  Clubs with Covid officers can organise activities in local authority area only for up to 15 people. <a href='https://www.canoescotland.org/updated-paddlesport-guidance-12th-march'>SCA Guidance</a>.😷</p>";
             markers = new Array();
             tooltipsAreVisible = false;
             for (i=0; i<riverSections.length; i++) {
