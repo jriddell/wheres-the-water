@@ -575,7 +575,7 @@ jQuery(document).ready( function(){
             if ('info_link' in scheduledSection && !scheduledSection['info_link'].length == 0) {
                 linksContent += "<img width='16' height='16' title='UKRGB Link' src='/wheres-the-water/pics/calendar.png'/> Info: <a target='_blank' rel='noopener' href='https://"+scheduledSection['info_link']+"'>"+ scheduledSection['info_link'] + "</a><br />";
             }
-            linksContent += "<img width='16' height='16' title='Google Calendar' src='/wheres-the-water/pics/google-calendar.png'/> <a target='_blank' rel='noopener' href='https://calendar.google.com/calendar/embed?src=scottishwwguide%40gmail.com&ctz=Europe%2FLondon'>Calendar</a>, <a href='https://calendar.google.com/calendar/ical/scottishwwguide%40gmail.com/public/basic.ics'>iCal</a>";
+            linksContent += "<img width='16' height='16' title='Google Calendar' src='/wheres-the-water/pics/google-calendar.png'/> <a target='_blank' rel='noopener' href='https://calendar.google.com/calendar/embed?src=scottishwwguide%40gmail.com&ctz=Europe%2FLondon'>Calendar</a>, <a href='https://calendar.google.com/calendar/ical/scottishwwguide%40gmail.com/public/basic.ics'>iCal</a><br />";
             if ('grade' in scheduledSection && !scheduledSection['grade'].length == 0) {
                 linksContent += "<img width='16' height='16' src='/wheres-the-water/pics/grade.png'/> Grade: " + scheduledSection['grade'] + "<br />";
             }
