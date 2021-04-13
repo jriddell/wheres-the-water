@@ -606,7 +606,7 @@ jQuery(document).ready( function(){
             return linksContent;
         }
         function addRiverMarkers() {
-            var covidString = "<p style='background-color: lightblue'>🦠From Friday 16 April: You can travel anywhere in Scotland for outdoor informal exercise. No car sharing outwith your household, groups of 6 people from 6 households max, stay 2m apart, practice kit hygiene.  Organised groups with Covid officers can organise activities in local authority area only for up to 15 people. <a href='https://www.canoescotland.org/updated-paddlesport-guidance-12th-march' target='_parent'>SCA Guidance</a>.😷</p>";
+            var covidString = "<p style='background-color: #aaffff'>🦠From Friday 16 April: You can travel anywhere in Scotland for outdoor informal exercise. No car sharing outwith your household, groups of 6 people from 6 households max, stay 2m apart, practice kit hygiene.  Organised groups with Covid officers can organise activities in local authority area only for up to 15 people. <a href='https://www.canoescotland.org/updated-paddlesport-guidance-12th-march' target='_parent'>SCA Guidance</a>.😷</p>";
             markers = new Array();
             tooltipsAreVisible = false;
             for (i=0; i<riverSections.length; i++) {
