@@ -3056,12 +3056,14 @@
     "kml": "",
     "webcam": "",
     "notes": "0.8 reported as minimum, please send in calibrations",
-    "put_in_long": "",
-    "put_in_lat": "",
-    "get_out_long": "",
-    "get_out_lat": "",
+    "put_in_long": "-3.8888",
+    "put_in_lat": "55.6896",
+    "get_out_long": "-3.8725",
+    "get_out_lat": "55.7022",
     "gauge_name": "Kirkmuirhill",
-    "uuid": "8524a975-af1a-5047-8117-6d4c9a426e13"
+    "uuid": "8524a975-af1a-5047-8117-6d4c9a426e13",
+    "classification": "",
+    "classification_url": ""
   },
   {
     "name": "Evan Water",
