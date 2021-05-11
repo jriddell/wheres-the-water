@@ -141,8 +141,8 @@
     "notes": "Reported branch blocking banana slide 1 Sep 2020.",
     "put_in_lat": "55.5596",
     "put_in_long": "-2.9393",
-    "river_zone_url": "https://riverzone.eu/calibration/58b14b17-7167-5024-8cb4-065115622e99.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Yarrow&zones=,ff0000,Huge|130,ff6060,Very+High|100,ffc004,High|100,ffff33,Medium|80,00ff00,Low|50,ccffcc,Scrapeable|40,cccccc,Empty",
-    "river_zone_url_mobile": "https://riverzone.eu/calibration/58b14b17-7167-5024-8cb4-065115622e99.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Yarrow&zones=,ff0000,Huge|130,ff6060,Very+High|100,ffc004,High|100,ffff33,Medium|80,00ff00,Low|50,ccffcc,Scrapeable|40,cccccc,Empty",
+    "river_zone_url": "https://riverzone.eu/calibration/58b14b17-7167-5024-8cb4-065115622e99.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Yarrow&zones=,ff0000,Huge|130,ff6060,Very+High|100,ffc004,High|100,ffff33,Medium|80,00ff00,Low|50,ccffcc,Scrapeable|35,cccccc,Empty",
+    "river_zone_url_mobile": "https://riverzone.eu/calibration/58b14b17-7167-5024-8cb4-065115622e99.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Yarrow&zones=,ff0000,Huge|130,ff6060,Very+High|100,ffc004,High|100,ffff33,Medium|80,00ff00,Low|50,ccffcc,Scrapeable|35,cccccc,Empty",
     "sca_guidebook_no": "309",
     "scrape_value": "0.35",
     "very_high_value": "1",
@@ -683,8 +683,8 @@
     "notes": "",
     "put_in_lat": "56.2577",
     "put_in_long": "-4.2839",
-    "river_zone_url": "https://riverzone.eu/calibration/f43945f8-2c81-50b4-8140-4685519ed621.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Leny&zones=,ff0000,Huge|200,ff6060,Very+High|160,ffc004,High|130,ffff33,Medium|100,00ff00,Low|70,ccffcc,Scrapeable|50,cccccc,Empty",
-    "river_zone_url_mobile": "https://riverzone.eu/calibration/f43945f8-2c81-50b4-8140-4685519ed621.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Leny&zones=,ff0000,Huge|200,ff6060,Very+High|160,ffc004,High|130,ffff33,Medium|100,00ff00,Low|70,ccffcc,Scrapeable|50,cccccc,Empty",
+    "river_zone_url": "https://riverzone.eu/calibration/f43945f8-2c81-50b4-8140-4685519ed621.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Garbh Uisge (Leny)&zones=,ff0000,Huge|200,ff6060,Very+High|160,ffc004,High|130,ffff33,Medium|100,00ff00,Low|70,ccffcc,Scrapeable|50,cccccc,Empty",
+    "river_zone_url_mobile": "https://riverzone.eu/calibration/f43945f8-2c81-50b4-8140-4685519ed621.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Garbh Uisge (Leny)&zones=,ff0000,Huge|200,ff6060,Very+High|160,ffc004,High|130,ffff33,Medium|100,00ff00,Low|70,ccffcc,Scrapeable|50,cccccc,Empty",
     "sca_guidebook_no": "322",
     "scrape_value": "0.5",
     "very_high_value": "1.6",
@@ -1771,8 +1771,8 @@
     "notes": "Access issue at Melroe Cauld added June 2020. New calibrations Feb 2020, please send more calibrations for this Peebles gauge as relevant for Fairnilee",
     "put_in_lat": "55.605646",
     "put_in_long": "-2.896935",
-    "river_zone_url": "https://riverzone.eu/calibration/aa8bc9ce-97d5-5952-a6f3-471d20b32c3c.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Tweed (Fairnilee)&zones=,ff0000,Huge|190,ff6060,Very+High|161.3,ffc004,High|94.5,ffff33,Medium|50,00ff00,Low|21,ccffcc,Scrapeable|0,cccccc,Empty",
-    "river_zone_url_mobile": "https://riverzone.eu/calibration/aa8bc9ce-97d5-5952-a6f3-471d20b32c3c.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Tweed (Fairnilee)&zones=,ff0000,Huge|190,ff6060,Very+High|161.3,ffc004,High|94.5,ffff33,Medium|50,00ff00,Low|21,ccffcc,Scrapeable|0,cccccc,Empty",
+    "river_zone_url": "https://riverzone.eu/calibration/aa8bc9ce-97d5-5952-a6f3-471d20b32c3c.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Tweed (Fairnilee)&zones=,ff0000,Huge|190,ff6060,Very+High|161.3,ffc004,High|94.5,ffff33,Medium|40,00ff00,Low|21,ccffcc,Scrapeable|0,cccccc,Empty",
+    "river_zone_url_mobile": "https://riverzone.eu/calibration/aa8bc9ce-97d5-5952-a6f3-471d20b32c3c.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Tweed (Fairnilee)&zones=,ff0000,Huge|190,ff6060,Very+High|161.3,ffc004,High|94.5,ffff33,Medium|40,00ff00,Low|21,ccffcc,Scrapeable|0,cccccc,Empty",
     "sca_guidebook_no": "306",
     "scrape_value": "0",
     "very_high_value": "1.613",
@@ -1832,8 +1832,8 @@
     "notes": "",
     "put_in_lat": "57.1978",
     "put_in_long": "-2.1721",
-    "river_zone_url": "https://riverzone.eu/calibration/44a2e90b-c9aa-577a-85f0-ebe6686eeac7.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Don (Lower)&zones=,ff0000,Huge|240,ff6060,Very+High|200,ffc004,High|180,ffff33,Medium|140,00ff00,Low|100,ccffcc,Scrapeable|0,cccccc,Empty",
-    "river_zone_url_mobile": "https://riverzone.eu/calibration/44a2e90b-c9aa-577a-85f0-ebe6686eeac7.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Don (Lower)&zones=,ff0000,Huge|240,ff6060,Very+High|200,ffc004,High|180,ffff33,Medium|140,00ff00,Low|100,ccffcc,Scrapeable|0,cccccc,Empty",
+    "river_zone_url": "https://riverzone.eu/calibration/44a2e90b-c9aa-577a-85f0-ebe6686eeac7.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Don (Lower)&zones=,ff0000,Huge|300,ff6060,Very+High|200,ffc004,High|170,ffff33,Medium|100,00ff00,Low|40,ccffcc,Scrapeable|0,cccccc,Empty",
+    "river_zone_url_mobile": "https://riverzone.eu/calibration/44a2e90b-c9aa-577a-85f0-ebe6686eeac7.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Don (Lower)&zones=,ff0000,Huge|300,ff6060,Very+High|200,ffc004,High|170,ffff33,Medium|100,00ff00,Low|40,ccffcc,Scrapeable|0,cccccc,Empty",
     "sca_guidebook_no": "243",
     "scrape_value": "0",
     "very_high_value": "2",
@@ -2866,8 +2866,8 @@
     "classification": "",
     "classification_url": "",
     "uuid": "0812240c-902c-584d-ac2f-3dafeb179fae",
-    "river_zone_url": "https://riverzone.eu/calibration/889bb8d1-ebb9-47bf-b00f-5f93880f6670.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Water of Leith&zones=,ff0000,Huge|170,ff6060,Very+High|150,ffc004,High|130,ffff33,Medium|100,00ff00,Low|70,ccffcc,Scrapeable|45,cccccc,Empty",
-    "river_zone_url_mobile": "https://riverzone.eu/calibration/889bb8d1-ebb9-47bf-b00f-5f93880f6670.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Water of Leith&zones=,ff0000,Huge|170,ff6060,Very+High|150,ffc004,High|130,ffff33,Medium|100,00ff00,Low|70,ccffcc,Scrapeable|45,cccccc,Empty"
+    "river_zone_url": "https://riverzone.eu/calibration/889bb8d1-ebb9-47bf-b00f-5f93880f6670.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Water of Leith (Lower)&zones=,ff0000,Huge|170,ff6060,Very+High|150,ffc004,High|130,ffff33,Medium|100,00ff00,Low|70,ccffcc,Scrapeable|45,cccccc,Empty",
+    "river_zone_url_mobile": "https://riverzone.eu/calibration/889bb8d1-ebb9-47bf-b00f-5f93880f6670.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Water of Leith (Lower)&zones=,ff0000,Huge|170,ff6060,Very+High|150,ffc004,High|130,ffff33,Medium|100,00ff00,Low|70,ccffcc,Scrapeable|45,cccccc,Empty"
   },
   {
     "name": "Divie",
@@ -2895,7 +2895,9 @@
     "gauge_name": "Dunphail",
     "classification": "",
     "classification_url": "",
-    "uuid": "0f2f9993-9a04-5a4b-8862-39f74fb820b8"
+    "uuid": "0f2f9993-9a04-5a4b-8862-39f74fb820b8",
+    "river_zone_url": "https://riverzone.eu/calibration/ff2b0719-cd9a-4ef2-9e8f-7920415cce57.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Divie&zones=,ff0000,Huge|120,ff6060,Very+High|80,ffc004,High|60,ffff33,Medium|40,00ff00,Low|25,ccffcc,Scrapeable|20,cccccc,Empty",
+    "river_zone_url_mobile": "https://riverzone.eu/calibration/ff2b0719-cd9a-4ef2-9e8f-7920415cce57.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Divie&zones=,ff0000,Huge|120,ff6060,Very+High|80,ffc004,High|60,ffff33,Medium|40,00ff00,Low|25,ccffcc,Scrapeable|20,cccccc,Empty"
   },
   {
     "name": "Liddel Water",
@@ -3147,7 +3149,9 @@
     "get_out_long": "",
     "get_out_lat": "",
     "uuid": "a1f50917-7896-5fda-a161-103dbbccb135",
-    "gauge_name": "Logie Mill"
+    "gauge_name": "Logie Mill",
+    "river_zone_url": "https://riverzone.eu/calibration/67119d03-3a40-5648-84e8-b576cb9d2362.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=North Esk (Lower) (Old)&zones=,ff0000,Huge|120,ff6060,Very+High|75,ffc004,High|55,ffff33,Medium|50,00ff00,Low|45,ccffcc,Scrapeable|30,cccccc,Empty",
+    "river_zone_url_mobile": "https://riverzone.eu/calibration/67119d03-3a40-5648-84e8-b576cb9d2362.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=North Esk (Lower) (Old)&zones=,ff0000,Huge|120,ff6060,Very+High|75,ffc004,High|55,ffff33,Medium|50,00ff00,Low|45,ccffcc,Scrapeable|30,cccccc,Empty"
   },
   {
     "name": "Shin",
@@ -3173,7 +3177,9 @@
     "get_out_long": "-4.4089",
     "get_out_lat": "57.9444",
     "uuid": "837b854e-7254-5e40-94d4-0eb11b0c4786",
-    "gauge_name": "Inveran"
+    "gauge_name": "Inveran",
+    "river_zone_url": "https://riverzone.eu/calibration/e234a6f5-756a-4ce5-83e0-e604ef0df102.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Shin&zones=,ff0000,Huge|0,ff6060,Very+High|0,ffc004,High|0,ffff33,Medium|0,00ff00,Low|0,ccffcc,Scrapeable|0,cccccc,Empty",
+    "river_zone_url_mobile": "https://riverzone.eu/calibration/e234a6f5-756a-4ce5-83e0-e604ef0df102.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Shin&zones=,ff0000,Huge|0,ff6060,Very+High|0,ffc004,High|0,ffff33,Medium|0,00ff00,Low|0,ccffcc,Scrapeable|0,cccccc,Empty"
   },
   {
     "name": "Findhorn (Middle) (New Gauge)",
@@ -3201,7 +3207,9 @@
     "uuid": "11d83071-1195-5b80-a564-b604d22cd1ee",
     "gauge_name": "Logie Bridge",
     "classification": "",
-    "classification_url": ""
+    "classification_url": "",
+    "river_zone_url": "https://riverzone.eu/calibration/63aa6893-319c-4d02-8cc5-36d2ebc992ec.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Findhorn (Middle) (New Gauge)&zones=,ff0000,Huge|120,ff6060,Very+High|100,ffc004,High|80,ffff33,Medium|50,00ff00,Low|40,ccffcc,Scrapeable|35,cccccc,Empty",
+    "river_zone_url_mobile": "https://riverzone.eu/calibration/63aa6893-319c-4d02-8cc5-36d2ebc992ec.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Findhorn (Middle) (New Gauge)&zones=,ff0000,Huge|120,ff6060,Very+High|100,ffc004,High|80,ffff33,Medium|50,00ff00,Low|40,ccffcc,Scrapeable|35,cccccc,Empty"
   },
   {
     "name": "Water of Leith (Upper)",
