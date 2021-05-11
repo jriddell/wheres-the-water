@@ -2261,10 +2261,10 @@
     "very_high_value": "2",
     "webcam": "https://www.farsondigitalwatercams.com/locations/banchory",
     "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImZldWdoX2ZhbGxzLzIwMTkvMDEvMjEvMDg6NTA6MDAuanBnIl0sWyJwIiwidGh1bWIiLCJ4MTUwIl1d.jpg",
-    "put_in_lat": "",
-    "put_in_long": "",
-    "get_out_lat": "",
-    "get_out_long": "",
+    "put_in_lat": "57.101929",
+    "put_in_long": " -2.222189",
+    "get_out_lat": "57.140775",
+    "get_out_long": "-2.070994",
     "uuid": "e3fbb864-558e-5610-9425-3857b7564bec"
   },
   {
