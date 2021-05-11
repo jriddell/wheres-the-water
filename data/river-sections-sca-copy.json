@@ -499,7 +499,7 @@
     "low_value": "0.8",
     "medium_value": "1",
     "name": "Lochay",
-    "notes": "",
+    "notes": "Gauge is on Dochart so may be unrelated",
     "put_in_lat": "56.4951",
     "put_in_long": "-4.4889",
     "river_zone_url": "https://riverzone.eu/calibration/da988716-62ff-56a7-a9d1-9317c3ab38cf.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Lochay&zones=,ff0000,Huge|200,ff6060,Very+High|160,ffc004,High|130,ffff33,Medium|100,00ff00,Low|80,ccffcc,Scrapeable|60,cccccc,Empty",
