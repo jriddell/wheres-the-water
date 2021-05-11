@@ -662,7 +662,7 @@
     "uuid": "3313f365-be18-5193-8b33-04c54a32fb23"
   },
   {
-    "access_issue": "https://www.canoescotland.org/river-leny-w-c-3rd-may",
+    "access_issue": "",
     "classification": "Good",
     "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=4718",
     "gauge_location_code": "14888",
@@ -679,8 +679,8 @@
     "longitude": "-4.2857",
     "low_value": "0.7",
     "medium_value": "1.0",
-    "name": "Leny",
-    "notes": "Access: river closed May 3 - 7 2021 see Access link",
+    "name": "Garbh Uisge (Leny)",
+    "notes": "",
     "put_in_lat": "56.2577",
     "put_in_long": "-4.2839",
     "river_zone_url": "https://riverzone.eu/calibration/f43945f8-2c81-50b4-8140-4685519ed621.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Leny&zones=,ff0000,Huge|200,ff6060,Very+High|160,ffc004,High|130,ffff33,Medium|100,00ff00,Low|70,ccffcc,Scrapeable|50,cccccc,Empty",
