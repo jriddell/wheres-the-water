@@ -3000,14 +3000,16 @@
     "kml": "",
     "webcam": "https://www.farsondigitalwatercams.com/locations/potarch-bridge",
     "notes": "",
-    "put_in_long": "",
-    "put_in_lat": "",
-    "get_out_long": "",
-    "get_out_lat": "",
+    "put_in_long": "-2.648754",
+    "put_in_lat": "57.065216",
+    "get_out_long": "-2.500788",
+    "get_out_lat": "57.047445",
     "gauge_name": "Polhollick",
     "uuid": "d35ab757-4635-5ee4-86c1-ca6255877530",
     "river_zone_url": "https://riverzone.eu/calibration/c48d829c-049e-5fb2-9ce4-593dc14d5943.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Dee (Grampian) (Upper)&zones=,ff0000,Huge|150,ff6060,Very+High|100,ffc004,High|80,ffff33,Medium|70,00ff00,Low|60,ccffcc,Scrapeable|45,cccccc,Empty",
-    "river_zone_url_mobile": "https://riverzone.eu/calibration/c48d829c-049e-5fb2-9ce4-593dc14d5943.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Dee (Grampian) (Upper)&zones=,ff0000,Huge|150,ff6060,Very+High|100,ffc004,High|80,ffff33,Medium|70,00ff00,Low|60,ccffcc,Scrapeable|45,cccccc,Empty"
+    "river_zone_url_mobile": "https://riverzone.eu/calibration/c48d829c-049e-5fb2-9ce4-593dc14d5943.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Dee (Grampian) (Upper)&zones=,ff0000,Huge|150,ff6060,Very+High|100,ffc004,High|80,ffff33,Medium|70,00ff00,Low|60,ccffcc,Scrapeable|45,cccccc,Empty",
+    "classification": "",
+    "classification_url": ""
   },
   {
     "name": "Dee (Grampian) (Drumoak)",
