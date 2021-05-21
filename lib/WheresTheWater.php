@@ -680,7 +680,13 @@ jQuery(document).ready( function(){
                     "<p class='js-info-content'><img width='16' height='16' src='/wheres-the-water/pics/clock.png'/> Next Date: " + nextDateString +
                     "<br />" + sectionLinks + "</p>" + datesTable +
                     "<p class='js-chart-weekly-content' style='display: none'>" +
-                    "hello" +
+                    '<img src="/wheres-the-water/pics/CONSTANT.png" width="10" height="10" />Constant. Flow is always on.' +
+                    '<img src="/wheres-the-water/pics/TODAY.png" width="10" height="10" />Today, scheduled date on now.' +
+                    '<img src="/wheres-the-water/pics/TOMORROW.png" width="10" height="10" />Tomorrow, scheduled date is mañana.' +
+                    '<img src="/wheres-the-water/pics/NEXT_7_DAYS.png" width="10" height="10" />Next date is within 7 days.' +
+                    '<img src="/wheres-the-water/pics/NEXT_30_DAYS.png" width="10" height="10" />Next date is within 30 days.' +
+                    '<img src="/wheres-the-water/pics/NOT_THIS_MONTH.png" width="10" height="10" />Not This Month (schedule date over 30s days in future).' +
+                    'Dates are added manually.  <a href="https://jriddell.org/contact/">Feedback and contributions welcome</a>.</p>' +
                     //"<p class='js-forecast-content' style='display: none'>" +
                     //sectionForecasts[riverSections[i]['gauge_location_code']] +
                     "</p>"
