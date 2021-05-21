@@ -675,10 +675,12 @@ jQuery(document).ready( function(){
                 var contentString = "<div>" + covidString + "<h4 style='padding-left: 30px;'><span style='font-size: larger'>Scheduled Water</span>: " + scheduledSection + "</h4>" +
                     "<p style='padding-left: 30px;'><img src='" + iconBase + scheduledSectionValue + ext + "' /> " +
                     valueString + "</p>" +
-                    "<p><span class='js-info'>Info</span> / <span class='js-calib-table link' style='text-decoration: underline; color: blue; cursor: pointer'>Dates</span>"; // / <span class='js-forecast link' style='text-decoration: underline; color: blue; cursor: pointer'>Weather</span>";
+                    "<p><span class='js-info'>Info</span> / <span class='js-calib-table link' style='text-decoration: underline; color: blue; cursor: pointer'>Dates</span> / <span class='js-chart-weekly' style='text-decoration: underline; color: blue; cursor: pointer'>Key</span>"; // / <span class='js-forecast link' style='text-decoration: underline; color: blue; cursor: pointer'>Weather</span>";
                 contentString += "</p>" +
                     "<p class='js-info-content'><img width='16' height='16' src='/wheres-the-water/pics/clock.png'/> Next Date: " + nextDateString +
                     "<br />" + sectionLinks + "</p>" + datesTable +
+                    "<p class='js-chart-weekly-content' style='display: none'>" +
+                    "hello" +
                     //"<p class='js-forecast-content' style='display: none'>" +
                     //sectionForecasts[riverSections[i]['gauge_location_code']] +
                     "</p>"
