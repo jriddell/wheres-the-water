@@ -842,7 +842,7 @@ jQuery(document).ready( function(){
             for (var k=0; k<scheduledSectionDates.length; k++) {
               var jsDate = new Date(scheduledSectionDates[k]);
               var today = Date();
-              console.log.print("hellO");
+              console.log("hellO");
               if (jsDate > today) {
 
                 datesTable += "<li>" + jsDate.toDateString() + "</li>\n";
