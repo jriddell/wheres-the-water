@@ -606,7 +606,7 @@ jQuery(document).ready( function(){
             return linksContent;
         }
         function addRiverMarkers() {
-            var covidString = "<p style='background-color: #aaffff'>🦠Level 2: you can travel anywhere in Scotland for outdoor informal exercise except Glasgow &amp; Moray. No car sharing outwith your household, groups of 8 people from 8 households max, stay 2m apart (no hugs), practice kit hygiene.  Organised groups with Covid officers can organise activities for up to 50 people. <a href='hhttps://www.canoescotland.org/updated-paddlesport-guidance-effective-17th-may' target='_parent'>SCA Guidance</a>.😷</p>";
+            var covidString = "<p style='background-color: #aaffff'>🦠Level 2: you can travel anywhere in Scotland for outdoor informal exercise except Glasgow. No car sharing outwith your household, groups of 8 people from 8 households max, stay 2m apart (no hugs), practice kit hygiene.  Organised groups with Covid officers can organise activities for up to 50 people. <a href='hhttps://www.canoescotland.org/updated-paddlesport-guidance-effective-17th-may' target='_parent'>SCA Guidance</a>.😷</p>";
             markers = new Array();
             tooltipsAreVisible = false;
             for (i=0; i<riverSections.length; i++) {
