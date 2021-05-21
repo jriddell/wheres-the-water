@@ -680,13 +680,13 @@ jQuery(document).ready( function(){
                     "<p class='js-info-content'><img width='16' height='16' src='/wheres-the-water/pics/clock.png'/> Next Date: " + nextDateString +
                     "<br />" + sectionLinks + "</p>" + datesTable +
                     "<p class='js-chart-weekly-content' style='display: none'>" + // reusing the js-chart-weekly class for something else here
-                    '<img src="/wheres-the-water/pics/CONSTANT.png" width="10" height="10" />Constant. Flow is always on.<br />' +
-                    '<img src="/wheres-the-water/pics/TODAY.png" width="10" height="10" />Today, scheduled date on now.<br />' +
-                    '<img src="/wheres-the-water/pics/TOMORROW.png" width="10" height="10" />Tomorrow, scheduled date is mañana.<br />' +
-                    '<img src="/wheres-the-water/pics/NEXT_7_DAYS.png" width="10" height="10" />Next date is within 7 days.<br />' +
-                    '<img src="/wheres-the-water/pics/NEXT_30_DAYS.png" width="10" height="10" />Next date is within 30 days.<br />' +
-                    '<img src="/wheres-the-water/pics/NOT_THIS_MONTH.png" width="10" height="10" />Not This Month (schedule date over 30s days in future).<br />' +
-                    'Dates are added manually.  <a href="https://jriddell.org/contact/">Feedback and contributions welcome</a>.<br />' +
+                    '<img src="/wheres-the-water/pics/CONSTANT.png" width="10" height="10" /> Constant. Flow is always on.<br />' +
+                    '<img src="/wheres-the-water/pics/TODAY.png" width="10" height="10" /> Today, scheduled date on now.<br />' +
+                    '<img src="/wheres-the-water/pics/TOMORROW.png" width="10" height="10" /> Tomorrow, scheduled date is mañana.<br />' +
+                    '<img src="/wheres-the-water/pics/NEXT_7_DAYS.png" width="10" height="10" /> Next date is within 7 days.<br />' +
+                    '<img src="/wheres-the-water/pics/NEXT_30_DAYS.png" width="10" height="10" /> Next date is within 30 days.<br />' +
+                    '<img src="/wheres-the-water/pics/NOT_THIS_MONTH.png" width="10" height="10" /> Not This Month (schedule date over 30s days in future).<br />' +
+                    'Dates are added manually.  In case of discrepancy the page linked is definitive over this list. <a href="https://jriddell.org/contact/"> Feedback and contributions welcome</a>.<br />' +
                     "</p>"
                     //"<p class='js-forecast-content' style='display: none'>" +
                     //sectionForecasts[riverSections[i]['gauge_location_code']] +
