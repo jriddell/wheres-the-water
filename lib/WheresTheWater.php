@@ -845,11 +845,12 @@ jQuery(document).ready( function(){
               console.log("hellO");
               if (jsDate > today) {
                 console.log("greater");
+                console.log(k);
                 datesTable += "<li>" + jsDate.toDateString() + "</li>\n";
               } else {
                 console.log("not greater");
                 console.log(k);
-                //k--;
+                k--;
               }
               if (k==10) {
                 datesTable += "<a target='_blank' href='https://"+info_link+"'>💦...</a>";
