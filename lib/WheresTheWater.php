@@ -841,7 +841,7 @@ jQuery(document).ready( function(){
             var datesTable = '<ul class="js-calib-table-content">';
             for (var k=0; k<scheduledSectionDates.length; k++) {
               var jsDate = new Date(scheduledSectionDates[k]);
-              var today = Date();
+              var today = new Date();
               console.log("hellO");
               if (jsDate > today) {
                 console.log("greater");
