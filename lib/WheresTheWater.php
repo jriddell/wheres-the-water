@@ -839,16 +839,18 @@ jQuery(document).ready( function(){
 
         function getDatesTable(scheduledSectionDates, info_link) {
             var datesTable = '<ul class="js-calib-table-content">';
+            var datesCounter = 0;
             for (var k=0; k<scheduledSectionDates.length; k++) {
               var jsDate = new Date(scheduledSectionDates[k]);
               var today = new Date();
               console.log("hellO");
               if (jsDate > today) {
                 console.log("greater");
-                console.log(k);
+                console.log(datesCounter);
                 datesTable += "<li>" + jsDate.toDateString() + "</li>\n";
+                datesCounter++;
               }
-              if (k==10) {
+              if (datesCounter==10) {
                 datesTable += "<a target='_blank' href='https://"+info_link+"'>💦...</a>";
                 datesTable += "<span style='display: none'>";
                 break;
