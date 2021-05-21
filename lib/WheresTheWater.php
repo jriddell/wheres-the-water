@@ -841,7 +841,14 @@ jQuery(document).ready( function(){
             var datesTable = '<ul class="js-calib-table-content">';
             for (var k=0; k<scheduledSectionDates.length; k++) {
               var jsDate = new Date(scheduledSectionDates[k]);
-              datesTable += "<li>" + jsDate.toDateString() + "</li>\n";
+              var today = Date();
+              console.log.print("hellO");
+              if (jsDate > today) {
+
+                datesTable += "<li>" + jsDate.toDateString() + "</li>\n";
+              } else {
+                k--;
+              }
               if (k==10) {
                 datesTable += "<a target='_blank' href='https://"+info_link+"'>💦...</a>";
                 datesTable += "<span style='display: none'>";
