@@ -854,6 +854,7 @@ jQuery(document).ready( function(){
               if (k==10) {
                 datesTable += "<a target='_blank' href='https://"+info_link+"'>💦...</a>";
                 datesTable += "<span style='display: none'>";
+                break;
               }
             }
             datesTable += "</span>"
