@@ -331,7 +331,7 @@
     "uuid": "f5e1a87f-72e9-5d1e-acc2-4b332bebe48f"
   },
   {
-    "access_issue": "https://goo.gl/maps/vTB7HmXLNn1KfuAy6",
+    "access_issue": "https://www.canoescotland.org/access-and-environment/access-in-scotland",
     "classification": "Good",
     "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=6498",
     "gauge_location_code": "14937",
@@ -349,7 +349,7 @@
     "low_value": "0",
     "medium_value": "1",
     "name": "Tay (Stanley)",
-    "notes": "Get code to car park from SCA membership site.   Spikes reported river left half way between weir and hell hole corner Sept 2020, see access link.",
+    "notes": "New parking restrictions on Linn Road: get code to car park from SCA membership site. ",
     "put_in_lat": "56.4881",
     "put_in_long": "-3.4321",
     "river_zone_url": "https://riverzone.eu/calibration/de9c3636-4628-57c5-a5a8-d401beab7676.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Tay (Stanley)&zones=,ff0000,Huge|500,ff6060,Very+High|270,ffc004,High|200,ffff33,Medium|100,00ff00,Low|0,ccffcc,Scrapeable|0,cccccc,Empty",
