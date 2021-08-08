@@ -606,7 +606,7 @@ jQuery(document).ready( function(){
             return linksContent;
         }
         function addRiverMarkers() {
-            var covidString = "<p style='background-color: #aaffff'>😷 Level 0: No car sharing outwith your household, take lateral flow tests, groups of 15 people max. Organised groups with Covid officers can organise activities in larger groups. <a href='https://www.canoescotland.org/paddlesport-guidance-from-19th-july' target='_parent'>SCA Guidance</a>.</p>";
+            var covidString = "<p style='background-color: #aaffff'>😷 No car sharing outwith your household, take lateral flow tests.</p>";
             markers = new Array();
             tooltipsAreVisible = false;
             for (i=0; i<riverSections.length; i++) {
