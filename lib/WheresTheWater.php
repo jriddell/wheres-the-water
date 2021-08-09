@@ -606,7 +606,7 @@ jQuery(document).ready( function(){
             return linksContent;
         }
         function addRiverMarkers() {
-            var covidString = "<p style='background-color: #aaffff'>😷 No car sharing outwith your household, take lateral flow tests.</p>";
+            var covidString = "<p style='background-color: #aaffff'>😷 Wear masks and open windows when car sharing, take lateral flow tests.</p>";
             markers = new Array();
             tooltipsAreVisible = false;
             for (i=0; i<riverSections.length; i++) {
