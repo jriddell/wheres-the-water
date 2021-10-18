@@ -1890,7 +1890,7 @@
     "low_value": "1.25",
     "medium_value": "1.27",
     "name": "Cuileig (Upper)",
-    "notes": "",
+    "notes": "<b>One report of bad calibrations here and 1.8 is medium calibration, please send more to confirm. The gauge is on the loch above the river.</b>",
     "put_in_lat": "57.7447",
     "put_in_long": "-5.0584",
     "river_zone_url": "https://riverzone.eu/calibration/0101f314-44a8-53e1-bd62-18c96d13c1b9.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Cuileig (Upper)&zones=,ff0000,Huge|132,ff6060,Very+High|130,ffc004,High|128,ffff33,Medium|127,00ff00,Low|125,ccffcc,Scrapeable|122,cccccc,Empty",
