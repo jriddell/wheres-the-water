@@ -528,7 +528,10 @@ jQuery(document).ready( function(){
                 linksContent += "<img width='16' height='16' title='SCA WW Guidebook number' src='/wheres-the-water/pics/sca.png' /> SCA WW Guidebook No "+riverSection['sca_guidebook_no']+"<br />";
             }
             linksContent += "<span class='desktop'><a target='_blank' rel='noopener' href='https://www2.sepa.org.uk/waterlevels/default.aspx?sd=t&lc="+riverSection['gauge_location_code']+"'><img width='16' height='16' title='SEPA gauge link' src='/wheres-the-water/pics/graph-icon.png'/> SEPA Gauge: "+riverSection['gauge_name']+"</a><br /></span>";
-            linksContent += "<span class='mobile'><a target='_blank' rel='noopener' href='http://www.riverlevels.mobi/SiteDetails/Index/"+riverSection['gauge_location_code']+"'><img width='16' height='16' title='SEPA gauge link - mobile friendly' src='/wheres-the-water/pics/graph-icon.png'/> SEPA Gauge: "+riverSection['gauge_name']+"</a><br /></span>";
+            linksContent += "<span class='mobile'><a target='_blank' rel='noopener' href='https://www2.sepa.org.uk/waterlevels/default.aspx?sd=t&lc="+riverSection['gauge_location_code']+"'><img width='16' height='16' title='SEPA gauge link' src='/wheres-the-water/pics/graph-icon.png'/> SEPA Gauge: "+riverSection['gauge_name']+"</a><br /></span>";
+            /*
+            linksContent += "<span class='mobile'><a target='_blank' rel='noopener' href='http:/www.riverlevels.mobi/SiteDetails/Index/"+riverSection['gauge_location_code']+"'><img width='16' height='16' title='SEPA gauge link - mobile friendly' src='/wheres-the-water/pics/graph-icon.png'/> SEPA Gauge: "+riverSection['gauge_name']+"</a><br /></span>";
+             */
             linksContent += "<img width='16' height='16' title='Open maps Link' src='/wheres-the-water/pics/osm.png' /> ";
             linksContent += "<a target='_blank' rel='noopener' href='https://www.openstreetmap.org/?mlat="+riverSection['latitude']+"&mlon="+riverSection['longitude']+"#map=12/"
                             +riverSection['latitude']+"/"+riverSection['longitude']+"'>OpenStreetMap</a> / ";
