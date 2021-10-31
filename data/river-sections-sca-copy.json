@@ -3266,5 +3266,31 @@
     "gauge_name": "Sgodachail",
     "classification": "",
     "classification_url": ""
+  },
+  {
+    "name": "Abhainn Deabhag",
+    "gauge_location_code": "234215",
+    "longitude": "-4.8609170",
+    "latitude": "57.272226",
+    "scrape_value": "0.4",
+    "low_value": "0.45",
+    "medium_value": "0.5",
+    "high_value": "0.65",
+    "very_high_value": "0.8",
+    "huge_value": "1",
+    "grade": "4-5",
+    "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/far-north/photos/abhain-deabhag",
+    "sca_guidebook_no": "089",
+    "access_issue": "",
+    "google_mymaps": "",
+    "kml": "",
+    "webcam": "",
+    "notes": "Gauging station long way below WW section and below confluence with Affric. Affric is usually dry due to dam so gauge is more useful for the abhainn deabhag but interpret with a pinch of salt. River drops fast.",
+    "put_in_long": "-4.8746",
+    "put_in_lat": "57.2583",
+    "get_out_long": "-4.8602",
+    "get_out_lat": "57.2725",
+    "uuid": "f06fc2fb-50df-558c-abca-636506e3bb66",
+    "gauge_name": "Fasnakyle"
   }
 ]
