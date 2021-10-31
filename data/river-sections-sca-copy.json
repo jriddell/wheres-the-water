@@ -3240,7 +3240,7 @@
     "classification_url": ""
   },
   {
-    "name": "Carron (Easter Ross) (Top)",
+    "name": "Carron (Easter Ross) (Upper)",
     "gauge_location_code": "234305",
     "longitude": "-4.5908155",
     "latitude": "57.864892",
@@ -3263,6 +3263,8 @@
     "get_out_long": "",
     "get_out_lat": "",
     "uuid": "74ae5efa-c884-53e1-8119-32a0d52400fe",
-    "gauge_name": "Sgodachail"
+    "gauge_name": "Sgodachail",
+    "classification": "",
+    "classification_url": ""
   }
 ]
