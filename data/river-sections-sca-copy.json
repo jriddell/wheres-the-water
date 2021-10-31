@@ -3292,5 +3292,31 @@
     "get_out_lat": "57.2725",
     "uuid": "f06fc2fb-50df-558c-abca-636506e3bb66",
     "gauge_name": "Fasnakyle"
+  },
+  {
+    "name": "Coiltie",
+    "gauge_location_code": "341495",
+    "longitude": "-4.5382",
+    "latitude": "57.3089",
+    "scrape_value": "1",
+    "low_value": "1.2",
+    "medium_value": "1.4",
+    "high_value": "1.6",
+    "very_high_value": "1.8",
+    "huge_value": "2.0",
+    "grade": "4/5",
+    "guidebook_link": "",
+    "sca_guidebook_no": "084",
+    "access_issue": "",
+    "google_mymaps": "",
+    "kml": "",
+    "webcam": "",
+    "notes": "",
+    "put_in_long": "-4.5382",
+    "put_in_lat": "57.3089",
+    "get_out_long": "-4.4728",
+    "get_out_lat": "57.3271",
+    "uuid": "c5152809-dac7-56d8-8f7f-aec8a4c446a3",
+    "gauge_name": "Ivy Bridge"
   }
 ]
