@@ -3238,5 +3238,31 @@
     "gauge_name": "Colinton",
     "classification": "",
     "classification_url": ""
+  },
+  {
+    "name": "Carron (Easter Ross) (Top)",
+    "gauge_location_code": "234305",
+    "longitude": "-4.5908155",
+    "latitude": "57.864892",
+    "scrape_value": "0.9",
+    "low_value": "1.1",
+    "medium_value": "1.2",
+    "high_value": "1.4",
+    "very_high_value": "1.6",
+    "huge_value": "2.0",
+    "grade": "3+",
+    "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/far-north/river-carron-alladale-river-to-east-amat",
+    "sca_guidebook_no": "028",
+    "access_issue": "",
+    "google_mymaps": "",
+    "kml": "",
+    "webcam": "",
+    "notes": "",
+    "put_in_long": "",
+    "put_in_lat": "",
+    "get_out_long": "",
+    "get_out_lat": "",
+    "uuid": "74ae5efa-c884-53e1-8119-32a0d52400fe",
+    "gauge_name": "Sgodachail"
   }
 ]
