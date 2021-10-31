@@ -2678,7 +2678,7 @@
     "low_value": "1.5",
     "medium_value": "1.5",
     "name": "Lugar Water",
-    "notes": "New section added April 2019. 1.5 reported minimum.  Please send more calibrations.",
+    "notes": "New section added April 2019. 1.0 appears High.  Please send more calibrations.",
     "put_in_lat": "55.4661",
     "put_in_long": "-4.2255",
     "river_zone_url": "https://riverzone.eu/calibration/cd037375-e1dd-49b1-947a-b7dca42c2609.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Lugar Water&zones=,ff0000,Huge|150,ff6060,Very+High|150,ffc004,High|150,ffff33,Medium|150,00ff00,Low|150,ccffcc,Scrapeable|150,cccccc,Empty",
