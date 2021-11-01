@@ -3334,7 +3334,7 @@
     "huge_value": "2",
     "grade": "",
     "guidebook_link": "",
-    "sca_guidebook_no": "",
+    "sca_guidebook_no": "Paddle Scotland 124",
     "access_issue": "",
     "google_mymaps": "",
     "kml": "",
@@ -3345,7 +3345,9 @@
     "get_out_long": "",
     "get_out_lat": "",
     "uuid": "d8698882-39fd-5f6c-abeb-e70def9c9bae",
-    "gauge_name": "Abington"
+    "gauge_name": "Abington",
+    "classification": "",
+    "classification_url": ""
   },
   {
     "name": "Earn",
