@@ -3372,5 +3372,31 @@
     "get_out_lat": "",
     "uuid": "03df80ce-3406-57df-9bf9-5849e34a1c02",
     "gauge_name": "Dalginross"
+  },
+  {
+    "name": "Clyde (Sills of Clyde)",
+    "gauge_location_code": "133126",
+    "longitude": "-3.7050583",
+    "latitude": "55.663124",
+    "scrape_value": "0.5",
+    "low_value": "0.8",
+    "medium_value": "1.1",
+    "high_value": "1.5",
+    "very_high_value": "1.8",
+    "huge_value": "2.0",
+    "grade": "2/3",
+    "guidebook_link": "",
+    "sca_guidebook_no": "Paddle Scotland 124",
+    "access_issue": "",
+    "google_mymaps": "",
+    "kml": "",
+    "webcam": "",
+    "notes": "",
+    "put_in_long": "",
+    "put_in_lat": "",
+    "get_out_long": "",
+    "get_out_lat": "",
+    "uuid": "fe4aaf56-780a-50d9-8468-0ea2fa88ae99",
+    "gauge_name": "Sills of Clyde"
   }
 ]
