@@ -3170,7 +3170,7 @@
     "access_issue": "",
     "google_mymaps": "",
     "kml": "",
-    "webcam": "",
+    "webcam": "https://www.farsondigitalwatercams.com/locations/falls-of-shin",
     "notes": "Please send calibrations.  Can only be run when dam is releasing, possibly on Sundays.",
     "put_in_long": "-4.408",
     "put_in_lat": "57.9603",
@@ -3179,7 +3179,9 @@
     "uuid": "837b854e-7254-5e40-94d4-0eb11b0c4786",
     "gauge_name": "Inveran",
     "river_zone_url": "https://riverzone.eu/calibration/e234a6f5-756a-4ce5-83e0-e604ef0df102.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Shin&zones=,ff0000,Huge|0,ff6060,Very+High|0,ffc004,High|0,ffff33,Medium|0,00ff00,Low|0,ccffcc,Scrapeable|0,cccccc,Empty",
-    "river_zone_url_mobile": "https://riverzone.eu/calibration/e234a6f5-756a-4ce5-83e0-e604ef0df102.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Shin&zones=,ff0000,Huge|0,ff6060,Very+High|0,ffc004,High|0,ffff33,Medium|0,00ff00,Low|0,ccffcc,Scrapeable|0,cccccc,Empty"
+    "river_zone_url_mobile": "https://riverzone.eu/calibration/e234a6f5-756a-4ce5-83e0-e604ef0df102.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Shin&zones=,ff0000,Huge|0,ff6060,Very+High|0,ffc004,High|0,ffff33,Medium|0,00ff00,Low|0,ccffcc,Scrapeable|0,cccccc,Empty",
+    "classification": "",
+    "classification_url": ""
   },
   {
     "name": "Findhorn (Middle) (New Gauge)",
