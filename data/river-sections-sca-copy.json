@@ -3318,5 +3318,31 @@
     "get_out_lat": "57.3271",
     "uuid": "c5152809-dac7-56d8-8f7f-aec8a4c446a3",
     "gauge_name": "Ivy Bridge"
+  },
+  {
+    "name": "Clyde (Elvanfoot to Wiston)",
+    "gauge_location_code": "322551",
+    "longitude": "-3.648983",
+    "latitude": "55.450118",
+    "scrape_value": "0.3",
+    "low_value": "0.5",
+    "medium_value": "0.7",
+    "high_value": "1.5",
+    "very_high_value": "1.7",
+    "huge_value": "2",
+    "grade": "",
+    "guidebook_link": "",
+    "sca_guidebook_no": "",
+    "access_issue": "",
+    "google_mymaps": "",
+    "kml": "",
+    "webcam": "",
+    "notes": "",
+    "put_in_long": "",
+    "put_in_lat": "",
+    "get_out_long": "",
+    "get_out_lat": "",
+    "uuid": "d8698882-39fd-5f6c-abeb-e70def9c9bae",
+    "gauge_name": "Abington"
   }
 ]
