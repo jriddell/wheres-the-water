@@ -292,8 +292,8 @@
     "notes": "New calibrations 2021-10-31. Gauge is for Upper section. Lower Section is below a dam and always has some flow. Upper Upper needs recent rain.",
     "put_in_lat": "57.5553",
     "put_in_long": "-4.8376",
-    "river_zone_url": "https://riverzone.eu/calibration/43756f70-67e8-5280-b784-3fa698c82aa5.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Upper Meig&zones=,ff0000,Huge|150,ff6060,Very+High|130,ffc004,High|80,ffff33,Medium|50,00ff00,Low|20,ccffcc,Scrapeable|0,cccccc,Empty",
-    "river_zone_url_mobile": "https://riverzone.eu/calibration/43756f70-67e8-5280-b784-3fa698c82aa5.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Upper Meig&zones=,ff0000,Huge|150,ff6060,Very+High|130,ffc004,High|80,ffff33,Medium|50,00ff00,Low|20,ccffcc,Scrapeable|0,cccccc,Empty",
+    "river_zone_url": "https://riverzone.eu/calibration/43756f70-67e8-5280-b784-3fa698c82aa5.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Upper Meig&zones=,ff0000,Huge|150,ff6060,Very+High|130,ffc004,High|80,ffff33,Medium|70,00ff00,Low|65,ccffcc,Scrapeable|55,cccccc,Empty",
+    "river_zone_url_mobile": "https://riverzone.eu/calibration/43756f70-67e8-5280-b784-3fa698c82aa5.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Upper Meig&zones=,ff0000,Huge|150,ff6060,Very+High|130,ffc004,High|80,ffff33,Medium|70,00ff00,Low|65,ccffcc,Scrapeable|55,cccccc,Empty",
     "sca_guidebook_no": "54",
     "scrape_value": "0.55",
     "very_high_value": "1.3",
@@ -955,8 +955,8 @@
     "notes": "Updated calibrations 2021-10-31<br /><ul><li><a href='https://www.facebook.com/groups/Scottish.Whitewater/permalink/2886483734719952/'>Tree Reported 11 Feb 2020</a></li><li><a href='https://www.facebook.com/groups/Scottish.Whitewater/permalink/2945162608852064/'>Wires reported March 9 2020</a></li></ul>",
     "put_in_lat": "57.7333",
     "put_in_long": "-4.3982",
-    "river_zone_url": "https://riverzone.eu/calibration/a2e07e63-008d-5940-b74d-7535b237446c.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Averon of Alness&zones=,ff0000,Huge|175,ff6060,Very+High|160,ffc004,High|140,ffff33,Medium|110,00ff00,Low|80,ccffcc,Scrapeable|70,cccccc,Empty",
-    "river_zone_url_mobile": "https://riverzone.eu/calibration/a2e07e63-008d-5940-b74d-7535b237446c.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Averon of Alness&zones=,ff0000,Huge|175,ff6060,Very+High|160,ffc004,High|140,ffff33,Medium|110,00ff00,Low|80,ccffcc,Scrapeable|70,cccccc,Empty",
+    "river_zone_url": "https://riverzone.eu/calibration/a2e07e63-008d-5940-b74d-7535b237446c.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Averon of Alness&zones=,ff0000,Huge|175,ff6060,Very+High|160,ffc004,High|140,ffff33,Medium|90,00ff00,Low|70,ccffcc,Scrapeable|70,cccccc,Empty",
+    "river_zone_url_mobile": "https://riverzone.eu/calibration/a2e07e63-008d-5940-b74d-7535b237446c.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Averon of Alness&zones=,ff0000,Huge|175,ff6060,Very+High|160,ffc004,High|140,ffff33,Medium|90,00ff00,Low|70,ccffcc,Scrapeable|70,cccccc,Empty",
     "sca_guidebook_no": "50",
     "scrape_value": "0.7",
     "very_high_value": "1.6",
@@ -1135,8 +1135,8 @@
     "notes": "Crossford to Hazelbank calibration.  New calibrations from Robin April 2018, please fill in calibrations form to confirm or adjust.",
     "put_in_lat": "55.6775",
     "put_in_long": "-3.8401",
-    "river_zone_url": "https://riverzone.eu/calibration/bc498e0c-5ca0-5ecd-add4-cfdcb1df835b.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Clyde (Stonebyres)&zones=,ff0000,Huge|220,ff6060,Very+High|200,ffc004,High|160,ffff33,Medium|80,00ff00,Low|50,ccffcc,Scrapeable|0,cccccc,Empty",
-    "river_zone_url_mobile": "https://riverzone.eu/calibration/bc498e0c-5ca0-5ecd-add4-cfdcb1df835b.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Clyde (Stonebyres)&zones=,ff0000,Huge|220,ff6060,Very+High|200,ffc004,High|160,ffff33,Medium|80,00ff00,Low|50,ccffcc,Scrapeable|0,cccccc,Empty",
+    "river_zone_url": "https://riverzone.eu/calibration/bc498e0c-5ca0-5ecd-add4-cfdcb1df835b.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Clyde (Stonebyres)&zones=,ff0000,Huge|220,ff6060,Very+High|200,ffc004,High|160,ffff33,Medium|80,00ff00,Low|50,ccffcc,Scrapeable|31,cccccc,Empty",
+    "river_zone_url_mobile": "https://riverzone.eu/calibration/bc498e0c-5ca0-5ecd-add4-cfdcb1df835b.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Clyde (Stonebyres)&zones=,ff0000,Huge|220,ff6060,Very+High|200,ffc004,High|160,ffff33,Medium|80,00ff00,Low|50,ccffcc,Scrapeable|31,cccccc,Empty",
     "sca_guidebook_no": "268",
     "scrape_value": "0.31",
     "very_high_value": "2",
@@ -1406,8 +1406,8 @@
     "notes": "",
     "put_in_lat": "56.2442",
     "put_in_long": "-4.2190",
-    "river_zone_url": "https://riverzone.eu/calibration/f5d10d10-dc46-5a45-8b75-156591bbc960.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Teith&zones=,ff0000,Huge|300,ff6060,Very+High|200,ffc004,High|150,ffff33,Medium|80,00ff00,Low|50,ccffcc,Scrapeable|0,cccccc,Empty",
-    "river_zone_url_mobile": "https://riverzone.eu/calibration/f5d10d10-dc46-5a45-8b75-156591bbc960.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Teith&zones=,ff0000,Huge|300,ff6060,Very+High|200,ffc004,High|150,ffff33,Medium|80,00ff00,Low|50,ccffcc,Scrapeable|0,cccccc,Empty",
+    "river_zone_url": "https://riverzone.eu/calibration/f5d10d10-dc46-5a45-8b75-156591bbc960.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Teith&zones=,ff0000,Huge|300,ff6060,Very+High|200,ffc004,High|150,ffff33,Medium|80,00ff00,Low|60,ccffcc,Scrapeable|50,cccccc,Empty",
+    "river_zone_url_mobile": "https://riverzone.eu/calibration/f5d10d10-dc46-5a45-8b75-156591bbc960.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Teith&zones=,ff0000,Huge|300,ff6060,Very+High|200,ffc004,High|150,ffff33,Medium|80,00ff00,Low|60,ccffcc,Scrapeable|50,cccccc,Empty",
     "sca_guidebook_no": "259",
     "scrape_value": "0.5",
     "very_high_value": "2",
@@ -1893,8 +1893,8 @@
     "notes": "<b>New calibrations Oct 2021. Notoriously unreliable gauge, water level often higher than predicted due to large trib joining just below the loch.</b>",
     "put_in_lat": "57.7447",
     "put_in_long": "-5.0584",
-    "river_zone_url": "https://riverzone.eu/calibration/0101f314-44a8-53e1-bd62-18c96d13c1b9.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Cuileig (Upper)&zones=,ff0000,Huge|132,ff6060,Very+High|130,ffc004,High|128,ffff33,Medium|127,00ff00,Low|125,ccffcc,Scrapeable|122,cccccc,Empty",
-    "river_zone_url_mobile": "https://riverzone.eu/calibration/0101f314-44a8-53e1-bd62-18c96d13c1b9.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Cuileig (Upper)&zones=,ff0000,Huge|132,ff6060,Very+High|130,ffc004,High|128,ffff33,Medium|127,00ff00,Low|125,ccffcc,Scrapeable|122,cccccc,Empty",
+    "river_zone_url": "https://riverzone.eu/calibration/0101f314-44a8-53e1-bd62-18c96d13c1b9.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Cuileig (Upper)&zones=,ff0000,Huge|190,ff6060,Very+High|180,ffc004,High|160,ffff33,Medium|130,00ff00,Low|120,ccffcc,Scrapeable|110,cccccc,Empty",
+    "river_zone_url_mobile": "https://riverzone.eu/calibration/0101f314-44a8-53e1-bd62-18c96d13c1b9.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Cuileig (Upper)&zones=,ff0000,Huge|190,ff6060,Very+High|180,ffc004,High|160,ffff33,Medium|130,00ff00,Low|120,ccffcc,Scrapeable|110,cccccc,Empty",
     "sca_guidebook_no": "34",
     "scrape_value": "1.1",
     "very_high_value": "1.8",
@@ -2228,8 +2228,8 @@
     "notes": "Not many calibrations for higher levels, please send more",
     "put_in_lat": "55.3892",
     "put_in_long": "-3.2453",
-    "river_zone_url": "https://riverzone.eu/calibration/f6e01a27-1f69-441c-afaf-d7e04479816f.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Ettrick (Upper)&zones=,ff0000,Huge|140,ff6060,Very+High|130,ffc004,High|120,ffff33,Medium|110,00ff00,Low|75,ccffcc,Scrapeable|70,cccccc,Empty",
-    "river_zone_url_mobile": "https://riverzone.eu/calibration/f6e01a27-1f69-441c-afaf-d7e04479816f.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Ettrick (Upper)&zones=,ff0000,Huge|140,ff6060,Very+High|130,ffc004,High|120,ffff33,Medium|110,00ff00,Low|75,ccffcc,Scrapeable|70,cccccc,Empty",
+    "river_zone_url": "https://riverzone.eu/calibration/f6e01a27-1f69-441c-afaf-d7e04479816f.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Ettrick (Upper)&zones=,ff0000,Huge|140,ff6060,Very+High|130,ffc004,High|120,ffff33,Medium|90,00ff00,Low|75,ccffcc,Scrapeable|70,cccccc,Empty",
+    "river_zone_url_mobile": "https://riverzone.eu/calibration/f6e01a27-1f69-441c-afaf-d7e04479816f.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Ettrick (Upper)&zones=,ff0000,Huge|140,ff6060,Very+High|130,ffc004,High|120,ffff33,Medium|90,00ff00,Low|75,ccffcc,Scrapeable|70,cccccc,Empty",
     "sca_guidebook_no": "310",
     "scrape_value": "0.7",
     "very_high_value": "1.3",
@@ -2681,8 +2681,8 @@
     "notes": "<b>Not many calibrations</b> 1.0 appears high, 1.65 appears VHigh.  Please send more calibrations.",
     "put_in_lat": "55.4661",
     "put_in_long": "-4.2255",
-    "river_zone_url": "https://riverzone.eu/calibration/cd037375-e1dd-49b1-947a-b7dca42c2609.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Lugar Water&zones=,ff0000,Huge|150,ff6060,Very+High|150,ffc004,High|150,ffff33,Medium|150,00ff00,Low|150,ccffcc,Scrapeable|150,cccccc,Empty",
-    "river_zone_url_mobile": "https://riverzone.eu/calibration/cd037375-e1dd-49b1-947a-b7dca42c2609.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Lugar Water&zones=,ff0000,Huge|150,ff6060,Very+High|150,ffc004,High|150,ffff33,Medium|150,00ff00,Low|150,ccffcc,Scrapeable|150,cccccc,Empty",
+    "river_zone_url": "https://riverzone.eu/calibration/cd037375-e1dd-49b1-947a-b7dca42c2609.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Lugar Water&zones=,ff0000,Huge|170,ff6060,Very+High|160,ffc004,High|100,ffff33,Medium|90,00ff00,Low|80,ccffcc,Scrapeable|70,cccccc,Empty",
+    "river_zone_url_mobile": "https://riverzone.eu/calibration/cd037375-e1dd-49b1-947a-b7dca42c2609.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Lugar Water&zones=,ff0000,Huge|170,ff6060,Very+High|160,ffc004,High|100,ffff33,Medium|90,00ff00,Low|80,ccffcc,Scrapeable|70,cccccc,Empty",
     "sca_guidebook_no": "281",
     "scrape_value": "0.7",
     "very_high_value": "1.6",
@@ -2925,7 +2925,9 @@
     "gauge_name": "Newcastleton",
     "classification": "",
     "classification_url": "",
-    "uuid": "5b620b69-8470-5eb5-8547-386bb24e97d3"
+    "uuid": "5b620b69-8470-5eb5-8547-386bb24e97d3",
+    "river_zone_url": "https://riverzone.eu/calibration/3bf226e8-06aa-4862-9dea-520d0379171f.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Liddel Water&zones=,ff0000,Huge|150,ff6060,Very+High|140,ffc004,High|130,ffff33,Medium|120,00ff00,Low|60,ccffcc,Scrapeable|50,cccccc,Empty",
+    "river_zone_url_mobile": "https://riverzone.eu/calibration/3bf226e8-06aa-4862-9dea-520d0379171f.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Liddel Water&zones=,ff0000,Huge|150,ff6060,Very+High|140,ffc004,High|130,ffff33,Medium|120,00ff00,Low|60,ccffcc,Scrapeable|50,cccccc,Empty"
   },
   {
     "name": "Annan",
@@ -2953,7 +2955,9 @@
     "gauge_name": "Brydekirk",
     "uuid": "c0fee64f-378f-5cf4-9666-92795d2ce424",
     "classification": "",
-    "classification_url": ""
+    "classification_url": "",
+    "river_zone_url": "https://riverzone.eu/calibration/4d5f3988-4673-451f-a484-dcaa2b5877a9.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Annan&zones=,ff0000,Huge|170,ff6060,Very+High|170,ffc004,High|146,ffff33,Medium|100,00ff00,Low|60,ccffcc,Scrapeable|60,cccccc,Empty",
+    "river_zone_url_mobile": "https://riverzone.eu/calibration/4d5f3988-4673-451f-a484-dcaa2b5877a9.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Annan&zones=,ff0000,Huge|170,ff6060,Very+High|170,ffc004,High|146,ffff33,Medium|100,00ff00,Low|60,ccffcc,Scrapeable|60,cccccc,Empty"
   },
   {
     "name": "Don (Middle)",
@@ -2981,7 +2985,9 @@
     "gauge_name": "Alford",
     "uuid": "a0bbb220-a784-5591-a047-01a1c5314aa7",
     "classification": "",
-    "classification_url": ""
+    "classification_url": "",
+    "river_zone_url": "https://riverzone.eu/calibration/2da07e9e-efaa-4e04-a5dc-731a2098fc2f.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Don (Middle)&zones=,ff0000,Huge|140,ff6060,Very+High|120,ffc004,High|100,ffff33,Medium|70,00ff00,Low|60,ccffcc,Scrapeable|40,cccccc,Empty",
+    "river_zone_url_mobile": "https://riverzone.eu/calibration/2da07e9e-efaa-4e04-a5dc-731a2098fc2f.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Don (Middle)&zones=,ff0000,Huge|140,ff6060,Very+High|120,ffc004,High|100,ffff33,Medium|70,00ff00,Low|60,ccffcc,Scrapeable|40,cccccc,Empty"
   },
   {
     "name": "Dee (Grampian) (Upper)",
@@ -3039,7 +3045,9 @@
     "gauge_name": "Park",
     "classification": "",
     "classification_url": "",
-    "uuid": "2f70f0d9-7c85-5795-81d7-e3e245935dc5"
+    "uuid": "2f70f0d9-7c85-5795-81d7-e3e245935dc5",
+    "river_zone_url": "https://riverzone.eu/calibration/aefaee74-e416-4279-a4cd-aaf2ee0385af.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Dee (Grampian) (Drumoak)&zones=,ff0000,Huge|0,ff6060,Very+High|0,ffc004,High|0,ffff33,Medium|0,00ff00,Low|0,ccffcc,Scrapeable|0,cccccc,Empty",
+    "river_zone_url_mobile": "https://riverzone.eu/calibration/aefaee74-e416-4279-a4cd-aaf2ee0385af.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Dee (Grampian) (Drumoak)&zones=,ff0000,Huge|0,ff6060,Very+High|0,ffc004,High|0,ffff33,Medium|0,00ff00,Low|0,ccffcc,Scrapeable|0,cccccc,Empty"
   },
   {
     "name": "Nethan",
@@ -3067,7 +3075,9 @@
     "gauge_name": "Kirkmuirhill",
     "uuid": "8524a975-af1a-5047-8117-6d4c9a426e13",
     "classification": "",
-    "classification_url": ""
+    "classification_url": "",
+    "river_zone_url": "https://riverzone.eu/calibration/7ccb7925-e8b0-4d1c-af09-56a641d3e40f.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Nethan&zones=,ff0000,Huge|80,ff6060,Very+High|80,ffc004,High|80,ffff33,Medium|80,00ff00,Low|80,ccffcc,Scrapeable|80,cccccc,Empty",
+    "river_zone_url_mobile": "https://riverzone.eu/calibration/7ccb7925-e8b0-4d1c-af09-56a641d3e40f.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Nethan&zones=,ff0000,Huge|80,ff6060,Very+High|80,ffc004,High|80,ffff33,Medium|80,00ff00,Low|80,ccffcc,Scrapeable|80,cccccc,Empty"
   },
   {
     "name": "Evan Water",
@@ -3123,7 +3133,9 @@
     "uuid": "63a3ebf0-7a82-5e66-80ae-29c7330336e5",
     "gauge_name": "Lennox Castle",
     "classification": "",
-    "classification_url": ""
+    "classification_url": "",
+    "river_zone_url": "https://riverzone.eu/calibration/affe30ef-8af2-43f9-aadf-b6b7b2f1bbb4.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Kirk Burn&zones=,ff0000,Huge|90,ff6060,Very+High|85,ffc004,High|75,ffff33,Medium|65,00ff00,Low|60,ccffcc,Scrapeable|50,cccccc,Empty",
+    "river_zone_url_mobile": "https://riverzone.eu/calibration/affe30ef-8af2-43f9-aadf-b6b7b2f1bbb4.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Kirk Burn&zones=,ff0000,Huge|90,ff6060,Very+High|85,ffc004,High|75,ffff33,Medium|65,00ff00,Low|60,ccffcc,Scrapeable|50,cccccc,Empty"
   },
   {
     "name": "North Esk (Lower) (Old)",
@@ -3239,7 +3251,9 @@
     "uuid": "a1bcbf86-2497-5242-bd6d-5f0b16a5e956",
     "gauge_name": "Colinton",
     "classification": "",
-    "classification_url": ""
+    "classification_url": "",
+    "river_zone_url": "https://riverzone.eu/calibration/07abba9b-fedc-4072-a214-023f8c9907e8.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Water of Leith (Upper)&zones=,ff0000,Huge|100,ff6060,Very+High|75,ffc004,High|65,ffff33,Medium|55,00ff00,Low|45,ccffcc,Scrapeable|40,cccccc,Empty",
+    "river_zone_url_mobile": "https://riverzone.eu/calibration/07abba9b-fedc-4072-a214-023f8c9907e8.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Water of Leith (Upper)&zones=,ff0000,Huge|100,ff6060,Very+High|75,ffc004,High|65,ffff33,Medium|55,00ff00,Low|45,ccffcc,Scrapeable|40,cccccc,Empty"
   },
   {
     "name": "Carron (Easter Ross) (Top)",
@@ -3267,7 +3281,9 @@
     "uuid": "74ae5efa-c884-53e1-8119-32a0d52400fe",
     "gauge_name": "Sgodachail",
     "classification": "",
-    "classification_url": ""
+    "classification_url": "",
+    "river_zone_url": "https://riverzone.eu/calibration/59ba0665-4f0f-58ba-970d-62f922fc8e95.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Carron (Easter Ross) (Top)&zones=,ff0000,Huge|200,ff6060,Very+High|160,ffc004,High|140,ffff33,Medium|120,00ff00,Low|110,ccffcc,Scrapeable|90,cccccc,Empty",
+    "river_zone_url_mobile": "https://riverzone.eu/calibration/59ba0665-4f0f-58ba-970d-62f922fc8e95.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Carron (Easter Ross) (Top)&zones=,ff0000,Huge|200,ff6060,Very+High|160,ffc004,High|140,ffff33,Medium|120,00ff00,Low|110,ccffcc,Scrapeable|90,cccccc,Empty"
   },
   {
     "name": "Abhainn Deabhag",
@@ -3293,7 +3309,9 @@
     "get_out_long": "-4.8602",
     "get_out_lat": "57.2725",
     "uuid": "f06fc2fb-50df-558c-abca-636506e3bb66",
-    "gauge_name": "Fasnakyle"
+    "gauge_name": "Fasnakyle",
+    "river_zone_url": "https://riverzone.eu/calibration/7da02f6b-0b91-4232-8ba1-ee8b61ac8bc2.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Abhainn Deabhag&zones=,ff0000,Huge|100,ff6060,Very+High|80,ffc004,High|65,ffff33,Medium|50,00ff00,Low|45,ccffcc,Scrapeable|40,cccccc,Empty",
+    "river_zone_url_mobile": "https://riverzone.eu/calibration/7da02f6b-0b91-4232-8ba1-ee8b61ac8bc2.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Abhainn Deabhag&zones=,ff0000,Huge|100,ff6060,Very+High|80,ffc004,High|65,ffff33,Medium|50,00ff00,Low|45,ccffcc,Scrapeable|40,cccccc,Empty"
   },
   {
     "name": "Coiltie",
@@ -3319,7 +3337,9 @@
     "get_out_long": "-4.4728",
     "get_out_lat": "57.3271",
     "uuid": "c5152809-dac7-56d8-8f7f-aec8a4c446a3",
-    "gauge_name": "Ivy Bridge"
+    "gauge_name": "Ivy Bridge",
+    "river_zone_url": "https://riverzone.eu/calibration/0f5bb1b5-14d3-419c-a987-ce8c15d2a316.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Coiltie&zones=,ff0000,Huge|200,ff6060,Very+High|180,ffc004,High|160,ffff33,Medium|140,00ff00,Low|120,ccffcc,Scrapeable|100,cccccc,Empty",
+    "river_zone_url_mobile": "https://riverzone.eu/calibration/0f5bb1b5-14d3-419c-a987-ce8c15d2a316.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Coiltie&zones=,ff0000,Huge|200,ff6060,Very+High|180,ffc004,High|160,ffff33,Medium|140,00ff00,Low|120,ccffcc,Scrapeable|100,cccccc,Empty"
   },
   {
     "name": "Clyde (Elvanfoot to Wiston)",
