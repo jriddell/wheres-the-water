@@ -2223,7 +2223,7 @@
     "latitude": "55.3892",
     "longitude": "-3.2453",
     "low_value": "0.75",
-    "medium_value": "1.1",
+    "medium_value": "0.9",
     "name": "Ettrick (Upper)",
     "notes": "Not many calibrations for higher levels, please send more",
     "put_in_lat": "55.3892",
