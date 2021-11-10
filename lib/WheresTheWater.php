@@ -689,6 +689,7 @@ jQuery(document).ready( function(){
                     '<img src="/wheres-the-water/pics/NEXT_7_DAYS.png" width="10" height="10" /> Next date is within 7 days.<br />' +
                     '<img src="/wheres-the-water/pics/NEXT_30_DAYS.png" width="10" height="10" /> Next date is within 30 days.<br />' +
                     '<img src="/wheres-the-water/pics/NOT_THIS_MONTH.png" width="10" height="10" /> Not This Month (schedule date over 30s days in future).<br />' +
+                    '<img src="/wheres-the-water/pics/NO_KNOWN_DATES.png" width="10" height="10" /> No Known Dates.<br />' +
                     'Dates are added manually.  In case of discrepancy the info page linked is definitive over this list. <a href="https://jriddell.org/contact/"> Feedback and contributions welcome</a>.<br />' +
                     "</p>"
                     //"<p class='js-forecast-content' style='display: none'>" +
