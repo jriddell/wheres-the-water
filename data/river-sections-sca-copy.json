@@ -1527,8 +1527,8 @@
     "notes": "Please send calibrations for Woodend gauge for paddling at Potarch",
     "put_in_lat": "57.0652",
     "put_in_long": "-2.6485",
-    "river_zone_url": "https://riverzone.eu/calibration/c48d829c-049e-5fb2-9ce4-593dc14d5943.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Dee (Grampian) (Middle)&zones=,ff0000,Huge|250,ff6060,Very+High|200,ffc004,High|150,ffff33,Medium|100,00ff00,Low|50,ccffcc,Scrapeable|0,cccccc,Empty",
-    "river_zone_url_mobile": "https://riverzone.eu/calibration/c48d829c-049e-5fb2-9ce4-593dc14d5943.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Dee (Grampian) (Middle)&zones=,ff0000,Huge|250,ff6060,Very+High|200,ffc004,High|150,ffff33,Medium|100,00ff00,Low|50,ccffcc,Scrapeable|0,cccccc,Empty",
+    "river_zone_url": "https://riverzone.eu/calibration/098534c4-5c8b-4800-a725-08022bb723d1.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Dee (Grampian) (Middle)&zones=,ff0000,Huge|200,ff6060,Very+High|160,ffc004,High|120,ffff33,Medium|90,00ff00,Low|50,ccffcc,Scrapeable|40,cccccc,Empty",
+    "river_zone_url_mobile": "https://riverzone.eu/calibration/098534c4-5c8b-4800-a725-08022bb723d1.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Dee (Grampian) (Middle)&zones=,ff0000,Huge|200,ff6060,Very+High|160,ffc004,High|120,ffff33,Medium|90,00ff00,Low|50,ccffcc,Scrapeable|40,cccccc,Empty",
     "sca_guidebook_no": "240",
     "scrape_value": "0.4",
     "very_high_value": "1.6",
@@ -2591,8 +2591,8 @@
     "notes": "No calibrations yet, please send them in",
     "put_in_lat": "56.4623",
     "put_in_long": "-3.8070",
-    "river_zone_url": "https://riverzone.eu/calibration/56aea3e5-73cf-44c0-8782-12de92354a9a.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Almond (Perthshire)&zones=,ff0000,Huge|100,ff6060,Very+High|100,ffc004,High|100,ffff33,Medium|100,00ff00,Low|100,ccffcc,Scrapeable|100,cccccc,Empty",
-    "river_zone_url_mobile": "https://riverzone.eu/calibration/56aea3e5-73cf-44c0-8782-12de92354a9a.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Almond (Perthshire)&zones=,ff0000,Huge|100,ff6060,Very+High|100,ffc004,High|100,ffff33,Medium|100,00ff00,Low|100,ccffcc,Scrapeable|100,cccccc,Empty",
+    "river_zone_url": "https://riverzone.eu/calibration/c601a21d-7497-4b97-ad49-d0efaaa16619.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Almond (Perthshire)&zones=,ff0000,Huge|170,ff6060,Very+High|150,ffc004,High|80,ffff33,Medium|70,00ff00,Low|40,ccffcc,Scrapeable|38,cccccc,Empty",
+    "river_zone_url_mobile": "https://riverzone.eu/calibration/c601a21d-7497-4b97-ad49-d0efaaa16619.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Almond (Perthshire)&zones=,ff0000,Huge|170,ff6060,Very+High|150,ffc004,High|80,ffff33,Medium|70,00ff00,Low|40,ccffcc,Scrapeable|38,cccccc,Empty",
     "sca_guidebook_no": "229",
     "scrape_value": "0.38",
     "very_high_value": "1.5",
@@ -3105,7 +3105,9 @@
     "uuid": "e314d572-08e4-5d03-b0b6-eb739b4ed8b0",
     "gauge_name": "Beattock",
     "classification": "",
-    "classification_url": ""
+    "classification_url": "",
+    "river_zone_url": "https://riverzone.eu/calibration/95695a5a-b388-3a06-81ec-9809478364bb.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Evan Water&zones=,ff0000,Huge|120,ff6060,Very+High|110,ffc004,High|100,ffff33,Medium|75,00ff00,Low|50,ccffcc,Scrapeable|50,cccccc,Empty",
+    "river_zone_url_mobile": "https://riverzone.eu/calibration/95695a5a-b388-3a06-81ec-9809478364bb.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Evan Water&zones=,ff0000,Huge|120,ff6060,Very+High|110,ffc004,High|100,ffff33,Medium|75,00ff00,Low|50,ccffcc,Scrapeable|50,cccccc,Empty"
   },
   {
     "name": "Kirk Burn",
@@ -3367,7 +3369,9 @@
     "uuid": "d8698882-39fd-5f6c-abeb-e70def9c9bae",
     "gauge_name": "Abington",
     "classification": "",
-    "classification_url": ""
+    "classification_url": "",
+    "river_zone_url": "https://riverzone.eu/calibration/d7babe29-5f3e-46a8-8559-d3359944d0c2.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Clyde (Elvanfoot to Wiston)&zones=,ff0000,Huge|200,ff6060,Very+High|170,ffc004,High|150,ffff33,Medium|70,00ff00,Low|50,ccffcc,Scrapeable|30,cccccc,Empty",
+    "river_zone_url_mobile": "https://riverzone.eu/calibration/d7babe29-5f3e-46a8-8559-d3359944d0c2.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Clyde (Elvanfoot to Wiston)&zones=,ff0000,Huge|200,ff6060,Very+High|170,ffc004,High|150,ffff33,Medium|70,00ff00,Low|50,ccffcc,Scrapeable|30,cccccc,Empty"
   },
   {
     "name": "Earn",
@@ -3387,13 +3391,17 @@
     "google_mymaps": "",
     "kml": "",
     "webcam": "https://www.farsondigitalwatercams.com/locations/crieff",
-    "notes": "Please send calibrations",
+    "notes": "Please send calibrations. Reports are: 0.75 high, 1 vhigh.",
     "put_in_long": "",
     "put_in_lat": "",
     "get_out_long": "",
     "get_out_lat": "",
     "uuid": "03df80ce-3406-57df-9bf9-5849e34a1c02",
-    "gauge_name": "Dalginross"
+    "gauge_name": "Dalginross",
+    "classification": "",
+    "classification_url": "",
+    "river_zone_url": "https://riverzone.eu/calibration/58d92b76-5f6e-4f88-aa17-f83e3231462e.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Earn&zones=,ff0000,Huge|0,ff6060,Very+High|0,ffc004,High|0,ffff33,Medium|0,00ff00,Low|0,ccffcc,Scrapeable|0,cccccc,Empty",
+    "river_zone_url_mobile": "https://riverzone.eu/calibration/58d92b76-5f6e-4f88-aa17-f83e3231462e.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Earn&zones=,ff0000,Huge|0,ff6060,Very+High|0,ffc004,High|0,ffff33,Medium|0,00ff00,Low|0,ccffcc,Scrapeable|0,cccccc,Empty"
   },
   {
     "name": "Clyde (Sills of Clyde)",
@@ -3419,6 +3427,8 @@
     "get_out_long": "",
     "get_out_lat": "",
     "uuid": "fe4aaf56-780a-50d9-8468-0ea2fa88ae99",
-    "gauge_name": "Sills of Clyde"
+    "gauge_name": "Sills of Clyde",
+    "river_zone_url": "https://riverzone.eu/calibration/413157ff-93ae-40f8-97e4-75183458b48d.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Clyde (Sills of Clyde)&zones=,ff0000,Huge|200,ff6060,Very+High|180,ffc004,High|150,ffff33,Medium|110,00ff00,Low|80,ccffcc,Scrapeable|50,cccccc,Empty",
+    "river_zone_url_mobile": "https://riverzone.eu/calibration/413157ff-93ae-40f8-97e4-75183458b48d.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Clyde (Sills of Clyde)&zones=,ff0000,Huge|200,ff6060,Very+High|180,ffc004,High|150,ffff33,Medium|110,00ff00,Low|80,ccffcc,Scrapeable|50,cccccc,Empty"
   }
 ]
