@@ -59,6 +59,7 @@ class GrabSepaRiverReading {
         $this->currentReading = $mostRecentReadingPair[1];
         $this->currentReadingTime = $mostRecentReadingPair[0];
         //$pastReading = array_slice($riverDataArray, -6, 1)[0]; // '03/03/2018 11:45:00,0.53'
+        $riverDataArray = explode("\n", $riverData);
         $slice = array_slice($riverDataArray, -6, 1);
         $pastReading = $slice[0];
         $pastReading = rtrim($pastReading);
