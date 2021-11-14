@@ -54,7 +54,7 @@ class GrabSepaRiverReading {
             $riverData = file_get_contents($riverFilePath);
         }
 
-        $mostRecentReading = mostRecentReading($riverData);
+        $mostRecentReading = $this->mostRecentReading($riverData);
         $mostRecentReadingPair = explode(",", $mostRecentReading); // ['03/03/2018 12:45:00', '0.53']
         $this->currentReading = $mostRecentReadingPair[1];
         $this->currentReadingTime = $mostRecentReadingPair[0];
