@@ -78,6 +78,9 @@ class GrabSepaRiverReading {
         $ustime = $time_explode[1] . '/' . $time_explode[0] . '/' . $time_explode[2];
         $timestamp = strtotime($ustime);
         $history->newReading($timestamp, $this->currentReading);
+        $handle = fopen("/home/jr/TEST", 'a');
+        fwrite($handle, "gauge: " . $gauge_id . " reading: " . $mostRecentReading . "\n");
+        fclose($handle);
     }
 
     public function mostRecentReading($riverData) {
