@@ -54,13 +54,7 @@ class GrabSepaRiverReading {
             $riverData = file_get_contents($riverFilePath);
         }
 
-        $riverDataArray = explode("\n", $riverData);
-        //print_r($riverDataArray);
-        //Get the last value (uses -2 as -1 final entry is just a new line)
-        //$mostRecentReading = array_slice($riverDataArray, -2, 1)[0]; // '03/03/2018 12:45:00,0.53'
-        $slice = array_slice($riverDataArray, -2, 1);
-        $mostRecentReading = $slice[0];
-        $mostRecentReading = rtrim($mostRecentReading);
+        $mostRecentReading = mostRecentReading($riverData);
         $mostRecentReadingPair = explode(",", $mostRecentReading); // ['03/03/2018 12:45:00', '0.53']
         $this->currentReading = $mostRecentReadingPair[1];
         $this->currentReadingTime = $mostRecentReadingPair[0];
@@ -84,6 +78,19 @@ class GrabSepaRiverReading {
         $ustime = $time_explode[1] . '/' . $time_explode[0] . '/' . $time_explode[2];
         $timestamp = strtotime($ustime);
         $history->newReading($timestamp, $this->currentReading);
+    }
+
+    public function mostRecentReading($riverData) {
+        $riverDataArray = explode("\n", $riverData);
+        foreach([-1,-2,-3,-4,-5,-6,-7,-8,-9] as $i) {
+            $slice = array_slice($riverDataArray, $i);
+            $slice = $slice[0];
+            $slice = rtrim($slice);
+            if (substr($slice, -2) != ",0" && substr($slice, -2) != "") {
+                $mostRecentReading = $slice;
+                return $mostRecentReading;
+            }
+        }
     }
 
     private function validateRiverData($riverData) {
