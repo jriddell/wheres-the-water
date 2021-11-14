@@ -82,7 +82,7 @@ class GrabSepaRiverReading {
 
     public function mostRecentReading($riverData) {
         $riverDataArray = explode("\n", $riverData);
-        foreach([-1,-2,-3,-4,-5,-6,-7,-8,-9] as $i) {
+        foreach(range(-1,-100,-1) as $i) {
             $slice = array_slice($riverDataArray, $i);
             $slice = $slice[0];
             $slice = rtrim($slice);
