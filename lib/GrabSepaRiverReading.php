@@ -23,16 +23,22 @@ class GrabSepaRiverReading {
     public $currentReadingTime;
     public $sepaURL;
     public $dataDir;
+    public $testMode;
 
     function __construct() {
         $this->sepaURL = self::SEPA_URL;
         $this->dataDir = ROOT . '/' . self::DATADIR;
+        $this->testMode = false;
     }
 
     public function doGrabSepaRiver($gauge_id) {
         $this->gauge_id = $gauge_id;
 
-        $riverFilename = "${gauge_id}?csv=true";
+        if ($this->testMode) {
+            $riverFilename = "${gauge_id}";
+        } else {
+            $riverFilename = "${gauge_id}?csv=true";
+        }
         $riverFilePath = $this->dataDir . '/' . "${gauge_id}-SG.csv";
         $riverFileURL = $this->sepaURL . $riverFilename;
         if (!file_exists($riverFilePath) || time()-filemtime($riverFilePath) > self::SEPA_DOWNLOAD_PERIOD) {
