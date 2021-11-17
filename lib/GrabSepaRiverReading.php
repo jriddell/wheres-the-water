@@ -23,16 +23,22 @@ class GrabSepaRiverReading {
     public $currentReadingTime;
     public $sepaURL;
     public $dataDir;
+    public $testMode;
 
     function __construct() {
         $this->sepaURL = self::SEPA_URL;
         $this->dataDir = ROOT . '/' . self::DATADIR;
+        $this->testMode = false;
     }
 
     public function doGrabSepaRiver($gauge_id) {
         $this->gauge_id = $gauge_id;
 
-        $riverFilename = "${gauge_id}?csv=true";
+        if ($this->testMode) {
+            $riverFilename = "${gauge_id}";
+        } else {
+            $riverFilename = "${gauge_id}?csv=true";
+        }
         $riverFilePath = $this->dataDir . '/' . "${gauge_id}-SG.csv";
         $riverFileURL = $this->sepaURL . $riverFilename;
         if (!file_exists($riverFilePath) || time()-filemtime($riverFilePath) > self::SEPA_DOWNLOAD_PERIOD) {
@@ -54,11 +60,12 @@ class GrabSepaRiverReading {
             $riverData = file_get_contents($riverFilePath);
         }
 
-        $mostRecentReading = mostRecentReading($riverData);
+        $mostRecentReading = $this->mostRecentReading($riverData);
         $mostRecentReadingPair = explode(",", $mostRecentReading); // ['03/03/2018 12:45:00', '0.53']
         $this->currentReading = $mostRecentReadingPair[1];
         $this->currentReadingTime = $mostRecentReadingPair[0];
         //$pastReading = array_slice($riverDataArray, -6, 1)[0]; // '03/03/2018 11:45:00,0.53'
+        $riverDataArray = explode("\n", $riverData);
         $slice = array_slice($riverDataArray, -6, 1);
         $pastReading = $slice[0];
         $pastReading = rtrim($pastReading);
