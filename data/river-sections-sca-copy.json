@@ -3430,5 +3430,31 @@
     "gauge_name": "Sills of Clyde",
     "river_zone_url": "https://riverzone.eu/calibration/413157ff-93ae-40f8-97e4-75183458b48d.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Clyde (Sills of Clyde)&zones=,ff0000,Huge|200,ff6060,Very+High|180,ffc004,High|150,ffff33,Medium|110,00ff00,Low|80,ccffcc,Scrapeable|50,cccccc,Empty",
     "river_zone_url_mobile": "https://riverzone.eu/calibration/413157ff-93ae-40f8-97e4-75183458b48d.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Clyde (Sills of Clyde)&zones=,ff0000,Huge|200,ff6060,Very+High|180,ffc004,High|150,ffff33,Medium|110,00ff00,Low|80,ccffcc,Scrapeable|50,cccccc,Empty"
+  },
+  {
+    "name": "Etive (Middle)",
+    "gauge_location_code": "133131",
+    "longitude": "-4.905",
+    "latitude": "56.6254",
+    "scrape_value": "0.3",
+    "low_value": "0.4",
+    "medium_value": "0.52",
+    "high_value": "0.65",
+    "very_high_value": "0.75",
+    "huge_value": "0.8",
+    "grade": "4",
+    "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/west-highlands/river-etive-triple-falls-to-the-allt-achaorainn",
+    "sca_guidebook_no": "162",
+    "access_issue": "",
+    "google_mymaps": "",
+    "kml": "",
+    "webcam": "",
+    "notes": "<b>Experimental</b> Calibration based on a  gauge on a river to the south east of Etive catchment (on a different river). Variability between the two rivers exists but in general they respond similarly to rain as they have broadly similar catchment areas and topography. Localised rainfall differences particularly summer thunderstorms may result in significant differences in level. As with any river you should satisfy yourself that the level is sutible for you and your group when you get there. Please send in more calibrations.",
+    "put_in_long": "-4.905",
+    "put_in_lat": "56.6254",
+    "get_out_long": "56.6181",
+    "get_out_lat": "56.6181",
+    "uuid": "6369d093-be2f-59f5-a9eb-aa9c8225eda9",
+    "gauge_name": "Victoria Bridge"
   }
 ]
