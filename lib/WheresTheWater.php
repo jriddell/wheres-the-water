@@ -542,7 +542,7 @@ jQuery(document).ready( function(){
             if ('guidebook_link' in riverSection && !riverSection['guidebook_link'].length == 0) {
                 linksContent += "<a target='_blank' rel='noopener' href='"+riverSection['guidebook_link']+"'><img width='16' height='16' title='UKRGB Link' src='/wheres-the-water/pics/ukrgb.ico'/> UKRGB</a><br />";
             }
-            access_issue_short = riverSection['access_issue'].replace(/(.{7})..+/, "$1&hellip;");
+            access_issue_short = riverSection['access_issue'].replace(/(.{30})..+/, "$1&hellip;");
             if ('access_issue' in riverSection && !riverSection['access_issue'].length == 0) {
                 linksContent += "<a target='_blank' rel='noopener' href='"+riverSection['access_issue']+"'><img width='16' height='16' title='Access Issue Link' src='/wheres-the-water/pics/warning.png' /> Access: " + access_issue_short + "</a><br />";
             }
