@@ -2116,7 +2116,7 @@
     "uuid": "ae46b273-149b-562a-83eb-8e5d0df20da9"
   },
   {
-    "access_issue": "https://www.facebook.com/groups/Scottish.Whitewater/permalink/3248679431833712/",
+    "access_issue": "https://www.canoescotland.org/north-esk-tree-hazards#gsc.tab=0",
     "classification": "Good",
     "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=5701",
     "gauge_location_code": "371579",
@@ -2134,7 +2134,7 @@
     "low_value": "0.24",
     "medium_value": "0.3",
     "name": "North Esk (Lower)",
-    "notes": "New gauge April 2018, calibrations updated Jan 2019, please send calibrations to confirm/adjust. High was 0.4 now 0.5, Feb 2020. Low was 0.22 now 0.24, Feb 2020.  Tree blockages access issue 9 July, see link. 2020.",
+    "notes": "New gauge April 2018, calibrations updated Jan 2019, please send calibrations to confirm/adjust. High was 0.4 now 0.5, Feb 2020. Low was 0.22 now 0.24, Feb 2020.  Tree blockages access issue 9 December 2021, see link.",
     "put_in_lat": "56.8669",
     "put_in_long": "-2.7007",
     "river_zone_url": "https://riverzone.eu/calibration/c0fca9ba-3d1c-5d6e-9e8b-7899acfb2817.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=North Esk (Lower)&zones=,ff0000,Huge|95,ff6060,Very+High|70,ffc004,High|50,ffff33,Medium|30,00ff00,Low|24,ccffcc,Scrapeable|14,cccccc,Empty",
