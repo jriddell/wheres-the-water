@@ -359,6 +359,28 @@
     "get_out_long": "",
     "constant": "",
     "dates": [
+
+    ]
+  },
+  {
+    "name": "Tummel (Lower)",
+    "latitude": "56.7191",
+    "longitude": "-3.8247",
+    "grade": "3(4)",
+    "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/central-highlands/river-tummel-loch-tummel-to-loch-faskally",
+    "sca_guidebook_no": "217",
+    "info_link": "www.canoescotland.org/go-paddling/water-releases",
+    "access_issue": "https://www.facebook.com/groups/267941769907508/?multi_permalinks=4238057909562521",
+    "google_mymaps": "",
+    "kml": "",
+    "webcam": "",
+    "notes": "Freshets shall be released weekly and shall commence at 16:00 on Friday continuing for 64 hours until 08:00 on Monday. <br> See Access link for parking update.",
+    "put_in_lat": "",
+    "put_in_long": "",
+    "get_out_lat": "",
+    "get_out_long": "",
+    "constant": "",
+    "dates": [
       "2022-06-03",
       "2022-06-04",
       "2022-06-05",
@@ -413,28 +435,6 @@
       "2022-09-30",
       "2022-10-01",
       "2022-10-02"
-    ]
-  },
-  {
-    "name": "Tummel (Lower)",
-    "latitude": "56.7191",
-    "longitude": "-3.8247",
-    "grade": "3(4)",
-    "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/central-highlands/river-tummel-loch-tummel-to-loch-faskally",
-    "sca_guidebook_no": "217",
-    "info_link": "www.canoescotland.org/go-paddling/water-releases",
-    "access_issue": "https://www.facebook.com/groups/267941769907508/?multi_permalinks=4238057909562521",
-    "google_mymaps": "",
-    "kml": "",
-    "webcam": "",
-    "notes": "Freshets shall be released weekly and shall commence at 16:00 on Friday continuing for 64 hours until 08:00 on Monday. <br> See Access link for parking update.",
-    "put_in_lat": "",
-    "put_in_long": "",
-    "get_out_lat": "",
-    "get_out_long": "",
-    "constant": "",
-    "dates": [
-
     ]
   },
   {
