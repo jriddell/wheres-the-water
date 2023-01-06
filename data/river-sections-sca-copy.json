@@ -2690,7 +2690,7 @@
     "uuid": "3fb65e64-425d-5c90-9a6c-4b3ae1b5fdc8"
   },
   {
-    "access_issue": "Fence for portage at 55.9348424, -3.7038011 reported Sept 2019",
+    "access_issue": "",
     "classification": "",
     "classification_url": "",
     "gauge_location_code": "14884",
@@ -2708,7 +2708,7 @@
     "low_value": "0.7",
     "medium_value": "1.2",
     "name": "Avon (Lothian)",
-    "notes": "",
+    "notes": "Fence for portage at 55.9348424, -3.7038011 reported Sept 2019",
     "put_in_lat": "55.935522",
     "put_in_long": "-3.744509",
     "sca_guidebook_no": "",
