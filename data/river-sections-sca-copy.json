@@ -3086,7 +3086,7 @@
     "latitude": "55.3442",
     "scrape_value": "0.5",
     "low_value": "0.5",
-    "medium_value": "0.75",
+    "medium_value": "0.8",
     "high_value": "1.0",
     "very_high_value": "1.1",
     "huge_value": "1.2",
