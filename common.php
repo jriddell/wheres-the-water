@@ -42,20 +42,21 @@ function heading($iframe=false) {
 
 function footer() {
 ?>
-<p>Newly added Feb 2020 Scheduled Water Flows.
-<img src="/wheres-the-water/pics/CONSTANT.png" width="10" height="10" />Constant. Flow is always on.
-<img src="/wheres-the-water/pics/TODAY.png" width="10" height="10" />Today, scheduled date on now.
-<img src="/wheres-the-water/pics/TOMORROW.png" width="10" height="10" />Tomorrow, scheduled date is mañana.
-<img src="/wheres-the-water/pics/NEXT_7_DAYS.png" width="10" height="10" />Next date is within 7 days.
-<img src="/wheres-the-water/pics/NEXT_30_DAYS.png" width="10" height="10" />Next date is within 30 days.
-<img src="/wheres-the-water/pics/NOT_THIS_MONTH.png" width="10" height="10" />Not This Month (schedule date over 30s days in future).
-<img src="/wheres-the-water/pics/NO_KNOWN_DATES.png" width="10" height="10" />No known dates.
+<p>Scheduled Water Flows.
+<img src="/wheres-the-water/pics/CONSTANT.png" width="10" height="10" />Constant. Flow is always on.<br>
+<img src="/wheres-the-water/pics/TODAY.png" width="10" height="10" />Today, scheduled date on now.<br>
+<img src="/wheres-the-water/pics/TOMORROW.png" width="10" height="10" />Tomorrow, scheduled date is mañana.<br>
+<img src="/wheres-the-water/pics/NEXT_7_DAYS.png" width="10" height="10" />Next date is within 7 days.<br>
+<img src="/wheres-the-water/pics/NEXT_30_DAYS.png" width="10" height="10" />Next date is within 30 days.<br>
+<img src="/wheres-the-water/pics/NOT_THIS_MONTH.png" width="10" height="10" />Not This Month (schedule date over 30s days in future).<br>
+<img src="/wheres-the-water/pics/NO_KNOWN_DATES.png" width="10" height="10" />No known dates.<br>
 Dates are added manually.   In case of discrepancy the info page linked is definitive over this list.   <a href="https://jriddell.org/contact/">Feedback and contributions welcome</a>.</p>
 
 <p>SCA Where's the Water uses <a href="https://www2.sepa.org.uk/waterlevels/">water level data from SEPA</a>.</p>
 
 <p>Code written and maintained by <a href="http://www.edinburghlinux.co.uk">Jonathan Riddell</a>. <a href="https://github.com/jriddell/wheres-the-water">Code on GitHub</a>.  Please file <a href="https://github.com/jriddell/wheres-the-water/issues">bug reports and feature requests on GitHub</a>.</p>
 
+<p><a href="https://calendar.google.com/calendar/embed?src=scottishwwguide%40gmail.com&ctz=Europe%2FLondon">Scottish White Water Guide Calendar</a>.</p>
 <p><a href="http://goo.gl/forms/nnEOgVkw8ebhygW52">Help Us Calibrate: River Level Report Form</a>.</p>
 <p><a href="http://goo.gl/forms/YQ3xZTi30vrtFYpo1">River Gauge Request Form</a></a>.</p>
 <p><a href="/wtw">Simple List View</a></p>
