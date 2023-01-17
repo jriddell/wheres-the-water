@@ -45,7 +45,7 @@ function footer() {
 <p>Scheduled Water Flows.<br>
 <img src="/wheres-the-water/pics/CONSTANT.png" width="10" height="10" /> Constant. Flow is always on.<br>
 <img src="/wheres-the-water/pics/TODAY.png" width="10" height="10" /> Today, scheduled date on now.<br>
-<img src="/wheres-the-water/pics/TOMORROW.png" width="10" height="10" />T omorrow, scheduled date is mañana.<br>
+<img src="/wheres-the-water/pics/TOMORROW.png" width="10" height="10" /> Tomorrow, scheduled date is mañana.<br>
 <img src="/wheres-the-water/pics/NEXT_7_DAYS.png" width="10" height="10" /> Next date is within 7 days.<br>
 <img src="/wheres-the-water/pics/NEXT_30_DAYS.png" width="10" height="10" /> Next date is within 30 days.<br>
 <img src="/wheres-the-water/pics/NOT_THIS_MONTH.png" width="10" height="10" /> Not This Month (schedule date over 30s days in future).<br>
