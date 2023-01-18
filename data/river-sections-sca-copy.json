@@ -3464,12 +3464,12 @@
     "gauge_location_code": "133118",
     "longitude": "-4.264467",
     "latitude": "55.806223",
-    "scrape_value": "0",
-    "low_value": "0",
-    "medium_value": "0",
-    "high_value": "0",
-    "very_high_value": "0",
-    "huge_value": "0",
+    "scrape_value": "0.47",
+    "low_value": "0.6",
+    "medium_value": "0.7",
+    "high_value": "0.8",
+    "very_high_value": "0.9",
+    "huge_value": "1.0",
     "grade": "5",
     "guidebook_link": "",
     "sca_guidebook_no": "271",
@@ -3483,6 +3483,8 @@
     "get_out_long": "-4.264467",
     "get_out_lat": "55.806223",
     "uuid": "7deb64c6-4074-587a-be5d-dd5f3fd402f3",
-    "gauge_name": "Overlee"
+    "gauge_name": "Overlee",
+    "classification": "",
+    "classification_url": ""
   }
 ]
