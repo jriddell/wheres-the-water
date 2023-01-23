@@ -994,7 +994,7 @@
     "uuid": "37925bdb-a2f0-5138-8141-8c0d2d8b0036"
   },
   {
-    "access_issue": "",
+    "access_issue": "https://www.facebook.com/groups/Scottish.Whitewater/posts/5973358476032447/",
     "classification": "Moderate",
     "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=6540",
     "gauge_location_code": "14956",
@@ -1012,7 +1012,7 @@
     "low_value": "0.85",
     "medium_value": "0.9",
     "name": "Blackwater (Perthshire)",
-    "notes": "Gauge is below confluence with River Ardle so may not be very accurate. Low 0.8&#8594;0.85 Feb 2020.",
+    "notes": "Gauge is below confluence with River Ardle so may not be very accurate. Low 0.8→0.85 Feb 2020.  Access issue added Jan 2023.",
     "put_in_lat": "56.6965",
     "put_in_long": "-3.4092",
     "river_zone_url": "https://riverzone.eu/calibration/254d4d1e-8593-5e71-923d-2ce85378da66.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Blackwater (Perthshire)&zones=,ff0000,Huge|170,ff6060,Very+High|140,ffc004,High|120,ffff33,Medium|90,00ff00,Low|85,ccffcc,Scrapeable|75,cccccc,Empty",
