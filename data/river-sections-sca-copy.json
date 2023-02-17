@@ -1719,7 +1719,7 @@
     "uuid": "ddf82334-3e5b-5407-8ce1-c91bbd0b37c8"
   },
   {
-    "access_issue": "https://www.canoescotland.org/upper-tay-joint-statement",
+    "access_issue": "https://www.canoescotland.org/chinese-bridge-rapid-scouting-access-issue",
     "classification": "Good",
     "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=6501",
     "gauge_location_code": "8295",
@@ -1737,7 +1737,7 @@
     "low_value": "0.5",
     "medium_value": "0.7",
     "name": "Tay (Kenmore)",
-    "notes": "See Access link for Upper Tay Joint Statement June 2019",
+    "notes": "See Access link for issue at Chinese bridge",
     "put_in_lat": "56.583472",
     "put_in_long": "-3.996751",
     "river_zone_url": "https://riverzone.eu/calibration/60cf0430-2017-5245-ad61-6a29718f4418.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Tay (Kenmore)&zones=,ff0000,Huge|200,ff6060,Very+High|150,ffc004,High|100,ffff33,Medium|70,00ff00,Low|50,ccffcc,Scrapeable|30,cccccc,Empty",
