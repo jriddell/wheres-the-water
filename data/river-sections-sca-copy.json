@@ -1506,7 +1506,7 @@
     "uuid": "3cee6b12-8e31-55bd-b035-44d169c91173"
   },
   {
-    "access_issue": "",
+    "access_issue": "https://www.canoescotland.org/river-dee-invercauld-bridge",
     "classification": "Moderate",
     "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=23332",
     "gauge_location_code": "234333",
@@ -1524,7 +1524,7 @@
     "low_value": "0.5",
     "medium_value": "0.9",
     "name": "Dee (Grampian) (Middle)",
-    "notes": "Please send calibrations for Woodend gauge for paddling at Potarch",
+    "notes": "Please send calibrations for Woodend gauge for paddling at Potarch. See access link for tree at Invercauld Bridge.",
     "put_in_lat": "57.0652",
     "put_in_long": "-2.6485",
     "river_zone_url": "https://riverzone.eu/calibration/098534c4-5c8b-4800-a725-08022bb723d1.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Dee (Grampian) (Middle)&zones=,ff0000,Huge|200,ff6060,Very+High|160,ffc004,High|120,ffff33,Medium|90,00ff00,Low|50,ccffcc,Scrapeable|40,cccccc,Empty",
