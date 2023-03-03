@@ -872,9 +872,7 @@ jQuery(document).ready( function(){
             }
             datesTable += "</span>"
             datesTable += '</ul>';
-            //return datesTable;
-            //FIXME not published yet
-            return '';
+            return datesTable;
         }
 
         function getRiverGraphFilename(riverSection) {
