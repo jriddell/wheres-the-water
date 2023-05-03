@@ -903,7 +903,7 @@
     "uuid": "796ce0c5-ea42-58dd-9a3b-96732c1135a0"
   },
   {
-    "access_issue": "https://www.facebook.com/groups/Scottish.Whitewater/posts/4927786490589656",
+    "access_issue": "https://www.youtube.com/shorts/qQEB62dFHaE",
     "classification": "",
     "classification_url": "",
     "gauge_location_code": "133154",
@@ -921,7 +921,7 @@
     "low_value": "0.45",
     "medium_value": "0.9",
     "name": "Nith (Drumlanrig)",
-    "notes": "Access issue updated Jan 2023.",
+    "notes": "Strainer near end removed, see access issue link",
     "put_in_lat": "55.3307",
     "put_in_long": "-3.8382",
     "river_zone_url": "https://riverzone.eu/calibration/bf952ad2-48fa-5937-a726-24a0eaef16b2.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Nith (Drumlanrig)&zones=,ff0000,Huge|180,ff6060,Very+High|150,ffc004,High|120,ffff33,Medium|90,00ff00,Low|45,ccffcc,Scrapeable|40,cccccc,Empty",
