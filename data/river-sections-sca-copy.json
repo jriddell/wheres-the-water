@@ -2648,7 +2648,7 @@
     "low_value": "0.58",
     "medium_value": "0.58",
     "name": "Tummel (Bottom)",
-    "notes": "New section added April 2019.  0.58 reported as medium.  Please send more calibrations.",
+    "notes": "New section added April 2019.  0.58 reported as medium, 2.8 as huge.  Please send more calibrations.",
     "put_in_lat": "56.696568",
     "put_in_long": "-3.7207949",
     "river_zone_url": "https://riverzone.eu/calibration/008d3303-b3da-43d1-8f96-a39da84b6c72.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Tummel (Bottom)&zones=,ff0000,Huge|58,ff6060,Very+High|58,ffc004,High|58,ffff33,Medium|58,00ff00,Low|58,ccffcc,Scrapeable|58,cccccc,Empty",
