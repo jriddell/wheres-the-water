@@ -1536,7 +1536,7 @@
     "uuid": "6bd89aac-dea3-5536-b298-9c984cc17548"
   },
   {
-    "access_issue": "",
+    "access_issue": "https://www.facebook.com/groups/Scottish.Whitewater/posts/6889735151061437/",
     "classification": "Good ecological potential",
     "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=6639",
     "gauge_location_code": "14951",
@@ -1554,7 +1554,7 @@
     "low_value": "0.5",
     "medium_value": "0.6",
     "name": "Lyon",
-    "notes": "Low changed from 0.4 to 0.5 as reported scrape at 0.49, Jan 2019.",
+    "notes": "See Access Issue link for road issues Oct 2023.",
     "put_in_lat": "56.5989",
     "put_in_long": "-4.1189",
     "river_zone_url": "https://riverzone.eu/calibration/e8cc4fd4-f1e8-5364-ac74-cc385ac636ce.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Lyon&zones=,ff0000,Huge|180,ff6060,Very+High|140,ffc004,High|100,ffff33,Medium|60,00ff00,Low|50,ccffcc,Scrapeable|20,cccccc,Empty",
