@@ -2621,8 +2621,8 @@
     "notes": "New calibrations added Oct 2023. I need reports still for Scrape High, V High, currently the calibrations are guesses.",
     "put_in_lat": "56.696568",
     "put_in_long": "-3.7207949",
-    "river_zone_url": "https://riverzone.eu/calibration/008d3303-b3da-43d1-8f96-a39da84b6c72.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Tummel (Bottom)&zones=,ff0000,Huge|58,ff6060,Very+High|58,ffc004,High|58,ffff33,Medium|58,00ff00,Low|58,ccffcc,Scrapeable|58,cccccc,Empty",
-    "river_zone_url_mobile": "https://riverzone.eu/calibration/008d3303-b3da-43d1-8f96-a39da84b6c72.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Tummel (Bottom)&zones=,ff0000,Huge|58,ff6060,Very+High|58,ffc004,High|58,ffff33,Medium|58,00ff00,Low|58,ccffcc,Scrapeable|58,cccccc,Empty",
+    "river_zone_url": "https://riverzone.eu/calibration/008d3303-b3da-43d1-8f96-a39da84b6c72.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Tummel (Bottom)&zones=,ff0000,Huge|280,ff6060,Very+High|180,ffc004,High|100,ffff33,Medium|51,00ff00,Low|27.8,ccffcc,Scrapeable|20,cccccc,Empty",
+    "river_zone_url_mobile": "https://riverzone.eu/calibration/008d3303-b3da-43d1-8f96-a39da84b6c72.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Tummel (Bottom)&zones=,ff0000,Huge|280,ff6060,Very+High|180,ffc004,High|100,ffff33,Medium|51,00ff00,Low|27.8,ccffcc,Scrapeable|20,cccccc,Empty",
     "sca_guidebook_no": "Paddle Scotland 91",
     "scrape_value": "0.2",
     "very_high_value": "1.8",
@@ -2776,8 +2776,8 @@
     "classification": "",
     "classification_url": "",
     "uuid": "5cfe8b26-5b96-5f67-ac5f-2333acdb8fa4",
-    "river_zone_url": "https://riverzone.eu/calibration/3583ef69-fa79-4745-9785-2788ddc3fad1.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=West Water&zones=,ff0000,Huge|130,ff6060,Very+High|130,ffc004,High|130,ffff33,Medium|100,00ff00,Low|75,ccffcc,Scrapeable|60,cccccc,Empty",
-    "river_zone_url_mobile": "https://riverzone.eu/calibration/3583ef69-fa79-4745-9785-2788ddc3fad1.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=West Water&zones=,ff0000,Huge|130,ff6060,Very+High|130,ffc004,High|130,ffff33,Medium|100,00ff00,Low|75,ccffcc,Scrapeable|60,cccccc,Empty"
+    "river_zone_url": "https://riverzone.eu/calibration/3583ef69-fa79-4745-9785-2788ddc3fad1.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=West Water&zones=,ff0000,Huge|130,ff6060,Very+High|120,ffc004,High|110,ffff33,Medium|100,00ff00,Low|75,ccffcc,Scrapeable|60,cccccc,Empty",
+    "river_zone_url_mobile": "https://riverzone.eu/calibration/3583ef69-fa79-4745-9785-2788ddc3fad1.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=West Water&zones=,ff0000,Huge|130,ff6060,Very+High|120,ffc004,High|110,ffff33,Medium|100,00ff00,Low|75,ccffcc,Scrapeable|60,cccccc,Empty"
   },
   {
     "name": "North Esk (Lothian)",
@@ -3076,8 +3076,8 @@
     "gauge_name": "Beattock",
     "classification": "",
     "classification_url": "",
-    "river_zone_url": "https://riverzone.eu/calibration/95695a5a-b388-3a06-81ec-9809478364bb.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Evan Water&zones=,ff0000,Huge|120,ff6060,Very+High|110,ffc004,High|100,ffff33,Medium|75,00ff00,Low|50,ccffcc,Scrapeable|50,cccccc,Empty",
-    "river_zone_url_mobile": "https://riverzone.eu/calibration/95695a5a-b388-3a06-81ec-9809478364bb.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Evan Water&zones=,ff0000,Huge|120,ff6060,Very+High|110,ffc004,High|100,ffff33,Medium|75,00ff00,Low|50,ccffcc,Scrapeable|50,cccccc,Empty"
+    "river_zone_url": "https://riverzone.eu/calibration/95695a5a-b388-3a06-81ec-9809478364bb.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Evan Water&zones=,ff0000,Huge|120,ff6060,Very+High|110,ffc004,High|100,ffff33,Medium|80,00ff00,Low|50,ccffcc,Scrapeable|50,cccccc,Empty",
+    "river_zone_url_mobile": "https://riverzone.eu/calibration/95695a5a-b388-3a06-81ec-9809478364bb.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=Evan Water&zones=,ff0000,Huge|120,ff6060,Very+High|110,ffc004,High|100,ffff33,Medium|80,00ff00,Low|50,ccffcc,Scrapeable|50,cccccc,Empty"
   },
   {
     "name": "Kirk Burn",
@@ -3397,7 +3397,9 @@
     "uuid": "d945110a-8138-5dc1-9b81-96be5539195f",
     "gauge_name": "Overlee",
     "classification": "",
-    "classification_url": ""
+    "classification_url": "",
+    "river_zone_url": "https://riverzone.eu/calibration/03c77a24-85e0-4e93-bc8e-729e2823e1f6.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=White Cart Water&zones=,ff0000,Huge|0,ff6060,Very+High|0,ffc004,High|0,ffff33,Medium|0,00ff00,Low|0,ccffcc,Scrapeable|0,cccccc,Empty",
+    "river_zone_url_mobile": "https://riverzone.eu/calibration/03c77a24-85e0-4e93-bc8e-729e2823e1f6.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=White Cart Water&zones=,ff0000,Huge|0,ff6060,Very+High|0,ffc004,High|0,ffff33,Medium|0,00ff00,Low|0,ccffcc,Scrapeable|0,cccccc,Empty"
   },
   {
     "name": "White Cart Water (Linn Park Fall)",
@@ -3425,7 +3427,9 @@
     "uuid": "7deb64c6-4074-587a-be5d-dd5f3fd402f3",
     "gauge_name": "Overlee",
     "classification": "",
-    "classification_url": ""
+    "classification_url": "",
+    "river_zone_url": "https://riverzone.eu/calibration/03c77a24-85e0-4e93-bc8e-729e2823e1f6.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=White Cart Water (Linn Park Fall)&zones=,ff0000,Huge|100,ff6060,Very+High|90,ffc004,High|80,ffff33,Medium|70,00ff00,Low|60,ccffcc,Scrapeable|47,cccccc,Empty",
+    "river_zone_url_mobile": "https://riverzone.eu/calibration/03c77a24-85e0-4e93-bc8e-729e2823e1f6.H#height=400&from=-7&creditName=SCA Where%27s the Water&title=White Cart Water (Linn Park Fall)&zones=,ff0000,Huge|100,ff6060,Very+High|90,ffc004,High|80,ffff33,Medium|70,00ff00,Low|60,ccffcc,Scrapeable|47,cccccc,Empty"
   },
   {
     "name": "North Esk (Upper) (Invermark Gauge)",
