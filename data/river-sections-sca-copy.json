@@ -1994,7 +1994,7 @@
     "uuid": "054b903e-a603-5349-80bb-a6878a2bb4a9"
   },
   {
-    "access_issue": "",
+    "access_issue": "https://www.facebook.com/groups/Scottish.Whitewater/posts/6985626961472255/",
     "classification": "Moderate",
     "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=5287",
     "gauge_location_code": "14990",
@@ -2012,7 +2012,7 @@
     "low_value": "0.8",
     "medium_value": "0.85",
     "name": "Ettrick (Gorge)",
-    "notes": "",
+    "notes": "Access link added Nov 2023 with tree blockage",
     "put_in_lat": "55.4992",
     "put_in_long": "-2.9873",
     "river_zone_url": "https://riverzone.eu/calibration/73c604db-e34a-5c17-bd10-8740b845af41.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Ettrick (Gorge)&zones=,ff0000,Huge|180,ff6060,Very+High|150,ffc004,High|120,ffff33,Medium|85,00ff00,Low|80,ccffcc,Scrapeable|70,cccccc,Empty",
