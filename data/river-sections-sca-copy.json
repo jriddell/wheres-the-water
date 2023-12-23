@@ -3484,5 +3484,31 @@
     "gauge_name": "Invermark",
     "classification": "",
     "classification_url": ""
+  },
+  {
+    "name": "North Esk (Middle)",
+    "gauge_location_code": "369554",
+    "longitude": "-2.8727",
+    "latitude": "56.8931",
+    "scrape_value": "0.6",
+    "low_value": "0.7",
+    "medium_value": "0.8",
+    "high_value": "1.1",
+    "very_high_value": "1.4",
+    "huge_value": "1.6",
+    "grade": "2(3+)",
+    "guidebook_link": "",
+    "sca_guidebook_no": "",
+    "access_issue": "",
+    "google_mymaps": "https://drive.google.com/open?id=1ksoUeNPrTjXDickP0idcLMYmsXnDUuFT&usp=sharing",
+    "kml": "",
+    "webcam": "",
+    "notes": "New section from Alex Crossland, low and scrape are guesses please send calibrations to confirm.  Gauge is called Waterside Perth and is below Tarfside confluence.",
+    "put_in_long": "",
+    "put_in_lat": "",
+    "get_out_long": "",
+    "get_out_lat": "",
+    "uuid": "3b7b0114-8c5c-5d7a-9888-f7aeceaf2f0e",
+    "gauge_name": null
   }
 ]
