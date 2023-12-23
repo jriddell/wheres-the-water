@@ -3467,7 +3467,7 @@
     "very_high_value": "1.4",
     "huge_value": "1.6",
     "grade": "2(3+)",
-    "guidebook_link": "",
+    "guidebook_link": "https://www.facebook.com/groups/Scottish.Whitewater/posts/6967686699932948/",
     "sca_guidebook_no": "",
     "access_issue": "",
     "google_mymaps": "https://drive.google.com/open?id=1ksoUeNPrTjXDickP0idcLMYmsXnDUuFT&usp=sharing",
@@ -3479,6 +3479,8 @@
     "get_out_long": "",
     "get_out_lat": "",
     "uuid": "3b7b0114-8c5c-5d7a-9888-f7aeceaf2f0e",
-    "gauge_name": null
+    "gauge_name": null,
+    "classification": "",
+    "classification_url": ""
   }
 ]
