@@ -361,7 +361,7 @@
     "uuid": "def0d09f-c814-5a96-9f3d-7d3dc39fab9d"
   },
   {
-    "access_issue": "",
+    "access_issue": "https://www.facebook.com/groups/Scottish.Whitewater/posts/6982911565077128/",
     "classification": "",
     "classification_url": "",
     "gauge_location_code": "234306",
@@ -379,7 +379,7 @@
     "low_value": "0.3",
     "medium_value": "0.4",
     "name": "Findhorn (Middle)",
-    "notes": "New Access Issue Feb 2019",
+    "notes": "New Access Issue tree discussion Dec 2023",
     "put_in_lat": "57.4833",
     "put_in_long": "-3.7468",
     "river_zone_url": "https://riverzone.eu/calibration/115be799-cd1d-56a5-83e7-897e2930f27e.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=Findhorn (Middle)&zones=,ff0000,Huge|140,ff6060,Very+High|100,ffc004,High|80,ffff33,Medium|40,00ff00,Low|30,ccffcc,Scrapeable|20,cccccc,Empty",
