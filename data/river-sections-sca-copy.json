@@ -3514,5 +3514,31 @@
     "gauge_name": null,
     "classification": "",
     "classification_url": ""
+  },
+  {
+    "name": "Findhorn (Gorge) (New Gauge)",
+    "gauge_location_code": "567430",
+    "longitude": "-3.6626",
+    "latitude": "57.5525",
+    "scrape_value": "0",
+    "low_value": "0",
+    "medium_value": "0",
+    "high_value": "0",
+    "very_high_value": "0",
+    "huge_value": "0",
+    "grade": "3/4 (5)",
+    "guidebook_link": "https://www.ukriversguidebook.co.uk/rivers/scotland/north-east/river-findhorn-randolphs-leap-to-mains-of-sluie",
+    "sca_guidebook_no": "193",
+    "access_issue": "",
+    "google_mymaps": "https://drive.google.com/open?id=18PxkUQKPHAZne4n7eOwBn0-dH3jLhSEl&usp=sharing",
+    "kml": "",
+    "webcam": "",
+    "notes": "0.37 reported as low.  More calibrations needed.",
+    "put_in_long": "-3.6713",
+    "put_in_lat": "57.5250",
+    "get_out_long": "-3.6626",
+    "get_out_lat": "57.5525",
+    "uuid": "8ee6369b-8954-5dae-967f-247da65d08e0",
+    "gauge_name": "Logie Bridge"
   }
 ]
