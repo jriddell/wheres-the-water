@@ -3533,12 +3533,14 @@
     "google_mymaps": "https://drive.google.com/open?id=18PxkUQKPHAZne4n7eOwBn0-dH3jLhSEl&usp=sharing",
     "kml": "",
     "webcam": "",
-    "notes": "0.37 reported as low.  More calibrations needed.",
+    "notes": "New Logie gauge closer to section. 0.37 reported as low.  More calibrations needed.",
     "put_in_long": "-3.6713",
     "put_in_lat": "57.5250",
     "get_out_long": "-3.6626",
     "get_out_lat": "57.5525",
     "uuid": "8ee6369b-8954-5dae-967f-247da65d08e0",
-    "gauge_name": "Logie Bridge"
+    "gauge_name": "Logie Bridge",
+    "classification": "",
+    "classification_url": ""
   }
 ]
