@@ -3542,5 +3542,31 @@
     "gauge_name": "Logie Bridge",
     "classification": "",
     "classification_url": ""
+  },
+  {
+    "name": "Blackwater (Garve) (Upper)",
+    "gauge_location_code": "234225",
+    "longitude": "-4.7316",
+    "latitude": "57.6974",
+    "scrape_value": "1.1",
+    "low_value": "1.2",
+    "medium_value": "1.5",
+    "high_value": "1.7",
+    "very_high_value": "1.7",
+    "huge_value": "1.7",
+    "grade": "3-4",
+    "guidebook_link": "",
+    "sca_guidebook_no": "051",
+    "access_issue": "",
+    "google_mymaps": "",
+    "kml": "",
+    "webcam": "",
+    "notes": "Only low-high is calibrated, more calibrations needed",
+    "put_in_long": "-4.7316",
+    "put_in_lat": "57.6974",
+    "get_out_long": "-4.6881",
+    "get_out_lat": "57.6868",
+    "uuid": "c3da5e97-4027-5896-a8d8-6ad326e97a79",
+    "gauge_name": "Garve"
   }
 ]
