@@ -3568,5 +3568,31 @@
     "get_out_lat": "57.6868",
     "uuid": "c3da5e97-4027-5896-a8d8-6ad326e97a79",
     "gauge_name": "Garve"
+  },
+  {
+    "name": "Gala Water",
+    "gauge_location_code": "9683",
+    "longitude": "-2.864393",
+    "latitude": "55.691946",
+    "scrape_value": "0",
+    "low_value": "0",
+    "medium_value": "0",
+    "high_value": "0",
+    "very_high_value": "0",
+    "huge_value": "0",
+    "grade": "1",
+    "guidebook_link": "",
+    "sca_guidebook_no": "",
+    "access_issue": "",
+    "google_mymaps": "",
+    "kml": "",
+    "webcam": "",
+    "notes": "0.764 on Galashiels gauge reported as high",
+    "put_in_long": "-2.864393",
+    "put_in_lat": "55.691946",
+    "get_out_long": "-2.780203",
+    "get_out_lat": "55.603864",
+    "uuid": "14442578-8f3e-518f-9d34-82a2e99b6fcf",
+    "gauge_name": "Galashiels"
   }
 ]
