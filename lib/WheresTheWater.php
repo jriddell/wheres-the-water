@@ -861,7 +861,7 @@ jQuery(document).ready( function(){
               if (jsDate > today) {
                 console.log("greater");
                 console.log(datesCounter);
-                datesTable += "<li>" + jsDate.toDateString() + "</li>\n";
+                // datesTable += "<li>" + jsDate.toDateString() + "</li>\n";
                 datesCounter++;
               }
               if (datesCounter==10) {
