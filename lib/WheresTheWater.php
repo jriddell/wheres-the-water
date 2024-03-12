@@ -857,7 +857,6 @@ jQuery(document).ready( function(){
             for (var k=0; k<scheduledSectionDates.length; k++) {
               var jsDate = new Date(scheduledSectionDates[k]);
               var today = new Date();
-              console.log("hellO");
               if (jsDate > today) {
                 console.log("greater");
                 console.log(datesCounter);
@@ -871,6 +870,7 @@ jQuery(document).ready( function(){
               }
             }
             datesTable += "</span>"
+            datesTable += "<img width='16' height='16' title='Google Calendar' src='/wheres-the-water/pics/google-calendar.png'/> <a target='_blank' rel='noopener' href='https://calendar.google.com/calendar/embed?src=scottishwwguide%40gmail.com&ctz=Europe%2FLondon'>Calendar</a>"
             datesTable += '</ul>';
             return datesTable;
         }
