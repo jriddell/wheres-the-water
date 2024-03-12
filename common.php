@@ -31,7 +31,7 @@ function heading($iframe=false) {
     if (!$iframe) {
 ?>
 <p><a href="http://www.andyjacksonfund.org.uk"><img src="/wheres-the-water/andy-jackson-fund.png" width="350" /></a>
-<a href="http://canoescotland.org"><img src="/wheres-the-water/paddle-scotland.png" width="350" /></a></p>
+<a href="http://canoescotland.org"><img src="/wheres-the-water/pics/paddle-scotland.png" width="350" /></a></p>
 
 <h1>Paddle Scotland Where&#039;s The Water?</h1>
 
