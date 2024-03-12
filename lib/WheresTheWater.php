@@ -908,8 +908,6 @@ jQuery(document).ready( function(){
             }
         }
         function getScheduledSectionIcon(scheduledSection) {
-            // TODO remove when schedule is published
-            return notThisWeekIcon;
             // FIXME this logic is duplicated above where it returns the name of the icon
             if (scheduledSection['constant'] == "1") {
                 return todayIcon;
