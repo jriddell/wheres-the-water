@@ -337,7 +337,7 @@ jQuery(document).ready( function(){
         });
         
         var osmLayer = L.tileLayer( 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '<img src="/wheres-the-water/pics/NEEDS_CALIBRATIONS.png" /> Needs Calibrations | <img src="/wheres-the-water/pics/EMPTY.png" /> Empty, <img src="/wheres-the-water/pics/SCRAPE.png" /> Scrape, <img src="/wheres-the-water/pics/LOW.png" /> Low, <img src="/wheres-the-water/pics/MEDIUM.png" /> Medium, <img src="/wheres-the-water/pics/HIGH.png" /> High, <img src="/wheres-the-water/pics/VERY_HIGH.png" /> Very High, <img src="/wheres-the-water/pics/HUGE.png" /> Huge | Map &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a> | <a href="https://github.com/jriddell/wheres-the-water">River Data</a> by SCA'
+            attribution: '<img src="/wheres-the-water/pics/NEEDS_CALIBRATIONS.png" /> Needs Calibrations | <img src="/wheres-the-water/pics/EMPTY.png" /> Empty, <img src="/wheres-the-water/pics/SCRAPE.png" /> Scrape, <img src="/wheres-the-water/pics/LOW.png" /> Low, <img src="/wheres-the-water/pics/MEDIUM.png" /> Medium, <img src="/wheres-the-water/pics/HIGH.png" /> High, <img src="/wheres-the-water/pics/VERY_HIGH.png" /> Very High, <img src="/wheres-the-water/pics/HUGE.png" /> Huge | Map &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a> | <a href="https://github.com/jriddell/wheres-the-water">River Data</a> by Paddle Scotland'
         }).addTo( map );
         
         /* Old and ugly but something to aim for in the future
@@ -525,7 +525,7 @@ jQuery(document).ready( function(){
                 linksContent += "<img width='16' height='16' src='/wheres-the-water/pics/grade.png'/> Grade: " + riverSection['grade'] + "<br />";
             }
             if ('sca_guidebook_no' in riverSection && !riverSection['sca_guidebook_no'].length == 0) {
-                linksContent += "<img width='16' height='16' title='SCA WW Guidebook number' src='/wheres-the-water/pics/sca.png' /> SCA WW Guidebook No "+riverSection['sca_guidebook_no']+"<br />";
+                linksContent += "<img width='16' height='16' title='Paddle Scotland WW Guidebook number' src='/wheres-the-water/pics/sca.png' /> Paddle Scotland WW Guidebook No "+riverSection['sca_guidebook_no']+"<br />";
             }
             linksContent += "<span class='desktop'><a target='_blank' rel='noopener' href='https://www2.sepa.org.uk/waterlevels/default.aspx?sd=t&lc="+riverSection['gauge_location_code']+"'><img width='16' height='16' title='SEPA gauge link' src='/wheres-the-water/pics/graph-icon.png'/> SEPA Gauge: "+riverSection['gauge_name']+"</a><br /></span>";
             linksContent += "<span class='mobile'><a target='_blank' rel='noopener' href='https://www2.sepa.org.uk/waterlevels/default.aspx?sd=t&lc="+riverSection['gauge_location_code']+"'><img width='16' height='16' title='SEPA gauge link' src='/wheres-the-water/pics/graph-icon.png'/> SEPA Gauge: "+riverSection['gauge_name']+"</a><br /></span>";
@@ -585,7 +585,7 @@ jQuery(document).ready( function(){
                 linksContent += "<img width='16' height='16' src='/wheres-the-water/pics/grade.png'/> Grade: " + scheduledSection['grade'] + "<br />";
             }
             if ('sca_guidebook_no' in scheduledSection && !scheduledSection['sca_guidebook_no'].length == 0) {
-                linksContent += "<img width='16' height='16' title='SCA WW Guidebook number' src='/wheres-the-water/pics/sca.png' /> SCA WW Guidebook No "+scheduledSection['sca_guidebook_no']+"<br />";
+                linksContent += "<img width='16' height='16' title='Paddle Scotland WW Guidebook number' src='/wheres-the-water/pics/sca.png' /> Paddle Scotland WW Guidebook No "+scheduledSection['sca_guidebook_no']+"<br />";
             }
             linksContent += "<img width='16' height='16' title='Open maps Link' src='/wheres-the-water/pics/osm.png' /> ";
             linksContent += "<a target='_blank' rel='noopener' href='https://www.openstreetmap.org/?mlat="+scheduledSection['latitude']+"&mlon="+scheduledSection['longitude']+"#map=12/"
@@ -611,7 +611,7 @@ jQuery(document).ready( function(){
             return linksContent;
         }
         function addRiverMarkers() {
-            var covidString = "<!-- <p style='background-color: #aaffff'>😷Take a lateral flow test twice a week.  Wear masks and open windows when car sharing.  <a href='https://www.canoescotland.org/paddlesport-guidance-from-9th-august'>SCA guidance</a>.</p> -->";
+            var covidString = "<!-- <p style='background-color: #aaffff'>😷Take a lateral flow test twice a week.  Wear masks and open windows when car sharing.  <a href='https://www.canoescotland.org/paddlesport-guidance-from-9th-august'>Paddle Scotland guidance</a>.</p> -->";
             markers = new Array();
             tooltipsAreVisible = false;
             for (i=0; i<riverSections.length; i++) {

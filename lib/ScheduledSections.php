@@ -101,7 +101,7 @@ class ScheduledSections {
         $reply .= $this->editScheduledSectionFormInputItem("Longitude", "${sectionCount}_longitude", $scheduledSection['longitude']);
         $reply .= $this->editScheduledSectionFormInputItem("Grade", "${sectionCount}_grade", $scheduledSection['grade'], "right");
         $reply .= $this->editScheduledSectionFormInputItem("Guidebook Link", "${sectionCount}_guidebook_link", $scheduledSection['guidebook_link']);
-        $reply .= $this->editScheduledSectionFormInputItem("SCA Guidebook No", "${sectionCount}_sca_guidebook_no", $scheduledSection['sca_guidebook_no'], "right");
+        $reply .= $this->editScheduledSectionFormInputItem("Paddle Scotland Guidebook No", "${sectionCount}_sca_guidebook_no", $scheduledSection['sca_guidebook_no'], "right");
         $reply .= $this->editScheduledSectionFormInputItem("Info Link", "${sectionCount}_info_link", $scheduledSection['info_link']);
         $reply .= $this->editScheduledSectionFormInputItem("Acccess Issue Link", "${sectionCount}_access_issue", $scheduledSection['access_issue'], "right");
         $reply .= $this->editScheduledSectionFormInputItem("Google My Maps Link", "${sectionCount}_google_mymaps", $scheduledSection['google_mymaps']);
@@ -434,7 +434,7 @@ class ScheduledSections {
             $linkContent .= "<a target='_blank' rel='noopener' href='".$riverSection['guidebook_link']."'><img width='16' height='16' title='UKRGB Link' src='/wheres-the-water/pics/ukrgb.ico'/> UKRGB</a><br />";
         }
         if (!empty($riverSection['sca_guidebook_no'])) {
-            $linkContent .= "<img width='16' height='16' title='SCA WW Guidebook number' src='/wheres-the-water/pics/sca.png' /> SCA Guidebook No ".$riverSection['sca_guidebook_no']."<br />";
+            $linkContent .= "<img width='16' height='16' title='Paddle Scotland WW Guidebook number' src='/wheres-the-water/pics/sca.png' /> Paddle Scotland Guidebook No ".$riverSection['sca_guidebook_no']."<br />";
         }
         if (!empty($riverSection['access_issue'])) {
             $linkContent .= "<a target='_blank' rel='noopener' href='".$riverSection['access_issue']."'><img width='16' height='16' title='Access Issue Link' src='/wheres-the-water/pics/warning.png' /> Access Issue</a><br />";
