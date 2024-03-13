@@ -97,7 +97,7 @@ $riverSections->readFromJson();
                 <p><img src='/wheres-the-water/pics/ukrgb.ico' /> UK Rivers Guide Book link</p>
             </div>
             <div style="margin-left: 1em; float: left">
-                <p><img src='/wheres-the-water/pics/sca.png' /> SCA guide book reference number</p>
+                <p><img src='/wheres-the-water/pics/paddle-scotland-icon.png' /> SCA guide book reference number</p>
                 <p><img src='/wheres-the-water/pics/warning.png' /> Access issue link</p>
                 <p><img title='Weekly Chart' src='/wheres-the-water/pics/chart.png' /> Weekly River Level Chart</p>
                 <p><img title='Monthly Chart' src='/wheres-the-water/pics/chart-monthly.png' /> Monthly River Level Chart</p>

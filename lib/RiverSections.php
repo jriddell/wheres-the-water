@@ -516,7 +516,7 @@ class RiverSections {
             $linkContent .= "<a target='_blank' rel='noopener' href='".$riverSection['guidebook_link']."'><img width='16' height='16' title='UKRGB Link' src='/wheres-the-water/pics/ukrgb.ico'/> UKRGB</a><br />";
         }
         if (!empty($riverSection['sca_guidebook_no'])) {
-            $linkContent .= "<img width='16' height='16' title='SCA WW Guidebook number' src='/wheres-the-water/pics/sca.png' /> Paddle Scotland Guidebook No ".$riverSection['sca_guidebook_no']."<br />";
+            $linkContent .= "<img width='16' height='16' title='SCA WW Guidebook number' src='/wheres-the-water/pics/paddle-scotland-icon.png' /> Paddle Scotland Guidebook No ".$riverSection['sca_guidebook_no']."<br />";
         }
         if (!empty($riverSection['access_issue'])) {
             $linkContent .= "<a target='_blank' rel='noopener' href='".$riverSection['access_issue']."'><img width='16' height='16' title='Access Issue Link' src='/wheres-the-water/pics/warning.png' /> Access Issue</a><br />";

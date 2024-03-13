@@ -525,7 +525,7 @@ jQuery(document).ready( function(){
                 linksContent += "<img width='16' height='16' src='/wheres-the-water/pics/grade.png'/> Grade: " + riverSection['grade'] + "<br />";
             }
             if ('sca_guidebook_no' in riverSection && !riverSection['sca_guidebook_no'].length == 0) {
-                linksContent += "<img width='16' height='16' title='Paddle Scotland WW Guidebook number' src='/wheres-the-water/pics/sca.png' /> Paddle Scotland WW Guidebook No "+riverSection['sca_guidebook_no']+"<br />";
+                linksContent += "<img width='16' height='16' title='Paddle Scotland WW Guidebook number' src='/wheres-the-water/pics/paddle-scotland-icon.png' /> Paddle Scotland WW Guidebook No "+riverSection['sca_guidebook_no']+"<br />";
             }
             linksContent += "<span class='desktop'><a target='_blank' rel='noopener' href='https://www2.sepa.org.uk/waterlevels/default.aspx?sd=t&lc="+riverSection['gauge_location_code']+"'><img width='16' height='16' title='SEPA gauge link' src='/wheres-the-water/pics/graph-icon.png'/> SEPA Gauge: "+riverSection['gauge_name']+"</a><br /></span>";
             linksContent += "<span class='mobile'><a target='_blank' rel='noopener' href='https://www2.sepa.org.uk/waterlevels/default.aspx?sd=t&lc="+riverSection['gauge_location_code']+"'><img width='16' height='16' title='SEPA gauge link' src='/wheres-the-water/pics/graph-icon.png'/> SEPA Gauge: "+riverSection['gauge_name']+"</a><br /></span>";
@@ -585,7 +585,7 @@ jQuery(document).ready( function(){
                 linksContent += "<img width='16' height='16' src='/wheres-the-water/pics/grade.png'/> Grade: " + scheduledSection['grade'] + "<br />";
             }
             if ('sca_guidebook_no' in scheduledSection && !scheduledSection['sca_guidebook_no'].length == 0) {
-                linksContent += "<img width='16' height='16' title='Paddle Scotland WW Guidebook number' src='/wheres-the-water/pics/sca.png' /> Paddle Scotland WW Guidebook No "+scheduledSection['sca_guidebook_no']+"<br />";
+                linksContent += "<img width='16' height='16' title='Paddle Scotland WW Guidebook number' src='/wheres-the-water/pics/paddle-scotland-icon.png' /> Paddle Scotland WW Guidebook No "+scheduledSection['sca_guidebook_no']+"<br />";
             }
             linksContent += "<img width='16' height='16' title='Open maps Link' src='/wheres-the-water/pics/osm.png' /> ";
             linksContent += "<a target='_blank' rel='noopener' href='https://www.openstreetmap.org/?mlat="+scheduledSection['latitude']+"&mlon="+scheduledSection['longitude']+"#map=12/"
