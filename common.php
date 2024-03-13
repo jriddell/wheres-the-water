@@ -31,7 +31,7 @@ function heading($iframe=false) {
     if (!$iframe) {
 ?>
 <p><a href="http://www.andyjacksonfund.org.uk"><img src="/wheres-the-water/andy-jackson-fund.png" width="350" /></a>
-<a href="http://canoescotland.org"><img src="/wheres-the-water/pics/paddle-scotland.png" width="350" /></a></p>
+<a href="https://www.paddlescotland.org.uk"><img src="/wheres-the-water/pics/paddle-scotland.png" width="350" /></a></p>
 
 <h1>Paddle Scotland Where&#039;s The Water?</h1>
 
@@ -61,7 +61,7 @@ Dates are added manually.   In case of discrepancy the info page linked is defin
 <p><a href="http://goo.gl/forms/YQ3xZTi30vrtFYpo1">River Gauge Request Form</a></a>.</p>
 <p><a href="/wtw">Simple List View</a></p>
 <p><a href="/wtw/map">Simple Map View</a></p>
-<p><a href="http://canoescotland.org/where-go/wheres-water">Full Map View</a></p>
+<p><a href="https://www.paddlescotland.org.uk/where-go/wheres-water">Full Map View</a></p>
 </body>
 </html>
 <?php

@@ -611,7 +611,7 @@ jQuery(document).ready( function(){
             return linksContent;
         }
         function addRiverMarkers() {
-            var covidString = "<!-- <p style='background-color: #aaffff'>😷Take a lateral flow test twice a week.  Wear masks and open windows when car sharing.  <a href='https://www.canoescotland.org/paddlesport-guidance-from-9th-august'>Paddle Scotland guidance</a>.</p> -->";
+            var covidString = "<!-- <p style='background-color: #aaffff'>😷Take a lateral flow test twice a week.  Wear masks and open windows when car sharing.  <a href='https://www.paddlescotland.org.uk/paddlesport-guidance-from-9th-august'>Paddle Scotland guidance</a>.</p> -->";
             markers = new Array();
             tooltipsAreVisible = false;
             for (i=0; i<riverSections.length; i++) {
