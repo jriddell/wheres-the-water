@@ -1751,7 +1751,7 @@
     "uuid": "3023e767-45d1-5533-a4c8-d7259f3be6a1"
   },
   {
-    "access_issue": "https://www.canoescotland.org/south-esk-blockage",
+    "access_issue": "https://www.paddlescotland.org.uk/trees-down-in-river-south-esk-cortachy-tayside",
     "classification": "Good",
     "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=5800",
     "gauge_location_code": "14916",
@@ -1769,7 +1769,7 @@
     "low_value": "0.8",
     "medium_value": "1.0",
     "name": "South Esk (Angus)",
-    "notes": "New access issue March 08",
+    "notes": "New access issue April 2024",
     "put_in_lat": "56.7749",
     "put_in_long": "-3.0279",
     "river_zone_url": "https://riverzone.eu/calibration/0b4a34d2-8f32-51c6-a2e5-9c01800c7006.H#height=600&from=-7&creditName=SCA Where%27s the Water&title=South Esk (Angus)&zones=,ff0000,Huge|180,ff6060,Very+High|160,ffc004,High|140,ffff33,Medium|100,00ff00,Low|80,ccffcc,Scrapeable|70,cccccc,Empty",
