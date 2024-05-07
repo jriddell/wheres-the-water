@@ -38,7 +38,7 @@ call readFromJson() then $obj->riverSectionsData is an array of rivers with thei
         "get_out_lat": "57.0759",
     }
 ]
-put_in_long, put_in_lat, get_out_long, get_out_lat: added at request of Tim from rivermap.ch so he can add those.  in return we get pretty graphs.
+put_in_long, put_in_lat, get_out_long, get_out_lat: added at request of Tim from rivermap.org so he can add those.  in return we get pretty graphs.
 */
 class RiverSections {
     const RIVER_SECTIONS_JSON = 'river-sections.json';
@@ -540,8 +540,8 @@ class RiverSections {
         }
         $chartLink = $this->riverZoneStations->link($riverSection);
         if ($chartLink != false) {
-            $linkContent .= "<span class='desktop'><a target='_blank' rel='noopener' href='".$this->riverZoneStations->link($riverSection)."'><img width='16' height='16' title='Webcam' src='/wheres-the-water/pics/chart-yearly.png' /> RiverZone Chart</a><br /></span>";
-            $linkContent .= "<span class='mobile'><a target='_blank' rel='noopener' href='".$this->riverZoneStations->link($riverSection, true)."'><img width='16' height='16' title='Webcam' src='/wheres-the-water/pics/chart-yearly.png' /> RiverZone Chart</a><br /></span>";
+            $linkContent .= "<span class='desktop'><a target='_blank' rel='noopener' href='".$this->riverZoneStations->link($riverSection)."'><img width='16' height='16' title='Graph' src='/wheres-the-water/pics/chart-yearly.png' /> Rivermap Graph</a><br /></span>";
+            $linkContent .= "<span class='mobile'><a target='_blank' rel='noopener' href='".$this->riverZoneStations->link($riverSection, true)."'><img width='16' height='16' title='Graph' src='/wheres-the-water/pics/chart-yearly.png' /> Rivermap Graph</a><br /></span>";
         }
         /* Render the picture */
         $filename = strtolower($riverSection['name']);

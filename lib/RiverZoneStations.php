@@ -4,11 +4,13 @@
 */
 
 /*
-Class and methods to download stations (gauges) list from riverzone.eu and match to SEPA gauges and offer hash
+Class and methods to download stations (gauges) list from rivermap.org and match to SEPA gauges and offer hash
 
 Call parseRiverZoneStations() and $sepaIdToRiverZoneId has mapping of sepa ids to river zone ids
 
-RiverZone calls a "gauge" a "station"
+Rivermap calls a "gauge" a "station"
+
+Rivermap.org was previously Riverzone.eu
 */
 
 require_once('RiverSections.php');
@@ -17,8 +19,8 @@ class RiverZoneStations {
     const RIVER_ZONE_STATIONS_FILENAME = 'river-zone-stations.json';
     const DATADIR = 'data';
     const RIVER_ZONE_DOWNLOAD_PERIOD = 86400; // 60 * 60 * 24; // download stations once a day
-    const RIVER_ZONE_STATIONS_URL = 'https://api.riverzone.eu/v2/stations?key='; // . RIVER_ZONE_API_KEY;
-    const SEPA_SOURCE_ID = '53027ba1-4afc-4848-8768-c4c0caf3a1a5'; // UUID RZ give to SEPA found in https://api.riverzone.eu/v2/sources
+    const RIVER_ZONE_STATIONS_URL = 'https://api.rivermap.org/v2/stations?key='; // . RIVER_ZONE_API_KEY;
+    const SEPA_SOURCE_ID = '53027ba1-4afc-4848-8768-c4c0caf3a1a5'; // UUID RZ give to SEPA found in https://api.rivermap.org/v2/sources
     const SEPA_ID_TO_RIVERZONE_ID = 'sepa-id-to-riverzone-id.json';
 
     public $riverZoneStationsFile; // path to json file
@@ -71,7 +73,7 @@ class RiverZoneStations {
         if (!in_array($riverSection['gauge_location_code'], array_keys($this->sepaIdToRiverZoneId))) {
             return false;
         }
-        $url = 'https://riverzone.eu/calibration/';
+        $url = 'https://graph.rivermap.eu/calibration/';
         $url .= $this->sepaIdToRiverZoneId[$riverSection['gauge_location_code']];
         $url .= '.H#height=';
         if ($mobile) {
@@ -79,7 +81,7 @@ class RiverZoneStations {
         } else {
             $url .= '600';
         }
-        $url .= '&from=-7&creditName=SCA Where%27s the Water&title=';
+        $url .= '&from=-7&creditName=Paddle Scotland Where%27s the Water&title=';
         $url .= $riverSection['name'];
         $url .= '&zones=';
         $url .= ',ff0000,Huge|';
