@@ -331,7 +331,7 @@
     "uuid": "f5e1a87f-72e9-5d1e-acc2-4b332bebe48f"
   },
   {
-    "access_issue": "https://www.canoescotland.org/access-and-environment/access-in-scotland",
+    "access_issue": "https://www.paddlescotland.org.uk/access-and-environment/access-in-scotland",
     "classification": "Good",
     "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=6498",
     "gauge_location_code": "14937",
@@ -349,7 +349,7 @@
     "low_value": "0",
     "medium_value": "1",
     "name": "Tay (Stanley)",
-    "notes": "Parking for SCA members only, get code (changed Aug 2021) from Access Issue link below",
+    "notes": "Parking for Paddle Scotland members only, get code (changed Aug 2021) from Access Issue link below",
     "put_in_lat": "56.4881",
     "put_in_long": "-3.4321",
     "river_zone_url": "https://graph.rivermap.org/calibration/de9c3636-4628-57c5-a5a8-d401beab7676.H#height=600&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Tay (Stanley)&zones=,ff0000,Huge|500,ff6060,Very+High|270,ffc004,High|200,ffff33,Medium|100,00ff00,Low|0,ccffcc,Scrapeable|0,cccccc,Empty",
@@ -511,7 +511,7 @@
     "uuid": "b7f5a441-02e2-57a8-80cb-8874f922cbed"
   },
   {
-    "access_issue": "https://www.canoescotland.org/hazard-tree-blockage-river-avon",
+    "access_issue": "https://www.paddlescotland.org.uk/hazard-tree-blockage-river-avon",
     "classification": "Moderate",
     "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=10076",
     "gauge_location_code": "133084",
@@ -601,7 +601,7 @@
     "uuid": "61a04fc8-5dda-5ae9-9706-3a632829341d"
   },
   {
-    "access_issue": "https://www.canoescotland.org/hazard-on-river-spey-one-mile-downstream-of-fochabers",
+    "access_issue": "https://www.paddlescotland.org.uk/hazard-on-river-spey-one-mile-downstream-of-fochabers",
     "classification": "Good",
     "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=23066",
     "gauge_location_code": "234167",
@@ -662,7 +662,7 @@
     "uuid": "3313f365-be18-5193-8b33-04c54a32fb23"
   },
   {
-    "access_issue": "https://www.canoescotland.org/river-leny-tree-hazards#gsc.tab=0",
+    "access_issue": "https://www.paddlescotland.org.uk/river-leny-tree-hazards#gsc.tab=0",
     "classification": "Good",
     "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=4718",
     "gauge_location_code": "14888",
@@ -1012,7 +1012,7 @@
     "low_value": "0.85",
     "medium_value": "0.9",
     "name": "Blackwater (Perthshire)",
-    "notes": "Gauge is below confluence with River Ardle so may not be very accurate.  Access link added Jan 2023.  See also <a href='https://www.canoescotland.org/river-blackwater-at-netherton'\">SCA access request</a>.",
+    "notes": "Gauge is below confluence with River Ardle so may not be very accurate.  Access link added Jan 2023.  See also <a href='https://www.paddlescotland.org.uk/river-blackwater-at-netherton'\">Paddle Scotland access request</a>.",
     "put_in_lat": "56.6965",
     "put_in_long": "-3.4092",
     "river_zone_url": "https://graph.rivermap.org/calibration/254d4d1e-8593-5e71-923d-2ce85378da66.H#height=600&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Blackwater (Perthshire)&zones=,ff0000,Huge|170,ff6060,Very+High|140,ffc004,High|120,ffff33,Medium|90,00ff00,Low|85,ccffcc,Scrapeable|75,cccccc,Empty",
@@ -1476,7 +1476,7 @@
     "uuid": "3cee6b12-8e31-55bd-b035-44d169c91173"
   },
   {
-    "access_issue": "https://www.canoescotland.org/river-dee-invercauld-bridge",
+    "access_issue": "https://www.paddlescotland.org.uk/river-dee-invercauld-bridge",
     "classification": "Moderate",
     "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=23332",
     "gauge_location_code": "234333",
@@ -1627,7 +1627,7 @@
     "uuid": "91b8c64b-90c4-5f22-bacd-baaf6e5d29d2"
   },
   {
-    "access_issue": "https://www.canoescotland.org/river-muick-new-signage",
+    "access_issue": "https://www.paddlescotland.org.uk/river-muick-new-signage",
     "classification": "Good",
     "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=23351",
     "gauge_location_code": "234247",
@@ -1689,7 +1689,7 @@
     "uuid": "ddf82334-3e5b-5407-8ce1-c91bbd0b37c8"
   },
   {
-    "access_issue": "https://www.canoescotland.org/chinese-bridge-rapid-scouting-access-issue",
+    "access_issue": "https://www.paddlescotland.org.uk/chinese-bridge-rapid-scouting-access-issue",
     "classification": "Good",
     "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=6501",
     "gauge_location_code": "8295",
@@ -1720,7 +1720,7 @@
     "uuid": "6f940f85-54cd-5c31-b3f3-ad4218e51b5f"
   },
   {
-    "access_issue": "https://www.canoescotland.org/river-tweed-chain-bridge-at-melrose",
+    "access_issue": "https://www.paddlescotland.org.uk/river-tweed-chain-bridge-at-melrose",
     "classification": "Good",
     "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=5203",
     "gauge_location_code": "14979",
@@ -1872,7 +1872,7 @@
     "uuid": "32d3173f-dc5f-5d02-8eb8-109d8eeac2c6"
   },
   {
-    "access_issue": "https://www.canoescotland.org/river-tweed-lower-makerstoun",
+    "access_issue": "https://www.paddlescotland.org.uk/river-tweed-lower-makerstoun",
     "classification": "",
     "classification_url": "",
     "gauge_location_code": "533744",
@@ -3215,7 +3215,7 @@
     "google_mymaps": "",
     "kml": "",
     "webcam": "",
-    "notes": "This top section is not in the SCA guidebook. See UKRGB or <a href=\"https://whitewater.guide/\">whitewater.guide</a>. Starts on the Alladale",
+    "notes": "This top section is not in the Paddle Scotland guidebook. See UKRGB or <a href=\"https://whitewater.guide/\">whitewater.guide</a>. Starts on the Alladale",
     "put_in_long": "-4.6257",
     "put_in_lat": "57.8673",
     "get_out_long": "-4.591",
