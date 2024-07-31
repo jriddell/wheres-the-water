@@ -3123,11 +3123,11 @@
     "grade": "3(4)",
     "guidebook_link": "",
     "sca_guidebook_no": "",
-    "access_issue": "",
+    "access_issue": "https://www.paddlescotland.org.uk/damage-to-logie-mill-weir-in-lower-north-esk",
     "google_mymaps": "",
     "kml": "",
     "webcam": "",
-    "notes": "Old gauge near the sea",
+    "notes": "Old gauge near the sea.  Access issue link added July 2024.",
     "put_in_long": "",
     "put_in_lat": "",
     "get_out_long": "",
@@ -3135,7 +3135,9 @@
     "uuid": "a1f50917-7896-5fda-a161-103dbbccb135",
     "gauge_name": "Logie Mill",
     "river_zone_url": "https://graph.rivermap.org/calibration/67119d03-3a40-5648-84e8-b576cb9d2362.H#height=600&from=-7&creditName=Paddle Scotland Where%27s the Water&title=North Esk (Lower) (Old)&zones=,ff0000,Huge|120,ff6060,Very+High|75,ffc004,High|55,ffff33,Medium|50,00ff00,Low|45,ccffcc,Scrapeable|30,cccccc,Empty",
-    "river_zone_url_mobile": "https://graph.rivermap.org/calibration/67119d03-3a40-5648-84e8-b576cb9d2362.H#height=400&from=-7&creditName=Paddle Scotland Where%27s the Water&title=North Esk (Lower) (Old)&zones=,ff0000,Huge|120,ff6060,Very+High|75,ffc004,High|55,ffff33,Medium|50,00ff00,Low|45,ccffcc,Scrapeable|30,cccccc,Empty"
+    "river_zone_url_mobile": "https://graph.rivermap.org/calibration/67119d03-3a40-5648-84e8-b576cb9d2362.H#height=400&from=-7&creditName=Paddle Scotland Where%27s the Water&title=North Esk (Lower) (Old)&zones=,ff0000,Huge|120,ff6060,Very+High|75,ffc004,High|55,ffff33,Medium|50,00ff00,Low|45,ccffcc,Scrapeable|30,cccccc,Empty",
+    "classification": "",
+    "classification_url": ""
   },
   {
     "name": "Findhorn (Middle) (New Gauge)",
