@@ -391,7 +391,7 @@
     "uuid": "d9df9875-0820-5d41-9615-d4bffdc9a1a7"
   },
   {
-    "access_issue": "",
+    "access_issue": "https://www.facebook.com/groups/267941769907508/?multi_permalinks=8233250816709857",
     "classification": "Moderate",
     "classification_url": "https://www.sepa.org.uk/data-visualisation/water-classification-hub/?display=information_sheet&waterbodyid=10455",
     "gauge_location_code": "133123",
@@ -409,7 +409,7 @@
     "low_value": "0.75",
     "medium_value": "1.2",
     "name": "Girvan",
-    "notes": "New calibrations Jan 2019.  More calibrations welcome.",
+    "notes": "New calibrations Jan 2019.  More calibrations welcome.  Access Issue added Aug 2024.",
     "put_in_lat": "55.3122",
     "put_in_long": "-4.5587",
     "river_zone_url": "https://graph.rivermap.org/calibration/dd611f58-c440-5574-949f-ab359af0a091.H#height=600&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Girvan&zones=,ff0000,Huge|200,ff6060,Very+High|180,ffc004,High|150,ffff33,Medium|120,00ff00,Low|75,ccffcc,Scrapeable|60,cccccc,Empty",
