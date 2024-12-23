@@ -29,6 +29,7 @@ function heading($iframe=false) {
 <body style="background: white" onload="sortTable(0)">
 <?php
     if (!$iframe) {
+?>
 <p><a href="http://www.andyjacksonfund.org.uk"><img src="/wheres-the-water/andy-jackson-fund.png" width="350" /></a>
 <a href="https://www.paddlescotland.org.uk"><img src="/wheres-the-water/pics/paddle-scotland.png" width="350" /></a></p>
 
