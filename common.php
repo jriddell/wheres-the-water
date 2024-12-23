@@ -29,7 +29,6 @@ function heading($iframe=false) {
 <body style="background: white" onload="sortTable(0)">
 <?php
     if (!$iframe) {
-?>
 <p><a href="http://www.andyjacksonfund.org.uk"><img src="/wheres-the-water/andy-jackson-fund.png" width="350" /></a>
 <a href="https://www.paddlescotland.org.uk"><img src="/wheres-the-water/pics/paddle-scotland.png" width="350" /></a></p>
 
@@ -37,7 +36,11 @@ function heading($iframe=false) {
 
 <h2>Scottish River Levels</h2>
 <?php
-    } // if !frame
+    } else {// if !frame
+    ?>
+    <p>Where's the Water is available from the <a href="https://www.andyjacksonfund.org.uk/wtw/map/#map">Andy Jackson Fund for Access website</a>.</p>
+    <?php
+    } // else iframe
 }
 
 function footer() {
