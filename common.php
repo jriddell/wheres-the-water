@@ -39,7 +39,7 @@ function heading($iframe=false) {
 <?php
     } else {// if !frame
     ?>
-    <p>Where's the Water is available from the <a href="https://www.andyjacksonfund.org.uk/wtw/map/#map">Andy Jackson Fund for Access website</a>.</p>
+    <p>Where's the Water is available from the <a href="https://www.andyjacksonfund.org.uk/wtw/map/#map" target="_top">Andy Jackson Fund for Access website</a>.</p>
     <?php
     } // else iframe
 }
