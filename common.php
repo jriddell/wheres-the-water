@@ -20,7 +20,7 @@ function heading($iframe=false) {
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
     <!-- Latest compiled JavaScript -->
     <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
-    <title><!-- Paddle Scotland--> Where's the Water</title>
+    <title>Where's the Water, Scottish Whitewater River Levels</title>
     <style>
         body {font-family: 'Ubuntu', sans-serif;}
     </style>
@@ -35,7 +35,7 @@ function heading($iframe=false) {
 
 <h1><!-- Paddle Scotland--> Where&#039;s The Water?</h1>
 
-<h2>Scottish River Levels</h2>
+<h2>Scottish Whitewater River Levels</h2>
 <?php
     } else {// if !frame
     ?>
