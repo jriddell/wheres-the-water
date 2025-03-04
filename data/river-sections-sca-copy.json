@@ -27,7 +27,8 @@
     "scrape_value": "0.4",
     "very_high_value": "1.4",
     "webcam": "",
-    "uuid": "cf2dffcd-00f3-553a-a32b-c8f0ac7d94e5"
+    "uuid": "cf2dffcd-00f3-553a-a32b-c8f0ac7d94e5",
+    "level_ts_id": "57174010"
   },
   {
     "access_issue": "https://www.paddlescotland.org.uk/river-tweed-chain-bridge-at-melrose",
@@ -57,7 +58,8 @@
     "scrape_value": "0",
     "very_high_value": "2.5",
     "webcam": "",
-    "uuid": "83316709-141a-5a67-8437-bf3ead983d77"
+    "uuid": "83316709-141a-5a67-8437-bf3ead983d77",
+    "level_ts_id": "61557010"
   },
   {
     "access_issue": "",
@@ -87,7 +89,8 @@
     "scrape_value": "0",
     "very_high_value": "2",
     "webcam": "",
-    "uuid": "5110cf7f-1f7d-5b82-8f69-d6a70f6d40e8"
+    "uuid": "5110cf7f-1f7d-5b82-8f69-d6a70f6d40e8",
+    "level_ts_id": "57992010"
   },
   {
     "access_issue": "",
@@ -117,7 +120,8 @@
     "scrape_value": "0.3",
     "very_high_value": "0.8",
     "webcam": "",
-    "uuid": "83f61d9a-773e-5114-ad67-a9bc8e281c90"
+    "uuid": "83f61d9a-773e-5114-ad67-a9bc8e281c90",
+    "level_ts_id": "52833010"
   },
   {
     "access_issue": "",
@@ -147,7 +151,8 @@
     "scrape_value": "0.35",
     "very_high_value": "1",
     "webcam": "",
-    "uuid": "558d0163-1cd4-59b5-b5b5-eabdffe697f4"
+    "uuid": "558d0163-1cd4-59b5-b5b5-eabdffe697f4",
+    "level_ts_id": "55879010"
   },
   {
     "access_issue": "",
@@ -178,7 +183,8 @@
     "very_high_value": "2.0",
     "webcam": "https://www.farsondigitalwatercams.com/locations/tarholm",
     "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImF5ci8yMDE5LzAxLzIxLzA4OjUwOjAwLmpwZyJdLFsicCIsInRodW1iIiwieDE1MCJdXQ.jpg",
-    "uuid": "4b1aaf6b-290f-5462-9c0b-a150d773743d"
+    "uuid": "4b1aaf6b-290f-5462-9c0b-a150d773743d",
+    "level_ts_id": "53279010"
   },
   {
     "access_issue": "",
@@ -208,7 +214,8 @@
     "scrape_value": "0",
     "very_high_value": "0.5",
     "webcam": "",
-    "uuid": "dfb0ce2b-9826-5bb5-9284-1c3a1dac3bcc"
+    "uuid": "dfb0ce2b-9826-5bb5-9284-1c3a1dac3bcc",
+    "level_ts_id": "58236010"
   },
   {
     "access_issue": "",
@@ -238,7 +245,8 @@
     "scrape_value": "0.8",
     "very_high_value": "1.8",
     "webcam": "",
-    "uuid": "4d88ff7f-91dd-5388-b17d-8185e3ed68f3"
+    "uuid": "4d88ff7f-91dd-5388-b17d-8185e3ed68f3",
+    "level_ts_id": "57006010"
   },
   {
     "access_issue": "",
@@ -268,7 +276,8 @@
     "scrape_value": "0.5",
     "very_high_value": "1.0",
     "webcam": "",
-    "uuid": "decce1aa-af00-59dd-93ae-2f6335135730"
+    "uuid": "decce1aa-af00-59dd-93ae-2f6335135730",
+    "level_ts_id": "57848010"
   },
   {
     "access_issue": "",
@@ -298,7 +307,8 @@
     "scrape_value": "0.55",
     "very_high_value": "1.3",
     "webcam": "",
-    "uuid": "dba1ac5d-f5be-5f44-85d4-662416c5a170"
+    "uuid": "dba1ac5d-f5be-5f44-85d4-662416c5a170",
+    "level_ts_id": "57475010"
   },
   {
     "access_issue": "",
@@ -328,7 +338,8 @@
     "scrape_value": "0.7",
     "very_high_value": "1.5",
     "webcam": "https://www.farsondigitalwatercams.com/locations/bridge-of-allan-allan-water",
-    "uuid": "f5e1a87f-72e9-5d1e-acc2-4b332bebe48f"
+    "uuid": "f5e1a87f-72e9-5d1e-acc2-4b332bebe48f",
+    "level_ts_id": "54545010"
   },
   {
     "access_issue": "https://www.paddlescotland.org.uk/access-and-environment/access-in-scotland",
@@ -358,7 +369,8 @@
     "scrape_value": "0",
     "very_high_value": "2.7",
     "webcam": "",
-    "uuid": "def0d09f-c814-5a96-9f3d-7d3dc39fab9d"
+    "uuid": "def0d09f-c814-5a96-9f3d-7d3dc39fab9d",
+    "level_ts_id": "55205010"
   },
   {
     "access_issue": "https://www.facebook.com/groups/Scottish.Whitewater/posts/6982911565077128/",
@@ -388,7 +400,8 @@
     "scrape_value": "0.2",
     "very_high_value": "1",
     "webcam": "",
-    "uuid": "d9df9875-0820-5d41-9615-d4bffdc9a1a7"
+    "uuid": "d9df9875-0820-5d41-9615-d4bffdc9a1a7",
+    "level_ts_id": "58236010"
   },
   {
     "access_issue": "https://www.facebook.com/groups/267941769907508/?multi_permalinks=8233250816709857",
@@ -418,7 +431,8 @@
     "scrape_value": "0.6",
     "very_high_value": "1.8",
     "webcam": "https://www.farsondigitalwatercams.com/locations/dailly",
-    "uuid": "08e67551-752c-542c-88e7-b70016099f95"
+    "uuid": "08e67551-752c-542c-88e7-b70016099f95",
+    "level_ts_id": "53432010"
   },
   {
     "access_issue": "https://www.facebook.com/groups/Scottish.Whitewater/permalink/2895180173850308/",
@@ -448,7 +462,8 @@
     "scrape_value": "0.5",
     "very_high_value": "1.4",
     "webcam": "",
-    "uuid": "9a5c433f-5b1c-5e38-acdb-49dc12deb7ec"
+    "uuid": "9a5c433f-5b1c-5e38-acdb-49dc12deb7ec",
+    "level_ts_id": "52906010"
   },
   {
     "access_issue": "",
@@ -478,7 +493,8 @@
     "scrape_value": "0.2",
     "very_high_value": "1",
     "webcam": "",
-    "uuid": "23d01334-aac1-54b1-9561-b7ce42a1f82a"
+    "uuid": "23d01334-aac1-54b1-9561-b7ce42a1f82a",
+    "level_ts_id": "58236010"
   },
   {
     "access_issue": "",
@@ -508,7 +524,8 @@
     "scrape_value": "0.6",
     "very_high_value": "1.6",
     "webcam": "",
-    "uuid": "b7f5a441-02e2-57a8-80cb-8874f922cbed"
+    "uuid": "b7f5a441-02e2-57a8-80cb-8874f922cbed",
+    "level_ts_id": "55157010"
   },
   {
     "access_issue": "https://www.paddlescotland.org.uk/hazard-tree-blockage-river-avon",
@@ -538,7 +555,8 @@
     "scrape_value": "0.5",
     "very_high_value": "1.5",
     "webcam": "",
-    "uuid": "a386f2c0-2f44-5252-95cd-db1c1938bf9d"
+    "uuid": "a386f2c0-2f44-5252-95cd-db1c1938bf9d",
+    "level_ts_id": "52954010"
   },
   {
     "access_issue": "",
@@ -568,7 +586,8 @@
     "scrape_value": "1",
     "very_high_value": "2",
     "webcam": "",
-    "uuid": "dc8e32cd-48e7-5793-b6ad-164a8f5ef85f"
+    "uuid": "dc8e32cd-48e7-5793-b6ad-164a8f5ef85f",
+    "level_ts_id": "53027010"
   },
   {
     "access_issue": "https://www.facebook.com/groups/Scottish.Whitewater/posts/6845112045523748/",
@@ -598,7 +617,8 @@
     "scrape_value": "0",
     "very_high_value": "3",
     "webcam": "",
-    "uuid": "61a04fc8-5dda-5ae9-9706-3a632829341d"
+    "uuid": "61a04fc8-5dda-5ae9-9706-3a632829341d",
+    "level_ts_id": "57047010"
   },
   {
     "access_issue": "https://www.paddlescotland.org.uk/hazard-on-river-spey-one-mile-downstream-of-fochabers",
@@ -629,7 +649,8 @@
     "very_high_value": "2",
     "webcam": "https://www.farsondigitalwatercams.com/locations/aberlour",
     "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImJsYWNrc2JvYXQvMjAxOS8wMS8yMS8wODo1MDowMC5qcGciXSxbInAiLCJ0aHVtYiIsIngxNTAiXV0.jpg",
-    "uuid": "fe91216f-06fc-52a3-a982-e6713ce64d6f"
+    "uuid": "fe91216f-06fc-52a3-a982-e6713ce64d6f",
+    "level_ts_id": "56916010"
   },
   {
     "access_issue": "https://www.facebook.com/groups/Scottish.Whitewater/posts/6897144600320492/",
@@ -659,7 +680,8 @@
     "scrape_value": "0.35",
     "very_high_value": "1.2",
     "webcam": "",
-    "uuid": "3313f365-be18-5193-8b33-04c54a32fb23"
+    "uuid": "3313f365-be18-5193-8b33-04c54a32fb23",
+    "level_ts_id": "55513010"
   },
   {
     "access_issue": "https://www.paddlescotland.org.uk/river-leny-tree-hazards#gsc.tab=0",
@@ -689,7 +711,8 @@
     "scrape_value": "0.5",
     "very_high_value": "1.6",
     "webcam": "",
-    "uuid": "a50a5d86-1849-5758-8222-e44245ba12b4"
+    "uuid": "a50a5d86-1849-5758-8222-e44245ba12b4",
+    "level_ts_id": "54512010"
   },
   {
     "access_issue": "",
@@ -719,7 +742,8 @@
     "scrape_value": "0.8",
     "very_high_value": "1.3",
     "webcam": "",
-    "uuid": "d2287032-562d-5bd8-b8e6-80894da04f79"
+    "uuid": "d2287032-562d-5bd8-b8e6-80894da04f79",
+    "level_ts_id": "53027010"
   },
   {
     "access_issue": "",
@@ -750,7 +774,8 @@
     "very_high_value": "2",
     "webcam": "https://www.farsondigitalwatercams.com/locations/grandtully",
     "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImdyYW5kdHVsbHkvMjAxOS8wMS8yMS8wODo1MDowMC5qcGciXSxbInAiLCJ0aHVtYiIsIngxNTAiXV0.jpg",
-    "uuid": "de620d51-ba64-5dcf-b68c-141bf45e741a"
+    "uuid": "de620d51-ba64-5dcf-b68c-141bf45e741a",
+    "level_ts_id": "55173010"
   },
   {
     "access_issue": "",
@@ -780,7 +805,8 @@
     "scrape_value": "0.55",
     "very_high_value": "1.8",
     "webcam": "",
-    "uuid": "009b7c52-aca1-5295-ad6c-75c8a165617d"
+    "uuid": "009b7c52-aca1-5295-ad6c-75c8a165617d",
+    "level_ts_id": "57363010"
   },
   {
     "access_issue": "",
@@ -810,7 +836,8 @@
     "scrape_value": "0.3",
     "very_high_value": "1.4",
     "webcam": "",
-    "uuid": "097f165c-1a34-5cee-bc79-449acc0b6819"
+    "uuid": "097f165c-1a34-5cee-bc79-449acc0b6819",
+    "level_ts_id": "58236010"
   },
   {
     "access_issue": "",
@@ -840,7 +867,8 @@
     "scrape_value": "0.4",
     "very_high_value": "2",
     "webcam": "",
-    "uuid": "c57ee26e-5cdd-56e3-8331-644cc2bc7d70"
+    "uuid": "c57ee26e-5cdd-56e3-8331-644cc2bc7d70",
+    "level_ts_id": "57532010"
   },
   {
     "access_issue": "",
@@ -870,7 +898,8 @@
     "scrape_value": "0.8",
     "very_high_value": "1.4",
     "webcam": "",
-    "uuid": "f922c912-ac68-577a-b563-29a54eec5a8c"
+    "uuid": "f922c912-ac68-577a-b563-29a54eec5a8c",
+    "level_ts_id": "56843010"
   },
   {
     "access_issue": "",
@@ -900,7 +929,8 @@
     "scrape_value": "0.6",
     "very_high_value": "1.7",
     "webcam": "",
-    "uuid": "796ce0c5-ea42-58dd-9a3b-96732c1135a0"
+    "uuid": "796ce0c5-ea42-58dd-9a3b-96732c1135a0",
+    "level_ts_id": "53795010"
   },
   {
     "access_issue": "https://www.youtube.com/shorts/qQEB62dFHaE",
@@ -931,7 +961,8 @@
     "very_high_value": "1.5",
     "webcam": "https://www.farsondigitalwatercams.com/locations/auldgirth",
     "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsIm5pdGgvMjAxOS8wMS8yMS8wODo1MDowMC5qcGciXSxbInAiLCJ0aHVtYiIsIngxNTAiXV0.jpg",
-    "uuid": "e8608c5a-8a7d-51ae-89b4-0238ef4e2128"
+    "uuid": "e8608c5a-8a7d-51ae-89b4-0238ef4e2128",
+    "level_ts_id": "53875010"
   },
   {
     "access_issue": "https://www.facebook.com/groups/Scottish.Whitewater/permalink/2945162608852064/",
@@ -961,7 +992,8 @@
     "scrape_value": "0.7",
     "very_high_value": "1.6",
     "webcam": "",
-    "uuid": "dee96820-3bfb-5276-998f-65fc26977969"
+    "uuid": "dee96820-3bfb-5276-998f-65fc26977969",
+    "level_ts_id": "56795010"
   },
   {
     "access_issue": "",
@@ -991,7 +1023,8 @@
     "scrape_value": "0.3",
     "very_high_value": "1.1",
     "webcam": "",
-    "uuid": "37925bdb-a2f0-5138-8141-8c0d2d8b0036"
+    "uuid": "37925bdb-a2f0-5138-8141-8c0d2d8b0036",
+    "level_ts_id": "58284010"
   },
   {
     "access_issue": "https://www.facebook.com/groups/Scottish.Whitewater/posts/5973358476032447/",
@@ -1021,7 +1054,8 @@
     "scrape_value": "0.75",
     "very_high_value": "1.4",
     "webcam": "",
-    "uuid": "df8485cd-7f8f-5b5d-97bf-f02eb17a92f7"
+    "uuid": "df8485cd-7f8f-5b5d-97bf-f02eb17a92f7",
+    "level_ts_id": "55481010"
   },
   {
     "access_issue": "",
@@ -1051,7 +1085,8 @@
     "scrape_value": "0.6",
     "very_high_value": "1.1",
     "webcam": "",
-    "uuid": "09a140d8-ec52-515e-aca3-73fe16e208f8"
+    "uuid": "09a140d8-ec52-515e-aca3-73fe16e208f8",
+    "level_ts_id": "60461010"
   },
   {
     "access_issue": "",
@@ -1081,7 +1116,8 @@
     "scrape_value": "0.5",
     "very_high_value": "1.3",
     "webcam": "",
-    "uuid": "5d6f029f-069e-5efe-ba0a-015e33706efc"
+    "uuid": "5d6f029f-069e-5efe-ba0a-015e33706efc",
+    "level_ts_id": "52539010"
   },
   {
     "access_issue": "",
@@ -1111,7 +1147,8 @@
     "scrape_value": "0.5",
     "very_high_value": "1.5",
     "webcam": "",
-    "uuid": "ea147adf-9858-51db-bcde-dbfe7af79f04"
+    "uuid": "ea147adf-9858-51db-bcde-dbfe7af79f04",
+    "level_ts_id": "53109010"
   },
   {
     "access_issue": "",
@@ -1142,7 +1179,8 @@
     "very_high_value": "2",
     "webcam": "https://www.farsondigitalwatercams.com/locations/crossford",
     "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImNseWRlLzIwMTkvMDEvMjEvMDg6NTA6MDAuanBnIl0sWyJwIiwidGh1bWIiLCJ4MTUwIl1d.jpg",
-    "uuid": "77b9d805-0cf9-569e-9a12-db48d95b8243"
+    "uuid": "77b9d805-0cf9-569e-9a12-db48d95b8243",
+    "level_ts_id": "53077010"
   },
   {
     "access_issue": "",
@@ -1172,7 +1210,8 @@
     "scrape_value": "0.4",
     "very_high_value": "1.1",
     "webcam": "",
-    "uuid": "820acba2-4b2e-512c-90b6-4ae5ab1d8761"
+    "uuid": "820acba2-4b2e-512c-90b6-4ae5ab1d8761",
+    "level_ts_id": "53247010"
   },
   {
     "access_issue": "",
@@ -1202,7 +1241,8 @@
     "scrape_value": "0.9",
     "very_high_value": "2",
     "webcam": "",
-    "uuid": "10c9d423-ce2f-547b-bd35-800102e55a2a"
+    "uuid": "10c9d423-ce2f-547b-bd35-800102e55a2a",
+    "level_ts_id": "57759010"
   },
   {
     "access_issue": "",
@@ -1232,7 +1272,8 @@
     "scrape_value": "0.65",
     "very_high_value": "1.7",
     "webcam": "",
-    "uuid": "8fc8da9f-278a-54bc-8787-dc440936d29f"
+    "uuid": "8fc8da9f-278a-54bc-8787-dc440936d29f",
+    "level_ts_id": "57411010"
   },
   {
     "access_issue": "",
@@ -1262,7 +1303,8 @@
     "scrape_value": "1.2",
     "very_high_value": "1.5",
     "webcam": "",
-    "uuid": "ae15b83b-67e1-5d59-ae4c-a2b5614dbfe5"
+    "uuid": "ae15b83b-67e1-5d59-ae4c-a2b5614dbfe5",
+    "level_ts_id": "58017010"
   },
   {
     "access_issue": "",
@@ -1292,7 +1334,8 @@
     "scrape_value": "0.8",
     "very_high_value": "1.5",
     "webcam": "",
-    "uuid": "b59d8af5-a893-5777-9f7b-fce6fb0657cd"
+    "uuid": "b59d8af5-a893-5777-9f7b-fce6fb0657cd",
+    "level_ts_id": "61541010"
   },
   {
     "access_issue": "",
@@ -1322,7 +1365,8 @@
     "scrape_value": "0",
     "very_high_value": "2.4",
     "webcam": "",
-    "uuid": "4651f221-a602-539a-bd9b-84bd69da8911"
+    "uuid": "4651f221-a602-539a-bd9b-84bd69da8911",
+    "level_ts_id": "57047010"
   },
   {
     "access_issue": "",
@@ -1352,7 +1396,8 @@
     "scrape_value": "0.4",
     "very_high_value": "0.8",
     "webcam": "",
-    "uuid": "42fc8531-4fcb-5420-8132-688cf6aaae04"
+    "uuid": "42fc8531-4fcb-5420-8132-688cf6aaae04",
+    "level_ts_id": "56811010"
   },
   {
     "access_issue": "",
@@ -1383,7 +1428,8 @@
     "very_high_value": "2",
     "webcam": "https://www.farsondigitalwatercams.com/locations/callander",
     "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsInRlaXRoX2NhbGxhbmRlci8yMDE5LzAxLzIxLzA4OjUwOjAwLmpwZyJdLFsicCIsInRodW1iIiwieDE1MCJdXQ.jpg",
-    "uuid": "fea5c874-39db-5bde-9568-e55f776b0673"
+    "uuid": "fea5c874-39db-5bde-9568-e55f776b0673",
+    "level_ts_id": "54496010"
   },
   {
     "access_issue": "",
@@ -1413,7 +1459,8 @@
     "scrape_value": "0.5",
     "very_high_value": "1.5",
     "webcam": "",
-    "uuid": "2b5e028e-d01b-54e2-8b64-1a9a997f74f4"
+    "uuid": "2b5e028e-d01b-54e2-8b64-1a9a997f74f4",
+    "level_ts_id": "52986010"
   },
   {
     "access_issue": "",
@@ -1443,7 +1490,8 @@
     "scrape_value": "1.0",
     "very_high_value": "2.0",
     "webcam": "",
-    "uuid": "3429820e-fb98-5398-b7af-0653dfd3f81d"
+    "uuid": "3429820e-fb98-5398-b7af-0653dfd3f81d",
+    "level_ts_id": "54028010"
   },
   {
     "access_issue": "",
@@ -1473,7 +1521,8 @@
     "scrape_value": "0.8",
     "very_high_value": "1.8",
     "webcam": "",
-    "uuid": "3cee6b12-8e31-55bd-b035-44d169c91173"
+    "uuid": "3cee6b12-8e31-55bd-b035-44d169c91173",
+    "level_ts_id": "58220010"
   },
   {
     "access_issue": "https://www.paddlescotland.org.uk/river-dee-invercauld-bridge",
@@ -1503,7 +1552,8 @@
     "scrape_value": "0.4",
     "very_high_value": "1.6",
     "webcam": "https://www.farsondigitalwatercams.com/locations/potarch-bridge",
-    "uuid": "6bd89aac-dea3-5536-b298-9c984cc17548"
+    "uuid": "6bd89aac-dea3-5536-b298-9c984cc17548",
+    "level_ts_id": "58482010"
   },
   {
     "access_issue": "https://www.facebook.com/groups/Scottish.Whitewater/posts/6889735151061437/",
@@ -1533,7 +1583,8 @@
     "scrape_value": "0.2",
     "very_high_value": "1.4",
     "webcam": "",
-    "uuid": "2b4d8482-a331-551b-8413-19f03158d581"
+    "uuid": "2b4d8482-a331-551b-8413-19f03158d581",
+    "level_ts_id": "55383010"
   },
   {
     "access_issue": "",
@@ -1563,7 +1614,8 @@
     "scrape_value": "0.4",
     "very_high_value": "1",
     "webcam": "",
-    "uuid": "63cf0362-ae2f-52b4-9a28-29b85f0dfe55"
+    "uuid": "63cf0362-ae2f-52b4-9a28-29b85f0dfe55",
+    "level_ts_id": "55157010"
   },
   {
     "access_issue": "",
@@ -1594,7 +1646,8 @@
     "very_high_value": "1.4",
     "webcam": "https://www.farsondigitalwatercams.com/locations/blairgowrie",
     "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImVyaWNodC8yMDE5LzAxLzIxLzA4OjUwOjAwLmpwZyJdLFsicCIsInRodW1iIiwieDE1MCJdXQ.jpg",
-    "uuid": "a528a284-90b8-5d31-b77e-294dc92ac37e"
+    "uuid": "a528a284-90b8-5d31-b77e-294dc92ac37e",
+    "level_ts_id": "55481010"
   },
   {
     "access_issue": "https://www.facebook.com/groups/Scottish.Whitewater/permalink/2678927252142269/",
@@ -1624,7 +1677,8 @@
     "scrape_value": "0.5",
     "very_high_value": "1.15",
     "webcam": "",
-    "uuid": "91b8c64b-90c4-5f22-bacd-baaf6e5d29d2"
+    "uuid": "91b8c64b-90c4-5f22-bacd-baaf6e5d29d2",
+    "level_ts_id": "61541010"
   },
   {
     "access_issue": "https://www.paddlescotland.org.uk/river-muick-new-signage",
@@ -1655,7 +1709,8 @@
     "very_high_value": "1.2",
     "webcam": "https://www.farsondigitalwatercams.com/locations/ballater",
     "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImRlZV9iYWxsYXRlci8yMDE5LzAxLzIxLzA4OjUwOjAwLmpwZyJdLFsicCIsInRodW1iIiwieDE1MCJdXQ.jpg",
-    "uuid": "51f01c9b-9a42-564b-8ebd-a70c27cfb28f"
+    "uuid": "51f01c9b-9a42-564b-8ebd-a70c27cfb28f",
+    "level_ts_id": "57661010"
   },
   {
     "access_issue": "",
@@ -1686,7 +1741,8 @@
     "very_high_value": "1.2",
     "webcam": "https://www.farsondigitalwatercams.com/locations/livingston",
     "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImFsbW9uZF9raXJrdG9ud2Vpcl9saXZpbmdzdG9uZS8yMDE5LzAxLzIxLzA4OjUwOjAwLmpwZyJdLFsicCIsInRodW1iIiwieDE1MCJdXQ.jpg",
-    "uuid": "ddf82334-3e5b-5407-8ce1-c91bbd0b37c8"
+    "uuid": "ddf82334-3e5b-5407-8ce1-c91bbd0b37c8",
+    "level_ts_id": "54278010"
   },
   {
     "access_issue": "https://www.paddlescotland.org.uk/chinese-bridge-rapid-scouting-access-issue",
@@ -1717,7 +1773,8 @@
     "very_high_value": "1.5",
     "webcam": "https://www.farsondigitalwatercams.com/locations/taymouth",
     "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImxvY2hfdGF5LzIwMTkvMDEvMjEvMDg6NTA6MDAuanBnIl0sWyJwIiwidGh1bWIiLCJ4MTUwIl1d.jpg",
-    "uuid": "6f940f85-54cd-5c31-b3f3-ad4218e51b5f"
+    "uuid": "6f940f85-54cd-5c31-b3f3-ad4218e51b5f",
+    "level_ts_id": "61525010"
   },
   {
     "access_issue": "https://www.paddlescotland.org.uk/river-tweed-chain-bridge-at-melrose",
@@ -1748,7 +1805,8 @@
     "very_high_value": "1.613",
     "webcam": "https://www.farsondigitalwatercams.com/locations/traquair",
     "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsInR3ZWVkX3RyYXF1YWlyLzIwMTkvMDEvMjEvMDg6NTA6MDAuanBnIl0sWyJwIiwidGh1bWIiLCJ4MTUwIl1d.jpg",
-    "uuid": "3023e767-45d1-5533-a4c8-d7259f3be6a1"
+    "uuid": "3023e767-45d1-5533-a4c8-d7259f3be6a1",
+    "level_ts_id": "55822010"
   },
   {
     "access_issue": "https://www.paddlescotland.org.uk/trees-down-in-river-south-esk-cortachy-tayside",
@@ -1778,7 +1836,8 @@
     "scrape_value": "0.7",
     "very_high_value": "1.6",
     "webcam": "https://www.farsondigitalwatercams.com/locations/finavon-castle",
-    "uuid": "fc2572ed-9f78-5487-8406-6c5a8d37d7bd"
+    "uuid": "fc2572ed-9f78-5487-8406-6c5a8d37d7bd",
+    "level_ts_id": "54890010"
   },
   {
     "access_issue": "",
@@ -1809,7 +1868,8 @@
     "very_high_value": "2",
     "webcam": "https://www.farsondigitalwatercams.com/locations/kintore",
     "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImRvbl9raW50b3JlLzIwMTkvMDEvMjEvMDg6NTA6MDAuanBnIl0sWyJwIiwidGh1bWIiLCJ4MTUwIl1d.jpg",
-    "uuid": "82a16d0a-a98d-5f06-b9a2-7cd820bc253a"
+    "uuid": "82a16d0a-a98d-5f06-b9a2-7cd820bc253a",
+    "level_ts_id": "58065010"
   },
   {
     "access_issue": "",
@@ -1839,7 +1899,8 @@
     "scrape_value": "0.9",
     "very_high_value": "2",
     "webcam": "",
-    "uuid": "aed32634-eeb1-5977-add2-2774db57e83a"
+    "uuid": "aed32634-eeb1-5977-add2-2774db57e83a",
+    "level_ts_id": "55595010"
   },
   {
     "access_issue": "",
@@ -1869,7 +1930,8 @@
     "scrape_value": "1.1",
     "very_high_value": "1.8",
     "webcam": "",
-    "uuid": "32d3173f-dc5f-5d02-8eb8-109d8eeac2c6"
+    "uuid": "32d3173f-dc5f-5d02-8eb8-109d8eeac2c6",
+    "level_ts_id": "59441010"
   },
   {
     "access_issue": "https://www.paddlescotland.org.uk/river-tweed-lower-makerstoun",
@@ -1900,7 +1962,8 @@
     "very_high_value": "1.5",
     "webcam": "https://www.farsondigitalwatercams.com/locations/kelso",
     "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImtlbHNvLzIwMTkvMDEvMjEvMDg6NTA6MDAuanBnIl0sWyJwIiwidGh1bWIiLCJ4MTUwIl1d.jpg",
-    "uuid": "6b6893a5-9782-5d03-8fb5-75d8f51b584a"
+    "uuid": "6b6893a5-9782-5d03-8fb5-75d8f51b584a",
+    "level_ts_id": "60996010"
   },
   {
     "access_issue": "",
@@ -1930,7 +1993,8 @@
     "scrape_value": "0.5",
     "very_high_value": "1.2",
     "webcam": "",
-    "uuid": "bf1e0dc1-c0a7-5b54-91cc-f67af3f9e8c8"
+    "uuid": "bf1e0dc1-c0a7-5b54-91cc-f67af3f9e8c8",
+    "level_ts_id": "57363010"
   },
   {
     "access_issue": "",
@@ -1960,7 +2024,8 @@
     "scrape_value": "0.7",
     "very_high_value": "1.4",
     "webcam": "",
-    "uuid": "a39a45b5-00cc-5000-804e-590a1274f2f1"
+    "uuid": "a39a45b5-00cc-5000-804e-590a1274f2f1",
+    "level_ts_id": "57363010"
   },
   {
     "access_issue": "",
@@ -1991,7 +2056,8 @@
     "very_high_value": "1.5",
     "webcam": "https://www.farsondigitalwatercams.com/locations/doonfoot",
     "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImRvb24vMjAxOS8wMS8yMS8wODo1MDowMC5qcGciXSxbInAiLCJ0aHVtYiIsIngxNTAiXV0.jpg",
-    "uuid": "054b903e-a603-5349-80bb-a6878a2bb4a9"
+    "uuid": "054b903e-a603-5349-80bb-a6878a2bb4a9",
+    "level_ts_id": "52656010"
   },
   {
     "access_issue": "https://www.facebook.com/share/p/s96BeNXpfPrumu11/",
@@ -2022,7 +2088,8 @@
     "very_high_value": "1.5",
     "webcam": "https://www.farsondigitalwatercams.com/locations/philliphaugh",
     "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsInBoaWxsaXBoYXVnaC8yMDE5LzAxLzIxLzA4OjUwOjAwLmpwZyJdLFsicCIsInRodW1iIiwieDE1MCJdXQ.jpg",
-    "uuid": "ed3b92a5-96d2-505b-a0ee-5ad8244904db"
+    "uuid": "ed3b92a5-96d2-505b-a0ee-5ad8244904db",
+    "level_ts_id": "55936010"
   },
   {
     "access_issue": "",
@@ -2052,7 +2119,8 @@
     "scrape_value": "0.3",
     "very_high_value": "1.2",
     "webcam": "",
-    "uuid": "887d6c53-1c1e-5671-9eea-d0e07a0af1fe"
+    "uuid": "887d6c53-1c1e-5671-9eea-d0e07a0af1fe",
+    "level_ts_id": "56178010"
   },
   {
     "access_issue": "",
@@ -2083,7 +2151,8 @@
     "very_high_value": "1.8",
     "webcam": "https://www.farsondigitalwatercams.com/locations/eckford",
     "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsInRldmlvdC8yMDE5LzAxLzIxLzA4OjUwOjAwLmpwZyJdLFsicCIsInRodW1iIiwieDE1MCJdXQ.jpg",
-    "uuid": "ae46b273-149b-562a-83eb-8e5d0df20da9"
+    "uuid": "ae46b273-149b-562a-83eb-8e5d0df20da9",
+    "level_ts_id": "56016010"
   },
   {
     "access_issue": "https://www.facebook.com/groups/Scottish.Whitewater/posts/6953520984682853/",
@@ -2114,7 +2183,8 @@
     "very_high_value": "0.7",
     "webcam": "https://www.farsondigitalwatercams.com/locations/edzell",
     "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImVza19lZHplbGwvMjAxOS8wMS8yMS8wODo1MDowMC5qcGciXSxbInAiLCJ0aHVtYiIsIngxNTAiXV0.jpg",
-    "uuid": "ca468973-e146-5caa-b4fa-af1f6fba2c9f"
+    "uuid": "ca468973-e146-5caa-b4fa-af1f6fba2c9f",
+    "level_ts_id": "59802010"
   },
   {
     "access_issue": "",
@@ -2144,7 +2214,8 @@
     "scrape_value": "0.1",
     "very_high_value": "1.1",
     "webcam": "",
-    "uuid": "a4618de7-00b6-5dca-8b2e-43e2aac46e3d"
+    "uuid": "a4618de7-00b6-5dca-8b2e-43e2aac46e3d",
+    "level_ts_id": "57459010"
   },
   {
     "access_issue": "",
@@ -2174,7 +2245,8 @@
     "scrape_value": "0.8",
     "very_high_value": "1.8",
     "webcam": "",
-    "uuid": "e5f3938f-30da-5121-aa51-55784b2eb346"
+    "uuid": "e5f3938f-30da-5121-aa51-55784b2eb346",
+    "level_ts_id": "53811010"
   },
   {
     "access_issue": "",
@@ -2204,7 +2276,8 @@
     "scrape_value": "0.7",
     "very_high_value": "1.3",
     "webcam": "",
-    "uuid": "d595aabe-d968-5b4a-80af-396995560b3b"
+    "uuid": "d595aabe-d968-5b4a-80af-396995560b3b",
+    "level_ts_id": "55920010"
   },
   {
     "access_issue": "",
@@ -2235,7 +2308,8 @@
     "put_in_long": " -2.222189",
     "get_out_lat": "57.140775",
     "get_out_long": "-2.070994",
-    "uuid": "e3fbb864-558e-5610-9425-3857b7564bec"
+    "uuid": "e3fbb864-558e-5610-9425-3857b7564bec",
+    "level_ts_id": "59580010"
   },
   {
     "access_issue": "",
@@ -2266,7 +2340,8 @@
     "very_high_value": "2.9",
     "webcam": "https://www.farsondigitalwatercams.com/locations/banchory",
     "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImZldWdoX2ZhbGxzLzIwMTkvMDEvMjEvMDg6NTA6MDAuanBnIl0sWyJwIiwidGh1bWIiLCJ4MTUwIl1d.jpg",
-    "uuid": "80d4d050-c32c-59c9-8760-a8e76a24e358"
+    "uuid": "80d4d050-c32c-59c9-8760-a8e76a24e358",
+    "level_ts_id": "57581010"
   },
   {
     "access_issue": "",
@@ -2296,7 +2371,8 @@
     "scrape_value": "0.7",
     "very_high_value": "1.2",
     "webcam": "",
-    "uuid": "a83d72cc-95d7-51da-8d27-e88705c0e54b"
+    "uuid": "a83d72cc-95d7-51da-8d27-e88705c0e54b",
+    "level_ts_id": "57265010"
   },
   {
     "access_issue": "",
@@ -2326,7 +2402,8 @@
     "scrape_value": "0.65",
     "very_high_value": "1.2",
     "webcam": "https://www.farsondigitalwatercams.com/locations/mar_lodge",
-    "uuid": "dc11fe84-fdd7-5ef8-b32a-f15759183542"
+    "uuid": "dc11fe84-fdd7-5ef8-b32a-f15759183542",
+    "level_ts_id": "57912010"
   },
   {
     "access_issue": "",
@@ -2357,7 +2434,8 @@
     "very_high_value": "1",
     "webcam": "https://www.farsondigitalwatercams.com/locations/avochie",
     "webcam_thumbnail": "https://watercams.azureedge.net/live-images/W1siZiIsImF2b2NoaWUvMjAxOS8wMS8yMS8wODo1MDowMC5qcGciXSxbInAiLCJ0aHVtYiIsIngxNTAiXV0.jpg",
-    "uuid": "7d0cb169-e337-5e96-9ab7-14baf75d9ddc"
+    "uuid": "7d0cb169-e337-5e96-9ab7-14baf75d9ddc",
+    "level_ts_id": "59752010"
   },
   {
     "access_issue": "",
@@ -2387,7 +2465,8 @@
     "scrape_value": "0.8",
     "very_high_value": "2",
     "webcam": "",
-    "uuid": "601a76eb-3a49-5570-8d32-195092f1b424"
+    "uuid": "601a76eb-3a49-5570-8d32-195092f1b424",
+    "level_ts_id": "54124010"
   },
   {
     "access_issue": "",
@@ -2417,7 +2496,8 @@
     "scrape_value": "0.47",
     "very_high_value": "1.1",
     "webcam": "",
-    "uuid": "bb29695a-39b4-56d7-8e9d-011c6ded3cf2"
+    "uuid": "bb29695a-39b4-56d7-8e9d-011c6ded3cf2",
+    "level_ts_id": "57734010"
   },
   {
     "access_issue": "",
@@ -2447,7 +2527,8 @@
     "scrape_value": "0.6",
     "very_high_value": "1.2",
     "webcam": "https://www.farsondigitalwatercams.com/locations/bridge-of-gairn",
-    "uuid": "cc09fbcc-a36c-58ee-a148-d5beda4b1f9f"
+    "uuid": "cc09fbcc-a36c-58ee-a148-d5beda4b1f9f",
+    "level_ts_id": "57645010"
   },
   {
     "access_issue": "",
@@ -2477,7 +2558,8 @@
     "scrape_value": "0.8",
     "very_high_value": "1.8",
     "webcam": "",
-    "uuid": "42b7f5cd-5d0a-54d7-8a6b-2d558513b26e"
+    "uuid": "42b7f5cd-5d0a-54d7-8a6b-2d558513b26e",
+    "level_ts_id": "53827010"
   },
   {
     "access_issue": "https://www.facebook.com/groups/Scottish.Whitewater/permalink/2964927566875568/",
@@ -2507,7 +2589,8 @@
     "scrape_value": "0.9",
     "very_high_value": "1.7",
     "webcam": "",
-    "uuid": "b4ead6f2-a8a9-5905-b17f-c2c938956236"
+    "uuid": "b4ead6f2-a8a9-5905-b17f-c2c938956236",
+    "level_ts_id": "54092010"
   },
   {
     "access_issue": "",
@@ -2537,7 +2620,8 @@
     "scrape_value": "0.7",
     "very_high_value": "2.0",
     "webcam": "",
-    "uuid": "24e7021b-3978-56ee-8828-131ca6a31e08"
+    "uuid": "24e7021b-3978-56ee-8828-131ca6a31e08",
+    "level_ts_id": "54028010"
   },
   {
     "access_issue": "",
@@ -2567,7 +2651,8 @@
     "scrape_value": "0.38",
     "very_high_value": "1.5",
     "webcam": "",
-    "uuid": "d3667ad4-d26f-5a88-9762-7a9cb4fc637b"
+    "uuid": "d3667ad4-d26f-5a88-9762-7a9cb4fc637b",
+    "level_ts_id": "55424010"
   },
   {
     "access_issue": "",
@@ -2597,7 +2682,8 @@
     "scrape_value": "0.4",
     "very_high_value": "1.0",
     "webcam": "",
-    "uuid": "b1b3c4fe-2585-5d70-99e4-333e3597bbfe"
+    "uuid": "b1b3c4fe-2585-5d70-99e4-333e3597bbfe",
+    "level_ts_id": "57823010"
   },
   {
     "access_issue": "",
@@ -2627,7 +2713,8 @@
     "scrape_value": "0.2",
     "very_high_value": "1.8",
     "webcam": "https://www.farsondigitalwatercams.com/locations/pitlochry",
-    "uuid": "20b65df4-a397-5e4d-9d80-f97a69e6c2b1"
+    "uuid": "20b65df4-a397-5e4d-9d80-f97a69e6c2b1",
+    "level_ts_id": "55554010"
   },
   {
     "access_issue": "",
@@ -2657,7 +2744,8 @@
     "scrape_value": "0.7",
     "very_high_value": "1.6",
     "webcam": "",
-    "uuid": "3fb65e64-425d-5c90-9a6c-4b3ae1b5fdc8"
+    "uuid": "3fb65e64-425d-5c90-9a6c-4b3ae1b5fdc8",
+    "level_ts_id": "53174010"
   },
   {
     "access_issue": "",
@@ -2687,7 +2775,8 @@
     "webcam": "",
     "uuid": "761c2985-e8f8-5f47-ae5e-4d7edef4f346",
     "river_zone_url": "https://graph.rivermap.org/calibration/c63c591f-0073-4330-9c33-49dff914b2ad.H#height=600&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Avon (Lothian)&zones=,ff0000,Huge|230,ff6060,Very+High|200,ffc004,High|150,ffff33,Medium|120,00ff00,Low|70,ccffcc,Scrapeable|50,cccccc,Empty",
-    "river_zone_url_mobile": "https://graph.rivermap.org/calibration/c63c591f-0073-4330-9c33-49dff914b2ad.H#height=400&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Avon (Lothian)&zones=,ff0000,Huge|230,ff6060,Very+High|200,ffc004,High|150,ffff33,Medium|120,00ff00,Low|70,ccffcc,Scrapeable|50,cccccc,Empty"
+    "river_zone_url_mobile": "https://graph.rivermap.org/calibration/c63c591f-0073-4330-9c33-49dff914b2ad.H#height=400&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Avon (Lothian)&zones=,ff0000,Huge|230,ff6060,Very+High|200,ffc004,High|150,ffff33,Medium|120,00ff00,Low|70,ccffcc,Scrapeable|50,cccccc,Empty",
+    "level_ts_id": "54448010"
   },
   {
     "access_issue": "",
@@ -2717,7 +2806,8 @@
     "classification_url": "",
     "uuid": "42c156a6-ff83-5d72-be37-0e60583efb2b",
     "river_zone_url": "https://graph.rivermap.org/calibration/cc0c050b-b48f-4910-9631-cd411bf0cc96.H#height=600&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Falls of Clyde&zones=,ff0000,Huge|140,ff6060,Very+High|130,ffc004,High|100,ffff33,Medium|85,00ff00,Low|80,ccffcc,Scrapeable|70,cccccc,Empty",
-    "river_zone_url_mobile": "https://graph.rivermap.org/calibration/cc0c050b-b48f-4910-9631-cd411bf0cc96.H#height=400&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Falls of Clyde&zones=,ff0000,Huge|140,ff6060,Very+High|130,ffc004,High|100,ffff33,Medium|85,00ff00,Low|80,ccffcc,Scrapeable|70,cccccc,Empty"
+    "river_zone_url_mobile": "https://graph.rivermap.org/calibration/cc0c050b-b48f-4910-9631-cd411bf0cc96.H#height=400&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Falls of Clyde&zones=,ff0000,Huge|140,ff6060,Very+High|130,ffc004,High|100,ffff33,Medium|85,00ff00,Low|80,ccffcc,Scrapeable|70,cccccc,Empty",
+    "level_ts_id": "53521010"
   },
   {
     "access_issue": "",
@@ -2747,7 +2837,8 @@
     "webcam": "",
     "uuid": "a683bc1c-d044-5d23-97cd-77ae82739648",
     "river_zone_url": "https://graph.rivermap.org/calibration/0f938091-7b03-4345-968b-dd0e7ed89b53.H#height=600&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Garry (Perthshire)&zones=,ff0000,Huge|110,ff6060,Very+High|110,ffc004,High|110,ffff33,Medium|100,00ff00,Low|70,ccffcc,Scrapeable|60,cccccc,Empty",
-    "river_zone_url_mobile": "https://graph.rivermap.org/calibration/0f938091-7b03-4345-968b-dd0e7ed89b53.H#height=400&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Garry (Perthshire)&zones=,ff0000,Huge|110,ff6060,Very+High|110,ffc004,High|110,ffff33,Medium|100,00ff00,Low|70,ccffcc,Scrapeable|60,cccccc,Empty"
+    "river_zone_url_mobile": "https://graph.rivermap.org/calibration/0f938091-7b03-4345-968b-dd0e7ed89b53.H#height=400&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Garry (Perthshire)&zones=,ff0000,Huge|110,ff6060,Very+High|110,ffc004,High|110,ffff33,Medium|100,00ff00,Low|70,ccffcc,Scrapeable|60,cccccc,Empty",
+    "level_ts_id": "55497010"
   },
   {
     "name": "West Water",
@@ -2777,7 +2868,8 @@
     "classification_url": "",
     "uuid": "5cfe8b26-5b96-5f67-ac5f-2333acdb8fa4",
     "river_zone_url": "https://graph.rivermap.org/calibration/3583ef69-fa79-4745-9785-2788ddc3fad1.H#height=600&from=-7&creditName=Paddle Scotland Where%27s the Water&title=West Water&zones=,ff0000,Huge|130,ff6060,Very+High|120,ffc004,High|110,ffff33,Medium|100,00ff00,Low|75,ccffcc,Scrapeable|60,cccccc,Empty",
-    "river_zone_url_mobile": "https://graph.rivermap.org/calibration/3583ef69-fa79-4745-9785-2788ddc3fad1.H#height=400&from=-7&creditName=Paddle Scotland Where%27s the Water&title=West Water&zones=,ff0000,Huge|130,ff6060,Very+High|120,ffc004,High|110,ffff33,Medium|100,00ff00,Low|75,ccffcc,Scrapeable|60,cccccc,Empty"
+    "river_zone_url_mobile": "https://graph.rivermap.org/calibration/3583ef69-fa79-4745-9785-2788ddc3fad1.H#height=400&from=-7&creditName=Paddle Scotland Where%27s the Water&title=West Water&zones=,ff0000,Huge|130,ff6060,Very+High|120,ffc004,High|110,ffff33,Medium|100,00ff00,Low|75,ccffcc,Scrapeable|60,cccccc,Empty",
+    "level_ts_id": "55027010"
   },
   {
     "name": "North Esk (Lothian)",
@@ -2807,7 +2899,8 @@
     "classification_url": "",
     "uuid": "67b611a7-ca95-5893-a953-e957f1cb67c2",
     "river_zone_url": "https://graph.rivermap.org/calibration/19a52dfd-8272-477f-9b35-2f5580aa1666.H#height=600&from=-7&creditName=Paddle Scotland Where%27s the Water&title=North Esk (Lothian)&zones=,ff0000,Huge|60,ff6060,Very+High|50,ffc004,High|46.8,ffff33,Medium|30,00ff00,Low|24.4,ccffcc,Scrapeable|9,cccccc,Empty",
-    "river_zone_url_mobile": "https://graph.rivermap.org/calibration/19a52dfd-8272-477f-9b35-2f5580aa1666.H#height=400&from=-7&creditName=Paddle Scotland Where%27s the Water&title=North Esk (Lothian)&zones=,ff0000,Huge|60,ff6060,Very+High|50,ffc004,High|46.8,ffff33,Medium|30,00ff00,Low|24.4,ccffcc,Scrapeable|9,cccccc,Empty"
+    "river_zone_url_mobile": "https://graph.rivermap.org/calibration/19a52dfd-8272-477f-9b35-2f5580aa1666.H#height=400&from=-7&creditName=Paddle Scotland Where%27s the Water&title=North Esk (Lothian)&zones=,ff0000,Huge|60,ff6060,Very+High|50,ffc004,High|46.8,ffff33,Medium|30,00ff00,Low|24.4,ccffcc,Scrapeable|9,cccccc,Empty",
+    "level_ts_id": "54327010"
   },
   {
     "name": "Water of Leith (Lower)",
@@ -2837,7 +2930,8 @@
     "classification_url": "",
     "uuid": "0812240c-902c-584d-ac2f-3dafeb179fae",
     "river_zone_url": "https://graph.rivermap.org/calibration/889bb8d1-ebb9-47bf-b00f-5f93880f6670.H#height=600&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Water of Leith (Lower)&zones=,ff0000,Huge|170,ff6060,Very+High|150,ffc004,High|130,ffff33,Medium|100,00ff00,Low|70,ccffcc,Scrapeable|45,cccccc,Empty",
-    "river_zone_url_mobile": "https://graph.rivermap.org/calibration/889bb8d1-ebb9-47bf-b00f-5f93880f6670.H#height=400&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Water of Leith (Lower)&zones=,ff0000,Huge|170,ff6060,Very+High|150,ffc004,High|130,ffff33,Medium|100,00ff00,Low|70,ccffcc,Scrapeable|45,cccccc,Empty"
+    "river_zone_url_mobile": "https://graph.rivermap.org/calibration/889bb8d1-ebb9-47bf-b00f-5f93880f6670.H#height=400&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Water of Leith (Lower)&zones=,ff0000,Huge|170,ff6060,Very+High|150,ffc004,High|130,ffff33,Medium|100,00ff00,Low|70,ccffcc,Scrapeable|45,cccccc,Empty",
+    "level_ts_id": "54261010"
   },
   {
     "name": "Divie",
@@ -2867,7 +2961,8 @@
     "classification_url": "",
     "uuid": "0f2f9993-9a04-5a4b-8862-39f74fb820b8",
     "river_zone_url": "https://graph.rivermap.org/calibration/ff2b0719-cd9a-4ef2-9e8f-7920415cce57.H#height=600&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Divie&zones=,ff0000,Huge|120,ff6060,Very+High|80,ffc004,High|60,ffff33,Medium|40,00ff00,Low|25,ccffcc,Scrapeable|20,cccccc,Empty",
-    "river_zone_url_mobile": "https://graph.rivermap.org/calibration/ff2b0719-cd9a-4ef2-9e8f-7920415cce57.H#height=400&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Divie&zones=,ff0000,Huge|120,ff6060,Very+High|80,ffc004,High|60,ffff33,Medium|40,00ff00,Low|25,ccffcc,Scrapeable|20,cccccc,Empty"
+    "river_zone_url_mobile": "https://graph.rivermap.org/calibration/ff2b0719-cd9a-4ef2-9e8f-7920415cce57.H#height=400&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Divie&zones=,ff0000,Huge|120,ff6060,Very+High|80,ffc004,High|60,ffff33,Medium|40,00ff00,Low|25,ccffcc,Scrapeable|20,cccccc,Empty",
+    "level_ts_id": "57322010"
   },
   {
     "name": "Liddel Water",
@@ -2897,7 +2992,8 @@
     "classification_url": "",
     "uuid": "5b620b69-8470-5eb5-8547-386bb24e97d3",
     "river_zone_url": "https://graph.rivermap.org/calibration/3bf226e8-06aa-4862-9dea-520d0379171f.H#height=600&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Liddel Water&zones=,ff0000,Huge|150,ff6060,Very+High|140,ffc004,High|130,ffff33,Medium|120,00ff00,Low|60,ccffcc,Scrapeable|50,cccccc,Empty",
-    "river_zone_url_mobile": "https://graph.rivermap.org/calibration/3bf226e8-06aa-4862-9dea-520d0379171f.H#height=400&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Liddel Water&zones=,ff0000,Huge|150,ff6060,Very+High|140,ffc004,High|130,ffff33,Medium|120,00ff00,Low|60,ccffcc,Scrapeable|50,cccccc,Empty"
+    "river_zone_url_mobile": "https://graph.rivermap.org/calibration/3bf226e8-06aa-4862-9dea-520d0379171f.H#height=400&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Liddel Water&zones=,ff0000,Huge|150,ff6060,Very+High|140,ffc004,High|130,ffff33,Medium|120,00ff00,Low|60,ccffcc,Scrapeable|50,cccccc,Empty",
+    "level_ts_id": "54060010"
   },
   {
     "name": "Annan",
@@ -2927,7 +3023,8 @@
     "classification": "",
     "classification_url": "",
     "river_zone_url": "https://graph.rivermap.org/calibration/4d5f3988-4673-451f-a484-dcaa2b5877a9.H#height=600&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Annan&zones=,ff0000,Huge|170,ff6060,Very+High|170,ffc004,High|146,ffff33,Medium|100,00ff00,Low|60,ccffcc,Scrapeable|60,cccccc,Empty",
-    "river_zone_url_mobile": "https://graph.rivermap.org/calibration/4d5f3988-4673-451f-a484-dcaa2b5877a9.H#height=400&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Annan&zones=,ff0000,Huge|170,ff6060,Very+High|170,ffc004,High|146,ffff33,Medium|100,00ff00,Low|60,ccffcc,Scrapeable|60,cccccc,Empty"
+    "river_zone_url_mobile": "https://graph.rivermap.org/calibration/4d5f3988-4673-451f-a484-dcaa2b5877a9.H#height=400&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Annan&zones=,ff0000,Huge|170,ff6060,Very+High|170,ffc004,High|146,ffff33,Medium|100,00ff00,Low|60,ccffcc,Scrapeable|60,cccccc,Empty",
+    "level_ts_id": "53779010"
   },
   {
     "name": "Don (Middle)",
@@ -2957,7 +3054,8 @@
     "classification": "",
     "classification_url": "",
     "river_zone_url": "https://graph.rivermap.org/calibration/2da07e9e-efaa-4e04-a5dc-731a2098fc2f.H#height=600&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Don (Middle)&zones=,ff0000,Huge|140,ff6060,Very+High|120,ffc004,High|100,ffff33,Medium|70,00ff00,Low|60,ccffcc,Scrapeable|40,cccccc,Empty",
-    "river_zone_url_mobile": "https://graph.rivermap.org/calibration/2da07e9e-efaa-4e04-a5dc-731a2098fc2f.H#height=400&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Don (Middle)&zones=,ff0000,Huge|140,ff6060,Very+High|120,ffc004,High|100,ffff33,Medium|70,00ff00,Low|60,ccffcc,Scrapeable|40,cccccc,Empty"
+    "river_zone_url_mobile": "https://graph.rivermap.org/calibration/2da07e9e-efaa-4e04-a5dc-731a2098fc2f.H#height=400&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Don (Middle)&zones=,ff0000,Huge|140,ff6060,Very+High|120,ffc004,High|100,ffff33,Medium|70,00ff00,Low|60,ccffcc,Scrapeable|40,cccccc,Empty",
+    "level_ts_id": "56957010"
   },
   {
     "name": "Dee (Grampian) (Upper)",
@@ -2987,7 +3085,8 @@
     "river_zone_url": "https://graph.rivermap.org/calibration/c48d829c-049e-5fb2-9ce4-593dc14d5943.H#height=600&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Dee (Grampian) (Upper)&zones=,ff0000,Huge|150,ff6060,Very+High|100,ffc004,High|80,ffff33,Medium|70,00ff00,Low|60,ccffcc,Scrapeable|45,cccccc,Empty",
     "river_zone_url_mobile": "https://graph.rivermap.org/calibration/c48d829c-049e-5fb2-9ce4-593dc14d5943.H#height=400&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Dee (Grampian) (Upper)&zones=,ff0000,Huge|150,ff6060,Very+High|100,ffc004,High|80,ffff33,Medium|70,00ff00,Low|60,ccffcc,Scrapeable|45,cccccc,Empty",
     "classification": "",
-    "classification_url": ""
+    "classification_url": "",
+    "level_ts_id": "58106010"
   },
   {
     "name": "Dee (Grampian) (Drumoak)",
@@ -3017,7 +3116,8 @@
     "classification_url": "",
     "uuid": "2f70f0d9-7c85-5795-81d7-e3e245935dc5",
     "river_zone_url": "https://graph.rivermap.org/calibration/aefaee74-e416-4279-a4cd-aaf2ee0385af.H#height=600&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Dee (Grampian) (Drumoak)&zones=,ff0000,Huge|0,ff6060,Very+High|0,ffc004,High|0,ffff33,Medium|0,00ff00,Low|0,ccffcc,Scrapeable|0,cccccc,Empty",
-    "river_zone_url_mobile": "https://graph.rivermap.org/calibration/aefaee74-e416-4279-a4cd-aaf2ee0385af.H#height=400&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Dee (Grampian) (Drumoak)&zones=,ff0000,Huge|0,ff6060,Very+High|0,ffc004,High|0,ffff33,Medium|0,00ff00,Low|0,ccffcc,Scrapeable|0,cccccc,Empty"
+    "river_zone_url_mobile": "https://graph.rivermap.org/calibration/aefaee74-e416-4279-a4cd-aaf2ee0385af.H#height=400&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Dee (Grampian) (Drumoak)&zones=,ff0000,Huge|0,ff6060,Very+High|0,ffc004,High|0,ffff33,Medium|0,00ff00,Low|0,ccffcc,Scrapeable|0,cccccc,Empty",
+    "level_ts_id": "58049010"
   },
   {
     "name": "Nethan",
@@ -3047,7 +3147,8 @@
     "classification": "",
     "classification_url": "",
     "river_zone_url": "https://graph.rivermap.org/calibration/7ccb7925-e8b0-4d1c-af09-56a641d3e40f.H#height=600&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Nethan&zones=,ff0000,Huge|80,ff6060,Very+High|80,ffc004,High|80,ffff33,Medium|80,00ff00,Low|80,ccffcc,Scrapeable|80,cccccc,Empty",
-    "river_zone_url_mobile": "https://graph.rivermap.org/calibration/7ccb7925-e8b0-4d1c-af09-56a641d3e40f.H#height=400&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Nethan&zones=,ff0000,Huge|80,ff6060,Very+High|80,ffc004,High|80,ffff33,Medium|80,00ff00,Low|80,ccffcc,Scrapeable|80,cccccc,Empty"
+    "river_zone_url_mobile": "https://graph.rivermap.org/calibration/7ccb7925-e8b0-4d1c-af09-56a641d3e40f.H#height=400&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Nethan&zones=,ff0000,Huge|80,ff6060,Very+High|80,ffc004,High|80,ffff33,Medium|80,00ff00,Low|80,ccffcc,Scrapeable|80,cccccc,Empty",
+    "level_ts_id": "53158010"
   },
   {
     "name": "Evan Water",
@@ -3077,7 +3178,8 @@
     "classification": "",
     "classification_url": "",
     "river_zone_url": "https://graph.rivermap.org/calibration/95695a5a-b388-3a06-81ec-9809478364bb.H#height=600&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Evan Water&zones=,ff0000,Huge|120,ff6060,Very+High|110,ffc004,High|100,ffff33,Medium|80,00ff00,Low|50,ccffcc,Scrapeable|50,cccccc,Empty",
-    "river_zone_url_mobile": "https://graph.rivermap.org/calibration/95695a5a-b388-3a06-81ec-9809478364bb.H#height=400&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Evan Water&zones=,ff0000,Huge|120,ff6060,Very+High|110,ffc004,High|100,ffff33,Medium|80,00ff00,Low|50,ccffcc,Scrapeable|50,cccccc,Empty"
+    "river_zone_url_mobile": "https://graph.rivermap.org/calibration/95695a5a-b388-3a06-81ec-9809478364bb.H#height=400&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Evan Water&zones=,ff0000,Huge|120,ff6060,Very+High|110,ffc004,High|100,ffff33,Medium|80,00ff00,Low|50,ccffcc,Scrapeable|50,cccccc,Empty",
+    "level_ts_id": "53722010"
   },
   {
     "name": "Kirk Burn",
@@ -3107,7 +3209,8 @@
     "classification": "",
     "classification_url": "",
     "river_zone_url": "https://graph.rivermap.org/calibration/affe30ef-8af2-43f9-aadf-b6b7b2f1bbb4.H#height=600&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Kirk Burn&zones=,ff0000,Huge|90,ff6060,Very+High|85,ffc004,High|75,ffff33,Medium|65,00ff00,Low|60,ccffcc,Scrapeable|50,cccccc,Empty",
-    "river_zone_url_mobile": "https://graph.rivermap.org/calibration/affe30ef-8af2-43f9-aadf-b6b7b2f1bbb4.H#height=400&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Kirk Burn&zones=,ff0000,Huge|90,ff6060,Very+High|85,ffc004,High|75,ffff33,Medium|65,00ff00,Low|60,ccffcc,Scrapeable|50,cccccc,Empty"
+    "river_zone_url_mobile": "https://graph.rivermap.org/calibration/affe30ef-8af2-43f9-aadf-b6b7b2f1bbb4.H#height=400&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Kirk Burn&zones=,ff0000,Huge|90,ff6060,Very+High|85,ffc004,High|75,ffff33,Medium|65,00ff00,Low|60,ccffcc,Scrapeable|50,cccccc,Empty",
+    "level_ts_id": "53190010"
   },
   {
     "name": "North Esk (Lower) (Old)",
@@ -3137,7 +3240,8 @@
     "river_zone_url": "https://graph.rivermap.org/calibration/67119d03-3a40-5648-84e8-b576cb9d2362.H#height=600&from=-7&creditName=Paddle Scotland Where%27s the Water&title=North Esk (Lower) (Old)&zones=,ff0000,Huge|120,ff6060,Very+High|75,ffc004,High|55,ffff33,Medium|50,00ff00,Low|45,ccffcc,Scrapeable|30,cccccc,Empty",
     "river_zone_url_mobile": "https://graph.rivermap.org/calibration/67119d03-3a40-5648-84e8-b576cb9d2362.H#height=400&from=-7&creditName=Paddle Scotland Where%27s the Water&title=North Esk (Lower) (Old)&zones=,ff0000,Huge|120,ff6060,Very+High|75,ffc004,High|55,ffff33,Medium|50,00ff00,Low|45,ccffcc,Scrapeable|30,cccccc,Empty",
     "classification": "",
-    "classification_url": ""
+    "classification_url": "",
+    "level_ts_id": "55068010"
   },
   {
     "name": "Findhorn (Middle) (New Gauge)",
@@ -3167,7 +3271,8 @@
     "classification": "",
     "classification_url": "",
     "river_zone_url": "https://graph.rivermap.org/calibration/63aa6893-319c-4d02-8cc5-36d2ebc992ec.H#height=600&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Findhorn (Middle) (New Gauge)&zones=,ff0000,Huge|120,ff6060,Very+High|100,ffc004,High|80,ffff33,Medium|50,00ff00,Low|40,ccffcc,Scrapeable|35,cccccc,Empty",
-    "river_zone_url_mobile": "https://graph.rivermap.org/calibration/63aa6893-319c-4d02-8cc5-36d2ebc992ec.H#height=400&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Findhorn (Middle) (New Gauge)&zones=,ff0000,Huge|120,ff6060,Very+High|100,ffc004,High|80,ffff33,Medium|50,00ff00,Low|40,ccffcc,Scrapeable|35,cccccc,Empty"
+    "river_zone_url_mobile": "https://graph.rivermap.org/calibration/63aa6893-319c-4d02-8cc5-36d2ebc992ec.H#height=400&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Findhorn (Middle) (New Gauge)&zones=,ff0000,Huge|120,ff6060,Very+High|100,ffc004,High|80,ffff33,Medium|50,00ff00,Low|40,ccffcc,Scrapeable|35,cccccc,Empty",
+    "level_ts_id": "61393010"
   },
   {
     "name": "Water of Leith (Upper)",
@@ -3197,7 +3302,8 @@
     "classification": "",
     "classification_url": "",
     "river_zone_url": "https://graph.rivermap.org/calibration/07abba9b-fedc-4072-a214-023f8c9907e8.H#height=600&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Water of Leith (Upper)&zones=,ff0000,Huge|100,ff6060,Very+High|75,ffc004,High|65,ffff33,Medium|55,00ff00,Low|45,ccffcc,Scrapeable|40,cccccc,Empty",
-    "river_zone_url_mobile": "https://graph.rivermap.org/calibration/07abba9b-fedc-4072-a214-023f8c9907e8.H#height=400&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Water of Leith (Upper)&zones=,ff0000,Huge|100,ff6060,Very+High|75,ffc004,High|65,ffff33,Medium|55,00ff00,Low|45,ccffcc,Scrapeable|40,cccccc,Empty"
+    "river_zone_url_mobile": "https://graph.rivermap.org/calibration/07abba9b-fedc-4072-a214-023f8c9907e8.H#height=400&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Water of Leith (Upper)&zones=,ff0000,Huge|100,ff6060,Very+High|75,ffc004,High|65,ffff33,Medium|55,00ff00,Low|45,ccffcc,Scrapeable|40,cccccc,Empty",
+    "level_ts_id": "54375010"
   },
   {
     "name": "Carron (Easter Ross) (Top)",
@@ -3227,7 +3333,8 @@
     "classification": "",
     "classification_url": "",
     "river_zone_url": "https://graph.rivermap.org/calibration/59ba0665-4f0f-58ba-970d-62f922fc8e95.H#height=600&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Carron (Easter Ross) (Top)&zones=,ff0000,Huge|200,ff6060,Very+High|160,ffc004,High|140,ffff33,Medium|120,00ff00,Low|110,ccffcc,Scrapeable|90,cccccc,Empty",
-    "river_zone_url_mobile": "https://graph.rivermap.org/calibration/59ba0665-4f0f-58ba-970d-62f922fc8e95.H#height=400&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Carron (Easter Ross) (Top)&zones=,ff0000,Huge|200,ff6060,Very+High|160,ffc004,High|140,ffff33,Medium|120,00ff00,Low|110,ccffcc,Scrapeable|90,cccccc,Empty"
+    "river_zone_url_mobile": "https://graph.rivermap.org/calibration/59ba0665-4f0f-58ba-970d-62f922fc8e95.H#height=400&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Carron (Easter Ross) (Top)&zones=,ff0000,Huge|200,ff6060,Very+High|160,ffc004,High|140,ffff33,Medium|120,00ff00,Low|110,ccffcc,Scrapeable|90,cccccc,Empty",
+    "level_ts_id": "58220010"
   },
   {
     "name": "Abhainn Deabhag",
@@ -3255,7 +3362,8 @@
     "uuid": "f06fc2fb-50df-558c-abca-636506e3bb66",
     "gauge_name": "Fasnakyle",
     "river_zone_url": "https://graph.rivermap.org/calibration/7da02f6b-0b91-4232-8ba1-ee8b61ac8bc2.H#height=600&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Abhainn Deabhag&zones=,ff0000,Huge|100,ff6060,Very+High|80,ffc004,High|65,ffff33,Medium|50,00ff00,Low|45,ccffcc,Scrapeable|40,cccccc,Empty",
-    "river_zone_url_mobile": "https://graph.rivermap.org/calibration/7da02f6b-0b91-4232-8ba1-ee8b61ac8bc2.H#height=400&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Abhainn Deabhag&zones=,ff0000,Huge|100,ff6060,Very+High|80,ffc004,High|65,ffff33,Medium|50,00ff00,Low|45,ccffcc,Scrapeable|40,cccccc,Empty"
+    "river_zone_url_mobile": "https://graph.rivermap.org/calibration/7da02f6b-0b91-4232-8ba1-ee8b61ac8bc2.H#height=400&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Abhainn Deabhag&zones=,ff0000,Huge|100,ff6060,Very+High|80,ffc004,High|65,ffff33,Medium|50,00ff00,Low|45,ccffcc,Scrapeable|40,cccccc,Empty",
+    "level_ts_id": "57395010"
   },
   {
     "name": "Clyde (Elvanfoot to Wiston)",
@@ -3285,7 +3393,8 @@
     "classification": "",
     "classification_url": "",
     "river_zone_url": "https://graph.rivermap.org/calibration/d7babe29-5f3e-46a8-8559-d3359944d0c2.H#height=600&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Clyde (Elvanfoot to Wiston)&zones=,ff0000,Huge|200,ff6060,Very+High|170,ffc004,High|150,ffff33,Medium|70,00ff00,Low|50,ccffcc,Scrapeable|30,cccccc,Empty",
-    "river_zone_url_mobile": "https://graph.rivermap.org/calibration/d7babe29-5f3e-46a8-8559-d3359944d0c2.H#height=400&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Clyde (Elvanfoot to Wiston)&zones=,ff0000,Huge|200,ff6060,Very+High|170,ffc004,High|150,ffff33,Medium|70,00ff00,Low|50,ccffcc,Scrapeable|30,cccccc,Empty"
+    "river_zone_url_mobile": "https://graph.rivermap.org/calibration/d7babe29-5f3e-46a8-8559-d3359944d0c2.H#height=400&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Clyde (Elvanfoot to Wiston)&zones=,ff0000,Huge|200,ff6060,Very+High|170,ffc004,High|150,ffff33,Medium|70,00ff00,Low|50,ccffcc,Scrapeable|30,cccccc,Empty",
+    "level_ts_id": "58616010"
   },
   {
     "name": "Earn",
@@ -3315,7 +3424,8 @@
     "classification": "",
     "classification_url": "",
     "river_zone_url": "https://graph.rivermap.org/calibration/58d92b76-5f6e-4f88-aa17-f83e3231462e.H#height=600&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Earn&zones=,ff0000,Huge|0,ff6060,Very+High|0,ffc004,High|0,ffff33,Medium|0,00ff00,Low|0,ccffcc,Scrapeable|0,cccccc,Empty",
-    "river_zone_url_mobile": "https://graph.rivermap.org/calibration/58d92b76-5f6e-4f88-aa17-f83e3231462e.H#height=400&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Earn&zones=,ff0000,Huge|0,ff6060,Very+High|0,ffc004,High|0,ffff33,Medium|0,00ff00,Low|0,ccffcc,Scrapeable|0,cccccc,Empty"
+    "river_zone_url_mobile": "https://graph.rivermap.org/calibration/58d92b76-5f6e-4f88-aa17-f83e3231462e.H#height=400&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Earn&zones=,ff0000,Huge|0,ff6060,Very+High|0,ffc004,High|0,ffff33,Medium|0,00ff00,Low|0,ccffcc,Scrapeable|0,cccccc,Empty",
+    "level_ts_id": "55628010"
   },
   {
     "name": "Clyde (Sills of Clyde)",
@@ -3343,7 +3453,8 @@
     "uuid": "fe4aaf56-780a-50d9-8468-0ea2fa88ae99",
     "gauge_name": "Sills of Clyde",
     "river_zone_url": "https://graph.rivermap.org/calibration/413157ff-93ae-40f8-97e4-75183458b48d.H#height=600&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Clyde (Sills of Clyde)&zones=,ff0000,Huge|200,ff6060,Very+High|180,ffc004,High|150,ffff33,Medium|110,00ff00,Low|80,ccffcc,Scrapeable|50,cccccc,Empty",
-    "river_zone_url_mobile": "https://graph.rivermap.org/calibration/413157ff-93ae-40f8-97e4-75183458b48d.H#height=400&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Clyde (Sills of Clyde)&zones=,ff0000,Huge|200,ff6060,Very+High|180,ffc004,High|150,ffff33,Medium|110,00ff00,Low|80,ccffcc,Scrapeable|50,cccccc,Empty"
+    "river_zone_url_mobile": "https://graph.rivermap.org/calibration/413157ff-93ae-40f8-97e4-75183458b48d.H#height=400&from=-7&creditName=Paddle Scotland Where%27s the Water&title=Clyde (Sills of Clyde)&zones=,ff0000,Huge|200,ff6060,Very+High|180,ffc004,High|150,ffff33,Medium|110,00ff00,Low|80,ccffcc,Scrapeable|50,cccccc,Empty",
+    "level_ts_id": "53489010"
   },
   {
     "name": "Etive (Middle)",
@@ -3371,7 +3482,8 @@
     "uuid": "6369d093-be2f-59f5-a9eb-aa9c8225eda9",
     "gauge_name": "Victoria Bridge",
     "classification": "",
-    "classification_url": ""
+    "classification_url": "",
+    "level_ts_id": "53537010"
   },
   {
     "name": "White Cart Water",
@@ -3401,7 +3513,8 @@
     "classification": "",
     "classification_url": "",
     "river_zone_url": "https://graph.rivermap.org/calibration/03c77a24-85e0-4e93-bc8e-729e2823e1f6.H#height=600&from=-7&creditName=Paddle Scotland Where%27s the Water&title=White Cart Water&zones=,ff0000,Huge|0,ff6060,Very+High|0,ffc004,High|0,ffff33,Medium|0,00ff00,Low|0,ccffcc,Scrapeable|0,cccccc,Empty",
-    "river_zone_url_mobile": "https://graph.rivermap.org/calibration/03c77a24-85e0-4e93-bc8e-729e2823e1f6.H#height=400&from=-7&creditName=Paddle Scotland Where%27s the Water&title=White Cart Water&zones=,ff0000,Huge|0,ff6060,Very+High|0,ffc004,High|0,ffff33,Medium|0,00ff00,Low|0,ccffcc,Scrapeable|0,cccccc,Empty"
+    "river_zone_url_mobile": "https://graph.rivermap.org/calibration/03c77a24-85e0-4e93-bc8e-729e2823e1f6.H#height=400&from=-7&creditName=Paddle Scotland Where%27s the Water&title=White Cart Water&zones=,ff0000,Huge|0,ff6060,Very+High|0,ffc004,High|0,ffff33,Medium|0,00ff00,Low|0,ccffcc,Scrapeable|0,cccccc,Empty",
+    "level_ts_id": "53384010"
   },
   {
     "name": "White Cart Water (Linn Park Fall)",
@@ -3431,7 +3544,8 @@
     "classification": "",
     "classification_url": "",
     "river_zone_url": "https://graph.rivermap.org/calibration/03c77a24-85e0-4e93-bc8e-729e2823e1f6.H#height=600&from=-7&creditName=Paddle Scotland Where%27s the Water&title=White Cart Water (Linn Park Fall)&zones=,ff0000,Huge|100,ff6060,Very+High|90,ffc004,High|80,ffff33,Medium|70,00ff00,Low|60,ccffcc,Scrapeable|47,cccccc,Empty",
-    "river_zone_url_mobile": "https://graph.rivermap.org/calibration/03c77a24-85e0-4e93-bc8e-729e2823e1f6.H#height=400&from=-7&creditName=Paddle Scotland Where%27s the Water&title=White Cart Water (Linn Park Fall)&zones=,ff0000,Huge|100,ff6060,Very+High|90,ffc004,High|80,ffff33,Medium|70,00ff00,Low|60,ccffcc,Scrapeable|47,cccccc,Empty"
+    "river_zone_url_mobile": "https://graph.rivermap.org/calibration/03c77a24-85e0-4e93-bc8e-729e2823e1f6.H#height=400&from=-7&creditName=Paddle Scotland Where%27s the Water&title=White Cart Water (Linn Park Fall)&zones=,ff0000,Huge|100,ff6060,Very+High|90,ffc004,High|80,ffff33,Medium|70,00ff00,Low|60,ccffcc,Scrapeable|47,cccccc,Empty",
+    "level_ts_id": "53384010"
   },
   {
     "name": "North Esk (Upper) (Invermark Gauge)",
@@ -3459,7 +3573,8 @@
     "uuid": "a1e61292-e8d8-5d1a-95eb-62e78353b922",
     "gauge_name": "Invermark",
     "classification": "",
-    "classification_url": ""
+    "classification_url": "",
+    "level_ts_id": "55052010"
   },
   {
     "name": "North Esk (Middle)",
@@ -3487,7 +3602,8 @@
     "uuid": "3b7b0114-8c5c-5d7a-9888-f7aeceaf2f0e",
     "gauge_name": null,
     "classification": "",
-    "classification_url": ""
+    "classification_url": "",
+    "level_ts_id": "59786010"
   },
   {
     "name": "Garry (Perthshire) (Calvine)",
@@ -3515,7 +3631,8 @@
     "uuid": "7a2ffff2-2217-5c9d-a00a-9041b9eb6f08",
     "gauge_name": null,
     "classification": "",
-    "classification_url": ""
+    "classification_url": "",
+    "level_ts_id": "55538010"
   },
   {
     "name": "Findhorn (Gorge) (New Gauge)",
@@ -3543,7 +3660,8 @@
     "uuid": "8ee6369b-8954-5dae-967f-247da65d08e0",
     "gauge_name": "Logie Bridge",
     "classification": "",
-    "classification_url": ""
+    "classification_url": "",
+    "level_ts_id": "61393010"
   },
   {
     "name": "Blackwater (Garve) (Upper)",
@@ -3571,7 +3689,8 @@
     "uuid": "c3da5e97-4027-5896-a8d8-6ad326e97a79",
     "gauge_name": "Garve",
     "classification": "",
-    "classification_url": ""
+    "classification_url": "",
+    "level_ts_id": "57459010"
   },
   {
     "name": "Gala Water",
@@ -3597,6 +3716,7 @@
     "get_out_long": "-2.780203",
     "get_out_lat": "55.603864",
     "uuid": "14442578-8f3e-518f-9d34-82a2e99b6fcf",
-    "gauge_name": "Galashiels"
+    "gauge_name": "Galashiels",
+    "level_ts_id": "61573010"
   }
 ]
