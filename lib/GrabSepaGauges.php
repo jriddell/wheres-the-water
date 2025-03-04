@@ -13,6 +13,9 @@ gauge_ids with their relevant data
         "gauge_name": "Perth"
     }
 }
+
+2024-03 Note This CSV file still exists for now but who knows when it'll disappear so
+this should be ported to the Timeseries API
 */
 class GrabSepaGauges {
     const SEPA_CSV = 'SEPA_River_Levels_Web.csv';

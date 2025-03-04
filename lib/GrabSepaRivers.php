@@ -27,6 +27,7 @@ class GrabSepaRivers {
     const DOWNLOAD_READINGS_TIMESTAMP = 'DOWNLOAD-READINGS-TIMESTAMP';
     const DOWNLOAD_LOCK = 'DOWNLOAD-LOCK';
     const SECTION_FORECASTS_FILE = 'section-forecasts.json'; // Write HTML for all forecasts to a file for loading by map JS
+    // Magic URL example: https://timeseries.sepa.org.uk/KiWIS/KiWIS?service=kisters&type=queryServices&datasource=0&request=getTimeseriesValues&format=json&ts_id=57174010,61557010
     const TIMESERIES_GETVALUES_URL = "https://timeseries.sepa.org.uk/KiWIS/KiWIS?service=kisters&type=queryServices&datasource=0&request=getTimeseriesValues&format=json&";
     public $filename;
     public $timestampFile;
@@ -69,6 +70,9 @@ class GrabSepaRivers {
         }
     }
     
+    /* Ported to Timeseries API 2025-03
+       Instead of downloading one CSV file for each river we now download a JSON file for all the gauges then extract that
+    */
     private function downloadRiversData() {
         $this->riversReadingsData = array();
         $sectionForecastsHtml = array();
@@ -77,14 +81,10 @@ class GrabSepaRivers {
             $riverSectionLevelTSIDString .= $riverSection['level_ts_id'] . ",";
         }
         $riverSectionLevelTSIDString = rtrim($riverSectionLevelTSIDString, ","); // remove any final comma
+        // This URL queries the gauges for the timeseries data for the 15Minutes level data (i.e. the height we care about for WtW)
         $riverSectionLevelTSIDUrl = self::TIMESERIES_GETVALUES_URL . $riverSectionLevelTSIDString;
-        print "URL!" . $riverSectionLevelTSIDUrl;
         $riverSectionLevelTSIDsJson = @file_get_contents($riverSectionLevelTSIDUrl); // This can take some time to fetch, should I save to file?
         $riverSectionLevelTSIDs = json_decode($riverSectionLevelTSIDsJson);
-        print("<pre>");
-        print_r($riverSectionLevelTSIDs);
-        print "XXX" . $riverSectionLevelTSIDs[0]->columns;
-        print("</pre>");
         // extract height data from json which is in format {"ts_id": "57174010","rows": "1","columns":"Timestamp,Value", "data": [["2025-03-04T15:30:00.000Z",0.346]]}
         $riverSectionLevelTSIDsHeight = array();
         foreach($riverSectionLevelTSIDs as $riverSectionLevelTSID) {
@@ -95,19 +95,12 @@ class GrabSepaRivers {
         foreach($riverSectionLevelTSIDs as $riverSectionLevelTSID) {
             $riverSectionLevelTSIDsTimestamp[$riverSectionLevelTSID->ts_id] = $riverSectionLevelTSID->data[0][0];
         }
-        print_r($riverSectionLevelTSIDsHeight);
-        print_r($riverSectionLevelTSIDsTimestamp);
 
+        // Now munge it into the JSON format we use for rivers-readings.json which is used by the frontend
         foreach($this->riverSectionsData as $riverSection) {
-            //$river = new GrabSepaRiverReading();
-            //$river->doGrabSepaRiver($riverSection['gauge_location_code']);
-            //genereate the URL
-            //get the URL
-            //for each result make the array as below
-
             $this->riversReadingsData[$riverSection['gauge_location_code']] = array(
                                             "currentReading"=>$riverSectionLevelTSIDsHeight[$riverSection['level_ts_id']],
-                                            "trend"=>0,
+                                            "trend"=>0, // Dropped in move to Timeseries API
                                             "currentReadingTime"=>$riverSectionLevelTSIDsTimestamp[$riverSection['level_ts_id']],
                                             );
             $forecast = new GrabWeatherForecast();

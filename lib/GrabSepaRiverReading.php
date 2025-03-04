@@ -8,6 +8,8 @@
    Uses level data .csv file e.g.
    https://apps.sepa.org.uk/database/riverlevels/133094-SG.csv
    This is only for use by GrabSepaRivers when doing the bulk download, too slow and resource intensive to do it more often
+
+   2025-03 Note this file is probably obsolete after moving to the Timeseries API for level data
 */
 
 require_once 'SepaRiverReadingHistory.php';
