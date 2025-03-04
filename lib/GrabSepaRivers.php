@@ -27,6 +27,7 @@ class GrabSepaRivers {
     const DOWNLOAD_READINGS_TIMESTAMP = 'DOWNLOAD-READINGS-TIMESTAMP';
     const DOWNLOAD_LOCK = 'DOWNLOAD-LOCK';
     const SECTION_FORECASTS_FILE = 'section-forecasts.json'; // Write HTML for all forecasts to a file for loading by map JS
+    const TIMESERIES_GETVALUES_URL = "https://timeseries.sepa.org.uk/KiWIS/KiWIS?service=kisters&type=queryServices&datasource=0&request=getTimeseriesValues&format=json&";
     public $filename;
     public $timestampFile;
     public $downloadLockFile;
@@ -71,13 +72,43 @@ class GrabSepaRivers {
     private function downloadRiversData() {
         $this->riversReadingsData = array();
         $sectionForecastsHtml = array();
+        $riverSectionLevelTSIDString = "ts_id=";
         foreach($this->riverSectionsData as $riverSection) {
-            $river = new GrabSepaRiverReading();
-            $river->doGrabSepaRiver($riverSection['gauge_location_code']);
-            $this->riversReadingsData[$river->gauge_id] = array(
-                                            "currentReading"=>$river->currentReading,
-                                            "trend"=>$river->trend,
-                                            "currentReadingTime"=>$river->currentReadingTime
+            $riverSectionLevelTSIDString .= $riverSection['level_ts_id'] . ",";
+        }
+        $riverSectionLevelTSIDString = rtrim($riverSectionLevelTSIDString, ","); // remove any final comma
+        $riverSectionLevelTSIDUrl = self::TIMESERIES_GETVALUES_URL . $riverSectionLevelTSIDString;
+        print "URL!" . $riverSectionLevelTSIDUrl;
+        $riverSectionLevelTSIDsJson = @file_get_contents($riverSectionLevelTSIDUrl); // This can take some time to fetch, should I save to file?
+        $riverSectionLevelTSIDs = json_decode($riverSectionLevelTSIDsJson);
+        print("<pre>");
+        print_r($riverSectionLevelTSIDs);
+        print "XXX" . $riverSectionLevelTSIDs[0]->columns;
+        print("</pre>");
+        // extract height data from json which is in format {"ts_id": "57174010","rows": "1","columns":"Timestamp,Value", "data": [["2025-03-04T15:30:00.000Z",0.346]]}
+        $riverSectionLevelTSIDsHeight = array();
+        foreach($riverSectionLevelTSIDs as $riverSectionLevelTSID) {
+            $riverSectionLevelTSIDsHeight[$riverSectionLevelTSID->ts_id] = $riverSectionLevelTSID->data[0][1];
+        }
+        // extract height timestamp from json which is in format {"ts_id": "57174010","rows": "1","columns":"Timestamp,Value", "data": [["2025-03-04T15:30:00.000Z",0.346]]}
+        $riverSectionLevelTSIDsTimestamp = array();
+        foreach($riverSectionLevelTSIDs as $riverSectionLevelTSID) {
+            $riverSectionLevelTSIDsTimestamp[$riverSectionLevelTSID->ts_id] = $riverSectionLevelTSID->data[0][0];
+        }
+        print_r($riverSectionLevelTSIDsHeight);
+        print_r($riverSectionLevelTSIDsTimestamp);
+
+        foreach($this->riverSectionsData as $riverSection) {
+            //$river = new GrabSepaRiverReading();
+            //$river->doGrabSepaRiver($riverSection['gauge_location_code']);
+            //genereate the URL
+            //get the URL
+            //for each result make the array as below
+
+            $this->riversReadingsData[$riverSection['gauge_location_code']] = array(
+                                            "currentReading"=>$riverSectionLevelTSIDsHeight[$riverSection['level_ts_id']],
+                                            "trend"=>0,
+                                            "currentReadingTime"=>$riverSectionLevelTSIDsTimestamp[$riverSection['level_ts_id']],
                                             );
             $forecast = new GrabWeatherForecast();
             $forecast->doGrabWeatherForecast($riverSection['gauge_location_code'], $riverSection['longitude'], $riverSection['latitude']);

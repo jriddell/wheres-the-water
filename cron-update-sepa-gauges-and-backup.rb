@@ -25,18 +25,18 @@ class UpdateAndBackup
   def run_locked
     # Write lock file or quit if it exists
     if File.exist?(LOCK_FILE)
-        #pp "Instance of cron-update-sepa-gauges-and-backup.rb already running"
+        pp "Instance of cron-update-sepa-gauges-and-backup.rb already running"
         exit
     end
     lock_file = File.new(LOCK_FILE, 'w')
     lock_file.close
-    #pp "lock written"
+    pp "lock written"
 
     yield
 
     # Remove lock file
     File.delete(LOCK_FILE)
-    #pp "lock deleted"
+    pp "lock deleted"
   end
   
   def admin_login
@@ -56,7 +56,7 @@ class UpdateAndBackup
 
   def run
     run_locked do
-      #pp "running locked"
+      pp "running locked"
       @myini = IniFile.load('config.ini')
       trigger_sepa_gauges_update()
 
@@ -79,7 +79,7 @@ class UpdateAndBackup
       `git add data/scheduled-sections-sca-copy.json`
       `git commit -m 'update river-sections-sca-copy.json from embra server' && git push`
     end
-    #pp "run done"
+    pp "run done"
   end
 end
 
