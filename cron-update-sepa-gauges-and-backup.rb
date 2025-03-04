@@ -47,7 +47,7 @@ class UpdateAndBackup
 
   def trigger_sepa_gauges_update
     %x{wget https://#{admin_web_login}@www.andyjacksonfund.org.uk/wheres-the-water/admin/download-river-readings.php?download=1  -o /dev/null -O /dev/null }
-    %x{wget http://#{admin_web_login}@www.andyjacksonfund.org.uk/wheres-the-water/admin/download-river-readings.php?download=1  -o /dev/null -O /dev/null }
+    %x{wget http://#{admin_web_login}@dev.andyjacksonfund.org.uk/wheres-the-water/admin/download-river-readings.php?download=1  -o /dev/null -O /dev/null }
   end
 
   def admin_web_login
