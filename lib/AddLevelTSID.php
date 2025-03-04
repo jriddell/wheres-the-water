@@ -21,7 +21,9 @@ class AddLevelTSID {
         $this->levelTSIDListFile = ROOT . '/' . self::DATADIR . '/' . self::LEVEL_TSID_LIST_FILE;
     }
 
-    /* If the level-tsid-list.json file does not exist or is too old then download it else read it */
+    /* If the level-tsid-list.json file does not exist or is too old then download it else read it
+       We save it locally so we don't have to worry about overloading the API
+     */
     public function downloadLevelTSIDList() {
         if (!file_exists($this->levelTSIDListFile) || time()-filemtime($this->levelTSIDListFile) > self::SEPA_DOWNLOAD_PERIOD) {
             $this->levelTSIDJsonData = file_get_contents(self::LEVEL_TSID_LIST_URL);

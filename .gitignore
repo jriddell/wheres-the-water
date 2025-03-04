@@ -5,6 +5,7 @@ data/river-sections.json
 data/scheduled-sections.json
 data/rivers-readings.json
 data/rivers_download_timestamp
+data/level-tsid-list.json
 data/*.csv
 data/history*
 config/database.php
