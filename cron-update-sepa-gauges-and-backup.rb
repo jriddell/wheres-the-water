@@ -64,7 +64,8 @@ class UpdateAndBackup
       river_sections_json = JSON.parse(File.open(RIVER_SECTIONS_FILE).read)
       File.write(RIVER_SECTIONS_FILE, JSON.pretty_generate(river_sections_json))
       File.write(RIVER_SECTIONS_FILE_COPY, JSON.pretty_generate(river_sections_json))
-      File.write(RIVER_SECTIONS_DEV_FILE, JSON.pretty_generate(river_sections_json))
+      # Do not sync from live website while doing dev on it
+      # File.write(RIVER_SECTIONS_DEV_FILE, JSON.pretty_generate(river_sections_json))
 
       # get JSON and tidy and backup
       river_sections_json = JSON.parse(File.open(SCHEDULED_SECTIONS_FILE).read)
