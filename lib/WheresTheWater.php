@@ -675,8 +675,6 @@ jQuery(document).ready( function(){
                         valueString = Math.floor(valueString);
                         valueString = valueString + " days to go";
                     }
-                    // FIXME jr hide dates 2025-01
-                    valueString = "Dates not yet published";
                 }
 
                 var contentString = "<div>" + covidString + "<h4 style='padding-left: 30px;'><span style='font-size: larger'>Scheduled Water</span>: " + scheduledSection + "</h4>" +
@@ -754,8 +752,6 @@ jQuery(document).ready( function(){
             }
         }
         function getNextDate(dates) {
-            // FIXME jr hide dates 2025-01
-            return -1;
             var jsDates = [];
             for (var k=0; k<dates.length; k++) {
                 // calculate from end of listed day so it still returns 'today' if it's today
@@ -774,8 +770,6 @@ jQuery(document).ready( function(){
             return nextDate
         }
         function getScheduledSectionValue(dates) {
-            // FIXME jr hide dates 2025-01
-            return "NO_KNOWN_DATES";
             //FIXME this logic is repeated below for the icon name
             var nextDate = getNextDate(dates);
             var now = Date.now();
