@@ -866,9 +866,7 @@ jQuery(document).ready( function(){
               if (jsDate > today) {
                 console.log("greater");
                 console.log(datesCounter);
-                // FIXME jr dates
-                //datesTable += "<li>" + jsDate.toDateString() + "</li>\n";
-                datesTable += "<li>" + "Dates not yet published" + "</li>\n";
+                datesTable += "<li>" + jsDate.toDateString() + "</li>\n";
                 datesCounter++;
               }
               if (datesCounter==10) {
