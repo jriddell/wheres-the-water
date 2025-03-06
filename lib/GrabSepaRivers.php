@@ -74,6 +74,16 @@ class GrabSepaRivers {
        Instead of downloading one CSV file for each river we now download a JSON file for all the gauges then extract that
     */
     private function downloadRiversData() {
+        // Create a stream
+        $sepaKey = file_get_contents("/home/jr/.config/wtw-key.text");
+        $opts = array(
+            'http'=>array(
+                'method'=>"GET",
+                'header'=>"Authorization: Bearer $sepaKey\r\n"
+            )
+        );
+        $context = stream_context_create($opts);
+
         $this->riversReadingsData = array();
         $sectionForecastsHtml = array();
         $riverSectionLevelTSIDString = "ts_id=";
@@ -84,7 +94,7 @@ class GrabSepaRivers {
         // This URL queries the gauges for the timeseries data for the 15Minutes level data (i.e. the height we care about for WtW)
         $riverSectionLevelTSIDUrl = self::TIMESERIES_GETVALUES_URL . $riverSectionLevelTSIDString;
         print "<p>URL: $riverSectionLevelTSIDUrl";
-        $riverSectionLevelTSIDsJson = @file_get_contents($riverSectionLevelTSIDUrl); // This can take some time to fetch, should I save to file?
+        $riverSectionLevelTSIDsJson = @file_get_contents($riverSectionLevelTSIDUrl, false, $context); // This can take some time to fetch, should I save to file?
         print "<p>result ";
         print_r($riverSectionLevelTSIDsJson);
         $riverSectionLevelTSIDs = json_decode($riverSectionLevelTSIDsJson);
