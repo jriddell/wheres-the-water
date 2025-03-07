@@ -93,10 +93,7 @@ class GrabSepaRivers {
         $riverSectionLevelTSIDString = rtrim($riverSectionLevelTSIDString, ","); // remove any final comma
         // This URL queries the gauges for the timeseries data for the 15Minutes level data (i.e. the height we care about for WtW)
         $riverSectionLevelTSIDUrl = self::TIMESERIES_GETVALUES_URL . $riverSectionLevelTSIDString;
-        print "<p>URL: $riverSectionLevelTSIDUrl";
         $riverSectionLevelTSIDsJson = @file_get_contents($riverSectionLevelTSIDUrl, false, $context); // This can take some time to fetch, should I save to file?
-        print "<p>result ";
-        print_r($riverSectionLevelTSIDsJson);
         $riverSectionLevelTSIDs = json_decode($riverSectionLevelTSIDsJson);
         // extract height data from json which is in format {"ts_id": "57174010","rows": "1","columns":"Timestamp,Value", "data": [["2025-03-04T15:30:00.000Z",0.346]]}
         $riverSectionLevelTSIDsHeight = array();
