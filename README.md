@@ -85,6 +85,8 @@ Run cron-update-sepa-gauges-and-backup.rb every minute in cron to update river g
 
 Run check-rivers-up-to-date.py ever few minutes to check that the river gauge readings have updated
 
+Run put SEPA base 64 key in ~/.config/sepa-key.text and run `token/get-token.sh` every hour to get the daily access token.
+
 Locally make a file config.ini in the top repo directory (this is ignored with .gitignore and can not be committed)
 
 [Cron]
