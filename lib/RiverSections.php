@@ -185,7 +185,7 @@ class RiverSections {
         $reply .= $this->editRiverFormInputItem("Huge", "huge_value", $riverSection['huge_value'], "right");
         $reply .= $this->editRiverFormInputItem("Grade", "grade", $riverSection['grade']);
         $reply .= $this->editRiverFormInputItem("Guidebook Link", "guidebook_link", $riverSection['guidebook_link'], "right");
-        $reply .= $this->editRiverFormInputItem("Paddle Scotland Guidebook No", "sca_guidebook_no", $riverSection['sca_guidebook_no']);
+        $reply .= $this->editRiverFormInputItem("Guidebook No", "sca_guidebook_no", $riverSection['sca_guidebook_no']);
         $reply .= $this->editRiverFormInputItem("Acccess Issue Link", "access_issue", $riverSection['access_issue'], "right");
         $reply .= $this->editRiverFormInputItem("Google My Maps Link", "google_mymaps", $riverSection['google_mymaps']);
         $reply .= $this->editRiverFormInputItem("KML Link", "kml", $riverSection['kml'], "right");
@@ -516,7 +516,7 @@ class RiverSections {
             $linkContent .= "<a target='_blank' rel='noopener' href='".$riverSection['guidebook_link']."'><img width='16' height='16' title='UKRGB Link' src='/wheres-the-water/pics/ukrgb.ico'/> UKRGB</a><br />";
         }
         if (!empty($riverSection['sca_guidebook_no'])) {
-            $linkContent .= "<img width='16' height='16' title='SCA WW Guidebook number' src='/wheres-the-water/pics/paddle-scotland-icon.png' /> Paddle Scotland Guidebook No ".$riverSection['sca_guidebook_no']."<br />";
+            $linkContent .= "<img width='16' height='16' title='SCA WW Guidebook number' src='/wheres-the-water/pics/paddle-scotland-icon.png' /> Guidebook No ".$riverSection['sca_guidebook_no']."<br />";
         }
         if (!empty($riverSection['access_issue'])) {
             $linkContent .= "<a target='_blank' rel='noopener' href='".$riverSection['access_issue']."'><img width='16' height='16' title='Access Issue Link' src='/wheres-the-water/pics/warning.png' /> Access Issue</a><br />";
