@@ -75,7 +75,7 @@ class GrabSepaRivers {
     */
     private function downloadRiversData() {
         // Create a stream
-        $sepaKey = file_get_contents("/home/jr/.config/wtw-key.text");
+        $sepaKey = file_get_contents("/home/jr/.config/daily-sepa-token.text");
         $opts = array(
             'http'=>array(
                 'method'=>"GET",
