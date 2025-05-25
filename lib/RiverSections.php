@@ -442,7 +442,7 @@ class RiverSections {
         $hours = round((time() - $mostRecentTimestamp) / 60 / 60, 0, PHP_ROUND_HALF_DOWN);
         // actually this often doesn't calculate for $mostRecentTimestamp as we do not store the time in rivers-readings.json if out of date
         if ($hours >= 4) {
-            $warning = "<b style='color: red'>2025-03-04 Ported to newer SEPA API but testing not yet complete. Jonathan Riddell.</b>";
+            $warning = "<b style='color: red'>2025-05-25 SEPA API is down this weekend. Jonathan Riddell.</b>";
         }
         return "$mostRecentRiver at $mostRecentTime reading $mostRecentLevel $warning";
     }
