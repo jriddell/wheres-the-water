@@ -9,6 +9,9 @@ require_once('GrabWeatherForecast.php');
 require_once('RiverZoneStations.php');
 require_once('UUID.php');
 
+// ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_reporting(E_ALL);
+
+
 /*
 Class to deal with the river sections data
 call readFromJson() then $obj->riverSectionsData is an array of rivers with their data
@@ -428,9 +431,14 @@ class RiverSections {
             if (empty($time)) {
                 continue;
             }
+	    //print "XXX time: " . $time;
+	    /*
             $time_explode = explode('/', $time); // need to swap date and month cos PHP likes US date format
             $ustime = $time_explode[1] . '/' . $time_explode[0] . '/' . $time_explode[2];
             $timestamp = strtotime($ustime);
+	    */
+	    $timestamp = strtotime($time);
+	    //print "XXX timestamp: " . $timestamp;
             if ($timestamp > $mostRecentTimestamp) {
                 $mostRecentTimestamp = $timestamp;
                 $mostRecentTime = $time;
@@ -471,9 +479,12 @@ class RiverSections {
     /* takes a reading time "24/01/2019 00:15:00" and returns true if it is over 24 days old */
     private function readingIsOld($currentReadingTime) {
         $old = 60 * 60 * 24; // 24 hours
+	/*
         $time_explode = explode('/', $currentReadingTime); // need to swap date and month cos PHP likes US date format
         $ustime = $time_explode[1] . '/' . $time_explode[0] . '/' . $time_explode[2];
         $timestamp = strtotime($ustime);
+	*/
+        $timestamp = strtotime($currentReadingTime);
         if ((time() - $timestamp) > $old) {
             return true;
         }
