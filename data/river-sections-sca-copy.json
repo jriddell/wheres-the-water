@@ -3724,12 +3724,12 @@
     "gauge_location_code": "14949",
     "longitude": "-4.5171",
     "latitude": "56.5423",
-    "scrape_value": "0",
-    "low_value": "0",
-    "medium_value": "0",
-    "high_value": "0",
-    "very_high_value": "0",
-    "huge_value": "0",
+    "scrape_value": "0.4",
+    "low_value": "1.0",
+    "medium_value": "1.0",
+    "high_value": "1.0",
+    "very_high_value": "1.0",
+    "huge_value": "1.0",
     "grade": "2-4",
     "guidebook_link": "",
     "sca_guidebook_no": "220",
@@ -3743,6 +3743,8 @@
     "get_out_long": "-4.4503",
     "get_out_lat": "56.5454",
     "uuid": "388cafe6-1a37-53ff-99cb-aa336ae32a6a",
-    "gauge_name": "Moar"
+    "gauge_name": "Moar",
+    "classification": "",
+    "classification_url": ""
   }
 ]
