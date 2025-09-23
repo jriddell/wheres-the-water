@@ -2,7 +2,14 @@
 
 require_once '../../wheres-the-water/common.php';
 require_once '../../wheres-the-water/config.php';
+$ps = false;
 if (array_key_exists('iframe', $_GET) and $_GET['iframe'] == 'true') {
+    $ps = true;
+} else if (isset($_SERVER['HTTP_REFERER']) && strpos($_SERVER['HTTP_REFERER'], "paddlescotland") > 0) {
+    $ps = true;
+}
+
+if ($ps) {
     heading(true);
 } else {
     heading();
@@ -18,7 +25,7 @@ $wtw->theMap($riverSections);
 $wtw->theJavaScript();
 }
 
-if (array_key_exists('iframe', $_GET) and $_GET['iframe'] == 'true') {
+if ($ps) {
     ?>
     </body>
 </html>
