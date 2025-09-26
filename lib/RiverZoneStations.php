@@ -73,7 +73,7 @@ class RiverZoneStations {
         if (!in_array($riverSection['gauge_location_code'], array_keys($this->sepaIdToRiverZoneId))) {
             return false;
         }
-        $url = 'https://graph.rivermap.eu/calibration/';
+        $url = 'https://graph.rivermap.org/calibration/';
         $url .= $this->sepaIdToRiverZoneId[$riverSection['gauge_location_code']];
         $url .= '.H#height=';
         if ($mobile) {
