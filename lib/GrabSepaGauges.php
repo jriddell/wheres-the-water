@@ -20,7 +20,8 @@ this should be ported to the Timeseries API
 class GrabSepaGauges {
     const SEPA_CSV = 'SEPA_River_Levels_Web.csv';
     const DATADIR = 'data';
-    const SEPA_DOWNLOAD_PERIOD = 86400; // 60 * 60 * 24; // download gauges once a day
+//    const SEPA_DOWNLOAD_PERIOD = 86400; // 60 * 60 * 24; // download gauges once a day
+    const SEPA_DOWNLOAD_PERIOD = 31516000; // 60 * 60 * 24 * 365; // download gauges once a year cos they took down the CSV file
     const SEPA_URL = 'https://www2.sepa.org.uk/waterlevels/CSVs/SEPA_River_Levels_Web.csv';
 
     public $sepaFile;

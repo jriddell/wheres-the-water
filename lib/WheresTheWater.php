@@ -337,7 +337,7 @@ jQuery(document).ready( function(){
         });
         
         var osmLayer = L.tileLayer( 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '<img src="/wheres-the-water/pics/NEEDS_CALIBRATIONS.png" /> Needs Calibrations | <img src="/wheres-the-water/pics/EMPTY.png" /> Empty, <img src="/wheres-the-water/pics/SCRAPE.png" /> Scrape, <img src="/wheres-the-water/pics/LOW.png" /> Low, <img src="/wheres-the-water/pics/MEDIUM.png" /> Medium, <img src="/wheres-the-water/pics/HIGH.png" /> High, <img src="/wheres-the-water/pics/VERY_HIGH.png" /> Very High, <img src="/wheres-the-water/pics/HUGE.png" /> Huge | Map &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a> | <a href="https://github.com/jriddell/wheres-the-water">River Data</a> by Paddle Scotland'
+            attribution: '<img src="/wheres-the-water/pics/NEEDS_CALIBRATIONS.png" /> Needs Calibrations | <img src="/wheres-the-water/pics/EMPTY.png" /> Empty, <img src="/wheres-the-water/pics/SCRAPE.png" /> Scrape, <img src="/wheres-the-water/pics/LOW.png" /> Low, <img src="/wheres-the-water/pics/MEDIUM.png" /> Medium, <img src="/wheres-the-water/pics/HIGH.png" /> High, <img src="/wheres-the-water/pics/VERY_HIGH.png" /> Very High, <img src="/wheres-the-water/pics/HUGE.png" /> Huge | Map &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a> | <a href="https://github.com/jriddell/wheres-the-water">River Data</a> by <a href="http://www.edinburghlinux.co.uk/">Jonathan Riddell</a>'
         }).addTo( map );
         
         /* Old and ugly but something to aim for in the future
@@ -675,8 +675,6 @@ jQuery(document).ready( function(){
                         valueString = Math.floor(valueString);
                         valueString = valueString + " days to go";
                     }
-                    // FIXME jr hide dates 2025-01
-                    valueString = "Dates not yet published";
                 }
 
                 var contentString = "<div>" + covidString + "<h4 style='padding-left: 30px;'><span style='font-size: larger'>Scheduled Water</span>: " + scheduledSection + "</h4>" +
@@ -754,8 +752,6 @@ jQuery(document).ready( function(){
             }
         }
         function getNextDate(dates) {
-            // FIXME jr hide dates 2025-01
-            return -1;
             var jsDates = [];
             for (var k=0; k<dates.length; k++) {
                 // calculate from end of listed day so it still returns 'today' if it's today
@@ -774,8 +770,6 @@ jQuery(document).ready( function(){
             return nextDate
         }
         function getScheduledSectionValue(dates) {
-            // FIXME jr hide dates 2025-01
-            return "NO_KNOWN_DATES";
             //FIXME this logic is repeated below for the icon name
             var nextDate = getNextDate(dates);
             var now = Date.now();
@@ -866,9 +860,7 @@ jQuery(document).ready( function(){
               if (jsDate > today) {
                 console.log("greater");
                 console.log(datesCounter);
-                // FIXME jr dates
-                //datesTable += "<li>" + jsDate.toDateString() + "</li>\n";
-                datesTable += "<li>" + "Dates not yet published" + "</li>\n";
+                datesTable += "<li>" + jsDate.toDateString() + "</li>\n";
                 datesCounter++;
               }
               if (datesCounter==10) {

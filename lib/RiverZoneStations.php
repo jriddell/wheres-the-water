@@ -73,7 +73,7 @@ class RiverZoneStations {
         if (!in_array($riverSection['gauge_location_code'], array_keys($this->sepaIdToRiverZoneId))) {
             return false;
         }
-        $url = 'https://graph.rivermap.eu/calibration/';
+        $url = 'https://graph.rivermap.org/calibration/';
         $url .= $this->sepaIdToRiverZoneId[$riverSection['gauge_location_code']];
         $url .= '.H#height=';
         if ($mobile) {
@@ -81,7 +81,7 @@ class RiverZoneStations {
         } else {
             $url .= '600';
         }
-        $url .= '&from=-7&creditName=Paddle Scotland Where%27s the Water&title=';
+        $url .= '&from=-7&creditName=Where%27s the Water&title=';
         $url .= $riverSection['name'];
         $url .= '&zones=';
         $url .= ',ff0000,Huge|';
