@@ -36,19 +36,36 @@ def parse_value(s: str) -> Any:
                   continue
   return s
 
-
 def row_convert(row: Dict[str, str]) -> Dict[str, Any]:
   return {k: parse_value(v) for k, v in row.items()}
 
+def aweConvert(row):
+  return "AWE" + row['Release Start Date']
 
-def detect_group_key(fieldnames: Iterable[str]) -> str | None:
-  # common grouping keys in schedules
-  candidates = ("section", "section_id", "section name", "section_name", "group", "schedule", "name")
-  lowered = {fn.lower(): fn for fn in fieldnames}
-  for c in candidates:
-    if c in lowered:
-      return lowered[c]
-  return None
+def moristonConvert(row):
+  return "MORISTON" + row['Release Start Date']
+
+def garryConvert(row):
+  return "GARRY" + row['Release Start Date']
+
+def upperTummelConvert(row):
+  return "UPPER TUMMEL" + row['Release Start Date']
+
+def lowerTummelConvert(row):
+  return "LOWER TUMMEL" + row['Release Start Date']
+
+def lyonConvert(row):
+  return "LYON" + row['Release Start Date']
+
+# Confusingly there is a Cluanie on the Moriston too
+conversationFunctions = {
+  'Loch Awe Barrage': aweConvert,
+  'Dundreggan (River Moriston)': moristonConvert,
+  'Garry (Invergarry)': garryConvert,
+  'Dunalastair': upperTummelConvert,
+  'Clunie - River Tummel': lowerTummelConvert,
+  'Stronuich – River Lyon': lyonConvert
+}
 
 
 def main():
@@ -65,13 +82,28 @@ def main():
   if not in_path.exists():
     raise SystemExit(f"Input file not found: {in_path}")
 
+  # make lists for each river
+  dams = {'Awe': [], 
+          'Garry (Great Glen)': [],
+          'Lyon': [],
+          'Moriston': [],
+          'Tummel (Upper)': [],
+          'Tummel (Lower)': []
+         }
+
   print("Reading from:", in_path)
   with in_path.open("r", encoding="utf-8-sig", newline="") as csvFile:
     reader = csv.DictReader(csvFile)
     fieldnames = reader.fieldnames
     print("Field names:", fieldnames)
     for row in reader:
-      print(row['Location Description'] + " " + row['Release Start Date'] + " " + row['Release End Date'])
+      if row['Location Description'] in conversationFunctions.keys():
+        print(conversationFunctions[row['Location Description']](row))
+      # add row into appropriate river list
+
+  # Read the json template
+  # Put the rivers into the template
+  # Write the output json file    
 
 
 if __name__ == "__main__":
