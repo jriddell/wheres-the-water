@@ -5,6 +5,8 @@ import csv
 import json
 from pathlib import Path
 from typing import Any, Dict, Iterable
+from datetime import datetime
+from datetime import date, timedelta
 
 #!/usr/bin/env python3
 """
@@ -40,22 +42,82 @@ def row_convert(row: Dict[str, str]) -> Dict[str, Any]:
   return {k: parse_value(v) for k, v in row.items()}
 
 def aweConvert(row):
-  return "AWE" + row['Release Start Date']
+  sepaDate = row.get('Release Start Date')
+  if not sepaDate:
+    return None
+  sepaDate = sepaDate.strip()
+  dateFormat = "%A, %B %d, %Y"
+  try:
+    date = datetime.strptime(sepaDate, dateFormat)
+    return date.strftime("%Y-%m-%d")
+  except ValueError:
+    return None
 
 def moristonConvert(row):
-  return "MORISTON" + row['Release Start Date']
+  sepaDate = row.get('Release Start Date')
+  if not sepaDate:
+    return None
+  sepaDate = sepaDate.strip()
+  dateFormat = "%A, %B %d, %Y"
+  try:
+    date = datetime.strptime(sepaDate, dateFormat)
+    date2 = date + timedelta(days=1)
+    return [date.strftime("%Y-%m-%d"), date2.strftime("%Y-%m-%d")]
+  except ValueError:
+    return None
 
 def garryConvert(row):
-  return "GARRY" + row['Release Start Date']
+  sepaDate = row.get('Release Start Date')
+  if not sepaDate:
+    return None
+  sepaDate = sepaDate.strip()
+  dateFormat = "%A, %B %d, %Y"
+  try:
+    date = datetime.strptime(sepaDate, dateFormat)
+    return date.strftime("%Y-%m-%d")
+  except ValueError:
+    return None
 
 def upperTummelConvert(row):
-  return "UPPER TUMMEL" + row['Release Start Date']
+  sepaDate = row.get('Release Start Date')
+  if not sepaDate:
+    return None
+  sepaDate = sepaDate.strip()
+  dateFormat = "%A, %B %d, %Y"
+  try:
+    date = datetime.strptime(sepaDate, dateFormat)
+    date2 = date + timedelta(days=1)
+    date3 = date + timedelta(days=2)
+    return [date.strftime("%Y-%m-%d"), date2.strftime("%Y-%m-%d"), date3.strftime("%Y-%m-%d")]
+  except ValueError:
+    return None
 
 def lowerTummelConvert(row):
-  return "LOWER TUMMEL" + row['Release Start Date']
+  sepaDate = row.get('Release Start Date')
+  if not sepaDate:
+    return None
+  sepaDate = sepaDate.strip()
+  dateFormat = "%A, %B %d, %Y"
+  try:
+    date = datetime.strptime(sepaDate, dateFormat)
+    date2 = date + timedelta(days=1)
+    date3 = date + timedelta(days=2)
+    return [date2.strftime("%Y-%m-%d"), date3.strftime("%Y-%m-%d")]
+  except ValueError:
+    return None
 
 def lyonConvert(row):
-  return "LYON" + row['Release Start Date']
+  sepaDate = row.get('Release Start Date')
+  if not sepaDate:
+    return None
+  sepaDate = sepaDate.strip()
+  dateFormat = "%A, %B %d, %Y"
+  try:
+    date = datetime.strptime(sepaDate, dateFormat)
+    date = date + timedelta(days=1)
+    return date.strftime("%Y-%m-%d")
+  except ValueError:
+    return None
 
 # Confusingly there is a Cluanie on the Moriston too
 conversationFunctions = {
@@ -67,6 +129,14 @@ conversationFunctions = {
   'Stronuich – River Lyon': lyonConvert
 }
 
+sepaNamesToWtwNames = {
+  'Loch Awe Barrage': 'Awe',
+  'Dundreggan (River Moriston)': 'Moriston',
+  'Garry (Invergarry)': 'Garry (Great Glen)',
+  'Dunalastair': 'Tummel (Upper)',
+  'Clunie - River Tummel': 'Tummel (Lower)',
+  'Stronuich – River Lyon': 'Lyon'
+}
 
 def main():
   parser = argparse.ArgumentParser(description="Convert CSV schedule to JSON (sections-aware).")
@@ -98,9 +168,17 @@ def main():
     print("Field names:", fieldnames)
     for row in reader:
       if row['Location Description'] in conversationFunctions.keys():
-        print(conversationFunctions[row['Location Description']](row))
-      # add row into appropriate river list
+        releaseDate = conversationFunctions[row['Location Description']](row)
+        key = sepaNamesToWtwNames[row['Location Description']]
+        target = dams[key]
+        if isinstance(releaseDate, str):
+            target.append(releaseDate)
+        elif isinstance(releaseDate, list):
+            target.extend(releaseDate)
+        elif releaseDate is not None:
+            target.append(releaseDate)
 
+  print(json.dumps(dams, indent=4))
   # Read the json template
   # Put the rivers into the template
   # Write the output json file    
