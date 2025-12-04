@@ -118,19 +118,16 @@ sepaNamesToWtwNames = {
 
 def main():
   parser = argparse.ArgumentParser(description="Convert CSV schedule to JSON (sections-aware).")
-  parser.add_argument("--in", "-i", dest="infile", default="sse-freshet-schedule-2025.csv",
-                                          help="Input CSV file (default: sse-freshet-schedule-2025.csv)")
-  parser.add_argument("--out", "-o", dest="outfile", default="scheduled-sections-2025.json",
-                                          help="Output JSON file (default: scheduled-sections-2025.json)")
+  parser.add_argument("--year", "-y", dest="year", default="2025",
+                                          help="Year to do (default: 2025)")
   args = parser.parse_args()
 
-  in_path = Path(args.infile)
-  out_path = Path(args.outfile)
+  in_path = Path("sse-freshet-schedule-" + args.year + ".csv")
+  out_path = Path("scheduled-sections-" + args.year + ".json")
 
   if not in_path.exists():
     raise SystemExit(f"Input file not found: {in_path}")
 
-  # make lists for each river
   dams = {'Awe': [], 
           'Garry (Great Glen)': [],
           'Lyon': [],
@@ -156,8 +153,6 @@ def main():
         elif releaseDate is not None:
             target.append(releaseDate)
 
-  print(json.dumps(dams, indent=4))
-
   # Read the json template
   templateFile = Path("scheduled-sections-template.json")
 
@@ -172,6 +167,7 @@ def main():
   template[6]['dates'] = dams['Tummel (Upper)']
   template[7]['dates'] = dams['Tummel (Lower)']
 
+  print(json.dumps(template, indent=2))
   print("Writing to:", out_path)
   with out_path.open("w", encoding="utf-8") as outFile:
     json.dump(template, outFile, indent=2)
