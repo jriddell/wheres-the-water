@@ -19,28 +19,6 @@ Usage:
 """
 
 
-NUMERIC_TRY_ORDER = (int, float)
-
-
-def parse_value(s: str) -> Any:
-  if s is None:
-          return None
-  s = s.strip()
-  if s == "":
-          return None
-  # Try to convert to int/float if it looks numeric
-  for fn in NUMERIC_TRY_ORDER:
-          try:
-                  # reject conversions that change meaning (e.g. "01" -> 1 is OK)
-                  val = fn(s)
-                  return val
-          except Exception:
-                  continue
-  return s
-
-def row_convert(row: Dict[str, str]) -> Dict[str, Any]:
-  return {k: parse_value(v) for k, v in row.items()}
-
 def aweConvert(row):
   sepaDate = row.get('Release Start Date')
   if not sepaDate:
@@ -142,8 +120,8 @@ def main():
   parser = argparse.ArgumentParser(description="Convert CSV schedule to JSON (sections-aware).")
   parser.add_argument("--in", "-i", dest="infile", default="sse-freshet-schedule-2025.csv",
                                           help="Input CSV file (default: sse-freshet-schedule-2025.csv)")
-  parser.add_argument("--out", "-o", dest="outfile", default="schedules-sections-2025.json",
-                                          help="Output JSON file (default: schedules-sections-2025.json)")
+  parser.add_argument("--out", "-o", dest="outfile", default="scheduled-sections-2025.json",
+                                          help="Output JSON file (default: scheduled-sections-2025.json)")
   args = parser.parse_args()
 
   in_path = Path(args.infile)
@@ -179,10 +157,24 @@ def main():
             target.append(releaseDate)
 
   print(json.dumps(dams, indent=4))
-  # Read the json template
-  # Put the rivers into the template
-  # Write the output json file    
 
+  # Read the json template
+  templateFile = Path("scheduled-sections-template.json")
+
+  with templateFile.open("r", encoding="utf-8") as jsonFile:
+    template = json.load(jsonFile)
+
+  # Put the rivers into the template
+  template[2]['dates'] = dams['Awe']
+  template[3]['dates'] = dams['Garry (Great Glen)']
+  template[4]['dates'] = dams['Lyon']
+  template[5]['dates'] = dams['Moriston']
+  template[6]['dates'] = dams['Tummel (Upper)']
+  template[7]['dates'] = dams['Tummel (Lower)']
+
+  print("Writing to:", out_path)
+  with out_path.open("w", encoding="utf-8") as outFile:
+    json.dump(template, outFile, indent=2)
 
 if __name__ == "__main__":
   main()
