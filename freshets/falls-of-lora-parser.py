@@ -2,6 +2,8 @@
 
 import json
 from enum import Enum
+from datetime import datetime
+import re
 
 # Find daylight Ebb flows above 3.2m range
 class FallsOfLoraParser:
@@ -78,10 +80,32 @@ class FallsOfLoraParser:
 
     def isTideRunnable(self, date, sunuptime, sundowntime, tideTime, tideHeight, tideRange, tideType, tideFlowStarts, tideGoodFrom, tideGoodTo):
         print(f"isTideRunnable() Date: {date}, Sunup: {sunuptime}, Sundown: {sundowntime}, Tide Time: {tideTime}, Height: {tideHeight}, Range: {tideRange}, Type: {tideType}, Flow Starts: {tideFlowStarts}, Good From: {tideGoodFrom}, Good To: {tideGoodTo}")
-        self.flowDates.append(date)
+        if not tideRange:
+            print("  Ignoring empty tide range")
+            return
+        tideRange = float(tideRange)
+        if tideRange < 3.2:
+            print(f"  Ignoring tide with range {tideRange}m")
+            return
+        sunup = datetime.strptime(sunuptime, "%H:%M").time()
+        sundown = datetime.strptime(sundowntime, "%H:%M").time()
+        goodFrom = datetime.strptime(tideGoodFrom, "%H:%M").time()
+        goodTo = datetime.strptime(tideGoodTo, "%H:%M").time()
+
+        # Take it if any of the good time is within sunup to sundown
+        if not (goodFrom < sundown or goodTo > sunup):
+            print(f"  Ignoring tide outside daylight hours")
+            return
+
+        print(f"  Adding runnable tide on {date}")
+        # remove ordinal suffixes like '1st', '2nd', '3rd', '4th'
+        date_clean = re.sub(r'(?<=\d)(st|nd|rd|th)', '', date)
+        date_obj = datetime.strptime(date_clean, "%a %d %b").replace(year=2026)
+        date_str = date_obj.strftime("%Y-%m-%d")
+
+        self.flowDates.append(date_str)
 
 if __name__ == "__main__":
   parser = FallsOfLoraParser("Tide Tables – The Falls Of Lora Information Site.html")
   dates = parser.getFallsofLoraDates()
-  print(dates)
-  json.dumps(dates, indent=2)
+  print(json.dumps(dates, indent=2))

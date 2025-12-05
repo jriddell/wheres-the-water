@@ -7,15 +7,18 @@ from pathlib import Path
 from typing import Any, Dict, Iterable
 from datetime import datetime
 from datetime import date, timedelta
+import importlib.util
+_spec_path = Path(__file__).parent / "falls-of-lora-parser.py"
+_spec = importlib.util.spec_from_file_location("falls_of_lora_parser", str(_spec_path))
+_fol_module = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(_fol_module)
+FallsOfLoraParser = _fol_module.FallsOfLoraParser
 
-#!/usr/bin/env python3
 """
 Convert sse-freshet-schedule-2025.csv -> schedules-sections-2025.json
 
 Usage:
-    python wtw-freshet-convert.py \
-            --in sse-freshet-schedule-2025.csv \
-            --out schedules-sections-2025.json
+    python wtw-freshet-convert.py -y 2025
 """
 
 
@@ -132,6 +135,17 @@ sepaNamesToWtwNames = {
   'Stronuich – River Lyon': 'Lyon'
 }
 
+def getFallsofLora():
+  def getFallsofLora():
+    try:
+      with open('Tide Tables – The Falls Of Lora Information Site.html', 'r', encoding='utf-8') as file:
+        content = file.read()
+    except FileNotFoundError:
+      return None
+
+
+
+
 def main():
   parser = argparse.ArgumentParser(description="Convert CSV schedule to JSON (sections-aware).")
   parser.add_argument("--year", "-y", dest="year", default="2025",
@@ -184,7 +198,9 @@ def main():
   template[7]['dates'] = dams['Tummel (Lower)']
 
   # Get Falls of Lora
-  template[0]['dates'] = getFallsofLora()
+  fallsOfLoraParser = FallsOfLoraParser("Tide Tables – The Falls Of Lora Information Site.html")
+  fallsOfLoraDates = fallsOfLoraParser.getFallsofLoraDates()
+  template[0]['dates'] = fallsOfLoraDates
 
   print(json.dumps(template, indent=2))
   print("Writing to:", out_path)
