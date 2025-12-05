@@ -19,6 +19,7 @@ Usage:
 """
 
 
+# Releases are either one day or Friday midday to Monday midday
 def aweConvert(row):
   sepaDate = row.get('Release Start Date')
   if not sepaDate:
@@ -27,10 +28,19 @@ def aweConvert(row):
   dateFormat = "%A, %B %d, %Y"
   try:
     date = datetime.strptime(sepaDate, dateFormat)
-    return date.strftime("%Y-%m-%d")
+    if sepaDate.split()[0].strip(',') == 'Friday':
+      date2 = date + timedelta(days=1)
+      date3 = date + timedelta(days=2)
+      date4 = date + timedelta(days=3)
+      return [date.strftime("%Y-%m-%d"), date2.strftime("%Y-%m-%d"), 
+              date3.strftime("%Y-%m-%d"), date4.strftime("%Y-%m-%d")]
+    else:
+      return date.strftime("%Y-%m-%d")
   except ValueError:
     return None
 
+# Dundreggan (River Moriston) - two day releases
+# But times vary so point to calendar
 def moristonConvert(row):
   sepaDate = row.get('Release Start Date')
   if not sepaDate:
@@ -44,6 +54,8 @@ def moristonConvert(row):
   except ValueError:
     return None
 
+# Garry (Invergarry)
+# Releases usually 8am to evening or early next day
 def garryConvert(row):
   sepaDate = row.get('Release Start Date')
   if not sepaDate:
@@ -56,6 +68,7 @@ def garryConvert(row):
   except ValueError:
     return None
 
+# Dunalastair - three day releases start 14:00 until 13:00 day after next
 def upperTummelConvert(row):
   sepaDate = row.get('Release Start Date')
   if not sepaDate:
@@ -70,6 +83,7 @@ def upperTummelConvert(row):
   except ValueError:
     return None
 
+# Clunie - 16:00 Friday to 08:00 Monday
 def lowerTummelConvert(row):
   sepaDate = row.get('Release Start Date')
   if not sepaDate:
@@ -84,6 +98,8 @@ def lowerTummelConvert(row):
   except ValueError:
     return None
 
+# Stronuich – River Lyon
+# List next day
 def lyonConvert(row):
   sepaDate = row.get('Release Start Date')
   if not sepaDate:
