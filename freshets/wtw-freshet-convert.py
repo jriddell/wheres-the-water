@@ -183,6 +183,9 @@ def main():
   template[6]['dates'] = dams['Tummel (Upper)']
   template[7]['dates'] = dams['Tummel (Lower)']
 
+  # Get Falls of Lora
+  template[0]['dates'] = getFallsofLora()
+
   print(json.dumps(template, indent=2))
   print("Writing to:", out_path)
   with out_path.open("w", encoding="utf-8") as outFile:
