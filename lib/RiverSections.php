@@ -572,7 +572,7 @@ class RiverSections {
         $waterLevelValueReadable = array('EMPTY'=>'Empty', 'SCRAPE'=>'Scrape', 'LOW'=>'Low', 'MEDIUM'=>'Medium', 'HIGH'=>'High', 'VERY_HIGH'=>'Very High', 'HUGE'=>'Huge', 'NO_GUAGE_DATA'=>'No Gauge Data', 'OLD_DATA'=>'Old Data', 'NEEDS_CALIBRATIONS'=>'Needs Calibrations');
         
         //Symbols for trends
-        $trends = array('RISING' => '&#x25B2;', 'FALLING' => '&#x25BC;', 'STABLE' => '<b>-</b>', '' => '-');
+        $trends = array('RISING' => '&#x25B2;', 'FALLING' => '&#x25BC;', 'STABLE' => '<b>-</b>', '' => '-', 0 => '-');
         
         // Making the table orderable by water level
         $waterLevelValueArray = array('NO_GUAGE_DATA', 'OLD_DATA', 'NEEDS_CALIBRATIONS', 'EMPTY', 'SCRAPE', 'LOW', 'MEDIUM', 'HIGH', 'VERY_HIGH', 'HUGE');
@@ -586,7 +586,6 @@ class RiverSections {
             'waterLevelValueNumber' => $waterLevelValueNumber,
             'latitude' => $riverSection['latitude'],
             'longitude' => $riverSection['longitude'],
-            'trend' => $riverReadingData['trend'],
             'currentReadingTime' => $riverReadingData['currentReadingTime'],
             'currentReading' => $riverReadingData['currentReading'],
 
