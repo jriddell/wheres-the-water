@@ -13,14 +13,14 @@ gauge_ids with their relevant data
     }
 }
 
-https://timeseries.sepa.org.uk/KiWIS/KiWIS?service=kisters&datasource=0&type=queryServices&request=getStationList
+https://timeseries.sepa.org.uk/KiWIS/KiWIS?service=kisters&datasource=0&type=queryServices&request=getStationList&format=json
 
 */
 class GrabSepaGaugesTimeseries {
     const SEPA_JSON = 'SEPA_gauges.json';
     const DATADIR = 'data';
     const SEPA_DOWNLOAD_PERIOD = 86400; // 60 * 60 * 24; // download gauges once a day
-    const SEPA_URL = 'https://timeseries.sepa.org.uk/KiWIS/KiWIS?service=kisters&datasource=0&type=queryServices&request=getStationList';
+    const SEPA_URL = 'https://timeseries.sepa.org.uk/KiWIS/KiWIS?service=kisters&datasource=0&type=queryServices&request=getStationList&format=json';
 
     public $sepaFile;
     public $sepaCsvData; // csv data as string
@@ -44,6 +44,7 @@ class GrabSepaGaugesTimeseries {
 
     /* basic JSON file verification */
     function verifyJsonData() {
+        print "verifyJsonData()<br>"
         $sepaGauges = json_decode($this->sepaJsonData, true);
         if ($sepaGauges === null) {
             return false;
@@ -51,7 +52,7 @@ class GrabSepaGaugesTimeseries {
         if (count($sepaGauges) < 500) { // sepa have a lot of gauges now
             return false;
         }
-        if (print($sepaGauges[0][0]) != "station_name") {
+        if ($sepaGauges[0][0] != "station_name") {
             return false;
         }
         return true;
