@@ -3,7 +3,7 @@
    May be copied under the GNU GPL version 3 (or later) only
 */
 
-require_once 'GrabSepaGauges.php';
+require_once 'GrabSepaGaugesTimeseries.php';
 require_once 'GrabSepaRivers.php';
 require_once('GrabWeatherForecast.php');
 require_once('RiverZoneStations.php');
@@ -350,7 +350,7 @@ class RiverSections {
     /* Add the SEPA gauge name from the .csv file to the river sections
     .json so it is accessible from JavaScript */
     public function mergeInGaugeNames() {
-        $grabSepaGauges = new GrabSepaGauges;
+        $grabSepaGauges = new GrabSepaGaugesTimeseries;
         $sepaGaugesData = $grabSepaGauges->sepaData();
         foreach($this->riverSectionsData as $jsonid => $riverSection) {
             $gauge_id = $this->riverSectionsData[$jsonid]['gauge_location_code'];
@@ -415,7 +415,7 @@ class RiverSections {
 
     //returns SEPA reading which is most recent
     public function calculateMostRecentReading() {
-        $grabSepaGauges = new GrabSepaGauges;
+        $grabSepaGauges = new GrabSepaGaugesTimeseries;
         $sepaGaugesData = $grabSepaGauges->sepaData();
         $grabSepaRivers = new GrabSepaRivers();
         if (!$grabSepaRivers->readFromJson()) {
@@ -459,7 +459,7 @@ class RiverSections {
 
     // Used by table-view.php to print the table
     public function printTable() {
-        $grabSepaGauges = new GrabSepaGauges;
+        $grabSepaGauges = new GrabSepaGaugesTimeseries;
         $sepaGaugesData = $grabSepaGauges->sepaData();
         $grabSepaRivers = new GrabSepaRivers();
         if (!$grabSepaRivers->readFromJson()) {
@@ -572,7 +572,7 @@ class RiverSections {
         $waterLevelValueReadable = array('EMPTY'=>'Empty', 'SCRAPE'=>'Scrape', 'LOW'=>'Low', 'MEDIUM'=>'Medium', 'HIGH'=>'High', 'VERY_HIGH'=>'Very High', 'HUGE'=>'Huge', 'NO_GUAGE_DATA'=>'No Gauge Data', 'OLD_DATA'=>'Old Data', 'NEEDS_CALIBRATIONS'=>'Needs Calibrations');
         
         //Symbols for trends
-        $trends = array('RISING' => '&#x25B2;', 'FALLING' => '&#x25BC;', 'STABLE' => '<b>-</b>', '' => '-');
+        $trends = array('RISING' => '&#x25B2;', 'FALLING' => '&#x25BC;', 'STABLE' => '<b>-</b>', '' => '-', 0 => '-');
         
         // Making the table orderable by water level
         $waterLevelValueArray = array('NO_GUAGE_DATA', 'OLD_DATA', 'NEEDS_CALIBRATIONS', 'EMPTY', 'SCRAPE', 'LOW', 'MEDIUM', 'HIGH', 'VERY_HIGH', 'HUGE');
@@ -586,7 +586,6 @@ class RiverSections {
             'waterLevelValueNumber' => $waterLevelValueNumber,
             'latitude' => $riverSection['latitude'],
             'longitude' => $riverSection['longitude'],
-            'trend' => $riverReadingData['trend'],
             'currentReadingTime' => $riverReadingData['currentReadingTime'],
             'currentReading' => $riverReadingData['currentReading'],
 
@@ -662,7 +661,7 @@ class RiverSections {
 
     /* javascript for website - note this is not used */
     public function outputJavascript() {
-        $grabSepaGauges = new GrabSepaGauges;
+        $grabSepaGauges = new GrabSepaGaugesTimeseries;
         $sepaGaugesData = $grabSepaGauges->sepaData();
         /*
         print "sepaData: " . $sepaGaugesData['234189']['current_level'] . ";\n";

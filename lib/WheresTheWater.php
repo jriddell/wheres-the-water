@@ -3,7 +3,7 @@
    May be copied under the GNU GPL version 3 (or later) only
 */
 
-require_once 'GrabSepaGauges.php';
+require_once 'GrabSepaGaugesTimeseries.php';
 
 /* Class to output HTML and JavaScript to the browser to make the pages that users see */
 class WheresTheWater {

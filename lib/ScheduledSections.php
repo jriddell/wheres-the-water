@@ -3,7 +3,7 @@
    May be copied under the GNU GPL version 3 (or later) only
 */
 
-require_once 'GrabSepaGauges.php';
+require_once 'GrabSepaGaugesTimeseries.php';
 require_once 'GrabSepaRivers.php';
 require_once('GrabWeatherForecast.php');
 
@@ -367,7 +367,7 @@ class ScheduledSections {
 
     // Used by table-view.php to print the table
     public function printTable() {
-        $grabSepaGauges = new GrabSepaGauges;
+        $grabSepaGauges = new GrabSepaGaugesTimeseries;
         $sepaGaugesData = $grabSepaGauges->sepaData();
         $grabSepaRivers = new GrabSepaRivers();
         if (!$grabSepaRivers->readFromJson()) {
@@ -567,7 +567,7 @@ class ScheduledSections {
 
     /* javascript for website - note this is not used */
     public function outputJavascript() {
-        $grabSepaGauges = new GrabSepaGauges;
+        $grabSepaGauges = new GrabSepaGaugesTimeseries;
         $sepaGaugesData = $grabSepaGauges->sepaData();
         /*
         print "sepaData: " . $sepaGaugesData['234189']['current_level'] . ";\n";
