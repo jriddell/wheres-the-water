@@ -44,7 +44,6 @@ class GrabSepaGaugesTimeseries {
 
     /* basic JSON file verification */
     function verifyJsonData() {
-        print "verifyJsonData()<br>"
         $sepaGauges = json_decode($this->sepaJsonData, true);
         if ($sepaGauges === null) {
             return false;
