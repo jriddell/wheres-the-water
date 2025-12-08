@@ -32,7 +32,17 @@ class GrabSepaGaugesTimeseries {
     /* if file does not exist or is too old download it and write, else just read locally */
     function doGrab() {
         if (!file_exists($this->sepaFile) || time()-filemtime($this->sepaFile) > self::SEPA_DOWNLOAD_PERIOD) {
-            $this->sepaJsonData = file_get_contents(self::SEPA_URL);
+                // Create a stream
+                $sepaKey = file_get_contents("/home/jr/.config/daily-sepa-token.text");
+                $opts = array(
+		              'http'=>array(
+		                'method'=>"GET",
+		                'header'=>"Authorization: Bearer $sepaKey\r\n"
+		               )
+		             );
+	         $context = stream_context_create($opts);
+
+            $this->sepaJsonData = file_get_contents(self::SEPA_URL, false, $context);
             $this->verifyJsonData() || die('<a href="https://www.sepa.org.uk/help/system-temporarily-unavailable">SEPA data invalid</a>, cybers have attacked.<br /> <img src="https://i.redd.it/8falj3k93rg21.jpg">'); // CSV data did not verify
             $newSepaFile = fopen($this->sepaFile, "w") or die("Unable to open file!");
             fwrite($newSepaFile, $this->sepaJsonData);
