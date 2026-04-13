@@ -15,6 +15,7 @@
 class GrabWeatherForecast {
     public $forecastAPIURL;
     public $dataDir;
+    public $weatherForecast;
 
     const DATADIR = 'data';
     const OPENWEATHER_DOWNLOAD_PERIOD = 3600; // 60 * 60; // make sure current download is no older than 1 hour
