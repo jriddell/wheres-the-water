@@ -701,7 +701,7 @@ class RiverSections {
         }
 
         print "var point$jsonid = new GLatLng(".$riverSection['latitude'].",".$riverSection['longitude'].");\n";
-        print "markerOptions = { icon:${waterLevelValue}Icon };\n";
+        print "markerOptions = { icon:{$waterLevelValue}Icon };\n";
         print "var marker$jsonid = new GMarker(point$jsonid, markerOptions);\n";
         print "GEvent.addListener(marker$jsonid, \"mouseover\", function() {\n";
         print "    showSectionInfo(\"".$riverSection['name']."\", \"$waterLevelValue\", \"".$riverReadingData['currentReadingTime']."\", \"".$riverReadingData['currentReading']."\", \"".$riverReadingData['trend']."\" );\n";
