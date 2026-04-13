@@ -13,15 +13,17 @@
 */
 
 /* pChart library inclusions */
+/*  WtW charts removed in favour of riverzone
 include(ROOT . "/pchart/class/pData.class.php");
 include(ROOT . "/pchart/class/pDraw.class.php");
 include(ROOT . "/pchart/class/pImage.class.php"); 
- 
+*/
+
 class SepaRiverReadingHistory {
     const DATADIR = 'data';
     public $gauge_id;
     public $filename;
-    
+
     function __construct($gauge_id) {
         $this->dataDir = ROOT . '/' . self::DATADIR;
         $this->gauge_id = $gauge_id;
