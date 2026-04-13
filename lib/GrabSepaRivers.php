@@ -33,6 +33,8 @@ class GrabSepaRivers {
     public $timestampFile;
     public $downloadLockFile;
     public $riversReadingsData;
+    public $sectionForecastsFile;
+    public $riverSectionsData;
 
     function __construct() {
         $this->filename = ROOT . '/' . self::DATADIR . '/' . self::RIVERS_READINGS_JSON;

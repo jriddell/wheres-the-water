@@ -13,6 +13,9 @@
 */
 
 class GrabWeatherForecast {
+    public $forecastAPIURL;
+    public $dataDir;
+
     const DATADIR = 'data';
     const OPENWEATHER_DOWNLOAD_PERIOD = 3600; // 60 * 60; // make sure current download is no older than 1 hour
     const OPENWEATHER_URL = 'https://api.openweathermap.org/data/2.5/forecast';
@@ -21,7 +24,7 @@ class GrabWeatherForecast {
         $this->forecastAPIURL = self::OPENWEATHER_URL;
         $this->dataDir = ROOT . '/' . self::DATADIR;
     }
-    
+
     public function doGrabWeatherForecast($gauge_id, $longitude, $latitude) {
         $weatherFilename = "${gauge_id}-weather.json";
         $weatherFilePath = $this->dataDir . '/' . $weatherFilename;

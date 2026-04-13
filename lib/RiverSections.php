@@ -51,6 +51,7 @@ class RiverSections {
     public $riverSectionsData;
     public $filename;
     public $riverZoneStations;
+    public $downloadReadingsTimestampFile;
 
     function __construct() {
         $this->riverSectionsData = array();

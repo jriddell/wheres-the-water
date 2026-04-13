@@ -28,6 +28,7 @@ class RiverZoneStations {
     public $riverZoneStationsData; // the data in associative array form
     public $sepaIdToRiverZoneId; // hash mapping SEPA gauge ID to River Zone UUID
     public $sepaIdToRiverZoneIdFile; // above hash saved to a file for caching
+    public $riverZoneStationsUrl;
 
     function __construct() {
         $this->riverZoneStationsFile = ROOT . '/' . self::DATADIR . '/' . self::RIVER_ZONE_STATIONS_FILENAME; // filename
