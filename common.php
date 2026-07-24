@@ -37,7 +37,7 @@ function heading($iframe=false) {
 
 <h1 style="display:none"><!-- Paddle Scotland--> Where&#039;s The Water?</h1>
 
-<h2 style="display:none>Scottish Whitewater River Levels</h2>
+<h2 style="display:none">Scottish Whitewater River Levels</h2>
 <?php
     } else {// if !frame
     ?>
