@@ -30,12 +30,14 @@ function heading($iframe=false) {
 <?php
     if (!$iframe) {
 ?>
-<p><a href="http://www.andyjacksonfund.org.uk"><img src="/wheres-the-water/andy-jackson-fund.png" width="350" /></a>
+<p>
+<!-- <a href="http://www.andyjacksonfund.org.uk"><img src="/wheres-the-water/andy-jackson-fund.png" width="350" /></a> -->
+<a href="http://www.andyjacksonfund.org.uk"><img src="/wheres-the-water/wheres-the-water-logo.png" width="800" /></a>
 <!-- <a href="https://www.paddlescotland.org.uk"><img src="/wheres-the-water/pics/paddle-scotland.png" width="350" /></a>--></p>
 
-<h1><!-- Paddle Scotland--> Where&#039;s The Water?</h1>
+<h1 style="display:none"><!-- Paddle Scotland--> Where&#039;s The Water?</h1>
 
-<h2>Scottish Whitewater River Levels</h2>
+<h2 style="display:none>Scottish Whitewater River Levels</h2>
 <?php
     } else {// if !frame
     ?>
