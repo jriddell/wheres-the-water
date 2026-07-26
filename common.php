@@ -24,12 +24,12 @@ function heading($iframe=false) {
     <style>
         body {font-family: 'Ubuntu', sans-serif;}
         .responsive-logo {
-            max-width: 100%; /* Ensures it shrinks to fit mobile screens */
-            height: auto;    /* Maintains the correct aspect ratio so it doesn't distort */
-            display: block;  /* Removes extra inline spacing below the image */
+            max-width: 800px;
+            height: auto;
+            display: block;
+            width: 100%;
         }
 
-        /* Optional: If the wrapper anchor link needs to behave well */
         .logo-link {
             display: inline-block;
             max-width: 100%;
