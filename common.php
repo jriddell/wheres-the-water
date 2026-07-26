@@ -23,6 +23,17 @@ function heading($iframe=false) {
     <title>Where's the Water, Scottish Whitewater River Levels</title>
     <style>
         body {font-family: 'Ubuntu', sans-serif;}
+        .responsive-logo {
+            max-width: 100%; /* Ensures it shrinks to fit mobile screens */
+            height: auto;    /* Maintains the correct aspect ratio so it doesn't distort */
+            display: block;  /* Removes extra inline spacing below the image */
+        }
+
+        /* Optional: If the wrapper anchor link needs to behave well */
+        .logo-link {
+            display: inline-block;
+            max-width: 100%;
+        }
     </style>
 </head>
 
@@ -32,7 +43,10 @@ function heading($iframe=false) {
 ?>
 <p>
 <!-- <a href="http://www.andyjacksonfund.org.uk"><img src="/wheres-the-water/andy-jackson-fund.png" width="350" /></a> -->
-<a href="http://www.andyjacksonfund.org.uk"><img src="/wheres-the-water/wheres-the-water-logo.png" width="800" /></a>
+<!-- <a href="http://www.andyjacksonfund.org.uk"><img src="/wheres-the-water/wheres-the-water-logo.png" width="800" alt="Scottish Paddlers' River Levels" /></a> -->
+  <a href="http://www.andyjacksonfund.org.uk/" class="logo-link">
+    <img src="/wheres-the-water/wheres-the-water-logo.png" alt="Scottish Paddlers' River Levels" class="responsive-logo" />
+  </a>
 <!-- <a href="https://www.paddlescotland.org.uk"><img src="/wheres-the-water/pics/paddle-scotland.png" width="350" /></a>--></p>
 
 <h1 style="display:none"><!-- Paddle Scotland--> Where&#039;s The Water?</h1>
