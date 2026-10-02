@@ -4,6 +4,11 @@
 */
 require_once('../config.php');
 require_once('../lib/RiverSections.php');
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 $riverSections = new RiverSections;
 $riverSections->readFromJson();
 if (isset($_POST['riverUpdates']) && isset($_POST['save'])) {
